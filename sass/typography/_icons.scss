@@ -1,0 +1,207 @@
+@font-face {
+	font-family: 'franklin-icons';
+	src:url('fonts/franklin-icons.eot?7bwwap');
+	src:url('fonts/franklin-icons.eot?#iefix7bwwap') format('embedded-opentype'),
+		url('fonts/franklin-icons.woff?7bwwap') format('woff'),
+		url('fonts/franklin-icons.ttf?7bwwap') format('truetype'),
+		url('fonts/franklin-icons.svg?7bwwap#franklin-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'franklin-icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+	content: "\f002";
+}
+
+.icon-star:before {
+	content: "\f005";
+}
+
+.icon-user:before {
+	content: "\f007";
+}
+
+.icon-th-list:before {
+	content: "\f00b";
+}
+
+.icon-close:before {
+	content: "\f00d";
+}
+
+.icon-search-plus:before {
+	content: "\f00e";
+}
+
+.icon-file-o:before {
+	content: "\f016";
+}
+
+.icon-tags:before {
+	content: "\f02c";
+}
+
+.icon-pencil:before {
+	content: "\f040";
+}
+
+.icon-plus-circle:before {
+	content: "\f055";
+}
+
+.icon-times-circle:before {
+	content: "\f057";
+}
+
+.icon-exclamation-circle:before {
+	content: "\f06a";
+}
+
+.icon-comment:before {
+	content: "\f075";
+}
+
+.icon-comments:before {
+	content: "\f086";
+}
+
+.icon-sign-out:before {
+	content: "\f08b";
+}
+
+.icon-twitter:before {
+	content: "\f099";
+}
+
+.icon-facebook:before {
+	content: "\f09a";
+}
+
+.icon-github:before {
+	content: "\f09b";
+}
+
+.icon-group:before {
+	content: "\f0c0";
+}
+
+.icon-chain:before {
+	content: "\f0c1";
+}
+
+.icon-pinterest:before {
+	content: "\f0d2";
+}
+
+.icon-google-plus:before {
+	content: "\f0d5";
+}
+
+.icon-caret-down:before {
+	content: "\f0d7";
+}
+
+.icon-linkedin:before {
+	content: "\f0e1";
+}
+
+.icon-angle-left:before {
+	content: "\f104";
+}
+
+.icon-angle-right:before {
+	content: "\f105";
+}
+
+.icon-code:before {
+	content: "\f121";
+}
+
+.icon-youtube:before {
+	content: "\f167";
+}
+
+.icon-xing:before {
+	content: "\f168";
+}
+
+.icon-instagram:before {
+	content: "\f16d";
+}
+
+.icon-flickr:before {
+	content: "\f16e";
+}
+
+.icon-bitbucket:before {
+	content: "\f171";
+}
+
+.icon-tumblr:before {
+	content: "\f173";
+}
+
+.icon-dribbble:before {
+	content: "\f17d";
+}
+
+.icon-skype:before {
+	content: "\f17e";
+}
+
+.icon-foursquare:before {
+	content: "\f180";
+}
+
+.icon-gittip:before {
+	content: "\f184";
+}
+
+.icon-vk:before {
+	content: "\f189";
+}
+
+.icon-weibo:before {
+	content: "\f18a";
+}
+
+.icon-renren:before {
+	content: "\f18b";
+}
+
+
+[data-icon]:before {
+	font-family: 'franklin-icons';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+.with-icon::before {
+	display: inline;	
+	@include margin-right( 6 );
+	font-size: 120%;
+	color: $color__text;	
+}
+
+.icon:hover {	
+	text-decoration: none;
+}

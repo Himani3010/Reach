@@ -1,0 +1,152 @@
+.comment-form-block {
+	@include padding-top( 24 );
+}
+
+.comment,
+.pingback {
+	float: left;
+	clear: both;
+	@include margin-bottom( 24 );
+	width: 100%;
+	border-bottom: {
+		@include width( 1 );
+		style: solid;
+		color: $color__border-primary;
+	}
+	@include hidden-overflow();
+
+	h1, 
+	h2,
+	h3,
+	h4,
+	h5 {
+		text-transform: none;
+		letter-spacing: 0;
+	}
+}
+
+.avatar {
+	border-radius: 0.4rem;
+}
+
+.comments-section {
+	float: left;
+	clear: both;
+	width: 100%;
+	background-color: $color__background-content;
+
+
+	.children {
+		margin-left: 5%;
+		padding-left: 0;
+		width: 95%;
+	}
+
+	.avatar {
+		position: absolute;
+	}
+
+	input[type=email],
+	input[type=text], 
+	textarea {
+		max-width: 100%;
+		background-color: $color__background-widget;
+	}
+
+	.comment-text-input {
+		float: left;
+		width: 49%;
+		margin-right: 2%;
+	}
+
+	.comment-text-input.fullwidth {
+		width: 100%; 
+		margin: 0;
+	}
+
+	.comment-text-input.last {
+		margin-right: 0;
+	}
+
+	#comment {
+		max-width: 100%;
+	}
+
+	.comment-notes {
+		clear: both;
+	}
+
+	@include bp( 800 ) {
+		.children {		
+			margin-left: -webkit-calc( 7rem );
+			margin-left: -moz-calc( 7rem );
+			margin-left: calc( 7rem );
+
+			width: -webkit-calc(100% - 7rem);
+			width: -moz-calc(100% - 7rem);			
+			width: calc(100% - 7rem);
+		}
+	}
+}
+
+.comment-details {
+	@include margin( 0, 0, 12, 70 );
+}
+
+.comment-author {
+	margin-top: 0;
+}
+
+.no-avatars .comment-details {
+	margin-left: 0;
+}
+
+.comments-list {
+	float: left;
+	width: 100%;
+	@include margin-top( 24 );
+	padding-left: 0;
+}
+
+.comment-meta {
+	padding-bottom: 0;
+	@include font-size( 10 );
+	color: $color__text-meta;
+}
+
+.comment-date {	
+	font-style: italic;	
+}
+
+.comment-reply {
+	@include margin-left( 10 );
+}
+
+.bypostauthor {
+
+	.post-author {
+		text-transform: uppercase;
+
+		i {
+			@include margin-right( 2 );
+			color: $color__accent;
+		}
+	}
+}
+
+.logged-in-as,
+.comment-notes, 
+.form-allowed-tags {
+	@include font-size( 11 );
+}
+
+#reply-title {
+	margin-top: 0;
+	@include font-size( 14 );
+	text-transform: uppercase
+}
+
+#cancel-comment-reply-link {
+	float: right;
+	@include font-size( 20 );
+}

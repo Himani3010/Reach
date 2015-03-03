@@ -1,0 +1,18 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	@include button;
+	@include height( 31 );
+	
+	&.button {
+		@include height( 31 );
+	}
+
+	&:hover,
+	&:active, 
+	&:focus {
+		background-color: transparent;
+		border-color: transparent;	
+	}
+}

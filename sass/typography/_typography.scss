@@ -1,0 +1,51 @@
+@import "icons";
+
+body {
+	@include font-size(12);
+	@include line-height(20);
+	color: $color__text;
+}
+
+body, 
+input, 
+textarea, 
+.format-status .post-title, 
+#lang-sel, 
+.alt {
+	font-family: $font__main;	
+}
+
+h1, h2, h3, h4, h5, h6, 
+.menu-site li,
+button,
+.button, 
+input[type=submit], 
+input[type=reset],
+.campaign-summary li span, 
+.countdown,
+.site-title,
+.post-title,
+.page-title,
+legend, 
+.account-links, 
+.barometer span span, 
+.bypostauthor .post-author,
+.meta,
+blockquote cite,
+th, 
+.edd_cart_amount, 
+#rockbottom,
+.campaign-status .campaign-raised span, 
+.campaign-status .campaign-pledged span, 
+.campaign-status .campaign-time-left span,
+.widget_crowdfunding_stats_widget li span, 
+.campaign-image span, 
+.tabs .tab-title {
+	font-family: $font__secondary;
+	text-transform: uppercase;
+	@include letter-spacing(2);
+}
+
+@import "headings";
+
+@import "copy";

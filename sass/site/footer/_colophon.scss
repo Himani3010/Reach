@@ -1,0 +1,24 @@
+#colophon {
+	float: left;
+	width: 100%;
+	clear: both;	
+	@include margin( 24, 0, 0 );
+	@include padding( 24, 0 );
+	border-top: {
+		@include width( 1 ); 
+		style: solid;
+		color: #fff;
+	}
+	font-family: $font__secondary;
+	text-transform: none;
+	@include letter-spacing( 1 );
+	font-weight: 300;
+	text-align: center;
+
+	.footer-notice {
+		float: left;
+		width: 100%;	
+		margin: 0;
+		padding: 0;	
+	}
+}

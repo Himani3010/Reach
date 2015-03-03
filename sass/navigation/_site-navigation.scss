@@ -1,0 +1,104 @@
+/* .site-navigation is the main navigation */
+.site-navigation {
+	float: left;
+	clear: both;
+	height: 0;	
+	width: 100%;
+
+	.menu-button {
+		position: absolute;
+		z-index: 600;
+		@include right( 36 );
+		@include top( 36 );
+		@include line-height( 38 );
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a {
+		color: $color__accent;
+
+		&:hover {
+			border-color: transparent !important;
+		}
+	}
+
+	@include bp( 800 ) {
+		position: static;
+		text-align: right;			
+		box-shadow: none;
+		height: auto;
+		float: none;
+		clear: none;
+		
+		/* Just adding this for added specifity */
+		&.wrapper {
+			background: transparent;
+		}		
+
+		.menu-site {		
+			height: auto;
+			width: auto;
+			margin: 3.6rem 0 0 0;
+			left: 0;
+			border-top: 0;
+			overflow: visible;
+
+			li {
+				margin: 0 0 0 1rem;
+				text-indent: 0;
+			}
+
+			> li {
+				padding-bottom: 0.9rem;
+				border: none;
+
+				> a:hover {
+					border-color: $color__accent;
+				}
+			}
+			
+			> li.hovering:last-child ul {
+				right: -1.8rem;
+				left: auto;
+			}
+
+			.site-navigation .menu-site ul {
+				padding-top: 0;
+				border-top: 0;
+				border-radius: 0 0 0.4rem 0.4rem;	
+				margin-top: 0.9rem;
+			}	
+
+			ul ul {
+				margin-top: 0;
+			}
+		}			
+	}
+}
+
+@include bp( 800 ) {
+	.no-tagline {
+		.site-navigation .menu-site {
+			margin-top: 1.2rem;
+		}
+	}
+
+	.no-title {
+		.site-navigation .menu-site {
+			margin-top: 0;
+			li {
+				padding-top: 0.7rem;
+			}
+		}
+	}
+
+	.no-tagline.no-title {
+		.site-navigation .menu-site ul {
+			margin-top: 0.8rem;
+			ul {
+				margin-top: 0;
+			}
+		}
+	}
+}

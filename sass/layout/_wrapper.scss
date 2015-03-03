@@ -1,0 +1,9 @@
+.wrapper {
+	width: 100%;
+	@include padding( 0, 32 );
+
+	@include bp(full) {
+		@include max-width( 1400 );
+		margin: 0 auto;
+	}
+} 

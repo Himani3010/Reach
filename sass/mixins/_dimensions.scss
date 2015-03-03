@@ -1,0 +1,101 @@
+// Rem output with px fallback
+@mixin size($property, $value: 1.6, $right : "", $bottom : "", $left : "") { 
+	$px-val : $value + px;
+	$rem-val : ($value / 10) + rem;
+
+	@if $right != "" {
+		$px-val : $px-val ($right + px);
+		$rem-val : $rem-val (($right / 10) + rem);
+	}
+
+	@if $bottom != "" {
+		$px-val : $px-val ($bottom + px);
+		$rem-val : $rem-val (($bottom / 10) + rem);
+	}
+
+	@if ($left) != "" {
+		$px-val : $px-val ($left + px);
+		$rem-val : $rem-val (($left / 10) + rem);
+	}
+
+	#{$property}: $px-val;
+	#{$property}: $rem-val;
+}
+@mixin width($value) {
+	@include size(width, $value);
+}
+@mixin max-width($value) {
+	@include size(max-width, $value);
+}
+@mixin height($value) {
+	@include size(height, $value);
+}
+@mixin max-height($value) {
+	@include size(max-height, $value);
+}
+@mixin padding($value, $right : "", $bottom : "", $left : "") {
+	@include size(padding, $value, $right, $bottom, $left);
+}
+@mixin padding-top($value) {
+	@include size(padding-top, $value);
+}
+@mixin padding-bottom($value) {
+	@include size(padding-bottom, $value);
+}
+@mixin padding-right($value) {
+	@include size(padding-right, $value);
+}
+@mixin padding-left($value) {
+	@include size(padding-left, $value);
+}
+@mixin margin($value, $right : "", $bottom : "", $left : "") {
+	@include size(margin, $value, $right, $bottom, $left);
+}
+@mixin margin-top($value) {
+	@include size(margin-top, $value);
+}
+@mixin margin-bottom($value) {
+	@include size(margin-bottom, $value);
+}
+@mixin margin-right($value) {
+	@include size(margin-right, $value);
+}
+@mixin margin-left($value) {
+	@include size(margin-left, $value);
+}
+@mixin left($value) {
+	@include size(left, $value);
+}
+@mixin right($value) {
+	@include size(right, $value);
+}
+@mixin top($value) {
+	@include size(top, $value);
+}
+@mixin bottom($value) {
+	@include size(bottom, $value);
+}
+@mixin font-size($value) {
+	@include size(font-size, $value);
+}
+@mixin line-height($value) {
+	@include size(line-height, $value);
+}
+@mixin letter-spacing($value) {
+	@include size(letter-spacing, $value);
+}
+@mixin border-width($value, $right : "", $bottom : "", $left : "") {
+	@include size(border-width, $value, $right, $bottom, $left);
+}
+@mixin border-left-width($value) {
+	@include size(border-left-width, $value);
+}
+@mixin border-top-width($value) {
+	@include size(border-top-width, $value);
+}
+@mixin border-right-width($value) {
+	@include size(border-right-width, $value);
+}
+@mixin border-bottom-width($value) {
+	@include size(border-bottom-width, $value);
+}

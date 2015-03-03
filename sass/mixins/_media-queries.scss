@@ -1,0 +1,16 @@
+// Add a breakpoint. 
+@mixin bp($point, $min : true) {
+	$bp : ($point / 16) + em;
+
+	@if ( $min ) {
+		@media (min-width: #{$bp}) { @content };
+	}
+	@else {
+		@media (max-width: #{$bp}) { @content };
+	}
+}
+
+// Retina media query
+@mixin retina() {
+	@media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) { @content };
+}

@@ -1,0 +1,51 @@
+table {
+	width: 100%;	
+	@include border-width( 0, 0, 1, 1 );
+	border-style: solid;
+	border-color: $color__border-primary;
+	word-break: normal;
+
+	caption {
+		@include padding( 4, 0 );
+		@include font-size( 12 );
+		font-weight: 400;	
+	}
+}
+
+th,
+td {
+	@include padding( 6, 10 );
+	border-style: solid;
+	border-color: $color__border-primary;
+	vertical-align: top;	
+}
+
+th {		
+	@include border-width( 1, 1, 0, 0 );
+	background-color: $color__background-th;
+	border-right-color: $color__border-secondary;
+	text-align: left;
+	text-transform: uppercase;
+	@include letter-spacing( 2 );
+	font-weight: 400;	
+	white-space: nowrap;
+}
+
+td {
+	@include border-right-width( 1 );
+}
+
+th p:last-child, 
+th ul:last-child,
+th ol:last-child,
+th dl:last-child,
+td p:last-child, 
+td ul:last-child,
+td ol:last-child,
+td dl:last-child {
+	margin-bottom: 0;
+}
+
+.even > td {
+	background-color: $color__background-screen;
+}

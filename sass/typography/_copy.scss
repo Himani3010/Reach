@@ -1,0 +1,98 @@
+p {
+	@include padding-bottom(12);
+}
+
+p:focus {
+	outline: none;
+}
+
+b, strong {
+	font-weight: 600;
+}
+
+dfn, cite, em, i {
+	font-style: italic;
+}
+
+blockquote {
+	position: relative;
+	left: 0;
+	width: 100%;
+	@include padding( 24 );
+	@include margin( 0, 0, 12 );		
+	@include font-size( 14 );
+	@include line-height( 21 );
+	background-color: $color__background-blockquote;
+
+	p:last-child {
+		padding-bottom: 0;
+	}
+
+	cite {
+		display: block;
+		@include margin( 24, 0, 0 );
+		@include font-size( 12 );
+		text-transform: uppercase;
+		@include letter-spacing( 2 );
+		text-align: right;
+	}	
+}
+
+address {
+	font-weight: 400;
+	@include margin(0, 0, 14);	
+}
+
+pre {
+	max-width: 100%;
+	@include padding( 12 );
+	@include margin( 0, 0, 12 );
+	font-family: $font__code;	
+	background-color: $color__background-blockquote;	
+	@include hidden-overflow();
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-pre-wrap;
+	white-space: -o-pre-wrap;
+}
+
+code, kbd, tt, var {
+	font-family: $font__code;
+}
+
+abbr, acronym {
+	border: {
+		@include width(1);
+		style: dotted;
+	}
+	cursor: help;
+}
+
+mark, ins {
+	text-decoration: none;
+}
+
+sup,
+sub {
+	font-size: 83%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	bottom: 1ex;
+}
+
+sub {
+	top: .5ex;
+}
+
+small {
+	font-size: 90%;
+}
+
+big {
+	font-size: 120%;
+}

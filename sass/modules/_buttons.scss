@@ -1,0 +1,25 @@
+.button {
+	@include button();
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.button-small {
+	@include max-width( 120 );
+	@include padding-left( 10 );
+	@include padding-right( 10 );
+	@include font-size( 12 );
+}
+
+.button-large {
+	@include font-size( 25 );
+	@include height( 50 );
+	@include line-height( 50 );
+}
+
+.button-alt, 
+.button-secondary {
+	@include button-inverted();
+}

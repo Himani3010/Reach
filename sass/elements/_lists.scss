@@ -1,0 +1,53 @@
+ul, 
+ol, 
+dd {
+	@include margin( 0, 0, 12 );
+}
+
+ul, 
+ol {
+	@include padding-left( 16 );
+
+	ul, 
+	ol {
+		@include margin( 6, 0, 0, 20 );
+	}
+}
+
+li {
+	@include margin-bottom( 6 );
+}
+
+ul {
+	list-style: disc;
+
+	ul {
+		list-style: circle;
+	}
+}
+
+ol {
+	list-style: decimal;
+
+	ol {
+		list-style: upper-roman;
+
+		ol {
+			list-style: lower-roman;
+		}
+	}
+}
+
+dt {
+	font-weight: 600;
+}
+
+/* Horizontal lists */
+.horizontal {
+	padding-left: 0;
+
+	li {
+		display: inline-block; 
+		list-style: none;
+	}
+}

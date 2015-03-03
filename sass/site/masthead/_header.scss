@@ -1,0 +1,42 @@
+#header {
+	position: relative;		
+	z-index: 50;
+	@include padding( 24, 36, 0, 36 );
+	border-radius: 0.4rem 0.4rem 0 0;
+	background-color: $color__background-wrapper;
+}
+
+.site-identity {
+	position: relative;
+	z-index: 500;
+	float: left;
+	@include padding( 12, 20, 12, 0 );
+	text-transform: uppercase;
+}
+
+.home-link {
+	position: absolute;
+	left: 0;
+	display: block;
+	width: 100%; 
+	height: 100%;	
+}
+
+.site-title {
+	margin: 0;
+	padding: 0;
+	@include font-size( 34 );
+	@include line-height( 38 );
+
+	a {
+		color: $color__accent;
+	}
+}
+
+.site-tagline {	
+	@include padding( 6, 0 );
+	margin: 0;
+	@include font-size( 13 );
+	line-height: 1em;	
+	letter-spacing: 0;
+}

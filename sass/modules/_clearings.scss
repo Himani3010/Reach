@@ -1,0 +1,8 @@
+.cf:before, 
+.cf:after {
+	@include clearfix;
+}
+
+.cf:after {
+	@include clearfix-after;
+}

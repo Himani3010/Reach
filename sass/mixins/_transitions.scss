@@ -1,0 +1,23 @@
+@mixin property-transition($prop, $duration : "", $timing-function : "", $delay : "") {
+
+	/* Default settings */
+	$transition-duration		: 300ms !default;
+	$transition-timing-function	: cubic-bezier(0.250, 0.250, 0.750, 0.750) !default;
+	$transition-delay			: 0 !default;
+	
+	@if $duration == "" {
+ 		$duration : $transition-duration;
+	}
+	@if $timing-function == "" {
+		$timing-function : $transition-timing-function;
+	}
+	@if $delay == "" {
+		$delay : $transition-delay;
+	}
+	
+	$transition: $prop $duration $timing-function $delay;
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}

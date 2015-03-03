@@ -1,0 +1,13 @@
+a {
+	color: $color__accent;
+	text-decoration: none;	
+
+	&:hover {
+		cursor: pointer; 
+		text-decoration: underline;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}

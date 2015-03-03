@@ -1,0 +1,55 @@
+/* Various re-usable styled blocks */
+.block {
+	@include margin-bottom( 36 );
+	border: {
+		@include width( 1 ); 
+		style: solid; 
+		color: $color__border-primary;
+	}
+	border-radius: 0.4rem;	
+}
+
+.entry-block {
+	position: relative;
+	padding: 0 4%;
+	background: $color__background-content;
+	box-shadow: 0 0 1px $color__background-content;
+	overflow-x: hidden;
+
+	@include bp( 800 ) {
+		@include padding-left( 36 );
+		@include padding-right( 36 );
+	}
+}
+
+.content-block {
+	padding: 0 4% 24px; padding-right: 2.4rem;
+
+	@include bp( 800 ) {
+		@include padding( 0, 36, 24 );
+	}	
+}
+
+.multi-block {
+
+	.content-block:first-of-type {
+		border-radius: 0.4rem 0.4rem 0 0;
+	}
+
+	.content-block:nth-of-type(1n+2) {
+		border-top: {
+			@include width( 1 ); 
+			style: solid;	
+			color: $color__border-primary;
+		}
+	}
+
+	.content-block:last-of-type {
+		border-radius: 0 0 0.4rem 0.4rem;
+	}
+}
+
+.block-title {
+	@include baseline-header();
+	color: $color__accent;
+}

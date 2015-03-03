@@ -1,0 +1,94 @@
+#site-footer {
+	padding: {
+		@include top( 24 );
+		right: 4%;
+		left: 4%;
+	}
+	color: rgb( 255, 255, 255 );
+
+	a {
+		color: rgb( 255, 255, 255 );
+		text-decoration: none;
+	}
+
+	.button {
+		border-color: rgb( 255, 255, 255 );
+	}
+}
+
+.footer-widget {
+	float: left;		
+	width: 48%;
+	margin-right: 4%;
+	@include margin-bottom( 12 );
+	padding: 0;
+	border: none;
+	background: transparent !important;
+
+	.widget-title {
+		float: left;
+		border: none;
+		padding-left: 0;
+		padding-right: 0;
+		@include margin-bottom( 12 );
+	}
+}
+
+.footer-right {
+	.footer-widget:nth-child( 2n+2 ) {
+		clear: left;
+	}
+	.footer-widget:nth-child( 2n+1 ) {
+		margin-right: 0;
+		clear: right;
+	}
+}
+
+@include bp( 720 ) {
+	.footer-widget {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.footer-left {
+		float: left;
+		width: 34%;
+		margin-right: 4%;
+		padding-right: 0;
+
+		.footer-widget {
+			width: 100%;
+			margin: 0;	
+		}
+	}
+
+	.footer-right {
+		float: left;
+		width: 54%;
+		padding-left: 0;
+
+		.footer-widget {
+			width: 28.4%;
+			margin-right: 7.4%;
+		
+			&:nth-of-type( 2n+1 ) {
+				margin-right: 7.4%;
+			}
+
+			&:nth-of-type( 2n+2 ) {
+				clear: none;
+			}
+
+			&:nth-of-type( 3n+3 ) {
+				width: 28.4%;
+				margin-right: 0;
+			}
+
+			&:nth-of-type( 3n+4 ) {
+				clear: left;
+			}
+		}
+	}
+}
+
+@import "colophon";

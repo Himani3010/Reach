@@ -1,0 +1,48 @@
+h1, h2, h3, h4, h5, h6 {
+	@include margin( 24, 0, 12 );
+}
+
+h1 {
+    @include font-size( 30 );
+    @include line-height( 38 );
+}
+
+h2 {
+	@include font-size( 25 );
+	@include line-height( 34 );
+}
+
+h3 {
+    @include font-size( 20 );
+    @include line-height( 30 );
+}
+
+h4 {
+	@include font-size( 16 );
+	@include line-height( 28 );
+}
+
+h5 {
+	@include font-size( 14 );
+	@include line-height( 22 );
+}
+
+h6 {
+	@include font-size( 12 );
+	text-transform: uppercase;
+	@include letter-spacing( 2 );
+}
+
+.title-wrapper {
+	display: block;
+	text-align: center;
+	overflow: hidden;
+
+	h1, 
+	h2, 
+	h3, 
+	h4 {
+		display: inline-block;
+		@include padding( 0, 10 );
+	}
+}

@@ -1,0 +1,133 @@
+.post-title {
+	@include baseline-header();
+	@include margin( 24, 0, 12 );	
+	text-align: center;
+	word-break: break-word;
+
+	a {
+		color: $color__accent;
+	}
+}
+
+.sticky {
+	color: $color__background-content;
+	background-color: $color__accent;
+	border: {
+		@include width( 1 ); 
+		style: solid;	
+		color: $color__background-content;
+	}
+
+	a {
+		color: $color__background-content;
+	}
+
+	.post-title {
+		border-color: $color__accent-hover;
+	}
+	
+	.entry a {
+		text-decoration: underline;
+	}
+
+	.entry .more-link {
+		text-decoration: none;
+	}
+}
+
+.entry {
+	@include padding( 24, 0, 12 );	
+
+	> *:first-child {
+		margin-top: 0;
+	}
+
+	h1, 
+	h2,
+	h3,
+	h4,
+	h5 {
+		text-transform: none;
+		letter-spacing: 0;
+	}
+
+	blockquote {
+		position: relative;
+		left: -(4 / 92) * 100%;
+		width: 100% + ((8 / 92) * 100);
+
+		@include bp( 800 ) {
+			left: -3.6rem;
+			width: -webkit-calc( 100% + 73px );
+			width: -moz-calc( 100% + 73px );
+			width: calc( 100% + 73px );
+		}	
+	}	
+}
+
+.meta {	
+	position: relative;
+	left: -(4 / 92) * 100%;
+	padding: 0;	
+	margin: 0;
+	width: 100% + ((8 / 92) * 100);
+	@include font-size( 10 );
+	@include line-height( 38 );
+	@include letter-spacing( 1 );
+	font-weight: 300;	
+	background-color: $color__background-meta;
+	color: $color__text-meta;
+
+	p {
+		padding: 0;
+	}
+
+	span {
+		@include padding( 12, 0 );
+	}
+
+	a {
+		color: $color__text;
+	}
+
+	.author, 
+	.comment-count, 
+	.tags {
+		@include margin-left( 6 );
+		@include padding-left( 10 );
+		border-left: {
+			@include width( 1 ); 
+			style: solid;
+			color: $color__border-primary;
+		}		
+	}
+
+	@include bp( 600 ) {
+		font-size: 1.1rem;
+		line-height: 4rem;
+	}
+
+	@include bp( 800 ) {
+		left: -3.6rem;
+		width: -webkit-calc( 100% + 73px );
+		width: -moz-calc( 100% + 73px );
+		width: calc( 100% + 73px );
+	}
+}
+
+.meta-above {
+	border-bottom: {
+		@include width( 1 ); 
+		style: solid;
+		color: $color__border-primary;
+	}
+}
+
+.meta-below {
+	border-top: {
+		@include width( 1 ); 
+		style: solid;
+		color: $color__border-primary;
+	}
+	border-radius: 0 0 0.4rem 0.4rem;
+}

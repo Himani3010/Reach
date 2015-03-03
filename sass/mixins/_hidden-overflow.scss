@@ -1,0 +1,11 @@
+@mixin hidden-overflow() {
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+    /* Non standard for webkit */
+    word-break: break-word;
+
+	-webkit-hyphens: auto;
+   	-moz-hyphens: auto;
+    hyphens: auto;
+}

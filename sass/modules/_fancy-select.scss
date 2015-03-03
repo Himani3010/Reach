@@ -1,0 +1,20 @@
+.select-wrapper {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+
+	select {
+		-webkit-appearance: none;
+	}
+}
+
+.chrome .select-wrapper::after, 
+.safari .select-wrapper::after {
+	font-family: 'fontawesome';
+	content: "\F0D7";	
+	display: block;
+	position: absolute;
+	@include right( 10 );
+	@include top( 10 );
+	@include font-size( 16 );
+}

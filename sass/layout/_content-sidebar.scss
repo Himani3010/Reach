@@ -1,0 +1,56 @@
+#page {		
+	position: relative;
+	@include max-width( 600 );
+	margin: 0 auto;
+
+	@include bp( 600 ) {
+		max-width: 100%;
+	}
+	@include bp( 1190 ) {
+		width: 119rem;
+	}
+}
+
+.body-wrapper {
+	float: left;
+	clear: both;
+	width: 100%;	
+	border-radius: 0.4rem 0.4rem 0 0;
+	
+	@include bp( 1190 ) {
+		@include padding( 0, 10 );
+	}
+}
+
+#main {
+	@include padding( 36 );	
+	background-color: $color__background-wrapper;
+	border-radius: 0 0 0.4rem 0.4rem;
+}
+
+.content-area,
+.sidebar {
+	width: 100%;
+	@include margin-bottom( 48 );
+	@include hidden-overflow();
+}
+
+@include bp( 720 ) {
+	.content-area {
+		float: left;
+		width: 65.78%;
+	}
+
+	.sidebar {
+		float: right;
+		width: 31.22%;
+	}
+}
+
+#site-footer {
+	@include padding( 24 );
+
+	a {
+		height: auto;
+	}
+}

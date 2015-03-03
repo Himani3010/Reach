@@ -1,0 +1,19 @@
+hr {
+	width: 100%;
+	@include height( 2 );
+	border: none;
+}
+
+@import "lists";
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+	-ms-interpolation-mode: bicubic; 
+}
+
+figure {
+	margin: 0;
+}
+
+@import "tables";

@@ -1,0 +1,117 @@
+.gallery {
+	@include margin-bottom( 12 );
+	float: left;
+	width: 100%;
+	clear: both;
+
+	br {
+		clear: none !important;
+	}
+}
+
+.gallery-item {
+	position: relative;
+	float: left;
+	margin-right: 1%;		
+	@include margin-bottom( 4 );
+	width: 49.5%;
+
+	img {
+		width: 100%;
+		max-width: 100%;	
+		@include property-transition( opacity );
+
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+
+	a {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	&:hover .gallery-caption {
+		opacity: 1;
+	}
+
+	&:nth-of-type(2n+2) { 
+		margin-right: 0; 
+	}
+}
+
+.gallery-columns-1 .gallery-item {
+	width: 100%;
+	margin-right: 0;
+}
+
+.gallery-icon {
+	width: 100%;
+	height: 100%;
+	line-height: 0;	
+}
+
+.gallery-caption {	
+	@include caption();
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	left: 0;
+	width: 98%;
+	max-height: 50%;
+	@include padding( 6 );
+	margin: 0;
+	overflow: hidden;
+	color: #fff;
+	@include line-height( 14 );
+	opacity: 0;	
+	@include property-transition( opacity );
+}
+
+@include bp( 800 ) {
+	.gallery {
+		br {
+			clear: both !important;
+		}
+	}
+
+	.gallery-item {
+		margin-bottom: 0.6rem;
+
+		&:nth-of-type(2n+2) {
+			margin-right: 1%;
+		}
+	}
+
+	.gallery-columns-2 .gallery-item { width: 49.50%; }
+	.gallery-columns-3 .gallery-item { width: 32.66%; }
+	.gallery-columns-4 .gallery-item { width: 24.25%; }
+	.gallery-columns-5 .gallery-item { width: 19.2%; }
+	.gallery-columns-6 .gallery-item { width: 15.83%; }
+	.gallery-columns-7 .gallery-item { width: 13.428571429%; }
+	.gallery-columns-8 .gallery-item { width: 11.625%; }
+	.gallery-columns-9 .gallery-item { width: 10.222%; }
+	.gallery-columns-10 .gallery-item { width: 9.1%; }
+
+	.gallery-columns-2 .gallery-item:nth-of-type(2n+2),
+	.gallery-columns-3 .gallery-item:nth-of-type(3n+3), 
+	.gallery-columns-4 .gallery-item:nth-of-type(4n+4), 
+	.gallery-columns-5 .gallery-item:nth-of-type(5n+5), 
+	.gallery-columns-6 .gallery-item:nth-of-type(6n+6), 
+	.gallery-columns-7 .gallery-item:nth-of-type(7n+7), 
+	.gallery-columns-8 .gallery-item:nth-of-type(8n+8), 
+	.gallery-columns-9 .gallery-item:nth-of-type(9n+9), 
+	.gallery-columns-10 .gallery-item:nth-of-type(10n+10) {
+		margin-right: 0;
+	}
+
+	.gallery-columns-5 .gallery-caption,
+	.gallery-columns-6 .gallery-caption,
+	.gallery-columns-7 .gallery-caption,
+	.gallery-columns-8 .gallery-caption,
+	.gallery-columns-9 .gallery-caption,
+	.gallery-columns-10 .gallery-caption {
+		display: none;
+	}
+}

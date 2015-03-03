@@ -1,0 +1,29 @@
+.left {
+	text-align: left;	
+}
+
+.right {
+	text-align: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.alignleft { 
+	float: left;
+	@include margin( 0, 10, 12, 0 );
+}
+
+.alignright { 
+	float: right;
+	@include margin( 0, 0, 12, 10 );
+}
+
+.aligncenter { 
+	@include center-block();
+	@include margin-top( 12 ); 
+	@include margin-bottom( 12 );
+	clear: both;
+	text-align: center;
+}
