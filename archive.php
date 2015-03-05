@@ -7,43 +7,33 @@
  * @package Franklin
  */
 
-get_header(); ?>
+get_header();
 
-	<div id="primary" class="content-area">
-		<main class="site-main content" role="main">
+if ( have_posts() ) : ?>
 
-		<?php if ( have_posts() ) : ?>
+	<main class="site-main content-area" role="main">
+		<?php 
+		the_archive_title( '<h1 class="archive-title">', '</h1>' );
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+		while ( have_posts() ) : 
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			the_post();
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+			get_template_part( 'content', get_post_format() );
 
-			<?php endwhile; ?>
+		endwhile;
 
-			<?php franklin_paging_nav(); ?>
+		franklin_paging_nav(); 
+		?>		
+	</main><!-- .site-main -->
 
-		<?php else : ?>
+<?php 
+else :
 
-			<?php get_template_part( 'content', 'none' ); ?>
+	get_template_part( 'content', 'none' );
 
-		<?php endif; ?>
+endif;
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+get_sidebar();
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+get_footer();

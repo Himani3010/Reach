@@ -2,7 +2,7 @@
 	display: inline-block;
 	@include margin( 3, 0, 0, 3 );
 	@include padding( 0, 20 );
-	@include height( 29 );
+	@include height( 31 );
 	@include font-size( 14 );
 	@include line-height( 29 );
 	border: {
@@ -33,7 +33,7 @@
 	display: inline-block;
 	@include margin( 3, 0, 0, 3 );
 	@include padding( 0, 20 );
-	@include height( 29 );
+	@include height( 33 );
 	@include font-size( 14 );
 	@include line-height( 29 );
 	border: {
@@ -45,7 +45,7 @@
 	box-shadow: none;
 	font-family: $font__secondary;
 	background: transparent;
-	color: $color__text-overlay;
+	color: $color__background-button;
 	text-transform: uppercase;
 	@include letter-spacing( 2 );
 	cursor: pointer;

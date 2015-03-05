@@ -38,3 +38,17 @@ function sofa_link_format_the_content($more_link_text = null, $stripteaser = fal
 	_deprecated_function( __FUNCTION__, '2.0.0', 'franklin_link_format_the_content' );
 	return franklin_link_format_the_content( $more_link_text, $stripteaser, $echo);
 }
+
+
+
+
+
+function sofa_crowdfunding_get_pledge_text() {
+	_deprecated_function( __FUNCTION__, '2.0.0', 'franklin_crowdfunding_get_pledge_text' );
+	return franklin_crowdfunding_get_pledge_text();
+}
+
+function atcf_get_campaign( $id ) {
+	_deprecated_function( __FUNCTION__, '2.0.0', 'new Charitable_Campaign( $id )' );
+	return new Charitable_Campaign( $id );
+}

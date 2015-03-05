@@ -1060,7 +1060,11 @@
 				},
 				{
 					"id": 235,
-					"order": 0
+					"order": 49,
+					"prevSize": 28,
+					"code": 61703,
+					"name": "angle-down",
+					"tempChar": ""
 				},
 				{
 					"id": 236,
@@ -1152,7 +1156,7 @@
 					"prevSize": 28,
 					"code": 61729,
 					"name": "code",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"id": 258,
@@ -1420,7 +1424,7 @@
 					"prevSize": 28,
 					"code": 61799,
 					"name": "youtube",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"id": 324,
@@ -1428,7 +1432,7 @@
 					"prevSize": 28,
 					"code": 61800,
 					"name": "xing",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"id": 325,
@@ -1452,7 +1456,7 @@
 					"prevSize": 28,
 					"code": 61805,
 					"name": "instagram",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"id": 330,
@@ -1460,7 +1464,7 @@
 					"prevSize": 28,
 					"code": 61806,
 					"name": "flickr",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"id": 331,
@@ -1472,7 +1476,7 @@
 					"prevSize": 28,
 					"code": 61809,
 					"name": "bitbucket",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"id": 333,
@@ -1484,7 +1488,7 @@
 					"prevSize": 28,
 					"code": 61811,
 					"name": "tumblr",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"id": 335,
@@ -1528,7 +1532,7 @@
 					"prevSize": 28,
 					"code": 61821,
 					"name": "dribbble",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"id": 345,
@@ -1536,7 +1540,7 @@
 					"prevSize": 28,
 					"code": 61822,
 					"name": "skype",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"id": 346,
@@ -1544,7 +1548,7 @@
 					"prevSize": 28,
 					"code": 61824,
 					"name": "foursquare",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"id": 347,
@@ -1564,7 +1568,7 @@
 					"prevSize": 28,
 					"code": 61828,
 					"name": "gittip",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"id": 351,
@@ -1588,7 +1592,7 @@
 					"prevSize": 28,
 					"code": 61833,
 					"name": "vk",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"id": 356,
@@ -1596,7 +1600,7 @@
 					"prevSize": 28,
 					"code": 61834,
 					"name": "weibo",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"id": 357,
@@ -1604,7 +1608,7 @@
 					"prevSize": 28,
 					"code": 61835,
 					"name": "renren",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"id": 358,

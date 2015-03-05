@@ -38,7 +38,7 @@ class Franklin_Theme {
 	 *
 	 * It is in the following format: YYYYMMDD
 	 */
-	const DATABASE_VERSION = '20141127';
+	const DATABASE_VERSION = '20150303';
 
 	/**
 	 * Retrieve the class instance. If one hasn't been created yet, create it first. 
@@ -72,9 +72,11 @@ class Franklin_Theme {
 
 		$this->maybe_upgrade();
 
+		$this->maybe_start_crowdfunding();	
+
         $this->maybe_start_customizer();
 
-        $this->maybe_start_jetpack();
+        $this->maybe_start_jetpack();        
 
 		$this->attach_hooks_and_filters();
 
@@ -188,8 +190,27 @@ class Franklin_Theme {
 
             require_once( get_template_directory() . '/inc/jetpack/class-franklin-jetpack.php');
 
-            add_action( 'wpcharitable_theme_start', array( 'Franklin_Jetpack', 'start' ) );
+            add_action( 'franklin_theme_start', array( 'Franklin_Jetpack', 'start' ) );
         }        
+    }
+
+    /**
+     * Set up crowdfunding support if EDD and Charitable are enabled. 
+     *
+     * @return 	void
+     * @access  private
+     * @since 	2.0.0
+     */
+    private function maybe_start_crowdfunding() {
+    	
+    	if ( class_exists( 'Easy_Digital_Downloads' ) 
+			&& class_exists( 'Charitable' ) 
+			&& class_exists( 'Charitable_EDD' ) ) {
+
+    		require_once( get_template_directory() . '/inc/crowdfunding/class-franklin-crowdfunding.php' );
+
+    		add_action( 'franklin_theme_start', array( 'Franklin_Crowdfunding', 'start' ) );
+    	}
     }
 
 	/**
@@ -220,6 +241,11 @@ class Franklin_Theme {
 		add_filter( 'wp_title', 				array( $this, 'wp_title' ), 10, 2 );
 		add_filter( 'wp_page_menu_args', 		array( $this, 'page_menu_args' ) );
 		add_filter( 'post_class',      			array( $this, 'post_classes' ) );
+		add_filter(	'the_content_more_link', 	array( $this, 'the_content_more_link_filter' ), 10, 2);
+        add_filter(	'next_posts_link_attributes', 			array( $this, 'posts_navigation_link_attributes' ) );
+        add_filter(	'previous_posts_link_attributes', 		array( $this, 'posts_navigation_link_attributes' ) );
+        add_filter(	'next_comments_link_attributes', 		array( $this, 'posts_navigation_link_attributes' ) );
+        add_filter(	'previous_comments_link_attributes', 	array( $this, 'posts_navigation_link_attributes' ) );        
 	}
 
 	/**
@@ -248,6 +274,9 @@ class Franklin_Theme {
 		 * @link 	http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 		 */
 		add_theme_support( 'post-thumbnails' );
+        set_post_thumbnail_size( 706, 0, false );
+        add_image_size( 'campaign-thumbnail', 640, 427, true );
+        add_image_size( 'widget-thumbnail', 294, 882, false );
 
 		/**
 		 * This theme uses wp_nav_menu() in one location.
@@ -444,6 +473,27 @@ class Franklin_Theme {
     public function post_classes($classes) {
         return array_merge( $classes, array('block', 'entry-block') );
     }
+
+    /**
+     * Filters the "more" link on post archives.
+     *
+     * @return  string
+     * @since   1.0.0
+     */
+    public function the_content_more_link_filter($more_link, $more_link_text = null) {
+        $post = get_post();
+        return '<span class="aligncenter"><a href="'.get_permalink().'" class="more-link button button-alt" title="'.sprintf( __('Keep reading %s', 'franklin'), "&#8220;".get_the_title()."&#8221;" ).'">'.__( 'Continue Reading', 'franklin' ).'</a></span>';
+    }
+
+    /**
+     * Filters the next & previous posts links.
+     * 
+     * @return  string
+     * @since   1.0.0
+     */
+    public function posts_navigation_link_attributes() {
+        return 'class="button-alt button-small"';
+    }    
 }
 
 endif; // End class_exists

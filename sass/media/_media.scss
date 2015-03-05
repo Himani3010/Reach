@@ -19,6 +19,16 @@ embed {
 	height: 100%; 
 }
 
+/* Google Maps hacks */
+#map_canvas,
+.map_canvas {
+	img, 
+	embed, 
+	object {
+		max-width: none !important; 
+	}	
+}
+
 /*--------------------------------------------------------------
 16.1 Captions
 --------------------------------------------------------------*/

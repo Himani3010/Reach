@@ -9,6 +9,28 @@
 	}
 }
 
+.banner {
+	position: relative;
+	left: (-(4 / 92) * 100% ) - 9;
+	width: 100% + 18 + ((8 / 92) * 100);	
+	@include height( 100 );
+	@include margin( -36, 0, 36 );
+	text-align: center;
+
+	@include bp( 800 ) {
+		left: -4.5rem;
+		width: -webkit-calc( 100% + 91px );
+		width: -moz-calc( 100% + 91px );
+		width: calc( 100% + 91px );
+	}
+}
+
+.banner-title {
+	margin: 0;
+	@include line-height( 100 );
+	@include letter-spacing( 3 );
+}
+
 .sticky {
 	color: $color__background-content;
 	background-color: $color__accent;
@@ -130,4 +152,33 @@
 		color: $color__border-primary;
 	}
 	border-radius: 0 0 0.4rem 0.4rem;
+}
+
+.site-main.not-found {
+	text-align: center;
+}
+
+.archive-title {
+	@include margin( 0, 0, 36 );
+	text-align: center;	
+	text-transform: none;
+	letter-spacing: 0;
+}
+
+.post-password-required {
+	label {
+		@include margin-bottom( 6 );
+
+		input {
+			max-width: 100%;
+			width: 100%;
+			display: block;
+		}
+	} 
+}
+
+.lead {
+	@include margin-bottom( 12 );
+	@include font-size( 16 );
+	@include line-height( 26 );
 }

@@ -6,20 +6,25 @@
 	}
 }
 
-.button-small {
+.button-small,
+.button.button-small, 
+.button-alt.button-small {
 	@include max-width( 120 );
 	@include padding-left( 10 );
 	@include padding-right( 10 );
 	@include font-size( 12 );
 }
 
-.button-large {
+.button-large, 
+.button.button-large {
 	@include font-size( 25 );
 	@include height( 50 );
 	@include line-height( 50 );
 }
 
 .button-alt, 
-.button-secondary {
+.button-secondary, 
+.button.button-alt, 
+.button.button-secondary {
 	@include button-inverted();
 }

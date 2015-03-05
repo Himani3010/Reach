@@ -1,11 +1,12 @@
 .featured-image {
-	max-width: 100%;
+	position: relative;
+	left: -(4 / 92) * 100%;
+	width: 100% + ((8 / 92) * 100);
 	line-height: 0;
 	border-radius: 0.4rem 0.4rem 0 0;
 	text-align: center;	
 
-	a, 
-	img {
+	a {
 		border-radius: 0.4rem 0.4rem 0 0;
 	}
 
@@ -16,5 +17,12 @@
 		max-width: 100%;
 		line-height: 0;
 		text-decoration: none;
+	}
+
+	@include bp( 800 ) {
+		left: -3.6rem;
+		width: -webkit-calc( 100% + 73px );
+		width: -moz-calc( 100% + 73px );
+		width: calc( 100% + 73px );
 	}
 }

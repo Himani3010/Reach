@@ -24,19 +24,17 @@ if ( ! function_exists( 'franklin_paging_nav' ) ) :
 			return;
 		}
 		?>
-		<nav class="navigation paging-navigation" role="navigation">
+		<nav class="navigation paging-navigation pagination" role="navigation">
 			<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'franklin' ); ?></h1>
-			<div class="nav-links">
-
+			<ul>
 				<?php if ( get_next_posts_link() ) : ?>
-				<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'franklin' ) ); ?></div>
+				<li class="nav-previous"><?php next_posts_link( __( 'Older Posts', 'franklin' ) ); ?></li>
 				<?php endif; ?>
 
 				<?php if ( get_previous_posts_link() ) : ?>
-				<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'franklin' ) ); ?></div>
+				<li class="nav-next"><?php previous_posts_link( __( 'Newer Posts', 'franklin' ) ); ?></li>
 				<?php endif; ?>
-
-			</div><!-- .nav-links -->
+			</ul>
 		</nav><!-- .navigation -->
 		<?php
 	}

@@ -2,6 +2,7 @@
 	position: relative;
 	@include max-width( 600 );
 	margin: 0 auto;
+	overflow-x: hidden;
 
 	@include bp( 600 ) {
 		max-width: 100%;
@@ -38,12 +39,13 @@
 @include bp( 720 ) {
 	.content-area {
 		float: left;
-		width: 65.78%;
+		width: 68%;
+		@include padding-right( 36 );
 	}
 
 	.sidebar {
 		float: right;
-		width: 31.22%;
+		width: 32%;
 	}
 }
 

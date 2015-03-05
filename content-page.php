@@ -7,11 +7,8 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
+	
+	<div class="entry cf">
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
@@ -19,9 +16,8 @@
 				'after'  => '</div>',
 			) );
 		?>
-	</div><!-- .entry-content -->
+	</div><!-- .entry -->
+	
+	<?php get_template_part( 'meta', 'below' ) ?>
 
-	<footer class="entry-footer">
-		<?php edit_post_link( __( 'Edit', 'franklin' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

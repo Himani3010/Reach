@@ -10,31 +10,23 @@
  * @package Franklin
  */
 
-get_header(); 
-	?>
-	<div id="primary" class="content-area">
+get_header();
+	
+	if ( have_posts() ) :
+		while ( have_posts() ) :
+			the_post();
+						
+			get_template_part( 'banner' ); ?>
 
-		<main class="site-main content" role="main">
+			<main class="site-main content-area" role="main">
+				<?php get_template_part( 'content', 'page' );
 
-		<?php if ( have_posts() ) :
+				comments_template('', true); ?>
+			</main><!-- .site-main -->
+		<?php 
+		endwhile;
+	endif;
 
-			while ( have_posts() ) :
-
-				the_post();
-				
-				get_template_part( 'banner', 'page' ); 
-				
-				get_template_part( 'content', 'page' );
-
-				comments_template('', true);
-
-			endwhile;
-
-		endif;
-		?>
-		</main>
-	</div>
-	<?php 
 get_sidebar();
 
 get_footer();

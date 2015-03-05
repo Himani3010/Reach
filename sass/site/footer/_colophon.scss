@@ -7,7 +7,7 @@
 	border-top: {
 		@include width( 1 ); 
 		style: solid;
-		color: #fff;
+		color: rgba( 255, 255, 255, 0.5 );
 	}
 	font-family: $font__secondary;
 	text-transform: none;

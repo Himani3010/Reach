@@ -103,7 +103,7 @@
 			text-align: center;
 		}
 
-		.has-sub > a:after {
+		.menu-item-has-children > a:after {
 			font-family: 'franklin-icons';
 			content: '\f107';
 			position: relative;	
@@ -111,7 +111,7 @@
 			left: 0.4rem;
 		}
 
-		ul .has-sub > a:after {
+		ul .menu-item-has-children > a:after {
 			content: '\f105';
 			top: 0;
 		}
@@ -162,4 +162,12 @@
 	}
 }
 
+/*--------------------------------------------------------------
+5.3 Site Navigation
+--------------------------------------------------------------*/
 @import "site-navigation";
+
+/*--------------------------------------------------------------
+5.4 Paging
+--------------------------------------------------------------*/
+@import "paging";
