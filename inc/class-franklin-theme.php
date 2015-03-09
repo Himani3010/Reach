@@ -41,6 +41,14 @@ class Franklin_Theme {
 	const DATABASE_VERSION = '20150303';
 
 	/**
+	 * Whether crowdfunding is enabled. 
+	 *
+	 * @var 	boolean
+	 * @access  private
+	 */
+	private $crowfunding;
+
+	/**
 	 * Retrieve the class instance. If one hasn't been created yet, create it first. 
 	 *
 	 * @return 	Franklin_Theme
@@ -210,6 +218,8 @@ class Franklin_Theme {
     		require_once( get_template_directory() . '/inc/crowdfunding/class-franklin-crowdfunding.php' );
 
     		add_action( 'franklin_theme_start', array( 'Franklin_Crowdfunding', 'start' ) );
+
+    		$this->crowdfunding = true;
     	}
     }
 
@@ -372,13 +382,48 @@ class Franklin_Theme {
 	public function setup_scripts() {
 		wp_enqueue_style( 'franklin-style', get_stylesheet_uri() );
 
-		wp_enqueue_script( 'franklin-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+		$ext = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '.js' : '.min.js'; 
+		
+		// Allow other scripts to add their scripts to the dependencies.
+        $franklin_script_dependencies = apply_filters( 'franklin_script_dependencies', array( 
+            'jquery-ui-accordion', 
+            'audio-js', 
+            'rrssb',
+            'hoverIntent', 
+            'leanModal', 
+            'jquery' 
+        ) );
 
-		wp_enqueue_script( 'franklin-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+        wp_register_script( 'audio-js', 	get_template_directory_uri() . '/js/vendors/audiojs/audio.min.js', array(), $this->get_theme_version(), true);
+        wp_register_script( 'leanModal', 	get_template_directory_uri() . '/js/vendors/leanmodal/jquery.leanModal.min.js', array('jquery'), $this->get_theme_version(), true);
+        wp_register_script( 'rrssb', 		get_template_directory_uri() . '/js/vendors/rrssb/rrssb.min.js', array('jquery'), $this->get_theme_version(), true );
+		wp_register_script( 'franklin-lib', get_template_directory_uri() . '/js/franklin-lib' . $ext, $franklin_script_dependencies, $this->get_theme_version(), true );
+        wp_register_script( 'franklin', 	get_template_directory_uri() . '/js/franklin.js', array( 'franklin-lib' ), $this->get_theme_version(), true );
+        wp_enqueue_script( 'franklin' ); 
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
+
+		if ( $this->crowdfunding ) {
+			wp_localize_script('franklin', 'FRANKLIN_CROWDFUNDING', array(
+	            'need_minimum_pledge'   => __( 'Your pledge must be at least the minimum pledge amount.', 'franklin' ), 
+	            'years'                 => __( 'Years', 'franklin' ), 
+	            'months'                => __( 'Months', 'franklin' ), 
+	            'weeks'                 => __( 'Weeks', 'franklin' ), 
+	            'days'                  => __( 'Days', 'franklin' ), 
+	            'hours'                 => __( 'Hours', 'franklin' ), 
+	            'minutes'               => __( 'Minutes', 'franklin' ), 
+	            'seconds'               => __( 'Seconds', 'franklin' ), 
+	            'year'                  => __( 'Year', 'franklin' ), 
+	            'month'                 => __( 'Month', 'franklin' ), 
+	            'day'                   => __( 'Day', 'franklin' ), 
+	            'hour'                  => __( 'Hour', 'franklin' ), 
+	            'minute'                => __( 'Minute', 'franklin' ), 
+	            'second'                => __( 'Second', 'franklin' ), 
+	            'timezone_offset'       => franklin_get_timezone_offset()
+	        ) ); 
+		}		
 	}
 
 	/**
@@ -493,7 +538,7 @@ class Franklin_Theme {
      */
     public function posts_navigation_link_attributes() {
         return 'class="button-alt button-small"';
-    }    
+    }   
 }
 
 endif; // End class_exists

@@ -9,16 +9,22 @@ module.exports = function(grunt) {
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
  
     grunt.initConfig({
- 
+    
+        pkg: grunt.file.readJSON('package.json'), 
+
         // watch for changes and trigger compass, jshint, uglify and livereload
         watch: {            
             sass: {
                 files: ['sass/*.scss', 'sass/**/*.scss'],
                 tasks: ['sass']
             },
-            js: {
-                files: '<%= jshint.all %>',
-                tasks: ['jshint']
+            concat: {
+                files: ['js/franklin/*.js', 'js/franklin/**/*.js'], 
+                tasks: ['concat']
+            },            
+            uglify: {
+                files: 'js/franklin-lib.js', 
+                tasks: ['uglify']
             },
             sync: {
                 files: [
@@ -76,17 +82,49 @@ module.exports = function(grunt) {
                 verbose: true
             }
         },
+
+        // concat js
+        concat: {            
+            options: {
+                separator: "\n\n;",
+                stripBanners: false,
+                banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd") %> */\n\n',
+            },
+            dist: {
+                files: {
+                    'js/franklin-lib.js' : [
+                        'js/franklin/*.js', 
+                        'js/franklin/**/*.js'
+                    ]
+                }
+            },
+        },
  
         // javascript linting with jshint
         jshint: {
             options: {
                 jshintrc: '.jshintrc',
-                "force": true
+                force: true,
+                reporter: require('jshint-stylish')
             },
             all: [
-                'Gruntfile.js'
+                'Gruntfile.js', 
+                'js/franklin.js', 
+                'js/franklin-lib.js', 
+                'js/admin/theme-customizer.js',
             ]
-        },        
+        },
+
+        // uglify to concat, minify, and make source maps
+        uglify: {
+            dist: {
+                files: {
+                    'js/franklin-lib.min.js': [ 
+                        'js/franklin-lib.js'
+                    ]
+                }
+            }
+        },           
 
         // make POT file
         makepot: {
@@ -105,5 +143,5 @@ module.exports = function(grunt) {
  
     // register task
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['jshint', 'makepot']);
+    grunt.registerTask('build', ['concat', 'uglify', 'sync', 'jshint', 'makepot']);
 };

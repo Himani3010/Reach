@@ -1,5 +1,7 @@
-Franklin = typeof Franklin === 'undefined' ? {} : Franklin;
-Franklin.Barometer = ( function($) {
+/*--------------------------------------------------------
+ * Campaign Barometer
+---------------------------------------------------------*/
+FRANKLIN.Barometer = ( function($) {
 
 	// Barometers collection
 	var $barometers = $('.barometer'), 
@@ -105,154 +107,13 @@ Franklin.Barometer = ( function($) {
 	};
 
 	return {
-
 		init : function() {
-
 			$barometers.each( function() {
 				initBarometer( $(this) );
 			});					
-
 		},
-
 		getBarometers : function() {
 			return $barometers;
 		}
-
 	}
-
-})( jQuery );
-
-Franklin.Countdown = ( function( $ ) {
-
-	// Start the countdown script
-	var startCountdown = function() {
-		var $countdown = $('.countdown');
-
-		if ($countdown.length) {
-			
-			$countdown.countdown({
-				until: $.countdown.UTCDate( Franklin.timezone_offset, new Date( $countdown.data().enddate ) ), 
-				format: 'dHMS', 
-				labels : [Franklin.years, Franklin.months, Franklin.weeks, Franklin.days, Franklin.hours, Franklin.minutes, Franklin.seconds],
-				labels1 : [Franklin.year, Franklin.month, Franklin.week, Franklin.day, Franklin.hour, Franklin.minute, Franklin.second]
-			});
-		}		
-
-		return $countdown;
-	}
-
-	return {
-
-		init : function() {
-			startCountdown();
-		}
-		
-	};
-
-})( jQuery );	
-
-Franklin.Grid = ( function( $ ) {
-
-	var $grids = $('.masonry-grid');
-
-	var initGrid = function($grid) {
-		$grid.masonry();
-	};
-
-	return {
-
-		init : function() {
-
-			if ( $(window).width() > 400 ) {
-				$grids.each( function() {
-					initGrid( $(this) );
-				});
-			}
-						
-		}, 
-
-		getGrids : function() {
-			return $grids;
-		}, 
-
-		resizeGrid : function() {
-			$grids.each( function(){
-				initGrid( $(this) );
-			})
-		}			
-	}
-
-})( jQuery );
-
-Franklin.Pledging = ( function( $ ) {
-
-	var $form = $('.edd_download_purchase_form'),
-		$price = $('input[name=atcf_custom_price]'),
-		$pledges = $('.edd_download_purchase_form .pledge-level').sort( function( a, b ) {
-			return parseInt( $(a).data('price') ) - parseInt( $(b).data('price') );
-		}), 
-		$button = $('.pledge-button a'),
-		$minpledge = $pledges.first(), 
-		$maxpledge;
-
-	var priceChange = function() {
-		var new_pledge = parseInt( $price.val() );
-
-		if ( $minpledge.length === 0 ) {
-			return;
-		}	
-
-		if ( $pledges.length === 0 ) {
-			return;
-		}
-
-		// The pledge has to equal or exceed the minimum pledge amount
-		if ( parseInt( $minpledge.data('price') ) > new_pledge ) {
-
-			// Explain that the pledge has to be at least the minimum
-			alert( Franklin.need_minimum_pledge );
-
-			// Select the minimum pledge amount
-			$minpledge.find('input').prop('checked', true);
-			$minpledge.change();
-
-			// Exit
-			return;
-		}			
-
-		$pledges.each( function() {
-
-			if ( $(this).data('price') <= new_pledge && $(this).hasClass('not-available') === false ) {
-				$maxpledge = $(this);
-			} 
-			// This pledge's amount is greater than the amount set
-			else {										
-				return false;
-			}
-		});
-
-		// Select the maximum pledge
-		$maxpledge.find('input').prop('checked', true);
-	}
-
-	return {
-
-		init : function() {
-
-			// Set up event handlers
-			$button.on( 'click', function() {
-				var price = $(this).data('price');				
-				console.log( $(this) );
-				$form.find('[data-price="' + price + '"] input').prop('checked', true).trigger('change');
-			});
-
-			$form.on( 'change', '.pledge-level', function() {
-				$price.val( $(this).data().price );
-			})
-			.on( 'change', 'input[name=atcf_custom_price]', function() {
-				priceChange();
-			});
-		}
-	}
-
 })( jQuery );

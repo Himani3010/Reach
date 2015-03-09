@@ -3,6 +3,23 @@
 
 	&:hover {
 		text-decoration: none;
+	}	
+}
+
+.button-alt, 
+.button-secondary, 
+.button.button-alt, 
+.button.button-secondary {
+	@include button-inverted();
+
+	&.accent {
+		color: $color__accent;
+		border-color: $color__accent;
+
+		&:hover {
+			background-color: $color__accent;
+			color: $color__text-overlay;
+		}
 	}
 }
 
@@ -20,11 +37,4 @@
 	@include font-size( 25 );
 	@include height( 50 );
 	@include line-height( 50 );
-}
-
-.button-alt, 
-.button-secondary, 
-.button.button-alt, 
-.button.button-secondary {
-	@include button-inverted();
 }

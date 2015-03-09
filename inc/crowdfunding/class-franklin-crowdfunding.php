@@ -32,7 +32,7 @@ class Franklin_Crowdfunding {
 		if ( ! $theme->is_start() ) {
 			return;
 		}
-		
+
 		new Franklin_Crowdfunding();	
 	}
 
@@ -43,6 +43,7 @@ class Franklin_Crowdfunding {
 	 * @since 	1.0.0
 	 */
 	private function __construct() {
+		$this->attach_hooks_and_filters();
 		$this->load_dependencies();
 	}
 
@@ -55,6 +56,42 @@ class Franklin_Crowdfunding {
 	 */
 	private function load_dependencies() {
 		require_once( 'functions/helper-functions.php' );
+	}
+
+	/**
+	 * Set up hooks and filters. 
+	 *
+	 * @return 	void
+	 * @access  private
+	 * @since 	2.0.0
+	 */
+	private function attach_hooks_and_filters() {
+		remove_filter( 'the_content', 					array( charitable_get_helper( 'templates' ), 'campaign_content' ), 2 );
+		add_filter( 'franklin_script_dependencies', 	array( $this, 'setup_script_dependencies' ) );
+	}
+
+	/**
+	 * Register scripts required for crowdfunding functionality. 
+	 *
+	 * @param 	array 		$dependencies
+	 * @return 	array
+	 * @access  public
+	 * @since 	2.0.0
+	 */
+	public function setup_script_dependencies( $dependencies ) {
+		$dependencies[] = 'raphael';
+		$dependencies[] = 'jquery-masonry';		
+		
+		wp_register_script( 'raphael', get_template_directory_uri() . '/js/vendors/raphael/raphael-min.js', array( 'jquery' ), franklin_get_theme()->get_theme_version(), true );
+
+		if ( get_post_type() == 'campaign' ) {
+			wp_register_script( 'countdown-plugin', get_template_directory_uri() . '/js/vendors/jquery-countdown/jquery.plugin.min.js', array( 'jquery' ), franklin_get_theme()->get_theme_version(), true );
+            wp_register_script( 'countdown', get_template_directory_uri() . '/js/vendors/jquery-countdown/jquery.countdown.min.js', array( 'countdown-plugin' ), franklin_get_theme()->get_theme_version(), true );
+
+            $dependencies[] = 'countdown';
+        }
+
+		return $dependencies;
 	}
 }
 

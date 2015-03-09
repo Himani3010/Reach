@@ -11,17 +11,24 @@
 		@include right( 36 );
 		@include top( 36 );
 		@include line-height( 38 );
-	}
 
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a {
-		color: $color__accent;
-
-		&:hover {
-			border-color: transparent !important;
+		&:before {
+			content: "\f00b";
+			font-family: 'franklin-icons';
+			speak: none;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
 		}
-	}
+	}		
+
+	&.toggled {
+		.menu-button:before {
+			content: "\f00d";
+		}
+	} 
 
 	@include bp( 800 ) {
 		position: static;
@@ -74,6 +81,16 @@
 				margin-top: 0;
 			}
 		}			
+
+		.current_page_item > a,
+		.current-menu-item > a,
+		.current_page_ancestor > a {
+			color: $color__accent;
+
+			&:hover {
+				border-color: transparent !important;
+			}
+		}
 	}
 }
 

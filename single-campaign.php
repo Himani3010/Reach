@@ -19,14 +19,14 @@ get_header();
 				<div class="content-area">
 	
 					<!-- Campaign content -->					
-					<?php get_template_part('content', 'campaign') ?>
+					<?php get_template_part( 'content', 'campaign' ) ?>
 					<!-- End campaign content -->
 
 					<!-- "Campaign Below Content" sidebar -->
-					<?php dynamic_sidebar('campaign_after_content') ?>
+					<?php get_sidebar( 'campaign-after' ) ?>
 					<!-- End "Campaign Below Content" sidebar -->
 
-					<?php //comments_template('/comments-campaign.php', true) ?>
+					<?php comments_template( '/comments-campaign.php', true ) ?>
 
 				</div>
 
@@ -36,6 +36,9 @@ get_header();
 		<?php 
 		endwhile;
 	endif;
-	//get_template_part('campaign', 'modals');
+	
+	get_template_part( 'campaign', 'share-modal' );
+
+	get_template_part( 'campaign', 'support-modal' );
 
 get_footer();

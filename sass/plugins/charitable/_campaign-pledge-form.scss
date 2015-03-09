@@ -1,0 +1,48 @@
+.campaign-pledge-levels {
+	@include padding( 12, 0, 36 );
+	list-style: none;
+	text-align: left;	
+}
+
+
+.pledge-level {
+	margin-bottom: 12px;
+}
+
+.pledge-level input {
+	position: relative;
+	bottom: 4px;
+}
+
+.pledge-title {
+	display: inline;
+	text-transform: uppercase;
+	letter-spacing: 1px; letter-spacing: 0.1rem;
+	font-weight: 300;	
+}
+
+.pledge-title strong {
+	font-weight: 400;
+}
+
+.pledge-description {
+	margin-left: 22px; margin-left: 2.2rem;
+}
+
+.pledge-limit {
+	float: right;
+	margin-top: 12px; margin-top: 1.2rem;
+	text-align: right;
+	font-style: italic;	
+}
+
+.pledge-level.not-available .pledge-description {
+	margin-left: 0;
+}
+
+.edd-cart-ajax-alert {
+	float: left;
+	width: 100%;
+	padding-top: 24px; padding-top: 2.4rem;
+	font-style: italic;
+}

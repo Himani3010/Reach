@@ -6,6 +6,8 @@
   	"jQuery"	: false, 
   	"window"	: false, 
   	"document"	: false, 
-  	"console"	: false
+  	"console"	: false, 
+  	"navigation": false, 
+  	"wp"		: false
   }
 }

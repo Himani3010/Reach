@@ -1,4 +1,6 @@
 .campaign-summary {
+	@include margin-bottom( 36 );
+
 	.campaign-description {
 		float: left;
 		width: 100%;
@@ -162,60 +164,157 @@
 			@include font-size( 22 );
 			cursor: pointer;
 		}		
-	}	
+	}
+
+	@media all and (min-width: 37.5em) and (max-width: 55em) {
+
+		.campaign-details {
+			position: relative;
+			width: 100%;			
+			padding-bottom: 7.4rem;	
+		
+			.campaign-support {
+				float: right; 
+				width: 70%;
+			}
+
+			ul {
+				width: 70%;
+				max-width: 88rem;
+				text-align: center;
+			}
+
+			li {
+				display: inline-block;
+				padding-right: 2rem; padding-left: 2rem;
+				border-right: 0.1rem solid rgba(255, 255, 255, 0.3);
+				border-bottom: 0;
+			}
+
+			.campaign-backers {
+				border: none;
+			}
+		}
+
+		.campaign-countdown {
+			position: absolute;
+			bottom: 0;
+			left: 0;		
+			width: 100%;		
+			padding: 1rem 13% 0 13%;
+			border-bottom: 0;
+			border-top:  0.1rem solid rgba(255, 255, 255, 0.3);		
+			text-align: center;
+		}
+
+		.campaign-sharing {
+			padding-top: 2.4rem;
+			margin-top: 1.2rem;
+			border-top: 0.1rem solid rgba(255, 255, 255, 0.3);
+		}
+
+		&.ended {
+			.campaign-summary {
+				padding-bottom: 1.2rem;
+			
+				ul {
+					margin-top: 4.8rem; 
+				}
+			}
+		}
+	}
+
+	@include bp ( 880 ) {
+		.campaign-image {
+			width: 50%;
+			width: -moz-calc(100% - 43rem);
+			width: -webkit-calc(100% - 43rem);
+			width: calc(100% - 43rem);
+			float: left;
+			margin-right: 0;		
+		
+			.wp-post-image {
+				border: 0.5rem solid;
+				border-radius: 0.4rem;
+				width: 95.3%;
+				width: -moz-calc(100% - 1.8rem);
+				width: -webkit-calc(100% - 1.8rem);
+				width: calc(100% - 1.8rem);
+			}
+		}
+
+		.campaign-details {
+			float: left;
+			padding-left: 0;
+			padding-top: 0.3rem;
+			margin-left: 4rem;
+			margin-right: 0;
+		}	
+
+		.campaign-sharing {
+			float: right;
+			width: 38rem;
+			margin-left: 0;
+		}
+	}
 }
 
-.countdown-rtl {
-	direction: rtl;
-}
-.countdown-row {
-	clear: both;
-	width: 100%;
-	padding: 0px 2px;
-	text-align: center;
-}
-.countdown-show1 .countdown-section {
-	width: 98%;
-}
-.countdown-show2 .countdown-section {
-	width: 48%;
-}
-.countdown-show3 .countdown-section {
-	width: 32.5%;
-}
-.countdown-show4 .countdown-section {
-	width: 24.5%;
-}
-.countdown-show5 .countdown-section {
-	width: 19.5%;
-}
-.countdown-show6 .countdown-section {
-	width: 16.25%;
-}
-.countdown-show7 .countdown-section {
-	width: 14%;
-}
-.countdown-section {
-	display: block;
-	float: left;	
-	text-align: center;
-	font-size: 12px; font-size: 1.2rem;
-	font-weight: 300;
-}
-.countdown-amount {	
-	font-size: 20px; font-size: 2rem;
-	line-height: 1em;
-}
-.countdown-period {
-	display: block;
-	width: 100%;
-}
 .campaign-countdown {
 	float: left;
 	width: 100%;
 	padding-top: 10px; padding-bottom: 10px;
 	margin-bottom: 0; 
 	border-top: 1px solid #fff; border-bottom: 1px solid #fff; border-color: rgba(255, 255, 255, 0.3);
+
+	.countdown {
+		text-transform: none;
+		letter-spacing: 0;
+	}
+	.countdown-rtl {
+		direction: rtl;
+	}
+	.countdown-row {
+		clear: both;
+		width: 100%;
+		padding: 0px 2px;
+		text-align: center;
+	}
+	.countdown-show1 .countdown-section {
+		width: 98%;
+	}
+	.countdown-show2 .countdown-section {
+		width: 48%;
+	}
+	.countdown-show3 .countdown-section {
+		width: 32.5%;
+	}
+	.countdown-show4 .countdown-section {
+		width: 24.5%;
+	}
+	.countdown-show5 .countdown-section {
+		width: 19.5%;
+	}
+	.countdown-show6 .countdown-section {
+		width: 16.25%;
+	}
+	.countdown-show7 .countdown-section {
+		width: 14%;
+	}
+	.countdown-section {
+		display: block;
+		float: left;	
+		text-align: center;
+		font-size: 12px; font-size: 1.2rem;
+		font-weight: 300;
+	}
+	.countdown-amount {	
+		font-size: 20px; font-size: 2rem;
+		line-height: 1em;
+	}
+	.countdown-period {
+		display: block;
+		width: 100%;
+	}
 }
 
 .campaign-countdown .countdown {
@@ -236,6 +335,8 @@
 	font-weight: 300;
 	width: 30%;
 }
+
+
 
 #campaign-widget-sharing {
 	pre {

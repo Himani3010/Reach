@@ -1,0 +1,48 @@
+#lean_overlay {
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    background: rgba(0, 0, 0, 0.45);
+    display: none;
+}
+
+.modal {
+	display: none;
+	@include padding( 36 );
+
+	&.multi-block {
+		padding-left: 0;
+		padding-right: 0;
+		width: 98%;
+	}
+
+	.content-block {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	@include bp( 600 ) {
+		&.content-block {
+			width: 52.2rem;
+		}
+
+		.content-block.column-half {
+			width: 50%;
+			@include padding-left( 24 );
+			@include padding-right( 24 );
+		}
+	}
+}
+
+.close-modal {
+	position: absolute;
+	@include top( 6 );
+	@include right( 6 );
+	@include font-size( 20 );
+	line-height: 1;
+	cursor: pointer;
+}

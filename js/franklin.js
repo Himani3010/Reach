@@ -1,142 +1,82 @@
-var FRANKLIN = {};
-
-
-
-
-var Sofa = ( function( $ ) {
-
-	var self = this,
+/*--------------------------------------------------------
+ * Init script
+ *
+ * This is set up as an anonymous function, which avoids 
+ * pollution the global namespace. 
+---------------------------------------------------------*/
+( function( $ ){	
 	
-	// Ensure that browsers which don't support the placeholder attribute will 
-	// still display the placeholder value as a preset value inside the element.
-	crossBrowserPlaceholder = function() {
-		var $form_elements = $(':text,textarea');
+	// Perform other actions on ready event
+	$(document).ready( function() {
 
-		// Make sure there are text inputs
-		if ( $form_elements.length ) {
+		$('html').removeClass('no-js');
 
-			// Only proceed if placeholder isn't supported
-			if ( ! ( 'placeholder' in $form_elements.first()[0] ) ) {
-				var active = document.activeElement;
+		FRANKLIN.DropdownMenus.init();
 
-				$form_elements.focus( function() {
-					if ( $(this).attr('placeholder') != null ) {
-						$(this).val('');
-						if ( $(this).val() !== $(this).attr('placeholder') ) {
-							$(this).removeClass('hasPlaceholder');
-						}
-					}
-				}).blur( function() {
-					if ( $(this).attr('placeholder') != null && ($(this).val() === '' || $(this).val() === $(this).attr('placeholder'))) {
-						$(this).val($(this).attr('placeholder')).addClass('hasPlaceholder');
-					}
-				});
-				$form_elements.blur();
-				$(active).focus();
-				$('form').submit(function () {
-					$(this).find('.hasPlaceholder').each(function() { $(this).val(''); });
-				});
-			}
-		}
-	}, 
+		FRANKLIN.ResponsiveMenu.init();
 
-	// Dropdown menus
-	dropdownMenus = function() {
-		$('.menu li')
-		.each( function() {
-			if ( $(this).find('li').length ) {
-				$(this).addClass('has-sub');
-			}
-		})
-		.on('mouseover', function() {
-			$(this).addClass('hovering');
-		})
-		.on('mouseout', function() {
-			$(this).removeClass('hovering');
-		});
-	},
+		FRANKLIN.CrossBrowserPlaceholders.init();
 
-	// Image hover effects
-	imageHovers = function() {
-		$('.on-hover').each( function() {
-			var $parent = $(this).parent(), 
-				$image = $parent.find('img');
+		FRANKLIN.ImageHovers.init();
 
-			// Set the width and offset of the hover to match the image
-			$(this).css({ width : $image.width(), left : $image.position().left });
-			
-			// Set up the parent, along with its event handlers
-			$parent
-			.addClass('hover-parent')
-			.on( 'mouseover', function() {
-				$(this).addClass('hovering');
-			})
-			.on('mouseout', function() {
-				$(this).removeClass('hovering');
+		FRANKLIN.FancySelect.init();
+
+		FRANKLIN.LeanModal.init();	
+
+		// if ( $.fn.accordion ) {
+		// 	$('.accordion').accordion({
+		// 		heightStyle: "content"
+		// 	});
+		// }
+
+		if ( FRANKLIN_CROWDFUNDING ) {
+
+			FRANKLIN.Countdown.init();		
+
+			FRANKLIN.Pledging.init();
+
+			$('.campaign-button').on( 'click', function() {
+				$(this).toggleClass('icon-remove');
+				$(this).parent().toggleClass('is-active');
 			});
-		});
-	}, 
 
-	// // Hide/show elements responsive
-	// responsiveHide = function() {
-	// 	// IE8 and below are dished up the mobile version, so this is always applied to them		
-	// 	$('body').toggleClass('is-tiny', $(window).width() < 600 || $('html').hasClass('lt-ie9') );
-	// }, 
+			// $('[name=shipping_country], [name=shipping_state_ca], [name=shipping_state_us]').on( 'change', Sofa.toggleSelectWrapper($(this)))
 
-	// Wraps select elements in a wrapper class
-	fancySelect = function() {
-		var $select = $('select'), 
-			toggleWrapper = function($el) {
-				$el.parent().css('display', $el.css('display'))
-			};
+			// $('.atcf-multi-select .children').hide();
+			// $('.atcf-multi-select input[type="checkbox"]').on( 'change', function() {
+			// 	var parent_category = $(this).parent().parent('li'), 
+			// 		child = parent_category.children('.children');
+			// 	if ( $(this).attr("checked") ) {
+			// 		child.show();
+			// 		if( child.length > 0 ) {
+			// 			parent_category.addClass("selected");
+			// 		}
+			// 	} else {
+			// 		child.hide();
+			// 		parent_category.removeClass("selected");
+			// 		parent_category.find('input[type="checkbox"]').prop('checked', false);
+			// 	}
+			// });
+		}	
+	});
+	
+	if ( typeof audiojs !== 'undefined' ) {
+		audiojs.events.ready(function() {
+	    	var as = audiojs.createAll();
+	  	});
+	}
 
-		if ( ($select).parent().hasClass('select-wrapper') ) {
-			return toggleWrapper;
-		}
+  	$(window).resize( function() {
+  		if ( FRANKLIN_CROWDFUNDING ) {
+  			FRANKLIN.Grid.resizeGrid();
+  		}
+  	});
 
-		$select.wrap('<div class="select-wrapper" />')
-		.on('change', function() {
-			toggleWrapper($(this))
-		});
+  	$(window).load( function() {
+  		if ( FRANKLIN_CROWDFUNDING ) {
+  			FRANKLIN.Grid.init();
+			FRANKLIN.Barometer.init();
+  		}
+  	});
 
-		$select.each( function() {
-			toggleWrapper($(this)); 
-		});
-
-		return toggleWrapper;
-	};		
-
-	return {			
-
-		init : function() {
-			// Remove the no-js class from the html element
-			$("html").removeClass('no-js');
-
-			// Set up cross-browser placeholders
-			crossBrowserPlaceholder();
-
-			// Dropdown menus
-			dropdownMenus();
-
-			// Image hovers
-			imageHovers();
-
-			responsiveHide();
-
-			// Fancy select
-			fancySelect();
-		}, 
-
-		responsiveHide : function() {
-			responsiveHide();
-		}, 
-
-		toggleSelectWrapper: function($el) {
-			fancySelect($el)
-		}, 
-
-		fancySelect : function() {
-			fancySelect();
-		}
-	};	
 })( jQuery );

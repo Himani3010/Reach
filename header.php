@@ -41,7 +41,7 @@
 				</div><!-- .site-branding -->
 				<div class="site-navigation">		
 					<nav role="navigation">
-						<a class="menu-toggle menu-button toggle-button" aria-controls="menu" aria-expanded="false" data-icon="&#xf00b;"></a>
+						<a class="menu-toggle menu-button toggle-button" aria-controls="menu" aria-expanded="false"></a>
 						<?php wp_nav_menu( array(   
 							'theme_location' 	=> 'primary_navigation',
 							'container' 		=> false,

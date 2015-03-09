@@ -815,11 +815,10 @@ a {
   transition: max-height 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0; }
   .menu-site li {
     margin: 0;
-    padding: 12px 0px;
-    padding: 1.2rem 0rem;
     border-bottom-width: 1px;
     border-bottom-width: 0.1rem;
     border-bottom-style: solid;
+    border-bottom-color: #e2dedb;
     list-style: none;
     line-height: 1em;
     letter-spacing: 1px;
@@ -831,6 +830,8 @@ a {
       height: auto; }
   .menu-site a {
     display: block;
+    padding: 12px 0px;
+    padding: 1.2rem 0rem;
     text-decoration: none;
     font-weight: 400;
     color: #7d6e63; }
@@ -894,25 +895,31 @@ a {
     .menu-site li.hovering > ul {
       left: auto; } }
 
-.is-active > .menu-site {
-  width: 100%;
+.toggled .menu-site {
+  position: relative;
+  left: -36px;
+  left: -3.6rem;
+  width: -webkit-calc( 100% + 72px );
+  width: -moz-calc( 100% + 72px );
+  width: calc( 100% + 72px );
   height: auto;
   max-height: 10000px;
   border-top-width: 2px;
   border-top-width: 0.2rem;
   border-top-style: solid; }
-  .is-active > .menu-site ul {
-    margin-top: 12px;
-    margin-top: 1.2rem;
-    margin-left: 0px;
-    margin-left: 0rem;
-    padding-left: 5%;
+  .toggled .menu-site ul {
+    margin: 0;
+    padding-left: 0;
     border-top-width: 1px;
     border-top-width: 0.1rem;
     border-top-style: solid; }
-  .is-active > .menu-site li:last-child {
-    padding-bottom: 0;
-    border: none; }
+  .toggled .menu-site li li {
+    text-indent: 8%; }
+    .toggled .menu-site li li li {
+      text-indent: 12%; }
+    .toggled .menu-site li li:last-child {
+      padding-bottom: 0;
+      border: none; }
 
 /* .menu-button is used as a trigger class for toggling menus */
 .menu-button {
@@ -943,14 +950,17 @@ a {
     top: 3.6rem;
     line-height: 38px;
     line-height: 3.8rem; }
-  .site-navigation .current_page_item > a,
-  .site-navigation .current-menu-item > a,
-  .site-navigation .current_page_ancestor > a {
-    color: #d95b43; }
-    .site-navigation .current_page_item > a:hover,
-    .site-navigation .current-menu-item > a:hover,
-    .site-navigation .current_page_ancestor > a:hover {
-      border-color: transparent !important; }
+    .site-navigation .menu-button:before {
+      content: "\f00b";
+      font-family: 'franklin-icons';
+      speak: none;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased; }
+  .site-navigation.toggled .menu-button:before {
+    content: "\f00d"; }
   @media (min-width: 50em) {
     .site-navigation {
       position: static;
@@ -986,7 +996,15 @@ a {
           border-radius: 0 0 0.4rem 0.4rem;
           margin-top: 0.9rem; }
         .site-navigation .menu-site ul ul {
-          margin-top: 0; } }
+          margin-top: 0; }
+      .site-navigation .current_page_item > a,
+      .site-navigation .current-menu-item > a,
+      .site-navigation .current_page_ancestor > a {
+        color: #d95b43; }
+        .site-navigation .current_page_item > a:hover,
+        .site-navigation .current-menu-item > a:hover,
+        .site-navigation .current_page_ancestor > a:hover {
+          border-color: transparent !important; } }
 
 @media (min-width: 50em) {
   .no-tagline .site-navigation .menu-site {
@@ -1187,27 +1205,6 @@ a {
   .button:hover {
     text-decoration: none; }
 
-.button-small,
-.button.button-small,
-.button-alt.button-small {
-  max-width: 120px;
-  max-width: 12rem;
-  padding-left: 10px;
-  padding-left: 1rem;
-  padding-right: 10px;
-  padding-right: 1rem;
-  font-size: 12px;
-  font-size: 1.2rem; }
-
-.button-large,
-.button.button-large {
-  font-size: 25px;
-  font-size: 2.5rem;
-  height: 50px;
-  height: 5rem;
-  line-height: 50px;
-  line-height: 5rem; }
-
 .button-alt,
 .button-secondary,
 .button.button-alt,
@@ -1253,6 +1250,39 @@ a {
     background-color: #7d6e63;
     color: #fff;
     text-decoration: none; }
+  .button-alt.accent,
+  .button-secondary.accent,
+  .button.button-alt.accent,
+  .button.button-secondary.accent {
+    color: #d95b43;
+    border-color: #d95b43; }
+    .button-alt.accent:hover,
+    .button-secondary.accent:hover,
+    .button.button-alt.accent:hover,
+    .button.button-secondary.accent:hover {
+      background-color: #d95b43;
+      color: #fff; }
+
+.button-small,
+.button.button-small,
+.button-alt.button-small {
+  max-width: 120px;
+  max-width: 12rem;
+  padding-left: 10px;
+  padding-left: 1rem;
+  padding-right: 10px;
+  padding-right: 1rem;
+  font-size: 12px;
+  font-size: 1.2rem; }
+
+.button-large,
+.button.button-large {
+  font-size: 25px;
+  font-size: 2.5rem;
+  height: 50px;
+  height: 5rem;
+  line-height: 50px;
+  line-height: 5rem; }
 
 /*-------------------------------------------------------------- 
 12.0 Blocks
@@ -1354,6 +1384,52 @@ a {
   border-right: 0.9rem solid transparent !important;
   border-bottom: 0.9rem solid transparent !important;
   border-left: 0.9rem solid; }
+
+/*-------------------------------------------------------------- 
+13.0 Modals
+--------------------------------------------------------------*/
+#lean_overlay {
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  background: rgba(0, 0, 0, 0.45);
+  display: none; }
+
+.modal {
+  display: none;
+  padding: 36px;
+  padding: 3.6rem; }
+  .modal.multi-block {
+    padding-left: 0;
+    padding-right: 0;
+    width: 98%; }
+  .modal .content-block {
+    padding-left: 0;
+    padding-right: 0; }
+  @media (min-width: 37.5em) {
+    .modal.content-block {
+      width: 52.2rem; }
+    .modal .content-block.column-half {
+      width: 50%;
+      padding-left: 24px;
+      padding-left: 2.4rem;
+      padding-right: 24px;
+      padding-right: 2.4rem; } }
+
+.close-modal {
+  position: absolute;
+  top: 6px;
+  top: 0.6rem;
+  right: 6px;
+  right: 0.6rem;
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer; }
 
 /*-------------------------------------------------------------- 
 13.0 Masthead
@@ -2219,208 +2295,229 @@ embed {
 /*--------------------------------------------------------------
 18.1 Charitable
 --------------------------------------------------------------*/
-.campaign-summary .campaign-description {
-  float: left;
-  width: 100%;
-  padding: 36px 0px 24px;
-  padding: 3.6rem 0rem 2.4rem;
-  text-align: center;
-  font-size: 22px;
-  font-size: 2.2rem;
-  line-height: 32px;
-  line-height: 3.2rem; }
-  .campaign-summary .campaign-description p:last-child {
-    margin-bottom: 0; }
-.campaign-summary .campaign-image {
-  position: relative;
-  float: left;
-  width: 100%;
-  margin: 0px 0px 36px;
-  margin: 0rem 0rem 3.6rem;
-  line-height: 0;
-  overflow: hidden; }
-  .campaign-summary .campaign-image span {
-    position: absolute;
-    display: block;
-    line-height: 1em;
-    padding: 6px 0px;
-    padding: 0.6rem 0rem;
-    width: 200px;
-    width: 20rem;
-    margin: 30px 0px 0px -60px;
-    margin: 3rem 0rem 0rem -6rem;
+/*--------------------------------------------------------------
+18.1.1 Campaign Summary
+--------------------------------------------------------------*/
+.campaign-summary {
+  margin-bottom: 36px;
+  margin-bottom: 3.6rem; }
+  .campaign-summary .campaign-description {
+    float: left;
+    width: 100%;
+    padding: 36px 0px 24px;
+    padding: 3.6rem 0rem 2.4rem;
     text-align: center;
-    letter-spacing: 1px;
-    letter-spacing: 0.1rem;
-    font-size: 11px;
-    font-size: 1.1rem;
-    color: #fff;
-    -moz-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg); }
-  .campaign-summary .campaign-image .campaign-successful {
-    background-color: #1ba714; }
-  .campaign-summary .campaign-image .campaign-unsuccessful {
-    background-color: #cc181e; }
-.campaign-summary .wp-post-image {
-  width: 100%; }
-.campaign-summary .campaign-details {
-  padding: 36px 0px 0px;
-  padding: 3.6rem 0rem 0rem;
-  margin: 0 auto;
-  max-width: 100%;
-  width: 380px;
-  width: 38rem; }
-.campaign-summary .campaign-ended {
-  margin-bottom: 24px;
-  margin-bottom: 2.4rem;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 300; }
-.campaign-summary .barometer {
-  position: relative;
-  float: left;
-  margin-right: 10px;
-  margin-right: 1rem;
-  z-index: 30;
-  width: 146px;
-  width: 14.6rem;
-  height: 146px;
-  height: 14.6rem; }
-  .campaign-summary .barometer span {
-    position: absolute;
-    left: 0;
-    top: 47px;
-    top: 4.7rem;
-    width: 146px;
-    width: 14.6rem;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    font-size: 1.6rem;
-    font-style: italic;
-    opacity: 0;
-    /* This is animated by JS */ }
-    .campaign-summary .barometer span span {
-      position: static;
-      font-size: 30px;
-      font-size: 3rem;
-      line-height: 30px;
-      line-height: 3rem;
-      font-style: normal; }
-.campaign-summary .campaign-stats {
-  float: right;
-  text-align: right;
-  list-style: none;
-  padding-left: 0;
-  width: -webkit-calc(100% - 156px);
-  width: -moz-calc(100% - 156px);
-  width: calc(100% - 156px);
-  max-width: 180px;
-  max-width: 18rem;
-  margin-bottom: 0; }
-  .campaign-summary .campaign-stats li {
-    padding-bottom: 10px;
-    padding-bottom: 1rem;
-    margin-bottom: 10px;
-    margin-bottom: 1rem;
-    border-bottom-width: 1px;
-    border-bottom-width: 0.1rem;
-    border-bottom-style: solid;
-    border-bottom-color: rgba(255, 255, 255, 0.3);
-    font-size: 16px;
-    font-size: 1.6rem;
-    font-style: italic;
-    font-weight: 300; }
-    .campaign-summary .campaign-stats li span {
-      font-size: 20px;
-      font-size: 2rem;
-      line-height: 30px;
-      line-height: 3rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      letter-spacing: 0.1rem;
-      display: block;
-      font-style: normal; }
-    .campaign-summary .campaign-stats li:last-child {
-      padding-bottom: 0;
-      border-bottom: none; }
-.campaign-summary .campaign-support {
-  float: left;
-  width: 100%;
-  padding-bottom: 30px;
-  padding-bottom: 3rem;
-  text-align: center; }
-.campaign-summary .campaign-sharing {
-  padding: 0;
-  margin-top: 20px;
-  margin-top: 2rem;
-  max-width: 100%;
-  text-align: center; }
-  .campaign-summary .campaign-sharing h6 {
-    margin: 0px 10px;
-    margin: 0rem 1rem;
-    line-height: 22pxpx;
-    line-height: 2.2pxrem; }
-  .campaign-summary .campaign-sharing li {
-    width: auto !important;
-    margin-bottom: 0;
-    vertical-align: top; }
-  .campaign-summary .campaign-sharing .icon {
-    padding: 0px 10px;
-    padding: 0rem 1rem;
     font-size: 22px;
     font-size: 2.2rem;
-    cursor: pointer; }
-
-.countdown-rtl {
-  direction: rtl; }
-
-.countdown-row {
-  clear: both;
-  width: 100%;
-  padding: 0px 2px;
-  text-align: center; }
-
-.countdown-show1 .countdown-section {
-  width: 98%; }
-
-.countdown-show2 .countdown-section {
-  width: 48%; }
-
-.countdown-show3 .countdown-section {
-  width: 32.5%; }
-
-.countdown-show4 .countdown-section {
-  width: 24.5%; }
-
-.countdown-show5 .countdown-section {
-  width: 19.5%; }
-
-.countdown-show6 .countdown-section {
-  width: 16.25%; }
-
-.countdown-show7 .countdown-section {
-  width: 14%; }
-
-.countdown-section {
-  display: block;
-  float: left;
-  text-align: center;
-  font-size: 12px;
-  font-size: 1.2rem;
-  font-weight: 300; }
-
-.countdown-amount {
-  font-size: 20px;
-  font-size: 2rem;
-  line-height: 1em; }
-
-.countdown-period {
-  display: block;
-  width: 100%; }
+    line-height: 32px;
+    line-height: 3.2rem; }
+    .campaign-summary .campaign-description p:last-child {
+      margin-bottom: 0; }
+  .campaign-summary .campaign-image {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin: 0px 0px 36px;
+    margin: 0rem 0rem 3.6rem;
+    line-height: 0;
+    overflow: hidden; }
+    .campaign-summary .campaign-image span {
+      position: absolute;
+      display: block;
+      line-height: 1em;
+      padding: 6px 0px;
+      padding: 0.6rem 0rem;
+      width: 200px;
+      width: 20rem;
+      margin: 30px 0px 0px -60px;
+      margin: 3rem 0rem 0rem -6rem;
+      text-align: center;
+      letter-spacing: 1px;
+      letter-spacing: 0.1rem;
+      font-size: 11px;
+      font-size: 1.1rem;
+      color: #fff;
+      -moz-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+    .campaign-summary .campaign-image .campaign-successful {
+      background-color: #1ba714; }
+    .campaign-summary .campaign-image .campaign-unsuccessful {
+      background-color: #cc181e; }
+  .campaign-summary .wp-post-image {
+    width: 100%; }
+  .campaign-summary .campaign-details {
+    padding: 36px 0px 0px;
+    padding: 3.6rem 0rem 0rem;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 380px;
+    width: 38rem; }
+  .campaign-summary .campaign-ended {
+    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300; }
+  .campaign-summary .barometer {
+    position: relative;
+    float: left;
+    margin-right: 10px;
+    margin-right: 1rem;
+    z-index: 30;
+    width: 146px;
+    width: 14.6rem;
+    height: 146px;
+    height: 14.6rem; }
+    .campaign-summary .barometer span {
+      position: absolute;
+      left: 0;
+      top: 47px;
+      top: 4.7rem;
+      width: 146px;
+      width: 14.6rem;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      font-size: 1.6rem;
+      font-style: italic;
+      opacity: 0;
+      /* This is animated by JS */ }
+      .campaign-summary .barometer span span {
+        position: static;
+        font-size: 30px;
+        font-size: 3rem;
+        line-height: 30px;
+        line-height: 3rem;
+        font-style: normal; }
+  .campaign-summary .campaign-stats {
+    float: right;
+    text-align: right;
+    list-style: none;
+    padding-left: 0;
+    width: -webkit-calc(100% - 156px);
+    width: -moz-calc(100% - 156px);
+    width: calc(100% - 156px);
+    max-width: 180px;
+    max-width: 18rem;
+    margin-bottom: 0; }
+    .campaign-summary .campaign-stats li {
+      padding-bottom: 10px;
+      padding-bottom: 1rem;
+      margin-bottom: 10px;
+      margin-bottom: 1rem;
+      border-bottom-width: 1px;
+      border-bottom-width: 0.1rem;
+      border-bottom-style: solid;
+      border-bottom-color: rgba(255, 255, 255, 0.3);
+      font-size: 16px;
+      font-size: 1.6rem;
+      font-style: italic;
+      font-weight: 300; }
+      .campaign-summary .campaign-stats li span {
+        font-size: 20px;
+        font-size: 2rem;
+        line-height: 30px;
+        line-height: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        letter-spacing: 0.1rem;
+        display: block;
+        font-style: normal; }
+      .campaign-summary .campaign-stats li:last-child {
+        padding-bottom: 0;
+        border-bottom: none; }
+  .campaign-summary .campaign-support {
+    float: left;
+    width: 100%;
+    padding-bottom: 30px;
+    padding-bottom: 3rem;
+    text-align: center; }
+  .campaign-summary .campaign-sharing {
+    padding: 0;
+    margin-top: 20px;
+    margin-top: 2rem;
+    max-width: 100%;
+    text-align: center; }
+    .campaign-summary .campaign-sharing h6 {
+      margin: 0px 10px;
+      margin: 0rem 1rem;
+      line-height: 22pxpx;
+      line-height: 2.2pxrem; }
+    .campaign-summary .campaign-sharing li {
+      width: auto !important;
+      margin-bottom: 0;
+      vertical-align: top; }
+    .campaign-summary .campaign-sharing .icon {
+      padding: 0px 10px;
+      padding: 0rem 1rem;
+      font-size: 22px;
+      font-size: 2.2rem;
+      cursor: pointer; }
+  @media all and (min-width: 37.5em) and (max-width: 55em) {
+    .campaign-summary .campaign-details {
+      position: relative;
+      width: 100%;
+      padding-bottom: 7.4rem; }
+      .campaign-summary .campaign-details .campaign-support {
+        float: right;
+        width: 70%; }
+      .campaign-summary .campaign-details ul {
+        width: 70%;
+        max-width: 88rem;
+        text-align: center; }
+      .campaign-summary .campaign-details li {
+        display: inline-block;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        border-right: 0.1rem solid rgba(255, 255, 255, 0.3);
+        border-bottom: 0; }
+      .campaign-summary .campaign-details .campaign-backers {
+        border: none; }
+    .campaign-summary .campaign-countdown {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem 13% 0 13%;
+      border-bottom: 0;
+      border-top: 0.1rem solid rgba(255, 255, 255, 0.3);
+      text-align: center; }
+    .campaign-summary .campaign-sharing {
+      padding-top: 2.4rem;
+      margin-top: 1.2rem;
+      border-top: 0.1rem solid rgba(255, 255, 255, 0.3); }
+    .campaign-summary.ended .campaign-summary {
+      padding-bottom: 1.2rem; }
+      .campaign-summary.ended .campaign-summary ul {
+        margin-top: 4.8rem; } }
+  @media (min-width: 55em) {
+    .campaign-summary .campaign-image {
+      width: 50%;
+      width: -moz-calc(100% - 43rem);
+      width: -webkit-calc(100% - 43rem);
+      width: calc(100% - 43rem);
+      float: left;
+      margin-right: 0; }
+      .campaign-summary .campaign-image .wp-post-image {
+        border: 0.5rem solid;
+        border-radius: 0.4rem;
+        width: 95.3%;
+        width: -moz-calc(100% - 1.8rem);
+        width: -webkit-calc(100% - 1.8rem);
+        width: calc(100% - 1.8rem); }
+    .campaign-summary .campaign-details {
+      float: left;
+      padding-left: 0;
+      padding-top: 0.3rem;
+      margin-left: 4rem;
+      margin-right: 0; }
+    .campaign-summary .campaign-sharing {
+      float: right;
+      width: 38rem;
+      margin-left: 0; } }
 
 .campaign-countdown {
   float: left;
@@ -2431,6 +2528,44 @@ embed {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   border-color: rgba(255, 255, 255, 0.3); }
+  .campaign-countdown .countdown {
+    text-transform: none;
+    letter-spacing: 0; }
+  .campaign-countdown .countdown-rtl {
+    direction: rtl; }
+  .campaign-countdown .countdown-row {
+    clear: both;
+    width: 100%;
+    padding: 0px 2px;
+    text-align: center; }
+  .campaign-countdown .countdown-show1 .countdown-section {
+    width: 98%; }
+  .campaign-countdown .countdown-show2 .countdown-section {
+    width: 48%; }
+  .campaign-countdown .countdown-show3 .countdown-section {
+    width: 32.5%; }
+  .campaign-countdown .countdown-show4 .countdown-section {
+    width: 24.5%; }
+  .campaign-countdown .countdown-show5 .countdown-section {
+    width: 19.5%; }
+  .campaign-countdown .countdown-show6 .countdown-section {
+    width: 16.25%; }
+  .campaign-countdown .countdown-show7 .countdown-section {
+    width: 14%; }
+  .campaign-countdown .countdown-section {
+    display: block;
+    float: left;
+    text-align: center;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: 300; }
+  .campaign-countdown .countdown-amount {
+    font-size: 20px;
+    font-size: 2rem;
+    line-height: 1em; }
+  .campaign-countdown .countdown-period {
+    display: block;
+    width: 100%; }
 
 .campaign-countdown .countdown {
   float: left;
@@ -2457,6 +2592,102 @@ embed {
   #campaign-widget-sharing .block.iframe-block {
     width: 275px;
     width: 27.5rem; }
+
+/*--------------------------------------------------------------
+18.1.2 Campaign Connected Downloads Widget
+--------------------------------------------------------------*/
+.widget.widget_charitable_edd_campaign_downloads {
+  padding: 0;
+  border: none;
+  background: transparent; }
+
+.campaign-pledge-levels.accordion {
+  margin-bottom: 36px;
+  margin-bottom: 3.6rem;
+  padding-top: 0; }
+  .campaign-pledge-levels.accordion h3 {
+    border-top-width: 1px;
+    border-top-width: 0.1rem;
+    border-top-style: solid;
+    border-top-color: #e2dedb; }
+    .campaign-pledge-levels.accordion h3:first-of-type {
+      margin-top: 0; }
+  .campaign-pledge-levels.accordion .ui-accordion-header-active {
+    border-radius: 0.4rem 0.4rem 0 0; }
+  .campaign-pledge-levels.accordion .pledge-level {
+    padding: 12px;
+    padding: 1.2rem;
+    border-width: 0px 1px 1px 1px;
+    border-width: 0rem 0.1rem 0.1rem 0.1rem;
+    border-style: solid;
+    border-radius: 0 0 0.4rem 0.4rem; }
+  .campaign-pledge-levels.accordion .pledge-description {
+    margin-left: 0; }
+  .campaign-pledge-levels.accordion .pledge-limit {
+    display: block;
+    float: none;
+    margin-bottom: 12px;
+    margin-bottom: 1.2rem;
+    text-align: left; }
+  .campaign-pledge-levels.accordion .pledge-button {
+    display: block;
+    margin-top: 3px;
+    margin-top: 0.3rem;
+    margin-right: auto;
+    margin-bottom: 3px;
+    margin-bottom: 0.3rem;
+    margin-left: auto;
+    text-align: center; }
+  .campaign-pledge-levels.accordion .pledge-button .button {
+    display: inline-block;
+    max-width: 100%; }
+
+/*--------------------------------------------------------------
+18.1.3 Campaign Pledge Form
+--------------------------------------------------------------*/
+.campaign-pledge-levels {
+  padding: 12px 0px 36px;
+  padding: 1.2rem 0rem 3.6rem;
+  list-style: none;
+  text-align: left; }
+
+.pledge-level {
+  margin-bottom: 12px; }
+
+.pledge-level input {
+  position: relative;
+  bottom: 4px; }
+
+.pledge-title {
+  display: inline;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+  font-weight: 300; }
+
+.pledge-title strong {
+  font-weight: 400; }
+
+.pledge-description {
+  margin-left: 22px;
+  margin-left: 2.2rem; }
+
+.pledge-limit {
+  float: right;
+  margin-top: 12px;
+  margin-top: 1.2rem;
+  text-align: right;
+  font-style: italic; }
+
+.pledge-level.not-available .pledge-description {
+  margin-left: 0; }
+
+.edd-cart-ajax-alert {
+  float: left;
+  width: 100%;
+  padding-top: 24px;
+  padding-top: 2.4rem;
+  font-style: italic; }
 
 /*--------------------------------------------------------------
 18.2 Ninja Forms

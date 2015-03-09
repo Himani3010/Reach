@@ -6,8 +6,6 @@
  */
 $campaign = charitable_get_current_campaign();
 
-
-
 if ( $campaign ) : 
 ?>
 	<section class="campaign-summary current-campaign feature-block cf <?php if ( $campaign->has_ended() ) : ?>ended<?php endif ?>">
@@ -32,6 +30,8 @@ if ( $campaign ) :
 				get_template_part( 'campaign', 'barometer' );
 
 				get_template_part( 'campaign', 'stats' );
+
+				get_template_part( 'campaign', 'countdown' );
 				?>				
 			</div>				
 
