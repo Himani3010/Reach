@@ -1,9 +1,26 @@
-/*! franklin - v2.0.0 - 2015-03-09 */
+/*! franklin - v2.0.0 - 2015-03-10 */
 
 /*--------------------------------------------------------
  * FRANKLIN is the core object containing all components.
 ---------------------------------------------------------*/
 var FRANKLIN = {};
+
+;/*--------------------------------------------------------
+ * Accordion
+---------------------------------------------------------*/
+FRANKLIN.Accordion = ( function( $ ){
+	return {
+		init : function() {
+			if ( $.fn.accordion ) {
+				$('.accordion').accordion({
+					heightStyle: "content"
+				});
+			}
+		}
+	}
+})( jQuery );
+
+
 
 ;/*--------------------------------------------------------
  * Campaign Barometer

@@ -23,11 +23,7 @@
 
 		FRANKLIN.LeanModal.init();	
 
-		// if ( $.fn.accordion ) {
-		// 	$('.accordion').accordion({
-		// 		heightStyle: "content"
-		// 	});
-		// }
+		FRANKLIN.Accordion.init();	
 
 		if ( FRANKLIN_CROWDFUNDING ) {
 

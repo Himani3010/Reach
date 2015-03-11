@@ -1,0 +1,21 @@
+.accordion {
+	h3 {	
+		position: relative;
+		display: block;
+		@include margin( 12, 0, 0 );
+		@include padding( 24 );
+		line-height: 1em;
+		border-radius: 0.4rem;
+		outline: 0;	
+		cursor: pointer;
+
+		&:before {
+			float: right;
+			margin-right: 4%;
+		}
+
+		&:active {
+			outline: 0;
+		}
+	}
+}

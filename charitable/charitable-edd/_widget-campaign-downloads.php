@@ -52,7 +52,7 @@ while ( $downloads->have_posts() ) :
 
 					<p class="pledge-description"><?php echo $price['name'] ?></p>
 
-					<?php if ( $campaign->is_active() && ( !$has_limit || $remaining > 0 ) ) : ?>
+					<?php if ( ! $campaign->get_campaign()->has_ended() && ( ! $has_limit || $remaining > 0 ) ) : ?>
 						<p class="pledge-button">
 							<a class="button-alt button-small accent" data-price="<?php echo $price['amount'] ?>" href="#campaign-form-<?php echo $campaign_id ?>" data-trigger-modal><?php echo franklin_crowdfunding_get_pledge_amount_text( $price['amount'] ) ?></a>
 						</p>
