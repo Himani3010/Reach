@@ -1,7 +1,7 @@
 /*--------------------------------------------------------
  * Responsive Menus
 ---------------------------------------------------------*/
-FRANKLIN.ResponsiveMenu = ( function( $ ) {
+BENNY.ResponsiveMenu = ( function( $ ) {
 	return {
 		init : function() {
 			var $container, 

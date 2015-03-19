@@ -2,7 +2,7 @@
 /**
  * Single campaign template.
  *
- * @package Franklin
+ * @package Benny
  */
 get_header();
 
@@ -14,7 +14,7 @@ get_header();
 				
 				<?php get_template_part('campaign', 'summary') ?>			
 	
-				<?php //echo franklin_campaign_video( $campaign ) ?>
+				<?php //echo benny_campaign_video( $campaign ) ?>
 				
 				<div class="content-area">
 	

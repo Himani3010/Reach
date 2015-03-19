@@ -2,9 +2,9 @@
 /**
  * This file contains the class in charge of handling version upgrades. 
  *
- * @class 		Franklin_Upgrade
+ * @class 		Benny_Upgrade
  * @version		1.0.0
- * @package		Franklin
+ * @package		Benny
  * @subpackage	Upgrade
  * @category	Class
  * @author 		Studio164a
@@ -13,14 +13,14 @@
 // Exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-if ( ! class_exists( 'Franklin_Upgrade' ) ) : 
+if ( ! class_exists( 'Benny_Upgrade' ) ) : 
 
 /**
- * Franklin_Upgrade
+ * Benny_Upgrade
  *
  * @since 		1.0.0
  */
-class Franklin_Upgrade {
+class Benny_Upgrade {
 
 	/**
 	 * Current database version. 
@@ -52,7 +52,7 @@ class Franklin_Upgrade {
 	 * @var 	string
 	 * @access 	private
 	 */
-	private $upgrade_log_key = 'franklin_upgrade_log';
+	private $upgrade_log_key = 'benny_upgrade_log';
 	
 	/**
 	 * Option key for plugin version.
@@ -60,7 +60,7 @@ class Franklin_Upgrade {
 	 * @var 	string
 	 * @access 	private
 	 */
-	private $version_key = 'franklin_version';
+	private $version_key = 'benny_version';
 
 	/**
 	 * Upgrade from the current version stored in the database to the live version. 
@@ -74,7 +74,7 @@ class Franklin_Upgrade {
 	 */
 	public static function upgrade_from( $db_version, $edge_version ) {
 		if ( self::requires_upgrade( $db_version, $edge_version ) ) {
-			new Franklin_Upgrade( $db_version, $edge_version );
+			new Benny_Upgrade( $db_version, $edge_version );
 		}
 	}
 

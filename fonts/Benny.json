@@ -1,6 +1,6 @@
 {
 	"metadata": {
-		"name": "Franklin",
+		"name": "Benny",
 		"lastOpened": 1425347872388,
 		"created": 1425346121016
 	},
@@ -9111,7 +9111,7 @@
 		"fontPref": {
 			"prefix": "icon-",
 			"metadata": {
-				"fontFamily": "franklin-icons",
+				"fontFamily": "benny-icons",
 				"majorVersion": 1,
 				"minorVersion": 0
 			},

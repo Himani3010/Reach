@@ -1,0 +1,36 @@
+.page-template-page-template-home-slider {
+	#main {
+		padding-top: 0;
+	}
+
+	.content-area {		
+		padding: 0;
+		overflow: visible;
+	}
+
+	.page.entry-block {
+		// max-width: 100%;
+		border: none;
+		border-radius: 0;
+		box-shadow: none;		
+		overflow: visible;
+
+		.page-title {
+			@include padding( 24, 0, 36 );
+			border-bottom: {
+				@include width( 3 );
+				style: solid;
+				color: rgba(255, 255, 255, 0.3);
+			} 
+		}
+
+		.entry {
+			@include font-size( 18 );
+			@include line-height( 28 );
+
+			.button {
+				@include margin( 12, 3, 0 );
+			}
+		}
+	}		
+}

@@ -1,16 +1,16 @@
 @font-face {
-	font-family: 'franklin-icons';
-	src:url('fonts/franklin-icons.eot?-x6xtqp');
-	src:url('fonts/franklin-icons.eot?#iefix-x6xtqp') format('embedded-opentype'),
-		url('fonts/franklin-icons.woff?-x6xtqp') format('woff'),
-		url('fonts/franklin-icons.ttf?-x6xtqp') format('truetype'),
-		url('fonts/franklin-icons.svg?-x6xtqp#franklin-icons') format('svg');
+	font-family: 'benny-icons';
+	src:url('fonts/benny-icons.eot?-x6xtqp');
+	src:url('fonts/benny-icons.eot?#iefix-x6xtqp') format('embedded-opentype'),
+		url('fonts/benny-icons.woff?-x6xtqp') format('woff'),
+		url('fonts/benny-icons.ttf?-x6xtqp') format('truetype'),
+		url('fonts/benny-icons.svg?-x6xtqp#benny-icons') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-	font-family: 'franklin-icons';
+	font-family: 'benny-icons';
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -188,7 +188,7 @@
 }
 
 [data-icon]:before {
-	font-family: 'franklin-icons';
+	font-family: 'benny-icons';
 	content: attr(data-icon);
 	speak: none;
 	font-weight: normal;

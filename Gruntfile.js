@@ -19,11 +19,11 @@ module.exports = function(grunt) {
                 tasks: ['sass']
             },
             concat: {
-                files: ['js/franklin/*.js', 'js/franklin/**/*.js'], 
+                files: ['js/benny/*.js', 'js/benny/**/*.js'], 
                 tasks: ['concat']
             },            
             uglify: {
-                files: 'js/franklin-lib.js', 
+                files: 'js/benny-lib.js', 
                 tasks: ['uglify']
             },
             sync: {
@@ -76,7 +76,7 @@ module.exports = function(grunt) {
                             '!sass', 
                             '!sass/**'
                         ], 
-                        dest: '../../themes/franklin'
+                        dest: '../../themes/benny'
                     }
                 ], 
                 verbose: true
@@ -92,9 +92,9 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'js/franklin-lib.js' : [
-                        'js/franklin/*.js', 
-                        'js/franklin/**/*.js'
+                    'js/benny-lib.js' : [
+                        'js/benny/*.js', 
+                        'js/benny/**/*.js'
                     ]
                 }
             },
@@ -109,8 +109,8 @@ module.exports = function(grunt) {
             },
             all: [
                 'Gruntfile.js', 
-                'js/franklin.js', 
-                'js/franklin-lib.js', 
+                'js/benny.js', 
+                'js/benny-lib.js', 
                 'js/admin/theme-customizer.js',
             ]
         },
@@ -119,8 +119,8 @@ module.exports = function(grunt) {
         uglify: {
             dist: {
                 files: {
-                    'js/franklin-lib.min.js': [ 
-                        'js/franklin-lib.js'
+                    'js/benny-lib.min.js': [ 
+                        'js/benny-lib.js'
                     ]
                 }
             }
@@ -133,7 +133,7 @@ module.exports = function(grunt) {
                     cwd: '',                    // Directory of files to internationalize.
                     domainPath: '/languages',   // Where to save the POT file.                    
                     mainFile: 'style.css',      // Main project file.
-                    potFilename: 'franklin.pot', // Name of the POT file.
+                    potFilename: 'benny.pot', // Name of the POT file.
                     type: 'wp-theme',           // Type of project (wp-plugin or wp-theme).
                     updateTimestamp: true       // Whether the POT-Creation-Date should be updated without other changes.
                 }

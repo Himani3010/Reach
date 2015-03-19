@@ -24,9 +24,14 @@
 }
 
 #main {
-	@include padding( 36 );	
+	@include padding( 36, 24 );	
 	background-color: $color__background-wrapper;
 	border-radius: 0 0 0.4rem 0.4rem;
+
+	@include bp ( 800 ) {
+		@include padding-right( 36 );
+		@include padding-left( 36 );
+	}
 }
 
 .content-area,

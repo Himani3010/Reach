@@ -11,7 +11,7 @@
 
 .entry-block {
 	position: relative;
-	padding: 0 4%;
+	@include padding( 0, 24 );
 	background: $color__background-content;
 	box-shadow: 0 0 1px $color__background-content;
 	overflow-x: hidden;
@@ -23,7 +23,7 @@
 }
 
 .content-block {
-	padding: 0 4% 24px; padding-right: 2.4rem;
+	@include padding( 0, 24, 24 );
 
 	@include bp( 800 ) {
 		@include padding( 0, 36, 24 );
@@ -49,24 +49,15 @@
 }
 
 .feature-block {
-	position: relative;
-	left: (-(4 / 92) * 100% ) - 9;
-	width: 100% + 18 + ((8 / 92) * 100);		
-	padding: {
-		top: 0;
-		right: 4%;
-		@include bottom( 36 );
-		left: 4%;
-	}
+	@include fullwidth-wrapper-padded();	
+	@include padding( 0, 24, 36, 24 );	
 	background-repeat: repeat;
 	color: $color__text-overlay;
 	background-color: $color__accent;
+	box-shadow: none;
+	border: none;
 
-	@include bp( 800 ) {
-		left: -4.5rem;
-		width: -webkit-calc( 100% + 91px );
-		width: -moz-calc( 100% + 91px );
-		width: calc( 100% + 91px );
+	@include bp( 800 ) {		
 		@include padding-left( 45 );
 		@include padding-right( 45 );
 	}
@@ -78,27 +69,29 @@
 }
 
 /* Shadow wrapper */
-.shadow-wrapper {
-	&::before,
-	&::after {
-		content: "";
-		position: absolute;
-		bottom: -0.9rem;
-		width: 0;
-		height: 0;
-	}
+@include bp( 800 ) {
+	.shadow-wrapper {
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: -0.9rem;
+			width: 0;
+			height: 0;
+		}
 
-	&::before {
-		left: -0.9rem;
-		border-left: 0.9rem solid transparent !important;
-		border-bottom: 0.9rem solid transparent !important;
-		border-right: 0.9rem solid;
-	}
+		&::before {
+			left: -0.9rem;
+			border-left: 0.9rem solid transparent !important;
+			border-bottom: 0.9rem solid transparent !important;
+			border-right: 0.9rem solid;
+		}
 
-	&::after {
-		right: -0.9rem;
-		border-right: 0.9rem solid transparent !important;
-		border-bottom: 0.9rem solid transparent !important;
-		border-left: 0.9rem solid;
+		&::after {
+			right: -0.9rem;
+			border-right: 0.9rem solid transparent !important;
+			border-bottom: 0.9rem solid transparent !important;
+			border-left: 0.9rem solid;
+		}
 	}
 }

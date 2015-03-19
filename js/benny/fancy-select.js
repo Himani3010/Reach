@@ -1,7 +1,7 @@
 /*--------------------------------------------------------
  * Fancy Select Elements
 ---------------------------------------------------------*/
-FRANKLIN.FancySelect = ( function( $ ){
+BENNY.FancySelect = ( function( $ ){
 	return {
 		init : function() {
 			var $select = $('select'), 

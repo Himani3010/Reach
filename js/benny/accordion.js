@@ -1,7 +1,7 @@
 /*--------------------------------------------------------
  * Accordion
 ---------------------------------------------------------*/
-FRANKLIN.Accordion = ( function( $ ){
+BENNY.Accordion = ( function( $ ){
 	return {
 		init : function() {
 			if ( $.fn.accordion ) {

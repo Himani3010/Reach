@@ -2,7 +2,7 @@
 /**
  * Helper functions for the crowdfunding functionality.
  *
- * @package 	Franklin/Crowdfunding
+ * @package 	Benny/Crowdfunding
  * @category 	Functions
  */
 
@@ -15,9 +15,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * @return 	string
  * @since 	1.5.12
  */
-function franklin_crowdfunding_get_pledge_text() {
+function benny_crowdfunding_get_pledge_text() {
 	global $edd_options;
-	return ! empty( $edd_options['add_to_cart_text'] ) ? $edd_options['add_to_cart_text'] : __( 'Pledge', 'franklin' );
+	return ! empty( $edd_options['add_to_cart_text'] ) ? $edd_options['add_to_cart_text'] : __( 'Pledge', 'benny' );
 }
 
 /**
@@ -27,9 +27,9 @@ function franklin_crowdfunding_get_pledge_text() {
  * @return  string
  * @since   1.5.12
  */
-function franklin_crowdfunding_get_pledge_amount_text( $amount ) {
+function benny_crowdfunding_get_pledge_amount_text( $amount ) {
     return sprintf( '%s %s', 
-        franklin_crowdfunding_get_pledge_text(),
+        benny_crowdfunding_get_pledge_text(),
         '<strong>'.edd_currency_filter( edd_format_amount( $amount ) ).'</strong>' 
     );
 } 
@@ -40,7 +40,7 @@ function franklin_crowdfunding_get_pledge_amount_text( $amount ) {
  * @return  string
  * @since   1.5.5
  */
-function franklin_get_timezone_offset() {        
+function benny_get_timezone_offset() {        
     $timezone = edd_get_timezone_id();
     $date_timezone = new DateTimeZone($timezone);
     $date_time = new DateTime('now', $date_timezone);

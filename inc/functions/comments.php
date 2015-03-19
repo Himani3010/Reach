@@ -1,6 +1,6 @@
 <?php
 
-if ( !function_exists( 'franklin_comment_form_default_fields') ) :
+if ( !function_exists( 'benny_comment_form_default_fields') ) :
 	
 	/**
 	 * Customize comment form default fields
@@ -10,16 +10,16 @@ if ( !function_exists( 'franklin_comment_form_default_fields') ) :
 	 * @return 	string
 	 * @since 	1.0.0
 	 */
-	function franklin_comment_form_default_fields( $fields ) {
+	function benny_comment_form_default_fields( $fields ) {
 		$fields = '
 		<p class="comment-text-input required" tabindex="1">
-			<input type="text" name="author" id="commenter_name" placeholder="'.__( 'Name', 'franklin' ).' *" required />			
+			<input type="text" name="author" id="commenter_name" placeholder="'.__( 'Name', 'benny' ).' *" required />			
 		</p>		
 		<p class="comment-text-input last" tabindex="2">
-			<input type="text" name="url" id="commenter_url" placeholder="'.__( 'Website', 'franklin' ).'" />
+			<input type="text" name="url" id="commenter_url" placeholder="'.__( 'Website', 'benny' ).'" />
 		</p>
 		<p class="comment-text-input fullwidth required" tabindex="3">
-			<input type="email" name="email" id="commenter_email" placeholder="'.__( 'Email', 'franklin' ).' *" required />			
+			<input type="email" name="email" id="commenter_email" placeholder="'.__( 'Email', 'benny' ).' *" required />			
 		</p>
 		';
 		return $fields;
@@ -27,9 +27,9 @@ if ( !function_exists( 'franklin_comment_form_default_fields') ) :
 
 endif;
 
-add_filter( 'comment_form_default_fields', 'franklin_comment_form_default_fields', 10, 2 );
+add_filter( 'comment_form_default_fields', 'benny_comment_form_default_fields', 10, 2 );
 
-if ( !function_exists( 'franklin_comment_form_field_comment') ) :
+if ( !function_exists( 'benny_comment_form_field_comment') ) :
 
 	/**
 	 * The comment field. 
@@ -37,13 +37,13 @@ if ( !function_exists( 'franklin_comment_form_field_comment') ) :
 	 * @return 	string
 	 * @since 	1.0.0
 	 */
-	function franklin_comment_form_field_comment() {
-		return '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="'.__( 'Leave your comment', 'franklin' ).' *"></textarea></p>';
+	function benny_comment_form_field_comment() {
+		return '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="'.__( 'Leave your comment', 'benny' ).' *"></textarea></p>';
 	}
 
 endif;
 
-if ( !function_exists( 'franklin_cancel_comment_reply_link') ) :
+if ( !function_exists( 'benny_cancel_comment_reply_link') ) :
 
 	/** 
 	 * Filters the comment reply close link.
@@ -52,15 +52,15 @@ if ( !function_exists( 'franklin_cancel_comment_reply_link') ) :
 	 * @return 	string
 	 * @since 	1.0
 	 */
-	function franklin_cancel_comment_reply_link( $html ) {
+	function benny_cancel_comment_reply_link( $html ) {
 		return substr_replace( $html, 'class="icon icon-remove-sign" ', 3, 0 );
 	}
 
 endif;
 
-add_filter( 'cancel_comment_reply_link', 'franklin_cancel_comment_reply_link' );
+add_filter( 'cancel_comment_reply_link', 'benny_cancel_comment_reply_link' );
 
-if ( !function_exists( 'franklin_comment' ) ) :
+if ( !function_exists( 'benny_comment' ) ) :
 
 	/**
 	 * Customize comment output. 
@@ -71,7 +71,7 @@ if ( !function_exists( 'franklin_comment' ) ) :
 	 * @return 	string
 	 * @since 	1.0.0
 	 */
-	function franklin_comment( $comment, $args, $depth ) {
+	function benny_comment( $comment, $args, $depth ) {
 
 		$GLOBALS['comment'] = $comment;
 		switch ( $comment->comment_type ) :
@@ -80,8 +80,8 @@ if ( !function_exists( 'franklin_comment' ) ) :
 		?>
 
 		<li class="pingback">
-			<p><?php _e( 'Pingback:', 'franklin' ); ?> <?php comment_author_link() ?></p>
-			<?php edit_comment_link( __( 'Edit', 'franklin' ), '<p class="comment_meta">', '</p>' ); ?>
+			<p><?php _e( 'Pingback:', 'benny' ); ?> <?php comment_author_link() ?></p>
+			<?php edit_comment_link( __( 'Edit', 'benny' ), '<p class="comment_meta">', '</p>' ); ?>
 		</li>
 		
 		<?php	
@@ -94,12 +94,12 @@ if ( !function_exists( 'franklin_comment' ) ) :
 			<?php echo get_avatar( $comment, 50 ) ?>
 
 			<div class="comment-details">
-				<?php if ( franklin_comment_is_by_author($comment) ) : ?><small class="post-author with-icon alignright"><i class="icon-star"></i><?php _e('Author', 'franklin') ?></small><?php endif ?>
+				<?php if ( benny_comment_is_by_author($comment) ) : ?><small class="post-author with-icon alignright"><i class="icon-star"></i><?php _e('Author', 'benny') ?></small><?php endif ?>
 				<h6 class="comment-author vcard"><?php comment_author_link() ?></h6>				
 				<div class="comment-text"><?php comment_text() ?></div>
 				<p class="comment-meta">
-					<span class="comment-date"><?php printf( '<i class="icon-comment"></i> %1$s %2$s %3$s', get_comment_date(), _x( 'at', 'comment post on date at time', 'franklin'), get_comment_time() ) ?></span>
-					<span class="comment-reply floatright"><?php comment_reply_link( array_merge( $args, array( 'reply_text' => sprintf( '<i class="icon-pencil"></i> %s', _x( 'Reply', 'reply to comment' , 'franklin' ) ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ) ?></span>
+					<span class="comment-date"><?php printf( '<i class="icon-comment"></i> %1$s %2$s %3$s', get_comment_date(), _x( 'at', 'comment post on date at time', 'benny'), get_comment_time() ) ?></span>
+					<span class="comment-reply floatright"><?php comment_reply_link( array_merge( $args, array( 'reply_text' => sprintf( '<i class="icon-pencil"></i> %s', _x( 'Reply', 'reply to comment' , 'benny' ) ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ) ?></span>
 				</p>
 			</div>		
 
@@ -112,7 +112,7 @@ if ( !function_exists( 'franklin_comment' ) ) :
 
 endif;
 
-if ( !function_exists( 'franklin_comment_is_by_author') ) :
+if ( !function_exists( 'benny_comment_is_by_author') ) :
 
 	/** 
 	 * Return whether the comment was created by the post author. 
@@ -121,7 +121,7 @@ if ( !function_exists( 'franklin_comment_is_by_author') ) :
 	 * @return 	bool
 	 * @since 	1.0
 	 */
-	function franklin_comment_is_by_author($comment) {
+	function benny_comment_is_by_author($comment) {
 		global $post;
 
 		return isset( $comment->user_id ) && $comment->user_id == $post->post_author ? true : false;
@@ -129,7 +129,7 @@ if ( !function_exists( 'franklin_comment_is_by_author') ) :
 
 endif;
 
-if ( !function_exists( 'franklin_comment_form_field_comment_filter' ) ) :
+if ( !function_exists( 'benny_comment_form_field_comment_filter' ) ) :
 
 	/**
 	 * Displays the comment field if the user is logged in and this is a campaign.
@@ -139,14 +139,14 @@ if ( !function_exists( 'franklin_comment_form_field_comment_filter' ) ) :
 	 * @return 	string
 	 * @since 	1.0.0
 	 */
-	function franklin_comment_form_field_comment_filter( $default ) {
+	function benny_comment_form_field_comment_filter( $default ) {
 		global $post;
 
 		if ( is_user_logged_in() ) {
-			return franklin_comment_form_field_comment();
+			return benny_comment_form_field_comment();
 		}
 	}
 
 endif;
 
-add_filter( 'comment_form_field_comment', 'franklin_comment_form_field_comment_Filter' );
+add_filter( 'comment_form_field_comment', 'benny_comment_form_field_comment_Filter' );

@@ -1,7 +1,7 @@
 /*--------------------------------------------------------
  * Lean Modal
 ---------------------------------------------------------*/
-FRANKLIN.LeanModal = ( function( $ ){
+BENNY.LeanModal = ( function( $ ){
 	return {
 		init : function() {
 			$('[data-trigger-modal]').leanModal({

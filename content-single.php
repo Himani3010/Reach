@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Franklin
+ * @package Benny
  */
 ?>
 
@@ -9,7 +9,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="entry-meta">
-			<?php franklin_posted_on(); ?>
+			<?php benny_posted_on(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
@@ -17,13 +17,13 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'franklin' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'benny' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php franklin_entry_footer(); ?>
+		<?php benny_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

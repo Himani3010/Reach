@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Franklin
+ * @package Benny
  */
 
 get_header();
@@ -23,7 +23,7 @@ if ( have_posts() ) : ?>
 
 		endwhile;
 
-		franklin_paging_nav(); 
+		benny_paging_nav(); 
 		?>		
 	</main><!-- .site-main -->
 

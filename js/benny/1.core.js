@@ -1,4 +1,4 @@
 /*--------------------------------------------------------
- * FRANKLIN is the core object containing all components.
+ * BENNY is the core object containing all components.
 ---------------------------------------------------------*/
-var FRANKLIN = {};
+var BENNY = {};

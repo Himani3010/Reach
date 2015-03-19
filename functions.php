@@ -1,16 +1,16 @@
 <?php
 /**
- * Core functions and definitions for Franklin Theme.
+ * Core functions and definitions for Benny Theme.
  *
- * @package 	Franklin
+ * @package 	Benny
  */
 
-require_once( 'inc/class-franklin-theme.php' );
+require_once( 'inc/class-benny-theme.php' );
 
 /**
  * Start the theme. 
  */
-franklin_get_theme();
+benny_get_theme();
 
 /**
  * Set the content width based on the theme's design and stylesheet.
@@ -26,16 +26,16 @@ if ( ! isset( $content_width ) ) {
  * scripts and stylesheets are NOT cached or minified 
  * to make debugging easier. 
  */
-if ( ! defined( 'FRANKLIN_DEBUG' ) ) {
-	define( 'FRANKLIN_DEBUG', false );
+if ( ! defined( 'BENNY_DEBUG' ) ) {
+	define( 'BENNY_DEBUG', false );
 }
 
 /**
- * Return the one true instance of the Franklin_Theme.
+ * Return the one true instance of the Benny_Theme.
  * 
- * @return 	Franklin_Theme
+ * @return 	Benny_Theme
  * @since 	1.0.0
  */
-function franklin_get_theme() {
-	return Franklin_Theme::get_instance();
+function benny_get_theme() {
+	return Benny_Theme::get_instance();
 }

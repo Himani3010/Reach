@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package Franklin
+ * @package Benny
  */
 ?>
 
@@ -12,7 +12,7 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'franklin' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'benny' ),
 				'after'  => '</div>',
 			) );
 		?>

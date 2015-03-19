@@ -3,7 +3,7 @@ $campaign_id 	= charitable_get_current_campaign_id();
 $edd_campaign 	= new Charitable_EDD_Campaign( $campaign_id );
 $downloads 		= $edd_campaign->get_connected_downloads();
 
-$page_has_modal = wp_cache_get( sprintf( 'franklin_page_has_campaign_%d_modal', $campaign_id ) );
+$page_has_modal = wp_cache_get( sprintf( 'benny_page_has_campaign_%d_modal', $campaign_id ) );
 
 if ( false === $page_has_modal ) : 
 
@@ -25,6 +25,6 @@ if ( false === $page_has_modal ) :
 	<?php 
 	endif;
 
-	wp_cache_set( sprintf( 'franklin_page_has_campaign_%d_modal', $campaign_id ), true );
+	wp_cache_set( sprintf( 'benny_page_has_campaign_%d_modal', $campaign_id ), true );
 
 endif;

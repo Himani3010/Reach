@@ -1,14 +1,14 @@
-/*! franklin - v2.0.0 - 2015-03-10 */
+/*! benny - v2.0.0 - 2015-03-10 */
 
 /*--------------------------------------------------------
- * FRANKLIN is the core object containing all components.
+ * BENNY is the core object containing all components.
 ---------------------------------------------------------*/
-var FRANKLIN = {};
+var BENNY = {};
 
 ;/*--------------------------------------------------------
  * Accordion
 ---------------------------------------------------------*/
-FRANKLIN.Accordion = ( function( $ ){
+BENNY.Accordion = ( function( $ ){
 	return {
 		init : function() {
 			if ( $.fn.accordion ) {
@@ -25,7 +25,7 @@ FRANKLIN.Accordion = ( function( $ ){
 ;/*--------------------------------------------------------
  * Campaign Barometer
 ---------------------------------------------------------*/
-FRANKLIN.Barometer = ( function($) {
+BENNY.Barometer = ( function($) {
 
 	// Barometers collection
 	var $barometers = $('.barometer'), 
@@ -145,7 +145,7 @@ FRANKLIN.Barometer = ( function($) {
 ;/*--------------------------------------------------------
  * Campaign Countdown
 ---------------------------------------------------------*/
-FRANKLIN.Countdown = ( function( $ ) {
+BENNY.Countdown = ( function( $ ) {
 
 	// Start the countdown script
 	var startCountdown = function() {
@@ -154,10 +154,10 @@ FRANKLIN.Countdown = ( function( $ ) {
 		if ($countdown.length) {
 			
 			$countdown.countdown({
-				until: $.countdown.UTCDate( FRANKLIN_CROWDFUNDING.timezone_offset, new Date( $countdown.data().enddate ) ), 
+				until: $.countdown.UTCDate( BENNY_CROWDFUNDING.timezone_offset, new Date( $countdown.data().enddate ) ), 
 				format: 'dHMS', 
-				labels : [FRANKLIN_CROWDFUNDING.years, FRANKLIN_CROWDFUNDING.months, FRANKLIN_CROWDFUNDING.weeks, FRANKLIN_CROWDFUNDING.days, FRANKLIN_CROWDFUNDING.hours, FRANKLIN_CROWDFUNDING.minutes, FRANKLIN_CROWDFUNDING.seconds],
-				labels1 : [FRANKLIN_CROWDFUNDING.year, FRANKLIN_CROWDFUNDING.month, FRANKLIN_CROWDFUNDING.week, FRANKLIN_CROWDFUNDING.day, FRANKLIN_CROWDFUNDING.hour, FRANKLIN_CROWDFUNDING.minute, FRANKLIN_CROWDFUNDING.second]
+				labels : [BENNY_CROWDFUNDING.years, BENNY_CROWDFUNDING.months, BENNY_CROWDFUNDING.weeks, BENNY_CROWDFUNDING.days, BENNY_CROWDFUNDING.hours, BENNY_CROWDFUNDING.minutes, BENNY_CROWDFUNDING.seconds],
+				labels1 : [BENNY_CROWDFUNDING.year, BENNY_CROWDFUNDING.month, BENNY_CROWDFUNDING.week, BENNY_CROWDFUNDING.day, BENNY_CROWDFUNDING.hour, BENNY_CROWDFUNDING.minute, BENNY_CROWDFUNDING.second]
 			});
 		}		
 
@@ -174,7 +174,7 @@ FRANKLIN.Countdown = ( function( $ ) {
 ;/*--------------------------------------------------------
  * Campaign Grid
 ---------------------------------------------------------*/
-FRANKLIN.Grid = ( function( $ ) {
+BENNY.Grid = ( function( $ ) {
 
 	var $grids = $('.masonry-grid');
 
@@ -209,7 +209,7 @@ FRANKLIN.Grid = ( function( $ ) {
 ;/*--------------------------------------------------------
  * Campaign Pledges
 ---------------------------------------------------------*/
-FRANKLIN.Pledging = ( function( $ ) {
+BENNY.Pledging = ( function( $ ) {
 
 	var $form = $('.edd_download_purchase_form'),
 		$price = $('input[name=atcf_custom_price]'),
@@ -235,7 +235,7 @@ FRANKLIN.Pledging = ( function( $ ) {
 		if ( parseInt( $minpledge.data('price') ) > new_pledge ) {
 
 			// Explain that the pledge has to be at least the minimum
-			alert( FRANKLIN.need_minimum_pledge );
+			alert( BENNY.need_minimum_pledge );
 
 			// Select the minimum pledge amount
 			$minpledge.find('input').prop('checked', true);
@@ -286,7 +286,7 @@ FRANKLIN.Pledging = ( function( $ ) {
  * attribute will still display the placeholder value as a 
  * preset value inside the element.
 ---------------------------------------------------------*/
-FRANKLIN.CrossBrowserPlaceholders = ( function( $ ) {	
+BENNY.CrossBrowserPlaceholders = ( function( $ ) {	
 	return {
 		init : function() {
 			var $form_elements = $(':text,textarea');
@@ -324,7 +324,7 @@ FRANKLIN.CrossBrowserPlaceholders = ( function( $ ) {
 ;/*--------------------------------------------------------
  * Dropdown Menus
 ---------------------------------------------------------*/
-FRANKLIN.DropdownMenus = ( function( $ ){	
+BENNY.DropdownMenus = ( function( $ ){	
 	return {
 		init : function() {
 			$('.menu li')
@@ -341,7 +341,7 @@ FRANKLIN.DropdownMenus = ( function( $ ){
 ;/*--------------------------------------------------------
  * Fancy Select Elements
 ---------------------------------------------------------*/
-FRANKLIN.FancySelect = ( function( $ ){
+BENNY.FancySelect = ( function( $ ){
 	return {
 		init : function() {
 			var $select = $('select'), 
@@ -370,7 +370,7 @@ FRANKLIN.FancySelect = ( function( $ ){
 ;/*--------------------------------------------------------
  * Image Hovers
 ---------------------------------------------------------*/
-FRANKLIN.ImageHovers = ( function( $ ) {
+BENNY.ImageHovers = ( function( $ ) {
 	return {
 		init : function() {
 			$('.on-hover').each( function() {
@@ -397,7 +397,7 @@ FRANKLIN.ImageHovers = ( function( $ ) {
 ;/*--------------------------------------------------------
  * Lean Modal
 ---------------------------------------------------------*/
-FRANKLIN.LeanModal = ( function( $ ){
+BENNY.LeanModal = ( function( $ ){
 	return {
 		init : function() {
 			$('[data-trigger-modal]').leanModal({
@@ -410,7 +410,7 @@ FRANKLIN.LeanModal = ( function( $ ){
 ;/*--------------------------------------------------------
  * Responsive Menus
 ---------------------------------------------------------*/
-FRANKLIN.ResponsiveMenu = ( function( $ ) {
+BENNY.ResponsiveMenu = ( function( $ ) {
 	return {
 		init : function() {
 			var $container, 
@@ -461,7 +461,7 @@ FRANKLIN.ResponsiveMenu = ( function( $ ) {
  *
  * Credit: https://github.com/Automattic/_s
 ---------------------------------------------------------*/
-FRANKLIN.SkipLinkFocusFix = ( function() {
+BENNY.SkipLinkFocusFix = ( function() {
 	var is_webkit = navigator.userAgent.toLowerCase().indexOf( 'webkit' ) > -1,
 	    is_opera  = navigator.userAgent.toLowerCase().indexOf( 'opera' )  > -1,
 	    is_ie     = navigator.userAgent.toLowerCase().indexOf( 'msie' )   > -1;

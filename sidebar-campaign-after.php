@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the campaigns widget area.
  *
- * @package Franklin
+ * @package Benny
  */
 if ( ! is_active_sidebar( 'campaign_after_content' ) ) {
 	return;

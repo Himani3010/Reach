@@ -1,59 +1,59 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-if ( ! class_exists( 'Franklin_Customizer_Styles' ) ) : 
+if ( ! class_exists( 'Benny_Customizer_Styles' ) ) : 
 
 /**
- * Franklin Customizer Styles
+ * Benny Customizer Styles
  *
  * @author      Studio 164a
  * @category    Classes
- * @package     Franklin/Customizer
+ * @package     Benny/Customizer
  * @since       1.6.0
  */
-class Franklin_Customizer_Styles {
+class Benny_Customizer_Styles {
 
     /**
-     * @var Franklin_Theme $theme
+     * @var Benny_Theme $theme
      */
     private $theme;
 
     /**
      * Creates an instance of this class. 
      * 
-     * This can only be run on the franklin_theme_start hook. You should
+     * This can only be run on the benny_theme_start hook. You should
      * never need to instantiate it again (if you do, I'd love to hear
      * your use case).
      *
      * @static
      * 
-     * @param   Franklin_Theme  $theme
+     * @param   Benny_Theme  $theme
      * @return  void
      * @access  public
      * @since   1.6.0
      */
-    public static function start( Franklin_Theme $theme ) {
+    public static function start( Benny_Theme $theme ) {
         if ( ! $theme->is_start() ) {
             return;
         }
 
-        new Franklin_Customizer_Styles( $theme );
+        new Benny_Customizer_Styles( $theme );
     }
 
     /**
      * Object constructor. 
      *
-     * @param   Franklin_Theme  $theme
+     * @param   Benny_Theme  $theme
      * @return  void
      * @access  private
      * @since   1.6.0
      */
-    private function __construct( Franklin_Theme $theme ) {
+    private function __construct( Benny_Theme $theme ) {
         $this->theme = $theme;
 
         add_action( 'wp_head', array( $this, 'wp_head' ) );
 
-        do_action( 'franklin_customizer_styles', $this );
+        do_action( 'benny_customizer_styles', $this );
     }
 
     /**
@@ -66,23 +66,23 @@ class Franklin_Customizer_Styles {
      */
     public static function get_customizer_colours() {
         return array(
-            'accent_colour'         => array( 'title' => __( 'Accent colour', 'franklin' ), 'default' => '#d95b43' ), 
-            'accent_hover'          => array( 'title' => __( 'Accent hover', 'franklin' ), 'default' => '#df745f' ), 
-            'accent_text'           => array( 'title' => __( 'Text on accent', 'franklin' ), 'default' => '#fff' ),
-            'accent_text_secondary' => array( 'title' => __( 'Text on accent (secondary)', 'franklin' ), 'default' => '#574c45' ),
-            'body_background'       => array( 'title' => __( 'Body background colour', 'franklin' ), 'default' => '#aea198' ),
-            'body_text'             => array( 'title' => __( 'Body copy', 'franklin' ), 'default' => '#7d6e63' ),
-            'button_text'           => array( 'title' => __( 'Button text colour', 'franklin' ), 'default' => '#fff' ),
-            'wrapper_background'    => array( 'title' => __( 'Wrapper background colour', 'franklin' ), 'default' => '#f9f8f7' ),
-            'posts_background'      => array( 'title' => __( 'Posts background colour', 'franklin' ), 'default' => '#fff' ),
-            'widget_background'     => array( 'title' => __( 'Widget background colour', 'franklin' ), 'default' => '#f1efee' ),
-            'primary_border'        => array( 'title' => __( 'Primary border ', 'franklin' ), 'default' => '#e2dedb' ),
-            'secondary_border'      => array( 'title' => __( 'Secondary border', 'franklin' ), 'default' => '#dbd5d1' ),
-            'meta_colour'           => array( 'title' => __( 'Meta text', 'franklin' ), 'default' => '#bdb2ab' ),
-            'footer_text'           => array( 'title' => __( 'Footer text', 'franklin' ), 'default' => '#fff' ),
-            'footer_titles'         => array( 'title' => __( 'Footer titles', 'franklin' ), 'default' => '#fff' ), 
-            'header_buttons'        => array( 'title' => __( 'Header buttons', 'franklin' ), 'default' => '#fff' ), 
-            'header_buttons_hover'  => array( 'title' => __( 'Header buttons hover', 'franklin' ), 'default' => '#d95b43' )  
+            'accent_colour'         => array( 'title' => __( 'Accent colour', 'benny' ), 'default' => '#d95b43' ), 
+            'accent_hover'          => array( 'title' => __( 'Accent hover', 'benny' ), 'default' => '#df745f' ), 
+            'accent_text'           => array( 'title' => __( 'Text on accent', 'benny' ), 'default' => '#fff' ),
+            'accent_text_secondary' => array( 'title' => __( 'Text on accent (secondary)', 'benny' ), 'default' => '#574c45' ),
+            'body_background'       => array( 'title' => __( 'Body background colour', 'benny' ), 'default' => '#aea198' ),
+            'body_text'             => array( 'title' => __( 'Body copy', 'benny' ), 'default' => '#7d6e63' ),
+            'button_text'           => array( 'title' => __( 'Button text colour', 'benny' ), 'default' => '#fff' ),
+            'wrapper_background'    => array( 'title' => __( 'Wrapper background colour', 'benny' ), 'default' => '#f9f8f7' ),
+            'posts_background'      => array( 'title' => __( 'Posts background colour', 'benny' ), 'default' => '#fff' ),
+            'widget_background'     => array( 'title' => __( 'Widget background colour', 'benny' ), 'default' => '#f1efee' ),
+            'primary_border'        => array( 'title' => __( 'Primary border ', 'benny' ), 'default' => '#e2dedb' ),
+            'secondary_border'      => array( 'title' => __( 'Secondary border', 'benny' ), 'default' => '#dbd5d1' ),
+            'meta_colour'           => array( 'title' => __( 'Meta text', 'benny' ), 'default' => '#bdb2ab' ),
+            'footer_text'           => array( 'title' => __( 'Footer text', 'benny' ), 'default' => '#fff' ),
+            'footer_titles'         => array( 'title' => __( 'Footer titles', 'benny' ), 'default' => '#fff' ), 
+            'header_buttons'        => array( 'title' => __( 'Header buttons', 'benny' ), 'default' => '#fff' ), 
+            'header_buttons_hover'  => array( 'title' => __( 'Header buttons hover', 'benny' ), 'default' => '#d95b43' )  
         );
     }
 
@@ -95,7 +95,7 @@ class Franklin_Customizer_Styles {
      * @since   1.6.0
      */
     public static function get_transient_key() {
-        return 'franklin_customizer_styles';
+        return 'benny_customizer_styles';
     }
 
     /**

@@ -2,9 +2,9 @@
 /**
  * The template for displaying the title banner at the top of a page.
  *
- * @package Franklin
+ * @package Benny
  */
-$banner_title = franklin_get_banner_title();
+$banner_title = benny_get_banner_title();
 
 if ( ! empty( $banner_title ) ) : ?>
 

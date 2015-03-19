@@ -1,7 +1,7 @@
 /*--------------------------------------------------------
  * Image Hovers
 ---------------------------------------------------------*/
-FRANKLIN.ImageHovers = ( function( $ ) {
+BENNY.ImageHovers = ( function( $ ) {
 	return {
 		init : function() {
 			$('.on-hover').each( function() {

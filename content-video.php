@@ -25,7 +25,7 @@
 				<div class="entry cf">				
 					<?php sofa_video_format_the_content() ?>			
 
-					<?php wp_link_pages(array( 'before' => '<p class="entry_pages">' . __('Pages: ', 'franklin') ) ) ?>
+					<?php wp_link_pages(array( 'before' => '<p class="entry_pages">' . __('Pages: ', 'benny') ) ) ?>
 				</div>						
 
 				<?php if ( is_single() ) : ?>

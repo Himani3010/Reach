@@ -4,7 +4,7 @@
  *
  * Contains the closing of the #content div and all content after
  *
- * @package Franklin
+ * @package Benny
  */
 ?>
 		</div><!-- #main -->
@@ -31,7 +31,7 @@
 						echo get_theme_mod( 'footer_notice' );
 					else: 
 					?>
-						<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'franklin' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'franklin' ), 'WordPress' ) ?></a>
+						<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'benny' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'benny' ), 'WordPress' ) ?></a>
 					<?php
 					endif  
 					?>

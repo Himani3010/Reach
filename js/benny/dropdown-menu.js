@@ -1,7 +1,7 @@
 /*--------------------------------------------------------
  * Dropdown Menus
 ---------------------------------------------------------*/
-FRANKLIN.DropdownMenus = ( function( $ ){	
+BENNY.DropdownMenus = ( function( $ ){	
 	return {
 		init : function() {
 			$('.menu li')

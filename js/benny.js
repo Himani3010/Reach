@@ -11,25 +11,25 @@
 
 		$('html').removeClass('no-js');
 
-		FRANKLIN.DropdownMenus.init();
+		BENNY.DropdownMenus.init();
 
-		FRANKLIN.ResponsiveMenu.init();
+		BENNY.ResponsiveMenu.init();
 
-		FRANKLIN.CrossBrowserPlaceholders.init();
+		BENNY.CrossBrowserPlaceholders.init();
 
-		FRANKLIN.ImageHovers.init();
+		BENNY.ImageHovers.init();
 
-		FRANKLIN.FancySelect.init();
+		BENNY.FancySelect.init();
 
-		FRANKLIN.LeanModal.init();	
+		BENNY.LeanModal.init();	
 
-		FRANKLIN.Accordion.init();	
+		BENNY.Accordion.init();	
 
-		if ( FRANKLIN_CROWDFUNDING ) {
+		if ( BENNY_CROWDFUNDING ) {
 
-			FRANKLIN.Countdown.init();		
+			BENNY.Countdown.init();		
 
-			FRANKLIN.Pledging.init();
+			BENNY.Pledging.init();
 
 			$('.campaign-button').on( 'click', function() {
 				$(this).toggleClass('icon-remove');
@@ -63,15 +63,15 @@
 	}
 
   	$(window).resize( function() {
-  		if ( FRANKLIN_CROWDFUNDING ) {
-  			FRANKLIN.Grid.resizeGrid();
+  		if ( BENNY_CROWDFUNDING ) {
+  			BENNY.Grid.resizeGrid();
   		}
   	});
 
   	$(window).load( function() {
-  		if ( FRANKLIN_CROWDFUNDING ) {
-  			FRANKLIN.Grid.init();
-			FRANKLIN.Barometer.init();
+  		if ( BENNY_CROWDFUNDING ) {
+  			BENNY.Grid.init();
+			BENNY.Barometer.init();
   		}
   	});
 

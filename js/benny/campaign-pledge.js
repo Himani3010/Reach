@@ -1,7 +1,7 @@
 /*--------------------------------------------------------
  * Campaign Pledges
 ---------------------------------------------------------*/
-FRANKLIN.Pledging = ( function( $ ) {
+BENNY.Pledging = ( function( $ ) {
 
 	var $form = $('.edd_download_purchase_form'),
 		$price = $('input[name=atcf_custom_price]'),
@@ -27,7 +27,7 @@ FRANKLIN.Pledging = ( function( $ ) {
 		if ( parseInt( $minpledge.data('price') ) > new_pledge ) {
 
 			// Explain that the pledge has to be at least the minimum
-			alert( FRANKLIN.need_minimum_pledge );
+			alert( BENNY.need_minimum_pledge );
 
 			// Select the minimum pledge amount
 			$minpledge.find('input').prop('checked', true);

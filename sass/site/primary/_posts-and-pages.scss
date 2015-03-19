@@ -10,19 +10,10 @@
 }
 
 .banner {
-	position: relative;
-	left: (-(4 / 92) * 100% ) - 9;
-	width: 100% + 18 + ((8 / 92) * 100);	
+	@include fullwidth-wrapper-padded();
 	@include height( 100 );
 	@include margin( -36, 0, 36 );
 	text-align: center;
-
-	@include bp( 800 ) {
-		left: -4.5rem;
-		width: -webkit-calc( 100% + 91px );
-		width: -moz-calc( 100% + 91px );
-		width: calc( 100% + 91px );
-	}
 }
 
 .banner-title {
@@ -74,25 +65,14 @@
 	}
 
 	blockquote {
-		position: relative;
-		left: -(4 / 92) * 100%;
-		width: 100% + ((8 / 92) * 100);
-
-		@include bp( 800 ) {
-			left: -3.6rem;
-			width: -webkit-calc( 100% + 73px );
-			width: -moz-calc( 100% + 73px );
-			width: calc( 100% + 73px );
-		}	
+		@include fullwidth-wrapper();		
 	}	
 }
 
 .meta {	
-	position: relative;
-	left: -(4 / 92) * 100%;
+	@include fullwidth-wrapper();
 	padding: 0;	
 	margin: 0;
-	width: 100% + ((8 / 92) * 100);
 	@include font-size( 10 );
 	@include line-height( 38 );
 	@include letter-spacing( 1 );
@@ -127,13 +107,6 @@
 	@include bp( 600 ) {
 		font-size: 1.1rem;
 		line-height: 4rem;
-	}
-
-	@include bp( 800 ) {
-		left: -3.6rem;
-		width: -webkit-calc( 100% + 73px );
-		width: -moz-calc( 100% + 73px );
-		width: calc( 100% + 73px );
 	}
 }
 
@@ -182,3 +155,8 @@
 	@include font-size( 16 );
 	@include line-height( 26 );
 }
+
+/*--------------------------------------------------------------
+11.1.1 Page Templates
+--------------------------------------------------------------*/
+@import "page-templates/templates";

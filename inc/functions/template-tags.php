@@ -4,13 +4,13 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package 	Franklin
+ * @package 	Benny
  * @category 	Functions
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-if ( ! function_exists( 'franklin_paging_nav' ) ) :
+if ( ! function_exists( 'benny_paging_nav' ) ) :
 
 	/**
 	 * Display navigation to next/previous set of posts when applicable.
@@ -18,21 +18,21 @@ if ( ! function_exists( 'franklin_paging_nav' ) ) :
 	 * @return 	void
 	 * @since 	1.0.0
 	 */
-	function franklin_paging_nav() {
+	function benny_paging_nav() {
 		// Don't print empty markup if there's only one page.
 		if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
 			return;
 		}
 		?>
 		<nav class="navigation paging-navigation pagination" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'franklin' ); ?></h1>
+			<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'benny' ); ?></h1>
 			<ul>
 				<?php if ( get_next_posts_link() ) : ?>
-				<li class="nav-previous"><?php next_posts_link( __( 'Older Posts', 'franklin' ) ); ?></li>
+				<li class="nav-previous"><?php next_posts_link( __( 'Older Posts', 'benny' ) ); ?></li>
 				<?php endif; ?>
 
 				<?php if ( get_previous_posts_link() ) : ?>
-				<li class="nav-next"><?php previous_posts_link( __( 'Newer Posts', 'franklin' ) ); ?></li>
+				<li class="nav-next"><?php previous_posts_link( __( 'Newer Posts', 'benny' ) ); ?></li>
 				<?php endif; ?>
 			</ul>
 		</nav><!-- .navigation -->
@@ -41,7 +41,7 @@ if ( ! function_exists( 'franklin_paging_nav' ) ) :
 
 endif;
 
-if ( ! function_exists( 'franklin_post_nav' ) ) :
+if ( ! function_exists( 'benny_post_nav' ) ) :
 
 	/**
 	 * Display navigation to next/previous post when applicable.
@@ -49,7 +49,7 @@ if ( ! function_exists( 'franklin_post_nav' ) ) :
 	 * @return 	void
 	 * @since 	1.0.0
 	 */
-	function franklin_post_nav() {
+	function benny_post_nav() {
 		// Don't print empty markup if there's nowhere to navigate.
 		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
 		$next     = get_adjacent_post( false, '', false );
@@ -59,11 +59,11 @@ if ( ! function_exists( 'franklin_post_nav' ) ) :
 		}
 		?>
 		<nav class="navigation post-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'franklin' ); ?></h1>
+			<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'benny' ); ?></h1>
 			<div class="nav-links">
 				<?php
-					previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'franklin' ) );
-					next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'franklin' ) );
+					previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'benny' ) );
+					next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'benny' ) );
 				?>
 			</div><!-- .nav-links -->
 		</nav><!-- .navigation -->
@@ -72,7 +72,7 @@ if ( ! function_exists( 'franklin_post_nav' ) ) :
 
 endif;
 
-if ( ! function_exists( 'franklin_posted_on' ) ) :
+if ( ! function_exists( 'benny_posted_on' ) ) :
 	
 	/**
 	 * Prints HTML with meta information for the current post-date/time and author.
@@ -80,7 +80,7 @@ if ( ! function_exists( 'franklin_posted_on' ) ) :
 	 * @return 	void
 	 * @since 	1.0.0
 	 */
-	function franklin_posted_on() {
+	function benny_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -94,12 +94,12 @@ if ( ! function_exists( 'franklin_posted_on' ) ) :
 		);
 
 		$posted_on = sprintf(
-			_x( 'Posted on %s', 'post date', 'franklin' ),
+			_x( 'Posted on %s', 'post date', 'benny' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
 		$byline = sprintf(
-			_x( 'by %s', 'post author', 'franklin' ),
+			_x( 'by %s', 'post author', 'benny' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -146,8 +146,8 @@ endif;
  * @return 	bool
  * @since 	1.0.0
  */
-function franklin_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'franklin_categories' ) ) ) {
+function benny_categorized_blog() {
+	if ( false === ( $all_the_cool_cats = get_transient( 'benny_categories' ) ) ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
 			'fields'     => 'ids',
@@ -160,37 +160,37 @@ function franklin_categorized_blog() {
 		// Count the number of categories that are attached to the posts.
 		$all_the_cool_cats = count( $all_the_cool_cats );
 
-		set_transient( 'franklin_categories', $all_the_cool_cats );
+		set_transient( 'benny_categories', $all_the_cool_cats );
 	}
 
 	if ( $all_the_cool_cats > 1 ) {
-		// This blog has more than 1 category so franklin_categorized_blog should return true.
+		// This blog has more than 1 category so benny_categorized_blog should return true.
 		return true;
 	} else {
-		// This blog has only 1 category so franklin_categorized_blog should return false.
+		// This blog has only 1 category so benny_categorized_blog should return false.
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in franklin_categorized_blog.
+ * Flush out the transients used in benny_categorized_blog.
  *
  * @return 	void
  * @since 	1.0.0
  */
-function franklin_category_transient_flusher() {
+function benny_category_transient_flusher() {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 		return;
 	}
 	// Like, beat it. Dig?
-	delete_transient( 'franklin_categories' );
+	delete_transient( 'benny_categories' );
 }
 
-add_action( 'edit_category', 'franklin_category_transient_flusher' );
-add_action( 'save_post',     'franklin_category_transient_flusher' );
+add_action( 'edit_category', 'benny_category_transient_flusher' );
+add_action( 'save_post',     'benny_category_transient_flusher' );
 
 
-if ( !function_exists( 'franklin_site_title' ) ) : 
+if ( !function_exists( 'benny_site_title' ) ) : 
 	
 	/**
 	 * Displays the site title class. 
@@ -199,21 +199,21 @@ if ( !function_exists( 'franklin_site_title' ) ) :
 	 * @return 	string|void
 	 * @since 	1.0.0
 	 */
-	function franklin_site_title( $echo = true ) {
+	function benny_site_title( $echo = true ) {
 
 		$classes = get_theme_mod('hide_site_title') ? 'site-title hidden' : 'site-title';
-		$classes = apply_filters( 'franklin_site_title_class', $classes );
+		$classes = apply_filters( 'benny_site_title_class', $classes );
 
 		// Set up HTML 
 		$html = is_front_page() ? '<h1 ' : '<div ';
 		$html .= 'class="'.$classes.'">';
-		$html .= '<a href="'.site_url().'" title="'.__( 'Go to homepage', 'franklin' ).'">';
+		$html .= '<a href="'.site_url().'" title="'.__( 'Go to homepage', 'benny' ).'">';
 		$html .= get_bloginfo('title');
 		$html .= '</a>';
 		$html .= is_front_page() ? '</h1>' : '</div>';
 
 		// Allow child themes to filter this
-		$html = apply_filters( 'franklin_site_title', $html );
+		$html = apply_filters( 'benny_site_title', $html );
 
 		if ( $echo == false )
 			return $html;
@@ -223,7 +223,7 @@ if ( !function_exists( 'franklin_site_title' ) ) :
 
 endif;
 
-if ( !function_exists( 'franklin_site_tagline' ) ) :
+if ( !function_exists( 'benny_site_tagline' ) ) :
 
 	/**
 	 * Displays the site tagline, if there is one and it's not set to be hidden.
@@ -232,11 +232,11 @@ if ( !function_exists( 'franklin_site_tagline' ) ) :
 	 * @return 	void
 	 * @since 	1.0.0
 	 */
-	function franklin_site_tagline($echo = true) {
+	function benny_site_tagline($echo = true) {
 		$classes = get_theme_mod('hide_site_tagline') ? 'site-tagline hidden' : 'site-tagline';
 
 		$html = '<h3 class="'.$classes.'">'.get_bloginfo('description').'</h3>';
-		$html = apply_filters( 'franklin_site_tagline', $html );
+		$html = apply_filters( 'benny_site_tagline', $html );
 
 		if ( $echo == false )
 			return $html;
@@ -246,7 +246,7 @@ if ( !function_exists( 'franklin_site_tagline' ) ) :
 
 endif;
 
-if ( !function_exists( 'franklin_post_header' ) ) :
+if ( !function_exists( 'benny_post_header' ) ) :
 
 	/**
 	 * Displays the post title. 
@@ -255,7 +255,7 @@ if ( !function_exists( 'franklin_post_header' ) ) :
 	 * @return 	string|void
 	 * @since 	2.0.0
 	 */
-	function franklin_post_header( $echo = true ) {
+	function benny_post_header( $echo = true ) {
 		global $post;
 
 		$post_format = get_post_format();
@@ -278,7 +278,7 @@ if ( !function_exists( 'franklin_post_header' ) ) :
 
 		// Link posts have a different title setup
 		if ( $post_format == 'link' ) {
-			$title = franklin_link_format_title(false);
+			$title = benny_link_format_title(false);
 		}
 		elseif ( $post_format == 'status' ) {
 			$title = get_the_content();
@@ -286,7 +286,7 @@ if ( !function_exists( 'franklin_post_header' ) ) :
 		else {
 			$title = sprintf( '<a href="%s" title="%s">%s</a>', 
 				get_permalink(),
-				sprintf( __('Link to %s', 'franklin'), $post_title ),
+				sprintf( __('Link to %s', 'benny'), $post_title ),
 				$post_title );	
 		}	
 
@@ -300,7 +300,7 @@ if ( !function_exists( 'franklin_post_header' ) ) :
 
 endif;
 
-if ( !function_exists( 'franklin_video_format_the_content' ) ) :
+if ( !function_exists( 'benny_video_format_the_content' ) ) :
 
 	/**
 	 * Prints the content for a video post.
@@ -308,9 +308,9 @@ if ( !function_exists( 'franklin_video_format_the_content' ) ) :
 	 * @return 	void
 	 * @since 	1.0.0
 	 */ 
-	function franklin_video_format_the_content($more_link_text = null, $stripteaser = false) {
+	function benny_video_format_the_content($more_link_text = null, $stripteaser = false) {
 		$content = get_the_content($more_link_text, $stripteaser);
-		$content = franklin_strip_embed_shortcode( $content, 1 );
+		$content = benny_strip_embed_shortcode( $content, 1 );
 		$content = apply_filters('the_content', $content);
 		$content = str_replace(']]>', ']]&gt;', $content);		
 		echo $content;
@@ -318,7 +318,7 @@ if ( !function_exists( 'franklin_video_format_the_content' ) ) :
 
 endif;
 
-if ( !function_exists( 'franklin_link_format_the_content' ) ) :
+if ( !function_exists( 'benny_link_format_the_content' ) ) :
 	/**
 	 * Prints the content for a link post.
 	 * 
@@ -328,9 +328,9 @@ if ( !function_exists( 'franklin_link_format_the_content' ) ) :
 	 * @return 	void|string
 	 * @since 	1.0.0
 	 */
-	function franklin_link_format_the_content($more_link_text = null, $stripteaser = false, $echo = true) {
+	function benny_link_format_the_content($more_link_text = null, $stripteaser = false, $echo = true) {
 		$content = get_the_content($more_link_text, $stripteaser);
-		$content = franklin_strip_anchors( $content, 1 );
+		$content = benny_strip_anchors( $content, 1 );
 		$content = apply_filters('the_content', $content);
 		$content = str_replace(']]>', ']]&gt;', $content);		
 
@@ -341,24 +341,24 @@ if ( !function_exists( 'franklin_link_format_the_content' ) ) :
 	}
 endif;
 
-if ( !function_exists( 'franklin_link_format_title' ) ) :
+if ( !function_exists( 'benny_link_format_title' ) ) :
 	/**
 	 * Returns or prints the title for a link post.
 	 * 
-	 * @uses 	franklin_link_format_title
+	 * @uses 	benny_link_format_title
 	 * @param 	bool 		$echo
 	 * @return 	string
 	 * @since 	1.0.0
 	 */
-	function franklin_link_format_title($echo = true) {
+	function benny_link_format_title($echo = true) {
 		global $post;
-		$anchors = franklin_get_first_anchor($post->post_content);
+		$anchors = benny_get_first_anchor($post->post_content);
 
 		// If there are no anchors, just return the normal title.
 		if ( empty($anchors) ) 
 			return '<a href="'.get_permalink().'" title="Go to '.$post->post_title.'">'.$post->post_title.'</a>';
 
-		$anchor = apply_filters( 'franklin_link_format_title', $anchors[0] );
+		$anchor = apply_filters( 'benny_link_format_title', $anchors[0] );
 
 		if ( $echo === false )
 			return $anchor;

@@ -2,38 +2,38 @@
 /**
  * Handles how Crowdfunding features are integrated into the theme.
  * 
- * @package 	Franklin/Crowdfunding
+ * @package 	Benny/Crowdfunding
  * @category	Classes
  * @author 		Studio 164a
  * @version 	2.0.0
  */
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-if ( ! class_exists( 'Franklin_Jetpack' ) ) : 
+if ( ! class_exists( 'Benny_Jetpack' ) ) : 
 
 /**
- * Franklin_Crowdfunding
+ * Benny_Crowdfunding
  *
  * @since 		2.0.0
  */
-class Franklin_Crowdfunding {
+class Benny_Crowdfunding {
 
 	/**
 	 * This creates an instance of this class. 
 	 *
-	 * If the franklin_theme_start hook has already run, this will not do anything.
+	 * If the benny_theme_start hook has already run, this will not do anything.
 	 * 
-	 * @param 	Franklin_Theme 	$theme
+	 * @param 	Benny_Theme 	$theme
 	 * @static
 	 * @access 	public
 	 * @since 	1.0.0
 	 */
-	public static function start( Franklin_Theme $theme ) {
+	public static function start( Benny_Theme $theme ) {
 		if ( ! $theme->is_start() ) {
 			return;
 		}
 
-		new Franklin_Crowdfunding();	
+		new Benny_Crowdfunding();	
 	}
 
 	/** 
@@ -56,6 +56,7 @@ class Franklin_Crowdfunding {
 	 */
 	private function load_dependencies() {
 		require_once( 'functions/helper-functions.php' );
+		require_once( 'functions/template-tags.php' );
 	}
 
 	/**
@@ -67,7 +68,7 @@ class Franklin_Crowdfunding {
 	 */
 	private function attach_hooks_and_filters() {
 		remove_filter( 'the_content', 					array( charitable_get_helper( 'templates' ), 'campaign_content' ), 2 );
-		add_filter( 'franklin_script_dependencies', 	array( $this, 'setup_script_dependencies' ) );
+		add_filter( 'benny_script_dependencies', 	array( $this, 'setup_script_dependencies' ) );
 	}
 
 	/**
@@ -82,11 +83,11 @@ class Franklin_Crowdfunding {
 		$dependencies[] = 'raphael';
 		$dependencies[] = 'jquery-masonry';		
 		
-		wp_register_script( 'raphael', get_template_directory_uri() . '/js/vendors/raphael/raphael-min.js', array( 'jquery' ), franklin_get_theme()->get_theme_version(), true );
+		wp_register_script( 'raphael', get_template_directory_uri() . '/js/vendors/raphael/raphael-min.js', array( 'jquery' ), benny_get_theme()->get_theme_version(), true );
 
 		if ( get_post_type() == 'campaign' ) {
-			wp_register_script( 'countdown-plugin', get_template_directory_uri() . '/js/vendors/jquery-countdown/jquery.plugin.min.js', array( 'jquery' ), franklin_get_theme()->get_theme_version(), true );
-            wp_register_script( 'countdown', get_template_directory_uri() . '/js/vendors/jquery-countdown/jquery.countdown.min.js', array( 'countdown-plugin' ), franklin_get_theme()->get_theme_version(), true );
+			wp_register_script( 'countdown-plugin', get_template_directory_uri() . '/js/vendors/jquery-countdown/jquery.plugin.min.js', array( 'jquery' ), benny_get_theme()->get_theme_version(), true );
+            wp_register_script( 'countdown', get_template_directory_uri() . '/js/vendors/jquery-countdown/jquery.countdown.min.js', array( 'countdown-plugin' ), benny_get_theme()->get_theme_version(), true );
 
             $dependencies[] = 'countdown';
         }

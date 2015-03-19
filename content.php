@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Franklin
+ * @package Benny
  */
 ?>
 <article id="post-<?php the_ID() ?>" <?php post_class() ?>>			
@@ -13,14 +13,14 @@
 
 	<?php endif ?>
 
-	<?php franklin_post_header() ?>			
+	<?php benny_post_header() ?>			
 
 	<div class="entry cf">				
 		<?php 
 		the_content(); 			
 
 		wp_link_pages( array( 
-			'before' => '<p class="entry_pages">' . __('Pages: ', 'franklin') 
+			'before' => '<p class="entry_pages">' . __('Pages: ', 'benny') 
 		) ); 
 		?>
 	</div>						

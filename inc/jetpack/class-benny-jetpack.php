@@ -1,39 +1,39 @@
 <?php 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-if ( ! class_exists( 'Franklin_Jetpack' ) ) : 
+if ( ! class_exists( 'Benny_Jetpack' ) ) : 
 
 /**
  * Handles how Jetpack is integrated into the theme.
  * 
- * @package 	Franklin
+ * @package 	Benny
  * @subpackage 	Jetpack
  * @author 		Studio 164a
  * @since 		1.0.0
  */
-class Franklin_Jetpack {
+class Benny_Jetpack {
 
 	/**
-	 * @var 	Franklin_Theme
+	 * @var 	Benny_Theme
 	 */
 	private $theme;
 
 	/**
 	 * This creates an instance of this class. 
 	 *
-	 * If the franklin_theme_start hook has already run, this will not do anything.
+	 * If the benny_theme_start hook has already run, this will not do anything.
 	 * 
-	 * @param 	Franklin_Theme 	$theme
+	 * @param 	Benny_Theme 	$theme
 	 * @static
 	 * @access 	public
 	 * @since 	1.0.0
 	 */
-	public static function start( Franklin_Theme $theme ) {
+	public static function start( Benny_Theme $theme ) {
 		if ( ! $theme->is_start() ) {
 			return;
 		}
 		
-		new Franklin_Jetpack($theme);	
+		new Benny_Jetpack($theme);	
 	}
 
 	/** 
@@ -43,7 +43,7 @@ class Franklin_Jetpack {
 	 * @access 	private
 	 * @since 	1.0.0
 	 */
-	private function __construct( Franklin_Theme $theme ) {
+	private function __construct( Benny_Theme $theme ) {
 		$this->theme = $theme;
 
 		add_action( 'after_setup_theme', array( $this, 'setup_jetpack' ) );

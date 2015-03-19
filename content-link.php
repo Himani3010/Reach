@@ -8,9 +8,9 @@
 
 			<?php endif ?>
 
-			<?php franklin_post_header() ?>			
+			<?php benny_post_header() ?>			
 
-			<?php $content = franklin_link_format_the_content(null, false, false) ?>
+			<?php $content = benny_link_format_the_content(null, false, false) ?>
 
 			<?php if ( strlen($content) ) : ?>
 				<div class="entry cf"><?php echo $content ?></div>

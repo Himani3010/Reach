@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package Franklin
+ * @package Benny
  */
 ?><!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -21,7 +21,7 @@
 </head>
 <body <?php body_class(); ?>>
 	<div id="page" class="hfeed site-container">
-		<a class="skip-link screen-reader-text" href="#main"><?php _e( 'Skip to content', 'franklin' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#main"><?php _e( 'Skip to content', 'benny' ); ?></a>
 
 		<!-- Sharing -->
 		<?php //sofa_social_links() ?>	
@@ -33,10 +33,10 @@
 		<div class="body-wrapper">
 			<header id="header" class="cf wrapper site-header" role="banner">
 				<div class="site-branding site-identity">
-					<a class="home-link" href="<?php echo franklin_site_url() ?>"></a>
+					<a class="home-link" href="<?php echo benny_site_url() ?>"></a>
 					<?php 
-					franklin_site_title();
-					franklin_site_tagline(); 
+					benny_site_title();
+					benny_site_tagline(); 
 					?>								
 				</div><!-- .site-branding -->
 				<div class="site-navigation">		

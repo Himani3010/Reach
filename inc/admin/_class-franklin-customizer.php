@@ -1,22 +1,22 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-if ( ! class_exists( 'Franklin_Customizer' ) ) : 
+if ( ! class_exists( 'Benny_Customizer' ) ) : 
 
 /**
- * Franklin Customizer
+ * Benny Customizer
  *
- * @class       Franklin_Customizer
+ * @class       Benny_Customizer
  * @author      Studio 164a
  * @category    Admin
- * @package     Franklin
+ * @package     Benny
  * @subpackage 	Customizer
  * @since       1.0.0
  */
-class Franklin_Customizer {
+class Benny_Customizer {
 
     /**
-     * @var     Franklin_Theme   $theme
+     * @var     Benny_Theme   $theme
      */
     private $theme;
 
@@ -24,23 +24,23 @@ class Franklin_Customizer {
      * Instantiate the object, but only if this is the start phase. 
      *
      * @static
-     * @param   Franklin_Theme           $theme
+     * @param   Benny_Theme           $theme
      * @return  void
      */
-    public static function start( Franklin_Theme $theme ) {
+    public static function start( Benny_Theme $theme ) {
         if ( ! $theme->is_start() ) {
             return;
         }
 
-        new Franklin_Customizer( $theme );
+        new Benny_Customizer( $theme );
     }
 
     /**
      * Instantiate the object. 
      * 
-     * @param   Franklin_Theme           $theme
+     * @param   Benny_Theme           $theme
      */
-    private function __construct( Franklin_Theme $theme ) {
+    private function __construct( Benny_Theme $theme ) {
         $this->theme = $theme;
             
         add_action('after_setup_theme', array( $this, 'setup_callbacks' ) );
@@ -81,7 +81,7 @@ class Franklin_Customizer {
      * @since 	1.0.0
      */
     public function customize_preview_init() {        
-        wp_enqueue_script( 'franklin_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), $this->theme->get_theme_version(), true );
+        wp_enqueue_script( 'benny_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), $this->theme->get_theme_version(), true );
     }     
 
     /**
@@ -98,7 +98,7 @@ class Franklin_Customizer {
          * The saved styles may no longer be valid, so delete them. They 
          * will be re-created on the next page load.
          */
-        delete_transient( Franklin_Customizer_Styles::get_transient_key() );
+        delete_transient( Benny_Customizer_Styles::get_transient_key() );
     }    
 }
 

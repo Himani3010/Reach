@@ -1,7 +1,7 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-if ( ! class_exists( 'Franklin_Theme' ) ) : 
+if ( ! class_exists( 'Benny_Theme' ) ) : 
 
 /**
  * Core theme class. Everything starts here.
@@ -9,17 +9,17 @@ if ( ! class_exists( 'Franklin_Theme' ) ) :
  * The purpose of this class is to encapsulate all the core theme definitions
  * inside a single class, to avoid namespace collisions.
  *
- * @package 	Franklin
+ * @package 	Benny
  * @subpackage 	Core
  * @author 		Studio 164a
- * @since 		2.0.0
+ * @since 		1.0.0
  */
-class Franklin_Theme {
+class Benny_Theme {
 
 	/**
 	 * The one and only class instance. 
 	 *
-	 * @var 	Franklin_Theme
+	 * @var 	Benny_Theme
 	 * @static
 	 * @access  private
 	 */
@@ -28,7 +28,7 @@ class Franklin_Theme {
 	/**
 	 * The theme version. 
 	 */
-	const VERSION = '2.0.0';
+	const VERSION = '1.0.0';
 
 	/**
 	 * Database version number. 
@@ -51,14 +51,14 @@ class Franklin_Theme {
 	/**
 	 * Retrieve the class instance. If one hasn't been created yet, create it first. 
 	 *
-	 * @return 	Franklin_Theme
+	 * @return 	Benny_Theme
 	 * @static
 	 * @access  public
 	 * @since 	2.0.0
 	 */
 	public static function get_instance() {
 		if ( is_null( self::$instance ) ) {
-			self::$instance = new Franklin_Theme();
+			self::$instance = new Benny_Theme();
 		}
 
 		return self::$instance;
@@ -94,7 +94,7 @@ class Franklin_Theme {
 		 * to remove any of the hooks or filters called during 
 		 * this phase.
 		 */
-		do_action( 'franklin_theme_start', $this );
+		do_action( 'benny_theme_start', $this );
 	}
 
 	/**
@@ -105,7 +105,7 @@ class Franklin_Theme {
 	 * @since 	2.0.0
 	 */
 	public function get_theme_version() {
-		if ( defined( 'FRANKLIN_DEBUG' ) && FRANKLIN_DEBUG ) {
+		if ( defined( 'BENNY_DEBUG' ) && BENNY_DEBUG ) {
             return time();
         }
 
@@ -120,18 +120,18 @@ class Franklin_Theme {
 	 * @since 	2.0.0
 	 */
 	public function started() {
-		return did_action( 'franklin_theme_start' );
+		return did_action( 'benny_theme_start' );
 	}
 
 	/**
-	 * Checks whether we are currently on the `franklin_theme_start` hook.
+	 * Checks whether we are currently on the `benny_theme_start` hook.
 	 *	
 	 * @return 	boolean
 	 * @access  public
 	 * @since 	2.0.0
 	 */
 	public function is_start() {
-		return 'franklin_theme_start' == current_filter();
+		return 'benny_theme_start' == current_filter();
 	}
 
 	/**
@@ -142,7 +142,7 @@ class Franklin_Theme {
 	 * @since 	2.0.0
 	 */
 	private function load_dependencies() {
-		require get_template_directory() . '/inc/class-franklin-customizer-styles.php';
+		require get_template_directory() . '/inc/class-benny-customizer-styles.php';
 		require get_template_directory() . '/inc/functions/template-tags.php';
 		require get_template_directory() . '/inc/functions/helper-functions.php';
 		require get_template_directory() . '/inc/functions/comments.php';
@@ -157,13 +157,13 @@ class Franklin_Theme {
 	 * @since 	2.0.0
 	 */
 	private function maybe_upgrade() {
-		$db_version = get_option( 'franklin_version' );
+		$db_version = get_option( 'benny_version' );
 
 		if ( self::DATABASE_VERSION !== $db_version ) {
 
-			require_once( get_template_directory() . '/inc/class-franklin-upgrade.php' );
+			require_once( get_template_directory() . '/inc/class-benny-upgrade.php' );
 
-			Franklin_Upgrade::upgrade_from( $db_version, self::DATABASE_VERSION );
+			Benny_Upgrade::upgrade_from( $db_version, self::DATABASE_VERSION );
 		}
 	}
 
@@ -179,9 +179,9 @@ class Franklin_Theme {
 
         if ( $wp_customize ) {
 
-            require_once( get_template_directory() . '/inc/admin/class-franklin-customizer.php');
+            require_once( get_template_directory() . '/inc/admin/class-benny-customizer.php');
 
-            add_action( 'franklin_theme_start', array( 'Franklin_Customizer', 'start' ) );
+            add_action( 'benny_theme_start', array( 'Benny_Customizer', 'start' ) );
         } 
 	}
 
@@ -196,9 +196,9 @@ class Franklin_Theme {
 
         if ( defined( 'JETPACK__VERSION' ) ) {
 
-            require_once( get_template_directory() . '/inc/jetpack/class-franklin-jetpack.php');
+            require_once( get_template_directory() . '/inc/jetpack/class-benny-jetpack.php');
 
-            add_action( 'franklin_theme_start', array( 'Franklin_Jetpack', 'start' ) );
+            add_action( 'benny_theme_start', array( 'Benny_Jetpack', 'start' ) );
         }        
     }
 
@@ -215,9 +215,9 @@ class Franklin_Theme {
 			&& class_exists( 'Charitable' ) 
 			&& class_exists( 'Charitable_EDD' ) ) {
 
-    		require_once( get_template_directory() . '/inc/crowdfunding/class-franklin-crowdfunding.php' );
+    		require_once( get_template_directory() . '/inc/crowdfunding/class-benny-crowdfunding.php' );
 
-    		add_action( 'franklin_theme_start', array( 'Franklin_Crowdfunding', 'start' ) );
+    		add_action( 'benny_theme_start', array( 'Benny_Crowdfunding', 'start' ) );
 
     		$this->crowdfunding = true;
     	}
@@ -232,9 +232,9 @@ class Franklin_Theme {
 	 */
 	private function attach_hooks_and_filters() {
 		/**
-		 * Core theme classes hooked in on the `franklin_theme_start` hook. 
+		 * Core theme classes hooked in on the `benny_theme_start` hook. 
 		 */
-		add_action( 'franklin_theme_start',		array( 'Franklin_Customizer_Styles', 'start' ) );
+		add_action( 'benny_theme_start',		array( 'Benny_Customizer_Styles', 'start' ) );
 
 		/**
 		 * Methods within this class that are hooked into core WordPress action hooks. 
@@ -271,7 +271,7 @@ class Franklin_Theme {
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 */
-		load_theme_textdomain( 'franklin', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'benny', get_template_directory() . '/languages' );
 
 		/** 
 		 * Add default posts and comments RSS feed links to head.
@@ -286,13 +286,14 @@ class Franklin_Theme {
 		add_theme_support( 'post-thumbnails' );
         set_post_thumbnail_size( 706, 0, false );
         add_image_size( 'campaign-thumbnail', 640, 427, true );
+        add_image_size( 'campaign-thumbnail-small', 527, 351, true );
         add_image_size( 'widget-thumbnail', 294, 882, false );
 
 		/**
 		 * This theme uses wp_nav_menu() in one location.
 		 */
 		register_nav_menus( array(
-			'primary_navigation' => __( 'Primary Menu', 'franklin' ),
+			'primary_navigation' => __( 'Primary Menu', 'benny' ),
 		) );
 
 		/**
@@ -324,8 +325,8 @@ class Franklin_Theme {
 	public function setup_sidebars() {
 		register_sidebar( array(
             'id'            => 'default',            
-            'name'          => __( 'Default sidebar', 'franklin' ),
-            'description'   => __( 'The default sidebar.', 'franklin' ),
+            'name'          => __( 'Default sidebar', 'benny' ),
+            'description'   => __( 'The default sidebar.', 'benny' ),
             'before_widget' => '<aside id="%1$s" class="widget cf %2$s">',
             'after_widget'  => '</aside>',
             'before_title'  => '<div class="title-wrapper"><h4 class="widget-title">',
@@ -334,8 +335,8 @@ class Franklin_Theme {
 
         register_sidebar( array(
             'id'            => 'sidebar_campaign',            
-            'name'          => __( 'Campaign sidebar', 'franklin' ),
-            'description'   => __( 'The campaign sidebar.', 'franklin' ),
+            'name'          => __( 'Campaign sidebar', 'benny' ),
+            'description'   => __( 'The campaign sidebar.', 'benny' ),
             'before_widget' => '<aside id="%1$s" class="widget cf %2$s">',
             'after_widget'  => '</aside>',
             'before_title'  => '<div class="title-wrapper"><h4 class="widget-title">',
@@ -344,8 +345,8 @@ class Franklin_Theme {
 
         register_sidebar( array(
             'id'            => 'campaign_after_content',            
-            'name'          => __( 'Campaign below content', 'franklin' ),
-            'description'   => __( 'Displayed below the campaign\'s content, but above the comment section.', 'franklin' ),
+            'name'          => __( 'Campaign below content', 'benny' ),
+            'description'   => __( 'Displayed below the campaign\'s content, but above the comment section.', 'benny' ),
             'before_widget' => '<aside id="%1$s" class="widget block content-block cf %2$s">',
             'after_widget'  => '</aside>',
             'before_title'  => '<div class="title-wrapper"><h2 class="block-title">',
@@ -354,7 +355,7 @@ class Franklin_Theme {
 
         register_sidebar( array(
             'id'            => 'footer_left',            
-            'name'          => __( 'Footer left', 'franklin' ),
+            'name'          => __( 'Footer left', 'benny' ),
             'before_widget' => '<aside id="%1$s" class="widget footer-widget %2$s">',
             'after_widget'  => '</aside>',
             'before_title'  => '<div class="title-wrapper"><h4 class="widget-title">',
@@ -363,7 +364,7 @@ class Franklin_Theme {
 
         register_sidebar( array(
             'id'            => 'footer_right',            
-            'name'          => __( 'Footer right', 'franklin' ),
+            'name'          => __( 'Footer right', 'benny' ),
             'before_widget' => '<aside id="%1$s" class="widget footer-widget %2$s">',
             'after_widget'  => '</aside>',
             'before_title'  => '<div class="title-wrapper"><h4 class="widget-title">',
@@ -380,12 +381,12 @@ class Franklin_Theme {
 	 * @since 	2.0.0
 	 */
 	public function setup_scripts() {
-		wp_enqueue_style( 'franklin-style', get_stylesheet_uri() );
+		wp_enqueue_style( 'benny-style', get_stylesheet_uri() );
 
 		$ext = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '.js' : '.min.js'; 
 		
 		// Allow other scripts to add their scripts to the dependencies.
-        $franklin_script_dependencies = apply_filters( 'franklin_script_dependencies', array( 
+        $benny_script_dependencies = apply_filters( 'benny_script_dependencies', array( 
             'jquery-ui-accordion', 
             'audio-js', 
             'rrssb',
@@ -397,31 +398,31 @@ class Franklin_Theme {
         wp_register_script( 'audio-js', 	get_template_directory_uri() . '/js/vendors/audiojs/audio.min.js', array(), $this->get_theme_version(), true);
         wp_register_script( 'leanModal', 	get_template_directory_uri() . '/js/vendors/leanmodal/jquery.leanModal.min.js', array('jquery'), $this->get_theme_version(), true);
         wp_register_script( 'rrssb', 		get_template_directory_uri() . '/js/vendors/rrssb/rrssb.min.js', array('jquery'), $this->get_theme_version(), true );
-		wp_register_script( 'franklin-lib', get_template_directory_uri() . '/js/franklin-lib' . $ext, $franklin_script_dependencies, $this->get_theme_version(), true );
-        wp_register_script( 'franklin', 	get_template_directory_uri() . '/js/franklin.js', array( 'franklin-lib' ), $this->get_theme_version(), true );
-        wp_enqueue_script( 'franklin' ); 
+		wp_register_script( 'benny-lib', get_template_directory_uri() . '/js/benny-lib' . $ext, $benny_script_dependencies, $this->get_theme_version(), true );
+        wp_register_script( 'benny', 	get_template_directory_uri() . '/js/benny.js', array( 'benny-lib' ), $this->get_theme_version(), true );
+        wp_enqueue_script( 'benny' ); 
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
 
 		if ( $this->crowdfunding ) {
-			wp_localize_script('franklin', 'FRANKLIN_CROWDFUNDING', array(
-	            'need_minimum_pledge'   => __( 'Your pledge must be at least the minimum pledge amount.', 'franklin' ), 
-	            'years'                 => __( 'Years', 'franklin' ), 
-	            'months'                => __( 'Months', 'franklin' ), 
-	            'weeks'                 => __( 'Weeks', 'franklin' ), 
-	            'days'                  => __( 'Days', 'franklin' ), 
-	            'hours'                 => __( 'Hours', 'franklin' ), 
-	            'minutes'               => __( 'Minutes', 'franklin' ), 
-	            'seconds'               => __( 'Seconds', 'franklin' ), 
-	            'year'                  => __( 'Year', 'franklin' ), 
-	            'month'                 => __( 'Month', 'franklin' ), 
-	            'day'                   => __( 'Day', 'franklin' ), 
-	            'hour'                  => __( 'Hour', 'franklin' ), 
-	            'minute'                => __( 'Minute', 'franklin' ), 
-	            'second'                => __( 'Second', 'franklin' ), 
-	            'timezone_offset'       => franklin_get_timezone_offset()
+			wp_localize_script('benny', 'BENNY_CROWDFUNDING', array(
+	            'need_minimum_pledge'   => __( 'Your pledge must be at least the minimum pledge amount.', 'benny' ), 
+	            'years'                 => __( 'Years', 'benny' ), 
+	            'months'                => __( 'Months', 'benny' ), 
+	            'weeks'                 => __( 'Weeks', 'benny' ), 
+	            'days'                  => __( 'Days', 'benny' ), 
+	            'hours'                 => __( 'Hours', 'benny' ), 
+	            'minutes'               => __( 'Minutes', 'benny' ), 
+	            'seconds'               => __( 'Seconds', 'benny' ), 
+	            'year'                  => __( 'Year', 'benny' ), 
+	            'month'                 => __( 'Month', 'benny' ), 
+	            'day'                   => __( 'Day', 'benny' ), 
+	            'hour'                  => __( 'Hour', 'benny' ), 
+	            'minute'                => __( 'Minute', 'benny' ), 
+	            'second'                => __( 'Second', 'benny' ), 
+	            'timezone_offset'       => benny_get_timezone_offset()
 	        ) ); 
 		}		
 	}
@@ -457,7 +458,7 @@ class Franklin_Theme {
 	 * @since 	2.0.0
 	 */
 	public function setup_fonts() {
-		echo apply_filters( 'franklin_font_link', "<link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700italic,700,300italic,300|Oswald:400,300' rel='stylesheet' type='text/css'>" );
+		echo apply_filters( 'benny_font_link', "<link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700italic,700,300italic,300|Oswald:400,300' rel='stylesheet' type='text/css'>" );
 	}
 
 	/**
@@ -488,7 +489,7 @@ class Franklin_Theme {
 
 		// Add a page number if necessary:
 		if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
-			$title .= " $sep " . sprintf( __( 'Page %s', 'franklin' ), max( $paged, $page ) );
+			$title .= " $sep " . sprintf( __( 'Page %s', 'benny' ), max( $paged, $page ) );
 		}
 
 		return $title;
@@ -527,7 +528,7 @@ class Franklin_Theme {
      */
     public function the_content_more_link_filter($more_link, $more_link_text = null) {
         $post = get_post();
-        return '<span class="aligncenter"><a href="'.get_permalink().'" class="more-link button button-alt" title="'.sprintf( __('Keep reading %s', 'franklin'), "&#8220;".get_the_title()."&#8221;" ).'">'.__( 'Continue Reading', 'franklin' ).'</a></span>';
+        return '<span class="aligncenter"><a href="'.get_permalink().'" class="more-link button button-alt" title="'.sprintf( __('Keep reading %s', 'benny'), "&#8220;".get_the_title()."&#8221;" ).'">'.__( 'Continue Reading', 'benny' ).'</a></span>';
     }
 
     /**

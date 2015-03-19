@@ -2,7 +2,7 @@
 /**
  * Campaign barometer.
  *
- * @package Franklin
+ * @package Benny
  */
 
 $campaign = charitable_get_current_campaign();
@@ -17,6 +17,6 @@ $campaign = charitable_get_current_campaign();
 	data-progress-stroke="<?php echo get_theme_mod( 'body_text', '#7D6E63' ) ?>"
 	>
 	<span>
-		<?php printf( _x( "%s Funded", 'x percent funded', 'franklin' ), '<span>' . $campaign->get_percent_donated_raw() . '<sup>%</sup></span>' ) ?>
+		<?php printf( _x( "%s Funded", 'x percent funded', 'benny' ), '<span>' . $campaign->get_percent_donated_raw() . '<sup>%</sup></span>' ) ?>
 	</span>
 </div>		

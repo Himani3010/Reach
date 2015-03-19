@@ -2,14 +2,14 @@
 /**
  * Campaign sharing options.
  *
- * @package Franklin
+ * @package Benny
  */
 
 $permalink 	= urlencode( get_the_permalink() );
 $title 		= urlencode( get_the_title() );
 ?>
 <ul class="campaign-sharing share horizontal rrssb-buttons">
-	<li><h6><?php _e( 'Share', 'franklin' ) ?></h6></li>
+	<li><h6><?php _e( 'Share', 'benny' ) ?></h6></li>
 	<li class="share-twitter">
 		<a href="http://twitter.com/home?status=<?php echo $title ?>%20<?php echo $permalink ?>" class="popup icon" data-icon="&#xf099;"></a>
 	</li>

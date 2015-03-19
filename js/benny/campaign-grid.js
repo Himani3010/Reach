@@ -1,7 +1,7 @@
 /*--------------------------------------------------------
  * Campaign Grid
 ---------------------------------------------------------*/
-FRANKLIN.Grid = ( function( $ ) {
+BENNY.Grid = ( function( $ ) {
 
 	var $grids = $('.masonry-grid');
 

@@ -2,7 +2,7 @@
 /**
  * A collection of handy functions that are used by the theme.
  *
- * @package 	Franklin
+ * @package 	Benny
  * @category 	Functions
  */
 
@@ -12,7 +12,7 @@
  * @return 	string
  * @since 	1.3.0
  */
-function franklin_site_url() {
+function benny_site_url() {
 	return function_exists('wpml_get_home_url') ? wpml_get_home_url() : site_url();
 }
 
@@ -23,7 +23,7 @@ function franklin_site_url() {
  * @return 	string
  * @since 	1.5.0
  */
-function franklin_condensed_url( $url ) {
+function benny_condensed_url( $url ) {
 	$parts = parse_url($url);
 	$output = $parts['host'];
 	if ( isset( $parts['path'] ) ) {
@@ -39,7 +39,7 @@ function franklin_condensed_url( $url ) {
  * @return  boolean
  * @since   1.0.0
  */
-function franklin_hide_post_meta( $post = '' ) {
+function benny_hide_post_meta( $post = '' ) {
     if ( ! strlen( $post ) ) {
         global $post;
     }
@@ -48,7 +48,7 @@ function franklin_hide_post_meta( $post = '' ) {
         return get_post_meta( $post->ID, '_hide_meta', true );
     }
     else {
-        return get_post_meta( $post->ID, '_franklin_hide_post_meta', true );
+        return get_post_meta( $post->ID, '_benny_hide_post_meta', true );
     } 
 }
 
@@ -58,35 +58,35 @@ function franklin_hide_post_meta( $post = '' ) {
  * @return  array
  * @since   2.0.0
  */
-function franklin_get_social_sites() {
+function benny_get_social_sites() {
     /* This is used for backwards compatibility. */
     $sites = apply_filters( 'sofa_social_sites', array() );
 
     $sites = array_merge( $sites, array(              
-        'bitbucket'     => __( 'Bitbucket', 'franklin' ),                                               
-        'dribbble'      => __( 'Dribbble', 'franklin' ), 
-        'facebook'      => __( 'Facebook', 'franklin' ),                
-        'flickr'        => __( 'Flickr', 'franklin' ), 
-        'foursquare'    => __( 'Foursquare', 'franklin' ), 
-        'github'        => __( 'Github', 'franklin' ), 
-        'google-plus'   => __( 'Google+', 'franklin' ),                                     
-        'gittip'        => __( 'Gittip', 'franklin' ),
-        'instagram'     => __( 'Instagram', 'franklin' ),
-        'linkedin'      => __( 'Linkedin', 'franklin'),
-        'pinterest'     => __( 'Pinterest', 'franklin' ), 
-        'renren'        => __( 'Renren', 'franklin' ), 
-        'skype'         => __( 'Skype', 'franklin' ), 
-        'trello'        => __( 'Trello', 'franklin' ), 
-        'tumblr'        => __( 'Tumblr', 'franklin' ), 
-        'twitter'       => __( 'Twitter', 'franklin' ), 
-        'vk'            => __( 'VK', 'franklin' ), 
-        'weibo'         => __( 'Weibo', 'franklin' ), 
-        'windows'       => __( 'Windows', 'franklin' ), 
-        'xing'          => __( 'Xing', 'franklin' ), 
-        'youtube'       => __( 'YouTube', 'franklin' )
+        'bitbucket'     => __( 'Bitbucket', 'benny' ),                                               
+        'dribbble'      => __( 'Dribbble', 'benny' ), 
+        'facebook'      => __( 'Facebook', 'benny' ),                
+        'flickr'        => __( 'Flickr', 'benny' ), 
+        'foursquare'    => __( 'Foursquare', 'benny' ), 
+        'github'        => __( 'Github', 'benny' ), 
+        'google-plus'   => __( 'Google+', 'benny' ),                                     
+        'gittip'        => __( 'Gittip', 'benny' ),
+        'instagram'     => __( 'Instagram', 'benny' ),
+        'linkedin'      => __( 'Linkedin', 'benny'),
+        'pinterest'     => __( 'Pinterest', 'benny' ), 
+        'renren'        => __( 'Renren', 'benny' ), 
+        'skype'         => __( 'Skype', 'benny' ), 
+        'trello'        => __( 'Trello', 'benny' ), 
+        'tumblr'        => __( 'Tumblr', 'benny' ), 
+        'twitter'       => __( 'Twitter', 'benny' ), 
+        'vk'            => __( 'VK', 'benny' ), 
+        'weibo'         => __( 'Weibo', 'benny' ), 
+        'windows'       => __( 'Windows', 'benny' ), 
+        'xing'          => __( 'Xing', 'benny' ), 
+        'youtube'       => __( 'YouTube', 'benny' )
     ) );
 
-    return apply_filters( 'franklin_social_sites', $sites );
+    return apply_filters( 'benny_social_sites', $sites );
 }
 
 /**
@@ -95,7 +95,7 @@ function franklin_get_social_sites() {
  * @return  string
  * @since   1.0.0
  */
-function franklin_get_current_author() {
+function benny_get_current_author() {
     return get_query_var('author_name')
         ? get_user_by( 'slug', get_query_var( 'author_name' ) ) 
         : get_userdata( get_query_var( 'author' ) );
@@ -107,7 +107,7 @@ function franklin_get_current_author() {
  * @return  string
  * @since   2.0.0
  */
-function franklin_get_banner_title() {
+function benny_get_banner_title() {
     $title = "";
 
     /* Blog Home */
@@ -116,25 +116,25 @@ function franklin_get_banner_title() {
             $title = get_the_title( get_option( 'page_for_posts' ) );
         }
         else {
-            $title = apply_filters( 'franklin_banner_title_blog', '' );
+            $title = apply_filters( 'benny_banner_title_blog', '' );
         }            
     }
     /* 404 Page */
     elseif ( is_404() ) {
-        $title = apply_filters( 'franklin_banner_title_404', '404' );
+        $title = apply_filters( 'benny_banner_title_404', '404' );
     }
     /* Author */
     elseif ( is_author() ) {
-        $title = franklin_get_current_author()->nickname;
+        $title = benny_get_current_author()->nickname;
     }
     /* Search Results */
     elseif ( is_search() ) {
-        $title = apply_filters( 'franklin_banner_title_search', __( 'Search Results', 'franklin' ) );
+        $title = apply_filters( 'benny_banner_title_search', __( 'Search Results', 'benny' ) );
     }   
     /* Regular Page */
     elseif ( is_page() ) {
         $title = get_the_title();
     } 
     
-    return apply_filters( 'franklin_banner_title', $title );   
+    return apply_filters( 'benny_banner_title', $title );   
 }

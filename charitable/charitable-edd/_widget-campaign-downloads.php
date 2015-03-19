@@ -2,7 +2,7 @@
 /**
  * Display the downloads that are connected to a campaign.
  *
- * @package	Franklin
+ * @package	Benny
  * @since 	2.0.0
  */
 $widget_title 	= apply_filters( 'widget_title', $view_args['title'] );
@@ -30,7 +30,7 @@ while ( $downloads->have_posts() ) :
 
 		<?php if ( false == edd_has_variable_prices( $download_id ) ) : ?>
 
-			<p><a class="pledge-button button-alt button-large accent" data-price="<?php echo edd_get_download_price( $download_id ) ?>" href="#campaign-form-<?php echo $campaign_id ?>" data-trigger-modal><?php _e( 'Pledge', 'franklin' ) ?></a></p>
+			<p><a class="pledge-button button-alt button-large accent" data-price="<?php echo edd_get_download_price( $download_id ) ?>" href="#campaign-form-<?php echo $campaign_id ?>" data-trigger-modal><?php _e( 'Pledge', 'benny' ) ?></a></p>
 
 		<?php else : 
 
@@ -41,20 +41,20 @@ while ( $downloads->have_posts() ) :
 				$class 		= ! $has_limit ? 'limitless' : ( $remaining == 0 ? 'not-available' : 'available' );
 				?>
 
-				<h3 class="pledge-title" data-icon="&#xf0d7;"><?php echo franklin_crowdfunding_get_pledge_amount_text( $price['amount'] ) ?></h3>
+				<h3 class="pledge-title" data-icon="&#xf0d7;"><?php echo benny_crowdfunding_get_pledge_amount_text( $price['amount'] ) ?></h3>
 				<div class="pledge-level cf<?php if ($has_limit && $remaining == 0) echo ' not-available' ?>">
 
 					<?php if ( $has_limit ) : ?>
-						<span class="pledge-limit"><?php printf( __( '%d of %d remaining', 'franklin' ), $remaining, $price['limit'] ) ?></span>
+						<span class="pledge-limit"><?php printf( __( '%d of %d remaining', 'benny' ), $remaining, $price['limit'] ) ?></span>
 					<?php else : ?>
-						<span class="pledge-limit"><?php _e( 'Unlimited backers', 'franklin' ) ?></span>
+						<span class="pledge-limit"><?php _e( 'Unlimited backers', 'benny' ) ?></span>
 					<?php endif ?>
 
 					<p class="pledge-description"><?php echo $price['name'] ?></p>
 
 					<?php if ( ! $campaign->get_campaign()->has_ended() && ( ! $has_limit || $remaining > 0 ) ) : ?>
 						<p class="pledge-button">
-							<a class="button-alt button-small accent" data-price="<?php echo $price['amount'] ?>" href="#campaign-form-<?php echo $campaign_id ?>" data-trigger-modal><?php echo franklin_crowdfunding_get_pledge_amount_text( $price['amount'] ) ?></a>
+							<a class="button-alt button-small accent" data-price="<?php echo $price['amount'] ?>" href="#campaign-form-<?php echo $campaign_id ?>" data-trigger-modal><?php echo benny_crowdfunding_get_pledge_amount_text( $price['amount'] ) ?></a>
 						</p>
 					<?php endif ?>
 				</div>					

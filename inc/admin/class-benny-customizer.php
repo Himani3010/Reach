@@ -5,22 +5,22 @@
  * @since 1.2
  */
 
-class Franklin_Customizer {
+class Benny_Customizer {
 
     /**
      * Instantiate the object, but only if this is the start phase. 
      *
      * @static
-     * @param   Franklin_Theme          $theme
+     * @param   Benny_Theme          $theme
      * @param   WP_Customize_Manager    $wp_customize 
      * @return  void
      */
-    public static function start( Franklin_Theme $theme, WP_Customize_Manager $wp_customize ) {
+    public static function start( Benny_Theme $theme, WP_Customize_Manager $wp_customize ) {
         if ( $theme->started() ) {
             return;
         }
 
-        new Franklin_Customizer();
+        new Benny_Customizer();
     }
 
     /**
@@ -60,7 +60,7 @@ class Franklin_Customizer {
          * The saved styles may no longer be valid, so delete them. They 
          * will be re-created on the next page load.
          */
-        delete_transient( Franklin_Customizer_Styles::get_transient_key() );
+        delete_transient( Benny_Customizer_Styles::get_transient_key() );
     }
 
     /**
@@ -80,25 +80,25 @@ class Franklin_Customizer {
             array(
                 'settings'  => 'logo_url',
                 'section'   => 'title_tagline',
-                'label'     => __( 'Logo', 'franklin' )
+                'label'     => __( 'Logo', 'benny' )
             ) )
         );
         $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'retina_logo_url',
             array(
                 'settings'  => 'retina_logo_url',
                 'section'   => 'title_tagline',
-                'label'     => __( 'Retina version of logo (2x)', 'franklin' )
+                'label'     => __( 'Retina version of logo (2x)', 'benny' )
             ) )
         );        
         $wp_customize->add_control( 'hide_site_title', array(
             'settings'      => 'hide_site_title', 
-            'label'         => __( 'Hide the site title', 'franklin' ),
+            'label'         => __( 'Hide the site title', 'benny' ),
             'section'       => 'title_tagline', 
             'type'          => 'checkbox'            
         ) );
         $wp_customize->add_control( 'hide_site_tagline', array(
             'settings'      => 'hide_site_tagline', 
-            'label'         => __( 'Hide the tagline', 'franklin' ),
+            'label'         => __( 'Hide the tagline', 'benny' ),
             'section'       => 'title_tagline', 
             'type'          => 'checkbox'            
         ) );
@@ -108,7 +108,7 @@ class Franklin_Customizer {
          */
         $priority = 10;
 
-        foreach ( Franklin_Customizer_Styles::get_customizer_colours() as $key => $colour ) {          
+        foreach ( Benny_Customizer_Styles::get_customizer_colours() as $key => $colour ) {          
             $wp_customize->add_setting( $key, array( 
                 'default'   => $colour['default'], 
                 'transport' => 'postMessage' 
@@ -128,8 +128,8 @@ class Franklin_Customizer {
          */
         $wp_customize->add_section( 'textures', array( 
             'priority'      => $priority, 
-            'title'         => __( 'Background Textures', 'franklin' ), 
-            'description'   => __( 'Upload background textures for the body and campaign section', 'franklin' )
+            'title'         => __( 'Background Textures', 'benny' ), 
+            'description'   => __( 'Upload background textures for the body and campaign section', 'benny' )
         ) );
 
         $priority += 1;
@@ -152,7 +152,7 @@ class Franklin_Customizer {
                 'settings' => 'body_texture_custom',
                 'section'  => 'textures',
                 'priority' => $priority,
-                'label'    => __( 'Body', 'franklin' )
+                'label'    => __( 'Body', 'benny' )
             ) )
         );
 
@@ -163,7 +163,7 @@ class Franklin_Customizer {
                 'settings' => 'campaign_texture_custom',
                 'section'  => 'textures',
                 'priority' => $priority,
-                'label'    => __( 'Featured Campaign Block', 'franklin' )
+                'label'    => __( 'Featured Campaign Block', 'benny' )
             ) )
         );
         
@@ -174,7 +174,7 @@ class Franklin_Customizer {
                 'settings' => 'blog_banner_texture_custom',
                 'section'  => 'textures',
                 'priority' => $priority,
-                'label'    => __( 'Blog & Page Banners', 'franklin' )
+                'label'    => __( 'Blog & Page Banners', 'benny' )
             ) )
         );
         
@@ -183,20 +183,20 @@ class Franklin_Customizer {
         /** 
          * Campaign
          */    
-        // if ( get_franklin_theme()->crowdfunding_enabled ) {
+        // if ( get_benny_theme()->crowdfunding_enabled ) {
 
         //     $sharing_options = array(
-        //         'campaign_share_twitter'    => __( 'Share on Twitter', 'franklin' ), 
-        //         'campaign_share_facebook'   => __( 'Share on Facebook', 'franklin' ), 
-        //         'campaign_share_googleplus' => __( 'Share on Google+', 'franklin' ), 
-        //         'campaign_share_linkedin'   => __( 'Share on LinkedIn', 'franklin' ), 
-        //         'campaign_share_pinterest'  => __( 'Share on Pinterest', 'franklin' ),
-        //         'campaign_share_widget'     => __( 'Share with embed code', 'franklin' )
+        //         'campaign_share_twitter'    => __( 'Share on Twitter', 'benny' ), 
+        //         'campaign_share_facebook'   => __( 'Share on Facebook', 'benny' ), 
+        //         'campaign_share_googleplus' => __( 'Share on Google+', 'benny' ), 
+        //         'campaign_share_linkedin'   => __( 'Share on LinkedIn', 'benny' ), 
+        //         'campaign_share_pinterest'  => __( 'Share on Pinterest', 'benny' ),
+        //         'campaign_share_widget'     => __( 'Share with embed code', 'benny' )
         //     );
 
         //     $wp_customize->add_section( 'campaign', array( 
         //         'priority' => $priority, 
-        //         'title' => __( "Campaigns", 'franklin' ), 
+        //         'title' => __( "Campaigns", 'benny' ), 
         //         'description' => __( 'Configure your campaign pages' )
         //     ) );
 
@@ -218,10 +218,10 @@ class Franklin_Customizer {
         //     $wp_customize->add_setting( 'campaign_sharing_text', array( 'transport' => 'postMessage' ) );
         //     $wp_customize->add_control( new Sofa_Customize_Textarea_Control( $wp_customize, 'campaign_sharing_text', array(
         //         'settings' => 'campaign_sharing_text',
-        //         'label' => __( 'Text to display on campaign sharing widget', 'franklin' ), 
+        //         'label' => __( 'Text to display on campaign sharing widget', 'benny' ), 
         //         'section' => 'campaign', 
         //         'type' => 'text', 
-        //         'default' => __( 'Spread the word about this campaign by sharing this widget. Copy the snippet of HTML code below and paste it on your blog, website or anywhere else on the web.', 'franklin' ),
+        //         'default' => __( 'Spread the word about this campaign by sharing this widget. Copy the snippet of HTML code below and paste it on your blog, website or anywhere else on the web.', 'benny' ),
         //         'priority' => $priority
         //     ) ) );
 
@@ -232,7 +232,7 @@ class Franklin_Customizer {
          * Footer
          */
         $wp_customize->add_section( 'footer', array( 
-            'title'     => __( 'Footer', 'franklin' ), 
+            'title'     => __( 'Footer', 'benny' ), 
             'priority'  => $priority 
         ) );
 
@@ -243,7 +243,7 @@ class Franklin_Customizer {
         ) );
         $wp_customize->add_control( 'footer_notice', array( 
             'setting'   => 'footer_notice', 
-            'label'     => __( 'Text for footer notice', 'franklin' ), 
+            'label'     => __( 'Text for footer notice', 'benny' ), 
             'type'      => 'text', 
             'section'   => 'footer', 
             'priority'  => $priority
@@ -256,12 +256,12 @@ class Franklin_Customizer {
          */ 
         $wp_customize->add_section( 'social', array( 
             'priority'      => 103, 
-            'title'         => __( 'Social', 'franklin' ),
-            'description'   => __( 'Set up links to your online social presences', 'franklin' )
+            'title'         => __( 'Social', 'benny' ),
+            'description'   => __( 'Set up links to your online social presences', 'benny' )
         ) );
 
         // Loop over all the social sites the theme supports, creating settings and controls for each one
-        foreach ( franklin_get_social_sites() as $setting_key => $label ) {
+        foreach ( benny_get_social_sites() as $setting_key => $label ) {
             $wp_customize->add_setting( $setting_key, array( 
                 'transport' => 'postMessage' 
             ) );

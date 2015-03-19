@@ -2,8 +2,9 @@
 /**
  * Campaign summary template. Shows the campaign short description and stats, as well as sharing buttons.
  *
- * @package Franklin
+ * @package Benny
  */
+
 $campaign = charitable_get_current_campaign();
 
 if ( $campaign ) : 
@@ -23,7 +24,7 @@ if ( $campaign ) :
 			
 				else : ?>
 					<p class="campaign-support">
-						<a class="button button-large" data-reveal-id="campaign-form-<?php echo $campaign->ID ?>" href="#"><?php echo franklin_crowdfunding_get_pledge_text() ?></a>
+						<a class="button button-large" data-reveal-id="campaign-form-<?php echo $campaign->ID ?>" href="#"><?php echo benny_crowdfunding_get_pledge_text() ?></a>
 					</p>				
 				<?php endif;
 
