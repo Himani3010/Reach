@@ -2763,6 +2763,8 @@ embed {
 --------------------------------------------------------------*/
 .campaigns-grid-wrapper {
   position: relative;
+  float: left;
+  width: 100%;
   padding: 36px 0px 48px;
   padding: 3.6rem 0rem 4.8rem; }
   .campaigns-grid-wrapper .campaign.block {
