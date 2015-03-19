@@ -125,7 +125,8 @@ function benny_get_banner_title() {
     }
     /* Author */
     elseif ( is_author() ) {
-        $title = benny_get_current_author()->nickname;
+        $author = benny_get_current_author();
+        $title = apply_filters( 'benny_banner_title_author', $author->display_name, $author );
     }
     /* Search Results */
     elseif ( is_search() ) {

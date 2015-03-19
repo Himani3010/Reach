@@ -9,6 +9,11 @@
 
 get_header();
 
+	get_template_part( 'banner' ); ?>
 
+		<main class="site-main content-area" role="main">
+			
+		</main><!-- .site-main -->
+	<?php 
 
 get_footer();

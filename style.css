@@ -1886,6 +1886,9 @@ a {
   padding: 0;
   overflow: visible; }
 .page-template-page-template-home-slider .page.entry-block {
+  float: left;
+  padding: 12px 9px;
+  padding: 1.2rem 0.9rem;
   border: none;
   border-radius: 0;
   box-shadow: none;
@@ -1905,6 +1908,9 @@ a {
     .page-template-page-template-home-slider .page.entry-block .entry .button {
       margin: 12px 3px 0px;
       margin: 1.2rem 0.3rem 0rem; }
+.page-template-page-template-home-slider .content-wrapper {
+  float: left;
+  width: 100%; }
 
 /*--------------------------------------------------------------
 11.2 Asides

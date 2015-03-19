@@ -9,7 +9,8 @@
 	}
 
 	.page.entry-block {
-		// max-width: 100%;
+		float: left;
+		@include padding( 12, 9 );
 		border: none;
 		border-radius: 0;
 		box-shadow: none;		
@@ -33,4 +34,9 @@
 			}
 		}
 	}		
+
+	.content-wrapper {
+		float: left;
+		width: 100%;
+	}
 }
