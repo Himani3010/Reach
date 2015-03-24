@@ -1,4 +1,4 @@
-/*! benny - v2.0.0 - 2015-03-19 */
+/*! benny - v2.0.0 - 2015-03-24 */
 
 /*--------------------------------------------------------
  * BENNY is the core object containing all components.
@@ -363,6 +363,17 @@ BENNY.FancySelect = ( function( $ ){
 			});
 
 			return toggleWrapper;
+		}
+	}
+})( jQuery );
+
+;/*--------------------------------------------------------
+ * Fitvids
+---------------------------------------------------------*/
+BENNY.Fitvids = ( function( $ ){
+	return {
+		init : function() {
+			$( '.fit-video, .video-player' ).fitVids();
 		}
 	}
 })( jQuery );

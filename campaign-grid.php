@@ -6,8 +6,8 @@
 	</nav>
 
 	<h3 class="section-title"><?php _e( 'Latest Projects', 'benny' ) ?></h3>
-
 	<?php 
+
 		$campaigns = new Charitable_Campaign_Query();
 	?>
 

@@ -14,8 +14,8 @@ get_header();
 				
 				<?php get_template_part('campaign', 'summary') ?>			
 	
-				<?php //echo benny_campaign_video( $campaign ) ?>
-				
+				<?php get_template_part('campaign', 'video') ?>
+
 				<div class="content-area">
 	
 					<!-- Campaign content -->					

@@ -256,6 +256,8 @@ class Benny_Theme {
         add_filter(	'previous_posts_link_attributes', 		array( $this, 'posts_navigation_link_attributes' ) );
         add_filter(	'next_comments_link_attributes', 		array( $this, 'posts_navigation_link_attributes' ) );
         add_filter(	'previous_comments_link_attributes', 	array( $this, 'posts_navigation_link_attributes' ) );        
+        add_filter(	'video_embed_html', 		array( $this, 'video_embed_html_filter' ) );
+        add_filter(	'oembed_dataparse', 		array( $this, 'oembed_dataparse_filter' ), 10, 3 );
 	}
 
 	/**
@@ -392,12 +394,14 @@ class Benny_Theme {
             'rrssb',
             'hoverIntent', 
             'leanModal', 
+            'fitvids',
             'jquery' 
         ) );
 
         wp_register_script( 'audio-js', 	get_template_directory_uri() . '/js/vendors/audiojs/audio.min.js', array(), $this->get_theme_version(), true);
-        wp_register_script( 'leanModal', 	get_template_directory_uri() . '/js/vendors/leanmodal/jquery.leanModal.min.js', array('jquery'), $this->get_theme_version(), true);
+        wp_register_script( 'leanModal', 	get_template_directory_uri() . '/js/vendors/leanmodal/jquery.leanModal.min.js', array('jquery'), '1.1', true);
         wp_register_script( 'rrssb', 		get_template_directory_uri() . '/js/vendors/rrssb/rrssb.min.js', array('jquery'), $this->get_theme_version(), true );
+        wp_register_script( 'fitvids', 		get_template_directory_uri() . '/js/vendors/fitvids/jquery.fitvids.min.js', array('jquery'), '1.0', true );
 		wp_register_script( 'benny-lib', get_template_directory_uri() . '/js/benny-lib' . $ext, $benny_script_dependencies, $this->get_theme_version(), true );
         wp_register_script( 'benny', 	get_template_directory_uri() . '/js/benny.js', array( 'benny-lib' ), $this->get_theme_version(), true );
         wp_enqueue_script( 'benny' ); 
@@ -540,6 +544,33 @@ class Benny_Theme {
     public function posts_navigation_link_attributes() {
         return 'class="button-alt button-small"';
     }   
+
+	/**
+     * Wrap videos inside fit_video class.
+     * 
+     * @param 	string 		$html 
+     * @param 	WP_oEmbed 	$data
+     * @param 	string 		$url
+     * @return 	string
+     * @since 	1.0.0
+     */
+    public function oembed_dataparse_filter( $html, $data, $url ) {
+        if ( $data->type == 'video'  ) {
+                return $this->video_embed_html_filter($html);
+        }
+        return $html;
+    }
+
+    /**
+     * Wrap videos inside fit_video class.
+     * 
+     * @param 	string 		$html
+     * @return 	string
+     * @since 	1.0.0
+     */
+    public function video_embed_html_filter( $html ) {
+        return '<div class="fit-video">' . $html . '</div>';
+    }    
 }
 
 endif; // End class_exists

@@ -25,6 +25,8 @@
 
 		BENNY.Accordion.init();	
 
+		BENNY.Fitvids.init();	
+
 		if ( BENNY_CROWDFUNDING ) {
 
 			BENNY.Countdown.init();		
