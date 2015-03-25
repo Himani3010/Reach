@@ -5,10 +5,12 @@
 ?>
 <article id="post-<?php the_ID() ?>" <?php post_class() ?>>	
 	<?php 
-	echo benny_get_media( array( 'split_media' => true, 'meta_key' => 'video' ) );
-	// $video = get_post_meta( get_the_ID(), 'video', true ); 
-	// $video = $video ? benny_fullwidth_video( $video ) : hybrid_media_grabber( array( 'split_media' => true ) );
-	// echo $video;
+	echo benny_get_media( array( 
+		'split_media' 	=> true, 
+		'meta_key' 		=> 'video', 
+		'before' 		=> '<div class="fit-video">', 
+		'after' 		=> '</div>' 
+	) );
 
 	if ( is_single() ) :
 

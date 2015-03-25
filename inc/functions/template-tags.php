@@ -380,8 +380,7 @@ if ( ! function_exists( 'benny_fullwidth_video' ) ) :
 	 * @since 	1.0.0
 	 */
 	function benny_fullwidth_video( $video ) {
-		return $video;
-		// return sprintf( '<div class="fit-video">%s</div>', $video );
+		return sprintf( '<div class="fit-video">%s</div>', $video );
 	}
 
 endif;

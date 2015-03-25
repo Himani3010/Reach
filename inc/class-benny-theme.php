@@ -258,8 +258,8 @@ class Benny_Theme {
         add_filter(	'previous_posts_link_attributes', 		array( $this, 'posts_navigation_link_attributes' ) );
         add_filter(	'next_comments_link_attributes', 		array( $this, 'posts_navigation_link_attributes' ) );
         add_filter(	'previous_comments_link_attributes', 	array( $this, 'posts_navigation_link_attributes' ) );                
-        // add_filter(	'oembed_dataparse', 		array( $this, 'wrap_fullwidth_videos' ), 10, 3 );
-        // add_filter(	'video_embed_html', 		'benny_fullwidth_video' );
+        add_filter(	'oembed_dataparse', 		array( $this, 'wrap_fullwidth_videos' ), 10, 3 );
+        add_filter(	'video_embed_html', 		'benny_fullwidth_video' );
 	}
 
 	/**
