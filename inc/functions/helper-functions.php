@@ -139,3 +139,18 @@ function benny_get_banner_title() {
     
     return apply_filters( 'benny_banner_title', $title );   
 }
+
+/**
+ * Return the media associated with the post.
+ *
+ * @param   array       $args
+ * @return  string
+ * @since   2.0.0
+ */
+function benny_get_media( $args = array() ) {
+
+    $media = new Benny_Media_Grabber( $args );
+
+    return $media->get_media();
+    
+}

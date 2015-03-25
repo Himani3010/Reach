@@ -1,36 +1,40 @@
-		<article id="post-<?php the_ID() ?>" <?php post_class() ?>>			
+<?php 
+/**
+ * @package 	Benny
+ */
+?>
+<article id="post-<?php the_ID() ?>" <?php post_class() ?>>			
+	<?php 
+	
+	get_template_part( 'featured_image' );
 
-			<?php get_template_part( 'featured_image' ) ?>
+	if ( is_single() ) :
 
-			<?php if ( is_single() ) : ?>
+		get_template_part('meta', 'above');
 
-				<?php get_template_part('meta', 'above') ?>
+	endif;
 
-			<?php endif ?>
+	benny_post_header();
 
-			<?php sofa_post_header() ?>			
+	?>			
+	<div class="entry cf">				
+		<?php 
+		echo benny_get_media( array( 'split_media' => true, 'meta_key' => '_format_audio_embed', 'type' => 'audio' ) );
+		
+		the_content();
 
-			<div class="entry cf">				
+		wp_link_pages(array( 'before' => '<p class="entry_pages">' . __('Pages: ', 'benny') ) ); 
+		?>
+	</div>						
+	<?php 
 
-				<?php if ( $audio_file = get_post_meta( get_the_ID(), '_format_audio_embed', true ) ) : ?>
+	if ( is_single() ) :
+			
+		get_template_part( 'meta', 'taxonomy' );		
 
-					<audio src="<?php echo $audio_file ?>" preload="auto">
+	else :				
 
-				<?php endif ?>
+		get_template_part('meta', 'below');
 
-				<?php the_content() ?>				
-
-				<?php wp_link_pages(array( 'before' => '<p class="entry_pages">' . __('Pages: ', 'benny') ) ) ?>
-			</div>						
-
-			<?php if ( is_single() ) : ?>
-					
-				<?php get_template_part( 'meta', 'taxonomy' ) ?>				
-
-			<?php else : ?>				
-
-				<?php get_template_part('meta', 'below') ?>
-
-			<?php endif ?>			
-
-		</article>
+	endif ?>			
+</article>

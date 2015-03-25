@@ -1,29 +1,42 @@
-		<article id="post-<?php the_ID() ?>" <?php post_class() ?>>	
+<?php 
+/**
+ * Content of link format post.
+ * 
+ * @package 	Benny
+ */
+?>
+<article id="post-<?php the_ID() ?>" <?php post_class() ?>>	
+	<?php 
+	
+	get_template_part( 'featured_image' );
 
-			<?php get_template_part( 'featured_image' ) ?>
+	if ( is_single() ) :
 
-			<?php if ( is_single() ) : ?>
+		get_template_part('meta', 'above');
 
-				<?php get_template_part('meta', 'above') ?>
+	endif;
 
-			<?php endif ?>
+	benny_post_header();
 
-			<?php benny_post_header() ?>			
+	$content = benny_link_format_the_content( ull, false, false );
 
-			<?php $content = benny_link_format_the_content(null, false, false) ?>
+	if ( strlen($content) ) : 
 
-			<?php if ( strlen($content) ) : ?>
-				<div class="entry cf"><?php echo $content ?></div>
-			<?php endif ?>
+	?>
+		<div class="entry cf">
+			<?php echo $content ?>
+		</div>
+	<?php 
 
-			<?php if ( is_single() ) : ?>
-					
-				<?php get_template_part( 'meta', 'taxonomy' ) ?>				
+	endif;
 
-			<?php else : ?>				
+	if ( is_single() ) :
+			
+		get_template_part( 'meta', 'taxonomy' );		
 
-				<?php get_template_part('meta', 'below') ?>
+	else :				
 
-			<?php endif ?>	
+		get_template_part('meta', 'below');
 
-		</article>
+	endif ?>	
+</article>

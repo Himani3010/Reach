@@ -1,41 +1,39 @@
-			<article id="post-<?php the_ID() ?>" <?php post_class() ?>>			
+<?php 
+/**
+ * @package 	Benny
+ */
+?>
+<article id="post-<?php the_ID() ?>" <?php post_class() ?>>	
+	<?php 
+	echo benny_get_media( array( 'split_media' => true, 'meta_key' => 'video' ) );
+	// $video = get_post_meta( get_the_ID(), 'video', true ); 
+	// $video = $video ? benny_fullwidth_video( $video ) : hybrid_media_grabber( array( 'split_media' => true ) );
+	// echo $video;
 
-				<?php 
-				$video = get_post_meta( get_the_ID(), 'video', true );
+	if ( is_single() ) :
 
-				if ( !$video )  
-					$video = sofa_do_first_embed();
+		get_template_part('meta', 'above');
 
-				if ( $video ) : ?>
+	endif;
 
-					<div class="fit-video">
-						<?php echo $video ?>
-					</div>
+	benny_post_header();
 
-				<?php endif ?>				
+	?>
+	<div class="entry cf">				
+		<?php the_content() ?>			
 
-				<?php if ( is_single() ) : ?>
+		<?php wp_link_pages(array( 'before' => '<p class="entry_pages">' . __('Pages: ', 'benny') ) ) ?>
+	</div>						
+	<?php 
 
-					<?php get_template_part('meta', 'above') ?>
+	if ( is_single() ) :
+			
+		get_template_part( 'meta', 'taxonomy' );
 
-				<?php endif ?>
+	else :
 
-				<?php sofa_post_header() ?>			
+		get_template_part('meta', 'below');
 
-				<div class="entry cf">				
-					<?php sofa_video_format_the_content() ?>			
+	endif ?>
 
-					<?php wp_link_pages(array( 'before' => '<p class="entry_pages">' . __('Pages: ', 'benny') ) ) ?>
-				</div>						
-
-				<?php if ( is_single() ) : ?>
-						
-					<?php get_template_part( 'meta', 'taxonomy' ) ?>				
-
-				<?php else : ?>				
-
-					<?php get_template_part('meta', 'below') ?>
-
-				<?php endif ?>			
-
-			</article>
+</article>

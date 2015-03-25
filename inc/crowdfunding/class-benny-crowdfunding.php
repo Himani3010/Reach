@@ -67,8 +67,9 @@ class Benny_Crowdfunding {
 	 * @since 	2.0.0
 	 */
 	private function attach_hooks_and_filters() {
-		remove_filter( 'the_content', 					array( charitable_get_helper( 'templates' ), 'campaign_content' ), 2 );
-		add_filter( 'benny_script_dependencies', 	array( $this, 'setup_script_dependencies' ) );
+		remove_filter( 'the_content', 				array( charitable_get_helper( 'templates' ), 'campaign_content' ), 2 );
+		add_filter( 'benny_script_dependencies',	array( $this, 'setup_script_dependencies' ) );
+		add_filter( 'charitable_campaign_ended', 	'benny_campaign_ended_text' );
 	}
 
 	/**

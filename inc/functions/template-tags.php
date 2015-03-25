@@ -190,7 +190,7 @@ add_action( 'edit_category', 'benny_category_transient_flusher' );
 add_action( 'save_post',     'benny_category_transient_flusher' );
 
 
-if ( !function_exists( 'benny_site_title' ) ) : 
+if ( ! function_exists( 'benny_site_title' ) ) : 
 	
 	/**
 	 * Displays the site title class. 
@@ -223,7 +223,7 @@ if ( !function_exists( 'benny_site_title' ) ) :
 
 endif;
 
-if ( !function_exists( 'benny_site_tagline' ) ) :
+if ( ! function_exists( 'benny_site_tagline' ) ) :
 
 	/**
 	 * Displays the site tagline, if there is one and it's not set to be hidden.
@@ -246,7 +246,7 @@ if ( !function_exists( 'benny_site_tagline' ) ) :
 
 endif;
 
-if ( !function_exists( 'benny_post_header' ) ) :
+if ( ! function_exists( 'benny_post_header' ) ) :
 
 	/**
 	 * Displays the post title. 
@@ -300,7 +300,7 @@ if ( !function_exists( 'benny_post_header' ) ) :
 
 endif;
 
-if ( !function_exists( 'benny_video_format_the_content' ) ) :
+if ( ! function_exists( 'benny_video_format_the_content' ) ) :
 
 	/**
 	 * Prints the content for a video post.
@@ -318,7 +318,8 @@ if ( !function_exists( 'benny_video_format_the_content' ) ) :
 
 endif;
 
-if ( !function_exists( 'benny_link_format_the_content' ) ) :
+if ( ! function_exists( 'benny_link_format_the_content' ) ) :
+
 	/**
 	 * Prints the content for a link post.
 	 * 
@@ -341,7 +342,8 @@ if ( !function_exists( 'benny_link_format_the_content' ) ) :
 	}
 endif;
 
-if ( !function_exists( 'benny_link_format_title' ) ) :
+if ( ! function_exists( 'benny_link_format_title' ) ) :
+
 	/**
 	 * Returns or prints the title for a link post.
 	 * 
@@ -364,6 +366,22 @@ if ( !function_exists( 'benny_link_format_title' ) ) :
 			return $anchor;
 
 		echo $anchor;
+	}
+
+endif;
+
+if ( ! function_exists( 'benny_fullwidth_video' ) ) : 
+
+	/**
+	 * Wraps the video in the fit-video class to ensure it is displayed at fullwidth.
+	 *
+	 * @param 	string 		$video
+	 * @return 	string
+	 * @since 	1.0.0
+	 */
+	function benny_fullwidth_video( $video ) {
+		return $video;
+		// return sprintf( '<div class="fit-video">%s</div>', $video );
 	}
 
 endif;

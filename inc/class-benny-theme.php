@@ -142,6 +142,8 @@ class Benny_Theme {
 	 * @since 	2.0.0
 	 */
 	private function load_dependencies() {
+		require get_template_directory() . '/inc/vendors/hybrid-media-grabber.php';
+		require get_template_directory() . '/inc/class-benny-media-grabber.php';
 		require get_template_directory() . '/inc/class-benny-customizer-styles.php';
 		require get_template_directory() . '/inc/functions/template-tags.php';
 		require get_template_directory() . '/inc/functions/helper-functions.php';
@@ -255,9 +257,9 @@ class Benny_Theme {
         add_filter(	'next_posts_link_attributes', 			array( $this, 'posts_navigation_link_attributes' ) );
         add_filter(	'previous_posts_link_attributes', 		array( $this, 'posts_navigation_link_attributes' ) );
         add_filter(	'next_comments_link_attributes', 		array( $this, 'posts_navigation_link_attributes' ) );
-        add_filter(	'previous_comments_link_attributes', 	array( $this, 'posts_navigation_link_attributes' ) );        
-        add_filter(	'video_embed_html', 		array( $this, 'video_embed_html_filter' ) );
-        add_filter(	'oembed_dataparse', 		array( $this, 'oembed_dataparse_filter' ), 10, 3 );
+        add_filter(	'previous_comments_link_attributes', 	array( $this, 'posts_navigation_link_attributes' ) );                
+        // add_filter(	'oembed_dataparse', 		array( $this, 'wrap_fullwidth_videos' ), 10, 3 );
+        // add_filter(	'video_embed_html', 		'benny_fullwidth_video' );
 	}
 
 	/**
@@ -554,23 +556,15 @@ class Benny_Theme {
      * @return 	string
      * @since 	1.0.0
      */
-    public function oembed_dataparse_filter( $html, $data, $url ) {
+    public function wrap_fullwidth_videos( $html, $data, $url ) {
+
+    	echo '<pre>'; print_r( $data ); echo '</pre>';
+    	echo "<pre>"; print_r( $html ); echo '</pre>';
         if ( $data->type == 'video'  ) {
-                return $this->video_embed_html_filter($html);
+                return benny_fullwidth_video( $html );
         }
         return $html;
-    }
-
-    /**
-     * Wrap videos inside fit_video class.
-     * 
-     * @param 	string 		$html
-     * @return 	string
-     * @since 	1.0.0
-     */
-    public function video_embed_html_filter( $html ) {
-        return '<div class="fit-video">' . $html . '</div>';
-    }    
+    } 
 }
 
 endif; // End class_exists

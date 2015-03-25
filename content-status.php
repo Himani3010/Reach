@@ -1,21 +1,30 @@
-		<article id="post-<?php the_ID() ?>" <?php post_class() ?>>			
+<?php 
+/**
+ * Content of status format post.
+ * 
+ * @package 	Benny
+ */
+?>		
+<article id="post-<?php the_ID() ?>" <?php post_class() ?>>			
+	<?php 
+	
+	get_template_part( 'featured_image' );
 
-			<?php if ( is_single() ) : ?>
+	if ( is_single() ) :
 
-				<?php get_template_part('meta', 'above') ?>
+		get_template_part('meta', 'above');
 
-			<?php endif ?>
+		benny_post_header();
 
-			<?php sofa_post_header() ?>					
+		get_template_part( 'meta', 'taxonomy' );
 
-			<?php if ( is_single() ) : ?>
-					
-				<?php get_template_part( 'meta', 'taxonomy' ) ?>				
+	else : 
 
-			<?php else : ?>				
+		benny_post_header();
+		
+		get_template_part('meta', 'below');
 
-				<?php get_template_part('meta', 'below') ?>
-
-			<?php endif ?>			
-
-		</article>
+	endif;
+	
+	?>
+</article>
