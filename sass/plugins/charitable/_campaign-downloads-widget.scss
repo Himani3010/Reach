@@ -1,60 +1,26 @@
 .widget.widget_charitable_edd_campaign_downloads {
-	padding: 0;
-	border: none;
+	@include padding( 12 );
+	@include border-width( 2 );
 	background: transparent;
-}
 
-.campaign-pledge-levels.accordion {
-	@include margin-bottom( 36 );
-	padding-top: 0;		
-
-	h3 {
-		border-top: {
+	.charitable-edd-connected-download {
+		border-bottom: {
 			@include width( 1 );
 			style: solid;
 			color: $color__border-primary;
 		}
 
-		&:first-of-type {
-			margin-top: 0;
+		&:last-child {
+			border: none;
 		}
 	}
 
-	.ui-accordion-header-active {
-		border-radius: 0.4rem 0.4rem 0 0;
-	}
-
-	.pledge-level {	
-		@include padding( 12 );
-		@include border-width( 0, 1, 1, 1 );		
-		border-style: solid;
-		border-radius: 0 0 0.4rem 0.4rem;	
-	}
-
-	.pledge-description {
-		margin-left: 0;
-	}
-
-	.pledge-limit {
-		display: block;
-		float: none;	
+	.wp-post-image {
 		@include margin-bottom( 12 );
-		text-align: left;
 	}
 
-	.pledge-button {
-		display: block;
-		margin: {
-			@include top( 3 );
-			right: auto;
-			@include bottom( 3 );
-			left: auto;
-		}
+	.download-title {
+		margin-top: 0;
 		text-align: center;
-
-		.button-alt {
-			display: inline-block;
-			max-width: 100%;
-		}
-	}
+	}	
 }

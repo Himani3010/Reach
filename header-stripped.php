@@ -1,6 +1,6 @@
 <?php
 /**
- * The header for our theme.
+ * A custom header used by the Stripped page template.
  *
  * Displays all of the <head> section and everything up till <div id="main">
  *
@@ -20,16 +20,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-	<div id="page" class="hfeed site-container">
-		<a class="skip-link screen-reader-text" href="#main"><?php _e( 'Skip to content', 'benny' ); ?></a>
-
-		<!-- Sharing -->
-		<?php //sofa_social_links() ?>	
-		<!-- End sharing -->
-
-		<!-- Login/register -->
-		<?php //get_template_part( 'account-links' ) ?>	
-		<!-- End login/register -->
+	<div id="page" class="hfeed site-container">		
 		<div class="body-wrapper">
 			<header id="header" class="cf wrapper site-header" role="banner">
 				<div class="site-branding site-identity">
@@ -38,16 +29,6 @@
 					benny_site_title();
 					benny_site_tagline(); 
 					?>								
-				</div><!-- .site-branding -->
-				<div class="site-navigation">		
-					<nav role="navigation">
-						<a class="menu-toggle menu-button toggle-button" aria-controls="menu" aria-expanded="false"></a>
-						<?php wp_nav_menu( array(   
-							'theme_location' 	=> 'primary_navigation',
-							'container' 		=> false,
-							'menu_class' 		=> 'menu menu-site responsive_menu'
-						) ) ?>
-					</nav>
-			    </div><!-- #site-navigation -->
+				</div><!-- .site-branding -->				
 			</header><!-- #header -->
-			<div id="main" class="site-content cf">
+			<div id="main" class="site-content fullwidth cf">

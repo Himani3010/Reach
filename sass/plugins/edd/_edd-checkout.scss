@@ -1,0 +1,87 @@
+#edd_checkout_wrap {
+	legend,
+	th {
+		font-weight: 400;
+	}
+
+	.edd-payment-icons {
+		@include margin( 0, 0, 24, 12 );
+	}
+
+	legend {
+		@include padding-bottom( 6 );
+	}
+
+	p {
+		@include margin-bottom( 24 );
+	}
+
+	label {
+		font-size: 100%;
+		padding-top: 0;
+		@include margin-bottom( 6 );
+	}
+
+	span.edd-description {
+		@include font-size( 11 );
+		font-style: italic;
+	}
+
+	input[type="text"], 
+	input[type="email"], 
+	input[type="password"], 
+	textarea {
+		width: 100%;
+		max-width: 100%;
+		@include padding( 11, 10 );
+	}
+
+	#edd_purchase_submit {
+		@include padding( 36, 0 );
+		@include margin( -36, 0, 0 );	
+		@include font-size( 16 );
+		background-color: $color__background-meta;
+		text-align: center;		
+	}
+
+	#edd_final_total_wrap {
+		background: transparent;
+		border: none;
+	}	
+
+	#edd_checkout_form_wrap {
+		@extend .cf;
+	}
+
+	#edd-purchase-button {
+		@include font-size( 25 );
+		@include height( 50 );
+		background-color: $color__accent;
+		border-color: rgba( 255, 255, 255, 0.3 );
+		box-shadow: 0 0 0 3px $color__accent;
+		color: $color__text-overlay;
+	}
+}
+
+.page-template-page-template-stripped {
+	#edd_checkout_wrap {
+		@include fullwidth-wrapper();
+
+		tr {
+			td:first-child, 
+			th:first-child {
+				border-left: 0;
+			}
+
+			td:last-child, 
+			th:last-child {
+				border-right: 0;
+			}
+		}
+
+		fieldset {
+			border-left: 0;
+			border-right: 0;
+		}
+	}
+}

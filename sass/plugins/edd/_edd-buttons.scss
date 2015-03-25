@@ -1,0 +1,23 @@
+body .edd-submit.button {
+	&.gray, 
+	&.white, 
+	&.blue,
+	&.red, 
+	&.orange, 
+	&.green,
+	&.yellow,
+	&.dark-gray	{
+		display: inline-block;
+		@include border-width( 2 );
+		border-color: $color__accent;
+		background: transparent;	
+		color: $color__accent;
+		box-shadow: none;
+
+		&:focus, &:active, &:hover {
+			border-color: $color__accent;
+			background-color: $color__accent;
+			color: $color__text-overlay;
+		}
+	}
+}

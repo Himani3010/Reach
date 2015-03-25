@@ -7,9 +7,7 @@
 	<?php 
 	echo benny_get_media( array( 
 		'split_media' 	=> true, 
-		'meta_key' 		=> 'video', 
-		'before' 		=> '<div class="fit-video">', 
-		'after' 		=> '</div>' 
+		'meta_key' 		=> 'video'
 	) );
 
 	if ( is_single() ) :

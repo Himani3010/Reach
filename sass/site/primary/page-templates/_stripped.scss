@@ -1,0 +1,32 @@
+.page-template-page-template-stripped {
+	#page {
+		@include padding-top( 36 );
+		@include max-width( 600 );
+	}
+
+	.banner {
+		margin-bottom: 0;
+	}
+
+	.site-main {
+		padding: 0;
+	}
+
+	.entry-block {
+		margin-bottom: 0;
+		border-top: none;
+		border-radius: 0 0 0.4rem 0.4rem;	    
+
+		.entry {
+			padding: 0;
+		}
+	}	
+
+	#site-footer {
+		padding: 0;
+	}
+
+	#colophon {
+		border: none;
+	}
+}
