@@ -557,9 +557,6 @@ class Benny_Theme {
      * @since 	1.0.0
      */
     public function wrap_fullwidth_videos( $html, $data, $url ) {
-
-    	echo '<pre>'; print_r( $data ); echo '</pre>';
-    	echo "<pre>"; print_r( $html ); echo '</pre>';
         if ( $data->type == 'video'  ) {
                 return benny_fullwidth_video( $html );
         }

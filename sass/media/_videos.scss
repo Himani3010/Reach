@@ -1,3 +1,10 @@
 .fit-video {
 	@include fullwidth-wrapper();
+	@include margin-bottom( 12 );
+}
+
+.campaign-video .fit-video {
+	width: 100%;
+	left: 0;		
+	@include margin-bottom( 36 );
 }

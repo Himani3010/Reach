@@ -2263,13 +2263,21 @@ embed {
   left: -24px;
   width: -webkit-calc( 100% + 48px );
   width: -moz-calc( 100% + 48px );
-  width: calc( 100% + 48px ); }
+  width: calc( 100% + 48px );
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem; }
   @media (min-width: 50em) {
     .fit-video {
       left: -36px;
       width: -webkit-calc( 100% + 72px );
       width: -moz-calc( 100% + 72px );
       width: calc( 100% + 72px ); } }
+
+.campaign-video .fit-video {
+  width: 100%;
+  left: 0;
+  margin-bottom: 36px;
+  margin-bottom: 3.6rem; }
 
 /*--------------------------------------------------------------
 17.0 Footer
