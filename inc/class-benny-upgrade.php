@@ -73,9 +73,13 @@ class Benny_Upgrade {
 	 * @since 	1.0.0
 	 */
 	public static function upgrade_from( $db_version, $edge_version ) {
+
 		if ( self::requires_upgrade( $db_version, $edge_version ) ) {
+
 			new Benny_Upgrade( $db_version, $edge_version );
+
 		}
+
 	}
 
 	/**

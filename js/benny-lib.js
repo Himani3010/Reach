@@ -1,4 +1,4 @@
-/*! benny - v2.0.0 - 2015-03-24 */
+/*! benny - v2.0.0 - 2015-03-26 */
 
 /*--------------------------------------------------------
  * BENNY is the core object containing all components.
@@ -211,13 +211,14 @@ BENNY.Grid = ( function( $ ) {
 ---------------------------------------------------------*/
 BENNY.Pledging = ( function( $ ) {
 
-	var $form = $('.edd_download_purchase_form'),
-		$price = $('input[name=atcf_custom_price]'),
-		$pledges = $('.edd_download_purchase_form .pledge-level').sort( function( a, b ) {
+	var $scope 		= $('#charitable-edd-pledge-form'),
+		$form 		= $scope.find('.edd_download_purchase_form'),
+		$price 		= $scope.find('input[name=atcf_custom_price]'),
+		$pledges 	= $scope.find('.edd_download_purchase_form .pledge-level').sort( function( a, b ) {
 			return parseInt( $(a).data('price') ) - parseInt( $(b).data('price') );
 		}), 
-		$button = $('.pledge-button a'),
-		$minpledge = $pledges.first(), 
+		$button 	= $scope.find('.pledge-button a'),
+		$minpledge 	= $pledges.first(), 
 		$maxpledge;
 
 	var priceChange = function() {

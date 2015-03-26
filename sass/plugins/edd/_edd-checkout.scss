@@ -45,8 +45,15 @@
 	}
 
 	#edd_final_total_wrap {
+		font-family: $font__secondary;
+		text-transform: uppercase;
+		@include letter-spacing( 2 );
 		background: transparent;
 		border: none;
+
+		strong {
+			font-weight: 400;
+		}
 	}	
 
 	#edd_checkout_form_wrap {
@@ -61,9 +68,15 @@
 		box-shadow: 0 0 0 3px $color__accent;
 		color: $color__text-overlay;
 	}
+
+	.edd_empty_cart {
+	    display: block;
+	    @include padding( 0, 36, 36 );
+	}
+
 }
 
-.page-template-page-template-stripped {
+.stripped {
 	#edd_checkout_wrap {
 		@include fullwidth-wrapper();
 

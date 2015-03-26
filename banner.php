@@ -4,6 +4,7 @@
  *
  * @package Benny
  */
+
 $banner_title = benny_get_banner_title();
 
 if ( ! empty( $banner_title ) ) : ?>

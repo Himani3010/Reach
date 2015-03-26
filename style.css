@@ -676,6 +676,16 @@ input[type="submit"] {
   input[type="submit"].button {
     height: 31px;
     height: 3.1rem; }
+  button.button-large,
+  input[type="button"].button-large,
+  input[type="reset"].button-large,
+  input[type="submit"].button-large {
+    font-size: 25px;
+    font-size: 2.5rem;
+    height: 50px;
+    height: 5rem;
+    line-height: 50px;
+    line-height: 5rem; }
   button:hover, button:active, button:focus,
   input[type="button"]:hover,
   input[type="button"]:active,
@@ -1911,25 +1921,26 @@ a {
       margin: 1.2rem 0.3rem 0rem; }
 
 /* Stripped */
-.page-template-page-template-stripped #page {
+.stripped #page {
   padding-top: 36px;
-  padding-top: 3.6rem;
-  max-width: 600px;
-  max-width: 60rem; }
-.page-template-page-template-stripped .banner {
+  padding-top: 3.6rem; }
+.stripped .banner {
   margin-bottom: 0; }
-.page-template-page-template-stripped .site-main {
+.stripped .site-main {
   padding: 0; }
-.page-template-page-template-stripped .entry-block {
+.stripped .entry-block {
   margin-bottom: 0;
   border-top: none;
   border-radius: 0 0 0.4rem 0.4rem; }
-  .page-template-page-template-stripped .entry-block .entry {
+  .stripped .entry-block .entry {
     padding: 0; }
-.page-template-page-template-stripped #site-footer {
+.stripped #site-footer {
   padding: 0; }
-.page-template-page-template-stripped #colophon {
+.stripped #colophon {
   border: none; }
+.stripped.page-template-page-template-stripped-narrow #page {
+  max-width: 600px;
+  max-width: 60rem; }
 
 /*--------------------------------------------------------------
 11.2 Asides
@@ -2468,6 +2479,11 @@ embed {
     max-width: 100%;
     width: 380px;
     width: 38rem; }
+  .campaign-summary .campaign-donation {
+    padding: 0px 0px 24px;
+    padding: 0rem 0rem 2.4rem; }
+    .campaign-summary .campaign-donation .button {
+      margin: 0; }
   .campaign-summary .campaign-ended {
     margin-bottom: 24px;
     margin-bottom: 2.4rem;
@@ -2965,8 +2981,14 @@ body .edd-submit.button.gray, body .edd-submit.button.white, body .edd-submit.bu
   background-color: #f1efee;
   text-align: center; }
 #edd_checkout_wrap #edd_final_total_wrap {
+  font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
   background: transparent;
   border: none; }
+  #edd_checkout_wrap #edd_final_total_wrap strong {
+    font-weight: 400; }
 #edd_checkout_wrap #edd-purchase-button {
   font-size: 25px;
   font-size: 2.5rem;
@@ -2976,26 +2998,30 @@ body .edd-submit.button.gray, body .edd-submit.button.white, body .edd-submit.bu
   border-color: rgba(255, 255, 255, 0.3);
   box-shadow: 0 0 0 3px #d95b43;
   color: #fff; }
+#edd_checkout_wrap .edd_empty_cart {
+  display: block;
+  padding: 0px 36px 36px;
+  padding: 0rem 3.6rem 3.6rem; }
 
-.page-template-page-template-stripped #edd_checkout_wrap {
+.stripped #edd_checkout_wrap {
   position: relative;
   left: -24px;
   width: -webkit-calc( 100% + 48px );
   width: -moz-calc( 100% + 48px );
   width: calc( 100% + 48px ); }
   @media (min-width: 50em) {
-    .page-template-page-template-stripped #edd_checkout_wrap {
+    .stripped #edd_checkout_wrap {
       left: -36px;
       width: -webkit-calc( 100% + 72px );
       width: -moz-calc( 100% + 72px );
       width: calc( 100% + 72px ); } }
-  .page-template-page-template-stripped #edd_checkout_wrap tr td:first-child,
-  .page-template-page-template-stripped #edd_checkout_wrap tr th:first-child {
+  .stripped #edd_checkout_wrap tr td:first-child,
+  .stripped #edd_checkout_wrap tr th:first-child {
     border-left: 0; }
-  .page-template-page-template-stripped #edd_checkout_wrap tr td:last-child,
-  .page-template-page-template-stripped #edd_checkout_wrap tr th:last-child {
+  .stripped #edd_checkout_wrap tr td:last-child,
+  .stripped #edd_checkout_wrap tr th:last-child {
     border-right: 0; }
-  .page-template-page-template-stripped #edd_checkout_wrap fieldset {
+  .stripped #edd_checkout_wrap fieldset {
     border-left: 0;
     border-right: 0; }
 

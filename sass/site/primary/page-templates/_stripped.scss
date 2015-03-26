@@ -1,7 +1,6 @@
-.page-template-page-template-stripped {
+.stripped {
 	#page {
-		@include padding-top( 36 );
-		@include max-width( 600 );
+		@include padding-top( 36 );		
 	}
 
 	.banner {
@@ -28,5 +27,13 @@
 
 	#colophon {
 		border: none;
+	}
+
+	&.page-template-page-template-stripped-narrow {
+
+		#page {
+			@include max-width( 600 );
+		}
+		
 	}
 }

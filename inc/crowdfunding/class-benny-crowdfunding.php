@@ -73,7 +73,8 @@ class Benny_Crowdfunding {
 
 		remove_filter( 'the_content', 				array( charitable_get_helper( 'templates' ), 'campaign_content' ), 2 );
 		add_filter( 'benny_script_dependencies',	array( $this, 'setup_script_dependencies' ) );
-		add_filter( 'charitable_campaign_ended', 	'benny_campaign_ended_text' );
+		add_filter( 'benny_banner_title', 			array( $this, 'set_banner_title' ) );
+		add_filter( 'charitable_campaign_ended', 	'benny_campaign_ended_text' );		
 	}
 
 	/**
@@ -90,7 +91,7 @@ class Benny_Crowdfunding {
 		
 		wp_register_script( 'raphael', get_template_directory_uri() . '/js/vendors/raphael/raphael-min.js', array( 'jquery' ), benny_get_theme()->get_theme_version(), true );
 
-		if ( get_post_type() == 'campaign' ) {
+		if ( 'campaign' == get_post_type() ) {
 			wp_register_script( 'countdown-plugin', get_template_directory_uri() . '/js/vendors/jquery-countdown/jquery.plugin.min.js', array( 'jquery' ), benny_get_theme()->get_theme_version(), true );
             wp_register_script( 'countdown', get_template_directory_uri() . '/js/vendors/jquery-countdown/jquery.countdown.min.js', array( 'countdown-plugin' ), benny_get_theme()->get_theme_version(), true );
 
@@ -98,6 +99,27 @@ class Benny_Crowdfunding {
         }
 
 		return $dependencies;
+	}
+
+	/**
+	 * Set banner title for campaign donation page. 
+	 *
+	 * @global 	WP_Query 	$wp_query
+	 * @param 	string 		$title	
+	 * @return 	string
+	 * @access  public
+	 * @since 	1.0.0
+	 */
+	public function set_banner_title( $title ) {
+		global $wp_query;
+
+		if ( isset ( $wp_query->query_vars[ 'donate' ] ) && is_singular( 'campaign' ) ) {
+
+			$title = get_the_title();
+
+		}
+
+		return $title; 
 	}
 }
 

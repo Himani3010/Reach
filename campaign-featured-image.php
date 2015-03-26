@@ -4,6 +4,7 @@
  *
  * @package Benny
  */
+
 $campaign = charitable_get_current_campaign();
 
 if ( $campaign && has_post_thumbnail( $campaign->ID ) ) : ?>

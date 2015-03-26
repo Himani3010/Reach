@@ -22,11 +22,11 @@ if ( $campaign ) :
 
 					get_template_part( 'campaign', 'ended' );
 			
-				else : ?>
-					<p class="campaign-support">
-						<a class="button button-large" data-reveal-id="campaign-form-<?php echo $campaign->ID ?>" href="#"><?php echo benny_crowdfunding_get_pledge_text() ?></a>
-					</p>				
-				<?php endif;
+				else :
+
+					charitable_template( 'campaign/donation-button.php' );
+					
+				endif;
 
 				get_template_part( 'campaign', 'barometer' );
 
@@ -42,3 +42,5 @@ if ( $campaign ) :
 	</section>
 <?php 
 endif;
+
+

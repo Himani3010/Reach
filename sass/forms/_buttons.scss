@@ -9,6 +9,12 @@ input[type="submit"] {
 		@include height( 31 );
 	}
 
+	&.button-large {
+		@include font-size( 25 );
+		@include height( 50 );
+		@include line-height( 50 );
+	}
+
 	&:hover,
 	&:active, 
 	&:focus {

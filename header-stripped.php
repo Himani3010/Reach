@@ -19,7 +19,7 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class( 'stripped' ); ?>>
 	<div id="page" class="hfeed site-container">		
 		<div class="body-wrapper">
 			<header id="header" class="cf wrapper site-header" role="banner">

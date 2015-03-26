@@ -61,6 +61,14 @@
 		@include width( 380 );
 	}
 
+	.campaign-donation {
+		@include padding( 0, 0, 24 );
+
+		.button {
+			margin: 0;
+		}
+	}
+
 	.campaign-ended {
 		@include margin-bottom( 24 );
 		text-align: center;
