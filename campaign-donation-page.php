@@ -17,7 +17,7 @@ get_header( 'stripped' );
 
 			<main class="site-main content-area" role="main">
 				
-				<?php //$campaign->get_donation_form()->render() ?>
+				<?php $campaign->get_donation_form()->render() ?>
 
 			</main><!-- .site-main -->
 		<?php 
