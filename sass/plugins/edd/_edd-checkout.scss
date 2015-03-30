@@ -38,7 +38,7 @@
 
 	#edd_purchase_submit {
 		@include padding( 36, 0 );
-		@include margin( -36, 0, 0 );	
+		margin: 0;
 		@include font-size( 16 );
 		background-color: $color__background-meta;
 		text-align: center;		
@@ -60,6 +60,16 @@
 		@extend .cf;
 	}
 
+	fieldset#edd_cc_fields {
+		background-color: $color__background-widget;
+
+		input, 
+		select, 
+		textarea {
+			background-color: $color__background-content;
+		}
+	}
+
 	#edd-purchase-button {
 		@include font-size( 25 );
 		@include height( 50 );
@@ -78,7 +88,7 @@
 
 .stripped {
 	#edd_checkout_wrap {
-		@include fullwidth-wrapper();
+		@include fullwidth-wrapper( 24, 24 );
 
 		tr {
 			td:first-child, 
@@ -92,9 +102,11 @@
 			}
 		}
 
-		fieldset {
-			border-left: 0;
-			border-right: 0;
+		fieldset, 
+		#edd_payment_mode_select {
+			@include padding( 24, 12 );
+			margin: 0;
+			@include border-width( 1, 0, 0, 0 );
 		}
 	}
 }

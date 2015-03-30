@@ -20,7 +20,7 @@ if ( $campaign === false ) return;
 		<?php endif ?>
 
 		<a href="<?php the_permalink() ?>" title="<?php printf( __( 'Go to %s', 'benny' ), get_the_title() ) ?>" target="_parent">
-			<?php echo get_the_post_thumbnail( $campaign->ID, 'campaign-thumbnail-small' ) ?>
+			<?php echo get_the_post_thumbnail( $campaign->ID, 'campaign-thumbnail-medium' ) ?>
 		</a>
 	</div>
 	<div class="title-wrapper">

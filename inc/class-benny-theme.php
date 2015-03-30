@@ -290,7 +290,8 @@ class Benny_Theme {
 		add_theme_support( 'post-thumbnails' );
         set_post_thumbnail_size( 706, 0, false );
         add_image_size( 'campaign-thumbnail', 640, 427, true );
-        add_image_size( 'campaign-thumbnail-small', 527, 351, true );
+        add_image_size( 'campaign-thumbnail-medium', 527, 351, true );
+        add_image_size( 'campaign-thumbnail-small', 351, 234, true );
         add_image_size( 'widget-thumbnail', 294, 882, false );
 
 		/**

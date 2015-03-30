@@ -22,7 +22,7 @@
 	}	
 
 	.campaign-image {
-		@include fullwidth-wrapper();
+		@include fullwidth-wrapper( 12, 12 );
 		a {
 			display: block;
 			line-height: 0;

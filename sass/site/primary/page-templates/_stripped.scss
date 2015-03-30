@@ -9,12 +9,22 @@
 
 	.site-main {
 		padding: 0;
+		border: {
+			@include width( 1 );
+			style: solid;
+			color: $color__border-primary;
+		}
+		border-top: none;
+		border-radius: 0 0 0.4rem 0.4rem;	    
+		background: $color__background-content;
+		box-shadow: 0 0 1px $color__background-content;
 	}
 
 	.entry-block {
-		margin-bottom: 0;
-		border-top: none;
-		border-radius: 0 0 0.4rem 0.4rem;	    
+		background: transparent;
+		margin: 0;
+		@include padding( 0, 24 );	
+		border-radius: 0 0 0.4rem 0.4rem;
 
 		.entry {
 			padding: 0;
@@ -37,3 +47,19 @@
 		
 	}
 }
+
+.stripped.campaign-donation-page {	
+
+	.site-main {
+		@include padding( 36, 24 );	
+		
+		@include bp( 800 ) {
+			@include padding-left( 36 );
+			@include padding-right( 36 );
+		}
+
+		.entry-block {
+			padding: 0;
+		}
+	}	
+}	
