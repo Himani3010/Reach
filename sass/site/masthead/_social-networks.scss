@@ -1,0 +1,24 @@
+.social {	
+	@include margin( 12, 0 );
+	@include padding-left( 36 );
+	text-align: left;
+
+	li {
+		display: inline-block;
+		@include margin( 0, 12, 0, 0 );
+		@include font-size( 18 );
+		@include line-height( 24 );
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+
+	@include bp( 600 ) {
+	 	float: left;
+	}
+
+	@include bp( 1190 ) {
+		@include margin-left( 10 );
+	}
+}

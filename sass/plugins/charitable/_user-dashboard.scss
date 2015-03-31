@@ -1,0 +1,56 @@
+body.user-dashboard {
+	.site-main {
+		width: 100%;
+		padding: 0;		
+	}
+
+	.entry-block {
+		border-radius: 0 0.4rem 0.4rem 0.4rem;
+	}
+}
+
+.user-dashboard-menu {
+	@include font-size( 13 );
+	font-family: $font__secondary;
+	text-transform: uppercase;
+	@include letter-spacing( 1 );
+
+	.menu {
+		@include margin-bottom( -1 );
+		padding-left: 0;
+		list-style: none;
+	}
+
+	li {		
+		display: inline-block;
+		margin-bottom: 0;
+
+		a {			
+			position: relative;
+			z-index: 5;			
+			display: inline-block;
+			@include padding( 6, 24 );
+			border: {
+				@include width( 1 );
+				style: solid;
+				color: $color__background-wrapper;
+			}
+			border-bottom-color: transparent;
+			border-radius: 0.4rem 0.4rem 0 0;
+			background: $color__text-meta;
+			color: $color__text-dark;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		&.current-menu-item a, 
+		a:hover {						
+			border-color: $color__border-primary;
+			border-bottom-color: $color__background-content;			
+			background-color: $color__background-content;
+			color: $color__accent;
+		}		
+	}
+}

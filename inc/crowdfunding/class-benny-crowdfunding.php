@@ -76,6 +76,7 @@ class Benny_Crowdfunding {
 		add_filter( 'benny_banner_title', 				array( $this, 'set_banner_title' ) );
 		add_filter( 'charitable_campaign_ended', 		'benny_campaign_ended_text' );		
 		add_filter( 'charitable_edd_donation_form_show_thumbnail', '__return_false' );
+		add_filter( 'charitable_force_user_dashboard_template', '__return_true' );
 	}
 
 	/**

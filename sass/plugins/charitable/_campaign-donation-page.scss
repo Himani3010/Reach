@@ -1,20 +1,58 @@
-.campaign-donation-page {		
+.campaign-donation-page.stripped {		
+
+	.site-main {				
+		padding: 0;
+		border: none;
+		background: transparent;
+				
+		.entry-block {
+			padding: 0;
+		}
+	}
 
 	.charitable-form-header {
 		margin-top: 0;
 		@include font-size( 16 );
 	}
+	
+	.charitable-donation-form {
+		@include padding( 36 );
+		border: {
+			@include width( 1 );
+			style: solid;
+			color: $color__border-primary;
+		}
+		border-top: none;
+		border-radius: 0 0 0.4rem 0.4rem;	    
+		background: $color__background-content;
+		box-shadow: 0 0 1px $color__background-content;
+
+		@include bp( 800 ) {
+			float: left;
+			width: 70%;
+			@include padding-right( 36 );
+		}
+	} 
+
+	.campaign-benefiting {
+		display: none;
+
+		@include bp( 800 ) {
+			display: block;
+			float: right;
+			width: 30%;
+			@include padding( 36, 0, 0, 36 );
+	
+			.campaign-title {
+				margin-top: 0;
+				text-align: center;
+			}	
+		}	
+	}
 
 	#custom-donation-amount-field {
-		// @include padding( 24 );
 		@include margin-bottom( 24 );
-		// border-bottom: {
-		// 	@include width( 2 );
-		// 	style: solid;
-		// 	color: $color__border-primary;
-		// }
-		// background: $color__background-widget;
-
+		
 		input {
 			width: 100%;
 			max-width: 100%;
@@ -51,7 +89,7 @@
 
 	.charitable-edd-connected-download {
 		position: relative;
-		@include padding( 24, 12, 24, 180 );
+		@include padding( 24, 12, 24, 12 );
 		border-bottom: {
 			@include width( 2 );
 			style: solid;
@@ -65,6 +103,10 @@
 
 		&.selected {
 			background: $color__background-content;
+		}
+
+		@include bp( 800 ) {
+			@include padding-left( 180 );
 		}
 	}
 
@@ -80,9 +122,14 @@
 	}
 
 	.charitable-edd-download-select {
-		position: absolute;
-		@include top( 28 );
-		@include left( 12 );
+		position: relative;
+		@include bottom( 2 );
+
+		@include bp( 800 ) {
+			position: absolute;
+			@include top( 28 );
+			@include left( 12 );
+		}
 	}
 
 	.charitable-option-no-download {
@@ -93,14 +140,21 @@
 	
 	.charitable-option-no-download,
 	.edd-price-option-price {
-		position: absolute;
-		@include left( 32 );
+		@include bp( 800 ) {
+			position: absolute;
+			@include left( 32 );
+		}		
 	}
 
 	.charitable-edd-connected-download-description {
-		
+		@include padding-top( 12 );
+
 		.download-title {
 			margin-top: 0;
+		}
+
+		@include bp( 800 ) {
+			padding-top: 0;
 		}
 	}
 
@@ -108,30 +162,6 @@
 		ul {
 			list-style-type: none;
 			padding-left: 0;
-		}
-	}
-
-	.campaign-benefiting {
-		display: none;
-	}
-
-	@include bp( 800 ) {
-		.charitable-donation-form {
-			float: left;
-			width: 70%;
-			@include padding-right( 36 );
-		}
-
-		.campaign-benefiting {
-			display: block;
-			float: right;
-			width: 30%;
-			// @include max-width( 300 );
-
-			.campaign-title {
-				margin-top: 0;
-				text-align: center;
-			}
 		}
 	}	
 

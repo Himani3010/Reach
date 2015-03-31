@@ -1,0 +1,44 @@
+.account-links {
+	display: block;
+	margin: {
+		top: 0;
+		right: auto;
+		@include bottom( 24 );
+		left: auto;
+	}
+	text-transform: uppercase;
+	@include font-size( 12 );
+	@include line-height( 44 );
+	font-weight: 300;
+	text-align: center;
+
+	.button.button-alt {
+		display: inline-block;	
+		@include margin( 10, 0, 10, 8 );
+		max-width: 100%;
+		text-decoration: none;
+	}
+
+	@include bp( 600 ) {
+		float: right;
+		margin-left: 0;
+		@include margin-right( 36 );
+		margin-bottom: 0;
+		width: auto;
+	}
+}
+
+.logout {
+	position: absolute;
+	@include right( 36 );
+	top: 0;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	@include bp( 600 ) {
+		position: static;
+		@include margin-left( 12 );
+	}
+}

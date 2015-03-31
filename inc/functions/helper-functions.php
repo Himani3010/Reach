@@ -110,8 +110,12 @@ function benny_get_current_author() {
 function benny_get_banner_title() {
     $title = "";
 
+    /* User Dashboard */
+    if ( function_exists( 'charitable_user_dashboard' ) && charitable_user_dashboard()->in_nav() ) {
+        $title = apply_filters( 'benny_banner_title_dashboard', __( 'Dashboard', 'benny' ) );
+    }
     /* Blog Home */
-    if ( is_home() ) {
+    elseif ( is_home() ) {
         if ( 'page' == get_option('show_on_front') ) {
             $title = get_the_title( get_option( 'page_for_posts' ) );
         }

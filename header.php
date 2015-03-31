@@ -23,13 +23,10 @@
 	<div id="page" class="hfeed site-container">
 		<a class="skip-link screen-reader-text" href="#main"><?php _e( 'Skip to content', 'benny' ); ?></a>
 
-		<!-- Sharing -->
-		<?php //sofa_social_links() ?>	
-		<!-- End sharing -->
+		<?php get_template_part( 'social-networks' ) ?>
 
-		<!-- Login/register -->
-		<?php //get_template_part( 'account-links' ) ?>	
-		<!-- End login/register -->
+		<?php get_template_part( 'account-links' ) ?>
+
 		<div class="body-wrapper">
 			<header id="header" class="cf wrapper site-header" role="banner">
 				<div class="site-branding site-identity">
@@ -48,6 +45,6 @@
 							'menu_class' 		=> 'menu menu-site responsive_menu'
 						) ) ?>
 					</nav>
-			    </div><!-- #site-navigation -->
+			    </div><!-- .site-navigation -->
 			</header><!-- #header -->
 			<div id="main" class="site-content cf">

@@ -3,6 +3,11 @@
 		@include padding-top( 36 );		
 	}
 
+	.site-identity {
+		float: none;
+		text-align: center;
+	}
+
 	.banner {
 		margin-bottom: 0;
 	}
@@ -39,27 +44,9 @@
 		border: none;
 	}
 
-	&.page-template-page-template-stripped-narrow {
-
+	.page-template-page-template-stripped-narrow {
 		#page {
-			@include max-width( 600 );
-		}
-		
+			@include max-width( 800 );
+		}		
 	}
 }
-
-.stripped.campaign-donation-page {	
-
-	.site-main {
-		@include padding( 36, 24 );	
-		
-		@include bp( 800 ) {
-			@include padding-left( 36 );
-			@include padding-right( 36 );
-		}
-
-		.entry-block {
-			padding: 0;
-		}
-	}	
-}	
