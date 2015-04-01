@@ -73,14 +73,19 @@ if ( ! function_exists( 'benny_edd_variable_pricing' ) ) :
 			return benny_edd_variable_pricing_with_limits( $download_id, $args );
 		}	
 
-		$variable_pricing = edd_has_variable_prices( $download_id );
-		$prices = apply_filters( 'edd_purchase_variable_prices', edd_get_variable_prices( $download_id ), $download_id );
+		$variable_pricing = edd_has_variable_prices( $download_id );		
 
-		if ( ! $variable_pricing || ( false !== $args['price_id'] && isset( $prices[$args['price_id']] ) ) ) {
+		if ( ! $variable_pricing ) {
 			return;
 		}
 
 		$prices = apply_filters( 'edd_purchase_variable_prices', edd_get_variable_prices( $download_id ), $download_id );
+
+		// If the price_id passed is not found in the variable prices, return.
+		if ( false !== $args['price_id'] && isset( $prices[ $args['price_id'] ] ) ) {
+			return;
+		}
+		
 		$type   = edd_single_price_option_mode( $download_id ) ? 'checkbox' : 'radio';
 		$mode   = edd_single_price_option_mode( $download_id ) ? 'multi' : 'single';
 		$schema = edd_add_schema_microdata() ? ' itemprop="offers" itemscope itemtype="http://schema.org/Offer"' : '';
@@ -149,14 +154,19 @@ if ( ! function_exists( 'benny_edd_variable_pricing_with_limits' ) ) :
 			return benny_edd_variable_pricing( $download_id, $args );
 		}
 
-		$variable_pricing = edd_has_variable_prices( $download_id );
-		$prices = apply_filters( 'edd_purchase_variable_prices', edd_get_variable_prices( $download_id ), $download_id );
+		$variable_pricing = edd_has_variable_prices( $download_id );		
 
-		if ( ! $variable_pricing || ( false !== $args['price_id'] && isset( $prices[$args['price_id']] ) ) ) {
+		if ( ! $variable_pricing ) {
 			return;
 		}		
 
 		$prices 		= apply_filters( 'edd_purchase_variable_prices', edd_get_variable_prices( $download_id ), $download_id );
+
+		// If the price_id passed is not found in the variable prices, return.
+		if ( false !== $args['price_id'] && isset( $prices[ $args['price_id'] ] ) ) {
+			return;
+		}
+
 		$type   		= edd_single_price_option_mode( $download_id ) ? 'checkbox' : 'radio';
 		$mode   		= edd_single_price_option_mode( $download_id ) ? 'multi' : 'single';
 		$schema 		= edd_add_schema_microdata() ? ' itemprop="offers" itemscope itemtype="http://schema.org/Offer"' : '';

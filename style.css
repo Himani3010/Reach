@@ -141,13 +141,13 @@ a img {
 2.0 Typography
 --------------------------------------------------------------*/
 @font-face {
-  font-family: 'benny-icons';
-  src: url("fonts/benny-icons.eot?-x6xtqp");
-  src: url("fonts/benny-icons.eot?#iefix-x6xtqp") format("embedded-opentype"), url("fonts/benny-icons.woff?-x6xtqp") format("woff"), url("fonts/benny-icons.ttf?-x6xtqp") format("truetype"), url("fonts/benny-icons.svg?-x6xtqp#benny-icons") format("svg");
+  font-family: 'Benny-Icons';
+  src: url("fonts/Benny-Icons.eot?-hpwnxk");
+  src: url("fonts/Benny-Icons.eot?#iefix-hpwnxk") format("embedded-opentype"), url("fonts/Benny-Icons.woff?-hpwnxk") format("woff"), url("fonts/Benny-Icons.ttf?-hpwnxk") format("truetype"), url("fonts/Benny-Icons.svg?-hpwnxk#Benny-Icons") format("svg");
   font-weight: normal;
   font-style: normal; }
 [class^="icon-"], [class*=" icon-"] {
-  font-family: 'benny-icons';
+  font-family: 'Benny-Icons';
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -190,6 +190,9 @@ a img {
 
 .icon-times-circle:before {
   content: "\f057"; }
+
+.icon-check-circle:before {
+  content: "\f058"; }
 
 .icon-exclamation-circle:before {
   content: "\f06a"; }
@@ -282,7 +285,7 @@ a img {
   content: "\f18b"; }
 
 [data-icon]:before {
-  font-family: 'benny-icons';
+  font-family: "Benny-Icons";
   content: attr(data-icon);
   speak: none;
   font-weight: normal;
@@ -1813,8 +1816,8 @@ a {
   width: -webkit-calc( 100% + 48px );
   width: -moz-calc( 100% + 48px );
   width: calc( 100% + 48px );
-  height: 100px;
-  height: 10rem;
+  min-height: 100px;
+  min-height: 10rem;
   margin: -36px 0px 36px;
   margin: -3.6rem 0rem 3.6rem;
   text-align: center; }
@@ -1827,8 +1830,9 @@ a {
 
 .banner-title {
   margin: 0;
-  line-height: 100px;
-  line-height: 10rem;
+  padding: 35px 0px;
+  padding: 3.5rem 0rem;
+  line-height: 1em;
   letter-spacing: 3px;
   letter-spacing: 0.3rem; }
 
@@ -2166,6 +2170,150 @@ a {
   float: right;
   font-size: 20px;
   font-size: 2rem; }
+
+/*--------------------------------------------------------------
+11.4 Author Profiles
+--------------------------------------------------------------*/
+body.author .banner {
+  margin-bottom: 0; }
+body.author .site-main {
+  float: none;
+  width: 100%;
+  padding: 24px;
+  padding: 2.4rem;
+  border-width: 1px;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: #e2dedb;
+  border-top: none;
+  border-radius: 0 0 0.4rem 0.4rem;
+  background: #fff;
+  box-shadow: 0 0 0.1rem #fff; }
+  @media (min-width: 37.5em) {
+    body.author .site-main {
+      padding: 36px;
+      padding: 3.6rem; } }
+body.author .author-description {
+  padding-bottom: 24px;
+  padding-bottom: 2.4rem;
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
+  border-bottom-width: 2px;
+  border-bottom-width: 0.2rem;
+  border-bottom-style: solid;
+  border-bottom-color: #e2dedb; }
+  @media (min-width: 50em) {
+    body.author .author-description {
+      float: left;
+      width: 40%;
+      margin: 0;
+      padding: 0;
+      border: none; } }
+@media (min-width: 37.5em) {
+  body.author .author-avatar {
+    float: left;
+    padding-right: 12px;
+    padding-right: 1.2rem;
+    max-width: 50%; } }
+@media (min-width: 37.5em) {
+  body.author .author-facts {
+    float: left;
+    clear: right;
+    width: 50%;
+    width: -webkit-calc( 100% - 15.3rem );
+    width: -moz-calc( 100% - 15.3rem );
+    width: calc( 100% - 15.3rem ); }
+    body.author .author-facts h3 {
+      margin-top: 0; } }
+body.author .author-links,
+body.author .author-bio {
+  clear: both;
+  width: 100%; }
+@media (min-width: 50em) {
+  body.author .author-activity {
+    float: left;
+    width: 60%;
+    padding: 0px 0px 0px 36px;
+    padding: 0rem 0rem 0rem 3.6rem; }
+    body.author .author-activity h3 {
+      text-align: center; } }
+body.author .author-activity-summary {
+  font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase; }
+  body.author .author-activity-summary .number {
+    color: #d95b43; }
+  body.author .author-activity-summary .separator {
+    padding: 0px 4px;
+    padding: 0rem 0.4rem; }
+  @media (min-width: 50em) {
+    body.author .author-activity-summary {
+      text-align: center; } }
+body.author .author-activity-feed {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  border-top-width: 2px;
+  border-top-width: 0.2rem;
+  border-top-style: solid;
+  border-top-color: #e2dedb; }
+  body.author .author-activity-feed li {
+    position: relative;
+    padding: 24px 0px;
+    padding: 2.4rem 0rem;
+    border-bottom-width: 2px;
+    border-bottom-width: 0.2rem;
+    border-bottom-style: solid;
+    border-bottom-color: #e2dedb; }
+    body.author .author-activity-feed li:last-child {
+      padding-bottom: 0;
+      border-bottom: none; }
+  body.author .author-activity-feed .activity-summary {
+    padding-left: 40px;
+    padding-left: 4rem; }
+    body.author .author-activity-feed .activity-summary .display-name,
+    body.author .author-activity-feed .activity-summary a {
+      color: #d95b43;
+      font-weight: 700; }
+    body.author .author-activity-feed .activity-summary .time-ago {
+      font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+      text-transform: uppercase;
+      color: #bdb2ab; }
+    body.author .author-activity-feed .activity-summary::before {
+      position: absolute;
+      top: 2px;
+      top: 0.2rem;
+      left: 0;
+      font-size: 24px;
+      font-size: 2.4rem;
+      font-family: "Benny-Icons";
+      color: #bdb2ab; }
+    @media (min-width: 50em) {
+      body.author .author-activity-feed .activity-summary {
+        float: left;
+        width: 70%;
+        padding-right: 12px;
+        padding-right: 1.2rem;
+        -webkit-transform: translateY(50%);
+        -moz-transform: translateY(50%);
+        -ms-transform: translateY(50%);
+        -o-transform: translateY(50%);
+        transform: translateY(50%); } }
+  body.author .author-activity-feed .activity-type-post .activity-summary::before {
+    content: "\f040"; }
+  body.author .author-activity-feed .activity-type-campaign .activity-summary::before {
+    content: "\f055"; }
+  body.author .author-activity-feed .activity-type-donation .activity-summary::before {
+    content: "\f058"; }
+  body.author .author-activity-feed .wp-post-image {
+    display: none; }
+    @media (min-width: 50em) {
+      body.author .author-activity-feed .wp-post-image {
+        display: block;
+        float: right;
+        width: 150px;
+        width: 15rem;
+        max-width: 30%;
+        border-radius: 0.4rem; } }
 
 /*--------------------------------------------------------------
 16.0 Media
@@ -3195,7 +3343,54 @@ body.user-dashboard .site-main {
   width: 100%;
   padding: 0; }
 body.user-dashboard .entry-block {
+  padding: 36px;
+  padding: 3.6rem;
   border-radius: 0 0.4rem 0.4rem 0.4rem; }
+body.user-dashboard .charitable-user-details,
+body.user-dashboard .entry {
+  padding: 0;
+  border: none; }
+body.user-dashboard .charitable-form .charitable-submit-field {
+  display: inline-block; }
+  body.user-dashboard .charitable-form .charitable-submit-field .button {
+    display: inline-block;
+    margin: 3px 0px 0px 3px;
+    margin: 0.3rem 0rem 0rem 0.3rem;
+    padding: 0px 20px;
+    padding: 0rem 2rem;
+    height: 33px;
+    height: 3.3rem;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 29px;
+    line-height: 2.9rem;
+    border-width: 2px;
+    border-width: 0.2rem;
+    border-style: solid;
+    border-color: #7d6e63;
+    border-radius: 0.4rem;
+    box-shadow: none;
+    font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+    background: transparent;
+    color: #7d6e63;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+    /* Default settings */
+    -webkit-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+    -moz-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+    -o-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+    transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+    /* Default settings */
+    -webkit-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+    -moz-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+    -o-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+    transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0; }
+    body.user-dashboard .charitable-form .charitable-submit-field .button:hover {
+      background-color: #7d6e63;
+      color: #fff;
+      text-decoration: none; }
 
 .user-dashboard-menu {
   font-size: 13px;
@@ -3234,6 +3429,43 @@ body.user-dashboard .entry-block {
       border-bottom-color: #fff;
       background-color: #fff;
       color: #d95b43; }
+      .user-dashboard-menu li.current-menu-item a::after,
+      .user-dashboard-menu li a:hover::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        bottom: -0.1rem;
+        left: -1px;
+        left: -0.1rem;
+        display: block;
+        width: 1px;
+        width: 0.1rem;
+        height: 1px;
+        height: 0.1rem;
+        background-color: #e2dedb; }
+
+/*-------------------------------------------------------------- 
+18.1.7 Forms
+--------------------------------------------------------------*/
+.charitable-form input[type=text],
+.charitable-form input[type=password],
+.charitable-form input[type=email],
+.charitable-form input[type=url],
+.charitable-form textarea,
+.charitable-form select {
+  max-width: 100%;
+  width: 100%; }
+
+.charitable-form-fields {
+  padding-bottom: 24px;
+  padding-bottom: 2.4rem; }
+  @media (min-width: 37.5em) {
+    .charitable-form-fields .charitable-form-field {
+      float: left;
+      width: 50%; }
+      .charitable-form-fields .charitable-form-field:nth-child(2n+1) {
+        padding-right: 36px;
+        padding-right: 3.6rem; } }
 
 /*-------------------------------------------------------------- 
 18.2 Easy Digital Downloads

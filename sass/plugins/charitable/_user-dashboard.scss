@@ -5,7 +5,25 @@ body.user-dashboard {
 	}
 
 	.entry-block {
+		@include padding( 36 );
 		border-radius: 0 0.4rem 0.4rem 0.4rem;
+	}
+
+	.charitable-user-details,
+	.entry {
+		padding: 0;
+		border: none;
+	}
+
+	.charitable-form {
+	
+		.charitable-submit-field {
+			display: inline-block;
+
+			.button {
+				@include button-inverted();
+			}
+		}
 	}
 }
 
@@ -51,6 +69,17 @@ body.user-dashboard {
 			border-bottom-color: $color__background-content;			
 			background-color: $color__background-content;
 			color: $color__accent;
+
+			&::after {
+				content: "";				
+				position: absolute;
+				@include bottom( -1 );
+				@include left( -1 );
+				display: block;
+				@include width( 1 );
+				@include height( 1 );
+				background-color: $color__border-primary;
+			}
 		}		
 	}
 }

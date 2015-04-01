@@ -11,14 +11,15 @@
 
 .banner {
 	@include fullwidth-wrapper-padded();
-	@include height( 100 );
+	@include min-height( 100 );
 	@include margin( -36, 0, 36 );
 	text-align: center;
 }
 
 .banner-title {
-	margin: 0;
-	@include line-height( 100 );
+	margin: 0;	
+	@include padding( 35, 0 );
+	line-height: 1em;
 	@include letter-spacing( 3 );
 }
 

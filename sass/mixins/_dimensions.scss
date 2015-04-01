@@ -27,11 +27,17 @@
 @mixin max-width($value) {
 	@include size(max-width, $value);
 }
+@mixin min-width($value) {
+	@include size(min-width, $value);
+}
 @mixin height($value) {
 	@include size(height, $value);
 }
 @mixin max-height($value) {
 	@include size(max-height, $value);
+}
+@mixin min-height($value) {
+	@include size(min-height, $value);
 }
 @mixin padding($value, $right : "", $bottom : "", $left : "") {
 	@include size(padding, $value, $right, $bottom, $left);

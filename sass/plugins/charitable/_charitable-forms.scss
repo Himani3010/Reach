@@ -1,0 +1,27 @@
+.charitable-form {
+	input[type=text], 
+	input[type=password], 
+	input[type=email],
+	input[type=url],
+	textarea, 
+	select {
+		max-width: 100%;
+		width: 100%;
+	}
+}
+
+.charitable-form-fields {
+
+	@include padding-bottom( 24 );
+
+	@include bp( 600 ) {
+		.charitable-form-field {
+			float: left;
+			width: 50%;			
+
+			&:nth-child( 2n+1 ) {
+				@include padding-right( 36 );
+			}
+		}
+	}
+}
