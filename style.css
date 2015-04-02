@@ -3456,16 +3456,31 @@ body.user-dashboard .charitable-form .charitable-submit-field {
   max-width: 100%;
   width: 100%; }
 
-.charitable-form-fields {
-  padding-bottom: 24px;
-  padding-bottom: 2.4rem; }
-  @media (min-width: 37.5em) {
-    .charitable-form-fields .charitable-form-field {
-      float: left;
-      width: 50%; }
-      .charitable-form-fields .charitable-form-field:nth-child(2n+1) {
-        padding-right: 36px;
-        padding-right: 3.6rem; } }
+@media (min-width: 37.5em) {
+  .charitable-form-fields .charitable-form-field {
+    float: left;
+    width: 50%; }
+    .charitable-form-fields .charitable-form-field.odd {
+      padding-right: 36px;
+      padding-right: 3.6rem; } }
+
+.charitable-fieldset {
+  padding: 24px 0px;
+  padding: 2.4rem 0rem;
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
+  border-top-width: 2px;
+  border-top-width: 0.2rem;
+  border-top-style: solid;
+  border-top-color: #e2dedb; }
+  .charitable-fieldset legend {
+    position: relative;
+    left: 24px;
+    left: 2.4rem;
+    padding: 0px 12px;
+    padding: 0rem 1.2rem;
+    border: none;
+    color: #d95b43; }
 
 /*-------------------------------------------------------------- 
 18.2 Easy Digital Downloads

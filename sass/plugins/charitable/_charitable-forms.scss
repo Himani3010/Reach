@@ -12,16 +12,34 @@
 
 .charitable-form-fields {
 
-	@include padding-bottom( 24 );
-
 	@include bp( 600 ) {
 		.charitable-form-field {
 			float: left;
 			width: 50%;			
 
-			&:nth-child( 2n+1 ) {
+			&.odd {
 				@include padding-right( 36 );
 			}
 		}
 	}
+}
+
+.charitable-fieldset {
+
+	legend {
+		position: relative;
+		@include left( 24 );
+		@include padding( 0, 12 );
+		border: none;
+		color: $color__accent;
+	}
+
+	@include padding( 24, 0 );
+	@include margin-bottom( 24 );
+	border-top: {
+		@include width( 2 );
+		style: solid;
+		color: $color__border-primary;
+	}
+
 }
