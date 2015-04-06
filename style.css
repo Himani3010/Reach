@@ -471,9 +471,9 @@ code, kbd, tt, var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace; }
 
 abbr, acronym {
-  border-width: 1px;
-  border-width: 0.1rem;
-  border-style: dotted;
+  border-bottom-width: 1px;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: dotted;
   cursor: help; }
 
 mark, ins {

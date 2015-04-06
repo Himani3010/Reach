@@ -61,8 +61,8 @@ code, kbd, tt, var {
 }
 
 abbr, acronym {
-	border: {
-		@include width(1);
+	border-bottom: {
+		@include width( 1 );
 		style: dotted;
 	}
 	cursor: help;
