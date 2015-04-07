@@ -1,0 +1,15 @@
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+1.0 Body
+--------------------------------------------------------------*/
+body {
+	margin: 24px;
+	font-size: 13px;
+	line-height: 21px;
+	font-family: $font__main;
+	color: $color__text;
+	font-weight: 400;
+	vertical-align: baseline;
+}

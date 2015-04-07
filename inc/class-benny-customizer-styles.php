@@ -109,6 +109,8 @@ class Benny_Customizer_Styles {
          */
         $styles = get_transient( self::get_transient_key() );      
             
+        // $styles = false;
+        
         if ( false === $styles ) {
 
             $template_directory = get_template_directory_uri();
@@ -177,7 +179,7 @@ a, .menu-button, .menu-site a:hover, .block-title, .widget-title, .page-title, .
 .page-template-default #header, .is-active > .menu-site { 
     border-color: <?php echo $colours['accent_colour'] ?>; 
 }
-input[type=text]:focus, input[type=password]:focus, input[type=number]:focus, input[type=email]:focus, textarea:focus, input[type=text]:active, input[type=password]:active, input[type=number]:active, input[type=email]:active, textarea:active, .button.accent.button-alt, .button.button-secondary.accent, .button.accent.button-alt:hover, .button.button-secondary.accent:hover select:active { 
+input[type=text]:focus, input[type=password]:focus, input[type=number]:focus, input[type=email]:focus, textarea:focus, input[type=text]:active, input[type=password]:active, input[type=number]:active, input[type=email]:active, input[type=number]:active, input[type=number]:focus, input[type=date]:active, input[type=date]:focus, textarea:active, .button.accent.button-alt, .button.button-secondary.accent, .button.accent.button-alt:hover, .button.button-secondary.accent:hover select:active { 
     border-color: <?php echo $colours['accent_colour'] ?>; 
 }
 
@@ -242,7 +244,7 @@ input[type=submit], input[type=reset], button, .button, .active-campaign .campai
 }
 
 /* Widget background colour */
-input[type=text], input[type=password], input[type=number], input[type=email], .chrome input[type=file], .safari input[type=file], textarea, select, .featured-image, th, .entry blockquote, hr, pre, .meta, .audiojs .scrubber, .widget, .sidebar-block, .accordion h3, .atcf-multi-select, #login-form .wrapper { 
+input[type=text], input[type=password], input[type=number], input[type=email], input[type=date], .chrome input[type=file], .safari input[type=file], textarea, select, .featured-image, th, .entry blockquote, hr, pre, .meta, .audiojs .scrubber, .widget, .sidebar-block, .accordion h3, .atcf-multi-select, #login-form .wrapper { 
     background-color: <?php echo $colours['widget_background'] ?>; 
 }
 input:focus, textarea:focus, select:focus, input:active, textarea:active, select:active { 

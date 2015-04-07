@@ -726,6 +726,8 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
+input[type="number"],
+input[type="date"],
 textarea {
   max-width: 300px;
   max-width: 30rem;
@@ -3451,6 +3453,8 @@ body.user-dashboard .charitable-form .charitable-submit-field {
 .charitable-form input[type=password],
 .charitable-form input[type=email],
 .charitable-form input[type=url],
+.charitable-form input[type=number],
+.charitable-form input[type=date],
 .charitable-form textarea,
 .charitable-form select {
   max-width: 100%;
@@ -3462,7 +3466,18 @@ body.user-dashboard .charitable-form .charitable-submit-field {
     width: 50%; }
     .charitable-form-fields .charitable-form-field.odd {
       padding-right: 36px;
-      padding-right: 3.6rem; } }
+      padding-right: 3.6rem; }
+    .charitable-form-fields .charitable-form-field.fullwidth, .charitable-form-fields .charitable-form-field.page-template-page-template-home-slider {
+      width: 100%;
+      padding: none; } }
+
+.charitable-form-field-editor .mce-btn button {
+  color: #7d6e63;
+  box-shadow: none; }
+.charitable-form-field-editor .wp-editor-container {
+  padding: 1px;
+  padding: 0.1rem;
+  background-color: #e2dedb; }
 
 .charitable-fieldset {
   padding: 24px 0px;

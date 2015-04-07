@@ -3,6 +3,8 @@
 	input[type=password], 
 	input[type=email],
 	input[type=url],
+	input[type=number],
+	input[type=date],
 	textarea, 
 	select {
 		max-width: 100%;
@@ -20,7 +22,24 @@
 			&.odd {
 				@include padding-right( 36 );
 			}
+
+			&.fullwidth {
+				width: 100%;
+				padding: none;
+			}
 		}
+	}
+}
+
+.charitable-form-field-editor {
+	.mce-btn button {
+		color: $color__text;
+		box-shadow: none;
+	}
+
+	.wp-editor-container {
+		@include padding( 1 );
+		background-color: $color__border-primary;
 	}
 }
 

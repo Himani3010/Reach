@@ -77,6 +77,7 @@ class Benny_Crowdfunding {
 		add_filter( 'charitable_campaign_ended', 		'benny_campaign_ended_text' );		
 		add_filter( 'charitable_edd_donation_form_show_thumbnail', '__return_false' );
 		add_filter( 'charitable_force_user_dashboard_template', '__return_true' );
+		add_filter( 'charitable_campaign_submission_campaign_fields', array( $this, 'campaign_submission_fields' ) );
 	}
 
 	/**
@@ -122,6 +123,27 @@ class Benny_Crowdfunding {
 		}
 
 		return $title; 
+	}
+
+	/**
+	 * Apply custom styles to the WP editor. 
+	 *
+	 * @return 	array
+	 * @access  public
+	 * @since 	1.0.0
+	 */
+	public function campaign_submission_fields( $fields ) {
+		if ( ! isset( $fields[ 'content' ] ) ) {
+			return $fields;
+		}
+
+		$fields[ 'content' ][ 'editor' ] = array(
+			'tinymce' 			=> array(
+				'content_css' 	=> get_template_directory_uri() . '/css/editor-style.css' 
+			)
+		);
+
+		return $fields;
 	}
 }
 
