@@ -7,8 +7,8 @@
  * @package 	Benny
  */
 
-$donor 		= new Charitable_Donor( benny_get_current_author() );
-$campaigns 	= new Charitable_Campaign_Query( array( 'author' => $donor->ID ) );
+$donor 		= new Charitable_User( benny_get_current_author() );
+$campaigns 	= new Charitable_Campaigns( array( 'author' => $donor->ID ) );
 $avatar 	= $donor->get_avatar( 140 );
 
 get_header();
