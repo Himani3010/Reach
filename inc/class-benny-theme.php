@@ -46,7 +46,7 @@ class Benny_Theme {
 	 * @var 	boolean
 	 * @access  private
 	 */
-	private $crowfunding;
+	private $crowdfunding = false;
 
 	/**
 	 * Retrieve the class instance. If one hasn't been created yet, create it first. 
