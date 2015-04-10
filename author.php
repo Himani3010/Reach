@@ -8,7 +8,7 @@
  */
 
 $donor 		= new Charitable_User( benny_get_current_author() );
-$campaigns 	= new Charitable_Campaigns( array( 'author' => $donor->ID ) );
+$campaigns 	= Charitable_Campaigns::query( array( 'author' => $donor->ID ) );
 $avatar 	= $donor->get_avatar( 140 );
 
 get_header();
@@ -55,7 +55,7 @@ get_header();
 		<div class="author-activity">
 			<div class="author-activity-summary">
 				<?php printf( "<span class='number'>%d</span> %s <span class='separator'>/</span> <span class='number'>%d</span> %s", 
-					$donor->get_donation_count(), 
+					$donor->get_donation_count( true ), 
 					__( 'Campaigns Backed', 'benny' ), 
 					$campaigns->post_count, 
 					__( 'Campaigns Created', 'benny' ) 

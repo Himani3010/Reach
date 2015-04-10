@@ -3471,6 +3471,9 @@ body.user-dashboard .charitable-form .charitable-submit-field {
       width: 100%;
       padding: none; } }
 
+.charitable-form-field-checkbox input {
+  width: auto; }
+
 .charitable-form-field-editor .mce-btn button {
   color: #7d6e63;
   box-shadow: none; }

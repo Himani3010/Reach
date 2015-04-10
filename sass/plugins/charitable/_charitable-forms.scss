@@ -12,7 +12,7 @@
 	}
 }
 
-.charitable-form-fields {
+.charitable-form-fields {	
 
 	@include bp( 600 ) {
 		.charitable-form-field {
@@ -30,6 +30,12 @@
 		}
 	}
 }
+
+// .charitable-form-field-checkbox {
+// 	input {
+// 		width: auto;
+// 	}
+// }
 
 .charitable-form-field-editor {
 	.mce-btn button {
