@@ -7,7 +7,6 @@
 
 global $donor;
 
-
 ?>
 <li class="activity-type-post cf">
 	<p class="activity-summary">

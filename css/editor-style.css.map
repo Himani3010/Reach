@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": ";;;;;;;;AAMA,IAAK;EACJ,MAAM,EAAE,IAAI;EACZ,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,IAAI;EACjB,WAAW,ECVC,sDAAY;EDWxB,KAAK,EEKa,OAAO;EFJzB,WAAW,EAAE,GAAG;EAChB,cAAc,EAAE,QAAQ",
+"mappings": ";;;;;;;;AAMA,IAAK;EACJ,MAAM,EAAE,IAAI;EACZ,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,IAAI;EACjB,WAAW,ECVC,sDAAY;EDWxB,KAAK,EEMa,OAAO;EFLzB,WAAW,EAAE,GAAG;EAChB,cAAc,EAAE,QAAQ",
 "sources": ["../sass/editor-style.scss","../sass/variables-site/_typography.scss","../sass/variables-site/_colors.scss"],
 "names": [],
 "file": "editor-style.css"

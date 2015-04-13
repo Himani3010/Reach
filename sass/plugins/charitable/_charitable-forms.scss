@@ -31,12 +31,6 @@
 	}
 }
 
-// .charitable-form-field-checkbox {
-// 	input {
-// 		width: auto;
-// 	}
-// }
-
 .charitable-form-field-editor {
 	.mce-btn button {
 		color: $color__text;
@@ -46,6 +40,22 @@
 	.wp-editor-container {
 		@include padding( 1 );
 		background-color: $color__border-primary;
+	}
+}
+
+.charitable-form-field-multi-checkbox {	
+	ul {
+		@include padding( 10 );
+		margin: 0;		
+		list-style-type: none;		
+		background-color: $color__background-form-fields;
+		@include clearfix;
+	}	
+
+	li {
+		float: left;
+		width: 50%;
+		@include line-height( 22 );
 	}
 }
 

@@ -25,10 +25,20 @@ function benny_site_url() {
  */
 function benny_condensed_url( $url ) {
 	$parts = parse_url($url);
-	$output = $parts['host'];
-	if ( isset( $parts['path'] ) ) {
-		$output .= $parts['path'];
-	}
+
+    if ( isset( $parts[ 'hosts' ] ) ) {
+
+        $output = $parts[ 'host' ];
+
+        if ( isset( $parts[ 'path' ] ) ) {
+            $output .= $parts[ 'path' ];
+        }
+
+    }
+    else {
+        $output = $url;
+    }
+	
 	return $output;
 }
 

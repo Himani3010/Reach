@@ -3471,9 +3471,6 @@ body.user-dashboard .charitable-form .charitable-submit-field {
       width: 100%;
       padding: none; } }
 
-.charitable-form-field-checkbox input {
-  width: auto; }
-
 .charitable-form-field-editor .mce-btn button {
   color: #7d6e63;
   box-shadow: none; }
@@ -3481,6 +3478,20 @@ body.user-dashboard .charitable-form .charitable-submit-field {
   padding: 1px;
   padding: 0.1rem;
   background-color: #e2dedb; }
+
+.charitable-form-field-multi-checkbox ul {
+  padding: 10px;
+  padding: 1rem;
+  margin: 0;
+  list-style-type: none;
+  background-color: #f1efee;
+  content: "";
+  display: table; }
+.charitable-form-field-multi-checkbox li {
+  float: left;
+  width: 50%;
+  line-height: 22px;
+  line-height: 2.2rem; }
 
 .charitable-fieldset {
   padding: 24px 0px;

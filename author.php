@@ -37,13 +37,13 @@ get_header();
 
 				<?php if ( $donor->twitter ) : ?>
 					<li class="with-icon" data-icon="&#xf099;">
-						<a target="_blank" href="<?php echo $twitter ?>" title="<?php printf( __("Visit %s's Twitter profile", 'benny'), $donor->display_name ) ?>"><?php echo benny_condensed_url( $donor->twitter ) ?></a>
+						<a target="_blank" href="<?php echo $donor->twitter ?>" title="<?php printf( __("Visit %s's Twitter profile", 'benny'), $donor->display_name ) ?>"><?php echo benny_condensed_url( $donor->twitter ) ?></a>
 					</li>
 				<?php endif ?>
 
 				<?php if ( $donor->facebook ) : ?>
 					<li class="with-icon" data-icon="&#xf09a;">
-						<a target="_blank" href="<?php echo $facebook ?>" title="<?php printf( __("Visit %s's Facebook profile", 'benny'), $donor->display_name ) ?>"><?php echo benny_condensed_url( $donor->facebook ) ?></a>
+						<a target="_blank" href="<?php echo $donor->facebook ?>" title="<?php printf( __("Visit %s's Facebook profile", 'benny'), $donor->display_name ) ?>"><?php echo benny_condensed_url( $donor->facebook ) ?></a>
 					</li>
 				<?php endif ?>
 			</ul><!-- .author-links -->
