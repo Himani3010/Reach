@@ -44,9 +44,9 @@ class Benny_Theme {
 	 * Whether crowdfunding is enabled. 
 	 *
 	 * @var 	boolean
-	 * @access  private
+	 * @access  public
 	 */
-	private $crowdfunding = false;
+	public $crowdfunding = false;
 
 	/**
 	 * Retrieve the class instance. If one hasn't been created yet, create it first. 

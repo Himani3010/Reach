@@ -7,6 +7,16 @@
  */
 
 /**
+ * Returns whether crowdfunding is enabled.  
+ *
+ * @return  boolean
+ * @since   1.0.0
+ */
+function benny_crowdfunding_enabled() {
+    return benny_get_theme()->crowdfunding;
+}
+
+/**
  * Return the home URL. Checks if WPML is installed and defers to the WPML function if it is. 
  * 
  * @return 	string
