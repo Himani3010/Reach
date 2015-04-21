@@ -43,8 +43,96 @@
 	}
 }
 
+#charitable-campaign-submission-form {
+	@include fullwidth-wrapper( 36, 36 );
+	@include padding( 24, 12, 0, 12 );
+
+	@include bp( 768 ) {
+		@include padding-right( 36 );
+		@include padding-left( 36 );
+	}
+}
+
 .charitable-campaign-form-table {
-	
+	th,
+	td {
+		@include padding( 12 );
+	}
+
+	tfoot td {
+		background-color: $color__background-screen;
+		border-top: {
+			@include width( 1 );
+			style: solid;
+			color: $color__border-primary;
+		}		
+	}
+}
+
+#charitable-campaign-suggested-donations {
+
+	.suggested-donation {
+		position: relative;
+	}
+
+	th {
+		@include width( 100 );
+		@include font-size( 12 );
+		@include line-height( 37 );
+		background-color: transparent;
+	}
+
+	td {
+		border-top: {
+			@include width( 1 );
+			style: solid;
+			color: $color__border-primary;
+		}
+	}
+
+	.remove {
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 0;
+		padding: 0;
+		background: none;
+		border: none;
+		box-shadow: none;
+		color: transparent;
+
+		&:before {			
+			content: "\f057";
+			font-family: $font__icons;
+			color: $color__text;
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+
+			/* Better Font Rendering =========== */
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+		&:hover {
+			color: transparent;
+
+			&:before {
+				color: $color__accent;
+			}
+		}
+	}
+
+	.amount-col {
+		@include width( 140 );
+	}
+
+	.add-row {
+		font-style: italic;
+	}
 }
 
 .charitable-form-field-multi-checkbox {	
@@ -81,4 +169,37 @@
 		color: $color__border-primary;
 	}
 
+}
+
+.charitable-login-form {
+	@include padding( 0, 0, 12 );
+	border: none;
+
+	#loginform {
+		@include margin-bottom( 12 );
+	}
+
+	.login-username,
+	.login-password {
+		float: left;
+		width: 50%;
+	}
+
+	.login-username {
+		@include padding-right( 36 );
+	}
+
+	.login-submit {
+		@include padding-bottom( 3 );
+	}
+
+	.button-primary {
+		width: auto;
+	}
+}
+
+.charitable-submit-field {
+	.button {
+		width: auto;
+	}
 }

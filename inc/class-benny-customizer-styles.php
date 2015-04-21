@@ -108,9 +108,7 @@ class Benny_Customizer_Styles {
          * Check for saved customizer styles. 
          */
         $styles = get_transient( self::get_transient_key() );      
-            
-        // $styles = false;
-        
+                
         if ( false === $styles ) {
 
             $template_directory = get_template_directory_uri();
@@ -244,7 +242,7 @@ input[type=submit], input[type=reset], button, .button, .active-campaign .campai
 }
 
 /* Widget background colour */
-input[type=text], input[type=password], input[type=number], input[type=email], input[type=date], .chrome input[type=file], .safari input[type=file], textarea, select, .featured-image, th, .entry blockquote, hr, pre, .meta, .audiojs .scrubber, .widget, .sidebar-block, .accordion h3, .atcf-multi-select, #login-form .wrapper { 
+input[type=text], input[type=password], input[type=number], input[type=email], input[type=date], input[type=url], .chrome input[type=file], .safari input[type=file], textarea, select, .featured-image, th, .entry blockquote, hr, pre, .meta, .audiojs .scrubber, .widget, .sidebar-block, .accordion h3, .atcf-multi-select, #login-form .wrapper { 
     background-color: <?php echo $colours['widget_background'] ?>; 
 }
 input:focus, textarea:focus, select:focus, input:active, textarea:active, select:active { 
