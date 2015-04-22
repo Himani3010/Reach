@@ -31,7 +31,7 @@ if ( $campaign === false ) return;
 		</h3>
 	</div>
 	<div class="campaign-description campaign-excerpt">
-		<?php echo apply_filters( 'the_content', $campaign->campaign_description ) ?>			
+		<?php echo apply_filters( 'the_content', $campaign->get( 'description' ) ) ?>			
 	</div>
 
 	<?php 

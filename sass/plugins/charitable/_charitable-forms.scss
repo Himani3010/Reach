@@ -126,9 +126,15 @@
 		}
 	}
 
-	.amount-col {
-		@include width( 140 );
-	}
+	@include bp( 600 ) {
+		.charitable-form-field.odd {
+			width: 25%;
+		}
+
+		.charitable-form-field.even {
+			width: 75%;
+		}
+	}	
 
 	.add-row {
 		font-style: italic;

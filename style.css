@@ -3556,9 +3556,11 @@ body.user-dashboard .charitable-form .charitable-submit-field {
     color: transparent; }
     #charitable-campaign-suggested-donations .remove:hover:before {
       color: #d95b43; }
-#charitable-campaign-suggested-donations .amount-col {
-  width: 140px;
-  width: 14rem; }
+@media (min-width: 37.5em) {
+  #charitable-campaign-suggested-donations .charitable-form-field.odd {
+    width: 25%; }
+  #charitable-campaign-suggested-donations .charitable-form-field.even {
+    width: 75%; } }
 #charitable-campaign-suggested-donations .add-row {
   font-style: italic; }
 

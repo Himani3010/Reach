@@ -12,7 +12,7 @@ if ( $campaign ) :
 	<section class="campaign-summary current-campaign feature-block cf <?php if ( $campaign->has_ended() ) : ?>ended<?php endif ?>">
 		<div class="shadow-wrapper">
 			<div class="campaign-description campaign-excerpt">
-				<?php echo $campaign->campaign_description ?>			
+				<?php echo $campaign->get( 'description' ) ?>
 			</div>				
 			
 			<?php get_template_part( 'campaign', 'featured-image' ) ?>
