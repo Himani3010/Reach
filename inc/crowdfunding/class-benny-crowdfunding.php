@@ -78,6 +78,7 @@ class Benny_Crowdfunding {
 		add_filter( 'charitable_edd_donation_form_show_thumbnail', '__return_false' );
 		add_filter( 'charitable_force_user_dashboard_template', '__return_true' );
 		add_filter( 'charitable_campaign_submission_campaign_fields', array( $this, 'campaign_submission_fields' ) );
+		add_filter( 'charitable_fes_my_campaign_thumbnail_size', array( $this, 'my_campaign_thumbnail_size' ) );
 	}
 
 	/**
@@ -144,6 +145,18 @@ class Benny_Crowdfunding {
 		);
 
 		return $fields;
+	}
+
+	/**
+	 * Set the thumbnail size for campaign images displayed on the "My Campaigns" page. 
+	 *
+	 * @param 	string 		$size
+	 * @return  string
+	 * @access  public
+	 * @since   1.0.0
+	 */
+	public function my_campaign_thumbnail_size( $size ) {
+		return 'campaign-thumbnail-medium';
 	}
 }
 

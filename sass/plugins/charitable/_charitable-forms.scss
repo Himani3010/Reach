@@ -82,12 +82,16 @@
 		background-color: transparent;
 	}
 
-	td {
+	td {		
 		border-top: {
 			@include width( 1 );
 			style: solid;
 			color: $color__border-primary;
 		}
+	}	
+
+	tbody td {
+		background-color: transparent;
 	}
 
 	.remove {

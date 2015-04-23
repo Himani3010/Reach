@@ -147,7 +147,7 @@ a img {
   font-weight: normal;
   font-style: normal; }
 [class^="icon-"], [class*=" icon-"] {
-  font-family: 'Benny-Icons';
+  font-family: "Benny-Icons";
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -315,6 +315,8 @@ body,
 input,
 textarea,
 .format-status .post-title,
+.format-status .entry-header .entry-title,
+.entry-header .format-status .entry-title,
 #lang-sel,
 .alt {
   font-family: Merriweather, Georgia, "Times New Roman", Times, serif; }
@@ -329,6 +331,7 @@ input[type=reset],
 .countdown,
 .site-title,
 .post-title,
+.entry-header .entry-title,
 .page-title,
 legend,
 .account-links,
@@ -1793,7 +1796,7 @@ a {
 /*--------------------------------------------------------------
 11.1 Posts and pages
 --------------------------------------------------------------*/
-.post-title {
+.post-title, .entry-header .entry-title {
   margin-bottom: 12px;
   margin-bottom: 1.2rem;
   padding-bottom: 4px;
@@ -1806,10 +1809,11 @@ a {
   margin: 2.4rem 0rem 1.2rem;
   text-align: center;
   word-break: break-word; }
-  .post-title:hover,
-  .post-title a:hover {
+  .post-title:hover, .entry-header .entry-title:hover,
+  .post-title a:hover,
+  .entry-header .entry-title a:hover {
     text-decoration: none; }
-  .post-title a {
+  .post-title a, .entry-header .entry-title a {
     color: #d95b43; }
 
 .banner {
@@ -1847,7 +1851,7 @@ a {
   border-color: #fff; }
   .sticky a {
     color: #fff; }
-  .sticky .post-title {
+  .sticky .post-title, .sticky .entry-header .entry-title, .entry-header .sticky .entry-title {
     border-color: #df745f; }
   .sticky .entry a {
     text-decoration: underline; }
@@ -3529,6 +3533,8 @@ body.user-dashboard .charitable-form .charitable-submit-field {
   border-top-width: 0.1rem;
   border-top-style: solid;
   border-top-color: #e2dedb; }
+#charitable-campaign-suggested-donations tbody td {
+  background-color: transparent; }
 #charitable-campaign-suggested-donations .remove {
   position: absolute;
   top: 0;
@@ -3618,6 +3624,183 @@ body.user-dashboard .charitable-form .charitable-submit-field {
 
 .charitable-submit-field .button {
   width: auto; }
+
+/*--------------------------------------------------------------  
+18.1.8 User Campaigns
+--------------------------------------------------------------*/
+.entry-header .entry-title {
+  margin-top: 0;
+  color: #d95b43; }
+
+.charitable-user-campaigns {
+  list-style: none;
+  padding: 24px 0px;
+  padding: 2.4rem 0rem;
+  margin: 0; }
+
+.charitable-campaign {
+  width: 100%;
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+  border-width: 1px;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: #e2dedb;
+  border-radius: 0.4rem;
+  /* Float image and campaign summary side by side, with actions below. */
+  /* Float actions to the right. */ }
+  .charitable-campaign .campaign-summary {
+    padding: 0px 12px;
+    padding: 0rem 1.2rem;
+    margin: 0;
+    background-color: transparent; }
+  .charitable-campaign .campaign-stats {
+    width: auto;
+    max-width: 100%;
+    float: none;
+    padding: 0;
+    margin: 0; }
+    .charitable-campaign .campaign-stats .campaign-summary-item .amount,
+    .charitable-campaign .campaign-stats .campaign-summary-item .donors-count {
+      font-size: 16px;
+      font-size: 1.6rem; }
+    .charitable-campaign .campaign-stats .campaign-summary-item span {
+      line-height: 24px;
+      line-height: 2.4rem; }
+    .charitable-campaign .campaign-stats li {
+      float: none;
+      width: 100%;
+      padding: 12px 0px;
+      padding: 1.2rem 0rem;
+      margin: 0;
+      border-bottom-width: 1px;
+      border-bottom-width: 0.1rem;
+      border-bottom-style: solid;
+      border-bottom-color: #e2dedb;
+      font-size: 12px;
+      font-size: 1.2rem;
+      text-align: left; }
+      .charitable-campaign .campaign-stats li:last-child {
+        padding-bottom: 12px;
+        padding-bottom: 1.2rem; }
+      @media (min-width: 37.5em) {
+        .charitable-campaign .campaign-stats li {
+          float: left;
+          width: 50%; }
+          .charitable-campaign .campaign-stats li.campaign-donors {
+            border-bottom: 0; } }
+    .charitable-campaign .campaign-stats span.goal-amount {
+      display: inline;
+      font-size: 1em;
+      line-height: 1em;
+      font-weight: bolder; }
+  .charitable-campaign .campaign-actions {
+    padding: 12px;
+    padding: 1.2rem;
+    font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+    letter-spacing: 1px;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    border-top-width: 1px;
+    border-top-width: 0.1rem;
+    border-top-style: solid;
+    border-top-color: #e2dedb;
+    background-color: #f1efee; }
+    .charitable-campaign .campaign-actions .actions {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      text-align: center; }
+      .charitable-campaign .campaign-actions .actions li:last-child {
+        margin-bottom: 0; }
+    .charitable-campaign .campaign-actions a {
+      color: #7d6e63; }
+      .charitable-campaign .campaign-actions a:hover {
+        text-decoration: none;
+        color: #d95b43; }
+      .charitable-campaign .campaign-actions a:before {
+        position: relative;
+        top: 1px;
+        top: 0.1rem;
+        padding-right: 6px;
+        padding-right: 0.6rem;
+        font-size: 16px;
+        font-size: 1.6rem;
+        font-family: "Benny-Icons";
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
+    .charitable-campaign .campaign-actions .edit-campaign a:before {
+      content: "\f040"; }
+  @media (min-width: 48em) {
+    .charitable-campaign {
+      content: "";
+      display: table; }
+      .charitable-campaign .wp-post-image {
+        float: left;
+        max-width: 320px;
+        max-width: 32rem;
+        width: 50%; }
+      .charitable-campaign .campaign-summary {
+        float: left;
+        min-width: 50%;
+        width: calc( 100% - 320px ); }
+      .charitable-campaign .campaign-title {
+        margin-top: 12px;
+        margin-top: 1.2rem; }
+      .charitable-campaign .campaign-actions {
+        float: left;
+        width: 100%; } }
+  @media (min-width: 56.25em) {
+    .charitable-campaign {
+      position: relative;
+      z-index: 1;
+      overflow: hidden; }
+      .charitable-campaign .wp-post-image {
+        width: 35%; }
+      .charitable-campaign .campaign-summary {
+        min-width: 0;
+        width: calc( 65% - 150px ); }
+      .charitable-campaign .campaign-actions {
+        position: relative;
+        z-index: 1;
+        float: right;
+        width: 150px;
+        width: 15rem;
+        border-top: 0;
+        background-color: transparent; }
+        .charitable-campaign .campaign-actions li {
+          padding: 12px 0px;
+          padding: 1.2rem 0rem;
+          border-bottom-width: 1px;
+          border-bottom-width: 0.1rem;
+          border-bottom-style: solid;
+          border-bottom-color: #e2dedb; }
+          .charitable-campaign .campaign-actions li:first-child {
+            padding-top: 0; }
+      .charitable-campaign:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 150px;
+        width: 15rem;
+        height: 100%;
+        background-color: #f1efee;
+        border-width: 1px;
+        border-width: 0.1rem;
+        border-style: solid;
+        border-color: #e2dedb;
+        border-radius: 0 0.4rem 0.4rem 0; } }
+  @media (min-width: 66.125em) {
+    .charitable-campaign .campaign-summary {
+      width: calc( 100% - 470px ); } }
 
 /*-------------------------------------------------------------- 
 18.2 Easy Digital Downloads
