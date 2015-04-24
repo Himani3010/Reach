@@ -20,6 +20,7 @@
 			width: 50%;			
 
 			&.odd {
+				clear: left;
 				@include padding-right( 36 );
 			}
 
@@ -69,9 +70,8 @@
 	}
 }
 
-#charitable-campaign-suggested-donations {
-
-	.suggested-donation {
+.charitable-repeatable-form-field-table {	
+	.repeatable-field {
 		position: relative;
 	}
 
@@ -128,9 +128,15 @@
 				color: $color__accent;
 			}
 		}
-	}
+	}	
 
-	@include bp( 600 ) {
+	.add-row {
+		font-style: italic;
+	}
+}
+
+@include bp( 600 ) {
+	#charitable-campaign-suggested-donations {	
 		.charitable-form-field.odd {
 			width: 25%;
 		}
@@ -139,10 +145,6 @@
 			width: 75%;
 		}
 	}	
-
-	.add-row {
-		font-style: italic;
-	}
 }
 
 .charitable-form-field-multi-checkbox {	

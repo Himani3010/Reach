@@ -3472,6 +3472,7 @@ body.user-dashboard .charitable-form .charitable-submit-field {
     float: left;
     width: 50%; }
     .charitable-form-fields .charitable-form-field.odd {
+      clear: left;
       padding-right: 36px;
       padding-right: 3.6rem; }
     .charitable-form-fields .charitable-form-field.fullwidth, .charitable-form-fields .charitable-form-field.page-template-page-template-home-slider {
@@ -3518,9 +3519,9 @@ body.user-dashboard .charitable-form .charitable-submit-field {
   border-top-style: solid;
   border-top-color: #e2dedb; }
 
-#charitable-campaign-suggested-donations .suggested-donation {
+.charitable-repeatable-form-field-table .repeatable-field {
   position: relative; }
-#charitable-campaign-suggested-donations th {
+.charitable-repeatable-form-field-table th {
   width: 100px;
   width: 10rem;
   font-size: 12px;
@@ -3528,14 +3529,14 @@ body.user-dashboard .charitable-form .charitable-submit-field {
   line-height: 37px;
   line-height: 3.7rem;
   background-color: transparent; }
-#charitable-campaign-suggested-donations td {
+.charitable-repeatable-form-field-table td {
   border-top-width: 1px;
   border-top-width: 0.1rem;
   border-top-style: solid;
   border-top-color: #e2dedb; }
-#charitable-campaign-suggested-donations tbody td {
+.charitable-repeatable-form-field-table tbody td {
   background-color: transparent; }
-#charitable-campaign-suggested-donations .remove {
+.charitable-repeatable-form-field-table .remove {
   position: absolute;
   top: 0;
   right: 0;
@@ -3545,7 +3546,7 @@ body.user-dashboard .charitable-form .charitable-submit-field {
   border: none;
   box-shadow: none;
   color: transparent; }
-  #charitable-campaign-suggested-donations .remove:before {
+  .charitable-repeatable-form-field-table .remove:before {
     content: "\f057";
     font-family: "Benny-Icons";
     color: #7d6e63;
@@ -3558,18 +3559,18 @@ body.user-dashboard .charitable-form .charitable-submit-field {
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  #charitable-campaign-suggested-donations .remove:hover {
+  .charitable-repeatable-form-field-table .remove:hover {
     color: transparent; }
-    #charitable-campaign-suggested-donations .remove:hover:before {
+    .charitable-repeatable-form-field-table .remove:hover:before {
       color: #d95b43; }
+.charitable-repeatable-form-field-table .add-row {
+  font-style: italic; }
+
 @media (min-width: 37.5em) {
   #charitable-campaign-suggested-donations .charitable-form-field.odd {
     width: 25%; }
   #charitable-campaign-suggested-donations .charitable-form-field.even {
     width: 75%; } }
-#charitable-campaign-suggested-donations .add-row {
-  font-style: italic; }
-
 .charitable-form-field-multi-checkbox ul {
   padding: 10px;
   padding: 1rem;
