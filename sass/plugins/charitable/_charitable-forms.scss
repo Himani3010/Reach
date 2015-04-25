@@ -32,6 +32,10 @@
 	}
 }
 
+.charitable-form-content {
+	clear: both;
+}
+
 .charitable-form-field-editor {
 	.mce-btn button {
 		color: $color__text;
@@ -71,7 +75,7 @@
 }
 
 .charitable-repeatable-form-field-table {	
-	.repeatable-field {
+	.repeatable-field-wrapper {
 		position: relative;
 	}
 
@@ -100,6 +104,8 @@
 		right: 0;
 		margin: 0;
 		padding: 0;
+		height: auto;
+		line-height: 1em;
 		background: none;
 		border: none;
 		box-shadow: none;
@@ -107,6 +113,7 @@
 
 		&:before {			
 			content: "\f057";
+			float: right;
 			font-family: $font__icons;
 			color: $color__text;
 			speak: none;
@@ -164,23 +171,30 @@
 }
 
 .charitable-fieldset {
-
-	legend {
-		position: relative;
-		@include left( 24 );
-		@include padding( 0, 12 );
-		border: none;
-		color: $color__accent;
-	}
-
-	@include padding( 24, 0 );
+	position: relative;
+	@include padding( 0, 0, 24 );
 	@include margin-bottom( 24 );
-	border-top: {
-		@include width( 2 );
-		style: solid;
-		color: $color__border-primary;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		@include top( 9 );
+		@include height( 2 );
+		width: 100%;
+		background-color: $color__border-primary;		
 	}
 
+	.legend {
+		position: relative;
+		float: left;
+		clear: both;
+		@include left( 24 );
+		@include padding( 0, 12, 24 );		
+		@include font-size( 18 );
+		color: $color__accent;
+		background-color: $color__background-content;
+	}
 }
 
 .charitable-login-form {
