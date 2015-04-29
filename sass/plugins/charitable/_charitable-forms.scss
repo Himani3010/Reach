@@ -140,6 +140,13 @@
 	.add-row {
 		font-style: italic;
 	}
+
+	.charitable-fieldset {
+		float: left;
+		width: 100%;
+		clear: both;
+		@include margin-top( 12 );
+	}
 }
 
 @include bp( 600 ) {
@@ -228,4 +235,34 @@
 	.button {
 		width: auto;
 	}
+}
+
+.charitable-notice {
+    @include padding( 12 );
+    @include margin-bottom( 24 );
+    border: {
+    	@include width( 1 );
+    	style: solid;
+    	color: $color__border-primary;
+    }
+    background-color: $color__background-form-fields;
+    color: $color__text-dark;
+    
+    ul {
+    	list-style: none;
+	    padding: 0;
+	    margin: 0;
+
+	    ul {
+	    	list-style: disc;
+	    	@include padding-left( 16 );
+	    	li {
+		    	margin-bottom: 0;
+		    }	
+	    }
+    }
+
+    li:last-child {
+    	margin-bottom: 0;
+    }
 }
