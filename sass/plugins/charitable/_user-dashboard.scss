@@ -23,6 +23,16 @@ body.user-dashboard {
 			.button {
 				@include button-inverted();
 			}
+
+			.button.button-primary {
+				border-color: $color__accent;
+				color: $color__accent;
+
+				&:hover {
+					background-color: $color__accent;
+					color: $color__text-overlay;
+				}
+			}
 		}
 	}
 }

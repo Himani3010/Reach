@@ -17,7 +17,7 @@ $currency_helper 	= charitable()->get_currency_helper();
 		data-progress-stroke="<?php echo get_theme_mod('accent_colour', '#d95b43') ?>">
 	</li>
 	<li class="campaign-raised">
-		<span><?php echo $campaign->get_percent_donated_raw() ?><sup>%</sup></span>
+		<span><?php echo number_format( $campaign->get_percent_donated_raw(), 2 ) ?><sup>%</sup></span>
 		<?php _e( 'Funded', 'benny' ) ?>		
 	</li>
 	<li class="campaign-pledged">

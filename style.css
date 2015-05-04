@@ -3401,6 +3401,12 @@ body.user-dashboard .charitable-form .charitable-submit-field {
       background-color: #7d6e63;
       color: #fff;
       text-decoration: none; }
+  body.user-dashboard .charitable-form .charitable-submit-field .button.button-primary {
+    border-color: #d95b43;
+    color: #d95b43; }
+    body.user-dashboard .charitable-form .charitable-submit-field .button.button-primary:hover {
+      background-color: #d95b43;
+      color: #fff; }
 
 .user-dashboard-menu {
   font-size: 13px;
