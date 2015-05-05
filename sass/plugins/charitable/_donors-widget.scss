@@ -1,0 +1,10 @@
+.donors-list {
+    .donor {
+        float: left;
+        width: 20%;
+        @include padding-right( 12 );
+    }
+    .donor-name {
+        @include margin-top( 12 );
+    }
+}

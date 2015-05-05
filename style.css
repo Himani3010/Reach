@@ -2966,8 +2966,17 @@ embed {
     width: 27.5rem; }
 
 /*--------------------------------------------------------------
-18.1.2 Campaign Connected Downloads Widget
+18.1.2 Widgets
 --------------------------------------------------------------*/
+.donors-list .donor {
+  float: left;
+  width: 20%;
+  padding-right: 12px;
+  padding-right: 1.2rem; }
+.donors-list .donor-name {
+  margin-top: 12px;
+  margin-top: 1.2rem; }
+
 .widget.widget_charitable_edd_campaign_downloads {
   padding: 24px 12px;
   padding: 2.4rem 1.2rem;
