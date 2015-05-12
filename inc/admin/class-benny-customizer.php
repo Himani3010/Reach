@@ -11,11 +11,10 @@ class Benny_Customizer {
      * Instantiate the object, but only if this is the start phase. 
      *
      * @static
-     * @param   Benny_Theme          $theme
-     * @param   WP_Customize_Manager    $wp_customize 
+     * @param   Benny_Theme     $theme
      * @return  void
      */
-    public static function start( Benny_Theme $theme, WP_Customize_Manager $wp_customize ) {
+    public static function start( Benny_Theme $theme ) {
         if ( $theme->started() ) {
             return;
         }
@@ -56,22 +55,18 @@ class Benny_Customizer {
      * @since   1.6.0
      */
     public function customize_save_after( WP_Customize_Manager $wp_customize ) {
-        /** 
-         * The saved styles may no longer be valid, so delete them. They 
-         * will be re-created on the next page load.
-         */
         delete_transient( Benny_Customizer_Styles::get_transient_key() );
     }
 
     /**
      * Theme customization. 
      *
+     * @param   WP_Customize_Manager $wp_customize
      * @return  void
      */
     public function customize_register($wp_customize) {
-        /** 
-         * Title & tagline section
-         */
+        
+        /* Title & tagline section */
         $wp_customize->add_setting( 'logo_url', array( 'transport' => 'postMessage' ) );
         $wp_customize->add_setting( 'retina_logo_url', array( 'transport' => 'postMessage' ) );
         $wp_customize->add_setting( 'hide_site_title', array( 'transport' => 'postMessage' ) );
@@ -103,9 +98,7 @@ class Benny_Customizer {
             'type'          => 'checkbox'            
         ) );
         
-        /** 
-         * Colors
-         */
+        /* Colors */
         $priority = 10;
 
         foreach ( Benny_Customizer_Styles::get_customizer_colours() as $key => $colour ) {          
@@ -123,9 +116,7 @@ class Benny_Customizer {
             $priority += 1;
         }
 
-        /**
-         * Textures
-         */
+        /* Textures */
         $wp_customize->add_section( 'textures', array( 
             'priority'      => $priority, 
             'title'         => __( 'Background Textures', 'benny' ), 
@@ -228,9 +219,7 @@ class Benny_Customizer {
         //     $priority += 1;             
         // }
 
-        /** 
-         * Footer
-         */
+        /* Footer */
         $wp_customize->add_section( 'footer', array( 
             'title'     => __( 'Footer', 'benny' ), 
             'priority'  => $priority 
@@ -251,16 +240,13 @@ class Benny_Customizer {
 
         $priority += 1; 
 
-        /**
-         * Social
-         */ 
+        /* Social */ 
         $wp_customize->add_section( 'social', array( 
             'priority'      => 103, 
             'title'         => __( 'Social', 'benny' ),
             'description'   => __( 'Set up links to your online social presences', 'benny' )
         ) );
 
-        // Loop over all the social sites the theme supports, creating settings and controls for each one
         foreach ( benny_get_social_sites() as $setting_key => $label ) {
             $wp_customize->add_setting( $setting_key, array( 
                 'transport' => 'postMessage' 

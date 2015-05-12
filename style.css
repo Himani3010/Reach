@@ -3532,12 +3532,20 @@ body.user-dashboard .charitable-form .charitable-submit-field {
   padding: 12px;
   padding: 1.2rem; }
 .charitable-campaign-form-table tfoot td {
-  background-color: #f9f8f7;
+  background-color: #f1efee;
   border-top-width: 1px;
   border-top-width: 0.1rem;
   border-top-style: solid;
   border-top-color: #e2dedb; }
 
+.charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) {
+  background-color: #f9f8f7; }
+  .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) select, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) textarea {
+    background-color: #fff;
+    border-width: 1px;
+    border-width: 0.1rem;
+    border-style: solid;
+    border-color: #e2dedb; }
 .charitable-repeatable-form-field-table .repeatable-field-wrapper {
   position: relative; }
 .charitable-repeatable-form-field-table th {
@@ -3568,10 +3576,7 @@ body.user-dashboard .charitable-form .charitable-submit-field {
   box-shadow: none;
   color: transparent; }
   .charitable-repeatable-form-field-table .remove:before {
-    content: "\f057";
-    float: right;
     font-family: "Benny-Icons";
-    color: #7d6e63;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -3580,13 +3585,25 @@ body.user-dashboard .charitable-form .charitable-submit-field {
     line-height: 1;
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; }
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f057";
+    float: right;
+    color: #7d6e63; }
   .charitable-repeatable-form-field-table .remove:hover {
     color: transparent; }
     .charitable-repeatable-form-field-table .remove:hover:before {
       color: #d95b43; }
 .charitable-repeatable-form-field-table .add-row {
   font-style: italic; }
+  .charitable-repeatable-form-field-table .add-row.button {
+    font-style: normal;
+    border-width: 2px;
+    border-width: 0.2rem;
+    border-style: solid;
+    border-color: #7d6e63;
+    box-shadow: none;
+    background: #fff;
+    color: #7d6e63; }
 .charitable-repeatable-form-field-table .charitable-fieldset {
   float: left;
   width: 100%;
@@ -3641,6 +3658,22 @@ body.user-dashboard .charitable-form .charitable-submit-field {
     font-size: 1.8rem;
     color: #d95b43;
     background-color: #fff; }
+  .charitable-fieldset .charitable-fieldset {
+    margin-bottom: 0;
+    padding: 0;
+    border-top-width: 1px;
+    border-top-width: 0.1rem;
+    border-top-style: solid;
+    border-top-color: #e2dedb; }
+    .charitable-fieldset .charitable-fieldset::before {
+      display: none; }
+    .charitable-fieldset .charitable-fieldset .legend {
+      background: transparent;
+      left: 0;
+      padding: 12px 0px;
+      padding: 1.2rem 0rem;
+      font-size: 14px;
+      font-size: 1.4rem; }
 
 .charitable-login-form {
   padding: 0px 0px 12px;

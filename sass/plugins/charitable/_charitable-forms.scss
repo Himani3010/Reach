@@ -65,7 +65,7 @@
 	}
 
 	tfoot td {
-		background-color: $color__background-screen;
+		background-color: $color__background-form-fields;
 		border-top: {
 			@include width( 1 );
 			style: solid;
@@ -75,6 +75,19 @@
 }
 
 .charitable-repeatable-form-field-table {	
+	.repeatable-field:nth-child(odd) {
+		background-color: $color__background-wrapper;
+
+		input, select, textarea {
+			background-color: $color__background-content;
+			border: {
+				@include width( 1 );
+				style: solid;
+				color: $color__border-primary;
+			}
+		}
+	}
+
 	.repeatable-field-wrapper {
 		position: relative;
 	}
@@ -111,21 +124,11 @@
 		box-shadow: none;
 		color: transparent;
 
-		&:before {			
+		&:before {	
+			@include icon;		
 			content: "\f057";
 			float: right;
-			font-family: $font__icons;
-			color: $color__text;
-			speak: none;
-			font-style: normal;
-			font-weight: normal;
-			font-variant: normal;
-			text-transform: none;
-			line-height: 1;
-
-			/* Better Font Rendering =========== */
-			-webkit-font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
+			color: $color__text;			
 		}
 
 		&:hover {
@@ -139,6 +142,18 @@
 
 	.add-row {
 		font-style: italic;
+
+		&.button {
+		    font-style: normal;
+		    border: {
+		    	@include width( 2 ); 
+		    	style: solid;
+		    	color: $color__background-button;
+		    }
+		    box-shadow: none;
+		    background: $color__background-content;
+		    color: $color__background-button;
+		}
 	}
 
 	.charitable-fieldset {
@@ -202,6 +217,27 @@
 		color: $color__accent;
 		background-color: $color__background-content;
 	}
+
+	.charitable-fieldset {
+	    margin-bottom: 0;	    
+	    padding: 0;
+	    border-top: {
+	    	@include width( 1 );
+	    	style: solid;
+	    	color: $color__border-primary;
+	    }
+
+	    &::before {
+	    	display: none;
+	    }
+
+	    .legend {
+	    	background: transparent;
+		    left: 0;
+		    @include padding( 12, 0 );
+		    @include font-size( 14 );
+	    }
+	}	
 }
 
 .charitable-login-form {
