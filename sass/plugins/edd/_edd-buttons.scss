@@ -21,3 +21,21 @@ body .edd-submit.button {
 		}
 	}
 }
+
+div.printfriendly {
+    margin-right: 0;
+
+    a, 
+    a:link,
+    a:visited {
+    	@include font-size( 12 );
+	    @include letter-spacing( 2 );    
+	    color: $color__text;
+	    font-family: $font__secondary;
+	    text-transform: uppercase;
+    }
+    
+    a span {
+	    vertical-align: top;
+	}
+}

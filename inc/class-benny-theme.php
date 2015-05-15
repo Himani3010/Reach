@@ -80,11 +80,13 @@ class Benny_Theme {
 
 		$this->maybe_upgrade();
 
-		$this->maybe_start_crowdfunding();	
+		$this->maybe_start_crowdfunding();
 
         $this->maybe_start_customizer();
 
-        $this->maybe_start_jetpack();        
+        $this->maybe_start_jetpack();
+
+        $this->maybe_start_tribe_events();   
 
 		$this->attach_hooks_and_filters();
 
@@ -195,13 +197,28 @@ class Benny_Theme {
      * @since 	1.0
      */
     private function maybe_start_jetpack() {
-
         if ( defined( 'JETPACK__VERSION' ) ) {
 
             require_once( get_template_directory() . '/inc/jetpack/class-benny-jetpack.php');
 
             add_action( 'benny_theme_start', array( 'Benny_Jetpack', 'start' ) );
         }        
+    }
+
+    /**
+     * Set up Tribe Events support if it's enabled. 
+     *
+     * @return  void
+     * @access  private
+     * @since   1.0.0
+     */
+    private function maybe_start_tribe_events() {
+        if ( class_exists( 'TribeEvents' ) ) {
+
+            require_once( get_template_directory() . '/inc/tribe-events/class-benny-tribe-events.php' );
+
+            add_action( 'benny_theme_start', array( 'Benny_Tribe_Events', 'start' ) );
+        }
     }
 
     /**

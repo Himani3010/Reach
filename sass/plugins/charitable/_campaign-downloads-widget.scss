@@ -1,7 +1,7 @@
 .widget.widget_charitable_edd_campaign_downloads {
 	@include padding( 24, 12 );
 	@include border-width( 2 );
-	background: transparent;
+	// background: transparent;
 
 	.charitable-edd-connected-download {
 		@include padding-bottom( 24 );
@@ -16,6 +16,12 @@
 			border: none;
 			padding-bottom: 0;
 			margin-bottom: 0;
+		}
+
+		.edd-add-to-cart.button {
+		    @include font-size( 12 );
+		    @include padding-left( 6 );
+		    @include padding-right( 6 );
 		}
 	}
 

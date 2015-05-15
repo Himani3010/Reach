@@ -11,7 +11,8 @@ input,
 textarea, 
 .format-status .post-title, 
 #lang-sel, 
-.alt {
+.alt, 
+.banner-subtitle {
 	font-family: $font__main;	
 }
 
@@ -19,6 +20,7 @@ h1, h2, h3, h4, h5, h6,
 .menu-site li,
 button,
 .button, 
+.tribe-events-button,
 input[type=submit], 
 input[type=reset],
 .campaign-summary li span, 

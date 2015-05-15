@@ -1,0 +1,176 @@
+/*--------------------------------------------------------------
+18.4.1 Single Event
+--------------------------------------------------------------*/
+body.events-single {
+    @extend .fullwidth;
+
+    .tribe-events-content {
+        @include padding( 24, 0, 12 );
+    }
+
+    .tribe-events-cal-links {
+        float: right;
+        @include padding( 0, 0, 24, 24 );
+        margin: 0;
+    }
+
+    .tribe-events-event-meta {
+        @include padding( 24, 0 );
+        margin: 0;
+        @include font-size( 12 );
+        @include border-width( 2, 0, 0 );
+        border-color: $color__border-primary;
+        background: transparent;    
+
+        .tribe-events-meta-group {
+            @include padding( 0, 24, 0, 0 );
+            margin-bottom: 0;
+        }
+
+        .tribe-events-single-section-title {
+            margin-top: 0;
+        }
+
+        .tribe-events-venue-map {
+            width: 66.6%;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .cart {
+        @include margin-bottom( 36 );
+    }
+
+    .tribe-events-tickets {
+        border-top: {
+            @include width( 1 );
+            style: solid;
+            color: $color__border-primary;
+        }
+        td {
+            @include padding( 12, 10 );
+            border-top: 0;
+        }
+
+        .tickets_price {
+            font-weight: normal;
+            color: $color__text;
+            border-right: none;
+            @include width( 100 );
+        }
+
+        .tickets_name {
+            @include font-size( 12 );
+            border-right: 0;
+            color: $color__text;            
+        }
+
+        .eddtickets-add {
+            border-bottom: {
+                @include width( 1 );
+                style: solid;
+                color: $color__border-primary;
+            }
+
+            .edd-submit {
+                margin: 0;
+            }
+        }
+    }
+
+    .tribe-events-tickets-title,
+    .tribe-events-single-section-title {
+        @include margin( 24, 0, 12 );
+        @include font-size( 20 );
+        @include line-height( 30 );
+    }
+}
+
+body.tribe-mobile #main {
+    @include padding-top( 36 );
+}
+
+#tribe-events-pg-template {
+    padding: 0;
+    max-width: 100%;
+}
+
+#tribe-events {
+    .tribe-events-button {
+        @include padding( 0, 10 );
+        @include line-height( 27 );
+        @include font-size( 12 );
+        @include letter-spacing( 2 );
+        background: transparent;
+        color: $color__background-button;
+        border: {
+            @include width( 2 ); 
+            style: solid;
+            color: $color__background-button;
+        }
+
+        &:hover {
+            background: $color__background-button;
+            color: $color__background-content;
+        }
+    }
+}
+
+/*--------------------------------------------------------------
+18.4.2 Event Widget
+--------------------------------------------------------------*/
+.event-schedule {
+    font-weight: bold;
+}
+
+.event-tickets {
+    li {  
+        @extend .cf;      
+        width: 100%;
+        border-bottom: {
+            @include width( 2 ); 
+            style: solid;
+            color: $color__border-primary;
+        }
+        @include margin( 0, 0 12 );
+        @include padding( 0, 0 12 );
+        text-align: center;
+        
+        h6 {
+            margin: 0;
+            float: left;
+            @include line-height( 27 );
+            font-family: $font__main;
+            letter-spacing: 0;
+            text-transform: none;
+        }
+
+        .out-of-stock {
+            @include line-height( 27 );
+        }
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    .edd_download_purchase_form {
+        float:  right;        
+    }
+
+    .edd-cart-ajax-alert {
+        height: 0;
+    }
+
+    .button.edd-add-to-cart {  
+        margin: 0;      
+        @include padding-left( 6 );
+        @include padding-right( 6 );        
+        @include font-size( 12 );
+    }
+
+    .edd-cart-ajax-alert {
+        display: none;
+    }
+}

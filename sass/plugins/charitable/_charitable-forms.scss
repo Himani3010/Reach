@@ -13,15 +13,18 @@
 }
 
 .charitable-form-fields {	
-
-	@include bp( 600 ) {
-		.charitable-form-field {
+	.charitable-form-field { 
+		clear: left;
+		@include bp( 600 ) {	
 			float: left;
-			width: 50%;			
+			width: 50%;						
 
 			&.odd {
-				clear: left;
 				@include padding-right( 36 );
+			}
+
+			&.even {
+				clear: none;
 			}
 
 			&.fullwidth {
@@ -86,10 +89,18 @@
 				color: $color__border-primary;
 			}
 		}
+		input[type=file] {
+			background-color: transparent;
+			border: none;
+		}
 	}
 
 	.repeatable-field-wrapper {
 		position: relative;
+		@extend .cf;
+		@include bp( 768 ) {
+			@include padding( 24 );
+		}
 	}
 
 	th {
@@ -118,6 +129,7 @@
 		margin: 0;
 		padding: 0;
 		height: auto;
+		@include font-size( 18 );
 		line-height: 1em;
 		background: none;
 		border: none;

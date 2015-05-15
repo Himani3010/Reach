@@ -318,13 +318,15 @@ textarea,
 .format-status .entry-header .entry-title,
 .entry-header .format-status .entry-title,
 #lang-sel,
-.alt {
+.alt,
+.banner-subtitle {
   font-family: Merriweather, Georgia, "Times New Roman", Times, serif; }
 
 h1, h2, h3, h4, h5, h6,
 .menu-site li,
 button,
 .button,
+.tribe-events-button,
 input[type=submit],
 input[type=reset],
 .campaign-summary li span,
@@ -1128,13 +1130,15 @@ a {
 /*--------------------------------------------------------------
 8.0 Clearings
 --------------------------------------------------------------*/
-.cf:before, #edd_checkout_wrap #edd_checkout_form_wrap:before,
+.cf:before, .charitable-repeatable-form-field-table .repeatable-field-wrapper:before, #edd_checkout_wrap #edd_checkout_form_wrap:before, .event-tickets li:before,
 .cf:after,
-#edd_checkout_wrap #edd_checkout_form_wrap:after {
+.charitable-repeatable-form-field-table .repeatable-field-wrapper:after,
+#edd_checkout_wrap #edd_checkout_form_wrap:after,
+.event-tickets li:after {
   content: "";
   display: table; }
 
-.cf:after, #edd_checkout_wrap #edd_checkout_form_wrap:after {
+.cf:after, .charitable-repeatable-form-field-table .repeatable-field-wrapper:after, #edd_checkout_wrap #edd_checkout_form_wrap:after, .event-tickets li:after {
   clear: both; }
 
 /*-------------------------------------------------------------- 
@@ -1785,13 +1789,13 @@ a {
   #site-footer a {
     height: auto; }
 
-.fullwidth .content-area, .page-template-page-template-home-slider .content-area {
+.fullwidth .content-area, .page-template-page-template-home-slider .content-area, body.events-single .content-area {
   float: none;
   margin: 0;
   width: 100%; }
-.fullwidth .site-main, .page-template-page-template-home-slider .site-main {
+.fullwidth .site-main, .page-template-page-template-home-slider .site-main, body.events-single .site-main {
   margin: 0; }
-.fullwidth .site-content .widget-area, .page-template-page-template-home-slider .site-content .widget-area {
+.fullwidth .site-content .widget-area, .page-template-page-template-home-slider .site-content .widget-area, body.events-single .site-content .widget-area {
   width: 100%; }
 
 /*--------------------------------------------------------------
@@ -1825,6 +1829,8 @@ a {
   width: calc( 100% + 48px );
   min-height: 100px;
   min-height: 10rem;
+  padding: 35px 0px;
+  padding: 3.5rem 0rem;
   margin: -36px 0px 36px;
   margin: -3.6rem 0rem 3.6rem;
   text-align: center; }
@@ -1837,11 +1843,17 @@ a {
 
 .banner-title {
   margin: 0;
-  padding: 35px 0px;
-  padding: 3.5rem 0rem;
+  padding: 0;
   line-height: 1em;
   letter-spacing: 3px;
   letter-spacing: 0.3rem; }
+
+.banner-subtitle {
+  margin: 12px 0px 0px;
+  margin: 1.2rem 0rem 0rem;
+  font-style: italic;
+  letter-spacing: 0;
+  text-transform: none; }
 
 .sticky {
   color: #fff;
@@ -2106,7 +2118,7 @@ a {
     float: left;
     width: 49%;
     margin-right: 2%; }
-  .comments-section .comment-text-input.fullwidth, .comments-section .comment-text-input.page-template-page-template-home-slider {
+  .comments-section .comment-text-input.fullwidth, .comments-section .comment-text-input.page-template-page-template-home-slider, .comments-section body.comment-text-input.events-single {
     width: 100%;
     margin: 0; }
   .comments-section .comment-text-input.last {
@@ -2981,8 +2993,7 @@ embed {
   padding: 24px 12px;
   padding: 2.4rem 1.2rem;
   border-width: 2px;
-  border-width: 0.2rem;
-  background: transparent; }
+  border-width: 0.2rem; }
   .widget.widget_charitable_edd_campaign_downloads .charitable-edd-connected-download {
     padding-bottom: 24px;
     padding-bottom: 2.4rem;
@@ -2996,6 +3007,13 @@ embed {
       border: none;
       padding-bottom: 0;
       margin-bottom: 0; }
+    .widget.widget_charitable_edd_campaign_downloads .charitable-edd-connected-download .edd-add-to-cart.button {
+      font-size: 12px;
+      font-size: 1.2rem;
+      padding-left: 6px;
+      padding-left: 0.6rem;
+      padding-right: 6px;
+      padding-right: 0.6rem; }
   .widget.widget_charitable_edd_campaign_downloads .wp-post-image {
     margin-bottom: 12px;
     margin-bottom: 1.2rem; }
@@ -3483,17 +3501,20 @@ body.user-dashboard .charitable-form .charitable-submit-field {
   max-width: 100%;
   width: 100%; }
 
-@media (min-width: 37.5em) {
-  .charitable-form-fields .charitable-form-field {
-    float: left;
-    width: 50%; }
-    .charitable-form-fields .charitable-form-field.odd {
-      clear: left;
-      padding-right: 36px;
-      padding-right: 3.6rem; }
-    .charitable-form-fields .charitable-form-field.fullwidth, .charitable-form-fields .charitable-form-field.page-template-page-template-home-slider {
-      width: 100%;
-      padding: none; } }
+.charitable-form-fields .charitable-form-field {
+  clear: left; }
+  @media (min-width: 37.5em) {
+    .charitable-form-fields .charitable-form-field {
+      float: left;
+      width: 50%; }
+      .charitable-form-fields .charitable-form-field.odd {
+        padding-right: 36px;
+        padding-right: 3.6rem; }
+      .charitable-form-fields .charitable-form-field.even {
+        clear: none; }
+      .charitable-form-fields .charitable-form-field.fullwidth, .charitable-form-fields .charitable-form-field.page-template-page-template-home-slider, .charitable-form-fields body.charitable-form-field.events-single {
+        width: 100%;
+        padding: none; } }
 
 .charitable-form-content {
   clear: both; }
@@ -3546,8 +3567,15 @@ body.user-dashboard .charitable-form .charitable-submit-field {
     border-width: 0.1rem;
     border-style: solid;
     border-color: #e2dedb; }
+  .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input[type=file] {
+    background-color: transparent;
+    border: none; }
 .charitable-repeatable-form-field-table .repeatable-field-wrapper {
   position: relative; }
+  @media (min-width: 48em) {
+    .charitable-repeatable-form-field-table .repeatable-field-wrapper {
+      padding: 24px;
+      padding: 2.4rem; } }
 .charitable-repeatable-form-field-table th {
   width: 100px;
   width: 10rem;
@@ -3570,6 +3598,8 @@ body.user-dashboard .charitable-form .charitable-submit-field {
   margin: 0;
   padding: 0;
   height: auto;
+  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 1em;
   background: none;
   border: none;
@@ -3918,6 +3948,21 @@ body .edd-submit.button.gray, body .edd-submit.button.white, body .edd-submit.bu
     background-color: #d95b43;
     color: #fff; }
 
+div.printfriendly {
+  margin-right: 0; }
+  div.printfriendly a,
+  div.printfriendly a:link,
+  div.printfriendly a:visited {
+    font-size: 12px;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    letter-spacing: 0.2rem;
+    color: #7d6e63;
+    font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+    text-transform: uppercase; }
+  div.printfriendly a span {
+    vertical-align: top; }
+
 /*--------------------------------------------------------------
 18.2.2 Checkout
 --------------------------------------------------------------*/
@@ -4016,5 +4061,149 @@ body .edd-submit.button.gray, body .edd-submit.button.white, body .edd-submit.bu
 /*--------------------------------------------------------------
 18.3 Ninja Forms
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+18.4 Tribe Events
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+18.4.1 Single Event
+--------------------------------------------------------------*/
+body.events-single .tribe-events-content {
+  padding: 24px 0px 12px;
+  padding: 2.4rem 0rem 1.2rem; }
+body.events-single .tribe-events-cal-links {
+  float: right;
+  padding: 0px 0px 24px 24px;
+  padding: 0rem 0rem 2.4rem 2.4rem;
+  margin: 0; }
+body.events-single .tribe-events-event-meta {
+  padding: 24px 0px;
+  padding: 2.4rem 0rem;
+  margin: 0;
+  font-size: 12px;
+  font-size: 1.2rem;
+  border-width: 2px 0px 0px;
+  border-width: 0.2rem 0rem 0rem;
+  border-color: #e2dedb;
+  background: transparent; }
+  body.events-single .tribe-events-event-meta .tribe-events-meta-group {
+    padding: 0px 24px 0px 0px;
+    padding: 0rem 2.4rem 0rem 0rem;
+    margin-bottom: 0; }
+  body.events-single .tribe-events-event-meta .tribe-events-single-section-title {
+    margin-top: 0; }
+  body.events-single .tribe-events-event-meta .tribe-events-venue-map {
+    width: 66.6%;
+    margin: 0;
+    padding: 0; }
+body.events-single .cart {
+  margin-bottom: 36px;
+  margin-bottom: 3.6rem; }
+body.events-single .tribe-events-tickets {
+  border-top-width: 1px;
+  border-top-width: 0.1rem;
+  border-top-style: solid;
+  border-top-color: #e2dedb; }
+  body.events-single .tribe-events-tickets td {
+    padding: 12px 10px;
+    padding: 1.2rem 1rem;
+    border-top: 0; }
+  body.events-single .tribe-events-tickets .tickets_price {
+    font-weight: normal;
+    color: #7d6e63;
+    border-right: none;
+    width: 100px;
+    width: 10rem; }
+  body.events-single .tribe-events-tickets .tickets_name {
+    font-size: 12px;
+    font-size: 1.2rem;
+    border-right: 0;
+    color: #7d6e63; }
+  body.events-single .tribe-events-tickets .eddtickets-add {
+    border-bottom-width: 1px;
+    border-bottom-width: 0.1rem;
+    border-bottom-style: solid;
+    border-bottom-color: #e2dedb; }
+    body.events-single .tribe-events-tickets .eddtickets-add .edd-submit {
+      margin: 0; }
+body.events-single .tribe-events-tickets-title,
+body.events-single .tribe-events-single-section-title {
+  margin: 24px 0px 12px;
+  margin: 2.4rem 0rem 1.2rem;
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 30px;
+  line-height: 3rem; }
+
+body.tribe-mobile #main {
+  padding-top: 36px;
+  padding-top: 3.6rem; }
+
+#tribe-events-pg-template {
+  padding: 0;
+  max-width: 100%; }
+
+#tribe-events .tribe-events-button {
+  padding: 0px 10px;
+  padding: 0rem 1rem;
+  line-height: 27px;
+  line-height: 2.7rem;
+  font-size: 12px;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
+  background: transparent;
+  color: #7d6e63;
+  border-width: 2px;
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: #7d6e63; }
+  #tribe-events .tribe-events-button:hover {
+    background: #7d6e63;
+    color: #fff; }
+
+/*--------------------------------------------------------------
+18.4.2 Event Widget
+--------------------------------------------------------------*/
+.event-schedule {
+  font-weight: bold; }
+
+.event-tickets li {
+  width: 100%;
+  border-bottom-width: 2px;
+  border-bottom-width: 0.2rem;
+  border-bottom-style: solid;
+  border-bottom-color: #e2dedb;
+  margin: 0px 0 12px;
+  margin: 0rem 0 12/10rem;
+  padding: 0px 0 12px;
+  padding: 0rem 0 12/10rem;
+  text-align: center; }
+  .event-tickets li h6 {
+    margin: 0;
+    float: left;
+    line-height: 27px;
+    line-height: 2.7rem;
+    font-family: Merriweather, Georgia, "Times New Roman", Times, serif;
+    letter-spacing: 0;
+    text-transform: none; }
+  .event-tickets li .out-of-stock {
+    line-height: 27px;
+    line-height: 2.7rem; }
+  .event-tickets li:last-child {
+    border-bottom: 0; }
+.event-tickets .edd_download_purchase_form {
+  float: right; }
+.event-tickets .edd-cart-ajax-alert {
+  height: 0; }
+.event-tickets .button.edd-add-to-cart {
+  margin: 0;
+  padding-left: 6px;
+  padding-left: 0.6rem;
+  padding-right: 6px;
+  padding-right: 0.6rem;
+  font-size: 12px;
+  font-size: 1.2rem; }
+.event-tickets .edd-cart-ajax-alert {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */

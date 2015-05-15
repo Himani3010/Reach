@@ -165,6 +165,19 @@ function benny_get_banner_title() {
 }
 
 /**
+ * Return the banner sub title for the current page. 
+ *
+ * @return  string
+ * @since   2.0.0
+ */
+function benny_get_banner_subtitle() {
+    $title = "";
+    
+    return apply_filters( 'benny_banner_subtitle', $title );   
+}
+
+
+/**
  * Return the media associated with the post.
  *
  * @param   array       $args

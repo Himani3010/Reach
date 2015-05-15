@@ -12,15 +12,23 @@
 .banner {
 	@include fullwidth-wrapper-padded();
 	@include min-height( 100 );
+	@include padding( 35, 0 );
 	@include margin( -36, 0, 36 );
 	text-align: center;
 }
 
 .banner-title {
 	margin: 0;	
-	@include padding( 35, 0 );
+	padding: 0;
 	line-height: 1em;
 	@include letter-spacing( 3 );
+}
+
+.banner-subtitle {
+	@include margin( 12, 0, 0 );
+	font-style: italic;
+	letter-spacing: 0;
+	text-transform: none;
 }
 
 .sticky {
