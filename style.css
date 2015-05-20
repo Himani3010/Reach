@@ -2681,14 +2681,21 @@ embed {
 /*--------------------------------------------------------------
 18.1.1 Campaign Summary
 --------------------------------------------------------------*/
+.single-campaign #main {
+  padding-top: 0; }
+
 .campaign-summary {
   margin-bottom: 36px;
   margin-bottom: 3.6rem; }
+  .campaign-summary .campaign-title {
+    margin: 36px 0px 12px;
+    margin: 3.6rem 0rem 1.2rem;
+    text-align: center; }
   .campaign-summary .campaign-description {
     float: left;
     width: 100%;
-    padding: 36px 0px 24px;
-    padding: 3.6rem 0rem 2.4rem;
+    padding: 0px 0px 24px;
+    padding: 0rem 0rem 2.4rem;
     text-align: center;
     font-size: 22px;
     font-size: 2.2rem;
@@ -3458,7 +3465,7 @@ embed {
   border-width: 2px;
   border-width: 0.2rem;
   border-style: solid;
-  border-color: #7d6e63;
+  border-color: #aea198;
   border-radius: 0.4rem;
   color: #7d6e63;
   background-color: #fff; }
@@ -3471,6 +3478,7 @@ embed {
   .donation-amounts .donation-amount .description {
     display: block; }
   .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover {
+    border-color: #7d6e63;
     background-color: #7d6e63;
     color: #fff; }
   .donation-amounts .donation-amount.custom-donation-amount {
@@ -3482,7 +3490,7 @@ embed {
   padding: 2px;
   padding: 0.2rem;
   border-radius: 0.4rem;
-  background: #7d6e63; }
+  background: #aea198; }
   #custom-donation-amount-field.charitable-custom-donation-field-alone input {
     width: 100%;
     max-width: 100%;

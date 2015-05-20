@@ -11,7 +11,8 @@ if ( $campaign ) :
 ?>
 	<section class="campaign-summary current-campaign feature-block cf <?php if ( $campaign->has_ended() ) : ?>ended<?php endif ?>">
 		<div class="shadow-wrapper">
-			<div class="campaign-description campaign-excerpt">
+			<h1 class="campaign-title"><?php echo $campaign->post_title ?></h1>
+			<div class="campaign-description campaign-excerpt">				
 				<?php echo $campaign->get( 'description' ) ?>
 			</div>				
 			

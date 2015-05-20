@@ -1,10 +1,21 @@
+.single-campaign {	
+	#main {
+		padding-top: 0;
+	}
+}
+
 .campaign-summary {
 	@include margin-bottom( 36 );
+
+	.campaign-title {
+		@include margin( 36, 0, 12 );
+		text-align: center;
+	}
 
 	.campaign-description {
 		float: left;
 		width: 100%;
-		@include padding( 36, 0, 24 );
+		@include padding( 0, 0, 24 );
 		text-align: center;
 		@include font-size( 22 );
 		@include line-height( 32 );

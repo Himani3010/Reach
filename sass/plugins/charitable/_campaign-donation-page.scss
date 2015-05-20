@@ -225,7 +225,7 @@
     border: {
         @include width( 2 );
         style: solid;
-        color: $color__background-button;
+        color: $color__background-body;
     }
     border-radius: 0.4rem;            
     color: $color__text;
@@ -243,6 +243,7 @@
 
     &.selected, 
     &:hover {
+    	border-color: $color__background-button;
         background-color: $color__text;
         color: $color__background-content;
     }
@@ -256,7 +257,7 @@
 #custom-donation-amount-field.charitable-custom-donation-field-alone {    
     @include padding( 2 );
     border-radius: 0.4rem;
-    background: $color__background-button;
+    background: $color__background-body;
 
 	input {
 		width: 100%;	  
