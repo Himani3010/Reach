@@ -50,31 +50,70 @@
 		}	
 	}
 
-	#custom-donation-amount-field {
-		@include margin-bottom( 24 );
+	.donation-amounts {
+		@include margin-bottom( 30 );
+		@extend .cf;
 		
-		input {
+		.donation-amount {
 			width: 100%;
-			max-width: 100%;
+			@include bp (600) {
+				float: left;
+				width: 48%;
+				margin: {
+					top: 0;
+					right: 0;
+					@include bottom( 12 );
+					left: 2%;
+				}
+
+				&:nth-child(2n + 1) {
+					margin-left: 0;
+					clear: left;
+				}
+			}
 		}
 	}
 
 	#custom-donation-amount-field {
-		@include margin-bottom( 24 );
+		@include margin( 12, 0, 0 );
+
 		input {
-			width: 100%;
-			max-width: 100%;			
-			border: {
-				@include width( 2 );
-				style: solid;
-				color: $color__border-primary;
-			}
-			@include font-size( 24 );
-			font-family: $font__secondary;
-			background: $color__background-content;
-			color: $color__text;
+			background-color: $color__background-content;
 		}
-	}
+
+		&.charitable-custom-donation-field-alone {
+			@include margin-bottom( 36 );
+		}
+	}		
+	// 	input {
+	// 		width: 100%;
+	// 		max-width: 100%;
+	// 		@include font-size( 18 );
+	// 		font-family: $font__secondary;
+	// 		background: $color__background-content;
+	// 		color: $color__text;
+	// 	}
+
+	// 	&.charitable-custom-donation-field-alone {
+	// 		@include margin-bottom( 36 );
+	// 		@include padding( 2 );
+	// 		border-radius: 0.4rem;
+	// 		background: $color__background-button;
+	// 		color: $color__text;
+	// 	}
+
+	// 	::-webkit-input-placeholder {
+	// 	   color: $color__text;
+	// 	}
+
+	// 	::-moz-placeholder {
+	// 	   color: $color__text;  
+	// 	}
+
+	// 	:-ms-input-placeholder {  
+	// 	   color: $color__text;  
+	// 	}
+	// }
 
 	.charitable-connected-downloads {	
 		@include margin-bottom( 24 );
@@ -176,5 +215,67 @@
 		&:active {
 			background: $color__accent;
 		}
+	}
+}
+
+.donation-amounts .donation-amount {
+	@include padding( 18, 12 );
+    @include margin( 0, 12, 12, 0 );
+    @include line-height( 18 );
+    border: {
+        @include width( 2 );
+        style: solid;
+        color: $color__background-button;
+    }
+    border-radius: 0.4rem;            
+    color: $color__text;
+    background-color: $color__background-content;        
+
+    .amount {    
+    	display: block;
+    	@include margin-bottom( 6 );                    
+        @include font-size( 18 );            
+    }
+
+	.description {
+        display: block;
+    }
+
+    &.selected, 
+    &:hover {
+        background-color: $color__text;
+        color: $color__background-content;
+    }
+
+    &.custom-donation-amount {
+        @include font-size( 18 );
+        line-height: 1em;
+    }
+}
+
+#custom-donation-amount-field.charitable-custom-donation-field-alone {    
+    @include padding( 2 );
+    border-radius: 0.4rem;
+    background: $color__background-button;
+
+	input {
+		width: 100%;	  
+		max-width: 100%;  
+	    @include font-size( 18 );
+	    font-family: $font__secondary;
+	    color: $color__text; 
+	    background-color: $color__background-content;
+	}
+
+	::-webkit-input-placeholder {
+	   color: $color__background-body;
+	}
+
+	::-moz-placeholder {
+	   color: $color__background-body;  
+	}
+
+	:-ms-input-placeholder {  
+	   color: $color__background-body;  
 	}
 }

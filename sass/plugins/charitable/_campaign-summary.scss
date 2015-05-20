@@ -30,7 +30,6 @@
 			@include width( 200 );
 			@include margin( 30, 0, 0, -60 );
 			text-align: center;
-			// text-transform: uppercase;
 			@include letter-spacing( 1 );
 			@include font-size( 11 );
 			color: $color__text-overlay;
@@ -344,8 +343,6 @@
 	width: 30%;
 }
 
-
-
 #campaign-widget-sharing {
 	pre {
 		word-break: break-word;
@@ -358,5 +355,31 @@
 		&.iframe-block {
 			@include width( 275 );
 		}
+	}
+}
+
+.charitable-fes-campaign-creator-toolbar {
+	@include fullwidth-wrapper-padded();
+	@include padding( 12, 45 );
+	background-color: $color__accent-hover;
+	color: $color__text-overlay;
+
+	a {
+		float: right;
+		color: $color__background-content;
+		font-weight: 100;
+
+		&:hover {
+			color: $color__text-overlay;
+		}
+	}
+
+	.edit-link::before {
+		@include icon();
+		content: "\f040";
+	}
+
+	.campaign-status {
+		color: rgba(255, 255, 255, 0.5);
 	}
 }

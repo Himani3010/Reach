@@ -43,7 +43,10 @@ th,
 .campaign-status .campaign-time-left span,
 .widget_crowdfunding_stats_widget li span, 
 .campaign-image span, 
-.tabs .tab-title {
+.tabs .tab-title, 
+.charitable-fes-campaign-creator-toolbar a, 
+.donation-amounts .amount, 
+.donation-amounts .custom-donation-amount {
 	font-family: $font__secondary;
 	text-transform: uppercase;
 	@include letter-spacing(2);

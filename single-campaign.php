@@ -11,11 +11,15 @@ get_header();
 			the_post();
 			?>
 			<main class="site-main" role="main">
-				
-				<?php get_template_part('campaign', 'summary') ?>			
-	
-				<?php get_template_part('campaign', 'video') ?>
+				<?php 
 
+				do_action( 'charitable_single_campaign_before' );
+				
+				get_template_part('campaign', 'summary');
+	
+				get_template_part('campaign', 'video');
+
+				?>
 				<div class="content-area">
 	
 					<!-- Campaign content -->					
@@ -29,16 +33,18 @@ get_header();
 					<?php comments_template( '/comments-campaign.php', true ) ?>
 
 				</div>
+				<?php 
 
-				<?php get_sidebar( 'campaign' ) ?>
-			
+				get_sidebar( 'campaign' );
+
+				do_action( 'charitable_single_campaign_after' );
+
+				?>		
 			</main>
 		<?php 
 		endwhile;
 	endif;
 	
 	get_template_part( 'campaign', 'share-modal' );
-
-	//get_template_part( 'campaign', 'support-modal' );
-
+	
 get_footer();

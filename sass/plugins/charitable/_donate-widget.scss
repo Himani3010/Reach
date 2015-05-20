@@ -1,0 +1,41 @@
+.widget.widget_charitable_donate_widget {
+    background: transparent;
+    border: none;
+    padding: 0;
+
+    .widget-title {
+        margin-top: 0;
+    }
+
+    .donation-amounts {
+        margin-bottom: 0;
+        
+        li {
+            width: 100%;
+            @include margin( 0, 0, 12 );            
+        }
+
+        .charitable-form-field {
+            @include margin( 12, 0, 0 );
+        }
+    }    
+
+    input[type=text] {
+        background: $color__background-content;        
+    }
+
+    .charitable-donation-form-without-suggestions {
+        @include padding( 12 );
+        background: $color__background-content;
+        border: {
+            @include width( 1 );
+            color: $color__border-primary;
+            style: solid;
+        }
+        border-radius: 0.4rem;
+
+        label {
+            @include margin( 0, 0, 6 );
+        }
+    }
+}
