@@ -19,3 +19,87 @@
         background: $color__background-content;
     }
 }
+
+@mixin product-widget() {
+    .wp-post-image {
+        position: relative;
+        @include fullwidth_calc( 24 );
+        @include top( -24 );
+        @include margin-bottom( -12 );
+        max-width: -webkit-calc( 100% + 48px );
+        max-width: -moz-calc( 100% + 48px );
+        max-width: calc( 100% + 48px );
+        border-radius: 0.4rem 0.4rem 0 0;
+    }
+
+    .download-title {
+        margin-top: 0;
+    }
+
+    .download-price {
+        float: left;
+        @include padding( 0, 0, 12 );
+        font-family: $font__secondary;
+        color: $color__accent;        
+    }
+
+    .edd_download_purchase_form {
+        @extend .cf;
+
+        .edd_price_options {
+            li {
+                width: 100%;
+                @include padding-bottom( 6 );
+                border-bottom: {
+                    @include width( 1 ); 
+                    style: solid;
+                    color: $color__border-primary;
+                }
+            }
+
+            .edd_price_option_sep {
+                display: none;
+            }
+        }
+
+        .edd_price_option_price {
+            float: right;
+        }
+
+        .edd_download_quantity_wrapper {
+            float: left;
+            clear: left;
+            margin-bottom: 0;
+
+            label {
+                display: inline;
+                @include padding-right( 4 );
+            }
+        }
+
+        .edd-input {
+            background-color: $color__background-form-fields;
+        }
+
+        .edd-item-quantity {
+            @include width( 65 );
+            @include padding-left( 6 );
+            @include padding-right( 6 );   
+        }
+        
+        .edd-add-to-cart.button {
+            float: right;
+            @include font-size( 12 );
+            @include padding-left( 6 );
+            @include padding-right( 6 );
+        }   
+
+        .edd_go_to_checkout.button {
+            float: left;
+        }
+
+        .edd-cart-ajax-alert {
+            display: none;
+        }
+    }
+}

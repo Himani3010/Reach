@@ -1,5 +1,4 @@
 .entry-header {
-
     .entry-title {
         @extend .post-title;
         margin-top: 0;
@@ -7,13 +6,13 @@
     }    
 }
 
-.charitable-user-campaigns {
+.charitable-user-posts {
     list-style: none;
     @include padding( 24, 0 );
     margin: 0;
 }
 
-.charitable-campaign {
+.charitable-user-post {
     width: 100%;
     @include margin-bottom( 12 );
     border: {
@@ -23,20 +22,21 @@
     }
     border-radius: 0.4rem;
 
-    .campaign-summary {
+    .user-post-summary {
         @include padding( 0, 12 );
         margin: 0;
         background-color: transparent;
     }    
 
-    .campaign-stats {
+    .user-post-stats {
         width: auto;
         max-width: 100%;
         float: none;
         padding: 0;
         margin: 0;
+        list-style: none;
                
-        .campaign-summary-item {
+        .summary-item {
             .amount, 
             .donors-count {
                 @include font-size( 16 );
@@ -82,7 +82,7 @@
         }
     }
 
-    .campaign-actions {
+    .user-post-actions {
         @include padding( 12 );
         font-family: $font__secondary;
         @include letter-spacing( 1 );
@@ -140,17 +140,17 @@
             width: 50%;
         }
         
-        .campaign-summary {
+        .user-post-summary {
             float: left;
             min-width: 50%;
             width: calc( 100% - 320px );
         }
 
-        .campaign-title {
+        .user-post-title {
             @include margin-top( 12 );
         }
 
-        .campaign-actions {
+        .user-post-actions {
             float: left;
             width: 100%;
         }
@@ -166,12 +166,12 @@
             width: 35%;
         }
 
-        .campaign-summary {
+        .user-post-summary {
             min-width: 0;
             width: calc( 65% - 150px ); // This is the width used when the image is displayed at less than 320px            
         }
 
-        .campaign-actions { 
+        .user-post-actions { 
             position: relative;
             z-index: 1;
             float: right;           
@@ -211,12 +211,8 @@
     }
 
     @include bp( 1058 ) {
-        .campaign-summary {
+        .user-post-summary {
             width: calc( 100% - 470px ); // This is the width used when the image has maxed out at 320px
         }
     }
-}
-
-.campaign-title {
-    
 }

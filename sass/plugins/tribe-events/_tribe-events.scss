@@ -122,6 +122,7 @@ body.tribe-mobile #main {
 --------------------------------------------------------------*/
 .widget.widget_pp_campaign_events {
     @include transparent-widget();
+    @include product-widget();
 }
 
 .event-schedule {
@@ -129,25 +130,28 @@ body.tribe-mobile #main {
 }
 
 .event-tickets {
+    margin-bottom: 0;
+
     li {  
         @extend .cf;      
         width: 100%;
         border-bottom: {
-            @include width( 2 ); 
+            @include width( 1 ); 
             style: solid;
             color: $color__border-primary;
         }
-        @include margin( 0, 0 12 );
-        @include padding( 0, 0 12 );
-        text-align: center;
+        @include margin( 0, 0, 12 );
+        @include padding( 0, 0, 12 );
+        // text-align: center;
         
         h6 {
-            margin: 0;
-            float: left;
+            @include margin( 0, 0, 6 );
+            // float: left;
             @include line-height( 27 );
             font-family: $font__main;
             letter-spacing: 0;
             text-transform: none;
+            font-weight: 700;
         }
 
         .out-of-stock {
@@ -156,25 +160,27 @@ body.tribe-mobile #main {
 
         &:last-child {
             border-bottom: 0;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
     }
 
-    .edd_download_purchase_form {
-        float:  right;        
-    }
+    // // .edd_download_purchase_form {
+    // //     float:  right;        
+    // // }
 
-    .edd-cart-ajax-alert {
-        height: 0;
-    }
+    // // .edd-cart-ajax-alert {
+    // //     height: 0;
+    // // }
 
-    .button.edd-add-to-cart {  
-        margin: 0;      
-        @include padding-left( 6 );
-        @include padding-right( 6 );        
-        @include font-size( 12 );
-    }
+    // .button.edd-add-to-cart {  
+    //     margin: 0;      
+    //     @include padding-left( 6 );
+    //     @include padding-right( 6 );        
+    //     @include font-size( 12 );
+    // }
 
-    .edd-cart-ajax-alert {
-        display: none;
-    }
+    // .edd-cart-ajax-alert {
+    //     display: none;
+    // }
 }

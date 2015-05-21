@@ -71,6 +71,8 @@ class Benny_Crowdfunding {
 		// remove_action( 'edd_purchase_link_top', 		'edd_pl_override_variable_pricing', 10 ); // Purchase limits
 		// add_action( 'edd_purchase_link_top', 			'benny_edd_variable_pricing', 10, 2 );
 		add_filter( 'edd_purchase_form_quantity_input', 'benny_edd_purchase_form_quantity_input' );
+		add_filter( 'edd_purchase_link_args', 'benny_edd_purchase_link_text' );
+		add_action( 'edd_purchase_link_top', 'benny_edd_show_price', 8, 3 );
 		// add_filter( 'edd_purchase_form_variation_quantity_input', 'benny_edd_purchase_form_variation_quantity_input', 10, 3 );
 	
 		remove_filter( 'the_content', 					array( charitable_get_helper( 'templates' ), 'campaign_content' ), 2 );

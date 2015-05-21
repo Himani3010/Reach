@@ -36,4 +36,13 @@
             @include margin( 0, 0, 6 );
         }
     }
+
+    .charitable-submit-field {
+        margin-bottom: 0;
+
+        .button {
+            @include button-inverted();
+            margin: 0;
+        }
+    }
 }
