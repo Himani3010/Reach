@@ -1,0 +1,21 @@
+@mixin transparent-widget() {
+    background: transparent;
+    border: none;
+    padding: 0;
+
+    .widget-title {
+        margin-top: 0;
+    }
+
+    .widget-block {
+        @include padding( 24 );
+        @include margin-bottom( 24 );
+        border: {
+            @include width( 1 );
+            style: solid;
+            color: $color__border-primary;
+        }
+        border-radius: 0.4rem;
+        background: $color__background-content;
+    }
+}

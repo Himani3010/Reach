@@ -280,3 +280,52 @@ if ( ! function_exists( 'benny_edd_variable_pricing_with_limits' ) ) :
 
 endif;
 
+if ( ! function_exists( 'benny_edd_purchase_form_quantity_input' ) ) : 
+
+	/**
+	 * Display quantity input field with quantity label.
+	 * 
+	 * @param   string
+	 * @return  string
+	 * @since   1.0.0
+	 */
+	function benny_edd_purchase_form_quantity_input( $quantity_input ) {
+		ob_start();
+		?>		
+		<div class="edd_download_quantity_wrapper">
+			<label for="edd_download_quantity"><?php _e( 'Qty', 'benny' ) ?></label>
+			<input type="number" min="1" step="1" name="edd_download_quantity" class="edd-input edd-item-quantity" value="1" />
+		</div>
+
+		<?php
+		$quantity_input = ob_get_clean();
+
+		return $quantity_input;
+	}
+
+endif;
+
+
+if ( ! function_exists( 'benny_edd_purchase_form_quantity_input' ) ) : 
+
+	/**
+	 * Display quantity input field with quantity label.
+	 * 
+	 * @param   string
+	 * @return  string
+	 * @since   1.0.0
+	 */
+	function benny_edd_purchase_form_variation_quantity_input( $quantity_input, $key, $price ) {
+		ob_start();
+		?>		
+		<div class="edd_download_quantity_wrapper edd_download_quantity_price_option_<?php echo sanitize_key( $price['name'] ) ?>">
+			<span class="edd_price_option_sep">&nbsp;x&nbsp;</span>
+			<input type="number" min="1" step="1" name="edd_download_quantity_<?php echo esc_attr( $key ) ?>" class="edd-input edd-item-quantity" value="1" />
+		</div>
+		<?php
+		$quantity_input = ob_get_clean();
+
+		return $quantity_input;
+	}
+
+endif;

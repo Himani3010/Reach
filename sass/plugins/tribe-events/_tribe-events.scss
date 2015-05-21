@@ -120,6 +120,10 @@ body.tribe-mobile #main {
 /*--------------------------------------------------------------
 18.4.2 Event Widget
 --------------------------------------------------------------*/
+.widget.widget_pp_campaign_events {
+    @include transparent-widget();
+}
+
 .event-schedule {
     font-weight: bold;
 }
