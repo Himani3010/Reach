@@ -1,0 +1,52 @@
+.widget.widget_campaign_creator_widget {
+    .avatar {
+        float: left;
+        @include margin( 0, 12, 12, 0 );
+    }
+
+    .creator-summary {
+        float: left;
+    }
+
+    .creator-name {
+        margin-top: 0;
+    }
+
+    .creator-bio, 
+    .creator-links,
+    .creator-profile-link {
+        float: left;
+        clear: both;
+        width: 100%;
+    }
+
+    .creator-bio {
+        @include padding-top( 12 );
+        border-top: {
+            @include width( 1 );
+            style: solid;
+            color: $color__border-primary;
+        }
+    }
+
+    .creator-links {
+        @include margin-left( 16 );
+        li {            
+            list-style: disc;
+        }
+    }
+
+    .creator-profile-link {
+        a {
+            @extend .button;
+            @extend .button-secondary;
+            margin: 0;
+        }
+    }
+
+    @media (min-width: 45em) and (max-width: 50em) {
+        .creator-summary {
+            float: none;
+        }
+    };
+}

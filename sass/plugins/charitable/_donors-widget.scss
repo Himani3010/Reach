@@ -5,6 +5,6 @@
         @include padding-right( 12 );
     }
     .donor-name {
-        @include margin-top( 12 );
+        @include margin( 0, 0, 6 );
     }
 }

@@ -133,6 +133,7 @@ body.tribe-mobile #main {
     margin-bottom: 0;
 
     li {  
+        position: relative;
         @extend .cf;      
         width: 100%;
         border-bottom: {
@@ -145,13 +146,19 @@ body.tribe-mobile #main {
         // text-align: center;
         
         h6 {
-            @include margin( 0, 0, 6 );
-            // float: left;
+            @include margin( 0, 36, 6, 0 );
             @include line-height( 27 );
             font-family: $font__main;
             letter-spacing: 0;
             text-transform: none;
             font-weight: 700;
+        }
+
+        .download-price {
+            position: absolute;
+            right: 0;
+            top: 0;
+            @include line-height( 27 );
         }
 
         .out-of-stock {
@@ -164,23 +171,4 @@ body.tribe-mobile #main {
             padding-bottom: 0;
         }
     }
-
-    // // .edd_download_purchase_form {
-    // //     float:  right;        
-    // // }
-
-    // // .edd-cart-ajax-alert {
-    // //     height: 0;
-    // // }
-
-    // .button.edd-add-to-cart {  
-    //     margin: 0;      
-    //     @include padding-left( 6 );
-    //     @include padding-right( 6 );        
-    //     @include font-size( 12 );
-    // }
-
-    // .edd-cart-ajax-alert {
-    //     display: none;
-    // }
 }

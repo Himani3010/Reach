@@ -341,12 +341,12 @@ if ( ! function_exists( 'benny_edd_purchase_link_text' ) ) :
      * @return  array
      * @since   1.0.0
      */
-    function benny_edd_purchase_link_text( $args ) {
+    function benny_edd_purchase_link_text( $args, $price ) {
         if ( false !== strpos( $args[ 'text' ], '&nbsp;&ndash;&nbsp;' ) ) {
-            list( $price, $text ) = explode( '&nbsp;&ndash;&nbsp;', $args[ 'text' ] );
+            list( $p, $text ) = explode( '&nbsp;&ndash;&nbsp;', $args[ 'text' ] );
             $args[ 'text' ] = $text;
         }
-                
+
         return $args;
     }
 
