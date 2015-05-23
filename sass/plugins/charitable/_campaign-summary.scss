@@ -78,8 +78,11 @@
 	.campaign-donation {
 		@include padding( 0, 0, 24 );
 
-		.button {
+		.donate-button {			
 			margin: 0;
+			@include height( 50 );
+			@include line-height( 50 );
+			@include font-size( 25 );			
 		}
 	}
 

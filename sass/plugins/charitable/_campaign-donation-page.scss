@@ -10,11 +10,22 @@
 		}
 	}
 
-	.charitable-form-header {
-		margin-top: 0;
-		@include font-size( 16 );
-	}
+	.campaign-benefiting {
+		display: none;
+
+		@include bp( 800 ) {
+			display: block;
+			float: right;
+			width: 30%;
+			@include padding( 36, 0, 0, 36 );
 	
+			.campaign-title {
+				margin-top: 0;
+				text-align: center;
+			}	
+		}	
+	}
+
 	.charitable-donation-form {
 		@include padding( 36 );
 		border: {
@@ -32,22 +43,13 @@
 			width: 70%;
 			@include padding-right( 36 );
 		}
-	} 
+	}
+}
 
-	.campaign-benefiting {
-		display: none;
-
-		@include bp( 800 ) {
-			display: block;
-			float: right;
-			width: 30%;
-			@include padding( 36, 0, 0, 36 );
-	
-			.campaign-title {
-				margin-top: 0;
-				text-align: center;
-			}	
-		}	
+.charitable-donation-form { 
+	.charitable-form-header {
+		margin-top: 0;
+		@include font-size( 16 );
 	}
 
 	.donation-amounts {
@@ -85,35 +87,6 @@
 			@include margin-bottom( 36 );
 		}
 	}		
-	// 	input {
-	// 		width: 100%;
-	// 		max-width: 100%;
-	// 		@include font-size( 18 );
-	// 		font-family: $font__secondary;
-	// 		background: $color__background-content;
-	// 		color: $color__text;
-	// 	}
-
-	// 	&.charitable-custom-donation-field-alone {
-	// 		@include margin-bottom( 36 );
-	// 		@include padding( 2 );
-	// 		border-radius: 0.4rem;
-	// 		background: $color__background-button;
-	// 		color: $color__text;
-	// 	}
-
-	// 	::-webkit-input-placeholder {
-	// 	   color: $color__text;
-	// 	}
-
-	// 	::-moz-placeholder {
-	// 	   color: $color__text;  
-	// 	}
-
-	// 	:-ms-input-placeholder {  
-	// 	   color: $color__text;  
-	// 	}
-	// }
 
 	.charitable-connected-downloads {	
 		@include margin-bottom( 24 );
@@ -145,7 +118,7 @@
 		}
 
 		@include bp( 800 ) {
-			@include padding-left( 180 );
+			@include padding-left( 140 );
 		}
 	}
 
@@ -206,6 +179,7 @@
 
 	.charitable-form-field .button {
 		@include button-inverted();
+		margin: 0;
 		width: auto;
 		border-color: $color__accent;
 		color: $color__accent;

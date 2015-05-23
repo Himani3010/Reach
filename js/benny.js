@@ -21,7 +21,7 @@
 
 		BENNY.FancySelect.init();
 
-		BENNY.LeanModal.init();	
+		// BENNY.LeanModal.init();	
 
 		BENNY.Accordion.init();	
 

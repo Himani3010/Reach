@@ -83,6 +83,8 @@ class Benny_Crowdfunding {
 		add_filter( 'charitable_force_user_dashboard_template', '__return_true' );
 		add_filter( 'charitable_campaign_submission_campaign_fields', array( $this, 'campaign_submission_fields' ) );
 		add_filter( 'charitable_fes_my_campaign_thumbnail_size', array( $this, 'my_campaign_thumbnail_size' ) );
+		add_filter( 'charitable_use_campaign_template', '__return_false' );
+		add_filter( 'charitable_modal_window_class', array( $this, 'modal_window_class' ) );
 	}
 
 	/**
@@ -161,6 +163,18 @@ class Benny_Crowdfunding {
 	 */
 	public function my_campaign_thumbnail_size( $size ) {
 		return 'campaign-thumbnail-medium';
+	}
+
+	/**
+	 * Set the modal window class. 
+	 *
+	 * @param 	string 	$class
+	 * @return  string
+	 * @access  public
+	 * @since   1.0.0
+	 */
+	public function modal_window_class( $class ) {
+		return 'modal';
 	}
 }
 

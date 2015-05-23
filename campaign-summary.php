@@ -25,7 +25,7 @@ if ( $campaign ) :
 			
 				else :
 
-					charitable_template( 'campaign/donation-button.php' );
+					$campaign->donate_button_template();
 					
 				endif;
 
@@ -43,5 +43,3 @@ if ( $campaign ) :
 	</section>
 <?php 
 endif;
-
-

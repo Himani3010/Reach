@@ -12,7 +12,16 @@
 
 .modal {
 	display: none;
-	@include padding( 36 );
+    width: 96%;
+	@include padding( 24 );
+    overflow: scroll;
+    border-radius: 0.4rem;
+    background: $color__background-content;
+
+    @include bp( 500 ) {
+        @include width( 468 );
+        @include padding( 36 );
+    }
 
 	&.multi-block {
 		padding-left: 0;
@@ -38,11 +47,24 @@
 	}
 }
 
-.close-modal {
+.modal-close {
 	position: absolute;
 	@include top( 6 );
 	@include right( 6 );
 	@include font-size( 20 );
 	line-height: 1;
-	cursor: pointer;
+	cursor: pointer;    
+    @include icon();
+
+    &:before {
+        content: "\f057";
+        color: $color__text;
+    }
+
+    &:hover {
+        text-decoration: none;
+        &:before {
+            color: $color__text-dark;
+        }
+    }
 }
