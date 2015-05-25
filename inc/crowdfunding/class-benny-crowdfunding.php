@@ -67,24 +67,46 @@ class Benny_Crowdfunding {
 	 * @since 	2.0.0
 	 */
 	private function attach_hooks_and_filters() {
-		// remove_action( 'edd_purchase_link_top', 		'edd_purchase_variable_pricing', 10, 2 );
-		// remove_action( 'edd_purchase_link_top', 		'edd_pl_override_variable_pricing', 10 ); // Purchase limits
-		// add_action( 'edd_purchase_link_top', 			'benny_edd_variable_pricing', 10, 2 );
+		add_filter( 'template_include', array( $this, 'edd_checkout_template' ) );
 		add_filter( 'edd_purchase_form_quantity_input', 'benny_edd_purchase_form_quantity_input' );
 		add_filter( 'edd_purchase_link_args', 'benny_edd_purchase_link_text', 10, 2 );
-		add_action( 'edd_purchase_link_top', 'benny_edd_show_price', 8, 3 );
-		// add_filter( 'edd_purchase_form_variation_quantity_input', 'benny_edd_purchase_form_variation_quantity_input', 10, 3 );
-	
-		remove_filter( 'the_content', 					array( charitable_get_helper( 'templates' ), 'campaign_content' ), 2 );
-		add_filter( 'benny_script_dependencies',		array( $this, 'setup_script_dependencies' ) );
-		add_filter( 'benny_banner_title', 				array( $this, 'set_banner_title' ) );
-		add_filter( 'charitable_campaign_ended', 		'benny_campaign_ended_text' );		
+		add_action( 'edd_purchase_link_top', 'benny_edd_show_price', 8, 3 );	
+		remove_filter( 'the_content', array( charitable_get_helper( 'templates' ), 'campaign_content' ), 2 );
+		add_filter( 'benny_script_dependencies', array( $this, 'setup_script_dependencies' ) );
+		add_filter( 'benny_banner_title', array( $this, 'set_banner_title' ) );
+		add_filter( 'charitable_campaign_ended', 'benny_campaign_ended_text' );		
 		add_filter( 'charitable_edd_donation_form_show_thumbnail', '__return_false' );
 		add_filter( 'charitable_force_user_dashboard_template', '__return_true' );
 		add_filter( 'charitable_campaign_submission_campaign_fields', array( $this, 'campaign_submission_fields' ) );
 		add_filter( 'charitable_fes_my_campaign_thumbnail_size', array( $this, 'my_campaign_thumbnail_size' ) );
 		add_filter( 'charitable_use_campaign_template', '__return_false' );
 		add_filter( 'charitable_modal_window_class', array( $this, 'modal_window_class' ) );
+	}
+
+	/**
+	 * Use our custom EDD checkout template.  
+	 *
+	 * @param 	string 		$template
+	 * @return  string
+	 * @access  public
+	 * @since   1.0.0
+	 */
+	public function edd_checkout_template( $template ) {
+		if ( ! edd_is_checkout() ) { 
+			return $template;
+		}
+		
+		if ( ! apply_filters( 'benny_use_custom_checkout_template', true ) ) {
+			return $template;
+		}	
+
+		$t = locate_template( 'edd-checkout.php' );
+
+		if ( file_exists( $t ) ) {
+			$template = $t;
+		}
+		
+		return $template;
 	}
 
 	/**
