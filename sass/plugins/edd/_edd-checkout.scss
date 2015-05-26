@@ -4,8 +4,9 @@
 		font-weight: 400;
 	}
 
-	.edd-payment-icons {
-		@include margin( 0, 0, 24, 12 );
+	.edd-payment-icons,
+	#edd_purchase_form_wrap > img {
+		@include margin( 0, 0, 24, 24 );
 	}
 
 	legend {
@@ -83,7 +84,6 @@
 	    display: block;
 	    @include padding( 0, 36, 36 );
 	}
-
 }
 
 .stripped {
@@ -104,9 +104,44 @@
 
 		fieldset, 
 		#edd_payment_mode_select {
-			@include padding( 24, 12 );
+			@include padding( 24 );
 			margin: 0;
 			@include border-width( 1, 0, 0, 0 );
+		}
+	}
+}
+
+.edd-checkout-template.stripped {
+	.site-main {				
+		padding: 0;
+		border: none;
+		background: transparent;
+				
+		.entry-block {
+			padding: 0;
+		}
+	}
+	
+	.entry-block {
+		@include padding( 36 );
+		border: {
+			@include width( 1 );
+			style: solid;
+			color: $color__border-primary;
+		}
+		border-top: none;
+		border-radius: 0 0 0.4rem 0.4rem;	    
+		background: $color__background-content;
+		box-shadow: 0 0 1px $color__background-content;
+
+		@include bp( 800 ) {
+			float: left;
+			width: 70%;
+			@include padding-right( 36 );
+		}
+
+		.entry {
+			@include padding( 0, 24 );			
 		}
 	}
 }

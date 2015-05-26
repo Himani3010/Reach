@@ -18,6 +18,9 @@ get_header( 'stripped' );
 			<main class="site-main content-area" role="main">
 				
 				<aside class="campaign-benefiting">
+
+					<p class="header"><?php _e( 'Thank you for supporting this campaign', 'benny' ) ?></p>
+					
 					<?php 
 					if ( $campaign && has_post_thumbnail( $campaign->ID ) ) : 
 
@@ -25,7 +28,7 @@ get_header( 'stripped' );
 
 					endif ?>
 
-					<h4 class="campaign-title"><?php echo get_the_title( $campaign->ID ) ?></h4>
+					<h6 class="campaign-title"><a href="<?php echo get_permalink( $campaign->ID ) ?>"><?php echo get_the_title( $campaign->ID ) ?></a></h6>
 				</aside>
 
 				<?php $campaign->get_donation_form()->render() ?>

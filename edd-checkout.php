@@ -5,11 +5,12 @@
  * @package Benny
  */
 
+if ( ! benny_has_edd() ) {
+    return;
+}
+
 $cart = new Charitable_EDD_Cart( edd_get_cart_contents(), edd_get_cart_fees( 'item' ) );
-echo '<pre>';
-var_dump( $cart );
-var_dump( $cart->get_benefits_by_campaign() );
-echo '</pre>';
+$campaigns = $cart->get_benefits_by_campaign();
 
 get_header( 'stripped' );
     
@@ -21,11 +22,13 @@ get_header( 'stripped' );
 
             <main class="site-main content-area" role="main">
                 
-                <?php if ( ! empty( $cart->get_benefits_by_campaign() ) ) : ?>
+                <?php if ( ! empty( $campaigns ) ) : ?>
 
                     <aside class="campaign-benefiting">
+
+                        <p class="header"><?php echo _n( 'Thank you for supporting this campaign', 'Thank you for supporting these campaigns', count( $campaigns ), 'benny' ) ?></p>
                         
-                        <?php foreach ( $cart->get_benefits_by_campaign() as $campaign_id => $benefits ) :
+                        <?php foreach ( $campaigns as $campaign_id => $benefits ) :
 
                             if ( has_post_thumbnail( $campaign_id ) ) : 
 
@@ -33,7 +36,7 @@ get_header( 'stripped' );
 
                             endif ?>
 
-                            <h4 class="campaign-title"><?php echo get_the_title( $campaign_id ) ?></h4>
+                            <h6 class="campaign-title"><a href="<?php echo get_permalink( $campaign_id ) ?>"><?php echo get_the_title( $campaign_id ) ?></a></h6>
 
                         <?php endforeach ?>
 

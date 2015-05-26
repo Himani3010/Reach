@@ -7,13 +7,33 @@
  */
 
 /**
- * Returns whether crowdfunding is enabled.  
+ * Returns whether a given is enabled.  
  *
  * @return  boolean
  * @since   1.0.0
  */
-function benny_crowdfunding_enabled() {
-    return benny_get_theme()->crowdfunding;
+function benny_has_module( $module ) {
+    return in_array( 'charitable', benny_get_theme()->active_modules );
+}
+
+/**
+ * Returns whether Charitable is enabled.  
+ *
+ * @return  boolean
+ * @since   1.0.0
+ */
+function benny_has_charitable() {
+    return benny_has_module( 'charitable' );
+}
+
+/**
+ * Returns whether EDD is enabled.  
+ *
+ * @return  boolean
+ * @since   1.0.0
+ */
+function benny_has_edd() {
+    return benny_has_module( 'edd' );
 }
 
 /**
@@ -176,7 +196,6 @@ function benny_get_banner_subtitle() {
     return apply_filters( 'benny_banner_subtitle', $title );   
 }
 
-
 /**
  * Return the media associated with the post.
  *
@@ -185,9 +204,7 @@ function benny_get_banner_subtitle() {
  * @since   2.0.0
  */
 function benny_get_media( $args = array() ) {
-
     $media = new Benny_Media_Grabber( $args );
 
-    return $media->get_media();
-    
+    return $media->get_media();    
 }

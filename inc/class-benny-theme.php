@@ -43,10 +43,10 @@ class Benny_Theme {
 	/**
 	 * Whether crowdfunding is enabled. 
 	 *
-	 * @var 	boolean
+	 * @var 	string[]
 	 * @access  public
 	 */
-	public $crowdfunding = false;
+	public $active_modules = array();
 
 	/**
 	 * Retrieve the class instance. If one hasn't been created yet, create it first. 
@@ -54,7 +54,7 @@ class Benny_Theme {
 	 * @return 	Benny_Theme
 	 * @static
 	 * @access  public
-	 * @since 	2.0.0
+	 * @since 	1.0.0
 	 */
 	public static function get_instance() {
 		if ( is_null( self::$instance ) ) {
@@ -72,7 +72,7 @@ class Benny_Theme {
 	 *
 	 * @return 	void
 	 * @access  private
-	 * @since 	2.0.0
+	 * @since 	1.0.0
 	 */
 	private function __construct() {		
 		
@@ -80,13 +80,15 @@ class Benny_Theme {
 
 		$this->maybe_upgrade();
 
-		$this->maybe_start_crowdfunding();
+		$this->maybe_start_charitable();
 
-        $this->maybe_start_customizer();
+        $this->maybe_start_edd();        
 
         $this->maybe_start_jetpack();
 
         $this->maybe_start_tribe_events();   
+
+        $this->maybe_start_customizer();
 
 		$this->attach_hooks_and_filters();
 
@@ -104,7 +106,7 @@ class Benny_Theme {
 	 *
 	 * @return 	string
 	 * @access  public
-	 * @since 	2.0.0
+	 * @since 	1.0.0
 	 */
 	public function get_theme_version() {
 		if ( defined( 'BENNY_DEBUG' ) && BENNY_DEBUG ) {
@@ -119,7 +121,7 @@ class Benny_Theme {
 	 *
 	 * @return 	boolean
 	 * @access  public
-	 * @since 	2.0.0
+	 * @since 	1.0.0
 	 */
 	public function started() {
 		return did_action( 'benny_theme_start' );
@@ -130,7 +132,7 @@ class Benny_Theme {
 	 *	
 	 * @return 	boolean
 	 * @access  public
-	 * @since 	2.0.0
+	 * @since 	1.0.0
 	 */
 	public function is_start() {
 		return 'benny_theme_start' == current_filter();
@@ -141,7 +143,7 @@ class Benny_Theme {
 	 *
 	 * @return 	void
 	 * @access  private
-	 * @since 	2.0.0
+	 * @since 	1.0.0
 	 */
 	private function load_dependencies() {
 		require get_template_directory() . '/inc/vendors/hybrid-media-grabber.php';
@@ -158,7 +160,7 @@ class Benny_Theme {
 	 *
 	 * @return 	void
 	 * @access  private
-	 * @since 	2.0.0
+	 * @since 	1.0.0
 	 */
 	private function maybe_upgrade() {
 		$db_version = get_option( 'benny_version' );
@@ -176,7 +178,7 @@ class Benny_Theme {
 	 *
 	 * @return 	void
 	 * @access  public
-	 * @since 	2.0.0
+	 * @since 	1.0.0
 	 */
 	public function maybe_start_customizer() {
 		global $wp_customize;
@@ -202,6 +204,8 @@ class Benny_Theme {
             require_once( get_template_directory() . '/inc/jetpack/class-benny-jetpack.php');
 
             add_action( 'benny_theme_start', array( 'Benny_Jetpack', 'start' ) );
+
+            $this->active_modules[] = 'jetpack';
         }        
     }
 
@@ -218,28 +222,45 @@ class Benny_Theme {
             require_once( get_template_directory() . '/inc/tribe-events/class-benny-tribe-events.php' );
 
             add_action( 'benny_theme_start', array( 'Benny_Tribe_Events', 'start' ) );
+
+            $this->active_modules[] = 'tribe-events';
         }
     }
 
     /**
-     * Set up crowdfunding support if EDD and Charitable are enabled. 
+     * Set up Charitable support if it is enabled.
      *
      * @return 	void
      * @access  private
-     * @since 	2.0.0
+     * @since 	1.0.0
      */
-    private function maybe_start_crowdfunding() {
-    	
-    	if ( class_exists( 'Easy_Digital_Downloads' ) 
-			&& class_exists( 'Charitable' ) 
-			&& class_exists( 'Charitable_EDD' ) ) {
+    private function maybe_start_charitable() {    	
+    	if ( class_exists( 'Charitable' ) ) {
 
-    		require_once( get_template_directory() . '/inc/crowdfunding/class-benny-crowdfunding.php' );
+    		require_once( get_template_directory() . '/inc/charitable/class-benny-charitable.php' );
 
-    		add_action( 'benny_theme_start', array( 'Benny_Crowdfunding', 'start' ) );
+    		add_action( 'benny_theme_start', array( 'Benny_Charitable', 'start' ) );
 
-    		$this->crowdfunding = true;
+    		$this->active_modules[] = 'charitable';
     	}
+    }
+
+    /**
+     * Set up EDD support if it is enabled. 
+     *
+     * @return  void
+     * @access  private
+     * @since   1.0.0
+     */
+    private function maybe_start_edd() {    
+        if ( class_exists( 'Easy_Digital_Downloads' )  && class_exists( 'Charitable_EDD' ) ) {
+
+            require_once( get_template_directory() . '/inc/easy-digital-downloads/class-benny-edd.php' );
+
+            add_action( 'benny_theme_start', array( 'Benny_EDD', 'start' ) );
+
+            $this->active_modules[] = 'edd';
+        }
     }
 
 	/**
@@ -247,7 +268,7 @@ class Benny_Theme {
 	 *
 	 * @return 	void
 	 * @access  private
-	 * @since 	2.0.0
+	 * @since 	1.0.0
 	 */
 	private function attach_hooks_and_filters() {
 		/**
@@ -271,10 +292,10 @@ class Benny_Theme {
 		add_filter( 'wp_page_menu_args', 		array( $this, 'page_menu_args' ) );
 		add_filter( 'post_class',      			array( $this, 'post_classes' ) );
 		add_filter(	'the_content_more_link', 	array( $this, 'the_content_more_link_filter' ), 10, 2);
-        add_filter(	'next_posts_link_attributes', 			array( $this, 'posts_navigation_link_attributes' ) );
-        add_filter(	'previous_posts_link_attributes', 		array( $this, 'posts_navigation_link_attributes' ) );
-        add_filter(	'next_comments_link_attributes', 		array( $this, 'posts_navigation_link_attributes' ) );
-        add_filter(	'previous_comments_link_attributes', 	array( $this, 'posts_navigation_link_attributes' ) );                
+        add_filter(	'next_posts_link_attributes', array( $this, 'posts_navigation_link_attributes' ) );
+        add_filter(	'previous_posts_link_attributes', array( $this, 'posts_navigation_link_attributes' ) );
+        add_filter(	'next_comments_link_attributes', array( $this, 'posts_navigation_link_attributes' ) );
+        add_filter(	'previous_comments_link_attributes', array( $this, 'posts_navigation_link_attributes' ) );                
         add_filter(	'oembed_dataparse', 		array( $this, 'wrap_fullwidth_videos' ), 10, 3 );
         add_filter(	'video_embed_html', 		'benny_fullwidth_video' );
 	}
@@ -285,7 +306,7 @@ class Benny_Theme {
 	 * @hook 	after_setup_theme
 	 * @return 	void
 	 * @access  public
-	 * @since 	2.0.0
+	 * @since 	1.0.0
 	 */
 	public function setup_theme() {
 		/**
@@ -342,7 +363,7 @@ class Benny_Theme {
 	 * @hook 	widgets_init
 	 * @return 	void
 	 * @access  public
-	 * @since 	2.0.0
+	 * @since 	1.0.0
 	 */
 	public function setup_sidebars() {
 		register_sidebar( array(
@@ -400,7 +421,7 @@ class Benny_Theme {
 	 * @hook 	wp_enqueue_scripts
 	 * @return 	void
 	 * @access  public
-	 * @since 	2.0.0
+	 * @since 	1.0.0
 	 */
 	public function setup_scripts() {
 		wp_enqueue_style( 'benny-style', get_stylesheet_uri() );
@@ -430,7 +451,7 @@ class Benny_Theme {
 			wp_enqueue_script( 'comment-reply' );
 		}
 
-		if ( $this->crowdfunding ) {
+		if ( benny_has_charitable() ) {
 			wp_localize_script('benny', 'BENNY_CROWDFUNDING', array(
 	            'need_minimum_pledge'   => __( 'Your pledge must be at least the minimum pledge amount.', 'benny' ), 
 	            'years'                 => __( 'Years', 'benny' ), 
@@ -464,7 +485,7 @@ class Benny_Theme {
 	 * @global 	WP_Query 	$wp_query 		WordPress Query object.
 	 * @return 	void
 	 * @access 	public
-	 * @since 	2.0.0
+	 * @since 	1.0.0
 	 */
 	public function setup_author() {
 		global $wp_query;
@@ -479,7 +500,7 @@ class Benny_Theme {
 	 *
 	 * @return 	void
 	 * @access  public
-	 * @since 	2.0.0
+	 * @since 	1.0.0
 	 */
 	public function setup_fonts() {
 		echo apply_filters( 'benny_font_link', "<link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700italic,700,300italic,300|Oswald:400,300' rel='stylesheet' type='text/css'>" );
@@ -493,7 +514,7 @@ class Benny_Theme {
 	 * @param 	string 	$sep 		Optional separator.
 	 * @return 	string 				The filtered title.
 	 * @access 	public
-	 * @since 	2.0.0
+	 * @since 	1.0.0
 	 */
 	public function wp_title( $title, $sep ) {
 		if ( is_feed() ) {
@@ -526,7 +547,7 @@ class Benny_Theme {
 	 * @param 	array 	$args 		Configuration arguments.
 	 * @return 	array
 	 * @access 	public
-	 * @since 	2.0.0
+	 * @since 	1.0.0
 	 */
 	public function page_menu_args( $args ) {
 		$args['show_home'] = true;

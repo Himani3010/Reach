@@ -1456,7 +1456,7 @@ a {
   overflow: scroll;
   border-radius: 0.4rem;
   background: #fff; }
-  @media (min-width: 30em) {
+  @media (min-width: 31.25em) {
     .modal {
       width: 468px;
       width: 46.8rem;
@@ -3508,24 +3508,31 @@ embed {
 /*--------------------------------------------------------------
 18.1.5 Campaign Donation Page
 --------------------------------------------------------------*/
+.campaign-benefiting {
+  display: none; }
+  @media (min-width: 50em) {
+    .campaign-benefiting {
+      display: block;
+      float: right;
+      width: 30%;
+      padding: 24px 0px 0px 36px;
+      padding: 2.4rem 0rem 0rem 3.6rem; }
+      .campaign-benefiting .header {
+        margin-top: 0;
+        font-weight: bold;
+        font-style: italic;
+        text-align: center; }
+      .campaign-benefiting .campaign-title {
+        margin: 0px 0px 36px;
+        margin: 0rem 0rem 3.6rem;
+        text-align: center; } }
+
 .campaign-donation-page.stripped .site-main {
   padding: 0;
   border: none;
   background: transparent; }
   .campaign-donation-page.stripped .site-main .entry-block {
     padding: 0; }
-.campaign-donation-page.stripped .campaign-benefiting {
-  display: none; }
-  @media (min-width: 50em) {
-    .campaign-donation-page.stripped .campaign-benefiting {
-      display: block;
-      float: right;
-      width: 30%;
-      padding: 36px 0px 0px 36px;
-      padding: 3.6rem 0rem 0rem 3.6rem; }
-      .campaign-donation-page.stripped .campaign-benefiting .campaign-title {
-        margin-top: 0;
-        text-align: center; } }
 .campaign-donation-page.stripped .charitable-donation-form {
   padding: 36px;
   padding: 3.6rem;
@@ -4336,9 +4343,10 @@ div.printfriendly {
 #edd_checkout_wrap legend,
 #edd_checkout_wrap th {
   font-weight: 400; }
-#edd_checkout_wrap .edd-payment-icons {
-  margin: 0px 0px 24px 12px;
-  margin: 0rem 0rem 2.4rem 1.2rem; }
+#edd_checkout_wrap .edd-payment-icons,
+#edd_checkout_wrap #edd_purchase_form_wrap > img {
+  margin: 0px 0px 24px 24px;
+  margin: 0rem 0rem 2.4rem 2.4rem; }
 #edd_checkout_wrap legend {
   padding-bottom: 6px;
   padding-bottom: 0.6rem; }
@@ -4419,11 +4427,38 @@ div.printfriendly {
     border-right: 0; }
   .stripped #edd_checkout_wrap fieldset,
   .stripped #edd_checkout_wrap #edd_payment_mode_select {
-    padding: 24px 12px;
-    padding: 2.4rem 1.2rem;
+    padding: 24px;
+    padding: 2.4rem;
     margin: 0;
     border-width: 1px 0px 0px 0px;
     border-width: 0.1rem 0rem 0rem 0rem; }
+
+.edd-checkout-template.stripped .site-main {
+  padding: 0;
+  border: none;
+  background: transparent; }
+  .edd-checkout-template.stripped .site-main .entry-block {
+    padding: 0; }
+.edd-checkout-template.stripped .entry-block {
+  padding: 36px;
+  padding: 3.6rem;
+  border-width: 1px;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: #e2dedb;
+  border-top: none;
+  border-radius: 0 0 0.4rem 0.4rem;
+  background: #fff;
+  box-shadow: 0 0 1px #fff; }
+  @media (min-width: 50em) {
+    .edd-checkout-template.stripped .entry-block {
+      float: left;
+      width: 70%;
+      padding-right: 36px;
+      padding-right: 3.6rem; } }
+  .edd-checkout-template.stripped .entry-block .entry {
+    padding: 0px 24px;
+    padding: 0rem 2.4rem; }
 
 /*--------------------------------------------------------------
 18.3 Ninja Forms
