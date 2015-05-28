@@ -317,12 +317,26 @@ if ( ! function_exists( 'benny_edd_show_price' ) ) :
      * @return  void
      * @since   1.0.0
      */
-    function benny_edd_show_price( $download_id, $args, $price ) {
-        if ( ! edd_has_variable_prices( $download_id ) && ! edd_item_in_cart( $download_id ) ) {
-        ?>
-            <div class="download-price"><?php echo edd_currency_filter( edd_format_amount( $price ) ) ?></div>
-        <?php
-        }        
+    function benny_edd_show_price( $download_id, $args, $price = null ) {
+        if ( isset( $args[ 'price' ] ) && $args[ 'price' ] !== 'no' ) {
+            return;
+        }
+
+        if ( edd_has_variable_prices( $download_id ) || edd_item_in_cart( $download_id ) ) {
+            return;
+        }
+
+        if ( is_null( $price ) ) {
+            $price = benny_get_edd_product_price( $download_id, $args );
+        }
+
+        if ( false === $price ) {
+            return;
+        }
+?>
+        <div class="download-price"><?php echo edd_currency_filter( edd_format_amount( $price ) ) ?></div>
+<?php   
+
     }
 
 endif;
