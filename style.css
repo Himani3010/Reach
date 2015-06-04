@@ -3887,7 +3887,7 @@ body.user-dashboard .charitable-form .charitable-submit-field {
         clear: none; }
       .charitable-form-fields .charitable-form-field.fullwidth, .charitable-form-fields .charitable-form-field.page-template-page-template-home-slider, .charitable-form-fields body.charitable-form-field.events-single {
         width: 100%;
-        padding: none; } }
+        padding: 0; } }
 
 .charitable-form-content {
   clear: both; }
