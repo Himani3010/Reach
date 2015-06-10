@@ -318,7 +318,7 @@ if ( ! function_exists( 'benny_edd_show_price' ) ) :
      * @since   1.0.0
      */
     function benny_edd_show_price( $download_id, $args, $price = null ) {
-        if ( isset( $args[ 'price' ] ) && $args[ 'price' ] !== 'no' ) {
+        if ( isset( $args[ 'price' ] ) && 'no' === $args[ 'price' ] ) {
             return;
         }
 

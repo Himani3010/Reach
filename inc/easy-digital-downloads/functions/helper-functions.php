@@ -23,7 +23,6 @@ function benny_get_edd_product_price( $download_id, $args = array() ) {
         return $download->price;
     }
 
-    
     $price_id = $args[ 'price_id' ];
     $prices = $download->prices;
     $price = isset( $prices[ $price_id ] ) ? $prices[ $price_id ] : false;

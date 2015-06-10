@@ -19,7 +19,7 @@
 
 		BENNY.ImageHovers.init();
 
-		BENNY.FancySelect.init();
+		// BENNY.FancySelect.init();
 
 		// BENNY.LeanModal.init();	
 
