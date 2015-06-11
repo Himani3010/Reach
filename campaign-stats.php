@@ -19,6 +19,6 @@ $currency_helper 	= charitable()->get_currency_helper();
 	</li>
 	<li class="campaign-backers">
 		<span><?php echo $campaign->get_donor_count() ?></span>
-		<?php _e( 'Backers', 'benny' ) ?>
+		<?php _e( 'Donors', 'benny' ) ?>
 	</li>				
 </ul>

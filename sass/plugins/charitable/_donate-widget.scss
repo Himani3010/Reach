@@ -18,10 +18,6 @@
         }
     }    
 
-    input[type=text] {
-        background: $color__background-content;        
-    }
-
     .charitable-donation-form-without-suggestions {
         @include padding( 12 );
         background: $color__background-content;

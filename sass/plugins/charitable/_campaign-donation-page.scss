@@ -63,7 +63,7 @@
 		@include margin-bottom( 30 );
 		@extend .cf;
 		
-		.donation-amount {
+		.donation-amount {			
 			width: 100%;
 			@include bp (600) {
 				float: left;
@@ -72,7 +72,7 @@
 					top: 0;
 					right: 0;
 					@include bottom( 12 );
-					left: 2%;
+					left: 4%;
 				}
 
 				&:nth-child(2n + 1) {
@@ -125,7 +125,7 @@
 		}
 
 		@include bp( 800 ) {
-			@include padding-left( 140 );
+			// @include padding-left( 140 );
 		}
 	}
 
@@ -140,29 +140,22 @@
 	    }
 	}
 
-	.charitable-edd-download-select {
+	.charitable-edd-download-select {		
 		position: relative;
 		@include bottom( 2 );
+		@include width( 20 );
 
-		@include bp( 800 ) {
-			position: absolute;
-			@include top( 28 );
-			@include left( 12 );
-		}
+		// @include bp( 800 ) {
+		// 	position: absolute;
+		// 	@include top( 28 );
+		// 	@include left( 12 );
+		// }
 	}
 
 	.charitable-option-no-download {
 		font-family: $font__secondary;
 	    @include font-size( 16 );
 	    text-transform: uppercase;
-	}
-	
-	.charitable-option-no-download,
-	.edd-price-option-price {
-		@include bp( 800 ) {
-			position: absolute;
-			@include left( 32 );
-		}		
 	}
 
 	.charitable-edd-connected-download-description {
@@ -182,6 +175,10 @@
 			list-style-type: none;
 			padding-left: 0;
 		}
+
+		.edd-price-option-price {
+			position: static;
+		}
 	}	
 
 	.charitable-form-field .button {
@@ -200,7 +197,8 @@
 }
 
 .donation-amounts .donation-amount {
-	@include padding( 18, 12 );
+	position: relative;
+	@include padding( 12, 12, 12, 36 );
     @include margin( 0, 12, 12, 0 );
     @include line-height( 18 );
     border: {
@@ -230,8 +228,30 @@
     }
 
     &.custom-donation-amount {
-        @include font-size( 18 );
-        line-height: 1em;
+    	width: 100%;
+
+    	.description {
+    		@include font-size( 12 );
+	        font-family: $font__main;
+	        letter-spacing: 0;
+	        text-transform: none;
+    	}        
+
+        input[type=text] {
+        	position: static;
+        	max-width: 100%;
+
+        	&:focus, 
+        	&:active {
+        		background-color: $color__background-content;
+        	}
+        }
+    }
+
+    input {
+    	position: absolute;
+		@include top( 12 );
+		@include left( 12 );
     }
 }
 

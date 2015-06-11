@@ -31,7 +31,7 @@
 
 			BENNY.Countdown.init();		
 
-			BENNY.Pledging.init();
+			// BENNY.Pledging.init();
 
 			$('.campaign-button').on( 'click', function() {
 				$(this).toggleClass('icon-remove');

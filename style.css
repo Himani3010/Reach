@@ -3201,8 +3201,6 @@ embed {
     .widget.widget_charitable_donate_widget .donation-amounts .charitable-form-field {
       margin: 12px 0px 0px;
       margin: 1.2rem 0rem 0rem; }
-  .widget.widget_charitable_donate_widget input[type=text] {
-    background: #fff; }
   .widget.widget_charitable_donate_widget .charitable-donation-form-without-suggestions {
     padding: 12px;
     padding: 1.2rem;
@@ -3568,7 +3566,7 @@ embed {
         margin-right: 0;
         margin-bottom: 12px;
         margin-bottom: 1.2rem;
-        margin-left: 2%; }
+        margin-left: 4%; }
         .charitable-donation-form .donation-amounts .donation-amount:nth-child(2n + 1) {
           margin-left: 0;
           clear: left; } }
@@ -3602,10 +3600,6 @@ embed {
     border: none; }
   .charitable-donation-form .charitable-edd-connected-download.selected {
     background: #fff; }
-  @media (min-width: 50em) {
-    .charitable-donation-form .charitable-edd-connected-download {
-      padding-left: 140px;
-      padding-left: 14rem; } }
 .charitable-donation-form .edd-price-option-price {
   font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
@@ -3617,27 +3611,16 @@ embed {
     font-size: 1.4rem;
     color: #bdb2ab; }
 .charitable-donation-form .charitable-edd-download-select {
+  width: 20px;
+  width: 2rem;
   position: relative;
   bottom: 2px;
   bottom: 0.2rem; }
-  @media (min-width: 50em) {
-    .charitable-donation-form .charitable-edd-download-select {
-      position: absolute;
-      top: 28px;
-      top: 2.8rem;
-      left: 12px;
-      left: 1.2rem; } }
 .charitable-donation-form .charitable-option-no-download {
   font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
   font-size: 1.6rem;
   text-transform: uppercase; }
-@media (min-width: 50em) {
-  .charitable-donation-form .charitable-option-no-download,
-  .charitable-donation-form .edd-price-option-price {
-    position: absolute;
-    left: 32px;
-    left: 3.2rem; } }
 .charitable-donation-form .charitable-edd-connected-download-description {
   padding-top: 12px;
   padding-top: 1.2rem; }
@@ -3649,6 +3632,8 @@ embed {
 .charitable-donation-form .charitable-edd-price-options ul {
   list-style-type: none;
   padding-left: 0; }
+.charitable-donation-form .charitable-edd-price-options .edd-price-option-price {
+  position: static; }
 .charitable-donation-form .charitable-form-field .button, .charitable-donation-form .charitable-form-field .widget.widget_campaign_creator_widget .creator-profile-link a, .widget.widget_campaign_creator_widget .creator-profile-link .charitable-donation-form .charitable-form-field a {
   display: inline-block;
   margin: 3px 0px 0px 3px;
@@ -3696,8 +3681,9 @@ embed {
     background: #d95b43; }
 
 .donation-amounts .donation-amount {
-  padding: 18px 12px;
-  padding: 1.8rem 1.2rem;
+  position: relative;
+  padding: 12px 12px 12px 36px;
+  padding: 1.2rem 1.2rem 1.2rem 3.6rem;
   margin: 0px 12px 12px 0px;
   margin: 0rem 1.2rem 1.2rem 0rem;
   line-height: 18px;
@@ -3722,9 +3708,24 @@ embed {
     background-color: #7d6e63;
     color: #fff; }
   .donation-amounts .donation-amount.custom-donation-amount {
-    font-size: 18px;
-    font-size: 1.8rem;
-    line-height: 1em; }
+    width: 100%; }
+    .donation-amounts .donation-amount.custom-donation-amount .description {
+      font-size: 12px;
+      font-size: 1.2rem;
+      font-family: Merriweather, Georgia, "Times New Roman", Times, serif;
+      letter-spacing: 0;
+      text-transform: none; }
+    .donation-amounts .donation-amount.custom-donation-amount input[type=text] {
+      position: static;
+      max-width: 100%; }
+      .donation-amounts .donation-amount.custom-donation-amount input[type=text]:focus, .donation-amounts .donation-amount.custom-donation-amount input[type=text]:active {
+        background-color: #fff; }
+  .donation-amounts .donation-amount input {
+    position: absolute;
+    top: 12px;
+    top: 1.2rem;
+    left: 12px;
+    left: 1.2rem; }
 
 #custom-donation-amount-field.charitable-custom-donation-field-alone {
   padding: 2px;
