@@ -3611,11 +3611,11 @@ embed {
     font-size: 1.4rem;
     color: #bdb2ab; }
 .charitable-donation-form .charitable-edd-download-select {
-  width: 20px;
-  width: 2rem;
   position: relative;
   bottom: 2px;
-  bottom: 0.2rem; }
+  bottom: 0.2rem;
+  width: 20px;
+  width: 2rem; }
 .charitable-donation-form .charitable-option-no-download {
   font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
@@ -3708,7 +3708,8 @@ embed {
     background-color: #7d6e63;
     color: #fff; }
   .donation-amounts .donation-amount.custom-donation-amount {
-    width: 100%; }
+    width: 100%;
+    margin-left: 0; }
     .donation-amounts .donation-amount.custom-donation-amount .description {
       font-size: 12px;
       font-size: 1.2rem;

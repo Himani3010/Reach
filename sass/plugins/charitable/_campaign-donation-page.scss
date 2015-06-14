@@ -229,6 +229,7 @@
 
     &.custom-donation-amount {
     	width: 100%;
+    	margin-left: 0;
 
     	.description {
     		@include font-size( 12 );
