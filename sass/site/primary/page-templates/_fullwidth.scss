@@ -1,0 +1,12 @@
+.page-template-page-template-fullwidth {
+    @extend .fullwidth;
+    
+    .banner {
+        margin-bottom: 0;
+    }
+
+    .entry-block {
+        border-top: 0;
+        border-radius: 0 0 0.4rem 0.4rem;
+    }
+}

@@ -8,16 +8,7 @@ if ( $campaign === false ) return;
 <div class="campaign block entry-block cf">
 
 	<div class="campaign-image">
-		<?php 
-		if ( $campaign->has_goal() && $campaign->has_achieved_goal() ) : ?>
-
-			<span class="campaign-successful"><?php _e( 'Successful', 'benny' ) ?></span>
-
-		<?php elseif ( $campaign->has_ended() && false === $campaign->has_achieved_goal() ) :  ?>
-
-			<span class="campaign-unsuccessful"><?php _e( 'Unsuccessful', 'benny' ) ?></span>
-
-		<?php endif ?>
+		<?php get_template_part( 'campaign', 'status-ribbon' ) ?>
 
 		<a href="<?php the_permalink() ?>" title="<?php printf( __( 'Go to %s', 'benny' ), get_the_title() ) ?>" target="_parent">
 			<?php echo get_the_post_thumbnail( $campaign->ID, 'campaign-thumbnail-medium' ) ?>

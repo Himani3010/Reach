@@ -9,18 +9,18 @@ $campaign = charitable_get_current_campaign();
 
 if ( $campaign->has_goal() && $campaign->has_achieved_goal() ) :
 	
-	$message = __( 'This campaign successfully reached its funding goal and ended %s', 'benny' );
+	$message = __( 'This campaign successfully reached its funding goal and ended %s ago', 'benny' );
 	
 elseif ( $campaign->has_goal() && ! $campaign->has_achieved_goal() ) : 
 
-	$message = __( 'This campaign failed to reach its funding goal %s', 'benny' ); 
+	$message = __( 'This campaign failed to reach its funding goal %s ago', 'benny' ); 
 
 else :
 
-	$message = __( 'This campaign ended %s', 'benny' );
+	$message = __( 'This campaign ended %s ago', 'benny' );
 
 endif;
 ?>
 <h3 class="campaign-ended">
-	<?php printf( $message, '<span class="time-ago">' . human_time_diff( $campaign->get_time_since_ended() ) . '</span>' ) ?>
+	<?php printf( $message, '<span class="time-ago">' . human_time_diff( $campaign->get_end_time() ) . '</span>' ) ?>
 </h3>

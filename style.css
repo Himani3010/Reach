@@ -1839,13 +1839,16 @@ a {
   #site-footer a {
     height: auto; }
 
-.fullwidth .content-area, .page-template-page-template-home-slider .content-area, body.events-single .content-area {
+.fullwidth .content-area, .page-template-page-template-home-slider .content-area,
+.page-template-page-template-fullwidth .content-area, body.events-single .content-area {
   float: none;
   margin: 0;
   width: 100%; }
-.fullwidth .site-main, .page-template-page-template-home-slider .site-main, body.events-single .site-main {
+.fullwidth .site-main, .page-template-page-template-home-slider .site-main,
+.page-template-page-template-fullwidth .site-main, body.events-single .site-main {
   margin: 0; }
-.fullwidth .site-content .widget-area, .page-template-page-template-home-slider .site-content .widget-area, body.events-single .site-content .widget-area {
+.fullwidth .site-content .widget-area, .page-template-page-template-home-slider .site-content .widget-area,
+.page-template-page-template-fullwidth .site-content .widget-area, body.events-single .site-content .widget-area {
   width: 100%; }
 
 /*--------------------------------------------------------------
@@ -2100,6 +2103,13 @@ a {
   max-width: 800px;
   max-width: 80rem; }
 
+/* Fullwidth */
+.page-template-page-template-fullwidth .banner {
+  margin-bottom: 0; }
+.page-template-page-template-fullwidth .entry-block {
+  border-top: 0;
+  border-radius: 0 0 0.4rem 0.4rem; }
+
 /*--------------------------------------------------------------
 11.2 Asides
 --------------------------------------------------------------*/
@@ -2168,7 +2178,8 @@ a {
     float: left;
     width: 49%;
     margin-right: 2%; }
-  .comments-section .comment-text-input.fullwidth, .comments-section .comment-text-input.page-template-page-template-home-slider, .comments-section body.comment-text-input.events-single {
+  .comments-section .comment-text-input.fullwidth, .comments-section .comment-text-input.page-template-page-template-home-slider,
+  .comments-section .comment-text-input.page-template-page-template-fullwidth, .comments-section body.comment-text-input.events-single {
     width: 100%;
     margin: 0; }
   .comments-section .comment-text-input.last {
@@ -3887,7 +3898,8 @@ body.user-dashboard .charitable-form .charitable-submit-field {
         padding-right: 3.6rem; }
       .charitable-form-fields .charitable-form-field.even {
         clear: none; }
-      .charitable-form-fields .charitable-form-field.fullwidth, .charitable-form-fields .charitable-form-field.page-template-page-template-home-slider, .charitable-form-fields body.charitable-form-field.events-single {
+      .charitable-form-fields .charitable-form-field.fullwidth, .charitable-form-fields .charitable-form-field.page-template-page-template-home-slider,
+      .charitable-form-fields .charitable-form-field.page-template-page-template-fullwidth, .charitable-form-fields body.charitable-form-field.events-single {
         width: 100%;
         padding: 0; } }
 
