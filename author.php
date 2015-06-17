@@ -55,7 +55,7 @@ get_header();
 		<div class="author-activity">
 			<div class="author-activity-summary">
 				<?php printf( "<span class='number'>%d</span> %s <span class='separator'>/</span> <span class='number'>%d</span> %s", 
-					$donor->get_donation_count( true ), 
+					$donor->count_campaigns_supported(), 
 					__( 'Campaigns Backed', 'benny' ), 
 					$campaigns->post_count, 
 					__( 'Campaigns Created', 'benny' ) 

@@ -434,17 +434,20 @@ class Benny_Theme {
             'audio-js', 
             'rrssb',
             'hoverIntent', 
-            // 'leanModal', 
+            'lean-modal',
             'fitvids',
             'jquery' 
         ) );
 
-        wp_register_script( 'audio-js', 	get_template_directory_uri() . '/js/vendors/audiojs/audio.min.js', array(), $this->get_theme_version(), true);
-        // wp_register_script( 'leanModal', 	get_template_directory_uri() . '/js/vendors/leanmodal/jquery.leanModal.min.js', array('jquery'), '1.1', true);
-        wp_register_script( 'rrssb', 		get_template_directory_uri() . '/js/vendors/rrssb/rrssb.min.js', array('jquery'), $this->get_theme_version(), true );
-        wp_register_script( 'fitvids', 		get_template_directory_uri() . '/js/vendors/fitvids/jquery.fitvids.min.js', array('jquery'), '1.0', true );
+        if ( ! wp_script_is( 'lean-modal', 'registered' ) ) {
+            wp_register_script( 'lean-modal', get_template_directory_uri() . '/js/vendors/leanmodal/jquery.leanModal.' . $ext, array( 'jquery' ), $this->get_theme_version(), true);
+        }
+
+        wp_register_script( 'audio-js', get_template_directory_uri() . '/js/vendors/audiojs/audio.min.js', array(), $this->get_theme_version(), true);
+        wp_register_script( 'rrssb', get_template_directory_uri() . '/js/vendors/rrssb/rrssb.min.js', array('jquery'), $this->get_theme_version(), true );
+        wp_register_script( 'fitvids', get_template_directory_uri() . '/js/vendors/fitvids/jquery.fitvids.min.js', array('jquery'), '1.0', true );
 		wp_register_script( 'benny-lib', get_template_directory_uri() . '/js/benny-lib' . $ext, $benny_script_dependencies, $this->get_theme_version(), true );
-        wp_register_script( 'benny', 	get_template_directory_uri() . '/js/benny.js', array( 'benny-lib' ), $this->get_theme_version(), true );
+        wp_register_script( 'benny', get_template_directory_uri() . '/js/benny.js', array( 'benny-lib' ), $this->get_theme_version(), true );
         wp_enqueue_script( 'benny' ); 
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

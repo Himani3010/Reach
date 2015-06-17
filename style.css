@@ -1462,6 +1462,10 @@ a {
       width: 46.8rem;
       padding: 36px;
       padding: 3.6rem; } }
+  .modal .block-title {
+    margin-top: 0;
+    border: none;
+    color: #7d6e63; }
   .modal.multi-block {
     padding-left: 0;
     padding-right: 0;
@@ -1839,16 +1843,13 @@ a {
   #site-footer a {
     height: auto; }
 
-.fullwidth .content-area, .page-template-page-template-home-slider .content-area,
-.page-template-page-template-fullwidth .content-area, body.events-single .content-area {
+.fullwidth .content-area, .page-template-page-template-home-slider .content-area, .page-template-page-template-fullwidth .content-area, body.events-single .content-area {
   float: none;
   margin: 0;
   width: 100%; }
-.fullwidth .site-main, .page-template-page-template-home-slider .site-main,
-.page-template-page-template-fullwidth .site-main, body.events-single .site-main {
+.fullwidth .site-main, .page-template-page-template-home-slider .site-main, .page-template-page-template-fullwidth .site-main, body.events-single .site-main {
   margin: 0; }
-.fullwidth .site-content .widget-area, .page-template-page-template-home-slider .site-content .widget-area,
-.page-template-page-template-fullwidth .site-content .widget-area, body.events-single .site-content .widget-area {
+.fullwidth .site-content .widget-area, .page-template-page-template-home-slider .site-content .widget-area, .page-template-page-template-fullwidth .site-content .widget-area, body.events-single .site-content .widget-area {
   width: 100%; }
 
 /*--------------------------------------------------------------
@@ -2178,8 +2179,7 @@ a {
     float: left;
     width: 49%;
     margin-right: 2%; }
-  .comments-section .comment-text-input.fullwidth, .comments-section .comment-text-input.page-template-page-template-home-slider,
-  .comments-section .comment-text-input.page-template-page-template-fullwidth, .comments-section body.comment-text-input.events-single {
+  .comments-section .comment-text-input.fullwidth, .comments-section .comment-text-input.page-template-page-template-home-slider, .comments-section .comment-text-input.page-template-page-template-fullwidth, .comments-section body.comment-text-input.events-single {
     width: 100%;
     margin: 0; }
   .comments-section .comment-text-input.last {
@@ -3045,14 +3045,31 @@ embed {
   font-weight: 300;
   width: 30%; }
 
-#campaign-widget-sharing pre {
+.share-widget .modal {
+  text-align: left; }
+.share-widget .modal,
+.share-widget .modal .block-title {
+  color: #7d6e63; }
+.share-widget pre {
   word-break: break-word; }
-#campaign-widget-sharing .block {
-  border: none;
-  float: left; }
-  #campaign-widget-sharing .block.iframe-block {
+.share-widget .block {
+  border: none; }
+  .share-widget .block.iframe-block {
     width: 275px;
     width: 27.5rem; }
+@media (min-width: 48em) {
+  .share-widget .modal {
+    width: 634px;
+    width: 63.4rem; }
+  .share-widget .block {
+    float: left;
+    width: 275px;
+    width: 27.5rem;
+    padding-right: 12px;
+    padding-right: 1.2rem; }
+    .share-widget .block.iframe-block {
+      float: right;
+      padding: 0; } }
 
 .charitable-fes-campaign-creator-toolbar {
   position: relative;
@@ -3099,6 +3116,8 @@ embed {
   width: 20%;
   padding-right: 12px;
   padding-right: 1.2rem; }
+  .donors-list .donor:nth-child(5n+6) {
+    clear: left; }
 .donors-list .donor-name {
   margin: 0px 0px 6px;
   margin: 0rem 0rem 0.6rem; }
@@ -3339,6 +3358,92 @@ embed {
       margin-bottom: 12px;
       margin-bottom: 1.2rem; } }
 
+.campaign {
+  padding: 0px 12px;
+  padding: 0rem 1.2rem;
+  overflow: hidden; }
+  .campaign .campaign-image {
+    position: relative;
+    left: -12px;
+    width: -webkit-calc( 100% + 24px );
+    width: -moz-calc( 100% + 24px );
+    width: calc( 100% + 24px ); }
+    @media (min-width: 50em) {
+      .campaign .campaign-image {
+        left: -12px;
+        width: -webkit-calc( 100% + 24px );
+        width: -moz-calc( 100% + 24px );
+        width: calc( 100% + 24px ); } }
+    .campaign .campaign-image a {
+      display: block;
+      line-height: 0; }
+  .campaign .block-title {
+    padding: 0;
+    border: 0; }
+  .campaign .campaign-description {
+    text-shadow: none; }
+  .campaign .campaign-stats,
+  .campaign .meta {
+    position: relative;
+    left: -24px;
+    width: -webkit-calc( 100% + 48px );
+    width: -moz-calc( 100% + 48px );
+    width: calc( 100% + 48px ); }
+    @media (min-width: 37.5em) {
+      .campaign .campaign-stats,
+      .campaign .meta {
+        left: -12px;
+        width: -webkit-calc( 100% + 24px );
+        width: -moz-calc( 100% + 24px );
+        width: calc( 100% + 24px ); } }
+  .campaign .campaign-stats {
+    padding: 6px 0px;
+    padding: 0.6rem 0rem;
+    margin: 0;
+    border-top-width: 1px;
+    border-top-width: 0.1rem;
+    border-top-style: solid;
+    border-top-color: #e2dedb;
+    text-align: center;
+    list-style: none; }
+    .campaign .campaign-stats li {
+      position: relative;
+      display: inline-block;
+      padding: 0px 6px 0px 10px;
+      padding: 0rem 0.6rem 0rem 1rem;
+      margin: 0;
+      border-left-width: 1px;
+      border-left-width: 0.1rem;
+      border-left-style: solid;
+      border-left-color: #e2dedb;
+      font-size: 10px;
+      font-size: 1rem;
+      font-style: italic; }
+      .campaign .campaign-stats li span {
+        display: block;
+        padding-top: 2px;
+        padding-top: 0.2rem;
+        font-size: 14px;
+        font-size: 1.4rem;
+        color: #d95b43;
+        font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+        font-style: normal; }
+    .campaign .campaign-stats .barometer {
+      width: 52px;
+      width: 5.2rem;
+      height: 36px;
+      height: 3.6rem;
+      border: none;
+      vertical-align: top; }
+
+.campaign-widget {
+  background: transparent; }
+  .campaign-widget .campaign {
+    margin: 0; }
+    .campaign-widget .campaign .block-title {
+      margin-top: 12px;
+      margin-top: 1.2rem; }
+
 /*--------------------------------------------------------------
 18.1.3 Campaign Pledge Form
 --------------------------------------------------------------*/
@@ -3401,8 +3506,7 @@ embed {
   max-width: 100%;
   margin-bottom: 24px;
   margin-bottom: 2.4rem;
-  border: none;
-  overflow: hidden; }
+  border: none; }
 .campaigns-grid .campaign-image {
   position: relative;
   left: -12px;
@@ -3898,8 +4002,7 @@ body.user-dashboard .charitable-form .charitable-submit-field {
         padding-right: 3.6rem; }
       .charitable-form-fields .charitable-form-field.even {
         clear: none; }
-      .charitable-form-fields .charitable-form-field.fullwidth, .charitable-form-fields .charitable-form-field.page-template-page-template-home-slider,
-      .charitable-form-fields .charitable-form-field.page-template-page-template-fullwidth, .charitable-form-fields body.charitable-form-field.events-single {
+      .charitable-form-fields .charitable-form-field.fullwidth, .charitable-form-fields .charitable-form-field.page-template-page-template-home-slider, .charitable-form-fields .charitable-form-field.page-template-page-template-fullwidth, .charitable-form-fields body.charitable-form-field.events-single {
         width: 100%;
         padding: 0; } }
 

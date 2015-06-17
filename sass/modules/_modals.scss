@@ -23,6 +23,12 @@
         @include padding( 36 );
     }
 
+    .block-title {
+        margin-top: 0;
+        border: none;
+        color: $color__text;
+    }
+
 	&.multi-block {
 		padding-left: 0;
 		padding-right: 0;

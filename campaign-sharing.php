@@ -26,6 +26,19 @@ $title 		= urlencode( get_the_title() );
 		<a href="http://pinterest.com/pin/create/button/?url=<?php echo $permalink ?>&amp;description=<?php echo $title ?>" class="popup icon" data-icon="&#xf0d2;"></a>
 	</li>
 	<li class="share-widget">
-		<a href="" class="icon" data-icon="&#xf121;" data-reveal-id="campaign-widget-sharing"></a>
+		<a href="#campaign-widget-<?php the_ID() ?>" class="icon" data-icon="&#xf121;" data-trigger-modal></a>
+		<div id="campaign-widget-<?php the_ID() ?>" class="modal">
+			<a class="modal-close"></a>			
+			<h4 class="block-title"><?php _e( 'Share Campaign', 'benny' ) ?></h4>
+			<div class="block">	
+				<?php echo apply_filters( 'the_excerpt', get_theme_mod( 'campaign_sharing_text', '' ) ) ?>
+				<p><strong><?php _e( 'Embed Code', 'benny' ) ?></strong></p>
+				<pre><?php echo htmlspecialchars( '<iframe src="' . charitable_get_permalink( 'campaign_widget_page' ) . '" width="275px" height="400px" frameborder="0" scrolling="no" /></iframe>' ) ?></pre>
+			</div>
+			<div class="block iframe-block">
+				<p><strong><?php _e( 'Preview', 'benny' ) ?></strong></p>
+				<iframe src="<?php echo charitable_get_permalink( 'campaign_widget_page' ) ?>" width="275px" height="400px" frameborder="0" scrolling="no" /></iframe>
+			</div>
+		</div>
 	</li>	
 </ul>

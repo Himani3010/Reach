@@ -14,11 +14,10 @@
 
 .campaigns-grid {
 
-	.campaign {
+	.campaign {		
 		max-width: 100%;
 		@include margin-bottom( 24 );
-		border: none;	
-		overflow: hidden;
+		border: none;
 	}	
 
 	.campaign-image {

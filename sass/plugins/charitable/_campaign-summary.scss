@@ -361,17 +361,41 @@
 	width: 30%;
 }
 
-#campaign-widget-sharing {
+.share-widget {
+	.modal {
+		text-align: left;
+	}
+	
+	.modal, 
+	.modal .block-title {
+		color: $color__text;
+	}
+
 	pre {
 		word-break: break-word;
 	}
 
 	.block {
 		border: none;
-		float: left;
-
 		&.iframe-block {
 			@include width( 275 );
+		}
+	}
+
+	@include bp( 768 ) {
+		.modal {
+			@include width( 634 );
+		}
+
+		.block {
+			float: left;
+			@include width( 275 );
+			@include padding-right( 12 );
+
+			&.iframe-block {
+				float: right;
+				padding: 0;
+			}
 		}
 	}
 }
