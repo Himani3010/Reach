@@ -28,7 +28,7 @@ class Benny_Theme {
 	/**
 	 * The theme version. 
 	 */
-	const VERSION = '1.0.0';
+	const VERSION = '1.0.0-20150617';
 
 	/**
 	 * Database version number. 
