@@ -1,0 +1,8 @@
+@mixin border( $width : $size__border, $color : "", $style: solid ) {
+    @include border-width( $width );
+    border-style: $style;
+
+    @if $color != "" {
+        @include border-color( $color );
+    }
+}

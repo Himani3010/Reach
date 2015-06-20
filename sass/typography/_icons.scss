@@ -210,7 +210,7 @@
 	display: inline;	
 	@include margin-right( 6 );
 	font-size: 120%;
-	color: $color__text;	
+	@extend %color--#{$color__text} !optional;	
 }
 
 .icon:hover {	

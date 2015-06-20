@@ -136,7 +136,7 @@
 	    .currency {
 	    	@include padding-left( 2 );
 	    	@include font-size( 14 );
-	    	color: $color__text-meta;
+	    	@extend %color--#{$color__text-meta} !optional;
 	    }
 	}
 
@@ -185,13 +185,14 @@
 		@include button-inverted();
 		margin: 0;
 		width: auto;
-		border-color: $color__accent;
-		color: $color__accent;
+		@extend %color--#{$color__accent} !optional;
+		@extend %border-color--#{$color__accent} !optional;		
 
 		&:hover, 
 		&:focus, 
 		&:active {
-			background: $color__accent;
+			@extend %background-color--#{$color__accent} !optional;
+			color: $color__text-overlay;
 		}
 	}
 }
@@ -201,13 +202,12 @@
 	@include padding( 12, 12, 12, 36 );
     @include margin( 0, 12, 12, 0 );
     @include line-height( 18 );
-    border: {
-        @include width( 2 );
-        style: solid;
-        color: $color__background-body;
-    }
+
+    @include border-width( 2 );
+    border-style: solid;
+    @extend %border-color--#{$color__background-body} !optional;
     border-radius: 0.4rem;            
-    color: $color__text;
+    @extend %color--#{$color__text} !optional;
     background-color: $color__background-content;        
 
     .amount {    
@@ -222,8 +222,8 @@
 
     &.selected, 
     &:hover {
-    	border-color: $color__background-button;
-        background-color: $color__text;
+    	@extend %border-color--#{$color__background-button} !optional;
+        @extend %background-color--#{$color__text} !optional;
         color: $color__background-content;
     }
 
@@ -259,26 +259,26 @@
 #custom-donation-amount-field.charitable-custom-donation-field-alone {    
     @include padding( 2 );
     border-radius: 0.4rem;
-    background: $color__background-body;
+    @extend %background-color--#{$color__background-body} !optional;
 
 	input {
 		width: 100%;	  
 		max-width: 100%;  
 	    @include font-size( 18 );
 	    font-family: $font__secondary;
-	    color: $color__text; 
+	    @extend %color--#{$color__text} !optional; 
 	    background-color: $color__background-content;
 	}
 
 	::-webkit-input-placeholder {
-	   color: $color__background-body;
+	   @extend %color--#{$color__background-body} !optional;
 	}
 
 	::-moz-placeholder {
-	   color: $color__background-body;  
+	   @extend %color--#{$color__background-body} !optional;  
 	}
 
 	:-ms-input-placeholder {  
-	   color: $color__background-body;  
+	   @extend %color--#{$color__background-body} !optional;  
 	}
 }

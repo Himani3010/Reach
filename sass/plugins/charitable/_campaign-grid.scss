@@ -73,7 +73,7 @@
 				display: block;
 				@include padding-top( 2 );				
 				@include font-size( 14 );
-				color: $color__accent;
+				@extend %color--#{$color__accent} !optional;
 				font-family: $font__secondary;
 				font-style: normal;
 			}

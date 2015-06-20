@@ -2,7 +2,7 @@
     .entry-title {
         @extend .post-title;
         margin-top: 0;
-        color: $color__accent;
+        @extend %color--#{$color__accent} !optional;
     }    
 }
 
@@ -109,11 +109,11 @@
         }        
 
         a {
-            color: $color__text;
+            @extend %color--#{$color__text} !optional;
 
             &:hover {
                 text-decoration: none;
-                color: $color__accent;
+                @extend %color--#{$color__accent} !optional;
             }
 
             &:before {                        

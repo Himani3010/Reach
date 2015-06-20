@@ -1,0 +1,53 @@
+@mixin colour( $property, $colour ) { 
+    $include_colours: 1 !default;     
+    
+    @if $include_colours == 1 {
+        #{$property} : #{$colour};
+    }
+}
+
+@mixin color( $colour ) {
+    @include colour( color, $colour );
+}
+@mixin background-color( $colour ) {
+    @include colour( background-color, $colour );
+}
+@mixin border-color( $colour ) {
+    @include colour( border-color, $colour );
+}
+
+@mixin box-shadow( $value ) {
+    $include_colours: 1 !default;
+
+    @if $include_colours == 1 {
+        box-shadow: #{$value};
+    }
+}
+
+// Add a breakpoint. 
+@mixin bp($point, $min : true) {
+    $bp : ($point / 16) + em;
+
+    @if ( $min ) {
+        @media (min-width: #{$bp}) { @content };
+    }
+    @else {
+        @media (max-width: #{$bp}) { @content };
+    }
+}
+
+/*-------------------------------------------------------------- 
+0.1 Palette
+--------------------------------------------------------------*/
+$include_colours: 1 !default;
+
+@if $include_colours == 1 {
+
+    @each $color in $color__accent, $color__background-body, $color__text, $color__background-button, $color__text-dark, $color__text-meta {
+        @each $prop in color, background-color, border-color {
+            %#{$prop}--#{$color} {
+                #{$prop} : #{$color};
+            }
+        }
+    }    
+}

@@ -9,14 +9,14 @@ body .edd-submit.button {
 	&.dark-gray	{
 		display: inline-block;
 		@include border-width( 2 );
-		border-color: $color__accent;
+		@extend %border-color--#{$color__accent} !optional;
 		background: transparent;	
-		color: $color__accent;
+		@extend %color--#{$color__accent} !optional;
 		box-shadow: none;
 
 		&:focus, &:active, &:hover {
-			border-color: $color__accent;
-			background-color: $color__accent;
+			@extend %border-color--#{$color__accent} !optional;
+			@extend %background-color--#{$color__accent} !optional;
 			color: $color__text-overlay;
 		}
 	}
@@ -30,7 +30,7 @@ div.printfriendly {
     a:visited {
     	@include font-size( 12 );
 	    @include letter-spacing( 2 );    
-	    color: $color__text;
+	    @extend %color--#{$color__text} !optional;
 	    font-family: $font__secondary;
 	    text-transform: uppercase;
     }

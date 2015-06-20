@@ -41,7 +41,7 @@
 
 .charitable-form-field-editor {
 	.mce-btn button {
-		color: $color__text;
+		@extend %color--#{$color__text} !optional;
 		box-shadow: none;
 	}
 
@@ -140,14 +140,14 @@
 			@include icon;		
 			content: "\f057";
 			float: right;
-			color: $color__text;			
+			@extend %color--#{$color__text} !optional;			
 		}
 
 		&:hover {
 			color: transparent;
 
 			&:before {
-				color: $color__accent;
+				@extend %color--#{$color__accent} !optional;
 			}
 		}
 	}	
@@ -157,14 +157,12 @@
 
 		&.button {
 		    font-style: normal;
-		    border: {
-		    	@include width( 2 ); 
-		    	style: solid;
-		    	color: $color__background-button;
-		    }
+		    @include border-width( 2 );
+		    border-style: solid;
+		    @extend %border-color--#{$color__background-button} !optional;		    
 		    box-shadow: none;
 		    background: $color__background-content;
-		    color: $color__background-button;
+		    @extend %color--#{$color__background-button} !optional;
 		}
 	}
 
@@ -226,7 +224,7 @@
 		@include left( 24 );
 		@include padding( 0, 12, 24 );		
 		@include font-size( 18 );
-		color: $color__accent;
+		@extend %color--#{$color__accent} !optional;
 		background-color: $color__background-content;
 	}
 
@@ -294,7 +292,7 @@
     	color: $color__border-primary;
     }
     background-color: $color__background-form-fields;
-    color: $color__text-dark;
+    @extend %color--#{$color__text-dark} !optional;
     
     ul {
     	list-style: none;

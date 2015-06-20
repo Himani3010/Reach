@@ -1,5 +1,5 @@
 a {
-	color: $color__accent;
+	@extend %color--#{$color__accent} !optional;
 	text-decoration: none;	
 
 	&:hover {

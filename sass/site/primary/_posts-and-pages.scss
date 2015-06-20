@@ -5,7 +5,7 @@
 	word-break: break-word;
 
 	a {
-		color: $color__accent;
+		@extend %color--#{$color__accent} !optional;
 	}
 }
 
@@ -33,7 +33,7 @@
 
 .sticky {
 	color: $color__background-content;
-	background-color: $color__accent;
+	@extend %background-color--#{$color__accent} !optional;
 	border: {
 		@include width( 1 ); 
 		style: solid;	
@@ -87,7 +87,7 @@
 	@include letter-spacing( 1 );
 	font-weight: 300;	
 	background-color: $color__background-meta;
-	color: $color__text-meta;
+	@extend %color--#{$color__text-meta} !optional;
 
 	p {
 		padding: 0;
@@ -98,7 +98,7 @@
 	}
 
 	a {
-		color: $color__text;
+		@extend %color--#{$color__text} !optional;
 	}
 
 	.author, 

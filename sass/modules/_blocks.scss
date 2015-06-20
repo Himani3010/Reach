@@ -50,10 +50,11 @@
 
 .feature-block {
 	@include fullwidth-wrapper-padded();	
-	@include padding( 0, 24, 36, 24 );	
-	background-repeat: repeat;
+	@include padding( 0, 24, 36, 24 );		
 	color: $color__text-overlay;
-	background-color: $color__accent;
+	@include background-color($color__accent);
+	// @extend %background-color--#{$color__accent} !optional;
+	background-repeat: repeat;
 	box-shadow: none;
 	border: none;
 
@@ -65,7 +66,7 @@
 
 .block-title {
 	@include baseline-header();
-	color: $color__accent;
+	@extend %color--#{$color__accent} !optional;
 }
 
 /* Shadow wrapper */

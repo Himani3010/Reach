@@ -1,30 +1,30 @@
 /* Background colours */
-$color__background-body: 		#aea198;
-$color__background-wrapper: 	#f9f8f7;
-$color__background-screen: 		#f9f8f7;
-$color__background-widget: 		#f1efee;
-$color__background-content: 	#fff;
-$color__background-button: 		#7d6e63;
-$color__background-meta: 		#f1efee;
-$color__background-blockquote: 	#f1efee;
-$color__background-th: 			#f1efee;
-$color__background-form-fields: #f1efee;
+$color__background-body: 		#aea198 !default;
+$color__background-wrapper: 	#f9f8f7 !default;
+$color__background-screen: 		#f9f8f7 !default;
+$color__background-widget: 		#f1efee !default;
+$color__background-content: 	#ffffff !default;
+$color__background-button: 		#7d6e63 !default;
+$color__background-meta: 		#f1efee !default;
+$color__background-blockquote: 	#f1efee !default;
+$color__background-th: 			#f1efee !default;
+$color__background-form-fields: #f1efee !default;
 
 /* Accent colour */
-$color__accent: 				#d95b43;
-$color__accent-hover: 			#df745f;
+$color__accent: 				#d95b43 !default;
+$color__accent-hover: 			#df745f !default;
 
 /* Text colour */
-$color__text:		 			#7d6e63;
-$color__text-dark: 				#574c45;
-$color__text-overlay: 			#fff;
-$color__text-screen:		 	#574c45;
-$color__text-meta:				#bdb2ab;
+$color__text:		 			#7d6e63 !default;
+$color__text-dark: 				#574c45 !default;
+$color__text-overlay: 			#ffffff !default;
+$color__text-screen:		 	#574c45 !default;
+$color__text-meta:				#bdb2ab !default;
 
 /* Borders */
-$color__border-primary: 		#e2dedb; 
-$color__border-secondary: 		#dbd5d1; 
+$color__border-primary: 		#e2dedb !default; 
+$color__border-secondary: 		#dbd5d1 !default; 
 
 /* Miscellaneous */
-$color__success: 				#1ba714;
-$color__failure: 				#cc181e;
+$color__success: 				#1ba714 !default;
+$color__failure: 				#cc181e !default;

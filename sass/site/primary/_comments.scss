@@ -111,7 +111,7 @@
 .comment-meta {
 	padding-bottom: 0;
 	@include font-size( 10 );
-	color: $color__text-meta;
+	@extend %color--#{$color__text-meta} !optional;
 }
 
 .comment-date {	
@@ -129,7 +129,7 @@
 
 		i {
 			@include margin-right( 2 );
-			color: $color__accent;
+			@extend %color--#{$color__accent} !optional;
 		}
 	}
 }

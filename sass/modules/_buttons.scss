@@ -1,5 +1,6 @@
 .button {
 	@include button();
+	@extend %background-color--#{$color__background-button} !optional;
 
 	&:hover {
 		text-decoration: none;
@@ -11,13 +12,20 @@
 .button.button-alt, 
 .button.button-secondary {
 	@include button-inverted();
+	@extend %color--#{$color__background-button} !optional;
+	@extend %border-color--#{$color__background-button} !optional;	
+
+	&:hover {
+		@extend %background-color--#{$color__background-button} !optional;
+		color: $color__text-overlay;
+	}
 
 	&.accent {
-		color: $color__accent;
-		border-color: $color__accent;
+		@extend %color--#{$color__accent} !optional;
+		@extend %border-color--#{$color__accent} !optional;
 
 		&:hover {
-			background-color: $color__accent;
+			@extend %background-color--#{$color__accent} !optional;
 			color: $color__text-overlay;
 		}
 	}

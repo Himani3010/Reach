@@ -3,7 +3,7 @@
 body {
 	@include font-size(12);
 	@include line-height(20);
-	color: $color__text;
+	@extend %color--#{$color__text} !optional;
 }
 
 body, 

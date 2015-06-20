@@ -28,7 +28,7 @@ class Benny_Theme {
 	/**
 	 * The theme version. 
 	 */
-	const VERSION = '1.0.0-20150617';
+	const VERSION = '1.0.0-20150619';
 
 	/**
 	 * Database version number. 
@@ -424,7 +424,9 @@ class Benny_Theme {
 	 * @since 	1.0.0
 	 */
 	public function setup_scripts() {
-		wp_enqueue_style( 'benny-style', get_stylesheet_uri() );
+        $theme_dir = untrailingslashit( get_template_directory_uri() );
+		wp_enqueue_style( 'benny-style', $theme_dir . '/style.css' );
+        // wp_enqueue_style( 'benny-palette', $theme_dir . '/css/palette.css' );
 
 		$ext = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '.js' : '.min.js'; 
 		
@@ -440,14 +442,14 @@ class Benny_Theme {
         ) );
 
         if ( ! wp_script_is( 'lean-modal', 'registered' ) ) {
-            wp_register_script( 'lean-modal', get_template_directory_uri() . '/js/vendors/leanmodal/jquery.leanModal.' . $ext, array( 'jquery' ), $this->get_theme_version(), true);
+            wp_register_script( 'lean-modal', $theme_dir . '/js/vendors/leanmodal/jquery.leanModal.' . $ext, array( 'jquery' ), $this->get_theme_version(), true);
         }
 
-        wp_register_script( 'audio-js', get_template_directory_uri() . '/js/vendors/audiojs/audio.min.js', array(), $this->get_theme_version(), true);
-        wp_register_script( 'rrssb', get_template_directory_uri() . '/js/vendors/rrssb/rrssb.min.js', array('jquery'), $this->get_theme_version(), true );
-        wp_register_script( 'fitvids', get_template_directory_uri() . '/js/vendors/fitvids/jquery.fitvids.min.js', array('jquery'), '1.0', true );
-		wp_register_script( 'benny-lib', get_template_directory_uri() . '/js/benny-lib' . $ext, $benny_script_dependencies, $this->get_theme_version(), true );
-        wp_register_script( 'benny', get_template_directory_uri() . '/js/benny.js', array( 'benny-lib' ), $this->get_theme_version(), true );
+        wp_register_script( 'audio-js', $theme_dir . '/js/vendors/audiojs/audio.min.js', array(), $this->get_theme_version(), true);
+        wp_register_script( 'rrssb', $theme_dir . '/js/vendors/rrssb/rrssb.min.js', array('jquery'), $this->get_theme_version(), true );
+        wp_register_script( 'fitvids', $theme_dir . '/js/vendors/fitvids/jquery.fitvids.min.js', array('jquery'), '1.0', true );
+		wp_register_script( 'benny-lib', $theme_dir . '/js/benny-lib' . $ext, $benny_script_dependencies, $this->get_theme_version(), true );
+        wp_register_script( 'benny', $theme_dir . '/js/benny.js', array( 'benny-lib' ), $this->get_theme_version(), true );
         wp_enqueue_script( 'benny' ); 
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

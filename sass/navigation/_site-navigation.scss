@@ -61,7 +61,7 @@
 				border: none;
 
 				> a:hover {
-					border-color: $color__accent;
+					@include border-color( $color__accent );
 				}
 			}
 			
@@ -85,7 +85,7 @@
 		.current_page_item > a,
 		.current-menu-item > a,
 		.current_page_ancestor > a {
-			color: $color__accent;
+			@include color( $color__accent );
 
 			&:hover {
 				border-color: transparent !important;

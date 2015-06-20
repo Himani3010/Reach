@@ -1,4 +1,4 @@
-/*! benny - v2.0.0 - 2015-06-11 */
+/*! benny - v2.0.0 - 2015-06-20 */
 
 /*--------------------------------------------------------
  * BENNY is the core object containing all components.

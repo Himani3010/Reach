@@ -3,6 +3,15 @@
 /* Text colour */
 /* Borders */
 /* Miscellaneous */
+/*-------------------------------------------------------------- 
+0.1 Palette
+--------------------------------------------------------------*/
+body {
+  color: #7d6e63; }
+
+body {
+  color: #7d6e63; }
+
 /*--------------------------------------------------------------
 1.0 Body
 --------------------------------------------------------------*/
@@ -11,7 +20,6 @@ body {
   font-size: 13px;
   line-height: 21px;
   font-family: Merriweather, Georgia, "Times New Roman", Times, serif;
-  color: #7d6e63;
   font-weight: 400;
   vertical-align: baseline; }
 

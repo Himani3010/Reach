@@ -40,7 +40,7 @@
         float: left;
         @include padding( 0, 0, 12 );
         font-family: $font__secondary;
-        color: $color__accent;        
+        @extend %color--#{$color__accent} !optional;
     }
 
     .edd_download_purchase_form {

@@ -74,7 +74,7 @@
 	#edd-purchase-button {
 		@include font-size( 25 );
 		@include height( 50 );
-		background-color: $color__accent;
+		@extend %background-color--#{$color__accent} !optional;
 		border-color: rgba( 255, 255, 255, 0.3 );
 		box-shadow: 0 0 0 3px $color__accent;
 		color: $color__text-overlay;

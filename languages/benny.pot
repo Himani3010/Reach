@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Benny 2.0.0\n"
+"Project-Id-Version: Benny 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-03-19 04:08:53+00:00\n"
+"POT-Creation-Date: 2015-06-20 03:23:09+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,6 +21,63 @@ msgstr ""
 msgid "Go home"
 msgstr ""
 
+#: account-links.php:19
+msgid "Create a campaign"
+msgstr ""
+
+#: account-links.php:26
+msgid "Profile"
+msgstr ""
+
+#: account-links.php:29
+msgid "Log out"
+msgstr ""
+
+#: account-links.php:33
+msgid "Login / Register"
+msgstr ""
+
+#: author-activity-campaign.php:18 author-activity-post.php:17
+#: campaign-widget.php:26 campaign.php:19 inc/functions/template-tags.php:289
+msgid "Link to %s"
+msgstr ""
+
+#: author-activity.php:14
+msgid "Activity Feed"
+msgstr ""
+
+#: author.php:26
+msgid "Joined %s"
+msgstr ""
+
+#: author.php:28
+msgid "Edit Profile"
+msgstr ""
+
+#: author.php:34
+msgid "Visit %s's website"
+msgstr ""
+
+#: author.php:40
+msgid "Visit %s's Twitter profile"
+msgstr ""
+
+#: author.php:46
+msgid "Visit %s's Facebook profile"
+msgstr ""
+
+#: author.php:51
+msgid "About"
+msgstr ""
+
+#: author.php:59
+msgid "Campaigns Backed"
+msgstr ""
+
+#: author.php:61
+msgid "Campaigns Created"
+msgstr ""
+
 #: campaign-categories.php:3
 msgid "Browse by Category"
 msgstr ""
@@ -29,24 +86,20 @@ msgstr ""
 msgid "Time left to donate"
 msgstr ""
 
+#: campaign-donation-page.php:22 edd-checkout.php:29
+msgid "Thank you for supporting this campaign"
+msgstr ""
+
 #: campaign-ended.php:12
-msgid "This campaign successfully reached its funding goal and ended %s"
+msgid "This campaign successfully reached its funding goal and ended %s ago"
 msgstr ""
 
 #: campaign-ended.php:16
-msgid "This campaign failed to reach its funding goal %s"
+msgid "This campaign failed to reach its funding goal %s ago"
 msgstr ""
 
 #: campaign-ended.php:20
-msgid "This campaign ended %s"
-msgstr ""
-
-#: campaign-featured-image.php:15 campaign.php:14
-msgid "Successful"
-msgstr ""
-
-#: campaign-featured-image.php:20 campaign.php:18
-msgid "Unsuccessful"
+msgid "This campaign ended %s ago"
 msgstr ""
 
 #: campaign-grid.php:8
@@ -59,6 +112,18 @@ msgstr ""
 
 #: campaign-sharing.php:12
 msgid "Share"
+msgstr ""
+
+#: campaign-sharing.php:32
+msgid "Share Campaign"
+msgstr ""
+
+#: campaign-sharing.php:35
+msgid "Embed Code"
+msgstr ""
+
+#: campaign-sharing.php:39
+msgid "Preview"
 msgstr ""
 
 #: campaign-stats-small.php:21
@@ -74,28 +139,23 @@ msgid "Goal"
 msgstr ""
 
 #: campaign-stats.php:22
-msgid "Backers"
+msgid "Donors"
 msgstr ""
 
-#: campaign.php:22 featured-image.php:16
+#: campaign-status-ribbon.php:12
+msgid "Successful"
+msgstr ""
+
+#: campaign-status-ribbon.php:17
+msgid "Unsuccessful"
+msgstr ""
+
+#: campaign-widget.php:20 campaign.php:13 featured-image.php:16
 msgid "Go to %s"
 msgstr ""
 
-#: campaign.php:28 inc/functions/template-tags.php:289
-msgid "Link to %s"
-msgstr ""
-
-#: charitable/charitable-edd/_widget-campaign-downloads.php:33
-#: inc/crowdfunding/functions/helper-functions.php:20
-msgid "Pledge"
-msgstr ""
-
-#: charitable/charitable-edd/_widget-campaign-downloads.php:48
-msgid "%d of %d remaining"
-msgstr ""
-
-#: charitable/charitable-edd/_widget-campaign-downloads.php:50
-msgid "Unlimited backers"
+#: charitable/campaign/donation-button.php:16
+msgid "Donate"
 msgstr ""
 
 #: comments-campaign.php:9 comments.php:14
@@ -139,7 +199,7 @@ msgstr ""
 msgid "Older Comments"
 msgstr ""
 
-#: content-audio.php:23 content-video.php:28 content.php:23
+#: content-audio.php:26 content-video.php:25 content.php:23
 msgid "Pages: "
 msgstr ""
 
@@ -179,55 +239,55 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/admin/class-benny-customizer.php:83
+#: inc/admin/class-benny-customizer.php:78
 msgid "Logo"
 msgstr ""
 
-#: inc/admin/class-benny-customizer.php:90
+#: inc/admin/class-benny-customizer.php:85
 msgid "Retina version of logo (2x)"
 msgstr ""
 
-#: inc/admin/class-benny-customizer.php:95
+#: inc/admin/class-benny-customizer.php:90
 msgid "Hide the site title"
 msgstr ""
 
-#: inc/admin/class-benny-customizer.php:101
+#: inc/admin/class-benny-customizer.php:96
 msgid "Hide the tagline"
 msgstr ""
 
-#: inc/admin/class-benny-customizer.php:131
+#: inc/admin/class-benny-customizer.php:122
 msgid "Background Textures"
 msgstr ""
 
-#: inc/admin/class-benny-customizer.php:132
+#: inc/admin/class-benny-customizer.php:123
 msgid "Upload background textures for the body and campaign section"
 msgstr ""
 
-#: inc/admin/class-benny-customizer.php:155
+#: inc/admin/class-benny-customizer.php:146
 msgid "Body"
 msgstr ""
 
-#: inc/admin/class-benny-customizer.php:166
+#: inc/admin/class-benny-customizer.php:157
 msgid "Featured Campaign Block"
 msgstr ""
 
-#: inc/admin/class-benny-customizer.php:177
+#: inc/admin/class-benny-customizer.php:168
 msgid "Blog & Page Banners"
 msgstr ""
 
-#: inc/admin/class-benny-customizer.php:235
+#: inc/admin/class-benny-customizer.php:224
 msgid "Footer"
 msgstr ""
 
-#: inc/admin/class-benny-customizer.php:246
+#: inc/admin/class-benny-customizer.php:235
 msgid "Text for footer notice"
 msgstr ""
 
-#: inc/admin/class-benny-customizer.php:259
+#: inc/admin/class-benny-customizer.php:246
 msgid "Social"
 msgstr ""
 
-#: inc/admin/class-benny-customizer.php:260
+#: inc/admin/class-benny-customizer.php:247
 msgid "Set up links to your online social presences"
 msgstr ""
 
@@ -239,6 +299,26 @@ msgstr ""
 
 #: inc/admin/customizer-controls/class-sofa-customizer-retina-image-control.php:94
 msgid "Is this image retina-ready?"
+msgstr ""
+
+#: inc/charitable/functions/helper-functions.php:20
+msgid "Pledge"
+msgstr ""
+
+#: inc/charitable/functions/template-tags.php:26
+msgid "Categories"
+msgstr ""
+
+#: inc/charitable/functions/template-tags.php:27
+msgid "All"
+msgstr ""
+
+#: inc/charitable/functions/template-tags.php:52
+msgid "Campaign"
+msgstr ""
+
+#: inc/charitable/functions/template-tags.php:52
+msgid "has ended"
 msgstr ""
 
 #: inc/class-benny-customizer-styles.php:69
@@ -309,116 +389,128 @@ msgstr ""
 msgid "Header buttons hover"
 msgstr ""
 
-#: inc/class-benny-theme.php:296
+#: inc/class-benny-theme.php:339
 msgid "Primary Menu"
 msgstr ""
 
-#: inc/class-benny-theme.php:328
+#: inc/class-benny-theme.php:371
 msgid "Default sidebar"
 msgstr ""
 
-#: inc/class-benny-theme.php:329
+#: inc/class-benny-theme.php:372
 msgid "The default sidebar."
 msgstr ""
 
-#: inc/class-benny-theme.php:338
+#: inc/class-benny-theme.php:381
 msgid "Campaign sidebar"
 msgstr ""
 
-#: inc/class-benny-theme.php:339
+#: inc/class-benny-theme.php:382
 msgid "The campaign sidebar."
 msgstr ""
 
-#: inc/class-benny-theme.php:348
+#: inc/class-benny-theme.php:391
 msgid "Campaign below content"
 msgstr ""
 
-#: inc/class-benny-theme.php:349
+#: inc/class-benny-theme.php:392
 msgid "Displayed below the campaign's content, but above the comment section."
 msgstr ""
 
-#: inc/class-benny-theme.php:358
+#: inc/class-benny-theme.php:401
 msgid "Footer left"
 msgstr ""
 
-#: inc/class-benny-theme.php:367
+#: inc/class-benny-theme.php:410
 msgid "Footer right"
 msgstr ""
 
-#: inc/class-benny-theme.php:411
+#: inc/class-benny-theme.php:461
 msgid "Your pledge must be at least the minimum pledge amount."
 msgstr ""
 
-#: inc/class-benny-theme.php:412
+#: inc/class-benny-theme.php:462
 msgid "Years"
 msgstr ""
 
-#: inc/class-benny-theme.php:413
+#: inc/class-benny-theme.php:463
 msgid "Months"
 msgstr ""
 
-#: inc/class-benny-theme.php:414
+#: inc/class-benny-theme.php:464
 msgid "Weeks"
 msgstr ""
 
-#: inc/class-benny-theme.php:415
+#: inc/class-benny-theme.php:465
 msgid "Days"
 msgstr ""
 
-#: inc/class-benny-theme.php:416
+#: inc/class-benny-theme.php:466
 msgid "Hours"
 msgstr ""
 
-#: inc/class-benny-theme.php:417
+#: inc/class-benny-theme.php:467
 msgid "Minutes"
 msgstr ""
 
-#: inc/class-benny-theme.php:418
+#: inc/class-benny-theme.php:468
 msgid "Seconds"
 msgstr ""
 
-#: inc/class-benny-theme.php:419
+#: inc/class-benny-theme.php:469
 msgid "Year"
 msgstr ""
 
-#: inc/class-benny-theme.php:420
+#: inc/class-benny-theme.php:470
 msgid "Month"
 msgstr ""
 
-#: inc/class-benny-theme.php:421
+#: inc/class-benny-theme.php:471
 msgid "Day"
 msgstr ""
 
-#: inc/class-benny-theme.php:422
+#: inc/class-benny-theme.php:472
 msgid "Hour"
 msgstr ""
 
-#: inc/class-benny-theme.php:423
+#: inc/class-benny-theme.php:473
 msgid "Minute"
 msgstr ""
 
-#: inc/class-benny-theme.php:424
+#: inc/class-benny-theme.php:474
 msgid "Second"
 msgstr ""
 
-#: inc/class-benny-theme.php:492
+#: inc/class-benny-theme.php:542
 msgid "Page %s"
 msgstr ""
 
-#: inc/class-benny-theme.php:531
+#: inc/class-benny-theme.php:581
 msgid "Keep reading %s"
 msgstr ""
 
-#: inc/class-benny-theme.php:531
+#: inc/class-benny-theme.php:581
 msgid "Continue Reading"
 msgstr ""
 
-#: inc/crowdfunding/functions/template-tags.php:26
-msgid "Categories"
+#: inc/easy-digital-downloads/functions/template-tags.php:129
+msgid "Sold Out"
 msgstr ""
 
-#: inc/crowdfunding/functions/template-tags.php:27
-msgid "All"
+#: inc/easy-digital-downloads/functions/template-tags.php:192
+msgid "Remaining"
+msgstr ""
+
+#: inc/easy-digital-downloads/functions/template-tags.php:193
+msgid "%d of %d %s"
+msgstr ""
+
+#: inc/easy-digital-downloads/functions/template-tags.php:193
+msgid "Limitless"
+msgstr ""
+
+#: inc/easy-digital-downloads/functions/template-tags.php:250
+msgid "Qty"
 msgstr ""
 
 #: inc/functions/comments.php:16
@@ -449,91 +541,95 @@ msgstr ""
 msgid "Author"
 msgstr ""
 
-#: inc/functions/helper-functions.php:66
+#: inc/functions/helper-functions.php:106
 msgid "Bitbucket"
 msgstr ""
 
-#: inc/functions/helper-functions.php:67
+#: inc/functions/helper-functions.php:107
 msgid "Dribbble"
 msgstr ""
 
-#: inc/functions/helper-functions.php:68
+#: inc/functions/helper-functions.php:108
 msgid "Facebook"
 msgstr ""
 
-#: inc/functions/helper-functions.php:69
+#: inc/functions/helper-functions.php:109
 msgid "Flickr"
 msgstr ""
 
-#: inc/functions/helper-functions.php:70
+#: inc/functions/helper-functions.php:110
 msgid "Foursquare"
 msgstr ""
 
-#: inc/functions/helper-functions.php:71
+#: inc/functions/helper-functions.php:111
 msgid "Github"
 msgstr ""
 
-#: inc/functions/helper-functions.php:72
+#: inc/functions/helper-functions.php:112
 msgid "Google+"
 msgstr ""
 
-#: inc/functions/helper-functions.php:73
+#: inc/functions/helper-functions.php:113
 msgid "Gittip"
 msgstr ""
 
-#: inc/functions/helper-functions.php:74
+#: inc/functions/helper-functions.php:114
 msgid "Instagram"
 msgstr ""
 
-#: inc/functions/helper-functions.php:75
+#: inc/functions/helper-functions.php:115
 msgid "Linkedin"
 msgstr ""
 
-#: inc/functions/helper-functions.php:76
+#: inc/functions/helper-functions.php:116
 msgid "Pinterest"
 msgstr ""
 
-#: inc/functions/helper-functions.php:77
+#: inc/functions/helper-functions.php:117
 msgid "Renren"
 msgstr ""
 
-#: inc/functions/helper-functions.php:78
+#: inc/functions/helper-functions.php:118
 msgid "Skype"
 msgstr ""
 
-#: inc/functions/helper-functions.php:79
+#: inc/functions/helper-functions.php:119
 msgid "Trello"
 msgstr ""
 
-#: inc/functions/helper-functions.php:80
+#: inc/functions/helper-functions.php:120
 msgid "Tumblr"
 msgstr ""
 
-#: inc/functions/helper-functions.php:81
+#: inc/functions/helper-functions.php:121
 msgid "Twitter"
 msgstr ""
 
-#: inc/functions/helper-functions.php:82
+#: inc/functions/helper-functions.php:122
 msgid "VK"
 msgstr ""
 
-#: inc/functions/helper-functions.php:83
+#: inc/functions/helper-functions.php:123
 msgid "Weibo"
 msgstr ""
 
-#: inc/functions/helper-functions.php:84
+#: inc/functions/helper-functions.php:124
 msgid "Windows"
 msgstr ""
 
-#: inc/functions/helper-functions.php:85
+#: inc/functions/helper-functions.php:125
 msgid "Xing"
 msgstr ""
 
-#: inc/functions/helper-functions.php:86
+#: inc/functions/helper-functions.php:126
 msgid "YouTube"
 msgstr ""
 
-#: inc/functions/helper-functions.php:133
+#: inc/functions/helper-functions.php:155
+msgid "Dashboard"
+msgstr ""
+
+#: inc/functions/helper-functions.php:177
 msgid "Search Results"
 msgstr ""
 
@@ -592,7 +688,49 @@ msgid "Campaigns Homepage"
 msgstr ""
 
 #. Template Name of the plugin/theme
+msgid "Fullwidth"
+msgstr ""
+
+#. Template Name of the plugin/theme
 msgid "Homepage Alternative"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Stripped Narrow"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Stripped"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "User Dashboard"
+msgstr ""
+
+#: author-activity-campaign.php:16
+msgctxt "user created campaign"
+msgid "created"
+msgstr ""
+
+#: author-activity-campaign.php:21 author-activity-donation.php:20
+#: author-activity-post.php:20
+msgctxt "time ago"
+msgid "ago"
+msgstr ""
+
+#: author-activity-donation.php:17
+msgctxt "user backed campaign"
+msgid "backed"
+msgstr ""
+
+#: author-activity-post.php:15
+msgctxt "user published post"
+msgid "published"
+msgstr ""
+
+#: author-activity.php:32
+msgctxt "user has no activity"
+msgid "has no activity to show yet."
 msgstr ""
 
 #: campaign-barometer.php:20
@@ -603,6 +741,13 @@ msgstr ""
 #: comments-campaign.php:30 comments.php:37
 msgctxt "post comment"
 msgid "Submit"
+msgstr ""
+
+#: inc/easy-digital-downloads/functions/template-tags.php:69
+#: inc/easy-digital-downloads/functions/template-tags.php:176
+#: inc/easy-digital-downloads/functions/template-tags.php:206
+msgctxt "pledge amount"
+msgid "Pledge %s"
 msgstr ""
 
 #: inc/functions/comments.php:101
@@ -635,7 +780,7 @@ msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
-#: meta-campaign.php:2 meta-inside.php:3
+#: meta-campaign.php:3 meta-inside.php:3
 msgctxt "by author"
 msgid "By %s"
 msgstr ""

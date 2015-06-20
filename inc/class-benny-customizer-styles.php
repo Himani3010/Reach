@@ -104,6 +104,8 @@ class Benny_Customizer_Styles {
      * @return  void
      */
     public function wp_head() {  
+        return;
+        
         /**
          * Check for saved customizer styles. 
          */

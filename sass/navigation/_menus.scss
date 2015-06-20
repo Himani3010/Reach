@@ -35,10 +35,10 @@
 		@include padding( 12, 0 );
 		text-decoration: none;
 		font-weight: 400;
-		color: $color__text;
+		@extend %color--#{$color__text} !optional;
 
 		&:hover {
-			color: $color__accent;
+			@extend %color--#{$color__accent} !optional;
 		}
 	}
 
@@ -163,7 +163,7 @@
 /* .menu-button is used as a trigger class for toggling menus */
 .menu-button {
 	@include font-size( 20 );
-	color: $color__accent;
+	@extend %color--#{$color__accent} !optional;
 
 	&:hover {
 		text-decoration: none;

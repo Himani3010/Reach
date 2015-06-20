@@ -368,7 +368,7 @@
 	
 	.modal, 
 	.modal .block-title {
-		color: $color__text;
+		@extend %color--#{$color__text} !optional;
 	}
 
 	pre {

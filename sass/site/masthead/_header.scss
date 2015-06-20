@@ -29,7 +29,7 @@
 	@include line-height( 38 );
 
 	a {
-		color: $color__accent;
+		@extend %color--#{$color__accent} !optional;
 	}
 }
 
