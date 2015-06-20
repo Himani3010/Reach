@@ -2,7 +2,7 @@
     .entry-title {
         @extend .post-title;
         margin-top: 0;
-        @extend %color--#{$color__accent} !optional;
+        @include color( $color__accent );
     }    
 }
 
@@ -15,204 +15,169 @@
 .charitable-user-post {
     width: 100%;
     @include margin-bottom( 12 );
-    border: {
-        @include width( 1 );
-        style: solid;
-        color: $color__border-primary;
-    }
+    @include border( 1 );
     border-radius: 0.4rem;
-
-    .user-post-summary {
-        @include padding( 0, 12 );
-        margin: 0;
-        background-color: transparent;
-    }    
-
-    .user-post-stats {
-        width: auto;
-        max-width: 100%;
-        float: none;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-               
-        .summary-item {
-            .amount, 
-            .donors-count {
-                @include font-size( 16 );
-            }
-
-            span {
-                @include line-height( 24 );
-            }
-        }
-
-        li {
-            float: none;
-            width: 100%;
-            @include padding( 12, 0 );
-            margin: 0;
-            border-bottom: {
-                @include width( 1 );
-                style: solid;
-                color: $color__border-primary;
-            }
-            @include font-size( 12 );
-            text-align: left;
-
-            &:last-child {
-                @include padding-bottom( 12 );               
-            }
-
-            @include bp( 600 ) {
-                float: left;
-                width: 50%;
-
-                &.campaign-donors {
-                    border-bottom: 0;
-                }
-            }            
-        }
-
-        span.goal-amount {
-            display: inline;
-            font-size: 1em;
-            line-height: 1em;
-            font-weight: bolder;
-        }
+    &:after {     
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include width( 150 );
+        height: 100%;           
+        @include border( 1 );
+        border-radius: 0 0.4rem 0.4rem 0;
+        @include background-color( $color__background-widget );
     }
-
-    .user-post-actions {
-        @include padding( 12 );
-        font-family: $font__secondary;
-        @include letter-spacing( 1 );
-        text-transform: uppercase;
-        border-top: {
-            @include width( 1 );
-            style: solid;
-            color: $color__border-primary;
-        }
-        background-color: $color__background-widget;
-
-        .actions {            
-            padding: 0;
-            margin: 0;
-            list-style-type: none;
-            text-align: center;
-
-            li {
-
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-        }        
-
-        a {
-            @extend %color--#{$color__text} !optional;
-
-            &:hover {
-                text-decoration: none;
-                @extend %color--#{$color__accent} !optional;
-            }
-
-            &:before {                        
-                position: relative;
-                @include top( 1 );
-                @include padding-right( 6 );
-                @include font-size( 16 );
-                @include icon();
-            }
-        }
-
-        .edit-campaign a:before {
-            content: "\f040";
-        }
-    }
-
     /* Float image and campaign summary side by side, with actions below. */
     @include bp( 768 ) {
         @include clearfix;
-
         .wp-post-image {
             float: left;
             @include max-width( 320 );
             width: 50%;
         }
-        
-        .user-post-summary {
-            float: left;
-            min-width: 50%;
-            width: calc( 100% - 320px );
-        }
-
-        .user-post-title {
-            @include margin-top( 12 );
-        }
-
-        .user-post-actions {
-            float: left;
-            width: 100%;
-        }
     }
-
     /* Float actions to the right. */
     @include bp( 900 ) {
         position: relative;
         z-index: 1;
         overflow: hidden;
-
         .wp-post-image {
             width: 35%;
         }
-
-        .user-post-summary {
-            min-width: 0;
-            width: calc( 65% - 150px ); // This is the width used when the image is displayed at less than 320px            
-        }
-
-        .user-post-actions { 
-            position: relative;
-            z-index: 1;
-            float: right;           
-            @include width( 150 );
-            border-top: 0;    
-            background-color: transparent;      
-
-            li {
-                @include padding( 12, 0 );
-                border-bottom: {
-                    @include width( 1 );
-                    style: solid;
-                    color: $color__border-primary;
-                }
-
-                &:first-child {
-                    padding-top: 0;
-                }
-            }  
-        }
-
         &:after {
             content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            @include width( 150 );
-            height: 100%;
-            background-color: $color__background-widget;
-            border: {
-                @include width( 1 );
-                style: solid;
-                color: $color__border-primary;
+        }
+    }
+}
+
+.user-post-summary {
+    @include padding( 0, 12 );
+    margin: 0;
+    background-color: transparent;                   
+    /* Float image and campaign summary side by side, with actions below. */
+    @include bp( 768 ) {
+        float: left;
+        min-width: 50%;
+        width: calc( 100% - 320px );
+        .user-post-title {
+            @include margin-top( 12 );        
+        }
+    }
+    /* Float actions to the right. */
+    @include bp( 900 ) {
+        min-width: 0;
+        width: calc( 65% - 150px ); // This is the width used when the image is displayed at less than 320px            
+    }
+    @include bp( 1058 ) {
+        width: calc( 100% - 470px ); // This is the width used when the image has maxed out at 320px
+    }
+}
+
+.user-post-stats.campaign-stats {
+    width: auto;
+    max-width: 100%;
+    float: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;    
+    li {
+        float: none;
+        width: 100%;
+        @include padding( 12, 0 );
+        margin: 0;
+        @include border-bottom( 1 );
+        @include font-size( 12 );
+        text-align: left;
+        &:last-child {
+            @include padding-bottom( 12 );               
+        }
+        @include bp( 600 ) {
+            float: left;
+            width: 50%;
+            &.campaign-donors {
+                border-bottom: 0;
             }
-            border-radius: 0 0.4rem 0.4rem 0;
+        }            
+    }
+
+    span {
+        @include line-height( 24 );
+    }
+
+    .amount, 
+    .donors-count {
+        @include font-size( 16 );
+    }
+
+    .goal-amount {
+        display: inline;
+        font-size: 1em;
+        line-height: 1em;
+        font-weight: bolder;
+    }
+}
+
+.user-post-actions {
+    @include padding( 12 );
+    font-family: $font__secondary;
+    @include letter-spacing( 1 );
+    text-transform: uppercase;
+    @include border-top( 1 );
+    @include background-color( $color__background-widget );
+
+    .actions {            
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        text-align: center;
+
+        li {
+            @include border-bottom-color( $color__border-primary );
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }        
+
+    a {
+        @include color( $color__text );
+
+        &:hover {
+            text-decoration: none;
+            @include color( $color__accent );
+        }
+
+        &:before {                        
+            position: relative;
+            @include top( 1 );
+            @include padding-right( 6 );
+            @include font-size( 16 );
+            @include icon();
         }
     }
 
-    @include bp( 1058 ) {
-        .user-post-summary {
-            width: calc( 100% - 470px ); // This is the width used when the image has maxed out at 320px
+    .edit-campaign a:before {
+        content: "\f040";
+    }
+
+    @include bp( 768 ) {
+        float: left;
+        width: 100%;
+    }
+
+    @include bp( 900 ) { 
+        position: relative;
+        z-index: 1;
+        float: right;           
+        @include width( 150 );
+        border-top: 0;    
+        background-color: transparent;      
+        li {
+            @include padding( 12, 0 );
+            @include border-bottom( 1, "" );
+            &:first-child {
+                padding-top: 0;
+            }
         }
     }
 }

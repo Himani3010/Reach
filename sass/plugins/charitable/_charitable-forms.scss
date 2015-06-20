@@ -41,7 +41,7 @@
 
 .charitable-form-field-editor {
 	.mce-btn button {
-		@extend %color--#{$color__text} !optional;
+		@include color( $color__text );
 		box-shadow: none;
 	}
 
@@ -79,7 +79,7 @@
 
 .charitable-repeatable-form-field-table {	
 	.repeatable-field:nth-child(odd) {
-		background-color: $color__background-wrapper;
+		@include background-color( $color__background-wrapper );
 
 		input, select, textarea {
 			background-color: $color__background-content;
@@ -140,14 +140,14 @@
 			@include icon;		
 			content: "\f057";
 			float: right;
-			@extend %color--#{$color__text} !optional;			
+			@include color( $color__text );			
 		}
 
 		&:hover {
 			color: transparent;
 
 			&:before {
-				@extend %color--#{$color__accent} !optional;
+				@include color( $color__accent );
 			}
 		}
 	}	
@@ -159,10 +159,10 @@
 		    font-style: normal;
 		    @include border-width( 2 );
 		    border-style: solid;
-		    @extend %border-color--#{$color__background-button} !optional;		    
+		    @include border-color( $color__background-button );		    
 		    box-shadow: none;
 		    background: $color__background-content;
-		    @extend %color--#{$color__background-button} !optional;
+		    @include color( $color__background-button );
 		}
 	}
 
@@ -224,7 +224,7 @@
 		@include left( 24 );
 		@include padding( 0, 12, 24 );		
 		@include font-size( 18 );
-		@extend %color--#{$color__accent} !optional;
+		@include color( $color__accent );
 		background-color: $color__background-content;
 	}
 
@@ -292,7 +292,7 @@
     	color: $color__border-primary;
     }
     background-color: $color__background-form-fields;
-    @extend %color--#{$color__text-dark} !optional;
+    @include color( $color__text-dark );
     
     ul {
     	list-style: none;

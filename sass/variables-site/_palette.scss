@@ -1,9 +1,11 @@
-@mixin colour( $property, $colour ) { 
-    $include_colours: 1 !default;     
+@mixin colour( $property, $colour ) {
+    $include_colours: 1 !default; 
     
     @if $include_colours == 1 {
         #{$property} : #{$colour};
     }
+
+    @extend %#{$property}#{unquote("-") + $colour} !optional;    
 }
 
 @mixin color( $colour ) {
@@ -14,6 +16,18 @@
 }
 @mixin border-color( $colour ) {
     @include colour( border-color, $colour );
+}
+@mixin border-top-color( $colour ) {
+    @include colour( border-top-color, $colour );
+}
+@mixin border-right-color( $colour ) {
+    @include colour( border-right-color, $colour );
+}
+@mixin border-bottom-color( $colour ) {
+    @include colour( border-bottom-color, $colour );
+}
+@mixin border-left-color( $colour ) {
+    @include colour( border-left-color, $colour );
 }
 
 @mixin box-shadow( $value ) {
@@ -39,14 +53,36 @@
 /*-------------------------------------------------------------- 
 0.1 Palette
 --------------------------------------------------------------*/
-$include_colours: 1 !default;
-
-@if $include_colours == 1 {
-
-    @each $color in $color__accent, $color__background-body, $color__text, $color__background-button, $color__text-dark, $color__text-meta {
-        @each $prop in color, background-color, border-color {
-            %#{$prop}--#{$color} {
-                #{$prop} : #{$color};
+$is_palette_stylesheet : 0 !default;
+@if $is_palette_stylesheet == 1 {
+    @each $colour in 
+        $color__background-body,
+        $color__background-wrapper,
+        $color__background-screen,
+        $color__background-widget,
+        $color__background-content,
+        $color__background-button,
+        $color__background-meta,
+        $color__background-blockquote,
+        $color__background-th,
+        $color__background-form-fields,
+        $color__accent,
+        $color__accent-hover,
+        $color__text,
+        $color__text-dark,
+        $color__text-overlay,
+        $color__text-screen,
+        $color__text-meta,
+        $color__border-primary,
+        $color__border-secondary,
+        $color__success,
+        $color__failure {
+        @each $prop in 
+            color, 
+            background-color, 
+            border-color {
+            %#{$prop}#{unquote("-") + $colour} {
+                #{$prop} : #{$colour};
             }
         }
     }    

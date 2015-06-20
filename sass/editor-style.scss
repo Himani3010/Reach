@@ -9,7 +9,7 @@ body {
 	font-size: 13px;
 	line-height: 21px;
 	font-family: $font__main;
-	@extend %color--#{$color__text} !optional;
+	@include color( $color__text );
 	font-weight: 400;
 	vertical-align: baseline;
 }

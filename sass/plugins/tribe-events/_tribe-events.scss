@@ -55,7 +55,7 @@ body.events-single {
 
         .tickets_price {
             font-weight: normal;
-            @extend %color--#{$color__text} !optional;
+            @include color( $color__text );
             border-right: none;
             @include width( 100 );
         }
@@ -63,7 +63,7 @@ body.events-single {
         .tickets_name {
             @include font-size( 12 );
             border-right: 0;
-            @extend %color--#{$color__text} !optional;            
+            @include color( $color__text );            
         }
 
         .eddtickets-add {
@@ -103,12 +103,10 @@ body.tribe-mobile #main {
         @include font-size( 12 );
         @include letter-spacing( 2 );
         background: transparent;
-        @extend %color--#{$color__background-button} !optional;
-        @include border();        
-        @extend %border-color--#{$color__background-button} !optional;
-
+        @include color( $color__background-button );
+        @include border( 2, $color__background-button );
         &:hover {
-            @extend %background-color--#{$color__background-button} !optional;
+            @include background-color( $color__background-button );
             color: $color__background-content;
         }
     }

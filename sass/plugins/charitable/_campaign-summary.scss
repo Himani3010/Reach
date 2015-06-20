@@ -188,6 +188,9 @@
 			@include padding( 0, 10 );
 			@include font-size( 22 );
 			cursor: pointer;
+			&:before {
+				@include color( $color__text-overlay );
+			}
 		}		
 	}
 
@@ -368,7 +371,7 @@
 	
 	.modal, 
 	.modal .block-title {
-		@extend %color--#{$color__text} !optional;
+		@include color( $color__text );
 	}
 
 	pre {

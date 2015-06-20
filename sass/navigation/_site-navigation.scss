@@ -4,7 +4,7 @@
 	clear: both;
 	height: 0;	
 	width: 100%;
-
+	
 	.menu-button {
 		position: absolute;
 		z-index: 600;
@@ -61,7 +61,7 @@
 				border: none;
 
 				> a:hover {
-					@include border-color( $color__accent );
+					// @include border-color( $color__accent );
 				}
 			}
 			
@@ -85,7 +85,7 @@
 		.current_page_item > a,
 		.current-menu-item > a,
 		.current_page_ancestor > a {
-			@include color( $color__accent );
+			// @include color( $color__accent );
 
 			&:hover {
 				border-color: transparent !important;

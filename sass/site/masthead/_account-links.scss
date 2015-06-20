@@ -12,10 +12,16 @@
 	font-weight: 300;
 	text-align: center;
 
+	a,
+	a:before {
+		@include color( $color__text-overlay );
+	}
+
 	.button.button-alt {
 		display: inline-block;	
 		@include margin( 10, 0, 10, 8 );
 		max-width: 100%;
+		@include color( $color__text-overlay );
 		text-decoration: none;
 	}
 

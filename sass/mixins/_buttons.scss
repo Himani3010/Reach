@@ -5,7 +5,11 @@
 	@include height( 31 );
 	@include font-size( 14 );
 	@include line-height( 29 );
-	@include border( 1, rgba( 255, 255, 255, 0.3 ) );
+	border: {
+		@include width( 1 );
+		style: solid;
+		color: rgba( 255, 255, 255, 0.3 );
+	}
 	border-radius: 0.4rem;
 	@include box-shadow( 0 0 0 3px $color__background-button );
 	font-family: $font__secondary;	

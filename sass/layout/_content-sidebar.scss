@@ -25,7 +25,7 @@
 
 #main {
 	@include padding( 36, 24 );	
-	background-color: $color__background-wrapper;
+	@include background-color( $color__background-wrapper );
 	border-radius: 0 0 0.4rem 0.4rem;
 
 	@include bp ( 800 ) {

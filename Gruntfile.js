@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         watch: {            
             sass: {
                 files: ['sass/*.scss', 'sass/**/*.scss'],
-                tasks: ['sass']
+                tasks: ['sass:dist']
             },
             concat: {
                 files: ['js/benny/*.js', 'js/benny/**/*.js'], 
@@ -57,15 +57,17 @@ module.exports = function(grunt) {
                     'css/editor-style.css' : 'sass/editor-style.scss', 
                     'css/base.css' : 'sass/base.scss',
                     'css/palettes/_classic.css' : 'sass/palette-classic.scss'
-                }
+                }, 
+                trace : true
             },
             palettes: {
                 files: {
                     'css/palettes/_classic.css' : 'sass/palette-classic.scss', 
                     'css/palettes/_light.css' : 'sass/palette-light.scss',
                     'css/palettes/_dark.css' : 'sass/palette-dark.scss'
-                }
-            }
+                },
+                trace : true
+            },
         },
 
         // Sync

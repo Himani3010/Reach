@@ -55,7 +55,7 @@
                 display: block;
                 @include padding-top( 2 );              
                 @include font-size( 14 );
-                @extend %color--#{$color__accent} !optional;
+                @include color( $color__accent );
                 font-family: $font__secondary;
                 font-style: normal;
             }

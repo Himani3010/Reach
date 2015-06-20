@@ -1,87 +1,4650 @@
-a, .menu-site a:hover, .menu-button, .button-alt.accent,
-.button-secondary.accent,
-.widget.widget_campaign_creator_widget .creator-profile-link a.accent,
-.button.button-alt.accent,
-.button.button-secondary.accent, .block-title, .site-title a, .post-title a, .entry-header .entry-title a, .bypostauthor .post-author i, body.author .author-activity-summary .number, body.author .author-activity-feed .activity-summary .display-name,
-body.author .author-activity-feed .activity-summary a, .widget.widget_charitable_edd_campaign_downloads .download-price, .widget.widget_charitable_donate_widget .charitable-submit-field .button, .widget.widget_charitable_donate_widget .charitable-submit-field .widget.widget_campaign_creator_widget .creator-profile-link a, .widget.widget_campaign_creator_widget .creator-profile-link .widget.widget_charitable_donate_widget .charitable-submit-field a, .campaign .campaign-stats li span, .campaigns-grid .campaign-stats li span, .charitable-donation-form .charitable-form-field .button, .charitable-donation-form .charitable-form-field .widget.widget_campaign_creator_widget .creator-profile-link a, .widget.widget_campaign_creator_widget .creator-profile-link .charitable-donation-form .charitable-form-field a, body.user-dashboard .charitable-form .charitable-submit-field .button.button-primary, body.user-dashboard .charitable-form .charitable-submit-field .widget.widget_campaign_creator_widget .creator-profile-link a.button-primary, .widget.widget_campaign_creator_widget .creator-profile-link body.user-dashboard .charitable-form .charitable-submit-field a.button-primary, .user-dashboard-menu li.current-menu-item a,
-.user-dashboard-menu li a:hover, .charitable-repeatable-form-field-table .remove:hover:before, .charitable-fieldset .legend, .entry-header .entry-title, .charitable-user-post .user-post-actions a:hover, body .edd-submit.button.gray, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.gray, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.gray, body .edd-submit.button.white, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.white, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.white, body .edd-submit.button.blue, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.blue, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.blue, body .edd-submit.button.red, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.red, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.red, body .edd-submit.button.orange, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.orange, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.orange, body .edd-submit.button.green, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.green, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.green, body .edd-submit.button.yellow, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.yellow, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.yellow, body .edd-submit.button.dark-gray, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.dark-gray, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.dark-gray, .widget.widget_pp_campaign_events .download-price {
-  color: #d95b43; }
+/*--------------------------------------------------------------
+1.0 Reset
+--------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline; }
 
-.button-alt.accent:hover,
-.button-secondary.accent:hover,
-.widget.widget_campaign_creator_widget .creator-profile-link a.accent:hover,
-.button.button-alt.accent:hover,
-.button.button-secondary.accent:hover, .feature-block, .sticky, .widget.widget_charitable_donate_widget .charitable-submit-field .button:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .widget.widget_campaign_creator_widget .creator-profile-link .widget.widget_charitable_donate_widget .charitable-submit-field a:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button:focus, .widget.widget_charitable_donate_widget .charitable-submit-field .widget.widget_campaign_creator_widget .creator-profile-link a:focus, .widget.widget_campaign_creator_widget .creator-profile-link .widget.widget_charitable_donate_widget .charitable-submit-field a:focus, .charitable-donation-form .charitable-form-field .button:hover, .charitable-donation-form .charitable-form-field .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .widget.widget_campaign_creator_widget .creator-profile-link .charitable-donation-form .charitable-form-field a:hover, .charitable-donation-form .charitable-form-field .button:focus, .charitable-donation-form .charitable-form-field .widget.widget_campaign_creator_widget .creator-profile-link a:focus, .widget.widget_campaign_creator_widget .creator-profile-link .charitable-donation-form .charitable-form-field a:focus, .charitable-donation-form .charitable-form-field .button:active, .charitable-donation-form .charitable-form-field .widget.widget_campaign_creator_widget .creator-profile-link a:active, .widget.widget_campaign_creator_widget .creator-profile-link .charitable-donation-form .charitable-form-field a:active, body.user-dashboard .charitable-form .charitable-submit-field .button.button-primary:hover, body.user-dashboard .charitable-form .charitable-submit-field .widget.widget_campaign_creator_widget .creator-profile-link a.button-primary:hover, .widget.widget_campaign_creator_widget .creator-profile-link body.user-dashboard .charitable-form .charitable-submit-field a.button-primary:hover, body .edd-submit.button.gray:focus, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.gray:focus, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.gray:focus, body .edd-submit.button.gray:active, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.gray:active, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.gray:active, body .edd-submit.button.gray:hover, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.gray:hover, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.gray:hover, body .edd-submit.button.white:focus, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.white:focus, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.white:focus, body .edd-submit.button.white:active, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.white:active, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.white:active, body .edd-submit.button.white:hover, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.white:hover, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.white:hover, body .edd-submit.button.blue:focus, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.blue:focus, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.blue:focus, body .edd-submit.button.blue:active, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.blue:active, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.blue:active, body .edd-submit.button.blue:hover, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.blue:hover, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.blue:hover, body .edd-submit.button.red:focus, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.red:focus, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.red:focus, body .edd-submit.button.red:active, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.red:active, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.red:active, body .edd-submit.button.red:hover, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.red:hover, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.red:hover, body .edd-submit.button.orange:focus, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.orange:focus, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.orange:focus, body .edd-submit.button.orange:active, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.orange:active, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.orange:active, body .edd-submit.button.orange:hover, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.orange:hover, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.orange:hover, body .edd-submit.button.green:focus, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.green:focus, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.green:focus, body .edd-submit.button.green:active, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.green:active, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.green:active, body .edd-submit.button.green:hover, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.green:hover, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.green:hover, body .edd-submit.button.yellow:focus, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.yellow:focus, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.yellow:focus, body .edd-submit.button.yellow:active, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.yellow:active, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.yellow:active, body .edd-submit.button.yellow:hover, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.yellow:hover, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.yellow:hover, body .edd-submit.button.dark-gray:focus, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.dark-gray:focus, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.dark-gray:active, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.dark-gray:active, body .edd-submit.button.dark-gray:hover, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.dark-gray:hover, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.dark-gray:hover, #edd_checkout_wrap #edd-purchase-button {
-  background-color: #d95b43; }
+html {
+  font-size: 62.5%;
+  /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+  overflow-y: scroll;
+  /* Keeps page centered in all browsers regardless of content height */
+  -webkit-text-size-adjust: 100%;
+  /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+  -ms-text-size-adjust: 100%;
+  /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+  box-sizing: border-box;
+  /* Apply a natural box layout model to the document; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */ }
 
-.button-alt.accent,
-.button-secondary.accent,
-.widget.widget_campaign_creator_widget .creator-profile-link a.accent,
-.button.button-alt.accent,
-.widget.widget_campaign_creator_widget .creator-profile-link a.button-alt.accent,
-.button.button-secondary.accent, .widget.widget_charitable_donate_widget .charitable-submit-field .button, .widget.widget_charitable_donate_widget .charitable-submit-field .widget.widget_campaign_creator_widget .creator-profile-link a, .widget.widget_campaign_creator_widget .creator-profile-link .widget.widget_charitable_donate_widget .charitable-submit-field a, .charitable-donation-form .charitable-form-field .button, .charitable-donation-form .charitable-form-field .widget.widget_campaign_creator_widget .creator-profile-link a, .widget.widget_campaign_creator_widget .creator-profile-link .charitable-donation-form .charitable-form-field a, body.user-dashboard .charitable-form .charitable-submit-field .button.button-primary, body.user-dashboard .charitable-form .charitable-submit-field .widget.widget_campaign_creator_widget .creator-profile-link a.button-primary, .widget.widget_campaign_creator_widget .creator-profile-link body.user-dashboard .charitable-form .charitable-submit-field a.button-primary, body .edd-submit.button.gray, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.gray, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.gray, body .edd-submit.button.white, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.white, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.white, body .edd-submit.button.blue, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.blue, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.blue, body .edd-submit.button.red, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.red, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.red, body .edd-submit.button.orange, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.orange, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.orange, body .edd-submit.button.green, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.green, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.green, body .edd-submit.button.yellow, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.yellow, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.yellow, body .edd-submit.button.dark-gray, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.dark-gray, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.dark-gray, body .edd-submit.button.gray:focus, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.gray:focus, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.gray:focus, body .edd-submit.button.gray:active, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.gray:active, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.gray:active, body .edd-submit.button.gray:hover, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.gray:hover, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.gray:hover, body .edd-submit.button.white:focus, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.white:focus, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.white:focus, body .edd-submit.button.white:active, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.white:active, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.white:active, body .edd-submit.button.white:hover, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.white:hover, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.white:hover, body .edd-submit.button.blue:focus, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.blue:focus, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.blue:focus, body .edd-submit.button.blue:active, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.blue:active, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.blue:active, body .edd-submit.button.blue:hover, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.blue:hover, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.blue:hover, body .edd-submit.button.red:focus, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.red:focus, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.red:focus, body .edd-submit.button.red:active, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.red:active, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.red:active, body .edd-submit.button.red:hover, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.red:hover, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.red:hover, body .edd-submit.button.orange:focus, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.orange:focus, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.orange:focus, body .edd-submit.button.orange:active, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.orange:active, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.orange:active, body .edd-submit.button.orange:hover, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.orange:hover, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.orange:hover, body .edd-submit.button.green:focus, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.green:focus, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.green:focus, body .edd-submit.button.green:active, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.green:active, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.green:active, body .edd-submit.button.green:hover, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.green:hover, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.green:hover, body .edd-submit.button.yellow:focus, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.yellow:focus, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.yellow:focus, body .edd-submit.button.yellow:active, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.yellow:active, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.yellow:active, body .edd-submit.button.yellow:hover, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.yellow:hover, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.yellow:hover, body .edd-submit.button.dark-gray:focus, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.dark-gray:focus, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.dark-gray:active, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.dark-gray:active, body .edd-submit.button.dark-gray:hover, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.dark-gray:hover, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.dark-gray:hover {
-  border-color: #d95b43; }
+*,
+*:before,
+*:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit; }
 
-#custom-donation-amount-field.charitable-custom-donation-field-alone ::-webkit-input-placeholder, #custom-donation-amount-field.charitable-custom-donation-field-alone ::-moz-placeholder, #custom-donation-amount-field.charitable-custom-donation-field-alone :-ms-input-placeholder {
-  color: #aea198; }
+body {
+  /* Fallback for when there is no custom background color defined. */ }
 
-body, #custom-donation-amount-field.charitable-custom-donation-field-alone {
-  background-color: #aea198; }
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  /* tables still need 'cellspacing="0"' in the markup */
+  border-collapse: separate;
+  border-spacing: 0; }
+
+caption, th, td {
+  font-weight: normal;
+  text-align: left; }
+
+blockquote:before,
+blockquote:after {
+  content: "";
+  content: none; }
+
+blockquote, q {
+  content: "";
+  quotes: none; }
+
+q:before {
+  content: "\201C"; }
+
+q:after {
+  content: "\201D"; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:hover,
+a:active {
+  outline: 0; }
+
+a img {
+  border: 0; }
+
+/*--------------------------------------------------------------
+2.0 Typography
+--------------------------------------------------------------*/
+@font-face {
+  font-family: 'Benny-Icons';
+  src: url("fonts/Benny-Icons.eot?-hpwnxk");
+  src: url("fonts/Benny-Icons.eot?#iefix-hpwnxk") format("embedded-opentype"), url("fonts/Benny-Icons.woff?-hpwnxk") format("woff"), url("fonts/Benny-Icons.ttf?-hpwnxk") format("truetype"), url("fonts/Benny-Icons.svg?-hpwnxk#Benny-Icons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[class^="icon-"], [class*=" icon-"] {
+  font-family: "Benny-Icons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-search:before {
+  content: "\f002"; }
+
+.icon-star:before {
+  content: "\f005"; }
+
+.icon-user:before {
+  content: "\f007"; }
+
+.icon-th-list:before {
+  content: "\f00b"; }
+
+.icon-close:before {
+  content: "\f00d"; }
+
+.icon-search-plus:before {
+  content: "\f00e"; }
+
+.icon-file-o:before {
+  content: "\f016"; }
+
+.icon-tags:before {
+  content: "\f02c"; }
+
+.icon-pencil:before {
+  content: "\f040"; }
+
+.icon-plus-circle:before {
+  content: "\f055"; }
+
+.icon-times-circle:before {
+  content: "\f057"; }
+
+.icon-check-circle:before {
+  content: "\f058"; }
+
+.icon-exclamation-circle:before {
+  content: "\f06a"; }
+
+.icon-comment:before {
+  content: "\f075"; }
+
+.icon-comments:before {
+  content: "\f086"; }
+
+.icon-sign-out:before {
+  content: "\f08b"; }
+
+.icon-twitter:before {
+  content: "\f099"; }
+
+.icon-facebook:before {
+  content: "\f09a"; }
+
+.icon-github:before {
+  content: "\f09b"; }
+
+.icon-group:before {
+  content: "\f0c0"; }
+
+.icon-chain:before {
+  content: "\f0c1"; }
+
+.icon-pinterest:before {
+  content: "\f0d2"; }
+
+.icon-google-plus:before {
+  content: "\f0d5"; }
+
+.icon-caret-down:before {
+  content: "\f0d7"; }
+
+.icon-linkedin:before {
+  content: "\f0e1"; }
+
+.icon-angle-left:before {
+  content: "\f104"; }
+
+.icon-angle-right:before {
+  content: "\f105"; }
+
+.icon-angle-down:before {
+  content: "\f107"; }
+
+.icon-code:before {
+  content: "\f121"; }
+
+.icon-youtube:before {
+  content: "\f167"; }
+
+.icon-xing:before {
+  content: "\f168"; }
+
+.icon-instagram:before {
+  content: "\f16d"; }
+
+.icon-flickr:before {
+  content: "\f16e"; }
+
+.icon-bitbucket:before {
+  content: "\f171"; }
+
+.icon-tumblr:before {
+  content: "\f173"; }
+
+.icon-dribbble:before {
+  content: "\f17d"; }
+
+.icon-skype:before {
+  content: "\f17e"; }
+
+.icon-foursquare:before {
+  content: "\f180"; }
+
+.icon-gittip:before {
+  content: "\f184"; }
+
+.icon-vk:before {
+  content: "\f189"; }
+
+.icon-weibo:before {
+  content: "\f18a"; }
+
+.icon-renren:before {
+  content: "\f18b"; }
+
+[data-icon]:before {
+  font-family: "Benny-Icons";
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+.with-icon::before {
+  display: inline;
+  margin-right: 6px;
+  margin-right: 0.6rem;
+  font-size: 120%; }
+
+.icon:hover {
+  text-decoration: none; }
+
+body {
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 20px;
+  line-height: 2rem; }
+
+body,
+input,
+textarea,
+.format-status .post-title,
+.format-status .entry-header .entry-title,
+.entry-header .format-status .entry-title,
+#lang-sel,
+.alt,
+.banner-subtitle {
+  font-family: Merriweather, Georgia, "Times New Roman", Times, serif; }
+
+h1, h2, h3, h4, h5, h6,
+.menu-site li,
+button,
+.button,
+.widget.widget_campaign_creator_widget .creator-profile-link a,
+.tribe-events-button,
+input[type=submit],
+input[type=reset],
+.campaign-summary li span,
+.countdown,
+.site-title,
+.post-title,
+.entry-header .entry-title,
+.page-title,
+legend,
+.legend,
+.account-links,
+.barometer span span,
+.bypostauthor .post-author,
+.meta,
+blockquote cite,
+th,
+.edd_cart_amount,
+#rockbottom,
+.campaign-status .campaign-raised span,
+.campaign-status .campaign-pledged span,
+.campaign-status .campaign-time-left span,
+.widget_crowdfunding_stats_widget li span,
+.campaign-image span,
+.tabs .tab-title,
+.charitable-fes-campaign-creator-toolbar a,
+.donation-amounts .amount,
+.donation-amounts .custom-donation-amount,
+.widget.widget_charitable_donation_stats_widget .figure {
+  font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  letter-spacing: 0.2rem; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 24px 0px 12px;
+  margin: 2.4rem 0rem 1.2rem; }
+
+h1 {
+  font-size: 30px;
+  font-size: 3rem;
+  line-height: 38px;
+  line-height: 3.8rem; }
+
+h2 {
+  font-size: 25px;
+  font-size: 2.5rem;
+  line-height: 34px;
+  line-height: 3.4rem; }
+
+h3 {
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 30px;
+  line-height: 3rem; }
+
+h4 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 28px;
+  line-height: 2.8rem; }
+
+h5 {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 22px;
+  line-height: 2.2rem; }
+
+h6 {
+  font-size: 12px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  letter-spacing: 0.2rem; }
+
+.title-wrapper {
+  display: block;
+  text-align: center;
+  overflow: hidden; }
+  .title-wrapper h1,
+  .title-wrapper h2,
+  .title-wrapper h3,
+  .title-wrapper h4 {
+    display: inline-block;
+    padding: 0px 12px;
+    padding: 0rem 1.2rem; }
+
+p {
+  padding-bottom: 12px;
+  padding-bottom: 1.2rem; }
+
+p:focus {
+  outline: none; }
+
+b, strong {
+  font-weight: 600; }
+
+dfn, cite, em, i {
+  font-style: italic; }
+
+blockquote {
+  position: relative;
+  left: 0;
+  width: 100%;
+  padding: 24px;
+  padding: 2.4rem;
+  margin: 0px 0px 12px;
+  margin: 0rem 0rem 1.2rem;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 21px;
+  line-height: 2.1rem;
+  background-color: #f1efee; }
+  blockquote p:last-child {
+    padding-bottom: 0; }
+  blockquote cite {
+    display: block;
+    margin: 24px 0px 0px;
+    margin: 2.4rem 0rem 0rem;
+    font-size: 12px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    letter-spacing: 0.2rem;
+    text-align: right; }
+
+address {
+  font-weight: 400;
+  margin: 0px 0px 14px;
+  margin: 0rem 0rem 1.4rem; }
+
+pre {
+  max-width: 100%;
+  padding: 12px;
+  padding: 1.2rem;
+  margin: 0px 0px 12px;
+  margin: 0rem 0rem 1.2rem;
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  background-color: #f1efee;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Non standard for webkit */
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-pre-wrap;
+  white-space: -o-pre-wrap; }
+
+code, kbd, tt, var {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace; }
+
+abbr, acronym {
+  border-bottom-width: 1px;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: dotted;
+  cursor: help; }
+
+mark, ins {
+  text-decoration: none; }
+
+sup,
+sub {
+  font-size: 83%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  bottom: 1ex; }
+
+sub {
+  top: .5ex; }
+
+small {
+  font-size: 90%; }
+
+big {
+  font-size: 120%; }
+
+/*--------------------------------------------------------------
+3.0 Elements
+--------------------------------------------------------------*/
+hr {
+  width: 100%;
+  height: 2px;
+  height: 0.2rem;
+  border: none; }
+
+ul,
+ol,
+dd {
+  margin: 0px 0px 12px;
+  margin: 0rem 0rem 1.2rem; }
+
+ul,
+ol {
+  padding-left: 16px;
+  padding-left: 1.6rem; }
+  ul ul,
+  ul ol,
+  ol ul,
+  ol ol {
+    margin: 6px 0px 0px 20px;
+    margin: 0.6rem 0rem 0rem 2rem; }
+
+li {
+  margin-bottom: 6px;
+  margin-bottom: 0.6rem; }
+
+ul {
+  list-style: disc; }
+  ul ul {
+    list-style: circle; }
+
+ol {
+  list-style: decimal; }
+  ol ol {
+    list-style: upper-roman; }
+    ol ol ol {
+      list-style: lower-roman; }
+
+dt {
+  font-weight: 600; }
+
+/* Horizontal lists */
+.horizontal {
+  padding-left: 0; }
+  .horizontal li {
+    display: inline-block;
+    list-style: none; }
+
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
+  -ms-interpolation-mode: bicubic; }
+
+figure {
+  margin: 0; }
+
+table {
+  width: 100%;
+  border-width: 0px 0px 1px 1px;
+  border-width: 0rem 0rem 0.1rem 0.1rem;
+  border-style: solid;
+  border-color: #e2dedb;
+  word-break: normal; }
+  table caption {
+    padding: 4px 0px;
+    padding: 0.4rem 0rem;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: 400; }
+
+th,
+td {
+  padding: 6px 10px;
+  padding: 0.6rem 1rem;
+  border-style: solid;
+  border-color: #e2dedb;
+  vertical-align: top; }
+
+th {
+  border-width: 1px 1px 0px 0px;
+  border-width: 0.1rem 0.1rem 0rem 0rem;
+  background-color: #f1efee;
+  border-right-color: #dbd5d1;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+  white-space: nowrap; }
+
+td {
+  border-right-width: 1px;
+  border-right-width: 0.1rem; }
+
+th p:last-child,
+th ul:last-child,
+th ol:last-child,
+th dl:last-child,
+td p:last-child,
+td ul:last-child,
+td ol:last-child,
+td dl:last-child {
+  margin-bottom: 0; }
+
+.even > td {
+  background-color: #f9f8f7; }
+
+/*--------------------------------------------------------------
+4.0 Forms
+--------------------------------------------------------------*/
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* Corrects font size not being inherited in all browsers */
+  margin: 0;
+  /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+  vertical-align: baseline;
+  /* Improves appearance and consistency in all browsers */ }
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  display: inline-block;
+  margin: 3px 0px 0px 3px;
+  margin: 0.3rem 0rem 0rem 0.3rem;
+  padding: 0px 20px;
+  padding: 0rem 2rem;
+  height: 31px;
+  height: 3.1rem;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 29px;
+  line-height: 2.9rem;
+  border-width: 1px;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0.4rem;
+  font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  /* Default settings */
+  -webkit-transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -moz-transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -o-transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  /* Default settings */
+  -webkit-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -moz-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -o-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  height: 31px;
+  height: 3.1rem; }
+  button:hover,
+  input[type="button"]:hover,
+  input[type="reset"]:hover,
+  input[type="submit"]:hover {
+    background-color: transparent;
+    border-color: transparent;
+    text-decoration: none; }
+  button.button,
+  input[type="button"].button,
+  input[type="reset"].button,
+  input[type="submit"].button {
+    height: 31px;
+    height: 3.1rem; }
+  button.button-large,
+  input[type="button"].button-large,
+  input[type="reset"].button-large,
+  input[type="submit"].button-large {
+    font-size: 25px;
+    font-size: 2.5rem;
+    height: 50px;
+    height: 5rem;
+    line-height: 50px;
+    line-height: 5rem; }
+  button:hover, button:active, button:focus,
+  input[type="button"]:hover,
+  input[type="button"]:active,
+  input[type="button"]:focus,
+  input[type="reset"]:hover,
+  input[type="reset"]:active,
+  input[type="reset"]:focus,
+  input[type="submit"]:hover,
+  input[type="submit"]:active,
+  input[type="submit"]:focus {
+    background-color: transparent;
+    border-color: transparent; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0;
+  /* Addresses excess padding in IE8/9 */ }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* Addresses appearance set to searchfield in S5, Chrome */ }
+
+input[type="search"]::-webkit-search-decoration {
+  /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+  -webkit-appearance: none; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+  border: 0;
+  padding: 0; }
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="date"],
+textarea {
+  max-width: 300px;
+  max-width: 30rem;
+  width: 100%;
+  padding: 11px 10px;
+  padding: 1.1rem 1rem;
+  margin-top: 0;
+  border: none;
+  border-radius: 0.2rem;
+  font-size: 11px;
+  font-size: 1.1rem;
+  box-shadow: none;
+  /* Default settings */
+  -webkit-transition: background-color 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -moz-transition: background-color 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -o-transition: background-color 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  transition: background-color 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -webkit-appearance: none; }
+
+input:focus,
+textarea:focus,
+select:focus,
+select:active {
+  outline: none; }
+
+textarea {
+  overflow: auto;
+  /* Removes default vertical scrollbar in IE6/7/8/9 */
+  vertical-align: top;
+  /* Improves readability and alignment in all browsers */ }
+
+select {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  max-width: 30rem;
+  padding: 11px 10px;
+  padding: 1.1rem 1rem;
+  border: none;
+  border-radius: 0.2rem;
+  text-indent: 3px;
+  text-indent: 0.3rem; }
+
+.chrome input[type=file],
+.safari input[type=file] {
+  padding-top: 8px;
+  padding-top: 0.8rem;
+  padding-bottom: 9px;
+  padding-bottom: 0.9rem; }
+
+label {
+  display: block;
+  padding: 8px 0px 0px;
+  padding: 0.8rem 0rem 0rem;
+  line-height: 22px;
+  line-height: 2.2rem; }
+
+legend {
+  padding-bottom: 6px;
+  padding-bottom: 0.6rem;
+  border-bottom-width: 1px;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  border-bottom-color: #e2dedb;
+  font-size: 18px;
+  font-size: 1.8rem; }
+
+/*--------------------------------------------------------------
+5.0 Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+5.1 Links
+--------------------------------------------------------------*/
+a {
+  text-decoration: none; }
+  a:hover {
+    cursor: pointer;
+    text-decoration: underline; }
+  a:focus {
+    outline: none; }
+
+/*--------------------------------------------------------------
+5.2 Menus
+--------------------------------------------------------------*/
+/* .menu-site is used as a reusable menu class */
+.menu-site {
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  width: 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  /* Default settings */
+  -webkit-transition: max-height 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -moz-transition: max-height 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -o-transition: max-height 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  transition: max-height 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0; }
+  .menu-site li {
+    margin: 0;
+    border-bottom-width: 1px;
+    border-bottom-width: 0.1rem;
+    border-bottom-style: solid;
+    border-bottom-color: #e2dedb;
+    list-style: none;
+    line-height: 1em;
+    letter-spacing: 1px;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    text-align: left;
+    text-indent: 4%; }
+    .menu-site li.hovering, .menu-site li.hovering li {
+      height: auto; }
+  .menu-site a {
+    display: block;
+    padding: 12px 0px;
+    padding: 1.2rem 0rem;
+    text-decoration: none;
+    font-weight: 400; }
+  @media (min-width: 50em) {
+    .menu-site ul {
+      position: absolute;
+      left: -999em;
+      width: 20rem;
+      margin-left: 0;
+      margin-top: 0.5rem;
+      padding: 0.6rem 0;
+      z-index: 100;
+      border-width: 0.3rem;
+      border-style: solid;
+      border-radius: 0.4rem; }
+      .menu-site ul a {
+        font-size: 1.2rem;
+        border: none; }
+      .menu-site ul ul {
+        top: 0;
+        margin-top: 0;
+        margin-left: 20rem; }
+      .menu-site ul li:last-child {
+        border: none; }
+    .menu-site li {
+      position: relative;
+      display: inline-block;
+      padding-bottom: 0.8rem; }
+      .menu-site li li {
+        display: block;
+        width: 100%;
+        padding: 0;
+        clear: left;
+        margin: 0; }
+        .menu-site li li a {
+          text-align: left;
+          padding: 1.2rem; }
+    .menu-site a {
+      position: relative;
+      z-index: 50;
+      display: inline-block;
+      padding: 0.6rem;
+      border: 0.2rem solid transparent;
+      border-width: 0.2rem;
+      border-radius: 0.4rem;
+      font-size: 1.3rem;
+      line-height: 1.3rem;
+      text-align: center; }
+    .menu-site .menu-item-has-children > a:after {
+      font-family: 'benny-icons';
+      content: '\f107';
+      position: relative;
+      top: 0;
+      left: 0.4rem; }
+    .menu-site ul .menu-item-has-children > a:after {
+      content: '\f105';
+      top: 0; }
+    .menu-site li:hover > ul,
+    .menu-site li.hovering > ul {
+      left: auto; } }
+
+.toggled .menu-site {
+  position: relative;
+  left: -36px;
+  left: -3.6rem;
+  width: -webkit-calc( 100% + 72px );
+  width: -moz-calc( 100% + 72px );
+  width: calc( 100% + 72px );
+  height: auto;
+  max-height: 10000px;
+  border-top-width: 2px;
+  border-top-width: 0.2rem;
+  border-top-style: solid; }
+  .toggled .menu-site ul {
+    margin: 0;
+    padding-left: 0;
+    border-top-width: 1px;
+    border-top-width: 0.1rem;
+    border-top-style: solid; }
+  .toggled .menu-site li li {
+    text-indent: 8%; }
+    .toggled .menu-site li li li {
+      text-indent: 12%; }
+    .toggled .menu-site li li:last-child {
+      padding-bottom: 0;
+      border: none; }
+
+/* .menu-button is used as a trigger class for toggling menus */
+.menu-button {
+  font-size: 20px;
+  font-size: 2rem; }
+  .menu-button:hover {
+    text-decoration: none; }
+  @media (min-width: 50em) {
+    .menu-button {
+      display: none !important; } }
+
+/*--------------------------------------------------------------
+5.3 Site Navigation
+--------------------------------------------------------------*/
+/* .site-navigation is the main navigation */
+.site-navigation {
+  float: left;
+  clear: both;
+  height: 0;
+  width: 100%; }
+  .site-navigation .menu-button {
+    position: absolute;
+    z-index: 600;
+    right: 36px;
+    right: 3.6rem;
+    top: 36px;
+    top: 3.6rem;
+    line-height: 38px;
+    line-height: 3.8rem; }
+    .site-navigation .menu-button:before {
+      content: "\f00b";
+      font-family: 'benny-icons';
+      speak: none;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased; }
+  .site-navigation.toggled .menu-button:before {
+    content: "\f00d"; }
+  @media (min-width: 50em) {
+    .site-navigation {
+      position: static;
+      text-align: right;
+      box-shadow: none;
+      height: auto;
+      float: none;
+      clear: none;
+      /* Just adding this for added specifity */ }
+      .site-navigation.wrapper {
+        background: transparent; }
+      .site-navigation .menu-site {
+        height: auto;
+        width: auto;
+        margin: 3.6rem 0 0 0;
+        left: 0;
+        border-top: 0;
+        overflow: visible; }
+        .site-navigation .menu-site li {
+          margin: 0 0 0 1rem;
+          text-indent: 0; }
+        .site-navigation .menu-site > li {
+          padding-bottom: 0.9rem;
+          border: none; }
+        .site-navigation .menu-site > li.hovering:last-child ul {
+          right: -1.8rem;
+          left: auto; }
+        .site-navigation .menu-site .site-navigation .menu-site ul {
+          padding-top: 0;
+          border-top: 0;
+          border-radius: 0 0 0.4rem 0.4rem;
+          margin-top: 0.9rem; }
+        .site-navigation .menu-site ul ul {
+          margin-top: 0; }
+      .site-navigation .current_page_item > a:hover,
+      .site-navigation .current-menu-item > a:hover,
+      .site-navigation .current_page_ancestor > a:hover {
+        border-color: transparent !important; } }
+
+@media (min-width: 50em) {
+  .no-tagline .site-navigation .menu-site {
+    margin-top: 1.2rem; }
+
+  .no-title .site-navigation .menu-site {
+    margin-top: 0; }
+    .no-title .site-navigation .menu-site li {
+      padding-top: 0.7rem; }
+
+  .no-tagline.no-title .site-navigation .menu-site ul {
+    margin-top: 0.8rem; }
+    .no-tagline.no-title .site-navigation .menu-site ul ul {
+      margin-top: 0; } }
+/*--------------------------------------------------------------
+5.4 Paging
+--------------------------------------------------------------*/
+.pagination {
+  padding-bottom: 24px;
+  padding-bottom: 2.4rem; }
+  .pagination ul {
+    width: 100%;
+    padding-left: 0;
+    list-style-type: none;
+    overflow: auto; }
+  .pagination li {
+    display: inline;
+    margin-bottom: 0; }
+
+.nav-previous {
+  float: left; }
+
+.nav-next {
+  float: right; }
+
+/*--------------------------------------------------------------
+6.0 Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers */
+.assistive-text,
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+  .assistive-text:hover, .assistive-text:active, .assistive-text:focus,
+  .screen-reader-text:hover,
+  .screen-reader-text:active,
+  .screen-reader-text:focus {
+    background-color: #f9f8f7;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #574c45;
+    display: block;
+    font-size: 1.4px;
+    font-size: 0.14rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar */ }
+
+/*--------------------------------------------------------------
+7.0 Alignments
+--------------------------------------------------------------*/
+.left {
+  text-align: left; }
+
+.right {
+  text-align: right; }
+
+.center {
+  text-align: center; }
+
+.alignleft {
+  float: left;
+  margin: 0px 10px 12px 0px;
+  margin: 0rem 1rem 1.2rem 0rem; }
+
+.alignright {
+  float: right;
+  margin: 0px 0px 12px 10px;
+  margin: 0rem 0rem 1.2rem 1rem; }
+
+.aligncenter {
+  display: block;
+  margin: 0 auto;
+  margin-top: 12px;
+  margin-top: 1.2rem;
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+  clear: both;
+  text-align: center; }
+
+/*--------------------------------------------------------------
+8.0 Clearings
+--------------------------------------------------------------*/
+.cf:before, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form:before, #secondary .widget.widget_charitable_donation_stats_widget .donation-stats:before, .charitable-donation-form .donation-amounts:before, .charitable-repeatable-form-field-table .repeatable-field-wrapper:before, #edd_checkout_wrap #edd_checkout_form_wrap:before, .widget.widget_pp_campaign_events .edd_download_purchase_form:before, .event-tickets li:before,
+.cf:after,
+.widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form:after,
+#secondary .widget.widget_charitable_donation_stats_widget .donation-stats:after,
+.charitable-donation-form .donation-amounts:after,
+.charitable-repeatable-form-field-table .repeatable-field-wrapper:after,
+#edd_checkout_wrap #edd_checkout_form_wrap:after,
+.widget.widget_pp_campaign_events .edd_download_purchase_form:after,
+.event-tickets li:after {
+  content: "";
+  display: table; }
+
+.cf:after, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form:after, #secondary .widget.widget_charitable_donation_stats_widget .donation-stats:after, .charitable-donation-form .donation-amounts:after, .charitable-repeatable-form-field-table .repeatable-field-wrapper:after, #edd_checkout_wrap #edd_checkout_form_wrap:after, .widget.widget_pp_campaign_events .edd_download_purchase_form:after, .event-tickets li:after {
+  clear: both; }
+
+/*-------------------------------------------------------------- 
+9.0 Invisibility
+--------------------------------------------------------------*/
+.hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden; }
+
+@media (max-width: 37.5em) {
+  .if-tiny-hide {
+    display: none !important; } }
+.lt-ie9 .if-tiny-hide {
+  display: none !important; }
+
+/*-------------------------------------------------------------- 
+10.0 Fancy Select Inputs 
+--------------------------------------------------------------*/
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden; }
+  .select-wrapper select {
+    -webkit-appearance: none; }
+
+.chrome .select-wrapper::after,
+.safari .select-wrapper::after {
+  font-family: 'fontawesome';
+  content: "\F0D7";
+  display: block;
+  position: absolute;
+  right: 10px;
+  right: 1rem;
+  top: 10px;
+  top: 1rem;
+  font-size: 16px;
+  font-size: 1.6rem; }
+
+/*-------------------------------------------------------------- 
+11.0 Button Links
+--------------------------------------------------------------*/
+.button, .widget.widget_campaign_creator_widget .creator-profile-link a {
+  display: inline-block;
+  margin: 3px 0px 0px 3px;
+  margin: 0.3rem 0rem 0rem 0.3rem;
+  padding: 0px 20px;
+  padding: 0rem 2rem;
+  height: 31px;
+  height: 3.1rem;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 29px;
+  line-height: 2.9rem;
+  border-width: 1px;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0.4rem;
+  font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  /* Default settings */
+  -webkit-transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -moz-transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -o-transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  /* Default settings */
+  -webkit-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -moz-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -o-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0; }
+  .button:hover, .widget.widget_campaign_creator_widget .creator-profile-link a:hover {
+    background-color: transparent;
+    border-color: transparent;
+    text-decoration: none; }
+  .button:hover, .widget.widget_campaign_creator_widget .creator-profile-link a:hover {
+    text-decoration: none; }
+
+.button-alt,
+.button-secondary,
+.widget.widget_campaign_creator_widget .creator-profile-link a,
+.button.button-alt,
+.widget.widget_campaign_creator_widget .creator-profile-link a.button-alt,
+.button.button-secondary,
+.widget.widget_campaign_creator_widget .creator-profile-link a {
+  display: inline-block;
+  margin: 3px 0px 0px 3px;
+  margin: 0.3rem 0rem 0rem 0.3rem;
+  padding: 0px 20px;
+  padding: 0rem 2rem;
+  height: 33px;
+  height: 3.3rem;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 29px;
+  line-height: 2.9rem;
+  border-width: 2px;
+  border-width: 0.2rem;
+  border-style: solid;
+  border-radius: 0.4rem;
+  box-shadow: none;
+  font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+  background: transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  /* Default settings */
+  -webkit-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -moz-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -o-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  /* Default settings */
+  -webkit-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -moz-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -o-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0; }
+  .button-alt:hover,
+  .button-secondary:hover,
+  .widget.widget_campaign_creator_widget .creator-profile-link a:hover,
+  .button.button-alt:hover,
+  .widget.widget_campaign_creator_widget .creator-profile-link a.button-alt:hover,
+  .button.button-secondary:hover,
+  .widget.widget_campaign_creator_widget .creator-profile-link a:hover {
+    text-decoration: none; }
+  .button-alt:hover,
+  .button-secondary:hover,
+  .widget.widget_campaign_creator_widget .creator-profile-link a:hover,
+  .button.button-alt:hover,
+  .widget.widget_campaign_creator_widget .creator-profile-link a.button-alt:hover,
+  .button.button-secondary:hover,
+  .widget.widget_campaign_creator_widget .creator-profile-link a:hover {
+    color: #ffffff; }
+  .button-alt.accent:hover,
+  .button-secondary.accent:hover,
+  .widget.widget_campaign_creator_widget .creator-profile-link a.accent:hover,
+  .button.button-alt.accent:hover,
+  .widget.widget_campaign_creator_widget .creator-profile-link a.button-alt.accent:hover,
+  .button.button-secondary.accent:hover,
+  .widget.widget_campaign_creator_widget .creator-profile-link a.accent:hover {
+    color: #ffffff; }
+
+.button-small,
+.button.button-small,
+.widget.widget_campaign_creator_widget .creator-profile-link a.button-small,
+.button-alt.button-small {
+  max-width: 120px;
+  max-width: 12rem;
+  padding-left: 10px;
+  padding-left: 1rem;
+  padding-right: 10px;
+  padding-right: 1rem;
+  font-size: 12px;
+  font-size: 1.2rem; }
+
+.button-large,
+.button.button-large,
+.widget.widget_campaign_creator_widget .creator-profile-link a.button-large {
+  font-size: 25px;
+  font-size: 2.5rem;
+  height: 50px;
+  height: 5rem;
+  line-height: 50px;
+  line-height: 5rem; }
+
+/*-------------------------------------------------------------- 
+12.0 Blocks
+--------------------------------------------------------------*/
+/* Various re-usable styled blocks */
+.block {
+  margin-bottom: 36px;
+  margin-bottom: 3.6rem;
+  border-width: 1px;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: #e2dedb;
+  border-radius: 0.4rem; }
+
+.entry-block {
+  position: relative;
+  padding: 0px 24px;
+  padding: 0rem 2.4rem;
+  background: #ffffff;
+  box-shadow: 0 0 1px #ffffff;
+  overflow-x: hidden; }
+  @media (min-width: 50em) {
+    .entry-block {
+      padding-left: 36px;
+      padding-left: 3.6rem;
+      padding-right: 36px;
+      padding-right: 3.6rem; } }
+
+.content-block {
+  padding: 0px 24px 24px;
+  padding: 0rem 2.4rem 2.4rem; }
+  @media (min-width: 50em) {
+    .content-block {
+      padding: 0px 36px 24px;
+      padding: 0rem 3.6rem 2.4rem; } }
+
+.multi-block .content-block:first-of-type {
+  border-radius: 0.4rem 0.4rem 0 0; }
+.multi-block .content-block:nth-of-type(1n+2) {
+  border-top-width: 1px;
+  border-top-width: 0.1rem;
+  border-top-style: solid;
+  border-top-color: #e2dedb; }
+.multi-block .content-block:last-of-type {
+  border-radius: 0 0 0.4rem 0.4rem; }
+
+.feature-block {
+  position: relative;
+  left: -24px;
+  width: -webkit-calc( 100% + 48px );
+  width: -moz-calc( 100% + 48px );
+  width: calc( 100% + 48px );
+  padding: 0px 24px 36px 24px;
+  padding: 0rem 2.4rem 3.6rem 2.4rem;
+  color: #ffffff;
+  background-repeat: repeat;
+  box-shadow: none;
+  border: none; }
+  @media (min-width: 50em) {
+    .feature-block {
+      left: -45px;
+      width: -webkit-calc( 100% + 90px );
+      width: -moz-calc( 100% + 90px );
+      width: calc( 100% + 90px ); } }
+  @media (min-width: 50em) {
+    .feature-block {
+      padding-left: 45px;
+      padding-left: 4.5rem;
+      padding-right: 45px;
+      padding-right: 4.5rem; } }
+
+.block-title {
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+  padding-bottom: 4px;
+  padding-bottom: 0.4rem;
+  border-bottom-width: 2px;
+  border-bottom-width: 0.2rem;
+  border-bottom-style: solid;
+  border-bottom-color: #e2dedb; }
+  .block-title:hover,
+  .block-title a:hover {
+    text-decoration: none; }
+
+/* Shadow wrapper */
+@media (min-width: 50em) {
+  .shadow-wrapper::before, .shadow-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: -0.9rem;
+    width: 0;
+    height: 0; }
+  .shadow-wrapper::before {
+    left: -0.9rem;
+    border-left: 0.9rem solid transparent !important;
+    border-bottom: 0.9rem solid transparent !important;
+    border-right: 0.9rem solid; }
+  .shadow-wrapper::after {
+    right: -0.9rem;
+    border-right: 0.9rem solid transparent !important;
+    border-bottom: 0.9rem solid transparent !important;
+    border-left: 0.9rem solid; } }
+/*-------------------------------------------------------------- 
+13.0 Modals
+--------------------------------------------------------------*/
+#lean_overlay {
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  background: rgba(0, 0, 0, 0.45);
+  display: none; }
+
+.modal {
+  display: none;
+  width: 96%;
+  padding: 24px;
+  padding: 2.4rem;
+  overflow: scroll;
+  border-radius: 0.4rem;
+  background: #ffffff; }
+  @media (min-width: 31.25em) {
+    .modal {
+      width: 468px;
+      width: 46.8rem;
+      padding: 36px;
+      padding: 3.6rem; } }
+  .modal .block-title {
+    margin-top: 0;
+    border: none; }
+  .modal.multi-block {
+    padding-left: 0;
+    padding-right: 0;
+    width: 98%; }
+  .modal .content-block {
+    padding-left: 0;
+    padding-right: 0; }
+  @media (min-width: 37.5em) {
+    .modal.content-block {
+      width: 52.2rem; }
+    .modal .content-block.column-half {
+      width: 50%;
+      padding-left: 24px;
+      padding-left: 2.4rem;
+      padding-right: 24px;
+      padding-right: 2.4rem; } }
+
+.modal-close {
+  position: absolute;
+  top: 6px;
+  top: 0.6rem;
+  right: 6px;
+  right: 0.6rem;
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  font-family: "Benny-Icons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  .modal-close:before {
+    content: "\f057"; }
+  .modal-close:hover {
+    text-decoration: none; }
+
+/*-------------------------------------------------------------- 
+14.0 Accordions
+--------------------------------------------------------------*/
+.accordion h3 {
+  position: relative;
+  display: block;
+  margin: 12px 0px 0px;
+  margin: 1.2rem 0rem 0rem;
+  padding: 24px;
+  padding: 2.4rem;
+  line-height: 1em;
+  border-radius: 0.4rem;
+  outline: 0;
+  cursor: pointer; }
+  .accordion h3:before {
+    float: right;
+    margin-right: 4%; }
+  .accordion h3:active {
+    outline: 0; }
+
+/*-------------------------------------------------------------- 
+13.0 Masthead
+--------------------------------------------------------------*/
+#header {
+  position: relative;
+  z-index: 50;
+  padding: 24px 36px 0px 36px;
+  padding: 2.4rem 3.6rem 0rem 3.6rem;
+  border-radius: 0.4rem 0.4rem 0 0;
+  background-color: #f9f8f7; }
+
+.site-identity {
+  position: relative;
+  z-index: 500;
+  float: left;
+  padding: 12px 20px 12px 0px;
+  padding: 1.2rem 2rem 1.2rem 0rem;
+  text-transform: uppercase; }
+
+.home-link {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+.site-title {
+  margin: 0;
+  padding: 0;
+  font-size: 34px;
+  font-size: 3.4rem;
+  line-height: 38px;
+  line-height: 3.8rem; }
+
+.site-tagline {
+  padding: 6px 0px;
+  padding: 0.6rem 0rem;
+  margin: 0;
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 1em;
+  letter-spacing: 0; }
+
+/*-------------------------------------------------------------- 
+13.1 Social Networks
+--------------------------------------------------------------*/
+.social {
+  margin: 12px 0px;
+  margin: 1.2rem 0rem;
+  padding-left: 36px;
+  padding-left: 3.6rem;
+  text-align: left; }
+  .social li {
+    display: inline-block;
+    margin: 0px 12px 0px 0px;
+    margin: 0rem 1.2rem 0rem 0rem;
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 24px;
+    line-height: 2.4rem; }
+  .social a:hover {
+    text-decoration: none; }
+  @media (min-width: 37.5em) {
+    .social {
+      float: left; } }
+  @media (min-width: 74.375em) {
+    .social {
+      margin-left: 10px;
+      margin-left: 1rem; } }
+
+/*-------------------------------------------------------------- 
+13.2 Account Links
+--------------------------------------------------------------*/
+.account-links {
+  display: block;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
+  margin-left: auto;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 44px;
+  line-height: 4.4rem;
+  font-weight: 300;
+  text-align: center; }
+  .account-links .button.button-alt, .account-links .widget.widget_campaign_creator_widget .creator-profile-link a.button-alt, .widget.widget_campaign_creator_widget .creator-profile-link .account-links a.button-alt {
+    display: inline-block;
+    margin: 10px 0px 10px 8px;
+    margin: 1rem 0rem 1rem 0.8rem;
+    max-width: 100%;
+    text-decoration: none; }
+  @media (min-width: 37.5em) {
+    .account-links {
+      float: right;
+      margin-left: 0;
+      margin-right: 36px;
+      margin-right: 3.6rem;
+      margin-bottom: 0;
+      width: auto; } }
+
+.logout {
+  position: absolute;
+  right: 36px;
+  right: 3.6rem;
+  top: 0; }
+  .logout:hover {
+    text-decoration: none; }
+  @media (min-width: 37.5em) {
+    .logout {
+      position: static;
+      margin-left: 12px;
+      margin-left: 1.2rem; } }
+
+/*--------------------------------------------------------------
+14.0 Widgets
+--------------------------------------------------------------*/
+.widget {
+  margin-bottom: 36px;
+  margin-bottom: 3.6rem;
+  padding: 0px 24px 12px;
+  padding: 0rem 2.4rem 1.2rem;
+  border-width: 1px;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: #e2dedb;
+  border-radius: 0.4rem;
+  background-color: #f1efee;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Non standard for webkit */
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  /* Make sure select elements fit in widgets */ }
+  .widget select {
+    max-width: 100%; }
+  .widget ul {
+    padding-left: 0; }
+  .widget li {
+    list-style: none; }
+  .widget td {
+    border-top-width: 1px;
+    border-top-width: 0.1rem; }
+  .widget tfoot td,
+  .widget th,
+  .widget input[type=text]:focus,
+  .widget input[type=password]:focus,
+  .widget input[type=email]:focus,
+  .widget input[type=number]:focus,
+  .widget textarea:focus,
+  .widget input[type=text]:active,
+  .widget input[type=password]:active,
+  .widget input[type=email]:active,
+  .widget input[type=number]:active,
+  .widget textarea:active {
+    background-color: #ffffff; }
+
+.widget-title {
+  margin: 12px 0px 24px;
+  margin: 1.2rem 0rem 2.4rem;
+  padding-bottom: 0;
+  border-bottom-width: 2px;
+  border-bottom-width: 0.2rem;
+  border-bottom-style: solid;
+  border-bottom-color: #dbd5d1;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem; }
+
+.widget_calendar.widget {
+  padding: 0; }
+  .widget_calendar.widget table {
+    position: relative;
+    width: 100%;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0; }
+    .widget_calendar.widget table caption {
+      text-align: center; }
+  .widget_calendar.widget th,
+  .widget_calendar.widget td {
+    text-align: center;
+    padding-left: 6px;
+    padding-left: 0.6rem;
+    padding-right: 6px;
+    padding-right: 0.6rem; }
+  .widget_calendar.widget td {
+    white-space: nowrap; }
+  .widget_calendar.widget tr td:last-child,
+  .widget_calendar.widget tr th:last-child {
+    border-right: 0; }
+
+.widget_search.widget {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent; }
+  .widget_search.widget label {
+    padding-top: 0; }
+  .widget_search.widget .search-form {
+    position: relative; }
+  .widget_search.widget .widget-title {
+    margin-top: 0; }
+  .widget_search.widget .search-field {
+    max-width: 100%;
+    margin: 0;
+    padding: 11px 40px 11px 10px;
+    padding: 1.1rem 4rem 1.1rem 1rem;
+    border-bottom-width: 2px;
+    border-bottom-width: 0.2rem;
+    border-bottom-style: solid;
+    border-bottom-color: #e2dedb;
+    background-color: transparent; }
+    .widget_search.widget .search-field:focus {
+      background-color: #ffffff; }
+  .widget_search.widget .search-submit {
+    position: absolute;
+    bottom: 6px;
+    bottom: 0.6rem;
+    right: 0;
+    margin: 0;
+    padding: 0px 10px;
+    padding: 0rem 1rem;
+    height: 29px;
+    height: 2.9rem;
+    font-size: 14px;
+    font-size: 1.4rem;
+    border: none;
+    background-color: transparent;
+    box-shadow: none; }
+
+/*--------------------------------------------------------------
+15.0 Content
+--------------------------------------------------------------*/
+.wrapper {
+  width: 100%;
+  padding: 0px 32px;
+  padding: 0rem 3.2rem; }
+  @media (min-width: full / 16em) {
+    .wrapper {
+      max-width: 1400px;
+      max-width: 140rem;
+      margin: 0 auto; } }
+
+#page {
+  position: relative;
+  max-width: 600px;
+  max-width: 60rem;
+  margin: 0 auto;
+  overflow-x: hidden; }
+  @media (min-width: 37.5em) {
+    #page {
+      max-width: 100%; } }
+  @media (min-width: 74.375em) {
+    #page {
+      width: 119rem; } }
+
+.body-wrapper {
+  float: left;
+  clear: both;
+  width: 100%;
+  border-radius: 0.4rem 0.4rem 0 0; }
+  @media (min-width: 74.375em) {
+    .body-wrapper {
+      padding: 0px 10px;
+      padding: 0rem 1rem; } }
+
+#main {
+  padding: 36px 24px;
+  padding: 3.6rem 2.4rem;
+  background-color: #f9f8f7;
+  border-radius: 0 0 0.4rem 0.4rem; }
+  @media (min-width: 50em) {
+    #main {
+      padding-right: 36px;
+      padding-right: 3.6rem;
+      padding-left: 36px;
+      padding-left: 3.6rem; } }
+
+.content-area,
+.sidebar {
+  width: 100%;
+  margin-bottom: 48px;
+  margin-bottom: 4.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Non standard for webkit */
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto; }
+
+@media (min-width: 45em) {
+  .content-area {
+    float: left;
+    width: 68%;
+    padding-right: 36px;
+    padding-right: 3.6rem; }
+
+  .sidebar {
+    float: right;
+    width: 32%; } }
+#site-footer {
+  padding: 24px;
+  padding: 2.4rem; }
+  #site-footer a {
+    height: auto; }
+
+.fullwidth .content-area, .page-template-page-template-home-slider .content-area, .page-template-page-template-fullwidth .content-area, body.events-single .content-area {
+  float: none;
+  margin: 0;
+  width: 100%; }
+.fullwidth .site-main, .page-template-page-template-home-slider .site-main, .page-template-page-template-fullwidth .site-main, body.events-single .site-main {
+  margin: 0; }
+.fullwidth .site-content .widget-area, .page-template-page-template-home-slider .site-content .widget-area, .page-template-page-template-fullwidth .site-content .widget-area, body.events-single .site-content .widget-area {
+  width: 100%; }
+
+/*--------------------------------------------------------------
+11.1 Posts and pages
+--------------------------------------------------------------*/
+.post-title, .entry-header .entry-title {
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+  padding-bottom: 4px;
+  padding-bottom: 0.4rem;
+  border-bottom-width: 2px;
+  border-bottom-width: 0.2rem;
+  border-bottom-style: solid;
+  border-bottom-color: #e2dedb;
+  margin: 24px 0px 12px;
+  margin: 2.4rem 0rem 1.2rem;
+  text-align: center;
+  word-break: break-word; }
+  .post-title:hover, .entry-header .entry-title:hover,
+  .post-title a:hover,
+  .entry-header .entry-title a:hover {
+    text-decoration: none; }
+
+.banner {
+  position: relative;
+  left: -24px;
+  width: -webkit-calc( 100% + 48px );
+  width: -moz-calc( 100% + 48px );
+  width: calc( 100% + 48px );
+  min-height: 100px;
+  min-height: 10rem;
+  padding: 35px 0px;
+  padding: 3.5rem 0rem;
+  margin: -36px 0px 36px;
+  margin: -3.6rem 0rem 3.6rem;
+  text-align: center; }
+  @media (min-width: 50em) {
+    .banner {
+      left: -45px;
+      width: -webkit-calc( 100% + 90px );
+      width: -moz-calc( 100% + 90px );
+      width: calc( 100% + 90px ); } }
+
+.banner-title {
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
+  letter-spacing: 3px;
+  letter-spacing: 0.3rem; }
+
+.banner-subtitle {
+  margin: 12px 0px 0px;
+  margin: 1.2rem 0rem 0rem;
+  font-style: italic;
+  letter-spacing: 0;
+  text-transform: none; }
+
+.sticky {
+  color: #ffffff;
+  border-width: 1px;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: #ffffff; }
+  .sticky a {
+    color: #ffffff; }
+  .sticky .post-title, .sticky .entry-header .entry-title, .entry-header .sticky .entry-title {
+    border-color: #df745f; }
+  .sticky .entry a {
+    text-decoration: underline; }
+  .sticky .entry .more-link {
+    text-decoration: none; }
+
+.entry {
+  padding: 24px 0px 12px;
+  padding: 2.4rem 0rem 1.2rem; }
+  .entry > *:first-child {
+    margin-top: 0; }
+  .entry h1,
+  .entry h2,
+  .entry h3,
+  .entry h4,
+  .entry h5 {
+    text-transform: none;
+    letter-spacing: 0; }
+  .entry blockquote {
+    position: relative;
+    left: -24px;
+    width: -webkit-calc( 100% + 48px );
+    width: -moz-calc( 100% + 48px );
+    width: calc( 100% + 48px ); }
+    @media (min-width: 50em) {
+      .entry blockquote {
+        left: -36px;
+        width: -webkit-calc( 100% + 72px );
+        width: -moz-calc( 100% + 72px );
+        width: calc( 100% + 72px ); } }
+
+.meta {
+  position: relative;
+  left: -24px;
+  width: -webkit-calc( 100% + 48px );
+  width: -moz-calc( 100% + 48px );
+  width: calc( 100% + 48px );
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  font-size: 1rem;
+  line-height: 38px;
+  line-height: 3.8rem;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
+  background-color: #f1efee; }
+  @media (min-width: 50em) {
+    .meta {
+      left: -36px;
+      width: -webkit-calc( 100% + 72px );
+      width: -moz-calc( 100% + 72px );
+      width: calc( 100% + 72px ); } }
+  .meta p {
+    padding: 0; }
+  .meta span {
+    padding: 12px 0px;
+    padding: 1.2rem 0rem; }
+  .meta .author,
+  .meta .comment-count,
+  .meta .tags {
+    margin-left: 6px;
+    margin-left: 0.6rem;
+    padding-left: 10px;
+    padding-left: 1rem;
+    border-left-width: 1px;
+    border-left-width: 0.1rem;
+    border-left-style: solid;
+    border-left-color: #e2dedb; }
+  @media (min-width: 37.5em) {
+    .meta {
+      font-size: 1.1rem;
+      line-height: 4rem; } }
+
+.meta-above {
+  border-bottom-width: 1px;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  border-bottom-color: #e2dedb; }
+
+.meta-below {
+  border-top-width: 1px;
+  border-top-width: 0.1rem;
+  border-top-style: solid;
+  border-top-color: #e2dedb;
+  border-radius: 0 0 0.4rem 0.4rem; }
+
+.site-main.not-found {
+  text-align: center; }
+
+.archive-title {
+  margin: 0px 0px 36px;
+  margin: 0rem 0rem 3.6rem;
+  text-align: center;
+  text-transform: none;
+  letter-spacing: 0; }
+
+.post-password-required label {
+  margin-bottom: 6px;
+  margin-bottom: 0.6rem; }
+  .post-password-required label input {
+    max-width: 100%;
+    width: 100%;
+    display: block; }
+
+.lead {
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 26px;
+  line-height: 2.6rem; }
+
+/*--------------------------------------------------------------
+11.1.1 Page Templates
+--------------------------------------------------------------*/
+/* Campaigns Homepage */
+/* Alternative Campaigns Homepage */
+.page-template-page-template-home-slider #main {
+  padding-top: 0; }
+.page-template-page-template-home-slider .content-area {
+  padding: 0;
+  overflow: visible; }
+.page-template-page-template-home-slider .page.entry-block {
+  float: left;
+  padding: 12px 9px;
+  padding: 1.2rem 0.9rem;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible; }
+  .page-template-page-template-home-slider .page.entry-block .page-title {
+    padding: 24px 0px 36px;
+    padding: 2.4rem 0rem 3.6rem;
+    border-bottom-width: 3px;
+    border-bottom-width: 0.3rem;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(255, 255, 255, 0.3); }
+  .page-template-page-template-home-slider .page.entry-block .entry {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 28px;
+    line-height: 2.8rem; }
+    .page-template-page-template-home-slider .page.entry-block .entry .button, .page-template-page-template-home-slider .page.entry-block .entry .widget.widget_campaign_creator_widget .creator-profile-link a, .widget.widget_campaign_creator_widget .creator-profile-link .page-template-page-template-home-slider .page.entry-block .entry a {
+      margin: 12px 3px 0px;
+      margin: 1.2rem 0.3rem 0rem; }
+
+/* Stripped */
+.stripped #page {
+  padding-top: 36px;
+  padding-top: 3.6rem; }
+.stripped .site-identity {
+  float: none;
+  text-align: center; }
+.stripped .banner {
+  margin-bottom: 0; }
+.stripped .site-main {
+  padding: 0;
+  border-width: 1px;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: #e2dedb;
+  border-top: none;
+  border-radius: 0 0 0.4rem 0.4rem;
+  background: #ffffff;
+  box-shadow: 0 0 1px #ffffff; }
+.stripped .entry-block {
+  background: transparent;
+  margin: 0;
+  padding: 0px 24px;
+  padding: 0rem 2.4rem;
+  border-radius: 0 0 0.4rem 0.4rem; }
+  .stripped .entry-block .entry {
+    padding: 0; }
+.stripped #site-footer {
+  padding: 0; }
+.stripped #colophon {
+  border: none; }
+.stripped .page-template-page-template-stripped-narrow #page {
+  max-width: 800px;
+  max-width: 80rem; }
+
+/* Fullwidth */
+.page-template-page-template-fullwidth .banner {
+  margin-bottom: 0; }
+.page-template-page-template-fullwidth .entry-block {
+  border-top: 0;
+  border-radius: 0 0 0.4rem 0.4rem; }
+
+/*--------------------------------------------------------------
+11.2 Asides
+--------------------------------------------------------------*/
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+  display: none; }
+
+/*--------------------------------------------------------------
+11.3 Comments
+--------------------------------------------------------------*/
+.comment-form-block {
+  padding-top: 24px;
+  padding-top: 2.4rem; }
+
+.comment,
+.pingback {
+  float: left;
+  clear: both;
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
+  width: 100%;
+  border-bottom-width: 1px;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  border-bottom-color: #e2dedb;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Non standard for webkit */
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto; }
+  .comment h1,
+  .comment h2,
+  .comment h3,
+  .comment h4,
+  .comment h5,
+  .pingback h1,
+  .pingback h2,
+  .pingback h3,
+  .pingback h4,
+  .pingback h5 {
+    text-transform: none;
+    letter-spacing: 0; }
+
+.avatar {
+  border-radius: 0.4rem; }
+
+.comments-section {
+  float: left;
+  clear: both;
+  width: 100%;
+  background-color: #ffffff; }
+  .comments-section .children {
+    margin-left: 5%;
+    padding-left: 0;
+    width: 95%; }
+  .comments-section .avatar {
+    position: absolute; }
+  .comments-section input[type=email],
+  .comments-section input[type=text],
+  .comments-section textarea {
+    max-width: 100%;
+    background-color: #f1efee; }
+  .comments-section .comment-text-input {
+    float: left;
+    width: 49%;
+    margin-right: 2%; }
+  .comments-section .comment-text-input.fullwidth, .comments-section .comment-text-input.page-template-page-template-home-slider, .comments-section .comment-text-input.page-template-page-template-fullwidth, .comments-section body.comment-text-input.events-single {
+    width: 100%;
+    margin: 0; }
+  .comments-section .comment-text-input.last {
+    margin-right: 0; }
+  .comments-section #comment {
+    max-width: 100%; }
+  .comments-section .comment-notes {
+    clear: both; }
+  @media (min-width: 50em) {
+    .comments-section .children {
+      margin-left: -webkit-calc( 7rem );
+      margin-left: -moz-calc( 7rem );
+      margin-left: calc( 7rem );
+      width: -webkit-calc(100% - 7rem);
+      width: -moz-calc(100% - 7rem);
+      width: calc(100% - 7rem); } }
+
+.comment-details {
+  margin: 0px 0px 12px 70px;
+  margin: 0rem 0rem 1.2rem 7rem; }
+
+.comment-author {
+  margin-top: 0; }
+
+.no-avatars .comment-details {
+  margin-left: 0; }
+
+.comments-list {
+  float: left;
+  width: 100%;
+  margin-top: 24px;
+  margin-top: 2.4rem;
+  padding-left: 0; }
+
+.comment-meta {
+  padding-bottom: 0;
+  font-size: 10px;
+  font-size: 1rem; }
+
+.comment-date {
+  font-style: italic; }
+
+.comment-reply {
+  margin-left: 10px;
+  margin-left: 1rem; }
+
+.bypostauthor .post-author {
+  text-transform: uppercase; }
+  .bypostauthor .post-author i {
+    margin-right: 2px;
+    margin-right: 0.2rem; }
+
+.logged-in-as,
+.comment-notes,
+.form-allowed-tags {
+  font-size: 11px;
+  font-size: 1.1rem; }
+
+#reply-title {
+  margin-top: 0;
+  font-size: 14px;
+  font-size: 1.4rem;
+  text-transform: uppercase; }
+
+#cancel-comment-reply-link {
+  float: right;
+  font-size: 20px;
+  font-size: 2rem; }
+
+/*--------------------------------------------------------------
+11.4 Author Profiles
+--------------------------------------------------------------*/
+body.author .banner {
+  margin-bottom: 0; }
+body.author .site-main {
+  float: none;
+  width: 100%;
+  padding: 24px;
+  padding: 2.4rem;
+  border-width: 1px;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: #e2dedb;
+  border-top: none;
+  border-radius: 0 0 0.4rem 0.4rem;
+  background: #ffffff;
+  box-shadow: 0 0 0.1rem #ffffff; }
+  @media (min-width: 37.5em) {
+    body.author .site-main {
+      padding: 36px;
+      padding: 3.6rem; } }
+body.author .author-description {
+  padding-bottom: 24px;
+  padding-bottom: 2.4rem;
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
+  border-bottom-width: 2px;
+  border-bottom-width: 0.2rem;
+  border-bottom-style: solid;
+  border-bottom-color: #e2dedb; }
+  @media (min-width: 50em) {
+    body.author .author-description {
+      float: left;
+      width: 40%;
+      margin: 0;
+      padding: 0;
+      border: none; } }
+@media (min-width: 37.5em) {
+  body.author .author-avatar {
+    float: left;
+    padding-right: 12px;
+    padding-right: 1.2rem;
+    max-width: 50%; } }
+@media (min-width: 37.5em) {
+  body.author .author-facts {
+    float: left;
+    clear: right;
+    width: 50%;
+    width: -webkit-calc( 100% - 15.3rem );
+    width: -moz-calc( 100% - 15.3rem );
+    width: calc( 100% - 15.3rem ); }
+    body.author .author-facts h3 {
+      margin-top: 0; } }
+body.author .author-links,
+body.author .author-bio {
+  clear: both;
+  width: 100%; }
+body.author .author-links {
+  list-style: none;
+  padding-left: 0; }
+@media (min-width: 50em) {
+  body.author .author-activity {
+    float: left;
+    width: 60%;
+    padding: 0px 0px 0px 36px;
+    padding: 0rem 0rem 0rem 3.6rem; }
+    body.author .author-activity h3 {
+      text-align: center; } }
+body.author .author-activity-summary {
+  font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase; }
+  body.author .author-activity-summary .separator {
+    padding: 0px 4px;
+    padding: 0rem 0.4rem; }
+  @media (min-width: 50em) {
+    body.author .author-activity-summary {
+      text-align: center; } }
+body.author .author-activity-feed {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  border-top-width: 2px;
+  border-top-width: 0.2rem;
+  border-top-style: solid;
+  border-top-color: #e2dedb; }
+  body.author .author-activity-feed li {
+    position: relative;
+    padding: 24px 0px;
+    padding: 2.4rem 0rem;
+    border-bottom-width: 2px;
+    border-bottom-width: 0.2rem;
+    border-bottom-style: solid;
+    border-bottom-color: #e2dedb; }
+    body.author .author-activity-feed li:last-child {
+      padding-bottom: 0;
+      border-bottom: none; }
+  body.author .author-activity-feed .activity-summary {
+    padding-left: 40px;
+    padding-left: 4rem; }
+    body.author .author-activity-feed .activity-summary .display-name,
+    body.author .author-activity-feed .activity-summary a {
+      font-weight: 700; }
+    body.author .author-activity-feed .activity-summary .time-ago {
+      font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+      text-transform: uppercase; }
+    body.author .author-activity-feed .activity-summary::before {
+      position: absolute;
+      top: 2px;
+      top: 0.2rem;
+      left: 0;
+      font-size: 24px;
+      font-size: 2.4rem;
+      font-family: "Benny-Icons"; }
+    @media (min-width: 50em) {
+      body.author .author-activity-feed .activity-summary {
+        float: left;
+        width: 70%;
+        padding-right: 12px;
+        padding-right: 1.2rem;
+        -webkit-transform: translateY(50%);
+        -moz-transform: translateY(50%);
+        -ms-transform: translateY(50%);
+        -o-transform: translateY(50%);
+        transform: translateY(50%); } }
+  body.author .author-activity-feed .activity-type-post .activity-summary::before {
+    content: "\f040"; }
+  body.author .author-activity-feed .activity-type-campaign .activity-summary::before {
+    content: "\f055"; }
+  body.author .author-activity-feed .activity-type-donation .activity-summary::before {
+    content: "\f058"; }
+  body.author .author-activity-feed .wp-post-image {
+    display: none; }
+    @media (min-width: 50em) {
+      body.author .author-activity-feed .wp-post-image {
+        display: block;
+        float: right;
+        width: 150px;
+        width: 15rem;
+        max-width: 30%;
+        border-radius: 0.4rem; } }
+
+/*--------------------------------------------------------------
+16.0 Media
+--------------------------------------------------------------*/
+.page-content img.wp-smiley,
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0; }
+
+/* Make sure embeds and iframes fit their containers */
+object,
+embed,
+iframe {
+  max-width: 100%; }
+
+object,
+embed {
+  height: 100%; }
+
+/* Google Maps hacks */
+#map_canvas img,
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.map_canvas embed,
+.map_canvas object {
+  max-width: none !important; }
+
+/*--------------------------------------------------------------
+16.1 Captions
+--------------------------------------------------------------*/
+.wp-caption {
+  max-width: 100%; }
+
+.wp-caption-text {
+  display: inline-block;
+  padding: 0px 10px;
+  padding: 0rem 1rem;
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+  font-size: 11px;
+  font-size: 1.1rem;
+  line-height: 11px;
+  line-height: 1.1rem;
+  font-style: italic; }
+
+/*--------------------------------------------------------------
+16.2 Galleries
+--------------------------------------------------------------*/
+.gallery {
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+  float: left;
+  width: 100%;
+  clear: both; }
+  .gallery br {
+    clear: none !important; }
+
+.gallery-item {
+  position: relative;
+  float: left;
+  margin-right: 1%;
+  margin-bottom: 4px;
+  margin-bottom: 0.4rem;
+  width: 49.5%; }
+  .gallery-item img {
+    width: 100%;
+    max-width: 100%;
+    /* Default settings */
+    -webkit-transition: opacity 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+    -moz-transition: opacity 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+    -o-transition: opacity 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+    transition: opacity 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0; }
+    .gallery-item img:hover {
+      opacity: 0.5; }
+  .gallery-item a {
+    display: block;
+    width: 100%;
+    height: 100%; }
+  .gallery-item:hover .gallery-caption {
+    opacity: 1; }
+  .gallery-item:nth-of-type(2n+2) {
+    margin-right: 0; }
+
+.gallery-columns-1 .gallery-item {
+  width: 100%;
+  margin-right: 0; }
+
+.gallery-icon {
+  width: 100%;
+  height: 100%;
+  line-height: 0; }
+
+.gallery-caption {
+  display: inline-block;
+  padding: 0px 10px;
+  padding: 0rem 1rem;
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+  font-size: 11px;
+  font-size: 1.1rem;
+  line-height: 11px;
+  line-height: 1.1rem;
+  font-style: italic;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 98%;
+  max-height: 50%;
+  padding: 6px;
+  padding: 0.6rem;
+  margin: 0;
+  overflow: hidden;
+  color: #fff;
+  line-height: 14px;
+  line-height: 1.4rem;
+  opacity: 0;
+  /* Default settings */
+  -webkit-transition: opacity 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -moz-transition: opacity 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -o-transition: opacity 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  transition: opacity 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0; }
+
+@media (min-width: 50em) {
+  .gallery br {
+    clear: both !important; }
+
+  .gallery-item {
+    margin-bottom: 0.6rem; }
+    .gallery-item:nth-of-type(2n+2) {
+      margin-right: 1%; }
+
+  .gallery-columns-2 .gallery-item {
+    width: 49.50%; }
+
+  .gallery-columns-3 .gallery-item {
+    width: 32.66%; }
+
+  .gallery-columns-4 .gallery-item {
+    width: 24.25%; }
+
+  .gallery-columns-5 .gallery-item {
+    width: 19.2%; }
+
+  .gallery-columns-6 .gallery-item {
+    width: 15.83%; }
+
+  .gallery-columns-7 .gallery-item {
+    width: 13.428571429%; }
+
+  .gallery-columns-8 .gallery-item {
+    width: 11.625%; }
+
+  .gallery-columns-9 .gallery-item {
+    width: 10.222%; }
+
+  .gallery-columns-10 .gallery-item {
+    width: 9.1%; }
+
+  .gallery-columns-2 .gallery-item:nth-of-type(2n+2),
+  .gallery-columns-3 .gallery-item:nth-of-type(3n+3),
+  .gallery-columns-4 .gallery-item:nth-of-type(4n+4),
+  .gallery-columns-5 .gallery-item:nth-of-type(5n+5),
+  .gallery-columns-6 .gallery-item:nth-of-type(6n+6),
+  .gallery-columns-7 .gallery-item:nth-of-type(7n+7),
+  .gallery-columns-8 .gallery-item:nth-of-type(8n+8),
+  .gallery-columns-9 .gallery-item:nth-of-type(9n+9),
+  .gallery-columns-10 .gallery-item:nth-of-type(10n+10) {
+    margin-right: 0; }
+
+  .gallery-columns-5 .gallery-caption,
+  .gallery-columns-6 .gallery-caption,
+  .gallery-columns-7 .gallery-caption,
+  .gallery-columns-8 .gallery-caption,
+  .gallery-columns-9 .gallery-caption,
+  .gallery-columns-10 .gallery-caption {
+    display: none; } }
+/*--------------------------------------------------------------
+16.3 Featured Image
+--------------------------------------------------------------*/
+.featured-image {
+  position: relative;
+  left: -4.34783%;
+  width: 108.69565%;
+  line-height: 0;
+  border-radius: 0.4rem 0.4rem 0 0;
+  text-align: center; }
+  .featured-image a {
+    border-radius: 0.4rem 0.4rem 0 0; }
+  .featured-image a {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    max-width: 100%;
+    line-height: 0;
+    text-decoration: none; }
+  @media (min-width: 50em) {
+    .featured-image {
+      left: -3.6rem;
+      width: -webkit-calc( 100% + 73px );
+      width: -moz-calc( 100% + 73px );
+      width: calc( 100% + 73px ); } }
+
+/*--------------------------------------------------------------
+16.4 Video
+--------------------------------------------------------------*/
+.format-video > .fit-video {
+  position: relative;
+  left: -24px;
+  width: -webkit-calc( 100% + 48px );
+  width: -moz-calc( 100% + 48px );
+  width: calc( 100% + 48px );
+  margin: 0; }
+  @media (min-width: 50em) {
+    .format-video > .fit-video {
+      left: -36px;
+      width: -webkit-calc( 100% + 72px );
+      width: -moz-calc( 100% + 72px );
+      width: calc( 100% + 72px ); } }
+
+.fit-video {
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem; }
+
+.campaign-video .fit-video {
+  margin-bottom: 36px;
+  margin-bottom: 3.6rem; }
+
+/*--------------------------------------------------------------
+17.0 Footer
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+17.1 Footer Widget Area
+--------------------------------------------------------------*/
+#site-footer {
+  padding-top: 24px;
+  padding-top: 2.4rem;
+  padding-right: 4%;
+  padding-left: 4%;
+  color: white; }
+  #site-footer a {
+    color: white;
+    text-decoration: none; }
+  #site-footer .button, #site-footer .widget.widget_campaign_creator_widget .creator-profile-link a, .widget.widget_campaign_creator_widget .creator-profile-link #site-footer a {
+    background: transparent;
+    box-shadow: none;
+    border-color: white; }
+
+.footer-widget {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+  padding: 0;
+  border: none;
+  background: transparent !important; }
+  .footer-widget .widget-title {
+    float: left;
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 12px;
+    margin-bottom: 1.2rem; }
+
+.footer-right .footer-widget:nth-child(2n+2) {
+  clear: left; }
+.footer-right .footer-widget:nth-child(2n+1) {
+  margin-right: 0;
+  clear: right; }
+
+@media (min-width: 45em) {
+  .footer-widget {
+    padding-left: 0;
+    padding-right: 0; }
+
+  .footer-left {
+    float: left;
+    width: 34%;
+    margin-right: 4%;
+    padding-right: 0; }
+    .footer-left .footer-widget {
+      width: 100%;
+      margin: 0; }
+
+  .footer-right {
+    float: left;
+    width: 54%;
+    padding-left: 0; }
+    .footer-right .footer-widget {
+      width: 28.4%;
+      margin-right: 7.4%; }
+      .footer-right .footer-widget:nth-of-type(2n+1) {
+        margin-right: 7.4%; }
+      .footer-right .footer-widget:nth-of-type(2n+2) {
+        clear: none; }
+      .footer-right .footer-widget:nth-of-type(3n+3) {
+        width: 28.4%;
+        margin-right: 0; }
+      .footer-right .footer-widget:nth-of-type(3n+4) {
+        clear: left; } }
+/*--------------------------------------------------------------
+17.2 Colophon
+--------------------------------------------------------------*/
+#colophon {
+  float: left;
+  width: 100%;
+  clear: both;
+  margin: 24px 0px 0px;
+  margin: 2.4rem 0rem 0rem;
+  padding: 24px 0px;
+  padding: 2.4rem 0rem;
+  border-top-width: 1px;
+  border-top-width: 0.1rem;
+  border-top-style: solid;
+  border-top-color: rgba(255, 255, 255, 0.5);
+  font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: none;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
+  text-align: center; }
+  #colophon .footer-notice {
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+
+/*--------------------------------------------------------------
+18.0 Plugins
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+18.1 Charitable
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+18.1.1 Campaign Summary
+--------------------------------------------------------------*/
+.single-campaign #main {
+  padding-top: 0; }
+.single-campaign.stripped #main {
+  padding-top: 36px;
+  padding-top: 3.6rem; }
+
+.campaign-summary {
+  margin-bottom: 36px;
+  margin-bottom: 3.6rem; }
+  .campaign-summary .campaign-title {
+    margin: 36px 0px 12px;
+    margin: 3.6rem 0rem 1.2rem;
+    text-align: center; }
+  .campaign-summary .campaign-description {
+    float: left;
+    width: 100%;
+    padding: 0px 0px 24px;
+    padding: 0rem 0rem 2.4rem;
+    text-align: center;
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 32px;
+    line-height: 3.2rem; }
+    .campaign-summary .campaign-description p:last-child {
+      margin-bottom: 0; }
+  .campaign-summary .campaign-image {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin: 0px 0px 36px;
+    margin: 0rem 0rem 3.6rem;
+    line-height: 0;
+    overflow: hidden; }
+    .campaign-summary .campaign-image span {
+      position: absolute;
+      display: block;
+      line-height: 1em;
+      padding: 6px 0px;
+      padding: 0.6rem 0rem;
+      width: 200px;
+      width: 20rem;
+      margin: 30px 0px 0px -60px;
+      margin: 3rem 0rem 0rem -6rem;
+      text-align: center;
+      letter-spacing: 1px;
+      letter-spacing: 0.1rem;
+      font-size: 11px;
+      font-size: 1.1rem;
+      color: #ffffff;
+      -moz-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+    .campaign-summary .campaign-image .campaign-successful {
+      background-color: #1ba714; }
+    .campaign-summary .campaign-image .campaign-unsuccessful {
+      background-color: #cc181e; }
+  .campaign-summary .wp-post-image {
+    width: 100%; }
+  .campaign-summary .campaign-details {
+    padding: 36px 0px 0px;
+    padding: 3.6rem 0rem 0rem;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 380px;
+    width: 38rem; }
+  .campaign-summary .campaign-donation {
+    padding: 0px 0px 24px;
+    padding: 0rem 0rem 2.4rem; }
+    .campaign-summary .campaign-donation .donate-button {
+      margin: 0;
+      height: 50px;
+      height: 5rem;
+      line-height: 50px;
+      line-height: 5rem;
+      font-size: 25px;
+      font-size: 2.5rem; }
+  .campaign-summary .campaign-ended {
+    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300; }
+  .campaign-summary .barometer {
+    position: relative;
+    float: left;
+    margin-right: 10px;
+    margin-right: 1rem;
+    z-index: 30;
+    width: 146px;
+    width: 14.6rem;
+    height: 146px;
+    height: 14.6rem; }
+    .campaign-summary .barometer span {
+      position: absolute;
+      left: 0;
+      top: 47px;
+      top: 4.7rem;
+      width: 146px;
+      width: 14.6rem;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      font-size: 1.6rem;
+      font-style: italic;
+      opacity: 0;
+      /* This is animated by JS */ }
+      .campaign-summary .barometer span span {
+        position: static;
+        font-size: 30px;
+        font-size: 3rem;
+        line-height: 30px;
+        line-height: 3rem;
+        font-style: normal; }
+  .campaign-summary .campaign-stats {
+    float: right;
+    text-align: right;
+    list-style: none;
+    padding-left: 0;
+    width: -webkit-calc(100% - 156px);
+    width: -moz-calc(100% - 156px);
+    width: calc(100% - 156px);
+    max-width: 180px;
+    max-width: 18rem;
+    margin-bottom: 0; }
+    .campaign-summary .campaign-stats li {
+      padding-bottom: 10px;
+      padding-bottom: 1rem;
+      margin-bottom: 10px;
+      margin-bottom: 1rem;
+      border-bottom-width: 1px;
+      border-bottom-width: 0.1rem;
+      border-bottom-style: solid;
+      border-bottom-color: rgba(255, 255, 255, 0.3);
+      font-size: 16px;
+      font-size: 1.6rem;
+      font-style: italic;
+      font-weight: 300; }
+      .campaign-summary .campaign-stats li span {
+        font-size: 20px;
+        font-size: 2rem;
+        line-height: 30px;
+        line-height: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        letter-spacing: 0.1rem;
+        display: block;
+        font-style: normal; }
+      .campaign-summary .campaign-stats li:last-child {
+        padding-bottom: 0;
+        border-bottom: none; }
+  .campaign-summary .campaign-support {
+    float: left;
+    width: 100%;
+    padding-bottom: 30px;
+    padding-bottom: 3rem;
+    text-align: center; }
+  .campaign-summary .campaign-sharing {
+    padding: 0;
+    margin-top: 20px;
+    margin-top: 2rem;
+    max-width: 100%;
+    text-align: center; }
+    .campaign-summary .campaign-sharing h6 {
+      margin: 0px 10px;
+      margin: 0rem 1rem;
+      line-height: 22pxpx;
+      line-height: 2.2pxrem; }
+    .campaign-summary .campaign-sharing li {
+      width: auto !important;
+      margin-bottom: 0;
+      vertical-align: top; }
+    .campaign-summary .campaign-sharing .icon {
+      padding: 0px 10px;
+      padding: 0rem 1rem;
+      font-size: 22px;
+      font-size: 2.2rem;
+      cursor: pointer; }
+  @media all and (min-width: 37.5em) and (max-width: 55em) {
+    .campaign-summary .campaign-details {
+      position: relative;
+      width: 100%;
+      padding-bottom: 7.4rem; }
+      .campaign-summary .campaign-details .campaign-support {
+        float: right;
+        width: 70%; }
+      .campaign-summary .campaign-details ul {
+        width: 70%;
+        max-width: 88rem;
+        text-align: center; }
+      .campaign-summary .campaign-details li {
+        display: inline-block;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        border-right: 0.1rem solid rgba(255, 255, 255, 0.3);
+        border-bottom: 0; }
+      .campaign-summary .campaign-details .campaign-backers {
+        border: none; }
+    .campaign-summary .campaign-countdown {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem 13% 0 13%;
+      border-bottom: 0;
+      border-top: 0.1rem solid rgba(255, 255, 255, 0.3);
+      text-align: center; }
+    .campaign-summary .campaign-sharing {
+      padding-top: 2.4rem;
+      margin-top: 1.2rem;
+      border-top: 0.1rem solid rgba(255, 255, 255, 0.3); }
+    .campaign-summary.ended .campaign-summary {
+      padding-bottom: 1.2rem; }
+      .campaign-summary.ended .campaign-summary ul {
+        margin-top: 4.8rem; } }
+  @media (min-width: 55em) {
+    .campaign-summary .campaign-image {
+      width: 50%;
+      width: -moz-calc(100% - 43rem);
+      width: -webkit-calc(100% - 43rem);
+      width: calc(100% - 43rem);
+      float: left;
+      margin-right: 0; }
+      .campaign-summary .campaign-image .wp-post-image {
+        border: 0.5rem solid;
+        border-radius: 0.4rem;
+        width: 95.3%;
+        width: -moz-calc(100% - 1.8rem);
+        width: -webkit-calc(100% - 1.8rem);
+        width: calc(100% - 1.8rem); }
+    .campaign-summary .campaign-details {
+      float: left;
+      padding-left: 0;
+      padding-top: 0.3rem;
+      margin-left: 4rem;
+      margin-right: 0; }
+    .campaign-summary .campaign-sharing {
+      float: right;
+      width: 38rem;
+      margin-left: 0; } }
+
+.campaign-countdown {
+  float: left;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-color: rgba(255, 255, 255, 0.3); }
+  .campaign-countdown .countdown {
+    text-transform: none;
+    letter-spacing: 0; }
+  .campaign-countdown .countdown-rtl {
+    direction: rtl; }
+  .campaign-countdown .countdown-row {
+    clear: both;
+    width: 100%;
+    padding: 0px 2px;
+    text-align: center; }
+  .campaign-countdown .countdown-show1 .countdown-section {
+    width: 98%; }
+  .campaign-countdown .countdown-show2 .countdown-section {
+    width: 48%; }
+  .campaign-countdown .countdown-show3 .countdown-section {
+    width: 32.5%; }
+  .campaign-countdown .countdown-show4 .countdown-section {
+    width: 24.5%; }
+  .campaign-countdown .countdown-show5 .countdown-section {
+    width: 19.5%; }
+  .campaign-countdown .countdown-show6 .countdown-section {
+    width: 16.25%; }
+  .campaign-countdown .countdown-show7 .countdown-section {
+    width: 14%; }
+  .campaign-countdown .countdown-section {
+    display: block;
+    float: left;
+    text-align: center;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: 300; }
+  .campaign-countdown .countdown-amount {
+    font-size: 20px;
+    font-size: 2rem;
+    line-height: 1em; }
+  .campaign-countdown .countdown-period {
+    display: block;
+    width: 100%; }
+
+.campaign-countdown .countdown {
+  float: left;
+  width: 68%;
+  font-style: normal; }
+
+.campaign-countdown .countdown-period {
+  display: block; }
+
+.campaign-countdown > span:last-child {
+  font-size: 16px;
+  font-size: 1.6rem;
+  float: right;
+  text-align: right;
+  font-style: italic;
+  font-weight: 300;
+  width: 30%; }
+
+.share-widget .modal {
+  text-align: left; }
+.share-widget pre {
+  word-break: break-word; }
+.share-widget .block {
+  border: none; }
+  .share-widget .block.iframe-block {
+    width: 275px;
+    width: 27.5rem; }
+@media (min-width: 48em) {
+  .share-widget .modal {
+    width: 634px;
+    width: 63.4rem; }
+  .share-widget .block {
+    float: left;
+    width: 275px;
+    width: 27.5rem;
+    padding-right: 12px;
+    padding-right: 1.2rem; }
+    .share-widget .block.iframe-block {
+      float: right;
+      padding: 0; } }
+
+.charitable-fes-campaign-creator-toolbar {
+  position: relative;
+  left: -24px;
+  width: -webkit-calc( 100% + 48px );
+  width: -moz-calc( 100% + 48px );
+  width: calc( 100% + 48px );
+  padding: 12px 45px;
+  padding: 1.2rem 4.5rem;
+  background-color: #df745f;
+  color: #ffffff; }
+  @media (min-width: 50em) {
+    .charitable-fes-campaign-creator-toolbar {
+      left: -45px;
+      width: -webkit-calc( 100% + 90px );
+      width: -moz-calc( 100% + 90px );
+      width: calc( 100% + 90px ); } }
+  .charitable-fes-campaign-creator-toolbar a {
+    float: right;
+    color: #ffffff;
+    font-weight: 100; }
+    .charitable-fes-campaign-creator-toolbar a:hover {
+      color: #ffffff; }
+  .charitable-fes-campaign-creator-toolbar .edit-link::before {
+    font-family: "Benny-Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f040"; }
+  .charitable-fes-campaign-creator-toolbar .campaign-status {
+    color: rgba(255, 255, 255, 0.5); }
+
+/*--------------------------------------------------------------
+18.1.2 Widgets
+--------------------------------------------------------------*/
+.donors-list .donor {
+  float: left;
+  width: 20%;
+  padding-right: 12px;
+  padding-right: 1.2rem; }
+  .donors-list .donor:nth-child(5n+6) {
+    clear: left; }
+.donors-list .donor-name {
+  margin: 0px 0px 6px;
+  margin: 0rem 0rem 0.6rem; }
+
+.widget.widget_charitable_edd_campaign_downloads {
+  background: transparent;
+  border: none;
+  padding: 0; }
+  .widget.widget_charitable_edd_campaign_downloads .widget-title {
+    margin-top: 0; }
+  .widget.widget_charitable_edd_campaign_downloads .widget-block {
+    padding: 24px;
+    padding: 2.4rem;
+    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
+    border-width: 1px;
+    border-width: 0.1rem;
+    border-style: solid;
+    border-color: #e2dedb;
+    border-radius: 0.4rem;
+    background: #ffffff; }
+  .widget.widget_charitable_edd_campaign_downloads .wp-post-image {
+    position: relative;
+    left: -24px;
+    width: -webkit-calc( 100% + 48px );
+    width: -moz-calc( 100% + 48px );
+    width: calc( 100% + 48px );
+    top: -24px;
+    top: -2.4rem;
+    margin-bottom: -12px;
+    margin-bottom: -1.2rem;
+    max-width: -webkit-calc( 100% + 48px );
+    max-width: -moz-calc( 100% + 48px );
+    max-width: calc( 100% + 48px );
+    border-radius: 0.4rem 0.4rem 0 0; }
+  .widget.widget_charitable_edd_campaign_downloads .download-title {
+    margin-top: 0; }
+  .widget.widget_charitable_edd_campaign_downloads .download-price {
+    float: left;
+    padding: 0px 0px 12px;
+    padding: 0rem 0rem 1.2rem;
+    font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif; }
+  .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd_price_options li {
+    width: 100%;
+    padding-bottom: 6px;
+    padding-bottom: 0.6rem;
+    border-bottom-width: 1px;
+    border-bottom-width: 0.1rem;
+    border-bottom-style: solid;
+    border-bottom-color: #e2dedb; }
+  .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd_price_options .edd_price_option_sep {
+    display: none; }
+  .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd_price_option_price {
+    float: right; }
+  .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd_download_quantity_wrapper {
+    float: left;
+    clear: left;
+    margin-bottom: 0; }
+    .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd_download_quantity_wrapper label {
+      display: inline;
+      padding-right: 4px;
+      padding-right: 0.4rem; }
+  .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input {
+    background-color: #f1efee; }
+  .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-item-quantity {
+    width: 65px;
+    width: 6.5rem;
+    padding-left: 6px;
+    padding-left: 0.6rem;
+    padding-right: 6px;
+    padding-right: 0.6rem; }
+  .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-add-to-cart.button, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .widget.widget_campaign_creator_widget .creator-profile-link a.edd-add-to-cart, .widget.widget_campaign_creator_widget .creator-profile-link .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form a.edd-add-to-cart {
+    float: right;
+    font-size: 12px;
+    font-size: 1.2rem;
+    padding-left: 6px;
+    padding-left: 0.6rem;
+    padding-right: 6px;
+    padding-right: 0.6rem; }
+  .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd_go_to_checkout.button, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .widget.widget_campaign_creator_widget .creator-profile-link a.edd_go_to_checkout, .widget.widget_campaign_creator_widget .creator-profile-link .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form a.edd_go_to_checkout {
+    float: left; }
+  .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-cart-ajax-alert {
+    display: none; }
+
+.widget.widget_charitable_donate_widget {
+  background: transparent;
+  border: none;
+  padding: 0; }
+  .widget.widget_charitable_donate_widget .widget-title {
+    margin-top: 0; }
+  .widget.widget_charitable_donate_widget .widget-block {
+    padding: 24px;
+    padding: 2.4rem;
+    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
+    border-width: 1px;
+    border-width: 0.1rem;
+    border-style: solid;
+    border-color: #e2dedb;
+    border-radius: 0.4rem;
+    background: #ffffff; }
+  .widget.widget_charitable_donate_widget #charitable-donation-form {
+    padding-top: 0; }
+  .widget.widget_charitable_donate_widget .donation-amounts {
+    margin-bottom: 0; }
+    .widget.widget_charitable_donate_widget .donation-amounts li {
+      width: 100%;
+      margin: 0px 0px 12px;
+      margin: 0rem 0rem 1.2rem; }
+    .widget.widget_charitable_donate_widget .donation-amounts .charitable-form-field {
+      margin: 12px 0px 0px;
+      margin: 1.2rem 0rem 0rem; }
+  .widget.widget_charitable_donate_widget .charitable-donation-form-without-suggestions {
+    padding: 12px;
+    padding: 1.2rem;
+    background: #ffffff;
+    border-width: 1px;
+    border-width: 0.1rem;
+    border-color: #e2dedb;
+    border-style: solid;
+    border-radius: 0.4rem; }
+    .widget.widget_charitable_donate_widget .charitable-donation-form-without-suggestions label {
+      margin: 0px 0px 6px;
+      margin: 0rem 0rem 0.6rem; }
+  .widget.widget_charitable_donate_widget .charitable-submit-field {
+    margin-bottom: 0; }
+    .widget.widget_charitable_donate_widget .charitable-submit-field .button, .widget.widget_charitable_donate_widget .charitable-submit-field .widget.widget_campaign_creator_widget .creator-profile-link a, .widget.widget_campaign_creator_widget .creator-profile-link .widget.widget_charitable_donate_widget .charitable-submit-field a {
+      display: inline-block;
+      margin: 3px 0px 0px 3px;
+      margin: 0.3rem 0rem 0rem 0.3rem;
+      padding: 0px 20px;
+      padding: 0rem 2rem;
+      height: 33px;
+      height: 3.3rem;
+      font-size: 14px;
+      font-size: 1.4rem;
+      line-height: 29px;
+      line-height: 2.9rem;
+      border-width: 2px;
+      border-width: 0.2rem;
+      border-style: solid;
+      border-radius: 0.4rem;
+      box-shadow: none;
+      font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+      background: transparent;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      letter-spacing: 0.2rem;
+      cursor: pointer;
+      /* Default settings */
+      -webkit-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+      -moz-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+      -o-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+      transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+      /* Default settings */
+      -webkit-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+      -moz-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+      -o-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+      transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+      margin: 0; }
+      .widget.widget_charitable_donate_widget .charitable-submit-field .button:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .widget.widget_campaign_creator_widget .creator-profile-link .widget.widget_charitable_donate_widget .charitable-submit-field a:hover {
+        text-decoration: none; }
+      .widget.widget_charitable_donate_widget .charitable-submit-field .button:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .widget.widget_campaign_creator_widget .creator-profile-link .widget.widget_charitable_donate_widget .charitable-submit-field a:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button:focus, .widget.widget_charitable_donate_widget .charitable-submit-field .widget.widget_campaign_creator_widget .creator-profile-link a:focus, .widget.widget_campaign_creator_widget .creator-profile-link .widget.widget_charitable_donate_widget .charitable-submit-field a:focus {
+        color: #ffffff; }
+
+.widget.widget_campaign_creator_widget .avatar {
+  float: left;
+  margin: 0px 12px 12px 0px;
+  margin: 0rem 1.2rem 1.2rem 0rem; }
+.widget.widget_campaign_creator_widget .creator-summary {
+  float: left; }
+.widget.widget_campaign_creator_widget .creator-name {
+  margin-top: 0; }
+.widget.widget_campaign_creator_widget .creator-bio,
+.widget.widget_campaign_creator_widget .creator-links,
+.widget.widget_campaign_creator_widget .creator-profile-link {
+  float: left;
+  clear: both;
+  width: 100%; }
+.widget.widget_campaign_creator_widget .creator-bio {
+  padding-top: 12px;
+  padding-top: 1.2rem;
+  border-top-width: 1px;
+  border-top-width: 0.1rem;
+  border-top-style: solid;
+  border-top-color: #e2dedb; }
+.widget.widget_campaign_creator_widget .creator-links {
+  margin-left: 16px;
+  margin-left: 1.6rem; }
+  .widget.widget_campaign_creator_widget .creator-links li {
+    list-style: disc; }
+.widget.widget_campaign_creator_widget .creator-profile-link a {
+  margin: 0; }
+@media (min-width: 45em) and (max-width: 50em) {
+  .widget.widget_campaign_creator_widget .creator-summary {
+    float: none; } }
+
+.widget.widget_charitable_donation_stats_widget li {
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+  font-size: 13px;
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: 300; }
+  .widget.widget_charitable_donation_stats_widget li:last-child {
+    border: none; }
+.widget.widget_charitable_donation_stats_widget .figure {
+  display: block;
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 30px;
+  line-height: 3rem;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+  font-style: normal; }
+
+#secondary .widget.widget_charitable_donation_stats_widget li {
+  float: left;
+  padding: 0px 6px;
+  padding: 0rem 0.6rem;
+  width: 33.3%;
+  margin-bottom: 0;
+  text-align: center; }
+  #secondary .widget.widget_charitable_donation_stats_widget li:last-child {
+    padding-right: 0; }
+  @media (min-width: 45em) and (max-width: 56.25em) {
+    #secondary .widget.widget_charitable_donation_stats_widget li {
+      float: none;
+      width: 100%;
+      padding: 0;
+      margin-bottom: 12px;
+      margin-bottom: 1.2rem; } }
+
+.campaign {
+  padding: 0px 12px;
+  padding: 0rem 1.2rem;
+  overflow: hidden; }
+  .campaign .campaign-image {
+    position: relative;
+    left: -12px;
+    width: -webkit-calc( 100% + 24px );
+    width: -moz-calc( 100% + 24px );
+    width: calc( 100% + 24px ); }
+    @media (min-width: 50em) {
+      .campaign .campaign-image {
+        left: -12px;
+        width: -webkit-calc( 100% + 24px );
+        width: -moz-calc( 100% + 24px );
+        width: calc( 100% + 24px ); } }
+    .campaign .campaign-image a {
+      display: block;
+      line-height: 0; }
+  .campaign .block-title {
+    padding: 0;
+    border: 0; }
+  .campaign .campaign-description {
+    text-shadow: none; }
+  .campaign .campaign-stats,
+  .campaign .meta {
+    position: relative;
+    left: -24px;
+    width: -webkit-calc( 100% + 48px );
+    width: -moz-calc( 100% + 48px );
+    width: calc( 100% + 48px ); }
+    @media (min-width: 37.5em) {
+      .campaign .campaign-stats,
+      .campaign .meta {
+        left: -12px;
+        width: -webkit-calc( 100% + 24px );
+        width: -moz-calc( 100% + 24px );
+        width: calc( 100% + 24px ); } }
+  .campaign .campaign-stats {
+    padding: 6px 0px;
+    padding: 0.6rem 0rem;
+    margin: 0;
+    border-top-width: 1px;
+    border-top-width: 0.1rem;
+    border-top-style: solid;
+    border-top-color: #e2dedb;
+    text-align: center;
+    list-style: none; }
+    .campaign .campaign-stats li {
+      position: relative;
+      display: inline-block;
+      padding: 0px 6px 0px 10px;
+      padding: 0rem 0.6rem 0rem 1rem;
+      margin: 0;
+      border-left-width: 1px;
+      border-left-width: 0.1rem;
+      border-left-style: solid;
+      border-left-color: #e2dedb;
+      font-size: 10px;
+      font-size: 1rem;
+      font-style: italic; }
+      .campaign .campaign-stats li span {
+        display: block;
+        padding-top: 2px;
+        padding-top: 0.2rem;
+        font-size: 14px;
+        font-size: 1.4rem;
+        font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+        font-style: normal; }
+    .campaign .campaign-stats .barometer {
+      width: 52px;
+      width: 5.2rem;
+      height: 36px;
+      height: 3.6rem;
+      border: none;
+      vertical-align: top; }
+
+.campaign-widget {
+  background: transparent; }
+  .campaign-widget .campaign {
+    margin: 0; }
+    .campaign-widget .campaign .block-title {
+      margin-top: 12px;
+      margin-top: 1.2rem; }
+
+/*--------------------------------------------------------------
+18.1.3 Campaign Pledge Form
+--------------------------------------------------------------*/
+.campaign-pledge-levels {
+  padding: 12px 0px 36px;
+  padding: 1.2rem 0rem 3.6rem;
+  list-style: none;
+  text-align: left; }
+  .campaign-pledge-levels li.pledge-level {
+    position: relative;
+    margin-bottom: 12px;
+    margin-bottom: 1.2rem; }
+    .campaign-pledge-levels li.pledge-level .pledge-title {
+      position: absolute;
+      left: 22px;
+      left: 2.2rem;
+      top: 0;
+      margin: 0; }
+      .campaign-pledge-levels li.pledge-level .pledge-title strong {
+        font-weight: 400; }
+    .campaign-pledge-levels li.pledge-level .pledge-limit {
+      float: right;
+      text-align: right;
+      font-style: italic; }
+    .campaign-pledge-levels li.pledge-level .pledge-description {
+      padding: 4px 0px;
+      padding: 0.4rem 0rem;
+      margin-left: 22px;
+      margin-left: 2.2rem; }
+    .campaign-pledge-levels li.pledge-level.not-available .pledge-description {
+      margin-left: 0; }
+
+.edd_purchase_submit_wrapper {
+  text-align: center; }
+
+.edd-cart-ajax-alert {
+  float: left;
+  width: 100%;
+  padding-top: 24px;
+  padding-top: 2.4rem;
+  font-style: italic; }
+
+/*--------------------------------------------------------------
+18.1.4 Campaign Grid
+--------------------------------------------------------------*/
+.campaigns-grid-wrapper {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 36px 0px 48px;
+  padding: 3.6rem 0rem 4.8rem; }
+  .campaigns-grid-wrapper .campaign.block {
+    max-width: 100%;
+    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
+    border: none;
+    overflow: hidden; }
+
+.campaigns-grid .campaign {
+  max-width: 100%;
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
+  border: none; }
+.campaigns-grid .campaign-image {
+  position: relative;
+  left: -12px;
+  width: -webkit-calc( 100% + 24px );
+  width: -moz-calc( 100% + 24px );
+  width: calc( 100% + 24px ); }
+  @media (min-width: 50em) {
+    .campaigns-grid .campaign-image {
+      left: -12px;
+      width: -webkit-calc( 100% + 24px );
+      width: -moz-calc( 100% + 24px );
+      width: calc( 100% + 24px ); } }
+  .campaigns-grid .campaign-image a {
+    display: block;
+    line-height: 0; }
+.campaigns-grid .block-title {
+  padding: 0;
+  border: 0; }
+.campaigns-grid .campaign-description {
+  text-shadow: none; }
+.campaigns-grid .campaign-stats,
+.campaigns-grid .meta {
+  position: relative;
+  left: -24px;
+  width: -webkit-calc( 100% + 48px );
+  width: -moz-calc( 100% + 48px );
+  width: calc( 100% + 48px ); }
+  @media (min-width: 37.5em) {
+    .campaigns-grid .campaign-stats,
+    .campaigns-grid .meta {
+      left: -12px;
+      width: -webkit-calc( 100% + 24px );
+      width: -moz-calc( 100% + 24px );
+      width: calc( 100% + 24px ); } }
+.campaigns-grid .campaign-stats {
+  padding: 6px 0px;
+  padding: 0.6rem 0rem;
+  margin: 0;
+  border-top-width: 1px;
+  border-top-width: 0.1rem;
+  border-top-style: solid;
+  border-top-color: #e2dedb;
+  text-align: center;
+  list-style: none; }
+  .campaigns-grid .campaign-stats li {
+    position: relative;
+    display: inline-block;
+    padding: 0px 6px 0px 10px;
+    padding: 0rem 0.6rem 0rem 1rem;
+    margin: 0;
+    border-left-width: 1px;
+    border-left-width: 0.1rem;
+    border-left-style: solid;
+    border-left-color: #e2dedb;
+    font-size: 10px;
+    font-size: 1rem;
+    font-style: italic; }
+    .campaigns-grid .campaign-stats li span {
+      display: block;
+      padding-top: 2px;
+      padding-top: 0.2rem;
+      font-size: 14px;
+      font-size: 1.4rem;
+      font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+      font-style: normal; }
+  .campaigns-grid .campaign-stats .barometer {
+    width: 52px;
+    width: 5.2rem;
+    height: 36px;
+    height: 3.6rem;
+    border: none;
+    vertical-align: top; }
+@media (min-width: 37.5em) {
+  .campaigns-grid {
+    width: 102%; }
+    .campaigns-grid .campaign {
+      width: 48%;
+      margin-right: 1.9%;
+      border: none !important;
+      padding: 0px 12px;
+      padding: 0rem 1.2rem; }
+      .campaigns-grid .campaign:nth-child(2n+2) {
+        margin-right: 0; }
+      .campaigns-grid .campaign:nth-child(2n+3) {
+        clear: left; } }
+@media (min-width: 57.5em) {
+  .campaigns-grid {
+    width: 104%; }
+    .campaigns-grid .campaign {
+      width: 30.7692308%;
+      margin-right: 1.9230769%; }
+      .campaigns-grid .campaign:nth-child(2n+2) {
+        margin-right: 1.9230769%; }
+      .campaigns-grid .campaign:nth-child(3n+3) {
+        margin-right: 0; }
+      .campaigns-grid .campaign:nth-child(2n+3) {
+        clear: none; }
+      .campaigns-grid .campaign:nth-child(3n+4) {
+        clear: left; } }
+
+.campaigns-navigation {
+  float: left;
+  clear: both;
+  height: 0;
+  width: 100%;
+  text-align: right; }
+  .campaigns-navigation.is-active .menu {
+    margin-top: 12px;
+    margin-top: 1.2rem; }
+
+/*--------------------------------------------------------------
+18.1.5 Campaign Donation Page
+--------------------------------------------------------------*/
+.campaign-benefiting {
+  display: none; }
+  @media (min-width: 50em) {
+    .campaign-benefiting {
+      display: block;
+      float: right;
+      width: 30%;
+      padding: 24px 0px 0px 36px;
+      padding: 2.4rem 0rem 0rem 3.6rem; }
+      .campaign-benefiting .header {
+        margin-top: 0;
+        font-weight: bold;
+        font-style: italic;
+        text-align: center; }
+      .campaign-benefiting .campaign-title {
+        margin: 0px 0px 36px;
+        margin: 0rem 0rem 3.6rem;
+        text-align: center; } }
+
+.campaign-donation-page.stripped .site-main {
+  padding: 0;
+  border: none;
+  background: transparent; }
+  .campaign-donation-page.stripped .site-main .entry-block {
+    padding: 0; }
+.campaign-donation-page.stripped .charitable-donation-form {
+  padding: 36px;
+  padding: 3.6rem;
+  border-width: 1px;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: #e2dedb;
+  border-top: none;
+  border-radius: 0 0 0.4rem 0.4rem;
+  background: #ffffff;
+  box-shadow: 0 0 1px #ffffff; }
+  @media (min-width: 50em) {
+    .campaign-donation-page.stripped .charitable-donation-form {
+      float: left;
+      width: 70%;
+      padding-right: 36px;
+      padding-right: 3.6rem; } }
+
+.charitable-donation-form .charitable-form-header {
+  margin-top: 0;
+  font-size: 16px;
+  font-size: 1.6rem; }
+.charitable-donation-form .donation-amounts {
+  margin-bottom: 30px;
+  margin-bottom: 3rem; }
+  .charitable-donation-form .donation-amounts .donation-amount {
+    width: 100%; }
+    @media (min-width: 37.5em) {
+      .charitable-donation-form .donation-amounts .donation-amount {
+        float: left;
+        width: 48%;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 12px;
+        margin-bottom: 1.2rem;
+        margin-left: 4%; }
+        .charitable-donation-form .donation-amounts .donation-amount:nth-child(2n + 1) {
+          margin-left: 0;
+          clear: left; } }
+.charitable-donation-form #custom-donation-amount-field {
+  margin: 12px 0px 0px;
+  margin: 1.2rem 0rem 0rem; }
+  .charitable-donation-form #custom-donation-amount-field input {
+    background-color: #ffffff; }
+  .charitable-donation-form #custom-donation-amount-field.charitable-custom-donation-field-alone {
+    margin-bottom: 36px;
+    margin-bottom: 3.6rem; }
+.charitable-donation-form .charitable-connected-downloads {
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
+  border-width: 2px;
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: #e2dedb;
+  border-radius: 0.4rem;
+  background: #f1efee; }
+.charitable-donation-form .charitable-edd-connected-download {
+  position: relative;
+  padding: 24px 12px 24px 12px;
+  padding: 2.4rem 1.2rem 2.4rem 1.2rem;
+  border-bottom-width: 2px;
+  border-bottom-width: 0.2rem;
+  border-bottom-style: solid;
+  border-bottom-color: #e2dedb;
+  cursor: pointer; }
+  .charitable-donation-form .charitable-edd-connected-download:last-of-type {
+    border: none; }
+  .charitable-donation-form .charitable-edd-connected-download.selected {
+    background: #ffffff; }
+.charitable-donation-form .edd-price-option-price {
+  font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem; }
+  .charitable-donation-form .edd-price-option-price .currency {
+    padding-left: 2px;
+    padding-left: 0.2rem;
+    font-size: 14px;
+    font-size: 1.4rem; }
+.charitable-donation-form .charitable-edd-download-select {
+  position: relative;
+  bottom: 2px;
+  bottom: 0.2rem;
+  width: 20px;
+  width: 2rem; }
+.charitable-donation-form .charitable-option-no-download {
+  font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  text-transform: uppercase; }
+.charitable-donation-form .charitable-edd-connected-download-description {
+  padding-top: 12px;
+  padding-top: 1.2rem; }
+  .charitable-donation-form .charitable-edd-connected-download-description .download-title {
+    margin-top: 0; }
+  @media (min-width: 50em) {
+    .charitable-donation-form .charitable-edd-connected-download-description {
+      padding-top: 0; } }
+.charitable-donation-form .charitable-edd-price-options ul {
+  list-style-type: none;
+  padding-left: 0; }
+.charitable-donation-form .charitable-edd-price-options .edd-price-option-price {
+  position: static; }
+.charitable-donation-form .charitable-form-field .button, .charitable-donation-form .charitable-form-field .widget.widget_campaign_creator_widget .creator-profile-link a, .widget.widget_campaign_creator_widget .creator-profile-link .charitable-donation-form .charitable-form-field a {
+  display: inline-block;
+  margin: 3px 0px 0px 3px;
+  margin: 0.3rem 0rem 0rem 0.3rem;
+  padding: 0px 20px;
+  padding: 0rem 2rem;
+  height: 33px;
+  height: 3.3rem;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 29px;
+  line-height: 2.9rem;
+  border-width: 2px;
+  border-width: 0.2rem;
+  border-style: solid;
+  border-radius: 0.4rem;
+  box-shadow: none;
+  font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+  background: transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  /* Default settings */
+  -webkit-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -moz-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -o-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  /* Default settings */
+  -webkit-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -moz-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -o-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  margin: 0;
+  width: auto; }
+  .charitable-donation-form .charitable-form-field .button:hover, .charitable-donation-form .charitable-form-field .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .widget.widget_campaign_creator_widget .creator-profile-link .charitable-donation-form .charitable-form-field a:hover {
+    text-decoration: none; }
+  .charitable-donation-form .charitable-form-field .button:hover, .charitable-donation-form .charitable-form-field .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .widget.widget_campaign_creator_widget .creator-profile-link .charitable-donation-form .charitable-form-field a:hover, .charitable-donation-form .charitable-form-field .button:focus, .charitable-donation-form .charitable-form-field .widget.widget_campaign_creator_widget .creator-profile-link a:focus, .widget.widget_campaign_creator_widget .creator-profile-link .charitable-donation-form .charitable-form-field a:focus, .charitable-donation-form .charitable-form-field .button:active, .charitable-donation-form .charitable-form-field .widget.widget_campaign_creator_widget .creator-profile-link a:active, .widget.widget_campaign_creator_widget .creator-profile-link .charitable-donation-form .charitable-form-field a:active {
+    color: #ffffff; }
 
 .donation-amounts .donation-amount {
-  border-color: #aea198; }
+  position: relative;
+  padding: 12px 12px 12px 36px;
+  padding: 1.2rem 1.2rem 1.2rem 3.6rem;
+  margin: 0px 12px 12px 0px;
+  margin: 0rem 1.2rem 1.2rem 0rem;
+  line-height: 18px;
+  line-height: 1.8rem;
+  border-width: 2px;
+  border-width: 0.2rem;
+  border-style: solid;
+  border-radius: 0.4rem;
+  background-color: #ffffff; }
+  .donation-amounts .donation-amount .amount {
+    display: block;
+    margin-bottom: 6px;
+    margin-bottom: 0.6rem;
+    font-size: 18px;
+    font-size: 1.8rem; }
+  .donation-amounts .donation-amount .description {
+    display: block; }
+  .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover {
+    color: #ffffff; }
+  .donation-amounts .donation-amount.custom-donation-amount {
+    width: 100%;
+    margin-left: 0; }
+    .donation-amounts .donation-amount.custom-donation-amount .description {
+      font-size: 12px;
+      font-size: 1.2rem;
+      font-family: Merriweather, Georgia, "Times New Roman", Times, serif;
+      letter-spacing: 0;
+      text-transform: none; }
+    .donation-amounts .donation-amount.custom-donation-amount input[type=text] {
+      position: static;
+      max-width: 100%; }
+      .donation-amounts .donation-amount.custom-donation-amount input[type=text]:focus, .donation-amounts .donation-amount.custom-donation-amount input[type=text]:active {
+        background-color: #ffffff; }
+  .donation-amounts .donation-amount input {
+    position: absolute;
+    top: 12px;
+    top: 1.2rem;
+    left: 12px;
+    left: 1.2rem; }
 
-.with-icon::before, body, .menu-site a, .button-alt,
-.button-secondary,
-.widget.widget_campaign_creator_widget .creator-profile-link a,
-.button.button-alt,
-.button.button-secondary, .modal .block-title, .modal-close:before, .meta a, .share-widget .modal,
-.share-widget .modal .block-title, .donation-amounts .donation-amount, #custom-donation-amount-field.charitable-custom-donation-field-alone input, .charitable-form-field-editor .mce-btn button, .charitable-repeatable-form-field-table .remove:before, .charitable-repeatable-form-field-table .add-row.button, .charitable-user-post .user-post-actions a, div.printfriendly a,
-div.printfriendly a:link,
-div.printfriendly a:visited, body.events-single .tribe-events-tickets .tickets_price, body.events-single .tribe-events-tickets .tickets_name, #tribe-events .tribe-events-button {
-  color: #7d6e63; }
+#custom-donation-amount-field.charitable-custom-donation-field-alone {
+  padding: 2px;
+  padding: 0.2rem;
+  border-radius: 0.4rem; }
+  #custom-donation-amount-field.charitable-custom-donation-field-alone input {
+    width: 100%;
+    max-width: 100%;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: #ffffff; }
 
-.button, .widget.widget_campaign_creator_widget .creator-profile-link a, .button-alt:hover,
-.button-secondary:hover,
-.button.button-alt:hover,
-.button.button-secondary:hover, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-form .charitable-submit-field .button:hover, body.user-dashboard .charitable-form .charitable-submit-field .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .widget.widget_campaign_creator_widget .creator-profile-link body.user-dashboard .charitable-form .charitable-submit-field a:hover, #tribe-events .tribe-events-button:hover {
-  background-color: #7d6e63; }
+/*-------------------------------------------------------------- 
+18.1.6 User Dashboard
+--------------------------------------------------------------*/
+body.user-dashboard .site-main {
+  width: 100%;
+  padding: 0; }
+body.user-dashboard .entry-block {
+  padding: 36px;
+  padding: 3.6rem;
+  border-radius: 0 0.4rem 0.4rem 0.4rem; }
+body.user-dashboard .charitable-user-details,
+body.user-dashboard .entry {
+  padding: 0;
+  border: none; }
+body.user-dashboard .charitable-form .charitable-submit-field {
+  display: inline-block; }
+  body.user-dashboard .charitable-form .charitable-submit-field .button, body.user-dashboard .charitable-form .charitable-submit-field .widget.widget_campaign_creator_widget .creator-profile-link a, .widget.widget_campaign_creator_widget .creator-profile-link body.user-dashboard .charitable-form .charitable-submit-field a {
+    display: inline-block;
+    margin: 3px 0px 0px 3px;
+    margin: 0.3rem 0rem 0rem 0.3rem;
+    padding: 0px 20px;
+    padding: 0rem 2rem;
+    height: 33px;
+    height: 3.3rem;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 29px;
+    line-height: 2.9rem;
+    border-width: 2px;
+    border-width: 0.2rem;
+    border-style: solid;
+    border-radius: 0.4rem;
+    box-shadow: none;
+    font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+    background: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+    /* Default settings */
+    -webkit-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+    -moz-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+    -o-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+    transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+    /* Default settings */
+    -webkit-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+    -moz-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+    -o-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+    transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0; }
+    body.user-dashboard .charitable-form .charitable-submit-field .button:hover, body.user-dashboard .charitable-form .charitable-submit-field .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .widget.widget_campaign_creator_widget .creator-profile-link body.user-dashboard .charitable-form .charitable-submit-field a:hover {
+      text-decoration: none; }
+    body.user-dashboard .charitable-form .charitable-submit-field .button:hover, body.user-dashboard .charitable-form .charitable-submit-field .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .widget.widget_campaign_creator_widget .creator-profile-link body.user-dashboard .charitable-form .charitable-submit-field a:hover {
+      color: #ffffff; }
+    body.user-dashboard .charitable-form .charitable-submit-field .button.button-primary:hover, body.user-dashboard .charitable-form .charitable-submit-field .widget.widget_campaign_creator_widget .creator-profile-link a.button-primary:hover, .widget.widget_campaign_creator_widget .creator-profile-link body.user-dashboard .charitable-form .charitable-submit-field a.button-primary:hover {
+      color: #ffffff; }
 
-.button-alt,
-.button-secondary,
-.widget.widget_campaign_creator_widget .creator-profile-link a,
-.button.button-alt,
-.button.button-secondary, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, .charitable-repeatable-form-field-table .add-row.button, #tribe-events .tribe-events-button {
-  border-color: #7d6e63; }
+.user-dashboard-menu {
+  font-size: 13px;
+  font-size: 1.3rem;
+  font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem; }
+  .user-dashboard-menu .menu {
+    margin-bottom: -1px;
+    margin-bottom: -0.1rem;
+    padding-left: 0;
+    list-style: none; }
+  .user-dashboard-menu li {
+    display: inline-block;
+    margin-bottom: 0; }
+    .user-dashboard-menu li a {
+      position: relative;
+      z-index: 5;
+      display: inline-block;
+      padding: 6px 24px;
+      padding: 0.6rem 2.4rem;
+      border-width: 1px;
+      border-width: 0.1rem;
+      border-style: solid;
+      border-color: #f9f8f7;
+      border-bottom-color: transparent;
+      border-radius: 0.4rem 0.4rem 0 0; }
+      .user-dashboard-menu li a:hover {
+        text-decoration: none; }
+    .user-dashboard-menu li.current-menu-item a,
+    .user-dashboard-menu li a:hover {
+      border-color: #e2dedb;
+      border-bottom-color: #ffffff;
+      background-color: #ffffff; }
+      .user-dashboard-menu li.current-menu-item a::after,
+      .user-dashboard-menu li a:hover::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        bottom: -0.1rem;
+        left: -1px;
+        left: -0.1rem;
+        display: block;
+        width: 1px;
+        width: 0.1rem;
+        height: 1px;
+        height: 0.1rem;
+        background-color: #e2dedb; }
 
-.with-icon::before, body, .menu-site a, .button-alt,
-.button-secondary,
-.widget.widget_campaign_creator_widget .creator-profile-link a,
-.button.button-alt,
-.button.button-secondary, .modal .block-title, .modal-close:before, .meta a, .share-widget .modal,
-.share-widget .modal .block-title, .donation-amounts .donation-amount, #custom-donation-amount-field.charitable-custom-donation-field-alone input, .charitable-form-field-editor .mce-btn button, .charitable-repeatable-form-field-table .remove:before, .charitable-repeatable-form-field-table .add-row.button, .charitable-user-post .user-post-actions a, div.printfriendly a,
-div.printfriendly a:link,
-div.printfriendly a:visited, body.events-single .tribe-events-tickets .tickets_price, body.events-single .tribe-events-tickets .tickets_name, #tribe-events .tribe-events-button {
-  color: #7d6e63; }
+/*-------------------------------------------------------------- 
+18.1.7 Forms
+--------------------------------------------------------------*/
+.charitable-form input[type=text],
+.charitable-form input[type=password],
+.charitable-form input[type=email],
+.charitable-form input[type=url],
+.charitable-form input[type=number],
+.charitable-form input[type=date],
+.charitable-form textarea,
+.charitable-form select {
+  max-width: 100%;
+  width: 100%; }
 
-.button, .widget.widget_campaign_creator_widget .creator-profile-link a, .button-alt:hover,
-.button-secondary:hover,
-.button.button-alt:hover,
-.button.button-secondary:hover, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-form .charitable-submit-field .button:hover, body.user-dashboard .charitable-form .charitable-submit-field .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .widget.widget_campaign_creator_widget .creator-profile-link body.user-dashboard .charitable-form .charitable-submit-field a:hover, #tribe-events .tribe-events-button:hover {
-  background-color: #7d6e63; }
+.charitable-form-fields .charitable-form-field {
+  clear: left; }
+  @media (min-width: 37.5em) {
+    .charitable-form-fields .charitable-form-field {
+      float: left;
+      width: 50%; }
+      .charitable-form-fields .charitable-form-field.odd {
+        padding-right: 36px;
+        padding-right: 3.6rem; }
+      .charitable-form-fields .charitable-form-field.even {
+        clear: none; }
+      .charitable-form-fields .charitable-form-field.fullwidth, .charitable-form-fields .charitable-form-field.page-template-page-template-home-slider, .charitable-form-fields .charitable-form-field.page-template-page-template-fullwidth, .charitable-form-fields body.charitable-form-field.events-single {
+        width: 100%;
+        padding: 0; } }
 
-.button-alt,
-.button-secondary,
-.widget.widget_campaign_creator_widget .creator-profile-link a,
-.button.button-alt,
-.button.button-secondary, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, .charitable-repeatable-form-field-table .add-row.button, #tribe-events .tribe-events-button {
-  border-color: #7d6e63; }
+.charitable-form-content {
+  clear: both; }
 
-.modal-close:hover:before, .user-dashboard-menu li a, .charitable-notice {
-  color: #574c45; }
+.charitable-form-field-editor .mce-btn button {
+  box-shadow: none; }
+.charitable-form-field-editor .wp-editor-container {
+  padding: 1px;
+  padding: 0.1rem;
+  background-color: #e2dedb; }
 
-.meta, .comment-meta, body.author .author-activity-feed .activity-summary .time-ago, body.author .author-activity-feed .activity-summary::before, .charitable-donation-form .edd-price-option-price .currency {
-  color: #bdb2ab; }
+#charitable-campaign-submission-form {
+  position: relative;
+  left: -36px;
+  width: -webkit-calc( 100% + 72px );
+  width: -moz-calc( 100% + 72px );
+  width: calc( 100% + 72px );
+  padding: 24px 12px 0px 12px;
+  padding: 2.4rem 1.2rem 0rem 1.2rem; }
+  @media (min-width: 50em) {
+    #charitable-campaign-submission-form {
+      left: -36px;
+      width: -webkit-calc( 100% + 72px );
+      width: -moz-calc( 100% + 72px );
+      width: calc( 100% + 72px ); } }
+  @media (min-width: 48em) {
+    #charitable-campaign-submission-form {
+      padding-right: 36px;
+      padding-right: 3.6rem;
+      padding-left: 36px;
+      padding-left: 3.6rem; } }
 
-.user-dashboard-menu li a {
-  background-color: #bdb2ab; }
+.charitable-campaign-form-table th,
+.charitable-campaign-form-table td {
+  padding: 12px;
+  padding: 1.2rem; }
+.charitable-campaign-form-table tfoot td {
+  background-color: #f1efee;
+  border-top-width: 1px;
+  border-top-width: 0.1rem;
+  border-top-style: solid;
+  border-top-color: #e2dedb; }
+
+.charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) {
+  background-color: #f9f8f7; }
+  .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) select, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) textarea {
+    background-color: #ffffff;
+    border-width: 1px;
+    border-width: 0.1rem;
+    border-style: solid;
+    border-color: #e2dedb; }
+  .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input[type=file] {
+    background-color: transparent;
+    border: none; }
+.charitable-repeatable-form-field-table .repeatable-field-wrapper {
+  position: relative; }
+  @media (min-width: 48em) {
+    .charitable-repeatable-form-field-table .repeatable-field-wrapper {
+      padding: 24px;
+      padding: 2.4rem; } }
+.charitable-repeatable-form-field-table th {
+  width: 100px;
+  width: 10rem;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 37px;
+  line-height: 3.7rem;
+  background-color: transparent; }
+.charitable-repeatable-form-field-table td {
+  border-top-width: 1px;
+  border-top-width: 0.1rem;
+  border-top-style: solid;
+  border-top-color: #e2dedb; }
+.charitable-repeatable-form-field-table tbody td {
+  background-color: transparent; }
+.charitable-repeatable-form-field-table .remove {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1em;
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: transparent; }
+  .charitable-repeatable-form-field-table .remove:before {
+    font-family: "Benny-Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f057";
+    float: right; }
+  .charitable-repeatable-form-field-table .remove:hover {
+    color: transparent; }
+.charitable-repeatable-form-field-table .add-row {
+  font-style: italic; }
+  .charitable-repeatable-form-field-table .add-row.button, .charitable-repeatable-form-field-table .widget.widget_campaign_creator_widget .creator-profile-link a.add-row, .widget.widget_campaign_creator_widget .creator-profile-link .charitable-repeatable-form-field-table a.add-row {
+    font-style: normal;
+    border-width: 2px;
+    border-width: 0.2rem;
+    border-style: solid;
+    box-shadow: none;
+    background: #ffffff; }
+.charitable-repeatable-form-field-table .charitable-fieldset {
+  float: left;
+  width: 100%;
+  clear: both;
+  margin-top: 12px;
+  margin-top: 1.2rem; }
+
+@media (min-width: 37.5em) {
+  #charitable-campaign-suggested-donations .charitable-form-field.odd {
+    width: 25%; }
+  #charitable-campaign-suggested-donations .charitable-form-field.even {
+    width: 75%; } }
+.charitable-form-field-multi-checkbox ul {
+  padding: 10px;
+  padding: 1rem;
+  margin: 0;
+  list-style-type: none;
+  background-color: #f1efee;
+  content: "";
+  display: table; }
+.charitable-form-field-multi-checkbox li {
+  float: left;
+  width: 50%;
+  line-height: 22px;
+  line-height: 2.2rem; }
+
+.charitable-fieldset {
+  position: relative;
+  padding: 0px 0px 24px;
+  padding: 0rem 0rem 2.4rem;
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem; }
+  .charitable-fieldset:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 9px;
+    top: 0.9rem;
+    height: 2px;
+    height: 0.2rem;
+    width: 100%;
+    background-color: #e2dedb; }
+  .charitable-fieldset .legend {
+    position: relative;
+    float: left;
+    clear: both;
+    left: 24px;
+    left: 2.4rem;
+    padding: 0px 12px 24px;
+    padding: 0rem 1.2rem 2.4rem;
+    font-size: 18px;
+    font-size: 1.8rem;
+    background-color: #ffffff; }
+  .charitable-fieldset .charitable-fieldset {
+    margin-bottom: 0;
+    padding: 0;
+    border-top-width: 1px;
+    border-top-width: 0.1rem;
+    border-top-style: solid;
+    border-top-color: #e2dedb; }
+    .charitable-fieldset .charitable-fieldset::before {
+      display: none; }
+    .charitable-fieldset .charitable-fieldset .legend {
+      background: transparent;
+      left: 0;
+      padding: 12px 0px;
+      padding: 1.2rem 0rem;
+      font-size: 14px;
+      font-size: 1.4rem; }
+
+.charitable-login-form {
+  padding: 0px 0px 12px;
+  padding: 0rem 0rem 1.2rem;
+  border: none; }
+  .charitable-login-form #loginform {
+    margin-bottom: 12px;
+    margin-bottom: 1.2rem; }
+  .charitable-login-form .login-username,
+  .charitable-login-form .login-password {
+    float: left;
+    width: 50%; }
+  .charitable-login-form .login-username {
+    padding-right: 36px;
+    padding-right: 3.6rem; }
+  .charitable-login-form .login-submit {
+    padding-bottom: 3px;
+    padding-bottom: 0.3rem; }
+  .charitable-login-form .button-primary {
+    width: auto; }
+
+.charitable-submit-field .button, .charitable-submit-field .widget.widget_campaign_creator_widget .creator-profile-link a, .widget.widget_campaign_creator_widget .creator-profile-link .charitable-submit-field a {
+  width: auto; }
+
+.charitable-notice {
+  padding: 12px;
+  padding: 1.2rem;
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
+  border-width: 1px;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: #e2dedb;
+  background-color: #f1efee; }
+  .charitable-notice ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    .charitable-notice ul ul {
+      list-style: disc;
+      padding-left: 16px;
+      padding-left: 1.6rem; }
+      .charitable-notice ul ul li {
+        margin-bottom: 0; }
+  .charitable-notice li:last-child {
+    margin-bottom: 0; }
+
+/*--------------------------------------------------------------  
+18.1.8 User Campaigns
+--------------------------------------------------------------*/
+.entry-header .entry-title {
+  margin-top: 0; }
+
+.charitable-user-posts {
+  list-style: none;
+  padding: 24px 0px;
+  padding: 2.4rem 0rem;
+  margin: 0; }
+
+.charitable-user-post {
+  width: 100%;
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+  border-width: 1px;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: #e2dedb;
+  border-radius: 0.4rem;
+  /* Float image and campaign summary side by side, with actions below. */
+  /* Float actions to the right. */ }
+  .charitable-user-post .user-post-summary {
+    padding: 0px 12px;
+    padding: 0rem 1.2rem;
+    margin: 0;
+    background-color: transparent; }
+  .charitable-user-post .user-post-stats {
+    width: auto;
+    max-width: 100%;
+    float: none;
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+    .charitable-user-post .user-post-stats .summary-item .amount,
+    .charitable-user-post .user-post-stats .summary-item .donors-count {
+      font-size: 16px;
+      font-size: 1.6rem; }
+    .charitable-user-post .user-post-stats .summary-item span {
+      line-height: 24px;
+      line-height: 2.4rem; }
+    .charitable-user-post .user-post-stats li {
+      float: none;
+      width: 100%;
+      padding: 12px 0px;
+      padding: 1.2rem 0rem;
+      margin: 0;
+      border-bottom-width: 1px;
+      border-bottom-width: 0.1rem;
+      border-bottom-style: solid;
+      border-bottom-color: #e2dedb;
+      font-size: 12px;
+      font-size: 1.2rem;
+      text-align: left; }
+      .charitable-user-post .user-post-stats li:last-child {
+        padding-bottom: 12px;
+        padding-bottom: 1.2rem; }
+      @media (min-width: 37.5em) {
+        .charitable-user-post .user-post-stats li {
+          float: left;
+          width: 50%; }
+          .charitable-user-post .user-post-stats li.campaign-donors {
+            border-bottom: 0; } }
+    .charitable-user-post .user-post-stats span.goal-amount {
+      display: inline;
+      font-size: 1em;
+      line-height: 1em;
+      font-weight: bolder; }
+  .charitable-user-post .user-post-actions {
+    padding: 12px;
+    padding: 1.2rem;
+    font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+    letter-spacing: 1px;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    border-top-width: 1px;
+    border-top-width: 0.1rem;
+    border-top-style: solid;
+    border-top-color: #e2dedb;
+    background-color: #f1efee; }
+    .charitable-user-post .user-post-actions .actions {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      text-align: center; }
+      .charitable-user-post .user-post-actions .actions li:last-child {
+        margin-bottom: 0; }
+    .charitable-user-post .user-post-actions a:hover {
+      text-decoration: none; }
+    .charitable-user-post .user-post-actions a:before {
+      position: relative;
+      top: 1px;
+      top: 0.1rem;
+      padding-right: 6px;
+      padding-right: 0.6rem;
+      font-size: 16px;
+      font-size: 1.6rem;
+      font-family: "Benny-Icons";
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .charitable-user-post .user-post-actions .edit-campaign a:before {
+      content: "\f040"; }
+  @media (min-width: 48em) {
+    .charitable-user-post {
+      content: "";
+      display: table; }
+      .charitable-user-post .wp-post-image {
+        float: left;
+        max-width: 320px;
+        max-width: 32rem;
+        width: 50%; }
+      .charitable-user-post .user-post-summary {
+        float: left;
+        min-width: 50%;
+        width: calc( 100% - 320px ); }
+      .charitable-user-post .user-post-title {
+        margin-top: 12px;
+        margin-top: 1.2rem; }
+      .charitable-user-post .user-post-actions {
+        float: left;
+        width: 100%; } }
+  @media (min-width: 56.25em) {
+    .charitable-user-post {
+      position: relative;
+      z-index: 1;
+      overflow: hidden; }
+      .charitable-user-post .wp-post-image {
+        width: 35%; }
+      .charitable-user-post .user-post-summary {
+        min-width: 0;
+        width: calc( 65% - 150px ); }
+      .charitable-user-post .user-post-actions {
+        position: relative;
+        z-index: 1;
+        float: right;
+        width: 150px;
+        width: 15rem;
+        border-top: 0;
+        background-color: transparent; }
+        .charitable-user-post .user-post-actions li {
+          padding: 12px 0px;
+          padding: 1.2rem 0rem;
+          border-bottom-width: 1px;
+          border-bottom-width: 0.1rem;
+          border-bottom-style: solid;
+          border-bottom-color: #e2dedb; }
+          .charitable-user-post .user-post-actions li:first-child {
+            padding-top: 0; }
+      .charitable-user-post:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 150px;
+        width: 15rem;
+        height: 100%;
+        background-color: #f1efee;
+        border-width: 1px;
+        border-width: 0.1rem;
+        border-style: solid;
+        border-color: #e2dedb;
+        border-radius: 0 0.4rem 0.4rem 0; } }
+  @media (min-width: 66.125em) {
+    .charitable-user-post .user-post-summary {
+      width: calc( 100% - 470px ); } }
+
+/*-------------------------------------------------------------- 
+18.2 Easy Digital Downloads
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+18.2.1 Buttons
+--------------------------------------------------------------*/
+body .edd-submit.button.gray, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.gray, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.gray, body .edd-submit.button.white, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.white, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.white, body .edd-submit.button.blue, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.blue, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.blue, body .edd-submit.button.red, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.red, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.red, body .edd-submit.button.orange, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.orange, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.orange, body .edd-submit.button.green, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.green, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.green, body .edd-submit.button.yellow, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.yellow, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.yellow, body .edd-submit.button.dark-gray, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.dark-gray, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.dark-gray {
+  display: inline-block;
+  border-width: 2px;
+  border-width: 0.2rem;
+  background: transparent;
+  box-shadow: none; }
+  body .edd-submit.button.gray:focus, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.gray:focus, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.gray:focus, body .edd-submit.button.gray:active, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.gray:active, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.gray:active, body .edd-submit.button.gray:hover, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.gray:hover, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.gray:hover, body .edd-submit.button.white:focus, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.white:focus, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.white:focus, body .edd-submit.button.white:active, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.white:active, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.white:active, body .edd-submit.button.white:hover, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.white:hover, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.white:hover, body .edd-submit.button.blue:focus, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.blue:focus, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.blue:focus, body .edd-submit.button.blue:active, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.blue:active, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.blue:active, body .edd-submit.button.blue:hover, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.blue:hover, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.blue:hover, body .edd-submit.button.red:focus, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.red:focus, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.red:focus, body .edd-submit.button.red:active, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.red:active, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.red:active, body .edd-submit.button.red:hover, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.red:hover, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.red:hover, body .edd-submit.button.orange:focus, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.orange:focus, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.orange:focus, body .edd-submit.button.orange:active, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.orange:active, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.orange:active, body .edd-submit.button.orange:hover, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.orange:hover, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.orange:hover, body .edd-submit.button.green:focus, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.green:focus, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.green:focus, body .edd-submit.button.green:active, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.green:active, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.green:active, body .edd-submit.button.green:hover, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.green:hover, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.green:hover, body .edd-submit.button.yellow:focus, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.yellow:focus, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.yellow:focus, body .edd-submit.button.yellow:active, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.yellow:active, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.yellow:active, body .edd-submit.button.yellow:hover, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.yellow:hover, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.yellow:hover, body .edd-submit.button.dark-gray:focus, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.dark-gray:focus, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.dark-gray:active, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.dark-gray:active, body .edd-submit.button.dark-gray:hover, body .widget.widget_campaign_creator_widget .creator-profile-link a.edd-submit.dark-gray:hover, .widget.widget_campaign_creator_widget .creator-profile-link body a.edd-submit.dark-gray:hover {
+    color: #ffffff; }
+
+div.printfriendly {
+  margin-right: 0; }
+  div.printfriendly a,
+  div.printfriendly a:link,
+  div.printfriendly a:visited {
+    font-size: 12px;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    letter-spacing: 0.2rem;
+    font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+    text-transform: uppercase; }
+  div.printfriendly a span {
+    vertical-align: top; }
+
+/*--------------------------------------------------------------
+18.2.2 Checkout
+--------------------------------------------------------------*/
+#edd_checkout_wrap legend,
+#edd_checkout_wrap th {
+  font-weight: 400; }
+#edd_checkout_wrap .edd-payment-icons,
+#edd_checkout_wrap #edd_purchase_form_wrap > img {
+  margin: 0px 0px 24px 24px;
+  margin: 0rem 0rem 2.4rem 2.4rem; }
+#edd_checkout_wrap legend {
+  padding-bottom: 6px;
+  padding-bottom: 0.6rem; }
+#edd_checkout_wrap p {
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem; }
+#edd_checkout_wrap label {
+  font-size: 100%;
+  padding-top: 0;
+  margin-bottom: 6px;
+  margin-bottom: 0.6rem; }
+#edd_checkout_wrap span.edd-description {
+  font-size: 11px;
+  font-size: 1.1rem;
+  font-style: italic; }
+#edd_checkout_wrap input[type="text"],
+#edd_checkout_wrap input[type="email"],
+#edd_checkout_wrap input[type="password"],
+#edd_checkout_wrap textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 11px 10px;
+  padding: 1.1rem 1rem; }
+#edd_checkout_wrap #edd_purchase_submit {
+  padding: 36px 0px;
+  padding: 3.6rem 0rem;
+  margin: 0;
+  font-size: 16px;
+  font-size: 1.6rem;
+  background-color: #f1efee;
+  text-align: center; }
+#edd_checkout_wrap #edd_final_total_wrap {
+  font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
+  background: transparent;
+  border: none; }
+  #edd_checkout_wrap #edd_final_total_wrap strong {
+    font-weight: 400; }
+#edd_checkout_wrap fieldset#edd_cc_fields {
+  background-color: #f1efee; }
+  #edd_checkout_wrap fieldset#edd_cc_fields input,
+  #edd_checkout_wrap fieldset#edd_cc_fields select,
+  #edd_checkout_wrap fieldset#edd_cc_fields textarea {
+    background-color: #ffffff; }
+#edd_checkout_wrap #edd-purchase-button {
+  font-size: 25px;
+  font-size: 2.5rem;
+  height: 50px;
+  height: 5rem;
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 3px #d95b43;
+  color: #ffffff; }
+#edd_checkout_wrap .edd_empty_cart {
+  display: block;
+  padding: 0px 36px 36px;
+  padding: 0rem 3.6rem 3.6rem; }
+
+.stripped #edd_checkout_wrap {
+  position: relative;
+  left: -24px;
+  width: -webkit-calc( 100% + 48px );
+  width: -moz-calc( 100% + 48px );
+  width: calc( 100% + 48px ); }
+  @media (min-width: 50em) {
+    .stripped #edd_checkout_wrap {
+      left: -24px;
+      width: -webkit-calc( 100% + 48px );
+      width: -moz-calc( 100% + 48px );
+      width: calc( 100% + 48px ); } }
+  .stripped #edd_checkout_wrap tr td:first-child,
+  .stripped #edd_checkout_wrap tr th:first-child {
+    border-left: 0; }
+  .stripped #edd_checkout_wrap tr td:last-child,
+  .stripped #edd_checkout_wrap tr th:last-child {
+    border-right: 0; }
+  .stripped #edd_checkout_wrap fieldset,
+  .stripped #edd_checkout_wrap #edd_payment_mode_select {
+    padding: 24px;
+    padding: 2.4rem;
+    margin: 0;
+    border-width: 1px 0px 0px 0px;
+    border-width: 0.1rem 0rem 0rem 0rem; }
+
+.edd-checkout-template.stripped .site-main {
+  padding: 0;
+  border: none;
+  background: transparent; }
+  .edd-checkout-template.stripped .site-main .entry-block {
+    padding: 0; }
+.edd-checkout-template.stripped .entry-block {
+  padding: 36px;
+  padding: 3.6rem;
+  border-width: 1px;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: #e2dedb;
+  border-top: none;
+  border-radius: 0 0 0.4rem 0.4rem;
+  background: #ffffff;
+  box-shadow: 0 0 1px #ffffff; }
+  @media (min-width: 50em) {
+    .edd-checkout-template.stripped .entry-block {
+      float: left;
+      width: 70%;
+      padding-right: 36px;
+      padding-right: 3.6rem; } }
+  .edd-checkout-template.stripped .entry-block .entry {
+    padding: 0px 24px;
+    padding: 0rem 2.4rem; }
+
+/*--------------------------------------------------------------
+18.3 Ninja Forms
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+18.4 Tribe Events
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+18.4.1 Single Event
+--------------------------------------------------------------*/
+body.events-single .tribe-events-content {
+  padding: 24px 0px 12px;
+  padding: 2.4rem 0rem 1.2rem; }
+body.events-single .tribe-events-cal-links {
+  float: right;
+  padding: 0px 0px 24px 24px;
+  padding: 0rem 0rem 2.4rem 2.4rem;
+  margin: 0; }
+body.events-single .tribe-events-event-meta {
+  padding: 24px 0px;
+  padding: 2.4rem 0rem;
+  margin: 0;
+  font-size: 12px;
+  font-size: 1.2rem;
+  border-width: 2px 0px 0px;
+  border-width: 0.2rem 0rem 0rem;
+  border-color: #e2dedb;
+  background: transparent; }
+  body.events-single .tribe-events-event-meta .tribe-events-meta-group {
+    padding: 0px 24px 0px 0px;
+    padding: 0rem 2.4rem 0rem 0rem;
+    margin-bottom: 0; }
+  body.events-single .tribe-events-event-meta .tribe-events-single-section-title {
+    margin-top: 0; }
+  body.events-single .tribe-events-event-meta .tribe-events-venue-map {
+    width: 66.6%;
+    margin: 0;
+    padding: 0; }
+body.events-single .cart {
+  margin-bottom: 36px;
+  margin-bottom: 3.6rem; }
+body.events-single .tribe-events-tickets {
+  border-top-width: 1px;
+  border-top-width: 0.1rem;
+  border-top-style: solid;
+  border-top-color: #e2dedb; }
+  body.events-single .tribe-events-tickets td {
+    padding: 12px 10px;
+    padding: 1.2rem 1rem;
+    border-top: 0; }
+  body.events-single .tribe-events-tickets .tickets_price {
+    font-weight: normal;
+    border-right: none;
+    width: 100px;
+    width: 10rem; }
+  body.events-single .tribe-events-tickets .tickets_name {
+    font-size: 12px;
+    font-size: 1.2rem;
+    border-right: 0; }
+  body.events-single .tribe-events-tickets .eddtickets-add {
+    border-bottom-width: 1px;
+    border-bottom-width: 0.1rem;
+    border-bottom-style: solid;
+    border-bottom-color: #e2dedb; }
+    body.events-single .tribe-events-tickets .eddtickets-add .edd-submit {
+      margin: 0; }
+body.events-single .tribe-events-tickets-title,
+body.events-single .tribe-events-single-section-title {
+  margin: 24px 0px 12px;
+  margin: 2.4rem 0rem 1.2rem;
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 30px;
+  line-height: 3rem; }
+
+body.tribe-mobile #main {
+  padding-top: 36px;
+  padding-top: 3.6rem; }
+
+#tribe-events-pg-template {
+  padding: 0;
+  max-width: 100%; }
+
+#tribe-events .tribe-events-button {
+  padding: 0px 10px;
+  padding: 0rem 1rem;
+  line-height: 27px;
+  line-height: 2.7rem;
+  font-size: 12px;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
+  background: transparent;
+  border-width: 2px;
+  border-width: 0.2rem;
+  border-style: solid; }
+  #tribe-events .tribe-events-button:hover {
+    color: #ffffff; }
+
+/*--------------------------------------------------------------
+18.4.2 Event Widget
+--------------------------------------------------------------*/
+.widget.widget_pp_campaign_events {
+  background: transparent;
+  border: none;
+  padding: 0; }
+  .widget.widget_pp_campaign_events .widget-title {
+    margin-top: 0; }
+  .widget.widget_pp_campaign_events .widget-block {
+    padding: 24px;
+    padding: 2.4rem;
+    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
+    border-width: 1px;
+    border-width: 0.1rem;
+    border-style: solid;
+    border-color: #e2dedb;
+    border-radius: 0.4rem;
+    background: #ffffff; }
+  .widget.widget_pp_campaign_events .wp-post-image {
+    position: relative;
+    left: -24px;
+    width: -webkit-calc( 100% + 48px );
+    width: -moz-calc( 100% + 48px );
+    width: calc( 100% + 48px );
+    top: -24px;
+    top: -2.4rem;
+    margin-bottom: -12px;
+    margin-bottom: -1.2rem;
+    max-width: -webkit-calc( 100% + 48px );
+    max-width: -moz-calc( 100% + 48px );
+    max-width: calc( 100% + 48px );
+    border-radius: 0.4rem 0.4rem 0 0; }
+  .widget.widget_pp_campaign_events .download-title {
+    margin-top: 0; }
+  .widget.widget_pp_campaign_events .download-price {
+    float: left;
+    padding: 0px 0px 12px;
+    padding: 0rem 0rem 1.2rem;
+    font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif; }
+  .widget.widget_pp_campaign_events .edd_download_purchase_form .edd_price_options li {
+    width: 100%;
+    padding-bottom: 6px;
+    padding-bottom: 0.6rem;
+    border-bottom-width: 1px;
+    border-bottom-width: 0.1rem;
+    border-bottom-style: solid;
+    border-bottom-color: #e2dedb; }
+  .widget.widget_pp_campaign_events .edd_download_purchase_form .edd_price_options .edd_price_option_sep {
+    display: none; }
+  .widget.widget_pp_campaign_events .edd_download_purchase_form .edd_price_option_price {
+    float: right; }
+  .widget.widget_pp_campaign_events .edd_download_purchase_form .edd_download_quantity_wrapper {
+    float: left;
+    clear: left;
+    margin-bottom: 0; }
+    .widget.widget_pp_campaign_events .edd_download_purchase_form .edd_download_quantity_wrapper label {
+      display: inline;
+      padding-right: 4px;
+      padding-right: 0.4rem; }
+  .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
+    background-color: #f1efee; }
+  .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-item-quantity {
+    width: 65px;
+    width: 6.5rem;
+    padding-left: 6px;
+    padding-left: 0.6rem;
+    padding-right: 6px;
+    padding-right: 0.6rem; }
+  .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-add-to-cart.button, .widget.widget_pp_campaign_events .edd_download_purchase_form .widget.widget_campaign_creator_widget .creator-profile-link a.edd-add-to-cart, .widget.widget_campaign_creator_widget .creator-profile-link .widget.widget_pp_campaign_events .edd_download_purchase_form a.edd-add-to-cart {
+    float: right;
+    font-size: 12px;
+    font-size: 1.2rem;
+    padding-left: 6px;
+    padding-left: 0.6rem;
+    padding-right: 6px;
+    padding-right: 0.6rem; }
+  .widget.widget_pp_campaign_events .edd_download_purchase_form .edd_go_to_checkout.button, .widget.widget_pp_campaign_events .edd_download_purchase_form .widget.widget_campaign_creator_widget .creator-profile-link a.edd_go_to_checkout, .widget.widget_campaign_creator_widget .creator-profile-link .widget.widget_pp_campaign_events .edd_download_purchase_form a.edd_go_to_checkout {
+    float: left; }
+  .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-cart-ajax-alert {
+    display: none; }
+
+.event-schedule {
+  font-weight: bold; }
+
+.event-tickets {
+  margin-bottom: 0; }
+  .event-tickets li {
+    position: relative;
+    width: 100%;
+    border-bottom-width: 1px;
+    border-bottom-width: 0.1rem;
+    border-bottom-style: solid;
+    border-bottom-color: #e2dedb;
+    margin: 0px 0px 12px;
+    margin: 0rem 0rem 1.2rem;
+    padding: 0px 0px 12px;
+    padding: 0rem 0rem 1.2rem; }
+    .event-tickets li h6 {
+      margin: 0px 36px 6px 0px;
+      margin: 0rem 3.6rem 0.6rem 0rem;
+      line-height: 27px;
+      line-height: 2.7rem;
+      font-family: Merriweather, Georgia, "Times New Roman", Times, serif;
+      letter-spacing: 0;
+      text-transform: none;
+      font-weight: 700; }
+    .event-tickets li .download-price {
+      position: absolute;
+      right: 0;
+      top: 0;
+      line-height: 27px;
+      line-height: 2.7rem; }
+    .event-tickets li .out-of-stock {
+      line-height: 27px;
+      line-height: 2.7rem; }
+    .event-tickets li:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0; }
+
+/*# sourceMappingURL=_dark.css.map */

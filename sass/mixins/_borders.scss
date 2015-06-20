@@ -1,8 +1,35 @@
-@mixin border( $width : $size__border, $color : "", $style: solid ) {
+@mixin border( $width : $size__border, $color : $color__border-primary, $style: solid ) {
     @include border-width( $width );
     border-style: $style;
-
     @if $color != "" {
         @include border-color( $color );
+    }    
+}
+@mixin border-top( $width : $size__border, $color : $color__border-primary, $style: solid ) {
+    @include border-top-width( $width );
+    border-top-style: $style;
+    @if $color != "" {
+        @include border-top-color( $color );
+    }
+}
+@mixin border-right( $width : $size__border, $color : $color__border-primary, $style: solid ) {
+    @include border-right-width( $width );
+    border-right-style: $style;
+    @if $color != "" {
+        @include border-right-color( $color );
+    }
+}
+@mixin border-bottom( $width : $size__border, $color : $color__border-primary, $style: solid ) {
+    @include border-bottom-width( $width );
+    border-bottom-style: $style;
+    @if $color != "" {
+        @include border-bottom-color( $color );
+    }
+}
+@mixin border-left( $width : $size__border, $color : $color__border-primary, $style: solid ) {
+    @include border-left-width( $width );
+    border-left-style: $style;
+    @if $color != "" {
+        @include border-left-color( $color );
     }
 }

@@ -23,14 +23,14 @@ body.user-dashboard {
 			.button {
 				@include button-inverted();
 				&:hover {
-					@extend %background-color--#{$color__background-button} !optional;
+					@include background-color( $color__background-button );
 					color: $color__text-overlay;
 				}
 				&.button-primary {
-					@extend %color--#{$color__accent} !optional;
-					@extend %border-color--#{$color__accent} !optional;				
+					@include color( $color__accent );
+					@include border-color( $color__accent );				
 					&:hover {
-						@extend %background-color--#{$color__accent} !optional;
+						@include background-color( $color__accent );
 						color: $color__text-overlay;
 					}	
 				}
@@ -60,15 +60,11 @@ body.user-dashboard {
 			z-index: 5;			
 			display: inline-block;
 			@include padding( 6, 24 );
-			border: {
-				@include width( 1 );
-				style: solid;
-				color: $color__background-wrapper;
-			}
+			@include border( 1, $color__background-wrapper );
 			border-bottom-color: transparent;
 			border-radius: 0.4rem 0.4rem 0 0;
-			@extend %background-color--#{$color__text-meta} !optional;
-			@extend %color--#{$color__text-dark} !optional;
+			@include background-color( $color__text-meta );
+			@include color( $color__text-dark );
 
 			&:hover {
 				text-decoration: none;
@@ -80,7 +76,7 @@ body.user-dashboard {
 			border-color: $color__border-primary;
 			border-bottom-color: $color__background-content;			
 			background-color: $color__background-content;
-			@extend %color--#{$color__accent} !optional;
+			@include color( $color__accent );
 
 			&::after {
 				content: "";				

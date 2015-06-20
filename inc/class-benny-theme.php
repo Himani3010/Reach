@@ -392,7 +392,7 @@ class Benny_Theme {
             'description'   => __( 'Displayed below the campaign\'s content, but above the comment section.', 'benny' ),
             'before_widget' => '<aside id="%1$s" class="widget block content-block cf %2$s">',
             'after_widget'  => '</aside>',
-            'before_title'  => '<div class="title-wrapper"><h3 class="block-title widget-title">',
+            'before_title'  => '<div class="title-wrapper"><h3 class="widget-title">',
             'after_title'   => '</h3></div>'
         ));        
 

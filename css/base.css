@@ -579,9 +579,6 @@ td ol:last-child,
 td dl:last-child {
   margin-bottom: 0; }
 
-.even > td {
-  background-color: #f9f8f7; }
-
 /*--------------------------------------------------------------
 4.0 Forms
 --------------------------------------------------------------*/
@@ -614,6 +611,7 @@ input[type="submit"] {
   border-width: 1px;
   border-width: 0.1rem;
   border-style: solid;
+  border-color: rgba(255, 255, 255, 0.3);
   border-radius: 0.4rem;
   font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
   color: #ffffff;
@@ -622,15 +620,15 @@ input[type="submit"] {
   letter-spacing: 0.2rem;
   cursor: pointer;
   /* Default settings */
-  -webkit-transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  -moz-transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  -o-transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -webkit-transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  -moz-transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  -o-transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
   /* Default settings */
-  -webkit-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  -moz-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  -o-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -webkit-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  -moz-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  -o-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
   height: 31px;
   height: 3.1rem; }
   button:hover,
@@ -708,10 +706,10 @@ textarea {
   font-size: 1.1rem;
   box-shadow: none;
   /* Default settings */
-  -webkit-transition: background-color 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  -moz-transition: background-color 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  -o-transition: background-color 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  transition: background-color 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -webkit-transition: background-color 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  -moz-transition: background-color 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  -o-transition: background-color 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  transition: background-color 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
   -webkit-appearance: none; }
 
 input:focus,
@@ -790,16 +788,15 @@ a {
   padding: 0;
   overflow: hidden;
   /* Default settings */
-  -webkit-transition: max-height 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  -moz-transition: max-height 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  -o-transition: max-height 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  transition: max-height 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0; }
+  -webkit-transition: max-height 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  -moz-transition: max-height 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  -o-transition: max-height 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  transition: max-height 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms; }
   .menu-site li {
     margin: 0;
     border-bottom-width: 1px;
     border-bottom-width: 0.1rem;
     border-bottom-style: solid;
-    border-bottom-color: #e2dedb;
     list-style: none;
     line-height: 1em;
     letter-spacing: 1px;
@@ -1026,7 +1023,6 @@ a {
   .screen-reader-text:hover,
   .screen-reader-text:active,
   .screen-reader-text:focus {
-    background-color: #f9f8f7;
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
@@ -1156,6 +1152,7 @@ a {
   border-width: 1px;
   border-width: 0.1rem;
   border-style: solid;
+  border-color: rgba(255, 255, 255, 0.3);
   border-radius: 0.4rem;
   font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
   color: #ffffff;
@@ -1164,15 +1161,15 @@ a {
   letter-spacing: 0.2rem;
   cursor: pointer;
   /* Default settings */
-  -webkit-transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  -moz-transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  -o-transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -webkit-transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  -moz-transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  -o-transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
   /* Default settings */
-  -webkit-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  -moz-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  -o-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0; }
+  -webkit-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  -moz-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  -o-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms; }
   .button:hover, .widget.widget_campaign_creator_widget .creator-profile-link a:hover {
     background-color: transparent;
     border-color: transparent;
@@ -1210,15 +1207,15 @@ a {
   letter-spacing: 0.2rem;
   cursor: pointer;
   /* Default settings */
-  -webkit-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  -moz-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  -o-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -webkit-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  -moz-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  -o-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
   /* Default settings */
-  -webkit-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  -moz-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  -o-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0; }
+  -webkit-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  -moz-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  -o-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms; }
   .button-alt:hover,
   .button-secondary:hover,
   .widget.widget_campaign_creator_widget .creator-profile-link a:hover,
@@ -1368,6 +1365,7 @@ a {
     border-right: 0.9rem solid transparent !important;
     border-bottom: 0.9rem solid transparent !important;
     border-left: 0.9rem solid; } }
+
 /*-------------------------------------------------------------- 
 13.0 Modals
 --------------------------------------------------------------*/
@@ -1469,8 +1467,7 @@ a {
   z-index: 50;
   padding: 24px 36px 0px 36px;
   padding: 2.4rem 3.6rem 0rem 3.6rem;
-  border-radius: 0.4rem 0.4rem 0 0;
-  background-color: #f9f8f7; }
+  border-radius: 0.4rem 0.4rem 0 0; }
 
 .site-identity {
   position: relative;
@@ -1587,9 +1584,7 @@ a {
   border-width: 1px;
   border-width: 0.1rem;
   border-style: solid;
-  border-color: #e2dedb;
   border-radius: 0.4rem;
-  background-color: #f1efee;
   overflow: hidden;
   text-overflow: ellipsis;
   /* Non standard for webkit */
@@ -1628,7 +1623,6 @@ a {
   border-bottom-width: 2px;
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
-  border-bottom-color: #dbd5d1;
   letter-spacing: 1px;
   letter-spacing: 0.1rem; }
 
@@ -1733,7 +1727,6 @@ a {
 #main {
   padding: 36px 24px;
   padding: 3.6rem 2.4rem;
-  background-color: #f9f8f7;
   border-radius: 0 0 0.4rem 0.4rem; }
   @media (min-width: 50em) {
     #main {
@@ -2095,8 +2088,7 @@ a {
   .comments-section input[type=email],
   .comments-section input[type=text],
   .comments-section textarea {
-    max-width: 100%;
-    background-color: #f1efee; }
+    max-width: 100%; }
   .comments-section .comment-text-input {
     float: left;
     width: 49%;
@@ -2384,10 +2376,10 @@ embed {
     width: 100%;
     max-width: 100%;
     /* Default settings */
-    -webkit-transition: opacity 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-    -moz-transition: opacity 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-    -o-transition: opacity 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-    transition: opacity 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0; }
+    -webkit-transition: opacity 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+    -moz-transition: opacity 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+    -o-transition: opacity 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+    transition: opacity 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms; }
     .gallery-item img:hover {
       opacity: 0.5; }
   .gallery-item a {
@@ -2434,10 +2426,10 @@ embed {
   line-height: 1.4rem;
   opacity: 0;
   /* Default settings */
-  -webkit-transition: opacity 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  -moz-transition: opacity 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  -o-transition: opacity 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  transition: opacity 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0; }
+  -webkit-transition: opacity 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  -moz-transition: opacity 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  -o-transition: opacity 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  transition: opacity 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms; }
 
 @media (min-width: 50em) {
   .gallery br {
@@ -3180,15 +3172,15 @@ embed {
       letter-spacing: 0.2rem;
       cursor: pointer;
       /* Default settings */
-      -webkit-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-      -moz-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-      -o-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-      transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+      -webkit-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+      -moz-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+      -o-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+      transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
       /* Default settings */
-      -webkit-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-      -moz-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-      -o-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-      transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+      -webkit-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+      -moz-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+      -o-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+      transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
       margin: 0; }
       .widget.widget_charitable_donate_widget .charitable-submit-field .button:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .widget.widget_campaign_creator_widget .creator-profile-link .widget.widget_charitable_donate_widget .charitable-submit-field a:hover {
         text-decoration: none; }
@@ -3602,9 +3594,7 @@ embed {
   border-width: 2px;
   border-width: 0.2rem;
   border-style: solid;
-  border-color: #e2dedb;
-  border-radius: 0.4rem;
-  background: #f1efee; }
+  border-radius: 0.4rem; }
 .charitable-donation-form .charitable-edd-connected-download {
   position: relative;
   padding: 24px 12px 24px 12px;
@@ -3675,15 +3665,15 @@ embed {
   letter-spacing: 0.2rem;
   cursor: pointer;
   /* Default settings */
-  -webkit-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  -moz-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  -o-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -webkit-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  -moz-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  -o-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
   /* Default settings */
-  -webkit-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  -moz-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  -o-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-  transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+  -webkit-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  -moz-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  -o-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
   margin: 0;
   width: auto; }
   .charitable-donation-form .charitable-form-field .button:hover, .charitable-donation-form .charitable-form-field .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .widget.widget_campaign_creator_widget .creator-profile-link .charitable-donation-form .charitable-form-field a:hover {
@@ -3787,15 +3777,15 @@ body.user-dashboard .charitable-form .charitable-submit-field {
     letter-spacing: 0.2rem;
     cursor: pointer;
     /* Default settings */
-    -webkit-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-    -moz-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-    -o-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-    transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
+    -webkit-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+    -moz-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+    -o-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+    transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
     /* Default settings */
-    -webkit-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-    -moz-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-    -o-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0;
-    transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0; }
+    -webkit-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+    -moz-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+    -o-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+    transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms; }
     body.user-dashboard .charitable-form .charitable-submit-field .button:hover, body.user-dashboard .charitable-form .charitable-submit-field .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .widget.widget_campaign_creator_widget .creator-profile-link body.user-dashboard .charitable-form .charitable-submit-field a:hover {
       text-decoration: none; }
     body.user-dashboard .charitable-form .charitable-submit-field .button:hover, body.user-dashboard .charitable-form .charitable-submit-field .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .widget.widget_campaign_creator_widget .creator-profile-link body.user-dashboard .charitable-form .charitable-submit-field a:hover {
@@ -3827,7 +3817,6 @@ body.user-dashboard .charitable-form .charitable-submit-field {
       border-width: 1px;
       border-width: 0.1rem;
       border-style: solid;
-      border-color: #f9f8f7;
       border-bottom-color: transparent;
       border-radius: 0.4rem 0.4rem 0 0; }
       .user-dashboard-menu li a:hover {
@@ -3923,17 +3912,15 @@ body.user-dashboard .charitable-form .charitable-submit-field {
   border-top-style: solid;
   border-top-color: #e2dedb; }
 
-.charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) {
-  background-color: #f9f8f7; }
-  .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) select, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) textarea {
-    background-color: #ffffff;
-    border-width: 1px;
-    border-width: 0.1rem;
-    border-style: solid;
-    border-color: #e2dedb; }
-  .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input[type=file] {
-    background-color: transparent;
-    border: none; }
+.charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) select, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) textarea {
+  background-color: #ffffff;
+  border-width: 1px;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: #e2dedb; }
+.charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input[type=file] {
+  background-color: transparent;
+  border: none; }
 .charitable-repeatable-form-field-table .repeatable-field-wrapper {
   position: relative; }
   @media (min-width: 48em) {
@@ -4128,97 +4115,20 @@ body.user-dashboard .charitable-form .charitable-submit-field {
   border-width: 1px;
   border-width: 0.1rem;
   border-style: solid;
-  border-color: #e2dedb;
   border-radius: 0.4rem;
   /* Float image and campaign summary side by side, with actions below. */
   /* Float actions to the right. */ }
-  .charitable-user-post .user-post-summary {
-    padding: 0px 12px;
-    padding: 0rem 1.2rem;
-    margin: 0;
-    background-color: transparent; }
-  .charitable-user-post .user-post-stats {
-    width: auto;
-    max-width: 100%;
-    float: none;
-    padding: 0;
-    margin: 0;
-    list-style: none; }
-    .charitable-user-post .user-post-stats .summary-item .amount,
-    .charitable-user-post .user-post-stats .summary-item .donors-count {
-      font-size: 16px;
-      font-size: 1.6rem; }
-    .charitable-user-post .user-post-stats .summary-item span {
-      line-height: 24px;
-      line-height: 2.4rem; }
-    .charitable-user-post .user-post-stats li {
-      float: none;
-      width: 100%;
-      padding: 12px 0px;
-      padding: 1.2rem 0rem;
-      margin: 0;
-      border-bottom-width: 1px;
-      border-bottom-width: 0.1rem;
-      border-bottom-style: solid;
-      border-bottom-color: #e2dedb;
-      font-size: 12px;
-      font-size: 1.2rem;
-      text-align: left; }
-      .charitable-user-post .user-post-stats li:last-child {
-        padding-bottom: 12px;
-        padding-bottom: 1.2rem; }
-      @media (min-width: 37.5em) {
-        .charitable-user-post .user-post-stats li {
-          float: left;
-          width: 50%; }
-          .charitable-user-post .user-post-stats li.campaign-donors {
-            border-bottom: 0; } }
-    .charitable-user-post .user-post-stats span.goal-amount {
-      display: inline;
-      font-size: 1em;
-      line-height: 1em;
-      font-weight: bolder; }
-  .charitable-user-post .user-post-actions {
-    padding: 12px;
-    padding: 1.2rem;
-    font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
-    letter-spacing: 1px;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
-    border-top-width: 1px;
-    border-top-width: 0.1rem;
-    border-top-style: solid;
-    border-top-color: #e2dedb;
-    background-color: #f1efee; }
-    .charitable-user-post .user-post-actions .actions {
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
-      text-align: center; }
-      .charitable-user-post .user-post-actions .actions li:last-child {
-        margin-bottom: 0; }
-    .charitable-user-post .user-post-actions a:hover {
-      text-decoration: none; }
-    .charitable-user-post .user-post-actions a:before {
-      position: relative;
-      top: 1px;
-      top: 0.1rem;
-      padding-right: 6px;
-      padding-right: 0.6rem;
-      font-size: 16px;
-      font-size: 1.6rem;
-      font-family: "Benny-Icons";
-      speak: none;
-      font-style: normal;
-      font-weight: normal;
-      font-variant: normal;
-      text-transform: none;
-      line-height: 1;
-      /* Better Font Rendering =========== */
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale; }
-    .charitable-user-post .user-post-actions .edit-campaign a:before {
-      content: "\f040"; }
+  .charitable-user-post:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    width: 15rem;
+    height: 100%;
+    border-width: 1px;
+    border-width: 0.1rem;
+    border-style: solid;
+    border-radius: 0 0.4rem 0.4rem 0; }
   @media (min-width: 48em) {
     .charitable-user-post {
       content: "";
@@ -4227,17 +4137,7 @@ body.user-dashboard .charitable-form .charitable-submit-field {
         float: left;
         max-width: 320px;
         max-width: 32rem;
-        width: 50%; }
-      .charitable-user-post .user-post-summary {
-        float: left;
-        min-width: 50%;
-        width: calc( 100% - 320px ); }
-      .charitable-user-post .user-post-title {
-        margin-top: 12px;
-        margin-top: 1.2rem; }
-      .charitable-user-post .user-post-actions {
-        float: left;
-        width: 100%; } }
+        width: 50%; } }
   @media (min-width: 56.25em) {
     .charitable-user-post {
       position: relative;
@@ -4245,43 +4145,133 @@ body.user-dashboard .charitable-form .charitable-submit-field {
       overflow: hidden; }
       .charitable-user-post .wp-post-image {
         width: 35%; }
-      .charitable-user-post .user-post-summary {
-        min-width: 0;
-        width: calc( 65% - 150px ); }
-      .charitable-user-post .user-post-actions {
-        position: relative;
-        z-index: 1;
-        float: right;
-        width: 150px;
-        width: 15rem;
-        border-top: 0;
-        background-color: transparent; }
-        .charitable-user-post .user-post-actions li {
-          padding: 12px 0px;
-          padding: 1.2rem 0rem;
-          border-bottom-width: 1px;
-          border-bottom-width: 0.1rem;
-          border-bottom-style: solid;
-          border-bottom-color: #e2dedb; }
-          .charitable-user-post .user-post-actions li:first-child {
-            padding-top: 0; }
       .charitable-user-post:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 150px;
-        width: 15rem;
-        height: 100%;
-        background-color: #f1efee;
-        border-width: 1px;
-        border-width: 0.1rem;
-        border-style: solid;
-        border-color: #e2dedb;
-        border-radius: 0 0.4rem 0.4rem 0; } }
+        content: ""; } }
+
+.user-post-summary {
+  padding: 0px 12px;
+  padding: 0rem 1.2rem;
+  margin: 0;
+  background-color: transparent;
+  /* Float image and campaign summary side by side, with actions below. */
+  /* Float actions to the right. */ }
+  @media (min-width: 48em) {
+    .user-post-summary {
+      float: left;
+      min-width: 50%;
+      width: calc( 100% - 320px ); }
+      .user-post-summary .user-post-title {
+        margin-top: 12px;
+        margin-top: 1.2rem; } }
+  @media (min-width: 56.25em) {
+    .user-post-summary {
+      min-width: 0;
+      width: calc( 65% - 150px ); } }
   @media (min-width: 66.125em) {
-    .charitable-user-post .user-post-summary {
+    .user-post-summary {
       width: calc( 100% - 470px ); } }
+
+.user-post-stats.campaign-stats {
+  width: auto;
+  max-width: 100%;
+  float: none;
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+  .user-post-stats.campaign-stats li {
+    float: none;
+    width: 100%;
+    padding: 12px 0px;
+    padding: 1.2rem 0rem;
+    margin: 0;
+    border-bottom-width: 1px;
+    border-bottom-width: 0.1rem;
+    border-bottom-style: solid;
+    font-size: 12px;
+    font-size: 1.2rem;
+    text-align: left; }
+    .user-post-stats.campaign-stats li:last-child {
+      padding-bottom: 12px;
+      padding-bottom: 1.2rem; }
+    @media (min-width: 37.5em) {
+      .user-post-stats.campaign-stats li {
+        float: left;
+        width: 50%; }
+        .user-post-stats.campaign-stats li.campaign-donors {
+          border-bottom: 0; } }
+  .user-post-stats.campaign-stats span {
+    line-height: 24px;
+    line-height: 2.4rem; }
+  .user-post-stats.campaign-stats .amount,
+  .user-post-stats.campaign-stats .donors-count {
+    font-size: 16px;
+    font-size: 1.6rem; }
+  .user-post-stats.campaign-stats .goal-amount {
+    display: inline;
+    font-size: 1em;
+    line-height: 1em;
+    font-weight: bolder; }
+
+.user-post-actions {
+  padding: 12px;
+  padding: 1.2rem;
+  font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  border-top-width: 1px;
+  border-top-width: 0.1rem;
+  border-top-style: solid; }
+  .user-post-actions .actions {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: center; }
+    .user-post-actions .actions li:last-child {
+      margin-bottom: 0; }
+  .user-post-actions a:hover {
+    text-decoration: none; }
+  .user-post-actions a:before {
+    position: relative;
+    top: 1px;
+    top: 0.1rem;
+    padding-right: 6px;
+    padding-right: 0.6rem;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-family: "Benny-Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .user-post-actions .edit-campaign a:before {
+    content: "\f040"; }
+  @media (min-width: 48em) {
+    .user-post-actions {
+      float: left;
+      width: 100%; } }
+  @media (min-width: 56.25em) {
+    .user-post-actions {
+      position: relative;
+      z-index: 1;
+      float: right;
+      width: 150px;
+      width: 15rem;
+      border-top: 0;
+      background-color: transparent; }
+      .user-post-actions li {
+        padding: 12px 0px;
+        padding: 1.2rem 0rem;
+        border-bottom-width: 1px;
+        border-bottom-width: 0.1rem;
+        border-bottom-style: solid; }
+        .user-post-actions li:first-child {
+          padding-top: 0; } }
 
 /*-------------------------------------------------------------- 
 18.2 Easy Digital Downloads
@@ -4362,12 +4352,10 @@ div.printfriendly {
   border: none; }
   #edd_checkout_wrap #edd_final_total_wrap strong {
     font-weight: 400; }
-#edd_checkout_wrap fieldset#edd_cc_fields {
-  background-color: #f1efee; }
-  #edd_checkout_wrap fieldset#edd_cc_fields input,
-  #edd_checkout_wrap fieldset#edd_cc_fields select,
-  #edd_checkout_wrap fieldset#edd_cc_fields textarea {
-    background-color: #ffffff; }
+#edd_checkout_wrap fieldset#edd_cc_fields input,
+#edd_checkout_wrap fieldset#edd_cc_fields select,
+#edd_checkout_wrap fieldset#edd_cc_fields textarea {
+  background-color: #ffffff; }
 #edd_checkout_wrap #edd-purchase-button {
   font-size: 25px;
   font-size: 2.5rem;

@@ -8,15 +8,12 @@
 	height: 0;
 	padding: 0;
 	overflow: hidden;
+	@include background-color( $color__background-screen );
 	@include property-transition( max-height, 500ms ); 
 
 	li {
-		margin: 0;		
-		border-bottom: {
-			@include width( 1 );
-			style: solid;
-			color: $color__border-primary;
-		}
+		margin: 0;	
+		@include border-bottom( 1 );		
 		list-style: none;
 		line-height: 1em;
 		@include letter-spacing( 1 );
@@ -35,10 +32,10 @@
 		@include padding( 12, 0 );
 		text-decoration: none;
 		font-weight: 400;
-		@extend %color--#{$color__text} !optional;
+		@include color( $color__text );
 
 		&:hover {
-			@extend %color--#{$color__accent} !optional;
+			@include color( $color__accent );
 		}
 	}
 
@@ -130,11 +127,8 @@
 	width: calc( 100% + 72px );
 	height: auto;
 	max-height: 10000px;
-	border-top: {
-		@include width( 2 );
-		style: solid;
-	}
-
+	@include border-top( 2, $color__accent );
+	
 	ul {
 		margin: 0;
 		padding-left: 0;
@@ -163,7 +157,7 @@
 /* .menu-button is used as a trigger class for toggling menus */
 .menu-button {
 	@include font-size( 20 );
-	@extend %color--#{$color__accent} !optional;
+	@include color( $color__accent );
 
 	&:hover {
 		text-decoration: none;

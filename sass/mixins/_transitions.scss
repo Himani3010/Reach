@@ -3,7 +3,7 @@
 	/* Default settings */
 	$transition-duration		: 300ms !default;
 	$transition-timing-function	: cubic-bezier(0.250, 0.250, 0.750, 0.750) !default;
-	$transition-delay			: 0 !default;
+	$transition-delay			: 0ms !default;
 	
 	@if $duration == "" {
  		$duration : $transition-duration;

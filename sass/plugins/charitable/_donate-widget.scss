@@ -39,12 +39,12 @@
         .button {
             @include button-inverted();
             margin: 0;
-            @extend %color--#{$color__accent} !optional;
-            @extend %border-color--#{$color__accent} !optional;            
+            @include color( $color__accent );
+            @include border-color( $color__accent );            
 
             &:hover, 
             &:focus {
-                @extend %background-color--#{$color__accent} !optional;
+                @include background-color( $color__accent );
                 color: $color__text-overlay;
             }
         }

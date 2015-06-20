@@ -62,7 +62,7 @@
 	}
 
 	fieldset#edd_cc_fields {
-		background-color: $color__background-widget;
+		@include background-color( $color__background-widget );
 
 		input, 
 		select, 
@@ -74,7 +74,7 @@
 	#edd-purchase-button {
 		@include font-size( 25 );
 		@include height( 50 );
-		@extend %background-color--#{$color__accent} !optional;
+		@include background-color( $color__accent );
 		border-color: rgba( 255, 255, 255, 0.3 );
 		box-shadow: 0 0 0 3px $color__accent;
 		color: $color__text-overlay;

@@ -50,7 +50,7 @@
 	input[type=text], 
 	textarea {
 		max-width: 100%;
-		background-color: $color__background-widget;
+		@include background-color( $color__background-widget );
 	}
 
 	.comment-text-input {
@@ -111,7 +111,7 @@
 .comment-meta {
 	padding-bottom: 0;
 	@include font-size( 10 );
-	@extend %color--#{$color__text-meta} !optional;
+	@include color( $color__text-meta );
 }
 
 .comment-date {	
@@ -129,7 +129,7 @@
 
 		i {
 			@include margin-right( 2 );
-			@extend %color--#{$color__accent} !optional;
+			@include color( $color__accent );
 		}
 	}
 }

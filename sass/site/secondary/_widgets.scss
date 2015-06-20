@@ -1,13 +1,9 @@
 .widget {
 	@include margin-bottom( 36 );
 	@include padding( 0, 24, 12 );
-	border: {
-		@include width( 1 ); 
-		style: solid; 
-		color: $color__border-primary;
-	}
+	@include border( 1 );	
 	border-radius: 0.4rem;
-	background-color: $color__background-widget;
+	@include background-color( $color__background-widget );
 	@include hidden-overflow();
 
 	/* Make sure select elements fit in widgets */
@@ -41,16 +37,16 @@
 	textarea:active {
 		background-color: $color__background-content;
 	}
+
+	&.content-block {
+		@include background-color( $color__background-content );
+	}
 }
 
 .widget-title {
 	@include margin( 12, 0, 24 );
 	padding-bottom: 0;
-	border-bottom: {
-		@include width( 2 ); 
-		style: solid;
-		color: $color__border-secondary;
-	}
+	@include border-bottom( 2, $color__border-secondary );
 	@include letter-spacing( 1 );
 }
 

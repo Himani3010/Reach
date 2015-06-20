@@ -24,7 +24,7 @@
 
 .content-block {
 	@include padding( 0, 24, 24 );
-
+	@include background-color( $color__background-content );
 	@include bp( 800 ) {
 		@include padding( 0, 36, 24 );
 	}	
@@ -53,7 +53,6 @@
 	@include padding( 0, 24, 36, 24 );		
 	color: $color__text-overlay;
 	@include background-color($color__accent);
-	// @extend %background-color--#{$color__accent} !optional;
 	background-repeat: repeat;
 	box-shadow: none;
 	border: none;
@@ -66,12 +65,16 @@
 
 .block-title {
 	@include baseline-header();
-	@extend %color--#{$color__accent} !optional;
+	@include color( $color__accent );
 }
 
 /* Shadow wrapper */
-@include bp( 800 ) {
-	.shadow-wrapper {
+.shadow-wrapper {
+	&::before, 
+	&::after {
+		@include border-color( $color__background-button );
+	}
+	@include bp( 800 ) {		
 		&::before,
 		&::after {
 			content: "";

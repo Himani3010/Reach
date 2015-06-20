@@ -93,7 +93,7 @@ body.author {
 		text-transform: uppercase;
 
 		.number {
-			@extend %color--#{$color__accent} !optional;
+			@include color( $color__accent );
 		}
 
 		.separator {
@@ -135,14 +135,14 @@ body.author {
 			@include padding-left( 40 );
 			.display-name, 
 			a {
-				@extend %color--#{$color__accent} !optional;
+				@include color( $color__accent );
 				font-weight: 700;
 			}
 			
 			.time-ago {
 				font-family: $font__secondary;
 				text-transform: uppercase;
-				@extend %color--#{$color__text-meta} !optional;
+				@include color( $color__text-meta );
 			}
 
 			&::before {
@@ -151,7 +151,7 @@ body.author {
 				left: 0;
 				@include font-size( 24 );
 				font-family: $font__icons;
-				@extend %color--#{$color__text-meta} !optional;
+				@include color( $color__text-meta );
 			}
 
 			@include bp( 800 ) {

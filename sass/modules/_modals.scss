@@ -26,7 +26,7 @@
     .block-title {
         margin-top: 0;
         border: none;
-        @extend %color--#{$color__text} !optional;
+        @include color( $color__text );
     }
 
 	&.multi-block {
@@ -64,13 +64,13 @@
 
     &:before {
         content: "\f057";
-        @extend %color--#{$color__text} !optional;
+        @include color( $color__text );
     }
 
     &:hover {
         text-decoration: none;
         &:before {
-            @extend %color--#{$color__text-dark} !optional;
+            @include color( $color__text-dark );
         }
     }
 }
