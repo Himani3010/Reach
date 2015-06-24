@@ -1,14 +1,10 @@
 @mixin baseline-header() {
-	@include margin-bottom( 12 );
-	@include padding-bottom( 4 );
-	border-bottom: {
-		@include width( 2 );
-		style: solid;
-		color: $color__border-primary;
-	}
+    @include margin-bottom( 12 );
+    @include padding-bottom( 4 );
+    @include border-bottom;
 
-	&:hover,
-	a:hover {
-		text-decoration: none;
-	}
+    &:hover,
+    a:hover {
+        text-decoration: none;
+    }
 }

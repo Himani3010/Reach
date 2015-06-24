@@ -10,13 +10,9 @@
     .widget-block {
         @include padding( 24 );
         @include margin-bottom( 24 );
-        border: {
-            @include width( 1 );
-            style: solid;
-            color: $color__border-primary;
-        }
+        @include border( 1 );
         border-radius: 0.4rem;
-        background: $color__background-content;
+        @include background-color( $color__background-content );
     }
 }
 
@@ -50,11 +46,7 @@
             li {
                 width: 100%;
                 @include padding-bottom( 6 );
-                border-bottom: {
-                    @include width( 1 ); 
-                    style: solid;
-                    color: $color__border-primary;
-                }
+                @include border-bottom( 1 );                
             }
 
             .edd_price_option_sep {
@@ -78,7 +70,7 @@
         }
 
         .edd-input {
-            background-color: $color__background-form-fields;
+            @include background-color( $color__background-form-fields );
         }
 
         .edd-item-quantity {

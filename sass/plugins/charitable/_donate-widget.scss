@@ -20,12 +20,8 @@
 
     .charitable-donation-form-without-suggestions {
         @include padding( 12 );
-        background: $color__background-content;
-        border: {
-            @include width( 1 );
-            color: $color__border-primary;
-            style: solid;
-        }
+        @include background-color( $color__background-content );
+        @include border( 1 );
         border-radius: 0.4rem;
 
         label {
@@ -37,15 +33,16 @@
         margin-bottom: 0;
 
         .button {
-            @include button-inverted();
+            @include button-base;            
             margin: 0;
+            background-color: transparent;
             @include color( $color__accent );
-            @include border-color( $color__accent );            
-
+            @include border( 2, $color__accent );
+            
             &:hover, 
             &:focus {
                 @include background-color( $color__accent );
-                color: $color__text-overlay;
+                @include color( $color__text-overlay );
             }
         }
     }

@@ -1,18 +1,14 @@
 /* Various re-usable styled blocks */
 .block {
 	@include margin-bottom( 36 );
-	border: {
-		@include width( 1 ); 
-		style: solid; 
-		color: $color__border-primary;
-	}
+	@include border( 1 );
 	border-radius: 0.4rem;	
 }
 
 .entry-block {
 	position: relative;
 	@include padding( 0, 24 );
-	background: $color__background-content;
+	@include background-color( $color__background-content );
 	box-shadow: 0 0 1px $color__background-content;
 	overflow-x: hidden;
 
@@ -36,11 +32,7 @@
 	}
 
 	.content-block:nth-of-type(1n+2) {
-		border-top: {
-			@include width( 1 ); 
-			style: solid;	
-			color: $color__border-primary;
-		}
+		@include border-top( 1 );
 	}
 
 	.content-block:last-of-type {
@@ -51,8 +43,8 @@
 .feature-block {
 	@include fullwidth-wrapper-padded();	
 	@include padding( 0, 24, 36, 24 );		
-	color: $color__text-overlay;
-	@include background-color($color__accent);
+	@include color( $color__text-overlay );
+	@include background-color( $color__accent );
 	background-repeat: repeat;
 	box-shadow: none;
 	border: none;
@@ -70,10 +62,14 @@
 
 /* Shadow wrapper */
 .shadow-wrapper {
-	&::before, 
-	&::after {
-		@include border-color( $color__background-button );
+	&::before {
+		@include border-right-color( $color__background-button );
 	}
+	
+	&::after {
+		@include border-left-color( $color__background-button );
+	}
+
 	@include bp( 800 ) {		
 		&::before,
 		&::after {
@@ -82,20 +78,20 @@
 			bottom: -0.9rem;
 			width: 0;
 			height: 0;
+			border-style: solid;			
+			border-width: 0 0.9rem 0.9rem 0.9rem;
 		}
 
 		&::before {
 			left: -0.9rem;
-			border-left: 0.9rem solid transparent !important;
-			border-bottom: 0.9rem solid transparent !important;
-			border-right: 0.9rem solid;
+			border-bottom-color: transparent;
+			border-left-color: transparent;
 		}
 
 		&::after {
 			right: -0.9rem;
-			border-right: 0.9rem solid transparent !important;
-			border-bottom: 0.9rem solid transparent !important;
-			border-left: 0.9rem solid;
+			border-right-color: transparent;
+			border-bottom-color: transparent;			
 		}
 	}
 }

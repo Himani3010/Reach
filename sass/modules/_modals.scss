@@ -16,7 +16,7 @@
 	@include padding( 24 );
     overflow: scroll;
     border-radius: 0.4rem;
-    background: $color__background-content;
+    @include background-color( $color__background-content );
 
     @include bp( 500 ) {
         @include width( 468 );

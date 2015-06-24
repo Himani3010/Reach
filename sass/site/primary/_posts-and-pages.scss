@@ -34,20 +34,16 @@
 }
 
 .sticky {
-	color: $color__background-content;
+	@include color( $color__background-content );
 	@include background-color( $color__accent );
-	border: {
-		@include width( 1 ); 
-		style: solid;	
-		color: $color__background-content;
-	}
-
+	@include border( 1, $color__background-content );
+	
 	a {
-		color: $color__background-content;
+		@include color( $color__background-content );
 	}
 
 	.post-title {
-		border-color: $color__accent-hover;
+		@include border-color( $color__accent-hover );
 	}
 	
 	.entry a {
@@ -88,7 +84,7 @@
 	@include line-height( 38 );
 	@include letter-spacing( 1 );
 	font-weight: 300;	
-	background-color: $color__background-meta;
+	@include background-color( $color__background-meta );
 	@include color( $color__text-meta );
 
 	p {
@@ -108,11 +104,7 @@
 	.tags {
 		@include margin-left( 6 );
 		@include padding-left( 10 );
-		border-left: {
-			@include width( 1 ); 
-			style: solid;
-			color: $color__border-primary;
-		}		
+		@include border-left( 1 );
 	}
 
 	@include bp( 600 ) {
@@ -122,19 +114,11 @@
 }
 
 .meta-above {
-	border-bottom: {
-		@include width( 1 ); 
-		style: solid;
-		color: $color__border-primary;
-	}
+	@include border-bottom( 1 );
 }
 
 .meta-below {
-	border-top: {
-		@include width( 1 ); 
-		style: solid;
-		color: $color__border-primary;
-	}
+	@include border-top( 1 );
 	border-radius: 0 0 0.4rem 0.4rem;
 }
 

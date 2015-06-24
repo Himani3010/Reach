@@ -21,46 +21,46 @@
                 var o = options,
                     window_height = $(window).height(); 
                
-                $(this).click(function(e) {
+                $(document).on( 'click', this, function(e) {
               
-                var modal_id = $(this).attr("href");
+                    var modal_id = $(this).attr("href");
 
-                $("#lean_overlay").click(function() { 
-                     close_modal(modal_id);                    
-                });
-                
-                $(o.closeButton).click(function() { 
-                     close_modal(modal_id);                    
-                });
-                            
-                var modal_height = $(modal_id).outerHeight();
-                var modal_width = $(modal_id).outerWidth();
+                    $("#lean_overlay").on( 'click', function() { 
+                         close_modal(modal_id);                    
+                    });
+                    
+                    $(o.closeButton).on ( 'click', function() { 
+                         close_modal(modal_id);                    
+                    });
+                                
+                    var modal_height = $(modal_id).outerHeight();
+                    var modal_width = $(modal_id).outerWidth();
 
-                $('#lean_overlay').css({ 'display' : 'block', opacity : 0 });
+                    $('#lean_overlay').css({ 'display' : 'block', opacity : 0 });
 
-                $('#lean_overlay').fadeTo(200,o.overlay);
+                    $('#lean_overlay').fadeTo(200,o.overlay);
 
-                $(modal_id).css({ 
-                
-                    'display' : 'block',
-                    'position' : 'fixed',
-                    'opacity' : 0,
-                    'z-index': 100000,
-                    'left' : 50 + '%',
-                    'margin-left' : -(modal_width/2) + "px",
-                    'top' : o.verticalOffset + "px"
-                
-                });
+                    $(modal_id).css({ 
+                    
+                        'display' : 'block',
+                        'position' : 'fixed',
+                        'opacity' : 0,
+                        'z-index': 100000,
+                        'left' : 50 + '%',
+                        'margin-left' : -(modal_width/2) + "px",
+                        'top' : o.verticalOffset + "px"
+                    
+                    });
 
-                if ( modal_is_too_tall( window_height, modal_height, o.verticalOffset ) ) {
+                    if ( modal_is_too_tall( window_height, modal_height, o.verticalOffset ) ) {
 
-                    resize_modal( modal_id, window_height, modal_height );                    
+                        resize_modal( modal_id, window_height, modal_height );                    
 
-                }
-                
-                $(modal_id).fadeTo(200,1);
+                    }
+                    
+                    $(modal_id).fadeTo(200,1);
 
-                e.preventDefault();
+                    e.preventDefault();
                         
                 });
              

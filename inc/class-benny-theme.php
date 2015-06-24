@@ -28,7 +28,7 @@ class Benny_Theme {
 	/**
 	 * The theme version. 
 	 */
-	const VERSION = '1.0.0-20150619';
+	const VERSION = '1.0.0-20150623';
 
 	/**
 	 * Database version number. 
@@ -425,8 +425,10 @@ class Benny_Theme {
 	 */
 	public function setup_scripts() {
         $theme_dir = untrailingslashit( get_template_directory_uri() );
-		wp_enqueue_style( 'benny-style', $theme_dir . '/style.css' );
-        // wp_enqueue_style( 'benny-palette', $theme_dir . '/css/palette.css' );
+        
+        wp_register_style( 'benny-base', $theme_dir . '/css/base.css', array(), $this->get_theme_version() );
+		wp_register_style( 'benny-style', $theme_dir . '/css/main.css', array(), $this->get_theme_version() );
+        wp_enqueue_style( 'benny-style' );
 
 		$ext = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '.js' : '.min.js'; 
 		
@@ -567,7 +569,11 @@ class Benny_Theme {
      * @since   1.0.0
      */
     public function post_classes($classes) {
-        return array_merge( $classes, array('block', 'entry-block') );
+        if ( is_page_template( 'page-template-home-slider.php' ) ) {
+            return array_merge( $classes, array( 'feature-block', 'center', 'block' ) );
+        }
+
+        return array_merge( $classes, array( 'block', 'entry-block' ) );
     }
 
     /**

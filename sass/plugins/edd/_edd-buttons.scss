@@ -17,7 +17,7 @@ body .edd-submit.button {
 		&:focus, &:active, &:hover {
 			@include border-color( $color__accent );
 			@include background-color( $color__accent );
-			color: $color__text-overlay;
+			@include color( $color__text-overlay );
 		}
 	}
 }

@@ -2,7 +2,7 @@ table {
 	width: 100%;	
 	@include border-width( 0, 0, 1, 1 );
 	border-style: solid;
-	border-color: $color__border-primary;
+	@include border-color( $color__border-primary );
 	word-break: normal;
 
 	caption {
@@ -16,14 +16,14 @@ th,
 td {
 	@include padding( 6, 10 );
 	border-style: solid;
-	border-color: $color__border-primary;
+	@include border-color( $color__border-primary );
 	vertical-align: top;	
 }
 
 th {		
 	@include border-width( 1, 1, 0, 0 );
-	background-color: $color__background-th;
-	border-right-color: $color__border-secondary;
+	@include background-color( $color__background-th );
+	@include border-right-color( $color__border-secondary );
 	text-align: left;
 	text-transform: uppercase;
 	@include letter-spacing( 2 );

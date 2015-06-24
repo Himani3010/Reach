@@ -1,314 +1,292 @@
 .charitable-form {
-	input[type=text], 
-	input[type=password], 
-	input[type=email],
-	input[type=url],
-	input[type=number],
-	input[type=date],
-	textarea, 
-	select {
-		max-width: 100%;
-		width: 100%;
-	}
+    input[type=text], 
+    input[type=password], 
+    input[type=email],
+    input[type=url],
+    input[type=number],
+    input[type=date],
+    textarea, 
+    select {
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
-.charitable-form-fields {	
-	.charitable-form-field { 
-		clear: left;
-		@include bp( 600 ) {	
-			float: left;
-			width: 50%;						
+.charitable-form-fields {   
+    .charitable-form-field { 
+        clear: left;
+        @include bp( 600 ) {    
+            float: left;
+            width: 50%;                     
 
-			&.odd {
-				@include padding-right( 36 );
-			}
+            &.odd {
+                @include padding-right( 36 );
+            }
 
-			&.even {
-				clear: none;
-			}
+            &.even {
+                clear: none;
+            }
 
-			&.fullwidth {
-				width: 100%;
-				padding: 0;
-			}
-		}
-	}
+            &.fullwidth {
+                width: 100%;
+                padding: 0;
+            }
+        }
+    }
 }
 
 .charitable-form-content {
-	clear: both;
+    clear: both;
 }
 
 .charitable-form-field-editor {
-	.mce-btn button {
-		@include color( $color__text );
-		box-shadow: none;
-	}
+    .mce-btn button {
+        @include color( $color__text );
+        box-shadow: none;
+    }
 
-	.wp-editor-container {
-		@include padding( 1 );
-		background-color: $color__border-primary;
-	}
+    .wp-editor-container {
+        @include padding( 1 );
+        @include background-color( $color__border-primary );
+    }
 }
 
 #charitable-campaign-submission-form {
-	@include fullwidth-wrapper( 36, 36 );
-	@include padding( 24, 12, 0, 12 );
+    @include fullwidth-wrapper( 36, 36 );
+    @include padding( 24, 12, 0, 12 );
 
-	@include bp( 768 ) {
-		@include padding-right( 36 );
-		@include padding-left( 36 );
-	}
+    @include bp( 768 ) {
+        @include padding-right( 36 );
+        @include padding-left( 36 );
+    }
 }
 
 .charitable-campaign-form-table {
-	th,
-	td {
-		@include padding( 12 );
-	}
+    th,
+    td {
+        @include padding( 12 );
+    }
 
-	tfoot td {
-		background-color: $color__background-form-fields;
-		border-top: {
-			@include width( 1 );
-			style: solid;
-			color: $color__border-primary;
-		}		
-	}
+    tfoot td {
+        @include background-color( $color__background-form-fields );
+        @include border-top( 1 );
+    }
 }
 
-.charitable-repeatable-form-field-table {	
-	.repeatable-field:nth-child(odd) {
-		@include background-color( $color__background-wrapper );
+.charitable-repeatable-form-field-table {   
+    .repeatable-field:nth-child(odd) {
+        @include background-color( $color__background-wrapper );
 
-		input, select, textarea {
-			background-color: $color__background-content;
-			border: {
-				@include width( 1 );
-				style: solid;
-				color: $color__border-primary;
-			}
-		}
-		input[type=file] {
-			background-color: transparent;
-			border: none;
-		}
-	}
+        input, select, textarea {
+            @include background-color( $color__background-content );
+            @include border( 1 );            
+        }
+        input[type=file] {
+            background-color: transparent;
+            border: none;
+        }
+    }
 
-	.repeatable-field-wrapper {
-		position: relative;
-		@extend .cf;
-		@include bp( 768 ) {
-			@include padding( 24 );
-		}
-	}
+    .repeatable-field-wrapper {
+        position: relative;
+        @extend .cf;
+        @include bp( 768 ) {
+            @include padding( 24 );
+        }
+    }
 
-	th {
-		@include width( 100 );
-		@include font-size( 12 );
-		@include line-height( 37 );
-		background-color: transparent;
-	}
+    th {
+        @include width( 100 );
+        @include font-size( 12 );
+        @include line-height( 37 );
+        background-color: transparent;
+    }
 
-	td {		
-		border-top: {
-			@include width( 1 );
-			style: solid;
-			color: $color__border-primary;
-		}
-	}	
+    td {        
+        @include border-top( 1 );
+    }   
 
-	tbody td {
-		background-color: transparent;
-	}
+    tbody td {
+        background-color: transparent;
+    }
 
-	.remove {
-		position: absolute;
-		top: 0;
-		right: 0;
-		margin: 0;
-		padding: 0;
-		height: auto;
-		@include font-size( 18 );
-		line-height: 1em;
-		background: none;
-		border: none;
-		box-shadow: none;
-		color: transparent;
+    .remove {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        height: auto;
+        @include font-size( 18 );
+        line-height: 1em;
+        background: none;
+        border: none;
+        box-shadow: none;
+        color: transparent;
 
-		&:before {	
-			@include icon;		
-			content: "\f057";
-			float: right;
-			@include color( $color__text );			
-		}
+        &:before {  
+            @include icon;      
+            content: "\f057";
+            float: right;
+            @include color( $color__text );         
+        }
 
-		&:hover {
-			color: transparent;
+        &:hover {
+            color: transparent;
 
-			&:before {
-				@include color( $color__accent );
-			}
-		}
-	}	
+            &:before {
+                @include color( $color__accent );
+            }
+        }
+    }   
 
-	.add-row {
-		font-style: italic;
+    .add-row {
+        font-style: italic;
 
-		&.button {
-		    font-style: normal;
-		    @include border-width( 2 );
-		    border-style: solid;
-		    @include border-color( $color__background-button );		    
-		    box-shadow: none;
-		    background: $color__background-content;
-		    @include color( $color__background-button );
-		}
-	}
+        &.button {
+            font-style: normal;
+            @include border( 2, $color__background-button );
+            box-shadow: none;
+            @include background-color( $color__background-content );
+            @include color( $color__background-button );
+        }
+    }
 
-	.charitable-fieldset {
-		float: left;
-		width: 100%;
-		clear: both;
-		@include margin-top( 12 );
-	}
+    .charitable-fieldset {
+        float: left;
+        width: 100%;
+        clear: both;
+        @include margin-top( 12 );
+    }
 }
 
 @include bp( 600 ) {
-	#charitable-campaign-suggested-donations {	
-		.charitable-form-field.odd {
-			width: 25%;
-		}
+    #charitable-campaign-suggested-donations {  
+        .charitable-form-field.odd {
+            width: 25%;
+        }
 
-		.charitable-form-field.even {
-			width: 75%;
-		}
-	}	
+        .charitable-form-field.even {
+            width: 75%;
+        }
+    }   
 }
 
-.charitable-form-field-multi-checkbox {	
-	ul {
-		@include padding( 10 );
-		margin: 0;		
-		list-style-type: none;		
-		background-color: $color__background-form-fields;
-		@include clearfix;
-	}	
+.charitable-form-field-multi-checkbox { 
+    ul {
+        @include padding( 10 );
+        margin: 0;      
+        list-style-type: none;      
+        @include background-color( $color__background-form-fields );
+        @include clearfix;
+    }   
 
-	li {
-		float: left;
-		width: 50%;
-		@include line-height( 22 );
-	}
+    li {
+        float: left;
+        width: 50%;
+        @include line-height( 22 );
+    }
 }
 
 .charitable-fieldset {
-	position: relative;
-	@include padding( 0, 0, 24 );
-	@include margin-bottom( 24 );
+    position: relative;
+    @include padding( 0, 0, 24 );
+    @include margin-bottom( 24 );
 
-	&:before {
-		content: "";
-		display: block;
-		position: absolute;
-		@include top( 9 );
-		@include height( 2 );
-		width: 100%;
-		background-color: $color__border-primary;		
-	}
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        @include top( 9 );
+        @include height( 2 );
+        width: 100%;
+        @include border-color( $color__border-primary );
+    }
 
-	.legend {
-		position: relative;
-		float: left;
-		clear: both;
-		@include left( 24 );
-		@include padding( 0, 12, 24 );		
-		@include font-size( 18 );
-		@include color( $color__accent );
-		background-color: $color__background-content;
-	}
+    .legend {
+        position: relative;
+        float: left;
+        clear: both;
+        @include left( 24 );
+        @include padding( 0, 12, 24 );      
+        @include font-size( 18 );
+        @include color( $color__accent );
+        @include background-color( $color__background-content );
+    }
 
-	.charitable-fieldset {
-	    margin-bottom: 0;	    
-	    padding: 0;
-	    border-top: {
-	    	@include width( 1 );
-	    	style: solid;
-	    	color: $color__border-primary;
-	    }
+    .charitable-fieldset {
+        margin-bottom: 0;       
+        padding: 0;
+        @include border-top( 1 );
 
-	    &::before {
-	    	display: none;
-	    }
+        &::before {
+            display: none;
+        }
 
-	    .legend {
-	    	background: transparent;
-		    left: 0;
-		    @include padding( 12, 0 );
-		    @include font-size( 14 );
-	    }
-	}	
+        .legend {
+            background: transparent;
+            left: 0;
+            @include padding( 12, 0 );
+            @include font-size( 14 );
+        }
+    }   
 }
 
 .charitable-login-form {
-	@include padding( 0, 0, 12 );
-	border: none;
+    @include padding( 0, 0, 12 );
+    border: none;
 
-	#loginform {
-		@include margin-bottom( 12 );
-	}
+    #loginform {
+        @include margin-bottom( 12 );
+    }
 
-	.login-username,
-	.login-password {
-		float: left;
-		width: 50%;
-	}
+    .login-username,
+    .login-password {
+        float: left;
+        width: 50%;
+    }
 
-	.login-username {
-		@include padding-right( 36 );
-	}
+    .login-username {
+        @include padding-right( 36 );
+    }
 
-	.login-submit {
-		@include padding-bottom( 3 );
-	}
+    .login-submit {
+        @include padding-bottom( 3 );
+    }
 
-	.button-primary {
-		width: auto;
-	}
+    .button-primary {
+        width: auto;
+    }
 }
 
 .charitable-submit-field {
-	.button {
-		width: auto;
-	}
+    .button {
+        width: auto;
+    }
 }
 
 .charitable-notice {
     @include padding( 12 );
     @include margin-bottom( 24 );
-    border: {
-    	@include width( 1 );
-    	style: solid;
-    	color: $color__border-primary;
-    }
-    background-color: $color__background-form-fields;
+    @include border( 1 );    
+    @include background-color( $color__background-form-fields );
     @include color( $color__text-dark );
     
     ul {
-    	list-style: none;
-	    padding: 0;
-	    margin: 0;
+        list-style: none;
+        padding: 0;
+        margin: 0;
 
-	    ul {
-	    	list-style: disc;
-	    	@include padding-left( 16 );
-	    	li {
-		    	margin-bottom: 0;
-		    }	
-	    }
+        ul {
+            list-style: disc;
+            @include padding-left( 16 );
+            li {
+                margin-bottom: 0;
+            }   
+        }
     }
 
     li:last-child {
-    	margin-bottom: 0;
+        margin-bottom: 0;
     }
 }

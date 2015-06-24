@@ -1,3 +1,8 @@
+/* Background colours */
+/* Accent colour */
+/* Text colour */
+/* Borders */
+/* Miscellaneous */
 /*
 Resetting and rebuilding styles have been helped along thanks to the fine work of
 Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
@@ -36,31 +41,31 @@ and Blueprint http://www.blueprintcss.org/
 0.1 Palette
 --------------------------------------------------------------*/
 #custom-donation-amount-field.charitable-custom-donation-field-alone ::-webkit-input-placeholder, #custom-donation-amount-field.charitable-custom-donation-field-alone ::-moz-placeholder, #custom-donation-amount-field.charitable-custom-donation-field-alone :-ms-input-placeholder {
-  color: #aea198; }
+  color: #00095e; }
 
 body, #custom-donation-amount-field.charitable-custom-donation-field-alone {
-  background-color: #aea198; }
+  background-color: #00095e; }
 
 .donation-amounts .donation-amount {
-  border-color: #aea198; }
+  border-color: #00095e; }
 
 .menu-site, .assistive-text:hover, .assistive-text:active, .assistive-text:focus,
 .screen-reader-text:hover,
 .screen-reader-text:active,
 .screen-reader-text:focus, #header, #main, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) {
-  background-color: #f9f8f7; }
+  background-color: #fbfbfb; }
 
 .user-dashboard-menu li a {
-  border-color: #f9f8f7; }
+  border-color: #fbfbfb; }
 
 .menu-site, .assistive-text:hover, .assistive-text:active, .assistive-text:focus,
 .screen-reader-text:hover,
 .screen-reader-text:active,
 .screen-reader-text:focus, #header, #main, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) {
-  background-color: #f9f8f7; }
+  background-color: #fbfbfb; }
 
 .user-dashboard-menu li a {
-  border-color: #f9f8f7; }
+  border-color: #fbfbfb; }
 
 blockquote, pre, th, input[type="text"],
 input[type="email"],
@@ -72,7 +77,7 @@ input[type="date"],
 textarea, .widget, .meta, .comments-section input[type=email],
 .comments-section input[type=text],
 .comments-section textarea, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .charitable-donation-form .charitable-connected-downloads, .charitable-campaign-form-table tfoot td, .charitable-form-field-multi-checkbox ul, .charitable-notice, .charitable-user-post:after, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
-  background-color: #f1efee; }
+  background-color: #f2f5f6; }
 
 button,
 input[type="button"],
@@ -117,11 +122,11 @@ input[type="reset"]:hover,
 input[type="submit"]:hover, .menu-site a, .button:hover, .button-alt,
 .button-secondary,
 .button.button-alt,
-.button.button-secondary, .modal .block-title, .modal-close:before, .meta a, #submit, .share-widget .modal,
-.share-widget .modal .block-title, .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .campaigns-grid .campaign-description, .campaigns-grid .campaign-stats, .charitable-donation-form .charitable-form-field .button, .donation-amounts .donation-amount, #custom-donation-amount-field.charitable-custom-donation-field-alone input, body.user-dashboard .charitable-form .charitable-submit-field .button, .charitable-form-field-editor .mce-btn button, .charitable-repeatable-form-field-table .remove:before, .charitable-repeatable-form-field-table .add-row.button, .user-post-actions a, div.printfriendly a,
+.button.button-secondary, .modal .block-title, .modal-close:before, .modal-close:hover:before, .meta a, #submit, .share-widget .modal,
+.share-widget .modal .block-title, .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .campaigns-grid .campaign-description, .campaigns-grid .campaign-stats, .charitable-donation-form .charitable-form-field .button, .donation-amounts .donation-amount, #custom-donation-amount-field.charitable-custom-donation-field-alone input, body.user-dashboard .charitable-form .charitable-submit-field .button, .user-dashboard-menu li a, .charitable-form-field-editor .mce-btn button, .charitable-repeatable-form-field-table .remove:before, .charitable-repeatable-form-field-table .add-row.button, .charitable-notice, .user-post-actions a, div.printfriendly a,
 div.printfriendly a:link,
 div.printfriendly a:visited, body.events-single .tribe-events-tickets .tickets_price, body.events-single .tribe-events-tickets .tickets_name, #tribe-events .tribe-events-button {
-  color: #7d6e63; }
+  color: #354044; }
 
 button,
 input[type="button"],
@@ -130,7 +135,7 @@ input[type="submit"], .button, .button-alt:hover,
 .button-secondary:hover,
 .button.button-alt:hover,
 .button.button-secondary:hover, #submit:hover, .widget.widget_campaign_creator_widget .creator-profile-link a, .charitable-donation-form .charitable-form-field .button:hover, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-form .charitable-submit-field .button:hover, #tribe-events .tribe-events-button:hover {
-  background-color: #7d6e63; }
+  background-color: #354044; }
 
 button,
 input[type="button"],
@@ -142,13 +147,13 @@ input[type="submit"]:hover, .button, .button:hover, .button-alt,
 .button-secondary,
 .button.button-alt,
 .button.button-secondary, #submit, .widget.widget_campaign_creator_widget .creator-profile-link a, .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .charitable-donation-form .charitable-form-field .button, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-form .charitable-submit-field .button, .charitable-repeatable-form-field-table .add-row.button, #tribe-events .tribe-events-button {
-  border-color: #7d6e63; }
+  border-color: #354044; }
 
 .shadow-wrapper::before {
-  border-right-color: #7d6e63; }
+  border-right-color: #354044; }
 
 .shadow-wrapper::after {
-  border-left-color: #7d6e63; }
+  border-left-color: #354044; }
 
 blockquote, pre, th, input[type="text"],
 input[type="email"],
@@ -160,7 +165,7 @@ input[type="date"],
 textarea, .widget, .meta, .comments-section input[type=email],
 .comments-section input[type=text],
 .comments-section textarea, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .charitable-donation-form .charitable-connected-downloads, .charitable-campaign-form-table tfoot td, .charitable-form-field-multi-checkbox ul, .charitable-notice, .charitable-user-post:after, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
-  background-color: #f1efee; }
+  background-color: #f2f5f6; }
 
 blockquote, pre, th, input[type="text"],
 input[type="email"],
@@ -172,7 +177,7 @@ input[type="date"],
 textarea, .widget, .meta, .comments-section input[type=email],
 .comments-section input[type=text],
 .comments-section textarea, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .charitable-donation-form .charitable-connected-downloads, .charitable-campaign-form-table tfoot td, .charitable-form-field-multi-checkbox ul, .charitable-notice, .charitable-user-post:after, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
-  background-color: #f1efee; }
+  background-color: #f2f5f6; }
 
 blockquote, pre, th, input[type="text"],
 input[type="email"],
@@ -184,7 +189,7 @@ input[type="date"],
 textarea, .widget, .meta, .comments-section input[type=email],
 .comments-section input[type=text],
 .comments-section textarea, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .charitable-donation-form .charitable-connected-downloads, .charitable-campaign-form-table tfoot td, .charitable-form-field-multi-checkbox ul, .charitable-notice, .charitable-user-post:after, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
-  background-color: #f1efee; }
+  background-color: #f2f5f6; }
 
 blockquote, pre, th, input[type="text"],
 input[type="email"],
@@ -196,7 +201,7 @@ input[type="date"],
 textarea, .widget, .meta, .comments-section input[type=email],
 .comments-section input[type=text],
 .comments-section textarea, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .charitable-donation-form .charitable-connected-downloads, .charitable-campaign-form-table tfoot td, .charitable-form-field-multi-checkbox ul, .charitable-notice, .charitable-user-post:after, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
-  background-color: #f1efee; }
+  background-color: #f2f5f6; }
 
 a, .menu-site a:hover, .menu-button, .button-alt.accent,
 .button-secondary.accent,
@@ -204,28 +209,28 @@ a, .menu-site a:hover, .menu-button, .button-alt.accent,
 .button.button-secondary.accent, .block-title, .site-title a, .post-title a, .entry-header .entry-title a, .bypostauthor .post-author i, body.author .author-activity-summary .number, body.author .author-activity-feed .activity-summary .display-name,
 body.author .author-activity-feed .activity-summary a, .widget.widget_charitable_edd_campaign_downloads .download-price, .widget.widget_charitable_donate_widget .charitable-submit-field .button, .campaign .campaign-stats li span, .campaigns-grid .campaign-stats li span, .charitable-donation-form .charitable-form-field .button, body.user-dashboard .charitable-form .charitable-submit-field .button.button-primary, .user-dashboard-menu li.current-menu-item a,
 .user-dashboard-menu li a:hover, .charitable-repeatable-form-field-table .remove:hover:before, .charitable-fieldset .legend, .entry-header .entry-title, .user-post-actions a:hover, body .edd-submit.button.gray, body .edd-submit.button.white, body .edd-submit.button.blue, body .edd-submit.button.red, body .edd-submit.button.orange, body .edd-submit.button.green, body .edd-submit.button.yellow, body .edd-submit.button.dark-gray, .widget.widget_pp_campaign_events .download-price {
-  color: #d95b43; }
+  color: #71ca7a; }
 
 .button-alt.accent:hover,
 .button-secondary.accent:hover,
 .button.button-alt.accent:hover,
 .button.button-secondary.accent:hover, .feature-block, .account-links .button.button-alt:hover, .banner, .sticky, .widget.widget_charitable_donate_widget .charitable-submit-field .button:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button:focus, .charitable-donation-form .charitable-form-field .button:hover, .charitable-donation-form .charitable-form-field .button:focus, .charitable-donation-form .charitable-form-field .button:active, body.user-dashboard .charitable-form .charitable-submit-field .button.button-primary:hover, body .edd-submit.button.gray:focus, body .edd-submit.button.gray:active, body .edd-submit.button.gray:hover, body .edd-submit.button.white:focus, body .edd-submit.button.white:active, body .edd-submit.button.white:hover, body .edd-submit.button.blue:focus, body .edd-submit.button.blue:active, body .edd-submit.button.blue:hover, body .edd-submit.button.red:focus, body .edd-submit.button.red:active, body .edd-submit.button.red:hover, body .edd-submit.button.orange:focus, body .edd-submit.button.orange:active, body .edd-submit.button.orange:hover, body .edd-submit.button.green:focus, body .edd-submit.button.green:active, body .edd-submit.button.green:hover, body .edd-submit.button.yellow:focus, body .edd-submit.button.yellow:active, body .edd-submit.button.yellow:hover, body .edd-submit.button.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .edd-submit.button.dark-gray:hover, #edd_checkout_wrap #edd-purchase-button {
-  background-color: #d95b43; }
+  background-color: #71ca7a; }
 
 .button-alt.accent,
 .button-secondary.accent,
 .button.button-alt.accent,
 .button.button-secondary.accent, .account-links .button.button-alt:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button, .charitable-donation-form .charitable-form-field .button, body.user-dashboard .charitable-form .charitable-submit-field .button.button-primary, body .edd-submit.button.gray, body .edd-submit.button.white, body .edd-submit.button.blue, body .edd-submit.button.red, body .edd-submit.button.orange, body .edd-submit.button.green, body .edd-submit.button.yellow, body .edd-submit.button.dark-gray, body .edd-submit.button.gray:focus, body .edd-submit.button.gray:active, body .edd-submit.button.gray:hover, body .edd-submit.button.white:focus, body .edd-submit.button.white:active, body .edd-submit.button.white:hover, body .edd-submit.button.blue:focus, body .edd-submit.button.blue:active, body .edd-submit.button.blue:hover, body .edd-submit.button.red:focus, body .edd-submit.button.red:active, body .edd-submit.button.red:hover, body .edd-submit.button.orange:focus, body .edd-submit.button.orange:active, body .edd-submit.button.orange:hover, body .edd-submit.button.green:focus, body .edd-submit.button.green:active, body .edd-submit.button.green:hover, body .edd-submit.button.yellow:focus, body .edd-submit.button.yellow:active, body .edd-submit.button.yellow:hover, body .edd-submit.button.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .edd-submit.button.dark-gray:hover {
-  border-color: #d95b43; }
+  border-color: #71ca7a; }
 
 .toggled .menu-site, .toggled .menu-site ul {
-  border-top-color: #d95b43; }
+  border-top-color: #71ca7a; }
 
 .charitable-fes-campaign-creator-toolbar {
-  background-color: #df745f; }
+  background-color: #8ad391; }
 
 .sticky .post-title, .sticky .entry-header .entry-title, .entry-header .sticky .entry-title {
-  border-color: #df745f; }
+  border-color: #8ad391; }
 
 .with-icon::before, body, button:hover,
 input[type="button"]:hover,
@@ -233,11 +238,11 @@ input[type="reset"]:hover,
 input[type="submit"]:hover, .menu-site a, .button:hover, .button-alt,
 .button-secondary,
 .button.button-alt,
-.button.button-secondary, .modal .block-title, .modal-close:before, .meta a, #submit, .share-widget .modal,
-.share-widget .modal .block-title, .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .campaigns-grid .campaign-description, .campaigns-grid .campaign-stats, .charitable-donation-form .charitable-form-field .button, .donation-amounts .donation-amount, #custom-donation-amount-field.charitable-custom-donation-field-alone input, body.user-dashboard .charitable-form .charitable-submit-field .button, .charitable-form-field-editor .mce-btn button, .charitable-repeatable-form-field-table .remove:before, .charitable-repeatable-form-field-table .add-row.button, .user-post-actions a, div.printfriendly a,
+.button.button-secondary, .modal .block-title, .modal-close:before, .modal-close:hover:before, .meta a, #submit, .share-widget .modal,
+.share-widget .modal .block-title, .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .campaigns-grid .campaign-description, .campaigns-grid .campaign-stats, .charitable-donation-form .charitable-form-field .button, .donation-amounts .donation-amount, #custom-donation-amount-field.charitable-custom-donation-field-alone input, body.user-dashboard .charitable-form .charitable-submit-field .button, .user-dashboard-menu li a, .charitable-form-field-editor .mce-btn button, .charitable-repeatable-form-field-table .remove:before, .charitable-repeatable-form-field-table .add-row.button, .charitable-notice, .user-post-actions a, div.printfriendly a,
 div.printfriendly a:link,
 div.printfriendly a:visited, body.events-single .tribe-events-tickets .tickets_price, body.events-single .tribe-events-tickets .tickets_name, #tribe-events .tribe-events-button {
-  color: #7d6e63; }
+  color: #354044; }
 
 button,
 input[type="button"],
@@ -246,7 +251,7 @@ input[type="submit"], .button, .button-alt:hover,
 .button-secondary:hover,
 .button.button-alt:hover,
 .button.button-secondary:hover, #submit:hover, .widget.widget_campaign_creator_widget .creator-profile-link a, .charitable-donation-form .charitable-form-field .button:hover, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-form .charitable-submit-field .button:hover, #tribe-events .tribe-events-button:hover {
-  background-color: #7d6e63; }
+  background-color: #354044; }
 
 button,
 input[type="button"],
@@ -258,19 +263,52 @@ input[type="submit"]:hover, .button, .button:hover, .button-alt,
 .button-secondary,
 .button.button-alt,
 .button.button-secondary, #submit, .widget.widget_campaign_creator_widget .creator-profile-link a, .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .charitable-donation-form .charitable-form-field .button, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-form .charitable-submit-field .button, .charitable-repeatable-form-field-table .add-row.button, #tribe-events .tribe-events-button {
-  border-color: #7d6e63; }
+  border-color: #354044; }
 
 .shadow-wrapper::before {
-  border-right-color: #7d6e63; }
+  border-right-color: #354044; }
 
 .shadow-wrapper::after {
-  border-left-color: #7d6e63; }
+  border-left-color: #354044; }
 
-.assistive-text:hover, .assistive-text:active, .assistive-text:focus,
-.screen-reader-text:hover,
-.screen-reader-text:active,
-.screen-reader-text:focus, .modal-close:hover:before, .user-dashboard-menu li a, .charitable-notice {
-  color: #574c45; }
+.with-icon::before, body, button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover, .menu-site a, .button:hover, .button-alt,
+.button-secondary,
+.button.button-alt,
+.button.button-secondary, .modal .block-title, .modal-close:before, .modal-close:hover:before, .meta a, #submit, .share-widget .modal,
+.share-widget .modal .block-title, .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .campaigns-grid .campaign-description, .campaigns-grid .campaign-stats, .charitable-donation-form .charitable-form-field .button, .donation-amounts .donation-amount, #custom-donation-amount-field.charitable-custom-donation-field-alone input, body.user-dashboard .charitable-form .charitable-submit-field .button, .user-dashboard-menu li a, .charitable-form-field-editor .mce-btn button, .charitable-repeatable-form-field-table .remove:before, .charitable-repeatable-form-field-table .add-row.button, .charitable-notice, .user-post-actions a, div.printfriendly a,
+div.printfriendly a:link,
+div.printfriendly a:visited, body.events-single .tribe-events-tickets .tickets_price, body.events-single .tribe-events-tickets .tickets_name, #tribe-events .tribe-events-button {
+  color: #354044; }
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"], .button, .button-alt:hover,
+.button-secondary:hover,
+.button.button-alt:hover,
+.button.button-secondary:hover, #submit:hover, .widget.widget_campaign_creator_widget .creator-profile-link a, .charitable-donation-form .charitable-form-field .button:hover, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-form .charitable-submit-field .button:hover, #tribe-events .tribe-events-button:hover {
+  background-color: #354044; }
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"], button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover, .button, .button:hover, .button-alt,
+.button-secondary,
+.button.button-alt,
+.button.button-secondary, #submit, .widget.widget_campaign_creator_widget .creator-profile-link a, .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .charitable-donation-form .charitable-form-field .button, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-form .charitable-submit-field .button, .charitable-repeatable-form-field-table .add-row.button, #tribe-events .tribe-events-button {
+  border-color: #354044; }
+
+.shadow-wrapper::before {
+  border-right-color: #354044; }
+
+.shadow-wrapper::after {
+  border-left-color: #354044; }
 
 button,
 input[type="button"],
@@ -312,44 +350,44 @@ input[type="submit"], .button, .button-alt:hover,
 .assistive-text:hover, .assistive-text:active, .assistive-text:focus,
 .screen-reader-text:hover,
 .screen-reader-text:active,
-.screen-reader-text:focus, .modal-close:hover:before, .user-dashboard-menu li a, .charitable-notice {
+.screen-reader-text:focus {
   color: #574c45; }
 
 .meta, .comment-meta, body.author .author-activity-feed .activity-summary .time-ago, body.author .author-activity-feed .activity-summary::before, .charitable-donation-form .edd-price-option-price .currency {
-  color: #bdb2ab; }
+  color: #abbfc6; }
 
 .user-dashboard-menu li a {
-  background-color: #bdb2ab; }
+  background-color: #abbfc6; }
 
 .campaigns-grid .campaign {
-  color: #e2dedb; }
+  color: #dee5e8; }
 
 .user-dashboard-menu li.current-menu-item a::after,
 .user-dashboard-menu li a:hover::after, .charitable-form-field-editor .wp-editor-container {
-  background-color: #e2dedb; }
+  background-color: #dee5e8; }
 
 table, th,
 td, .block, .widget, .stripped .site-main, body.author .site-main, .widget.widget_charitable_edd_campaign_downloads .widget-block, .widget.widget_charitable_donate_widget .widget-block, .widget.widget_charitable_donate_widget .charitable-donation-form-without-suggestions, .campaign-donation-page.stripped .charitable-donation-form, .charitable-donation-form .charitable-connected-downloads, .user-dashboard-menu li.current-menu-item a,
 .user-dashboard-menu li a:hover, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) select, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) textarea, .charitable-fieldset:before, .charitable-notice, .charitable-user-post, .charitable-user-post:after, .edd-checkout-template.stripped .entry-block, body.events-single .tribe-events-event-meta, .widget.widget_pp_campaign_events .widget-block {
-  border-color: #e2dedb; }
+  border-color: #dee5e8; }
 
 .multi-block .content-block:nth-of-type(1n+2), .meta-below, body.author .author-activity-feed, .widget.widget_campaign_creator_widget .creator-bio, .campaign .campaign-stats, .campaigns-grid .campaign-stats, .charitable-campaign-form-table tfoot td, .charitable-repeatable-form-field-table td, .charitable-fieldset .charitable-fieldset, .user-post-actions, body.events-single .tribe-events-tickets {
-  border-top-color: #e2dedb; }
+  border-top-color: #dee5e8; }
 
 legend, .menu-site li, .block-title, .widget_search.widget .search-field, .post-title, .entry-header .entry-title, .meta-above, .comment,
 .pingback, body.author .author-description, body.author .author-activity-feed li, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd_price_options li, .charitable-donation-form .charitable-edd-connected-download, .user-post-stats.campaign-stats li, .user-post-actions .actions li, body.events-single .tribe-events-tickets .eddtickets-add, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd_price_options li, .event-tickets li {
-  border-bottom-color: #e2dedb; }
+  border-bottom-color: #dee5e8; }
 
 .meta .author,
 .meta .comment-count,
 .meta .tags, .campaign .campaign-stats li, .campaigns-grid .campaign-stats li {
-  border-left-color: #e2dedb; }
+  border-left-color: #dee5e8; }
 
 th {
-  border-right-color: #dbd5d1; }
+  border-right-color: #d3dee1; }
 
 .widget-title {
-  border-bottom-color: #dbd5d1; }
+  border-bottom-color: #d3dee1; }
 
 .campaign-summary .campaign-image .campaign-successful {
   background-color: #1ba714; }
@@ -611,9 +649,7 @@ a img {
   padding-left: 1.4rem; }
   .with-icon::before {
     position: absolute;
-    left: 0;
-    top: 3px;
-    top: 0.3rem; }
+    left: 0; }
 
 .icon:hover {
   text-decoration: none; }
@@ -1889,9 +1925,7 @@ a {
     text-decoration: none; }
     .account-links .button.button-alt::before {
       left: 10px;
-      left: 1rem;
-      top: 8px;
-      top: 0.8rem; }
+      left: 1rem; }
     .account-links .button.button-alt::after {
       display: none; }
   @media (min-width: 37.5em) {
@@ -1912,8 +1946,7 @@ a {
     text-decoration: none; }
   @media (min-width: 37.5em) {
     .logout {
-      position: relative;
-      right: 0;
+      position: static;
       margin-left: 12px;
       margin-left: 1.2rem; } }
 
@@ -4664,7 +4697,7 @@ div.printfriendly {
   height: 50px;
   height: 5rem;
   border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 0 3px #d95b43; }
+  box-shadow: 0 0 0 3px #71ca7a; }
 #edd_checkout_wrap .edd_empty_cart {
   display: block;
   padding: 0px 36px 36px;
@@ -4930,4 +4963,4 @@ body.tribe-mobile #main {
       margin-bottom: 0;
       padding-bottom: 0; }
 
-/*# sourceMappingURL=_classic.css.map */
+/*# sourceMappingURL=_custom.css.map */

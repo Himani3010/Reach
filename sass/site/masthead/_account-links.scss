@@ -14,15 +14,30 @@
 
 	a,
 	a:before {
-		@include color( $color__text-overlay );
+		@include color( $color__text-overlay );		
 	}
-
+	
 	.button.button-alt {
 		display: inline-block;	
-		@include margin( 10, 0, 10, 8 );
 		max-width: 100%;
+		@include margin( 10, 0, 10, 8 );		
+		@include padding-left( 24 );		
 		@include color( $color__text-overlay );
 		text-decoration: none;
+
+		&::before {
+			@include left( 10 );
+			@include top( 8 );
+		}
+
+		&::after {
+			display: none;
+		}
+
+		&:hover {
+			@include background-color( $color__accent );
+			@include border-color( $color__accent );
+		}
 	}
 
 	@include bp( 600 ) {
@@ -44,7 +59,8 @@
 	}
 
 	@include bp( 600 ) {
-		position: static;
+		position: relative;
+		right: 0;
 		@include margin-left( 12 );
 	}
 }

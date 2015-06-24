@@ -22,11 +22,7 @@
 
     .creator-bio {
         @include padding-top( 12 );
-        border-top: {
-            @include width( 1 );
-            style: solid;
-            color: $color__border-primary;
-        }
+        @include border-top( 1 );
     }
 
     .creator-links {
@@ -38,9 +34,8 @@
 
     .creator-profile-link {
         a {
-            @extend .button;
-            @extend .button-secondary;
-            margin: 0;
+            @include button;
+            margin: 0;            
         }
     }
 

@@ -3,16 +3,11 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	@include button;
-	@include height( 31 );
 	
-	&.button {
-		@include height( 31 );
-	}
-
 	&.button-large {
+		@include padding-top( 12 );
+		@include padding-bottom( 12 );
 		@include font-size( 25 );
-		@include height( 50 );
-		@include line-height( 50 );
 	}
 
 	&:hover,

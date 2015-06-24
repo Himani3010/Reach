@@ -22,7 +22,7 @@ blockquote {
 	@include margin( 0, 0, 12 );		
 	@include font-size( 14 );
 	@include line-height( 21 );
-	background-color: $color__background-blockquote;
+	@include background-color( $color__background-blockquote );
 
 	p:last-child {
 		padding-bottom: 0;
@@ -48,7 +48,7 @@ pre {
 	@include padding( 12 );
 	@include margin( 0, 0, 12 );
 	font-family: $font__code;	
-	background-color: $color__background-blockquote;	
+	@include background-color( $color__background-blockquote );
 	@include hidden-overflow();
 	white-space: pre-wrap;
 	white-space: -moz-pre-wrap;

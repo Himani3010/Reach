@@ -6,7 +6,7 @@
 
 	.campaign.block {
 		max-width: 100%;
-		margin-bottom: 24px; margin-bottom: 2.4rem;
+		@include margin-bottom( 24 );
 		border: none;	
 		overflow: hidden;
 	}
@@ -17,7 +17,8 @@
 		max-width: 100%;
 		@include margin-bottom( 24 );
 		border: none;
-		@include box-shadow( 0 0 0 1px $color__border-primary );
+		@include color( $color__border-primary ); // box-shadow will fall back to using this as the colour
+		box-shadow: 0 0 0 1px;
 	}	
 
 	.campaign-image {
@@ -34,6 +35,7 @@
 	}
 
 	.campaign-description {
+		@include color( $color__text );
 		text-shadow: none;
 	}
 
@@ -49,11 +51,8 @@
 	.campaign-stats {		
 		@include padding( 6, 0 );
 		margin: 0;
-		border-top: {
-			@include width( 1 ); 
-			style: solid;
-			color: $color__border-primary;
-		}
+		@include border-top( 1 );
+		@include color( $color__text );
 		text-align: center;
 		list-style: none;
 
@@ -62,11 +61,7 @@
 			display: inline-block;
 			@include padding( 0, 6, 0, 10 );
 			margin: 0;
-			border-left: {
-				@include width( 1 ); 
-				style: solid;
-				color: $color__border-primary;
-			}
+			@include border-left( 1 );			
 			@include font-size ( 10 );
 			font-style: italic;		
 			span {

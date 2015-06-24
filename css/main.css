@@ -35,328 +35,6 @@ and Blueprint http://www.blueprintcss.org/
 /*-------------------------------------------------------------- 
 0.1 Palette
 --------------------------------------------------------------*/
-#custom-donation-amount-field.charitable-custom-donation-field-alone ::-webkit-input-placeholder, #custom-donation-amount-field.charitable-custom-donation-field-alone ::-moz-placeholder, #custom-donation-amount-field.charitable-custom-donation-field-alone :-ms-input-placeholder {
-  color: #aea198; }
-
-body, #custom-donation-amount-field.charitable-custom-donation-field-alone {
-  background-color: #aea198; }
-
-.donation-amounts .donation-amount {
-  border-color: #aea198; }
-
-.menu-site, .assistive-text:hover, .assistive-text:active, .assistive-text:focus,
-.screen-reader-text:hover,
-.screen-reader-text:active,
-.screen-reader-text:focus, #header, #main, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) {
-  background-color: #f9f8f7; }
-
-.user-dashboard-menu li a {
-  border-color: #f9f8f7; }
-
-.menu-site, .assistive-text:hover, .assistive-text:active, .assistive-text:focus,
-.screen-reader-text:hover,
-.screen-reader-text:active,
-.screen-reader-text:focus, #header, #main, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) {
-  background-color: #f9f8f7; }
-
-.user-dashboard-menu li a {
-  border-color: #f9f8f7; }
-
-blockquote, pre, th, input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="date"],
-textarea, .widget, .meta, .comments-section input[type=email],
-.comments-section input[type=text],
-.comments-section textarea, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .charitable-donation-form .charitable-connected-downloads, .charitable-campaign-form-table tfoot td, .charitable-form-field-multi-checkbox ul, .charitable-notice, .charitable-user-post:after, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
-  background-color: #f1efee; }
-
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"], .button, .button-alt:hover,
-.button-secondary:hover,
-.button.button-alt:hover,
-.button.button-secondary:hover, .button-alt.accent:hover,
-.button-secondary.accent:hover,
-.button.button-alt.accent:hover,
-.button.button-secondary.accent:hover, .feature-block, .account-links a,
-.account-links a:before, .account-links .button.button-alt, .banner, .sticky, .sticky a, #submit:hover, .campaign-summary .campaign-image span, .campaign-summary .donate-button:hover, .campaign-summary .campaign-sharing .icon:before, .charitable-fes-campaign-creator-toolbar, .charitable-fes-campaign-creator-toolbar a, .charitable-fes-campaign-creator-toolbar a:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button:focus, .widget.widget_campaign_creator_widget .creator-profile-link a, .charitable-donation-form .charitable-form-field .button:hover, .charitable-donation-form .charitable-form-field .button:focus, .charitable-donation-form .charitable-form-field .button:active, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-form .charitable-submit-field .button:hover, body.user-dashboard .charitable-form .charitable-submit-field .button.button-primary:hover, body .edd-submit.button.gray:focus, body .edd-submit.button.gray:active, body .edd-submit.button.gray:hover, body .edd-submit.button.white:focus, body .edd-submit.button.white:active, body .edd-submit.button.white:hover, body .edd-submit.button.blue:focus, body .edd-submit.button.blue:active, body .edd-submit.button.blue:hover, body .edd-submit.button.red:focus, body .edd-submit.button.red:active, body .edd-submit.button.red:hover, body .edd-submit.button.orange:focus, body .edd-submit.button.orange:active, body .edd-submit.button.orange:hover, body .edd-submit.button.green:focus, body .edd-submit.button.green:active, body .edd-submit.button.green:hover, body .edd-submit.button.yellow:focus, body .edd-submit.button.yellow:active, body .edd-submit.button.yellow:hover, body .edd-submit.button.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .edd-submit.button.dark-gray:hover, #edd_checkout_wrap #edd-purchase-button, #tribe-events .tribe-events-button:hover {
-  color: #ffffff; }
-
-.entry-block, .content-block, .modal, .widget tfoot td,
-.widget th,
-.widget input[type=text]:focus,
-.widget input[type=password]:focus,
-.widget input[type=email]:focus,
-.widget input[type=number]:focus,
-.widget textarea:focus,
-.widget input[type=text]:active,
-.widget input[type=password]:active,
-.widget input[type=email]:active,
-.widget input[type=number]:active,
-.widget textarea:active, .widget.content-block, .widget_search.widget .search-field:focus, .stripped .site-main, .comments-section, body.author .site-main, .widget.widget_charitable_edd_campaign_downloads .widget-block, .widget.widget_charitable_donate_widget .widget-block, .widget.widget_charitable_donate_widget .charitable-donation-form-without-suggestions, .campaign-donation-page.stripped .charitable-donation-form, .charitable-donation-form #custom-donation-amount-field input, .charitable-donation-form .charitable-edd-connected-download.selected, .donation-amounts .donation-amount, .donation-amounts .donation-amount.custom-donation-amount input[type=text]:focus, .donation-amounts .donation-amount.custom-donation-amount input[type=text]:active, #custom-donation-amount-field.charitable-custom-donation-field-alone input, .user-dashboard-menu li.current-menu-item a,
-.user-dashboard-menu li a:hover, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) select, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) textarea, .charitable-repeatable-form-field-table .add-row.button, .charitable-fieldset .legend, #edd_checkout_wrap fieldset#edd_cc_fields input,
-#edd_checkout_wrap fieldset#edd_cc_fields select,
-#edd_checkout_wrap fieldset#edd_cc_fields textarea, .edd-checkout-template.stripped .entry-block, .widget.widget_pp_campaign_events .widget-block {
-  background-color: #ffffff; }
-
-.sticky {
-  border-color: #ffffff; }
-
-.user-dashboard-menu li.current-menu-item a,
-.user-dashboard-menu li a:hover {
-  border-bottom-color: #ffffff; }
-
-.with-icon::before, body, button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover, .menu-site a, .button:hover, .button-alt,
-.button-secondary,
-.button.button-alt,
-.button.button-secondary, .modal .block-title, .modal-close:before, .meta a, #submit, .share-widget .modal,
-.share-widget .modal .block-title, .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .campaigns-grid .campaign-description, .campaigns-grid .campaign-stats, .charitable-donation-form .charitable-form-field .button, .donation-amounts .donation-amount, #custom-donation-amount-field.charitable-custom-donation-field-alone input, body.user-dashboard .charitable-form .charitable-submit-field .button, .charitable-form-field-editor .mce-btn button, .charitable-repeatable-form-field-table .remove:before, .charitable-repeatable-form-field-table .add-row.button, .user-post-actions a, div.printfriendly a,
-div.printfriendly a:link,
-div.printfriendly a:visited, body.events-single .tribe-events-tickets .tickets_price, body.events-single .tribe-events-tickets .tickets_name, #tribe-events .tribe-events-button {
-  color: #7d6e63; }
-
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"], .button, .button-alt:hover,
-.button-secondary:hover,
-.button.button-alt:hover,
-.button.button-secondary:hover, #submit:hover, .widget.widget_campaign_creator_widget .creator-profile-link a, .charitable-donation-form .charitable-form-field .button:hover, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-form .charitable-submit-field .button:hover, #tribe-events .tribe-events-button:hover {
-  background-color: #7d6e63; }
-
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"], button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover, .button, .button:hover, .button-alt,
-.button-secondary,
-.button.button-alt,
-.button.button-secondary, #submit, .widget.widget_campaign_creator_widget .creator-profile-link a, .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .charitable-donation-form .charitable-form-field .button, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-form .charitable-submit-field .button, .charitable-repeatable-form-field-table .add-row.button, #tribe-events .tribe-events-button {
-  border-color: #7d6e63; }
-
-.shadow-wrapper::before {
-  border-right-color: #7d6e63; }
-
-.shadow-wrapper::after {
-  border-left-color: #7d6e63; }
-
-blockquote, pre, th, input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="date"],
-textarea, .widget, .meta, .comments-section input[type=email],
-.comments-section input[type=text],
-.comments-section textarea, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .charitable-donation-form .charitable-connected-downloads, .charitable-campaign-form-table tfoot td, .charitable-form-field-multi-checkbox ul, .charitable-notice, .charitable-user-post:after, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
-  background-color: #f1efee; }
-
-blockquote, pre, th, input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="date"],
-textarea, .widget, .meta, .comments-section input[type=email],
-.comments-section input[type=text],
-.comments-section textarea, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .charitable-donation-form .charitable-connected-downloads, .charitable-campaign-form-table tfoot td, .charitable-form-field-multi-checkbox ul, .charitable-notice, .charitable-user-post:after, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
-  background-color: #f1efee; }
-
-blockquote, pre, th, input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="date"],
-textarea, .widget, .meta, .comments-section input[type=email],
-.comments-section input[type=text],
-.comments-section textarea, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .charitable-donation-form .charitable-connected-downloads, .charitable-campaign-form-table tfoot td, .charitable-form-field-multi-checkbox ul, .charitable-notice, .charitable-user-post:after, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
-  background-color: #f1efee; }
-
-blockquote, pre, th, input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="date"],
-textarea, .widget, .meta, .comments-section input[type=email],
-.comments-section input[type=text],
-.comments-section textarea, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .charitable-donation-form .charitable-connected-downloads, .charitable-campaign-form-table tfoot td, .charitable-form-field-multi-checkbox ul, .charitable-notice, .charitable-user-post:after, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
-  background-color: #f1efee; }
-
-a, .menu-site a:hover, .menu-button, .button-alt.accent,
-.button-secondary.accent,
-.button.button-alt.accent,
-.button.button-secondary.accent, .block-title, .site-title a, .post-title a, .entry-header .entry-title a, .bypostauthor .post-author i, body.author .author-activity-summary .number, body.author .author-activity-feed .activity-summary .display-name,
-body.author .author-activity-feed .activity-summary a, .widget.widget_charitable_edd_campaign_downloads .download-price, .widget.widget_charitable_donate_widget .charitable-submit-field .button, .campaign .campaign-stats li span, .campaigns-grid .campaign-stats li span, .charitable-donation-form .charitable-form-field .button, body.user-dashboard .charitable-form .charitable-submit-field .button.button-primary, .user-dashboard-menu li.current-menu-item a,
-.user-dashboard-menu li a:hover, .charitable-repeatable-form-field-table .remove:hover:before, .charitable-fieldset .legend, .entry-header .entry-title, .user-post-actions a:hover, body .edd-submit.button.gray, body .edd-submit.button.white, body .edd-submit.button.blue, body .edd-submit.button.red, body .edd-submit.button.orange, body .edd-submit.button.green, body .edd-submit.button.yellow, body .edd-submit.button.dark-gray, .widget.widget_pp_campaign_events .download-price {
-  color: #d95b43; }
-
-.button-alt.accent:hover,
-.button-secondary.accent:hover,
-.button.button-alt.accent:hover,
-.button.button-secondary.accent:hover, .feature-block, .account-links .button.button-alt:hover, .banner, .sticky, .widget.widget_charitable_donate_widget .charitable-submit-field .button:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button:focus, .charitable-donation-form .charitable-form-field .button:hover, .charitable-donation-form .charitable-form-field .button:focus, .charitable-donation-form .charitable-form-field .button:active, body.user-dashboard .charitable-form .charitable-submit-field .button.button-primary:hover, body .edd-submit.button.gray:focus, body .edd-submit.button.gray:active, body .edd-submit.button.gray:hover, body .edd-submit.button.white:focus, body .edd-submit.button.white:active, body .edd-submit.button.white:hover, body .edd-submit.button.blue:focus, body .edd-submit.button.blue:active, body .edd-submit.button.blue:hover, body .edd-submit.button.red:focus, body .edd-submit.button.red:active, body .edd-submit.button.red:hover, body .edd-submit.button.orange:focus, body .edd-submit.button.orange:active, body .edd-submit.button.orange:hover, body .edd-submit.button.green:focus, body .edd-submit.button.green:active, body .edd-submit.button.green:hover, body .edd-submit.button.yellow:focus, body .edd-submit.button.yellow:active, body .edd-submit.button.yellow:hover, body .edd-submit.button.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .edd-submit.button.dark-gray:hover, #edd_checkout_wrap #edd-purchase-button {
-  background-color: #d95b43; }
-
-.button-alt.accent,
-.button-secondary.accent,
-.button.button-alt.accent,
-.button.button-secondary.accent, .account-links .button.button-alt:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button, .charitable-donation-form .charitable-form-field .button, body.user-dashboard .charitable-form .charitable-submit-field .button.button-primary, body .edd-submit.button.gray, body .edd-submit.button.white, body .edd-submit.button.blue, body .edd-submit.button.red, body .edd-submit.button.orange, body .edd-submit.button.green, body .edd-submit.button.yellow, body .edd-submit.button.dark-gray, body .edd-submit.button.gray:focus, body .edd-submit.button.gray:active, body .edd-submit.button.gray:hover, body .edd-submit.button.white:focus, body .edd-submit.button.white:active, body .edd-submit.button.white:hover, body .edd-submit.button.blue:focus, body .edd-submit.button.blue:active, body .edd-submit.button.blue:hover, body .edd-submit.button.red:focus, body .edd-submit.button.red:active, body .edd-submit.button.red:hover, body .edd-submit.button.orange:focus, body .edd-submit.button.orange:active, body .edd-submit.button.orange:hover, body .edd-submit.button.green:focus, body .edd-submit.button.green:active, body .edd-submit.button.green:hover, body .edd-submit.button.yellow:focus, body .edd-submit.button.yellow:active, body .edd-submit.button.yellow:hover, body .edd-submit.button.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .edd-submit.button.dark-gray:hover {
-  border-color: #d95b43; }
-
-.toggled .menu-site, .toggled .menu-site ul {
-  border-top-color: #d95b43; }
-
-.charitable-fes-campaign-creator-toolbar {
-  background-color: #df745f; }
-
-.sticky .post-title, .sticky .entry-header .entry-title, .entry-header .sticky .entry-title {
-  border-color: #df745f; }
-
-.with-icon::before, body, button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover, .menu-site a, .button:hover, .button-alt,
-.button-secondary,
-.button.button-alt,
-.button.button-secondary, .modal .block-title, .modal-close:before, .meta a, #submit, .share-widget .modal,
-.share-widget .modal .block-title, .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .campaigns-grid .campaign-description, .campaigns-grid .campaign-stats, .charitable-donation-form .charitable-form-field .button, .donation-amounts .donation-amount, #custom-donation-amount-field.charitable-custom-donation-field-alone input, body.user-dashboard .charitable-form .charitable-submit-field .button, .charitable-form-field-editor .mce-btn button, .charitable-repeatable-form-field-table .remove:before, .charitable-repeatable-form-field-table .add-row.button, .user-post-actions a, div.printfriendly a,
-div.printfriendly a:link,
-div.printfriendly a:visited, body.events-single .tribe-events-tickets .tickets_price, body.events-single .tribe-events-tickets .tickets_name, #tribe-events .tribe-events-button {
-  color: #7d6e63; }
-
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"], .button, .button-alt:hover,
-.button-secondary:hover,
-.button.button-alt:hover,
-.button.button-secondary:hover, #submit:hover, .widget.widget_campaign_creator_widget .creator-profile-link a, .charitable-donation-form .charitable-form-field .button:hover, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-form .charitable-submit-field .button:hover, #tribe-events .tribe-events-button:hover {
-  background-color: #7d6e63; }
-
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"], button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover, .button, .button:hover, .button-alt,
-.button-secondary,
-.button.button-alt,
-.button.button-secondary, #submit, .widget.widget_campaign_creator_widget .creator-profile-link a, .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .charitable-donation-form .charitable-form-field .button, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-form .charitable-submit-field .button, .charitable-repeatable-form-field-table .add-row.button, #tribe-events .tribe-events-button {
-  border-color: #7d6e63; }
-
-.shadow-wrapper::before {
-  border-right-color: #7d6e63; }
-
-.shadow-wrapper::after {
-  border-left-color: #7d6e63; }
-
-.assistive-text:hover, .assistive-text:active, .assistive-text:focus,
-.screen-reader-text:hover,
-.screen-reader-text:active,
-.screen-reader-text:focus, .modal-close:hover:before, .user-dashboard-menu li a, .charitable-notice {
-  color: #574c45; }
-
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"], .button, .button-alt:hover,
-.button-secondary:hover,
-.button.button-alt:hover,
-.button.button-secondary:hover, .button-alt.accent:hover,
-.button-secondary.accent:hover,
-.button.button-alt.accent:hover,
-.button.button-secondary.accent:hover, .feature-block, .account-links a,
-.account-links a:before, .account-links .button.button-alt, .banner, .sticky, .sticky a, #submit:hover, .campaign-summary .campaign-image span, .campaign-summary .donate-button:hover, .campaign-summary .campaign-sharing .icon:before, .charitable-fes-campaign-creator-toolbar, .charitable-fes-campaign-creator-toolbar a, .charitable-fes-campaign-creator-toolbar a:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button:focus, .widget.widget_campaign_creator_widget .creator-profile-link a, .charitable-donation-form .charitable-form-field .button:hover, .charitable-donation-form .charitable-form-field .button:focus, .charitable-donation-form .charitable-form-field .button:active, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-form .charitable-submit-field .button:hover, body.user-dashboard .charitable-form .charitable-submit-field .button.button-primary:hover, body .edd-submit.button.gray:focus, body .edd-submit.button.gray:active, body .edd-submit.button.gray:hover, body .edd-submit.button.white:focus, body .edd-submit.button.white:active, body .edd-submit.button.white:hover, body .edd-submit.button.blue:focus, body .edd-submit.button.blue:active, body .edd-submit.button.blue:hover, body .edd-submit.button.red:focus, body .edd-submit.button.red:active, body .edd-submit.button.red:hover, body .edd-submit.button.orange:focus, body .edd-submit.button.orange:active, body .edd-submit.button.orange:hover, body .edd-submit.button.green:focus, body .edd-submit.button.green:active, body .edd-submit.button.green:hover, body .edd-submit.button.yellow:focus, body .edd-submit.button.yellow:active, body .edd-submit.button.yellow:hover, body .edd-submit.button.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .edd-submit.button.dark-gray:hover, #edd_checkout_wrap #edd-purchase-button, #tribe-events .tribe-events-button:hover {
-  color: #ffffff; }
-
-.entry-block, .content-block, .modal, .widget tfoot td,
-.widget th,
-.widget input[type=text]:focus,
-.widget input[type=password]:focus,
-.widget input[type=email]:focus,
-.widget input[type=number]:focus,
-.widget textarea:focus,
-.widget input[type=text]:active,
-.widget input[type=password]:active,
-.widget input[type=email]:active,
-.widget input[type=number]:active,
-.widget textarea:active, .widget.content-block, .widget_search.widget .search-field:focus, .stripped .site-main, .comments-section, body.author .site-main, .widget.widget_charitable_edd_campaign_downloads .widget-block, .widget.widget_charitable_donate_widget .widget-block, .widget.widget_charitable_donate_widget .charitable-donation-form-without-suggestions, .campaign-donation-page.stripped .charitable-donation-form, .charitable-donation-form #custom-donation-amount-field input, .charitable-donation-form .charitable-edd-connected-download.selected, .donation-amounts .donation-amount, .donation-amounts .donation-amount.custom-donation-amount input[type=text]:focus, .donation-amounts .donation-amount.custom-donation-amount input[type=text]:active, #custom-donation-amount-field.charitable-custom-donation-field-alone input, .user-dashboard-menu li.current-menu-item a,
-.user-dashboard-menu li a:hover, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) select, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) textarea, .charitable-repeatable-form-field-table .add-row.button, .charitable-fieldset .legend, #edd_checkout_wrap fieldset#edd_cc_fields input,
-#edd_checkout_wrap fieldset#edd_cc_fields select,
-#edd_checkout_wrap fieldset#edd_cc_fields textarea, .edd-checkout-template.stripped .entry-block, .widget.widget_pp_campaign_events .widget-block {
-  background-color: #ffffff; }
-
-.sticky {
-  border-color: #ffffff; }
-
-.user-dashboard-menu li.current-menu-item a,
-.user-dashboard-menu li a:hover {
-  border-bottom-color: #ffffff; }
-
-.assistive-text:hover, .assistive-text:active, .assistive-text:focus,
-.screen-reader-text:hover,
-.screen-reader-text:active,
-.screen-reader-text:focus, .modal-close:hover:before, .user-dashboard-menu li a, .charitable-notice {
-  color: #574c45; }
-
-.meta, .comment-meta, body.author .author-activity-feed .activity-summary .time-ago, body.author .author-activity-feed .activity-summary::before, .charitable-donation-form .edd-price-option-price .currency {
-  color: #bdb2ab; }
-
-.user-dashboard-menu li a {
-  background-color: #bdb2ab; }
-
-.campaigns-grid .campaign {
-  color: #e2dedb; }
-
-.user-dashboard-menu li.current-menu-item a::after,
-.user-dashboard-menu li a:hover::after, .charitable-form-field-editor .wp-editor-container {
-  background-color: #e2dedb; }
-
-table, th,
-td, .block, .widget, .stripped .site-main, body.author .site-main, .widget.widget_charitable_edd_campaign_downloads .widget-block, .widget.widget_charitable_donate_widget .widget-block, .widget.widget_charitable_donate_widget .charitable-donation-form-without-suggestions, .campaign-donation-page.stripped .charitable-donation-form, .charitable-donation-form .charitable-connected-downloads, .user-dashboard-menu li.current-menu-item a,
-.user-dashboard-menu li a:hover, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) select, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) textarea, .charitable-fieldset:before, .charitable-notice, .charitable-user-post, .charitable-user-post:after, .edd-checkout-template.stripped .entry-block, body.events-single .tribe-events-event-meta, .widget.widget_pp_campaign_events .widget-block {
-  border-color: #e2dedb; }
-
-.multi-block .content-block:nth-of-type(1n+2), .meta-below, body.author .author-activity-feed, .widget.widget_campaign_creator_widget .creator-bio, .campaign .campaign-stats, .campaigns-grid .campaign-stats, .charitable-campaign-form-table tfoot td, .charitable-repeatable-form-field-table td, .charitable-fieldset .charitable-fieldset, .user-post-actions, body.events-single .tribe-events-tickets {
-  border-top-color: #e2dedb; }
-
-legend, .menu-site li, .block-title, .widget_search.widget .search-field, .post-title, .entry-header .entry-title, .meta-above, .comment,
-.pingback, body.author .author-description, body.author .author-activity-feed li, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd_price_options li, .charitable-donation-form .charitable-edd-connected-download, .user-post-stats.campaign-stats li, .user-post-actions .actions li, body.events-single .tribe-events-tickets .eddtickets-add, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd_price_options li, .event-tickets li {
-  border-bottom-color: #e2dedb; }
-
-.meta .author,
-.meta .comment-count,
-.meta .tags, .campaign .campaign-stats li, .campaigns-grid .campaign-stats li {
-  border-left-color: #e2dedb; }
-
-th {
-  border-right-color: #dbd5d1; }
-
-.widget-title {
-  border-bottom-color: #dbd5d1; }
-
-.campaign-summary .campaign-image .campaign-successful {
-  background-color: #1ba714; }
-
-.campaign-summary .campaign-image .campaign-unsuccessful {
-  background-color: #cc181e; }
-
 /*--------------------------------------------------------------
 1.0 Reset
 --------------------------------------------------------------*/
@@ -397,6 +75,7 @@ html {
   box-sizing: inherit; }
 
 body {
+  background-color: #aea198;
   /* Fallback for when there is no custom background color defined. */ }
 
 article,
@@ -613,7 +292,8 @@ a img {
     position: absolute;
     left: 0;
     top: 3px;
-    top: 0.3rem; }
+    top: 0.3rem;
+    color: #7d6e63; }
 
 .icon:hover {
   text-decoration: none; }
@@ -622,7 +302,8 @@ body {
   font-size: 12px;
   font-size: 1.2rem;
   line-height: 20px;
-  line-height: 2rem; }
+  line-height: 2rem;
+  color: #7d6e63; }
 
 body,
 input,
@@ -750,7 +431,8 @@ blockquote {
   font-size: 14px;
   font-size: 1.4rem;
   line-height: 21px;
-  line-height: 2.1rem; }
+  line-height: 2.1rem;
+  background-color: #f1efee; }
   blockquote p:last-child {
     padding-bottom: 0; }
   blockquote cite {
@@ -776,6 +458,7 @@ pre {
   margin: 0px 0px 12px;
   margin: 0rem 0rem 1.2rem;
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  background-color: #f1efee;
   overflow: hidden;
   text-overflow: ellipsis;
   /* Non standard for webkit */
@@ -887,6 +570,7 @@ table {
   border-width: 0px 0px 1px 1px;
   border-width: 0rem 0rem 0.1rem 0.1rem;
   border-style: solid;
+  border-color: #e2dedb;
   word-break: normal; }
   table caption {
     padding: 4px 0px;
@@ -900,11 +584,14 @@ td {
   padding: 6px 10px;
   padding: 0.6rem 1rem;
   border-style: solid;
+  border-color: #e2dedb;
   vertical-align: top; }
 
 th {
   border-width: 1px 1px 0px 0px;
   border-width: 0.1rem 0.1rem 0rem 0rem;
+  background-color: #f1efee;
+  border-right-color: #dbd5d1;
   text-align: left;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -967,6 +654,9 @@ input[type="submit"] {
   border-width: 3px;
   border-width: 0.3rem;
   border-style: solid;
+  border-color: #7d6e63;
+  background-color: #7d6e63;
+  color: #ffffff;
   /* Default settings */
   -webkit-transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
   -moz-transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
@@ -997,7 +687,9 @@ input[type="submit"] {
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
-    background-color: transparent; }
+    border-color: #7d6e63;
+    background-color: transparent;
+    color: #7d6e63; }
     button:hover::after,
     input[type="button"]:hover::after,
     input[type="reset"]:hover::after,
@@ -1064,6 +756,7 @@ textarea {
   font-size: 11px;
   font-size: 1.1rem;
   box-shadow: none;
+  background-color: #f1efee;
   /* Default settings */
   -webkit-transition: background-color 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
   -moz-transition: background-color 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
@@ -1115,6 +808,7 @@ legend {
   border-bottom-width: 1px;
   border-bottom-width: 0.1rem;
   border-bottom-style: solid;
+  border-bottom-color: #e2dedb;
   font-size: 18px;
   font-size: 1.8rem; }
 
@@ -1125,6 +819,7 @@ legend {
 5.1 Links
 --------------------------------------------------------------*/
 a {
+  color: #d95b43;
   text-decoration: none; }
   a:hover {
     cursor: pointer;
@@ -1145,6 +840,7 @@ a {
   height: 0;
   padding: 0;
   overflow: hidden;
+  background-color: #f9f8f7;
   /* Default settings */
   -webkit-transition: max-height 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
   -moz-transition: max-height 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
@@ -1155,6 +851,7 @@ a {
     border-bottom-width: 1px;
     border-bottom-width: 0.1rem;
     border-bottom-style: solid;
+    border-bottom-color: #e2dedb;
     list-style: none;
     line-height: 1em;
     letter-spacing: 1px;
@@ -1169,7 +866,10 @@ a {
     padding: 12px 0px;
     padding: 1.2rem 0rem;
     text-decoration: none;
-    font-weight: 400; }
+    font-weight: 400;
+    color: #7d6e63; }
+    .menu-site a:hover {
+      color: #d95b43; }
   @media (min-width: 50em) {
     .menu-site ul {
       position: absolute;
@@ -1239,13 +939,15 @@ a {
   max-height: 10000px;
   border-top-width: 2px;
   border-top-width: 0.2rem;
-  border-top-style: solid; }
+  border-top-style: solid;
+  border-top-color: #d95b43; }
   .toggled .menu-site ul {
     margin: 0;
     padding-left: 0;
     border-top-width: 1px;
     border-top-width: 0.1rem;
-    border-top-style: solid; }
+    border-top-style: solid;
+    border-top-color: #d95b43; }
   .toggled .menu-site li li {
     text-indent: 8%; }
     .toggled .menu-site li li li {
@@ -1257,7 +959,8 @@ a {
 /* .menu-button is used as a trigger class for toggling menus */
 .menu-button {
   font-size: 20px;
-  font-size: 2rem; }
+  font-size: 2rem;
+  color: #d95b43; }
   .menu-button:hover {
     text-decoration: none; }
   @media (min-width: 50em) {
@@ -1381,9 +1084,11 @@ a {
   .screen-reader-text:hover,
   .screen-reader-text:active,
   .screen-reader-text:focus {
+    background-color: #f9f8f7;
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
+    color: #574c45;
     display: block;
     font-size: 1.4px;
     font-size: 0.14rem;
@@ -1518,11 +1223,16 @@ a {
   border-width: 3px;
   border-width: 0.3rem;
   border-style: solid;
+  border-color: #7d6e63;
+  background-color: #7d6e63;
+  color: #ffffff;
   /* Default settings */
   -webkit-transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
   -moz-transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
   -o-transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
-  transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms; }
+  transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  background-color: #7d6e63;
+  border-color: #7d6e63; }
   .button:hover {
     text-decoration: none; }
   .button::after {
@@ -1539,7 +1249,9 @@ a {
     border-radius: 0.4rem;
     display: block; }
   .button:hover {
-    background-color: transparent; }
+    border-color: #7d6e63;
+    background-color: transparent;
+    color: #7d6e63; }
     .button:hover::after {
       border-color: transparent; }
   .button:hover {
@@ -1571,17 +1283,45 @@ a {
   border-width: 2px;
   border-width: 0.2rem;
   border-style: solid;
+  border-color: #7d6e63;
   background-color: transparent;
+  color: #7d6e63;
   /* Default settings */
   -webkit-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
   -moz-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
   -o-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
-  transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms; }
+  transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+  color: #7d6e63;
+  border-color: #7d6e63; }
   .button-alt:hover,
   .button-secondary:hover,
   .button.button-alt:hover,
   .button.button-secondary:hover {
     text-decoration: none; }
+  .button-alt:hover,
+  .button-secondary:hover,
+  .button.button-alt:hover,
+  .button.button-secondary:hover {
+    background-color: #7d6e63;
+    color: #ffffff; }
+  .button-alt:hover,
+  .button-secondary:hover,
+  .button.button-alt:hover,
+  .button.button-secondary:hover {
+    background-color: #7d6e63;
+    color: #ffffff; }
+  .button-alt.accent,
+  .button-secondary.accent,
+  .button.button-alt.accent,
+  .button.button-secondary.accent {
+    color: #d95b43;
+    border-color: #d95b43; }
+    .button-alt.accent:hover,
+    .button-secondary.accent:hover,
+    .button.button-alt.accent:hover,
+    .button.button-secondary.accent:hover {
+      background-color: #d95b43;
+      color: #ffffff; }
 
 .button-small,
 .button.button-small,
@@ -1614,12 +1354,14 @@ a {
   border-width: 1px;
   border-width: 0.1rem;
   border-style: solid;
+  border-color: #e2dedb;
   border-radius: 0.4rem; }
 
 .entry-block {
   position: relative;
   padding: 0px 24px;
   padding: 0rem 2.4rem;
+  background-color: #ffffff;
   box-shadow: 0 0 1px #ffffff;
   overflow-x: hidden; }
   @media (min-width: 50em) {
@@ -1631,7 +1373,8 @@ a {
 
 .content-block {
   padding: 0px 24px 24px;
-  padding: 0rem 2.4rem 2.4rem; }
+  padding: 0rem 2.4rem 2.4rem;
+  background-color: #ffffff; }
   @media (min-width: 50em) {
     .content-block {
       padding: 0px 36px 24px;
@@ -1642,7 +1385,8 @@ a {
 .multi-block .content-block:nth-of-type(1n+2) {
   border-top-width: 1px;
   border-top-width: 0.1rem;
-  border-top-style: solid; }
+  border-top-style: solid;
+  border-top-color: #e2dedb; }
 .multi-block .content-block:last-of-type {
   border-radius: 0 0 0.4rem 0.4rem; }
 
@@ -1654,6 +1398,8 @@ a {
   width: calc( 100% + 48px );
   padding: 0px 24px 36px 24px;
   padding: 0rem 2.4rem 3.6rem 2.4rem;
+  color: #ffffff;
+  background-color: #d95b43;
   background-repeat: repeat;
   box-shadow: none;
   border: none; }
@@ -1677,12 +1423,18 @@ a {
   padding-bottom: 0.4rem;
   border-bottom-width: 2px;
   border-bottom-width: 0.2rem;
-  border-bottom-style: solid; }
+  border-bottom-style: solid;
+  border-bottom-color: #e2dedb;
+  color: #d95b43; }
   .block-title:hover,
   .block-title a:hover {
     text-decoration: none; }
 
 /* Shadow wrapper */
+.shadow-wrapper::before {
+  border-right-color: #7d6e63; }
+.shadow-wrapper::after {
+  border-left-color: #7d6e63; }
 @media (min-width: 50em) {
   .shadow-wrapper::before, .shadow-wrapper::after {
     content: "";
@@ -1721,7 +1473,8 @@ a {
   padding: 24px;
   padding: 2.4rem;
   overflow: scroll;
-  border-radius: 0.4rem; }
+  border-radius: 0.4rem;
+  background-color: #ffffff; }
   @media (min-width: 31.25em) {
     .modal {
       width: 468px;
@@ -1730,7 +1483,8 @@ a {
       padding: 3.6rem; } }
   .modal .block-title {
     margin-top: 0;
-    border: none; }
+    border: none;
+    color: #7d6e63; }
   .modal.multi-block {
     padding-left: 0;
     padding-right: 0;
@@ -1769,9 +1523,12 @@ a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
   .modal-close:before {
-    content: "\f057"; }
+    content: "\f057";
+    color: #7d6e63; }
   .modal-close:hover {
     text-decoration: none; }
+    .modal-close:hover:before {
+      color: #574c45; }
 
 /*-------------------------------------------------------------- 
 14.0 Accordions
@@ -1801,7 +1558,8 @@ a {
   z-index: 50;
   padding: 24px 36px 0px 36px;
   padding: 2.4rem 3.6rem 0rem 3.6rem;
-  border-radius: 0.4rem 0.4rem 0 0; }
+  border-radius: 0.4rem 0.4rem 0 0;
+  background-color: #f9f8f7; }
 
 .site-identity {
   position: relative;
@@ -1825,6 +1583,8 @@ a {
   font-size: 3.4rem;
   line-height: 38px;
   line-height: 3.8rem; }
+  .site-title a {
+    color: #d95b43; }
 
 .site-tagline {
   padding: 6px 0px;
@@ -1879,6 +1639,9 @@ a {
   line-height: 4.4rem;
   font-weight: 300;
   text-align: center; }
+  .account-links a,
+  .account-links a:before {
+    color: #ffffff; }
   .account-links .button.button-alt {
     display: inline-block;
     max-width: 100%;
@@ -1886,6 +1649,7 @@ a {
     margin: 1rem 0rem 1rem 0.8rem;
     padding-left: 24px;
     padding-left: 2.4rem;
+    color: #ffffff;
     text-decoration: none; }
     .account-links .button.button-alt::before {
       left: 10px;
@@ -1894,6 +1658,9 @@ a {
       top: 0.8rem; }
     .account-links .button.button-alt::after {
       display: none; }
+    .account-links .button.button-alt:hover {
+      background-color: #d95b43;
+      border-color: #d95b43; }
   @media (min-width: 37.5em) {
     .account-links {
       float: right;
@@ -1928,7 +1695,9 @@ a {
   border-width: 1px;
   border-width: 0.1rem;
   border-style: solid;
+  border-color: #e2dedb;
   border-radius: 0.4rem;
+  background-color: #f1efee;
   overflow: hidden;
   text-overflow: ellipsis;
   /* Non standard for webkit */
@@ -1946,6 +1715,21 @@ a {
   .widget td {
     border-top-width: 1px;
     border-top-width: 0.1rem; }
+  .widget tfoot td,
+  .widget th,
+  .widget input[type=text]:focus,
+  .widget input[type=password]:focus,
+  .widget input[type=email]:focus,
+  .widget input[type=number]:focus,
+  .widget textarea:focus,
+  .widget input[type=text]:active,
+  .widget input[type=password]:active,
+  .widget input[type=email]:active,
+  .widget input[type=number]:active,
+  .widget textarea:active {
+    background-color: #ffffff; }
+  .widget.content-block {
+    background-color: #ffffff; }
 
 .widget-title {
   margin: 12px 0px 24px;
@@ -1954,6 +1738,7 @@ a {
   border-bottom-width: 2px;
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
+  border-bottom-color: #dbd5d1;
   letter-spacing: 1px;
   letter-spacing: 0.1rem; }
 
@@ -1999,7 +1784,10 @@ a {
     border-bottom-width: 2px;
     border-bottom-width: 0.2rem;
     border-bottom-style: solid;
+    border-bottom-color: #e2dedb;
     background-color: transparent; }
+    .widget_search.widget .search-field:focus {
+      background-color: #ffffff; }
   .widget_search.widget .search-submit {
     position: absolute;
     bottom: 6px;
@@ -2055,6 +1843,7 @@ a {
 #main {
   padding: 36px 24px;
   padding: 3.6rem 2.4rem;
+  background-color: #f9f8f7;
   border-radius: 0 0 0.4rem 0.4rem; }
   @media (min-width: 50em) {
     #main {
@@ -2112,6 +1901,7 @@ a {
   border-bottom-width: 2px;
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
+  border-bottom-color: #e2dedb;
   margin: 24px 0px 12px;
   margin: 2.4rem 0rem 1.2rem;
   text-align: center;
@@ -2120,6 +1910,8 @@ a {
   .post-title a:hover,
   .entry-header .entry-title a:hover {
     text-decoration: none; }
+  .post-title a, .entry-header .entry-title a {
+    color: #d95b43; }
 
 .banner {
   position: relative;
@@ -2133,6 +1925,8 @@ a {
   padding: 3.5rem 0rem;
   margin: -36px 0px 36px;
   margin: -3.6rem 0rem 3.6rem;
+  background-color: #d95b43;
+  color: #ffffff;
   text-align: center; }
   @media (min-width: 50em) {
     .banner {
@@ -2156,9 +1950,16 @@ a {
   text-transform: none; }
 
 .sticky {
+  color: #ffffff;
+  background-color: #d95b43;
   border-width: 1px;
   border-width: 0.1rem;
-  border-style: solid; }
+  border-style: solid;
+  border-color: #ffffff; }
+  .sticky a {
+    color: #ffffff; }
+  .sticky .post-title, .sticky .entry-header .entry-title, .entry-header .sticky .entry-title {
+    border-color: #df745f; }
   .sticky .entry a {
     text-decoration: underline; }
   .sticky .entry .more-link {
@@ -2203,7 +2004,9 @@ a {
   line-height: 3.8rem;
   letter-spacing: 1px;
   letter-spacing: 0.1rem;
-  font-weight: 300; }
+  font-weight: 300;
+  background-color: #f1efee;
+  color: #bdb2ab; }
   @media (min-width: 50em) {
     .meta {
       left: -36px;
@@ -2215,6 +2018,8 @@ a {
   .meta span {
     padding: 12px 0px;
     padding: 1.2rem 0rem; }
+  .meta a {
+    color: #7d6e63; }
   .meta .author,
   .meta .comment-count,
   .meta .tags {
@@ -2224,7 +2029,8 @@ a {
     padding-left: 1rem;
     border-left-width: 1px;
     border-left-width: 0.1rem;
-    border-left-style: solid; }
+    border-left-style: solid;
+    border-left-color: #e2dedb; }
   @media (min-width: 37.5em) {
     .meta {
       font-size: 1.1rem;
@@ -2233,12 +2039,14 @@ a {
 .meta-above {
   border-bottom-width: 1px;
   border-bottom-width: 0.1rem;
-  border-bottom-style: solid; }
+  border-bottom-style: solid;
+  border-bottom-color: #e2dedb; }
 
 .meta-below {
   border-top-width: 1px;
   border-top-width: 0.1rem;
   border-top-style: solid;
+  border-top-color: #e2dedb;
   border-radius: 0 0 0.4rem 0.4rem; }
 
 .site-main.not-found {
@@ -2315,8 +2123,10 @@ a {
   border-width: 1px;
   border-width: 0.1rem;
   border-style: solid;
+  border-color: #e2dedb;
   border-top: none;
   border-radius: 0 0 0.4rem 0.4rem;
+  background-color: #ffffff;
   box-shadow: 0 0 1px #ffffff; }
 .stripped .entry-block {
   background: transparent;
@@ -2365,6 +2175,7 @@ a {
   border-bottom-width: 1px;
   border-bottom-width: 0.1rem;
   border-bottom-style: solid;
+  border-bottom-color: #e2dedb;
   overflow: hidden;
   text-overflow: ellipsis;
   /* Non standard for webkit */
@@ -2391,7 +2202,8 @@ a {
 .comments-section {
   float: left;
   clear: both;
-  width: 100%; }
+  width: 100%;
+  background-color: #ffffff; }
   .comments-section .children {
     margin-left: 5%;
     padding-left: 0;
@@ -2401,7 +2213,8 @@ a {
   .comments-section input[type=email],
   .comments-section input[type=text],
   .comments-section textarea {
-    max-width: 100%; }
+    max-width: 100%;
+    background-color: #f1efee; }
   .comments-section .comment-text-input {
     float: left;
     width: 49%;
@@ -2444,7 +2257,8 @@ a {
 .comment-meta {
   padding-bottom: 0;
   font-size: 10px;
-  font-size: 1rem; }
+  font-size: 1rem;
+  color: #bdb2ab; }
 
 .comment-date {
   font-style: italic; }
@@ -2457,7 +2271,8 @@ a {
   text-transform: uppercase; }
   .bypostauthor .post-author i {
     margin-right: 2px;
-    margin-right: 0.2rem; }
+    margin-right: 0.2rem;
+    color: #d95b43; }
 
 .logged-in-as,
 .comment-notes,
@@ -2499,7 +2314,9 @@ a {
   border-width: 2px;
   border-width: 0.2rem;
   border-style: solid;
+  border-color: #7d6e63;
   background-color: transparent;
+  color: #7d6e63;
   /* Default settings */
   -webkit-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
   -moz-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
@@ -2507,6 +2324,9 @@ a {
   transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms; }
   #submit:hover {
     text-decoration: none; }
+  #submit:hover {
+    background-color: #7d6e63;
+    color: #ffffff; }
 
 /*--------------------------------------------------------------
 11.4 Author Profiles
@@ -2521,8 +2341,10 @@ body.author .site-main {
   border-width: 1px;
   border-width: 0.1rem;
   border-style: solid;
+  border-color: #e2dedb;
   border-top: none;
   border-radius: 0 0 0.4rem 0.4rem;
+  background-color: #ffffff;
   box-shadow: 0 0 0.1rem #ffffff; }
   @media (min-width: 37.5em) {
     body.author .site-main {
@@ -2535,7 +2357,8 @@ body.author .author-description {
   margin-bottom: 2.4rem;
   border-bottom-width: 2px;
   border-bottom-width: 0.2rem;
-  border-bottom-style: solid; }
+  border-bottom-style: solid;
+  border-bottom-color: #e2dedb; }
   @media (min-width: 50em) {
     body.author .author-description {
       float: left;
@@ -2577,6 +2400,8 @@ body.author .author-links {
 body.author .author-activity-summary {
   font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
   text-transform: uppercase; }
+  body.author .author-activity-summary .number {
+    color: #d95b43; }
   body.author .author-activity-summary .separator {
     padding: 0px 4px;
     padding: 0rem 0.4rem; }
@@ -2589,14 +2414,16 @@ body.author .author-activity-feed {
   margin: 0;
   border-top-width: 2px;
   border-top-width: 0.2rem;
-  border-top-style: solid; }
+  border-top-style: solid;
+  border-top-color: #e2dedb; }
   body.author .author-activity-feed li {
     position: relative;
     padding: 24px 0px;
     padding: 2.4rem 0rem;
     border-bottom-width: 2px;
     border-bottom-width: 0.2rem;
-    border-bottom-style: solid; }
+    border-bottom-style: solid;
+    border-bottom-color: #e2dedb; }
     body.author .author-activity-feed li:last-child {
       padding-bottom: 0;
       border-bottom: none; }
@@ -2605,10 +2432,12 @@ body.author .author-activity-feed {
     padding-left: 4rem; }
     body.author .author-activity-feed .activity-summary .display-name,
     body.author .author-activity-feed .activity-summary a {
+      color: #d95b43;
       font-weight: 700; }
     body.author .author-activity-feed .activity-summary .time-ago {
       font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      color: #bdb2ab; }
     body.author .author-activity-feed .activity-summary::before {
       position: absolute;
       top: 2px;
@@ -2616,7 +2445,8 @@ body.author .author-activity-feed {
       left: 0;
       font-size: 24px;
       font-size: 2.4rem;
-      font-family: "Benny-Icons"; }
+      font-family: "Benny-Icons";
+      color: #bdb2ab; }
     @media (min-width: 50em) {
       body.author .author-activity-feed .activity-summary {
         float: left;
@@ -3033,11 +2863,16 @@ embed {
       letter-spacing: 0.1rem;
       font-size: 11px;
       font-size: 1.1rem;
+      color: #ffffff;
       -moz-transform: rotate(-45deg);
       -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
       -o-transform: rotate(-45deg);
       transform: rotate(-45deg); }
+    .campaign-summary .campaign-image .campaign-successful {
+      background-color: #1ba714; }
+    .campaign-summary .campaign-image .campaign-unsuccessful {
+      background-color: #cc181e; }
   .campaign-summary .wp-post-image {
     width: 100%; }
   .campaign-summary .campaign-details {
@@ -3057,6 +2892,8 @@ embed {
     padding: 1.2rem 2rem;
     font-size: 25px;
     font-size: 2.5rem; }
+    .campaign-summary .donate-button:hover {
+      color: #ffffff; }
   .campaign-summary .campaign-ended {
     margin-bottom: 24px;
     margin-bottom: 2.4rem;
@@ -3158,6 +2995,8 @@ embed {
       font-size: 22px;
       font-size: 2.2rem;
       cursor: pointer; }
+      .campaign-summary .campaign-sharing .icon:before {
+        color: #ffffff; }
   @media all and (min-width: 37.5em) and (max-width: 55em) {
     .campaign-summary .campaign-details {
       position: relative;
@@ -3291,6 +3130,9 @@ embed {
 
 .share-widget .modal {
   text-align: left; }
+.share-widget .modal,
+.share-widget .modal .block-title {
+  color: #7d6e63; }
 .share-widget pre {
   word-break: break-word; }
 .share-widget .block {
@@ -3319,7 +3161,9 @@ embed {
   width: -moz-calc( 100% + 48px );
   width: calc( 100% + 48px );
   padding: 12px 45px;
-  padding: 1.2rem 4.5rem; }
+  padding: 1.2rem 4.5rem;
+  background-color: #df745f;
+  color: #ffffff; }
   @media (min-width: 50em) {
     .charitable-fes-campaign-creator-toolbar {
       left: -45px;
@@ -3328,7 +3172,10 @@ embed {
       width: calc( 100% + 90px ); } }
   .charitable-fes-campaign-creator-toolbar a {
     float: right;
+    color: #ffffff;
     font-weight: 100; }
+    .charitable-fes-campaign-creator-toolbar a:hover {
+      color: #ffffff; }
   .charitable-fes-campaign-creator-toolbar .edit-link::before {
     font-family: "Benny-Icons";
     speak: none;
@@ -3372,7 +3219,9 @@ embed {
     border-width: 1px;
     border-width: 0.1rem;
     border-style: solid;
-    border-radius: 0.4rem; }
+    border-color: #e2dedb;
+    border-radius: 0.4rem;
+    background-color: #ffffff; }
   .widget.widget_charitable_edd_campaign_downloads .wp-post-image {
     position: relative;
     left: -24px;
@@ -3393,14 +3242,16 @@ embed {
     float: left;
     padding: 0px 0px 12px;
     padding: 0rem 0rem 1.2rem;
-    font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif; }
+    font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+    color: #d95b43; }
   .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd_price_options li {
     width: 100%;
     padding-bottom: 6px;
     padding-bottom: 0.6rem;
     border-bottom-width: 1px;
     border-bottom-width: 0.1rem;
-    border-bottom-style: solid; }
+    border-bottom-style: solid;
+    border-bottom-color: #e2dedb; }
   .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd_price_options .edd_price_option_sep {
     display: none; }
   .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd_price_option_price {
@@ -3413,6 +3264,8 @@ embed {
       display: inline;
       padding-right: 4px;
       padding-right: 0.4rem; }
+  .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input {
+    background-color: #f1efee; }
   .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-item-quantity {
     width: 65px;
     width: 6.5rem;
@@ -3447,7 +3300,9 @@ embed {
     border-width: 1px;
     border-width: 0.1rem;
     border-style: solid;
-    border-radius: 0.4rem; }
+    border-color: #e2dedb;
+    border-radius: 0.4rem;
+    background-color: #ffffff; }
   .widget.widget_charitable_donate_widget #charitable-donation-form {
     padding-top: 0; }
   .widget.widget_charitable_donate_widget .donation-amounts {
@@ -3462,9 +3317,11 @@ embed {
   .widget.widget_charitable_donate_widget .charitable-donation-form-without-suggestions {
     padding: 12px;
     padding: 1.2rem;
+    background-color: #ffffff;
     border-width: 1px;
     border-width: 0.1rem;
     border-style: solid;
+    border-color: #e2dedb;
     border-radius: 0.4rem; }
     .widget.widget_charitable_donate_widget .charitable-donation-form-without-suggestions label {
       margin: 0px 0px 6px;
@@ -3493,11 +3350,16 @@ embed {
       transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
       margin: 0;
       background-color: transparent;
+      color: #d95b43;
       border-width: 2px;
       border-width: 0.2rem;
-      border-style: solid; }
+      border-style: solid;
+      border-color: #d95b43; }
       .widget.widget_charitable_donate_widget .charitable-submit-field .button:hover {
         text-decoration: none; }
+      .widget.widget_charitable_donate_widget .charitable-submit-field .button:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button:focus {
+        background-color: #d95b43;
+        color: #ffffff; }
 
 .widget.widget_campaign_creator_widget .avatar {
   float: left;
@@ -3518,7 +3380,8 @@ embed {
   padding-top: 1.2rem;
   border-top-width: 1px;
   border-top-width: 0.1rem;
-  border-top-style: solid; }
+  border-top-style: solid;
+  border-top-color: #e2dedb; }
 .widget.widget_campaign_creator_widget .creator-links {
   margin-left: 16px;
   margin-left: 1.6rem; }
@@ -3548,6 +3411,9 @@ embed {
   border-width: 3px;
   border-width: 0.3rem;
   border-style: solid;
+  border-color: #7d6e63;
+  background-color: #7d6e63;
+  color: #ffffff;
   /* Default settings */
   -webkit-transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
   -moz-transition: border-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
@@ -3570,7 +3436,9 @@ embed {
     border-radius: 0.4rem;
     display: block; }
   .widget.widget_campaign_creator_widget .creator-profile-link a:hover {
-    background-color: transparent; }
+    border-color: #7d6e63;
+    background-color: transparent;
+    color: #7d6e63; }
     .widget.widget_campaign_creator_widget .creator-profile-link a:hover::after {
       border-color: transparent; }
 @media (min-width: 45em) and (max-width: 50em) {
@@ -3658,6 +3526,7 @@ embed {
     border-top-width: 1px;
     border-top-width: 0.1rem;
     border-top-style: solid;
+    border-top-color: #e2dedb;
     text-align: center;
     list-style: none; }
     .campaign .campaign-stats li {
@@ -3669,6 +3538,7 @@ embed {
       border-left-width: 1px;
       border-left-width: 0.1rem;
       border-left-style: solid;
+      border-left-color: #e2dedb;
       font-size: 10px;
       font-size: 1rem;
       font-style: italic; }
@@ -3678,6 +3548,7 @@ embed {
         padding-top: 0.2rem;
         font-size: 14px;
         font-size: 1.4rem;
+        color: #d95b43;
         font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
         font-style: normal; }
     .campaign .campaign-stats .barometer {
@@ -3759,6 +3630,7 @@ embed {
   margin-bottom: 24px;
   margin-bottom: 2.4rem;
   border: none;
+  color: #e2dedb;
   box-shadow: 0 0 0 1px; }
 .campaigns-grid .campaign-image {
   position: relative;
@@ -3779,6 +3651,7 @@ embed {
   padding: 0;
   border: 0; }
 .campaigns-grid .campaign-description {
+  color: #7d6e63;
   text-shadow: none; }
 .campaigns-grid .campaign-stats,
 .campaigns-grid .meta {
@@ -3801,6 +3674,8 @@ embed {
   border-top-width: 1px;
   border-top-width: 0.1rem;
   border-top-style: solid;
+  border-top-color: #e2dedb;
+  color: #7d6e63;
   text-align: center;
   list-style: none; }
   .campaigns-grid .campaign-stats li {
@@ -3812,6 +3687,7 @@ embed {
     border-left-width: 1px;
     border-left-width: 0.1rem;
     border-left-style: solid;
+    border-left-color: #e2dedb;
     font-size: 10px;
     font-size: 1rem;
     font-style: italic; }
@@ -3821,6 +3697,7 @@ embed {
       padding-top: 0.2rem;
       font-size: 14px;
       font-size: 1.4rem;
+      color: #d95b43;
       font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
       font-style: normal; }
   .campaigns-grid .campaign-stats .barometer {
@@ -3902,8 +3779,10 @@ embed {
   border-width: 1px;
   border-width: 0.1rem;
   border-style: solid;
+  border-color: #e2dedb;
   border-top: none;
   border-radius: 0 0 0.4rem 0.4rem;
+  background-color: #ffffff;
   box-shadow: 0 0 1px #ffffff; }
   @media (min-width: 50em) {
     .campaign-donation-page.stripped .charitable-donation-form {
@@ -3936,6 +3815,8 @@ embed {
 .charitable-donation-form #custom-donation-amount-field {
   margin: 12px 0px 0px;
   margin: 1.2rem 0rem 0rem; }
+  .charitable-donation-form #custom-donation-amount-field input {
+    background-color: #ffffff; }
   .charitable-donation-form #custom-donation-amount-field.charitable-custom-donation-field-alone {
     margin-bottom: 36px;
     margin-bottom: 3.6rem; }
@@ -3945,7 +3826,9 @@ embed {
   border-width: 2px;
   border-width: 0.2rem;
   border-style: solid;
-  border-radius: 0.4rem; }
+  border-color: #e2dedb;
+  border-radius: 0.4rem;
+  background-color: #f1efee; }
 .charitable-donation-form .charitable-edd-connected-download {
   position: relative;
   padding: 24px 12px 24px 12px;
@@ -3953,9 +3836,12 @@ embed {
   border-bottom-width: 2px;
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
+  border-bottom-color: #e2dedb;
   cursor: pointer; }
   .charitable-donation-form .charitable-edd-connected-download:last-of-type {
     border: none; }
+  .charitable-donation-form .charitable-edd-connected-download.selected {
+    background-color: #ffffff; }
 .charitable-donation-form .edd-price-option-price {
   font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
@@ -3964,7 +3850,8 @@ embed {
     padding-left: 2px;
     padding-left: 0.2rem;
     font-size: 14px;
-    font-size: 1.4rem; }
+    font-size: 1.4rem;
+    color: #bdb2ab; }
 .charitable-donation-form .charitable-edd-download-select {
   position: relative;
   bottom: 2px;
@@ -4012,16 +3899,26 @@ embed {
   border-width: 2px;
   border-width: 0.2rem;
   border-style: solid;
+  border-color: #7d6e63;
   background-color: transparent;
+  color: #7d6e63;
   /* Default settings */
   -webkit-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
   -moz-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
   -o-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
   transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
   margin: 0;
-  width: auto; }
+  width: auto;
+  color: #d95b43;
+  border-color: #d95b43; }
   .charitable-donation-form .charitable-form-field .button:hover {
     text-decoration: none; }
+  .charitable-donation-form .charitable-form-field .button:hover {
+    background-color: #7d6e63;
+    color: #ffffff; }
+  .charitable-donation-form .charitable-form-field .button:hover, .charitable-donation-form .charitable-form-field .button:focus, .charitable-donation-form .charitable-form-field .button:active {
+    background-color: #d95b43;
+    color: #ffffff; }
 
 .donation-amounts .donation-amount {
   position: relative;
@@ -4034,7 +3931,10 @@ embed {
   border-width: 2px;
   border-width: 0.2rem;
   border-style: solid;
-  border-radius: 0.4rem; }
+  border-color: #aea198;
+  border-radius: 0.4rem;
+  color: #7d6e63;
+  background-color: #ffffff; }
   .donation-amounts .donation-amount .amount {
     display: block;
     margin-bottom: 6px;
@@ -4043,6 +3943,10 @@ embed {
     font-size: 1.8rem; }
   .donation-amounts .donation-amount .description {
     display: block; }
+  .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover {
+    border-color: #7d6e63;
+    background-color: #7d6e63;
+    color: #ffffff; }
   .donation-amounts .donation-amount.custom-donation-amount {
     width: 100%;
     margin-left: 0; }
@@ -4055,6 +3959,8 @@ embed {
     .donation-amounts .donation-amount.custom-donation-amount input[type=text] {
       position: static;
       max-width: 100%; }
+      .donation-amounts .donation-amount.custom-donation-amount input[type=text]:focus, .donation-amounts .donation-amount.custom-donation-amount input[type=text]:active {
+        background-color: #ffffff; }
   .donation-amounts .donation-amount input {
     position: absolute;
     top: 12px;
@@ -4065,13 +3971,22 @@ embed {
 #custom-donation-amount-field.charitable-custom-donation-field-alone {
   padding: 2px;
   padding: 0.2rem;
-  border-radius: 0.4rem; }
+  border-radius: 0.4rem;
+  background-color: #aea198; }
   #custom-donation-amount-field.charitable-custom-donation-field-alone input {
     width: 100%;
     max-width: 100%;
     font-size: 18px;
     font-size: 1.8rem;
-    font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif; }
+    font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+    color: #7d6e63;
+    background-color: #ffffff; }
+  #custom-donation-amount-field.charitable-custom-donation-field-alone ::-webkit-input-placeholder {
+    color: #aea198; }
+  #custom-donation-amount-field.charitable-custom-donation-field-alone ::-moz-placeholder {
+    color: #aea198; }
+  #custom-donation-amount-field.charitable-custom-donation-field-alone :-ms-input-placeholder {
+    color: #aea198; }
 
 /*-------------------------------------------------------------- 
 18.1.6 User Dashboard
@@ -4112,7 +4027,9 @@ body.user-dashboard .charitable-form .charitable-submit-field {
     border-width: 2px;
     border-width: 0.2rem;
     border-style: solid;
+    border-color: #7d6e63;
     background-color: transparent;
+    color: #7d6e63;
     /* Default settings */
     -webkit-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
     -moz-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
@@ -4120,6 +4037,18 @@ body.user-dashboard .charitable-form .charitable-submit-field {
     transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms; }
     body.user-dashboard .charitable-form .charitable-submit-field .button:hover {
       text-decoration: none; }
+    body.user-dashboard .charitable-form .charitable-submit-field .button:hover {
+      background-color: #7d6e63;
+      color: #ffffff; }
+    body.user-dashboard .charitable-form .charitable-submit-field .button:hover {
+      background-color: #7d6e63;
+      color: #ffffff; }
+    body.user-dashboard .charitable-form .charitable-submit-field .button.button-primary {
+      color: #d95b43;
+      border-color: #d95b43; }
+      body.user-dashboard .charitable-form .charitable-submit-field .button.button-primary:hover {
+        background-color: #d95b43;
+        color: #ffffff; }
 
 .user-dashboard-menu {
   font-size: 13px;
@@ -4145,23 +4074,33 @@ body.user-dashboard .charitable-form .charitable-submit-field {
       border-width: 1px;
       border-width: 0.1rem;
       border-style: solid;
+      border-color: #f9f8f7;
       border-bottom-color: transparent;
-      border-radius: 0.4rem 0.4rem 0 0; }
+      border-radius: 0.4rem 0.4rem 0 0;
+      background-color: #bdb2ab;
+      color: #574c45; }
       .user-dashboard-menu li a:hover {
         text-decoration: none; }
-    .user-dashboard-menu li.current-menu-item a::after,
-    .user-dashboard-menu li a:hover::after {
-      content: "";
-      position: absolute;
-      bottom: -1px;
-      bottom: -0.1rem;
-      left: -1px;
-      left: -0.1rem;
-      display: block;
-      width: 1px;
-      width: 0.1rem;
-      height: 1px;
-      height: 0.1rem; }
+    .user-dashboard-menu li.current-menu-item a,
+    .user-dashboard-menu li a:hover {
+      border-color: #e2dedb;
+      border-bottom-color: #ffffff;
+      background-color: #ffffff;
+      color: #d95b43; }
+      .user-dashboard-menu li.current-menu-item a::after,
+      .user-dashboard-menu li a:hover::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        bottom: -0.1rem;
+        left: -1px;
+        left: -0.1rem;
+        display: block;
+        width: 1px;
+        width: 0.1rem;
+        height: 1px;
+        height: 0.1rem;
+        background-color: #e2dedb; }
 
 /*-------------------------------------------------------------- 
 18.1.7 Forms
@@ -4196,10 +4135,12 @@ body.user-dashboard .charitable-form .charitable-submit-field {
   clear: both; }
 
 .charitable-form-field-editor .mce-btn button {
+  color: #7d6e63;
   box-shadow: none; }
 .charitable-form-field-editor .wp-editor-container {
   padding: 1px;
-  padding: 0.1rem; }
+  padding: 0.1rem;
+  background-color: #e2dedb; }
 
 #charitable-campaign-submission-form {
   position: relative;
@@ -4227,17 +4168,23 @@ body.user-dashboard .charitable-form .charitable-submit-field {
   padding: 12px;
   padding: 1.2rem; }
 .charitable-campaign-form-table tfoot td {
+  background-color: #f1efee;
   border-top-width: 1px;
   border-top-width: 0.1rem;
-  border-top-style: solid; }
+  border-top-style: solid;
+  border-top-color: #e2dedb; }
 
-.charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) select, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) textarea {
-  border-width: 1px;
-  border-width: 0.1rem;
-  border-style: solid; }
-.charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input[type=file] {
-  background-color: transparent;
-  border: none; }
+.charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) {
+  background-color: #f9f8f7; }
+  .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) select, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) textarea {
+    background-color: #ffffff;
+    border-width: 1px;
+    border-width: 0.1rem;
+    border-style: solid;
+    border-color: #e2dedb; }
+  .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input[type=file] {
+    background-color: transparent;
+    border: none; }
 .charitable-repeatable-form-field-table .repeatable-field-wrapper {
   position: relative; }
   @media (min-width: 48em) {
@@ -4255,7 +4202,8 @@ body.user-dashboard .charitable-form .charitable-submit-field {
 .charitable-repeatable-form-field-table td {
   border-top-width: 1px;
   border-top-width: 0.1rem;
-  border-top-style: solid; }
+  border-top-style: solid;
+  border-top-color: #e2dedb; }
 .charitable-repeatable-form-field-table tbody td {
   background-color: transparent; }
 .charitable-repeatable-form-field-table .remove {
@@ -4284,9 +4232,12 @@ body.user-dashboard .charitable-form .charitable-submit-field {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     content: "\f057";
-    float: right; }
+    float: right;
+    color: #7d6e63; }
   .charitable-repeatable-form-field-table .remove:hover {
     color: transparent; }
+    .charitable-repeatable-form-field-table .remove:hover:before {
+      color: #d95b43; }
 .charitable-repeatable-form-field-table .add-row {
   font-style: italic; }
   .charitable-repeatable-form-field-table .add-row.button {
@@ -4294,7 +4245,10 @@ body.user-dashboard .charitable-form .charitable-submit-field {
     border-width: 2px;
     border-width: 0.2rem;
     border-style: solid;
-    box-shadow: none; }
+    border-color: #7d6e63;
+    box-shadow: none;
+    background-color: #ffffff;
+    color: #7d6e63; }
 .charitable-repeatable-form-field-table .charitable-fieldset {
   float: left;
   width: 100%;
@@ -4312,6 +4266,7 @@ body.user-dashboard .charitable-form .charitable-submit-field {
   padding: 1rem;
   margin: 0;
   list-style-type: none;
+  background-color: #f1efee;
   content: "";
   display: table; }
 .charitable-form-field-multi-checkbox li {
@@ -4334,7 +4289,8 @@ body.user-dashboard .charitable-form .charitable-submit-field {
     top: 0.9rem;
     height: 2px;
     height: 0.2rem;
-    width: 100%; }
+    width: 100%;
+    border-color: #e2dedb; }
   .charitable-fieldset .legend {
     position: relative;
     float: left;
@@ -4344,13 +4300,16 @@ body.user-dashboard .charitable-form .charitable-submit-field {
     padding: 0px 12px 24px;
     padding: 0rem 1.2rem 2.4rem;
     font-size: 18px;
-    font-size: 1.8rem; }
+    font-size: 1.8rem;
+    color: #d95b43;
+    background-color: #ffffff; }
   .charitable-fieldset .charitable-fieldset {
     margin-bottom: 0;
     padding: 0;
     border-top-width: 1px;
     border-top-width: 0.1rem;
-    border-top-style: solid; }
+    border-top-style: solid;
+    border-top-color: #e2dedb; }
     .charitable-fieldset .charitable-fieldset::before {
       display: none; }
     .charitable-fieldset .charitable-fieldset .legend {
@@ -4391,7 +4350,10 @@ body.user-dashboard .charitable-form .charitable-submit-field {
   margin-bottom: 2.4rem;
   border-width: 1px;
   border-width: 0.1rem;
-  border-style: solid; }
+  border-style: solid;
+  border-color: #e2dedb;
+  background-color: #f1efee;
+  color: #574c45; }
   .charitable-notice ul {
     list-style: none;
     padding: 0;
@@ -4409,7 +4371,8 @@ body.user-dashboard .charitable-form .charitable-submit-field {
 18.1.8 User Campaigns
 --------------------------------------------------------------*/
 .entry-header .entry-title {
-  margin-top: 0; }
+  margin-top: 0;
+  color: #d95b43; }
 
 .charitable-user-posts {
   list-style: none;
@@ -4424,6 +4387,7 @@ body.user-dashboard .charitable-form .charitable-submit-field {
   border-width: 1px;
   border-width: 0.1rem;
   border-style: solid;
+  border-color: #e2dedb;
   border-radius: 0.4rem;
   /* Float image and campaign summary side by side, with actions below. */
   /* Float actions to the right. */ }
@@ -4437,7 +4401,9 @@ body.user-dashboard .charitable-form .charitable-submit-field {
     border-width: 1px;
     border-width: 0.1rem;
     border-style: solid;
-    border-radius: 0 0.4rem 0.4rem 0; }
+    border-color: #e2dedb;
+    border-radius: 0 0.4rem 0.4rem 0;
+    background-color: #f1efee; }
   @media (min-width: 48em) {
     .charitable-user-post {
       content: "";
@@ -4496,6 +4462,7 @@ body.user-dashboard .charitable-form .charitable-submit-field {
     border-bottom-width: 1px;
     border-bottom-width: 0.1rem;
     border-bottom-style: solid;
+    border-bottom-color: #e2dedb;
     font-size: 12px;
     font-size: 1.2rem;
     text-align: left; }
@@ -4530,34 +4497,41 @@ body.user-dashboard .charitable-form .charitable-submit-field {
   text-transform: uppercase;
   border-top-width: 1px;
   border-top-width: 0.1rem;
-  border-top-style: solid; }
+  border-top-style: solid;
+  border-top-color: #e2dedb;
+  background-color: #f1efee; }
   .user-post-actions .actions {
     padding: 0;
     margin: 0;
     list-style-type: none;
     text-align: center; }
-    .user-post-actions .actions li:last-child {
-      margin-bottom: 0; }
-  .user-post-actions a:hover {
-    text-decoration: none; }
-  .user-post-actions a:before {
-    position: relative;
-    top: 1px;
-    top: 0.1rem;
-    padding-right: 6px;
-    padding-right: 0.6rem;
-    font-size: 16px;
-    font-size: 1.6rem;
-    font-family: "Benny-Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; }
+    .user-post-actions .actions li {
+      border-bottom-color: #e2dedb; }
+      .user-post-actions .actions li:last-child {
+        margin-bottom: 0; }
+  .user-post-actions a {
+    color: #7d6e63; }
+    .user-post-actions a:hover {
+      text-decoration: none;
+      color: #d95b43; }
+    .user-post-actions a:before {
+      position: relative;
+      top: 1px;
+      top: 0.1rem;
+      padding-right: 6px;
+      padding-right: 0.6rem;
+      font-size: 16px;
+      font-size: 1.6rem;
+      font-family: "Benny-Icons";
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
   .user-post-actions .edit-campaign a:before {
     content: "\f040"; }
   @media (min-width: 48em) {
@@ -4592,8 +4566,14 @@ body .edd-submit.button.gray, body .edd-submit.button.white, body .edd-submit.bu
   display: inline-block;
   border-width: 2px;
   border-width: 0.2rem;
+  border-color: #d95b43;
   background: transparent;
+  color: #d95b43;
   box-shadow: none; }
+  body .edd-submit.button.gray:focus, body .edd-submit.button.gray:active, body .edd-submit.button.gray:hover, body .edd-submit.button.white:focus, body .edd-submit.button.white:active, body .edd-submit.button.white:hover, body .edd-submit.button.blue:focus, body .edd-submit.button.blue:active, body .edd-submit.button.blue:hover, body .edd-submit.button.red:focus, body .edd-submit.button.red:active, body .edd-submit.button.red:hover, body .edd-submit.button.orange:focus, body .edd-submit.button.orange:active, body .edd-submit.button.orange:hover, body .edd-submit.button.green:focus, body .edd-submit.button.green:active, body .edd-submit.button.green:hover, body .edd-submit.button.yellow:focus, body .edd-submit.button.yellow:active, body .edd-submit.button.yellow:hover, body .edd-submit.button.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .edd-submit.button.dark-gray:hover {
+    border-color: #d95b43;
+    background-color: #d95b43;
+    color: #ffffff; }
 
 div.printfriendly {
   margin-right: 0; }
@@ -4604,6 +4584,7 @@ div.printfriendly {
     font-size: 1.2rem;
     letter-spacing: 2px;
     letter-spacing: 0.2rem;
+    color: #7d6e63;
     font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
     text-transform: uppercase; }
   div.printfriendly a span {
@@ -4648,6 +4629,7 @@ div.printfriendly {
   margin: 0;
   font-size: 16px;
   font-size: 1.6rem;
+  background-color: #f1efee;
   text-align: center; }
 #edd_checkout_wrap #edd_final_total_wrap {
   font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
@@ -4658,13 +4640,21 @@ div.printfriendly {
   border: none; }
   #edd_checkout_wrap #edd_final_total_wrap strong {
     font-weight: 400; }
+#edd_checkout_wrap fieldset#edd_cc_fields {
+  background-color: #f1efee; }
+  #edd_checkout_wrap fieldset#edd_cc_fields input,
+  #edd_checkout_wrap fieldset#edd_cc_fields select,
+  #edd_checkout_wrap fieldset#edd_cc_fields textarea {
+    background-color: #ffffff; }
 #edd_checkout_wrap #edd-purchase-button {
   font-size: 25px;
   font-size: 2.5rem;
   height: 50px;
   height: 5rem;
+  background-color: #d95b43;
   border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 0 3px #d95b43; }
+  box-shadow: 0 0 0 3px #d95b43;
+  color: #ffffff; }
 #edd_checkout_wrap .edd_empty_cart {
   display: block;
   padding: 0px 36px 36px;
@@ -4708,8 +4698,10 @@ div.printfriendly {
   border-width: 1px;
   border-width: 0.1rem;
   border-style: solid;
+  border-color: #e2dedb;
   border-top: none;
   border-radius: 0 0 0.4rem 0.4rem;
+  background-color: #ffffff;
   box-shadow: 0 0 1px #ffffff; }
   @media (min-width: 50em) {
     .edd-checkout-template.stripped .entry-block {
@@ -4746,6 +4738,7 @@ body.events-single .tribe-events-event-meta {
   font-size: 1.2rem;
   border-width: 2px 0px 0px;
   border-width: 0.2rem 0rem 0rem;
+  border-color: #e2dedb;
   background: transparent; }
   body.events-single .tribe-events-event-meta .tribe-events-meta-group {
     padding: 0px 24px 0px 0px;
@@ -4763,24 +4756,28 @@ body.events-single .cart {
 body.events-single .tribe-events-tickets {
   border-top-width: 1px;
   border-top-width: 0.1rem;
-  border-top-style: solid; }
+  border-top-style: solid;
+  border-top-color: #e2dedb; }
   body.events-single .tribe-events-tickets td {
     padding: 12px 10px;
     padding: 1.2rem 1rem;
     border-top: 0; }
   body.events-single .tribe-events-tickets .tickets_price {
     font-weight: normal;
+    color: #7d6e63;
     border-right: none;
     width: 100px;
     width: 10rem; }
   body.events-single .tribe-events-tickets .tickets_name {
     font-size: 12px;
     font-size: 1.2rem;
-    border-right: 0; }
+    border-right: 0;
+    color: #7d6e63; }
   body.events-single .tribe-events-tickets .eddtickets-add {
     border-bottom-width: 1px;
     border-bottom-width: 0.1rem;
-    border-bottom-style: solid; }
+    border-bottom-style: solid;
+    border-bottom-color: #e2dedb; }
     body.events-single .tribe-events-tickets .eddtickets-add .edd-submit {
       margin: 0; }
 body.events-single .tribe-events-tickets-title,
@@ -4810,9 +4807,14 @@ body.tribe-mobile #main {
   letter-spacing: 2px;
   letter-spacing: 0.2rem;
   background: transparent;
+  color: #7d6e63;
   border-width: 2px;
   border-width: 0.2rem;
-  border-style: solid; }
+  border-style: solid;
+  border-color: #7d6e63; }
+  #tribe-events .tribe-events-button:hover {
+    background-color: #7d6e63;
+    color: #ffffff; }
 
 /*--------------------------------------------------------------
 18.4.2 Event Widget
@@ -4831,7 +4833,9 @@ body.tribe-mobile #main {
     border-width: 1px;
     border-width: 0.1rem;
     border-style: solid;
-    border-radius: 0.4rem; }
+    border-color: #e2dedb;
+    border-radius: 0.4rem;
+    background-color: #ffffff; }
   .widget.widget_pp_campaign_events .wp-post-image {
     position: relative;
     left: -24px;
@@ -4852,14 +4856,16 @@ body.tribe-mobile #main {
     float: left;
     padding: 0px 0px 12px;
     padding: 0rem 0rem 1.2rem;
-    font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif; }
+    font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+    color: #d95b43; }
   .widget.widget_pp_campaign_events .edd_download_purchase_form .edd_price_options li {
     width: 100%;
     padding-bottom: 6px;
     padding-bottom: 0.6rem;
     border-bottom-width: 1px;
     border-bottom-width: 0.1rem;
-    border-bottom-style: solid; }
+    border-bottom-style: solid;
+    border-bottom-color: #e2dedb; }
   .widget.widget_pp_campaign_events .edd_download_purchase_form .edd_price_options .edd_price_option_sep {
     display: none; }
   .widget.widget_pp_campaign_events .edd_download_purchase_form .edd_price_option_price {
@@ -4872,6 +4878,8 @@ body.tribe-mobile #main {
       display: inline;
       padding-right: 4px;
       padding-right: 0.4rem; }
+  .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
+    background-color: #f1efee; }
   .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-item-quantity {
     width: 65px;
     width: 6.5rem;
@@ -4903,6 +4911,7 @@ body.tribe-mobile #main {
     border-bottom-width: 1px;
     border-bottom-width: 0.1rem;
     border-bottom-style: solid;
+    border-bottom-color: #e2dedb;
     margin: 0px 0px 12px;
     margin: 0rem 0rem 1.2rem;
     padding: 0px 0px 12px;
@@ -4930,4 +4939,4 @@ body.tribe-mobile #main {
       margin-bottom: 0;
       padding-bottom: 0; }
 
-/*# sourceMappingURL=_classic.css.map */
+/*# sourceMappingURL=main.css.map */

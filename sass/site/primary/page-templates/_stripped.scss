@@ -14,14 +14,10 @@
 
 	.site-main {
 		padding: 0;
-		border: {
-			@include width( 1 );
-			style: solid;
-			color: $color__border-primary;
-		}
+		@include border( 1 );
 		border-top: none;
 		border-radius: 0 0 0.4rem 0.4rem;	    
-		background: $color__background-content;
+		@include background-color( $color__background-content );
 		box-shadow: 0 0 1px $color__background-content;
 	}
 

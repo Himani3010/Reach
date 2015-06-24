@@ -10,30 +10,30 @@
 		overflow: visible;
 	}
 
-	.page.entry-block {
+	.feature-block {
 		float: left;
 		@include padding( 12, 9 );
 		border: none;
 		border-radius: 0;
 		box-shadow: none;		
 		overflow: visible;
-
-		.page-title {
-			@include padding( 24, 0, 36 );
-			border-bottom: {
-				@include width( 3 );
-				style: solid;
-				color: rgba(255, 255, 255, 0.3);
-			} 
-		}
-
-		.entry {
-			@include font-size( 18 );
-			@include line-height( 28 );
-
-			.button {
-				@include margin( 12, 3, 0 );
-			}
-		}
 	}		
+
+	.page-title {
+		@include padding( 24, 0, 36 );
+		border-bottom: {
+			@include width( 3 );
+			style: solid;
+			color: rgba(255, 255, 255, 0.3);
+		} 
+	}
+
+	.entry {
+		@include font-size( 18 );
+		@include line-height( 28 );
+
+		.button {
+			@include margin( 12, 3, 0 );
+		}
+	}
 }

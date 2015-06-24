@@ -35,7 +35,7 @@
 	input[type=email]:active, 	
 	input[type=number]:active, 	
 	textarea:active {
-		background-color: $color__background-content;
+		@include background-color( $color__background-content );
 	}
 
 	&.content-block {
@@ -105,15 +105,11 @@
 		max-width: 100%;
 		margin: 0;	
 		@include padding( 11, 40, 11, 10 );		
-		border-bottom: {
-			@include width( 2 );
-			style: solid;
-			color: $color__border-primary;
-		}
+		@include border-bottom( 2, $color__border-primary );
 		background-color: transparent;
 
 		&:focus {
-			background-color: $color__background-content;
+			@include background-color( $color__background-content );
 		}
 	}
 

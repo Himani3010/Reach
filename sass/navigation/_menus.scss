@@ -132,10 +132,7 @@
 	ul {
 		margin: 0;
 		padding-left: 0;
-		border-top: {
-			@include width( 1 );
-			style: solid;
-		}
+		@include border-top( 1, $color__accent );		
 	}
 
 	li {

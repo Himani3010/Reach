@@ -8,14 +8,10 @@ body.author {
 		float: none;
 		width: 100%;
 		@include padding( 24 );
-		border: {
-			@include width( 1 );
-			style: solid;
-			color: $color__border-primary;
-		}
+		@include border( 1 );
 		border-top: none;
 		border-radius: 0 0 0.4rem 0.4rem;	    
-		background: $color__background-content;
+		@include background-color( $color__background-content );
 		box-shadow: 0 0 0.1rem $color__background-content;
 
 		@include bp( 600 ) {
@@ -26,12 +22,7 @@ body.author {
 	.author-description {
 		@include padding-bottom( 24 );
 		@include margin-bottom( 24 );
-		border-bottom: {
-			@include width( 2 );
-			style: solid;
-			color: $color__border-primary;
-		}
-
+		@include border-bottom;
 		@include bp( 800 ) {
 			float: left; 
 			width: 40%;
@@ -110,20 +101,12 @@ body.author {
 		list-style-type: none;
 		padding-left: 0;
 		margin: 0;
-		border-top: {
-			@include width( 2 );
-			style: solid;
-			color: $color__border-primary;
-		}
+		@include border-top();
 
 		li {
 			position: relative;
 			@include padding( 24, 0 );
-			border-bottom: {
-				@include width( 2 );
-				style: solid;
-				color: $color__border-primary;
-			}		
+			@include border-bottom;
 
 			&:last-child {
 				padding-bottom: 0;

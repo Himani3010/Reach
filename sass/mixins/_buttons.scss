@@ -1,49 +1,58 @@
-@mixin button() {
+@mixin button-base() {
 	display: inline-block;
 	@include margin( 3, 0, 0, 3 );
-	@include padding( 0, 20 );
-	@include height( 31 );
+	@include padding( 8, 20 );
 	@include font-size( 14 );
-	@include line-height( 29 );
-	border: {
-		@include width( 1 );
-		style: solid;
-		color: rgba( 255, 255, 255, 0.3 );
-	}
+	line-height: 1em;
 	border-radius: 0.4rem;
-	@include box-shadow( 0 0 0 3px $color__background-button );
 	font-family: $font__secondary;	
-	color: $color__text-overlay;
 	text-transform: uppercase;
 	@include letter-spacing( 2 );
 	cursor: pointer;
-	@include property-transition(border-color);
 	@include property-transition(color);
-	&:hover {
-		background-color: transparent;
-		border-color: transparent;	
+	&:hover {		
 		text-decoration: none;
 	}
 }
 
+@mixin button() {
+	@include button-base;
+	position: relative;
+	@include border( 3, $color__background-button );
+	@include background-color( $color__background-button );
+	@include color( $color__text-overlay );
+	@include property-transition(border-color);
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		@include border-width( 1 );
+		border-color: rgba( 255, 255, 255, 0.3 );
+		border-style: solid;
+		border-radius: 0.4rem;
+		display: block;
+	}
+	&:hover {
+		@include border-color( $color__background-button );
+		background-color: transparent;
+		@include color( $color__background-button );
+		&::after {
+			border-color: transparent;
+		}
+	}	
+}
+
 @mixin button-inverted() {
-	display: inline-block;
-	@include margin( 3, 0, 0, 3 );
-	@include padding( 0, 20 );
-	@include height( 33 );
-	@include font-size( 14 );
-	@include line-height( 29 );
-	@include border();	
-	border-radius: 0.4rem;
-	box-shadow: none;
-	font-family: $font__secondary;
-	background: transparent;	
-	text-transform: uppercase;
-	@include letter-spacing( 2 );
-	cursor: pointer;	
+	@include button-base;
+	@include border( 2, $color__background-button );	
+	background-color: transparent;
+	@include color( $color__background-button );
 	@include property-transition(background-color);
-	@include property-transition(color);
-	&:hover {		
-		text-decoration: none;
+	&:hover {
+		@include background-color( $color__background-button );
+		@include color( $color__text-overlay );
 	}
 }

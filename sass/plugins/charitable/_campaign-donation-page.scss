@@ -35,14 +35,10 @@
 
 	.charitable-donation-form {
 		@include padding( 36 );
-		border: {
-			@include width( 1 );
-			style: solid;
-			color: $color__border-primary;
-		}
+		@include border( 1 );
 		border-top: none;
 		border-radius: 0 0 0.4rem 0.4rem;	    
-		background: $color__background-content;
+		@include background-color( $color__background-content );
 		box-shadow: 0 0 1px $color__background-content;
 
 		@include bp( 800 ) {
@@ -87,7 +83,7 @@
 		@include margin( 12, 0, 0 );
 
 		input {
-			background-color: $color__background-content;
+			@include background-color( $color__background-content );
 		}
 
 		&.charitable-custom-donation-field-alone {
@@ -105,11 +101,7 @@
 	.charitable-edd-connected-download {
 		position: relative;
 		@include padding( 24, 12, 24, 12 );
-		border-bottom: {
-			@include width( 2 );
-			style: solid;
-			color: $color__border-primary;
-		}		
+		@include border-bottom;		
 		cursor: pointer;
 
 		&:last-of-type {
@@ -117,7 +109,7 @@
 		}
 
 		&.selected {
-			background: $color__background-content;
+			@include background-color( $color__background-content );
 		}
 
 		@include bp( 800 ) {
@@ -188,7 +180,7 @@
 		&:focus, 
 		&:active {
 			@include background-color( $color__accent );
-			color: $color__text-overlay;
+			@include color( $color__text-overlay );
 		}
 	}
 }
@@ -204,7 +196,7 @@
     @include border-color( $color__background-body );
     border-radius: 0.4rem;            
     @include color( $color__text );
-    background-color: $color__background-content;        
+    @include background-color( $color__background-content );        
 
     .amount {    
     	display: block;
@@ -220,7 +212,7 @@
     &:hover {
     	@include border-color( $color__background-button );
         @include background-color( $color__text );
-        color: $color__background-content;
+        @include color( $color__background-content );
     }
 
     &.custom-donation-amount {
@@ -240,7 +232,7 @@
 
         	&:focus, 
         	&:active {
-        		background-color: $color__background-content;
+        		@include background-color( $color__background-content );
         	}
         }
     }
@@ -263,7 +255,7 @@
 	    @include font-size( 18 );
 	    font-family: $font__secondary;
 	    @include color( $color__text ); 
-	    background-color: $color__background-content;
+	    @include background-color( $color__background-content );
 	}
 
 	::-webkit-input-placeholder {

@@ -38,21 +38,41 @@
     }
 }
 
-// Add a breakpoint. 
-@mixin bp($point, $min : true) {
-    $bp : ($point / 16) + em;
-
-    @if ( $min ) {
-        @media (min-width: #{$bp}) { @content };
-    }
-    @else {
-        @media (max-width: #{$bp}) { @content };
-    }
-}
-
 /*-------------------------------------------------------------- 
 0.1 Palette
 --------------------------------------------------------------*/
+$placeholders : ();
+
+// Checks if a placeholder exists.
+@function placeholder-exists($name) {
+    @if index($placeholders, $name) == null {
+        @return false;
+    }
+ 
+    @return true;
+}
+
+// Registers a placeholder.
+//
+// @access private
+@function register-placeholder($name) {
+    @if placeholder-exists($name) == false {
+        $placeholders: append($placeholders, $name) !global;
+    }  
+ 
+    @return $name;
+}
+ 
+// Defines a placeholder.
+@mixin define-placeholder($name) {
+    %#{$name} {
+        $name: register-placeholder($name);
+ 
+        @content;
+    }
+}
+
+// Finally, register all our placeholders
 $is_palette_stylesheet : 0 !default;
 @if $is_palette_stylesheet == 1 {
     @each $colour in 
@@ -80,10 +100,14 @@ $is_palette_stylesheet : 0 !default;
         @each $prop in 
             color, 
             background-color, 
-            border-color {
-            %#{$prop}#{unquote("-") + $colour} {
-                #{$prop} : #{$colour};
-            }
+            border-color,
+            border-top-color,
+            border-right-color,
+            border-bottom-color,
+            border-left-color {
+                @include define-placeholder( #{$prop}#{unquote("-") + $colour} ) {
+                    #{$prop} : #{$colour};
+            }            
         }
-    }    
-}
+    }
+}    

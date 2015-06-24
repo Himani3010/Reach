@@ -1,17 +1,4 @@
 /*
-Theme Name: Benny
-Theme URI: https://164a.com/product/benny-wordpress-crowdfunding-theme/
-Author: Studio 164a
-Author URI: https://164a.com
-Description: A responsive, retina ready Wordpress crowdfunding theme.
-Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: crowdfunding, modern, fundraising
-Text Domain: benny
-
-This theme, like WordPress, is licensed under the GPL.
-
 Resetting and rebuilding styles have been helped along thanks to the fine work of
 Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
 along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
@@ -25,20 +12,20 @@ and Blueprint http://www.blueprintcss.org/
 3.0 Elements
 4.0 Forms
 5.0 Navigation
-	5.1 Links
-	5.2 Menus
+    5.1 Links
+    5.2 Menus
 6.0 Accessibility
 7.0 Alignments
 8.0 Clearings
 9.0 Widgets
 10.0 Content
-	10.1 Posts and pages
-	10.2 Asides
-	10.3 Comments
+    10.1 Posts and pages
+    10.2 Asides
+    10.3 Comments
 11.0 Infinite scroll
 12.0 Media
-	12.1 Captions
-	12.2 Galleries
+    12.1 Captions
+    12.2 Galleries
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";

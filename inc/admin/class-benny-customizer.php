@@ -14,8 +14,8 @@ class Benny_Customizer {
      * @param   Benny_Theme     $theme
      * @return  void
      */
-    public static function start( Benny_Theme $theme ) {
-        if ( $theme->started() ) {
+    public static function start( Benny_Theme $theme ) {        
+        if ( ! $theme->is_start() ) {
             return;
         }
 
@@ -28,8 +28,8 @@ class Benny_Customizer {
      * @access  private
      * @since   1.0.0
      */
-    private function __construct() {        
-        add_action('after_setup_theme',                 array( $this, 'setup_callbacks' ) );        
+    private function __construct() {
+        add_action('after_setup_theme', array( $this, 'setup_callbacks' ) );        
     } 
 
     /**
@@ -39,10 +39,10 @@ class Benny_Customizer {
      * @since   1.6.0
      */
     public function setup_callbacks() {
-        add_action('customize_save_after',              array( $this, 'customize_save_after' ) );
-        add_action('customize_register',                array( $this, 'customize_register' ) );     
-        add_action('customize_controls_print_scripts',  array( $this, 'customize_controls_print_scripts' ), 100 );
-        add_action('wp_head',                           array( $this, 'preview_styles' ) );
+        add_action('customize_save_after', array( $this, 'customize_save_after' ) );
+        add_action('customize_register', array( $this, 'customize_register' ) );     
+        add_action('customize_controls_print_scripts', array( $this, 'customize_controls_print_scripts' ), 100 );
+        add_action('wp_head', array( $this, 'preview_styles' ) );
     }
 
     /**

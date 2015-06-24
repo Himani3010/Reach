@@ -24,14 +24,14 @@ body.user-dashboard {
 				@include button-inverted();
 				&:hover {
 					@include background-color( $color__background-button );
-					color: $color__text-overlay;
+					@include color( $color__text-overlay );
 				}
 				&.button-primary {
 					@include color( $color__accent );
 					@include border-color( $color__accent );				
 					&:hover {
 						@include background-color( $color__accent );
-						color: $color__text-overlay;
+						@include color( $color__text-overlay );
 					}	
 				}
 			}
@@ -73,9 +73,9 @@ body.user-dashboard {
 
 		&.current-menu-item a, 
 		a:hover {						
-			border-color: $color__border-primary;
-			border-bottom-color: $color__background-content;			
-			background-color: $color__background-content;
+			@include border-color( $color__border-primary );
+			@include border-bottom-color( $color__background-content );			
+			@include background-color( $color__background-content );
 			@include color( $color__accent );
 
 			&::after {
@@ -86,7 +86,7 @@ body.user-dashboard {
 				display: block;
 				@include width( 1 );
 				@include height( 1 );
-				background-color: $color__border-primary;
+				@include background-color( $color__border-primary );
 			}
 		}		
 	}

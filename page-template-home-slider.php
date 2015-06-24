@@ -14,11 +14,9 @@ get_header();
 		?>	
 		<main class="site-main content-area" role="main">
 
-			<article <?php post_class("feature-block center cf") ?>>
+			<article <?php post_class() ?>>
 
 				<div class="shadow-wrapper">	
-
-					<?php //get_template_part('layer-slider') ?>				
 
 					<h1 class="page-title"><?php the_title() ?></h1>
 
@@ -30,8 +28,7 @@ get_header();
 
 			</article>
 
-			<?php 
-			get_template_part('campaign', 'grid');
+			<?php get_template_part('campaign', 'grid');
 
 			// if ( get_post_meta( get_the_ID(), '_franklin_homepage_2_show_campaigns', true ) ) : 
 
@@ -44,8 +41,7 @@ get_header();
 			// 	get_template_part('campaign', 'categories');
 
 			// endif;
-			?>		
-		
+			?>
 		</main>
 
 	<?php 

@@ -47,7 +47,7 @@
 			text-align: center;
 			@include letter-spacing( 1 );
 			@include font-size( 11 );
-			color: $color__text-overlay;
+			@include color( $color__text-overlay );
 			-moz-transform: rotate(-45deg);
 			-webkit-transform: rotate(-45deg);
 			-ms-transform: rotate(-45deg);
@@ -56,11 +56,11 @@
 		}
 
 		.campaign-successful { 
-			background-color: $color__success;
+			@include background-color( $color__success );
 		}
 
 		.campaign-unsuccessful {
-			background-color: $color__failure;
+			@include background-color( $color__failure );
 		}
 	}
 
@@ -76,13 +76,16 @@
 	}
 
 	.campaign-donation {
-		@include padding( 0, 0, 24 );
+		@include padding( 0, 0, 24 );		
+	}
 
-		.donate-button {			
-			margin: 0;
-			@include height( 50 );
-			@include line-height( 50 );
-			@include font-size( 25 );			
+	.donate-button {			
+		margin: 0;
+		height: 100%;			
+		@include padding( 12, 20 );
+		@include font-size( 25 );
+		&:hover {
+			@include color( $color__text-overlay );
 		}
 	}
 
@@ -262,7 +265,11 @@
 			margin-right: 0;		
 		
 			.wp-post-image {
-				border: 0.5rem solid;
+				border: {
+					@include width( 5 );
+					style: solid;
+					color: rgba( 255, 255, 255, 0.3 );
+				}
 				border-radius: 0.4rem;
 				width: 95.3%;
 				width: -moz-calc(100% - 1.8rem);
@@ -406,16 +413,16 @@
 .charitable-fes-campaign-creator-toolbar {
 	@include fullwidth-wrapper-padded();
 	@include padding( 12, 45 );
-	background-color: $color__accent-hover;
-	color: $color__text-overlay;
+	@include background-color( $color__accent-hover );
+	@include color( $color__text-overlay );
 
 	a {
 		float: right;
-		color: $color__background-content;
+		@include color( $color__background-content );
 		font-weight: 100;
 
 		&:hover {
-			color: $color__text-overlay;
+			@include color( $color__text-overlay );
 		}
 	}
 

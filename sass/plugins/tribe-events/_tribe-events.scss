@@ -19,7 +19,7 @@ body.events-single {
         margin: 0;
         @include font-size( 12 );
         @include border-width( 2, 0, 0 );
-        border-color: $color__border-primary;
+        @include border-color( $color__border-primary );
         background: transparent;    
 
         .tribe-events-meta-group {
@@ -43,11 +43,7 @@ body.events-single {
     }
 
     .tribe-events-tickets {
-        border-top: {
-            @include width( 1 );
-            style: solid;
-            color: $color__border-primary;
-        }
+        @include border-top( 1 );
         td {
             @include padding( 12, 10 );
             border-top: 0;
@@ -67,12 +63,8 @@ body.events-single {
         }
 
         .eddtickets-add {
-            border-bottom: {
-                @include width( 1 );
-                style: solid;
-                color: $color__border-primary;
-            }
-
+            @include border-bottom( 1 );
+            
             .edd-submit {
                 margin: 0;
             }
@@ -107,7 +99,7 @@ body.tribe-mobile #main {
         @include border( 2, $color__background-button );
         &:hover {
             @include background-color( $color__background-button );
-            color: $color__background-content;
+            @include color( $color__background-content );
         }
     }
 }
@@ -131,11 +123,7 @@ body.tribe-mobile #main {
         position: relative;
         @extend .cf;      
         width: 100%;
-        border-bottom: {
-            @include width( 1 ); 
-            style: solid;
-            color: $color__border-primary;
-        }
+        @include border-bottom( 1 );
         @include margin( 0, 0, 12 );
         @include padding( 0, 0, 12 );
         

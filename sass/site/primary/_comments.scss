@@ -8,11 +8,7 @@
 	clear: both;
 	@include margin-bottom( 24 );
 	width: 100%;
-	border-bottom: {
-		@include width( 1 );
-		style: solid;
-		color: $color__border-primary;
-	}
+	@include border-bottom( 1 );
 	@include hidden-overflow();
 
 	h1, 
@@ -33,8 +29,7 @@
 	float: left;
 	clear: both;
 	width: 100%;
-	background-color: $color__background-content;
-
+	@include background-color( $color__background-content );
 
 	.children {
 		margin-left: 5%;
@@ -123,10 +118,8 @@
 }
 
 .bypostauthor {
-
 	.post-author {
 		text-transform: uppercase;
-
 		i {
 			@include margin-right( 2 );
 			@include color( $color__accent );
@@ -149,4 +142,8 @@
 #cancel-comment-reply-link {
 	float: right;
 	@include font-size( 20 );
+}
+
+#submit {
+	@include button-inverted;		
 }
