@@ -28,7 +28,7 @@ class Benny_Theme {
 	/**
 	 * The theme version. 
 	 */
-	const VERSION = '1.0.0-20150623';
+	const VERSION = '1.0.0-20150624iii';
 
 	/**
 	 * Database version number. 
@@ -297,7 +297,8 @@ class Benny_Theme {
         add_filter(	'next_comments_link_attributes', array( $this, 'posts_navigation_link_attributes' ) );
         add_filter(	'previous_comments_link_attributes', array( $this, 'posts_navigation_link_attributes' ) );                
         add_filter(	'oembed_dataparse', 		array( $this, 'wrap_fullwidth_videos' ), 10, 3 );
-        add_filter(	'video_embed_html', 		'benny_fullwidth_video' );
+        add_filter( 'hybrid_media_grabber_valid_shortcodes', array( $this, 'add_valid_media_grabber_shortcodes' ) );
+        add_filter(	'video_embed_html', 		'benny_fullwidth_video' );        
 	}
 
 	/**
@@ -355,6 +356,11 @@ class Benny_Theme {
 		add_theme_support( 'post-formats', array(
 			'aside', 'image', 'video', 'quote', 'link',
 		) );
+
+        /**
+         * Enable support for Hide Meta plugin.
+         */
+        add_theme_support( 'hide-meta' );
 	}
 
 	/**
@@ -584,7 +590,12 @@ class Benny_Theme {
      */
     public function the_content_more_link_filter($more_link, $more_link_text = null) {
         $post = get_post();
-        return '<span class="aligncenter"><a href="'.get_permalink().'" class="more-link button button-alt" title="'.sprintf( __('Keep reading %s', 'benny'), "&#8220;".get_the_title()."&#8221;" ).'">'.__( 'Continue Reading', 'benny' ).'</a></span>';
+        return sprintf( '<span class="aligncenter"><a href="%s" class="more-link button-alt" title="%s &#8220;%s&#8221;">%s</a></span>', 
+            get_permalink(), 
+            _x( 'Keep reading', 'keep reading post', 'benny' ), 
+            get_the_title(), 
+            __( 'Continue Reading', 'benny' ) 
+        );
     }
 
     /**
@@ -612,6 +623,19 @@ class Benny_Theme {
         }
         return $html;
     } 
+
+    /**
+     * Add some custom shortcodes as valid shortcodes for the Benny_Media_Grabber class. 
+     *
+     * @param   string[] $shortcodes
+     * @return  string[]
+     * @access  public
+     * @since   1.0.0
+     */
+    public function add_valid_media_grabber_shortcodes( $shortcodes ) {
+        $shortcodes[] = 'layerslider';
+        return $shortcodes;
+    }
 }
 
 endif; // End class_exists

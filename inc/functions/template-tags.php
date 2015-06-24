@@ -354,11 +354,11 @@ if ( ! function_exists( 'benny_link_format_title' ) ) :
 	 */
 	function benny_link_format_title($echo = true) {
 		global $post;
-		$anchors = benny_get_first_anchor($post->post_content);
+		$anchors = benny_get_first_anchor( $post->post_content );
 
 		// If there are no anchors, just return the normal title.
-		if ( empty($anchors) ) 
-			return '<a href="'.get_permalink().'" title="Go to '.$post->post_title.'">'.$post->post_title.'</a>';
+		if ( empty( $anchors ) ) 
+			return sprintf( '<a href="%s" title="%s">%s</a>', get_permalink(), $post->post_title, $post->post_title );
 
 		$anchor = apply_filters( 'benny_link_format_title', $anchors[0] );
 

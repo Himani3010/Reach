@@ -11,6 +11,7 @@ if ( ! benny_has_charitable() ) {
 
 $profile_page = charitable_get_permalink( 'profile_page' );
 $submit_page = charitable_get_permalink( 'campaign_submission_page' );
+$login_page = charitable_get_permalink( 'login_page' );
 
 ?>
 <div class="account-links">
@@ -30,7 +31,7 @@ $submit_page = charitable_get_permalink( 'campaign_submission_page' );
 
     <?php else : ?>
 
-        <a class="user-login button with-icon button-alt button-small" href="#" data-reveal-id="login-form" data-icon="&#xf007;"><?php _e('Login / Register', 'benny') ?></a>
+        <a class="user-login button with-icon button-alt button-small" href="<?php echo $login_page ?>" data-icon="&#xf007;"><?php _e('Login / Register', 'benny') ?></a>
 
     <?php endif ?>
 </div><!-- .account-links -->

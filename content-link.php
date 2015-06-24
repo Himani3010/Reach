@@ -18,7 +18,7 @@
 
 	benny_post_header();
 
-	$content = benny_link_format_the_content( ull, false, false );
+	$content = benny_link_format_the_content( null, false, false );
 
 	if ( strlen($content) ) : 
 

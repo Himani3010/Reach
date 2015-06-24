@@ -1,6 +1,5 @@
 @mixin button-base() {
 	display: inline-block;
-	@include margin( 3, 0, 0, 3 );
 	@include padding( 8, 20 );
 	@include font-size( 14 );
 	line-height: 1em;

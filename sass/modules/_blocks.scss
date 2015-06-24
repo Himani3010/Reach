@@ -60,6 +60,10 @@
 	@include color( $color__accent );
 }
 
+.block-title.with-icon {
+	@include padding-left( 28 );
+}
+
 /* Shadow wrapper */
 .shadow-wrapper {
 	&::before {

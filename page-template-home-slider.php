@@ -18,6 +18,8 @@ get_header();
 
 				<div class="shadow-wrapper">	
 
+					<?php echo benny_get_media( array( 'split_media' => true ) ) ?>
+
 					<h1 class="page-title"><?php the_title() ?></h1>
 
 					<div class="entry">
@@ -30,15 +32,9 @@ get_header();
 
 			<?php get_template_part('campaign', 'grid');
 
-			// if ( get_post_meta( get_the_ID(), '_franklin_homepage_2_show_campaigns', true ) ) : 
-
-			// 	get_template_part('campaign', 'grid');
-
-			// endif;
-
 			// if ( get_post_meta( get_the_ID(), '_franklin_homepage_2_show_categories', true ) ) :
 
-			// 	get_template_part('campaign', 'categories');
+				// get_template_part('campaign', 'categories');
 
 			// endif;
 			?>

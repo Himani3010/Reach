@@ -200,7 +200,7 @@
         @include top( 9 );
         @include height( 2 );
         width: 100%;
-        @include border-color( $color__border-primary );
+        @include background-color( $color__border-primary );
     }
 
     .legend {

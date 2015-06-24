@@ -20,8 +20,6 @@ get_header();
 					'container_class' 	=> 'user-dashboard-menu'
 				) );
 
-			// wp_nav_menu();
-
 			endif;
 			?>
 

@@ -208,3 +208,28 @@ function benny_get_media( $args = array() ) {
 
     return $media->get_media();    
 }
+
+/**
+ * Returns all anchors from the content.
+ *
+ * @param   string  $content
+ * @return  array
+ * @since   1.0.0
+ */
+function benny_get_first_anchor ($content ) {
+    preg_match( '/<a(.*)>(.*)<\/a>/', $content, $matches );
+    return $matches;
+}
+
+/**
+ * Strips anchors from the content, up to the set limit (defaults to 1).
+ * 
+ * @param   string  $content
+ * @param   int     $limit
+ * @return  string     
+ * @since   1.0.0
+ */
+function benny_strip_anchors( $content, $limit = 1 ) {
+    return preg_replace( '/<a(.*)>(.*)<\/a>/', '', $content, $limit );
+}
+

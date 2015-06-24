@@ -30,38 +30,8 @@
 	}
 
 	.campaign-image {
-		position: relative;
 		float: left;
-		width: 100%;
-		@include margin( 0, 0, 36 );
-		line-height: 0;	
-		overflow: hidden;
-
-		span {	
-			position: absolute;
-			display: block;
-			line-height: 1em;
-			@include padding( 6, 0 );
-			@include width( 200 );
-			@include margin( 30, 0, 0, -60 );
-			text-align: center;
-			@include letter-spacing( 1 );
-			@include font-size( 11 );
-			@include color( $color__text-overlay );
-			-moz-transform: rotate(-45deg);
-			-webkit-transform: rotate(-45deg);
-			-ms-transform: rotate(-45deg);
-			-o-transform: rotate(-45deg);
-			transform: rotate(-45deg);
-		}
-
-		.campaign-successful { 
-			@include background-color( $color__success );
-		}
-
-		.campaign-unsuccessful {
-			@include background-color( $color__failure );
-		}
+		@include margin( 0, 0, 36 );		
 	}
 
 	.wp-post-image {

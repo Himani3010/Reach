@@ -5,36 +5,37 @@ body.user-dashboard {
 	}
 
 	.entry-block {
-		@include padding( 36 );
+		@include padding( 36, 36, 0, 36 );
 		border-radius: 0 0.4rem 0.4rem 0.4rem;
 	}
 
-	.charitable-user-details,
-	.entry {
+	.charitable-user-details {
 		padding: 0;
 		border: none;
 	}
-
-	.charitable-form {
 	
-		.charitable-submit-field {
-			display: inline-block;
+	.entry {
+		@include padding( 0, 0, 36 );
+		border: none;
+	}
+	
+	.charitable-submit-field {
+		display: inline-block;
 
-			.button {
-				@include button-inverted();
-				&:hover {
-					@include background-color( $color__background-button );
-					@include color( $color__text-overlay );
-				}
-				&.button-primary {
-					@include color( $color__accent );
-					@include border-color( $color__accent );				
-					&:hover {
-						@include background-color( $color__accent );
-						@include color( $color__text-overlay );
-					}	
-				}
-			}
+		.button {
+			@include button-inverted();
+			&:hover {
+				@include background-color( $color__background-button );
+				@include color( $color__text-overlay );
+			}			
+		}
+		.button.button-primary {
+			@include color( $color__accent );
+			@include border-color( $color__accent );				
+			&:hover {
+				@include background-color( $color__accent );
+				@include color( $color__text-overlay );
+			}	
 		}
 	}
 }

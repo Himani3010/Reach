@@ -53,6 +53,11 @@
 	position: absolute;
 	@include right( 36 );
 	top: 0;
+	display: inline-block;
+
+	&::before {
+		@include top( 16 );
+	}
 
 	&:hover {
 		text-decoration: none;
