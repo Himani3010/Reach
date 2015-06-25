@@ -89,7 +89,7 @@ input[type="submit"], .button, .button-alt:hover,
 .button-secondary.accent:hover,
 .button.button-alt.accent:hover,
 .button.button-secondary.accent:hover, .feature-block, .account-links a,
-.account-links a:before, .account-links .button.button-alt, .banner, .sticky, .sticky a, #submit:hover, .campaign-summary .campaign-image span, .campaign-summary .donate-button:hover, .campaign-summary .campaign-sharing .icon:before, .charitable-fes-campaign-creator-toolbar, .charitable-fes-campaign-creator-toolbar a, .charitable-fes-campaign-creator-toolbar a:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button:focus, .widget.widget_campaign_creator_widget .creator-profile-link a, .charitable-donation-form .charitable-form-field .button:hover, .charitable-donation-form .charitable-form-field .button:focus, .charitable-donation-form .charitable-form-field .button:active, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-form .charitable-submit-field .button:hover, body.user-dashboard .charitable-form .charitable-submit-field .button.button-primary:hover, body .edd-submit.button.gray:focus, body .edd-submit.button.gray:active, body .edd-submit.button.gray:hover, body .edd-submit.button.white:focus, body .edd-submit.button.white:active, body .edd-submit.button.white:hover, body .edd-submit.button.blue:focus, body .edd-submit.button.blue:active, body .edd-submit.button.blue:hover, body .edd-submit.button.red:focus, body .edd-submit.button.red:active, body .edd-submit.button.red:hover, body .edd-submit.button.orange:focus, body .edd-submit.button.orange:active, body .edd-submit.button.orange:hover, body .edd-submit.button.green:focus, body .edd-submit.button.green:active, body .edd-submit.button.green:hover, body .edd-submit.button.yellow:focus, body .edd-submit.button.yellow:active, body .edd-submit.button.yellow:hover, body .edd-submit.button.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .edd-submit.button.dark-gray:hover, #edd_checkout_wrap #edd-purchase-button, #tribe-events .tribe-events-button:hover {
+.account-links a:before, .account-links .button.button-alt, .banner, .sticky, .sticky a, #submit:hover, .campaign-image span, .widget.widget_charitable_donate_widget .charitable-submit-field .button:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button:focus, .widget.widget_campaign_creator_widget .creator-profile-link a, .charitable-donation-form .charitable-form-field .button:hover, .charitable-donation-form .charitable-form-field .button:focus, .charitable-donation-form .charitable-form-field .button:active, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-submit-field .button:hover, body.user-dashboard .charitable-submit-field .button.button-primary:hover, .campaign-summary .donate-button:hover, .campaign-summary .campaign-sharing .icon:before, .charitable-fes-campaign-creator-toolbar, .charitable-fes-campaign-creator-toolbar a, .charitable-fes-campaign-creator-toolbar a:hover, body .edd-submit.button.gray:focus, body .edd-submit.button.gray:active, body .edd-submit.button.gray:hover, body .edd-submit.button.white:focus, body .edd-submit.button.white:active, body .edd-submit.button.white:hover, body .edd-submit.button.blue:focus, body .edd-submit.button.blue:active, body .edd-submit.button.blue:hover, body .edd-submit.button.red:focus, body .edd-submit.button.red:active, body .edd-submit.button.red:hover, body .edd-submit.button.orange:focus, body .edd-submit.button.orange:active, body .edd-submit.button.orange:hover, body .edd-submit.button.green:focus, body .edd-submit.button.green:active, body .edd-submit.button.green:hover, body .edd-submit.button.yellow:focus, body .edd-submit.button.yellow:active, body .edd-submit.button.yellow:hover, body .edd-submit.button.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .edd-submit.button.dark-gray:hover, #edd_checkout_wrap #edd-purchase-button, #tribe-events .tribe-events-button:hover {
   color: #ffffff; }
 
 .entry-block, .content-block, .modal, .widget tfoot td,
@@ -103,13 +103,13 @@ input[type="submit"], .button, .button-alt:hover,
 .widget input[type=password]:active,
 .widget input[type=email]:active,
 .widget input[type=number]:active,
-.widget textarea:active, .widget.content-block, .widget_search.widget .search-field:focus, .stripped .site-main, .comments-section, body.author .site-main, .widget.widget_charitable_edd_campaign_downloads .widget-block, .widget.widget_charitable_donate_widget .widget-block, .widget.widget_charitable_donate_widget .charitable-donation-form-without-suggestions, .campaign-donation-page.stripped .charitable-donation-form, .charitable-donation-form #custom-donation-amount-field input, .charitable-donation-form .charitable-edd-connected-download.selected, .donation-amounts .donation-amount, .donation-amounts .donation-amount.custom-donation-amount input[type=text]:focus, .donation-amounts .donation-amount.custom-donation-amount input[type=text]:active, #custom-donation-amount-field.charitable-custom-donation-field-alone input, .user-dashboard-menu li.current-menu-item a,
+.widget textarea:active, .widget.content-block, .widget_search.widget .search-field:focus, .format-quote blockquote, .stripped .site-main, .comments-section, body.author .site-main, .widget.widget_charitable_edd_campaign_downloads .widget-block, .widget.widget_charitable_donate_widget .widget-block, .widget.widget_charitable_donate_widget .charitable-donation-form-without-suggestions, .campaign-donation-page.stripped .charitable-donation-form, .charitable-donation-form #custom-donation-amount-field input, .charitable-donation-form .charitable-edd-connected-download.selected, .donation-amounts .donation-amount, .donation-amounts .donation-amount.custom-donation-amount input[type=text]:focus, .donation-amounts .donation-amount.custom-donation-amount input[type=text]:active, #custom-donation-amount-field.charitable-custom-donation-field-alone input, .user-dashboard-menu li.current-menu-item a,
 .user-dashboard-menu li a:hover, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) select, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) textarea, .charitable-repeatable-form-field-table .add-row.button, .charitable-fieldset .legend, #edd_checkout_wrap fieldset#edd_cc_fields input,
 #edd_checkout_wrap fieldset#edd_cc_fields select,
 #edd_checkout_wrap fieldset#edd_cc_fields textarea, .edd-checkout-template.stripped .entry-block, .widget.widget_pp_campaign_events .widget-block {
   background-color: #ffffff; }
 
-.sticky {
+.sticky, .sticky .entry .more-link {
   border-color: #ffffff; }
 
 .user-dashboard-menu li.current-menu-item a,
@@ -122,8 +122,8 @@ input[type="reset"]:hover,
 input[type="submit"]:hover, .menu-site a, .button:hover, .button-alt,
 .button-secondary,
 .button.button-alt,
-.button.button-secondary, .modal .block-title, .modal-close:before, .meta a, #submit, .share-widget .modal,
-.share-widget .modal .block-title, .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .campaigns-grid .campaign-description, .campaigns-grid .campaign-stats, .charitable-donation-form .charitable-form-field .button, .donation-amounts .donation-amount, #custom-donation-amount-field.charitable-custom-donation-field-alone input, body.user-dashboard .charitable-form .charitable-submit-field .button, .charitable-form-field-editor .mce-btn button, .charitable-repeatable-form-field-table .remove:before, .charitable-repeatable-form-field-table .add-row.button, .user-post-actions a, div.printfriendly a,
+.button.button-secondary, .modal .block-title, .modal-close:before, .meta a, #submit, .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .campaigns-grid .campaign-description, .campaigns-grid .campaign-stats, .charitable-donation-form .charitable-form-field .button, .donation-amounts .donation-amount, #custom-donation-amount-field.charitable-custom-donation-field-alone input, body.user-dashboard .charitable-submit-field .button, .charitable-form-field-editor .mce-btn button, .charitable-repeatable-form-field-table .remove:before, .charitable-repeatable-form-field-table .add-row.button, .share-widget .modal,
+.share-widget .modal .block-title, .user-post-actions a, div.printfriendly a,
 div.printfriendly a:link,
 div.printfriendly a:visited, body.events-single .tribe-events-tickets .tickets_price, body.events-single .tribe-events-tickets .tickets_name, #tribe-events .tribe-events-button {
   color: #7d6e63; }
@@ -134,7 +134,7 @@ input[type="reset"],
 input[type="submit"], .button, .button-alt:hover,
 .button-secondary:hover,
 .button.button-alt:hover,
-.button.button-secondary:hover, #submit:hover, .widget.widget_campaign_creator_widget .creator-profile-link a, .charitable-donation-form .charitable-form-field .button:hover, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-form .charitable-submit-field .button:hover, #tribe-events .tribe-events-button:hover {
+.button.button-secondary:hover, .sticky .entry .more-link:hover, .sticky .entry .more-link:focus, .sticky .entry .more-link:active, #submit:hover, .widget.widget_campaign_creator_widget .creator-profile-link a, .charitable-donation-form .charitable-form-field .button:hover, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-submit-field .button:hover, #tribe-events .tribe-events-button:hover {
   background-color: #7d6e63; }
 
 button,
@@ -146,7 +146,7 @@ input[type="reset"]:hover,
 input[type="submit"]:hover, .button, .button:hover, .button-alt,
 .button-secondary,
 .button.button-alt,
-.button.button-secondary, #submit, .widget.widget_campaign_creator_widget .creator-profile-link a, .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .charitable-donation-form .charitable-form-field .button, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-form .charitable-submit-field .button, .charitable-repeatable-form-field-table .add-row.button, #tribe-events .tribe-events-button {
+.button.button-secondary, .sticky .entry .more-link:hover, .sticky .entry .more-link:focus, .sticky .entry .more-link:active, #submit, .widget.widget_campaign_creator_widget .creator-profile-link a, .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .charitable-donation-form .charitable-form-field .button, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-submit-field .button, .charitable-repeatable-form-field-table .add-row.button, #tribe-events .tribe-events-button {
   border-color: #7d6e63; }
 
 .shadow-wrapper::before {
@@ -207,20 +207,20 @@ a, .menu-site a:hover, .menu-button, .button-alt.accent,
 .button-secondary.accent,
 .button.button-alt.accent,
 .button.button-secondary.accent, .block-title, .site-title a, .post-title a, .entry-header .entry-title a, .bypostauthor .post-author i, body.author .author-activity-summary .number, body.author .author-activity-feed .activity-summary .display-name,
-body.author .author-activity-feed .activity-summary a, .widget.widget_charitable_edd_campaign_downloads .download-price, .widget.widget_charitable_donate_widget .charitable-submit-field .button, .campaign .campaign-stats li span, .campaigns-grid .campaign-stats li span, .charitable-donation-form .charitable-form-field .button, body.user-dashboard .charitable-form .charitable-submit-field .button.button-primary, .user-dashboard-menu li.current-menu-item a,
+body.author .author-activity-feed .activity-summary a, .widget.widget_charitable_edd_campaign_downloads .download-price, .widget.widget_charitable_donate_widget .charitable-submit-field .button, .campaign .campaign-stats li span, .campaigns-grid .campaign-stats li span, .charitable-donation-form .charitable-form-field .button, body.user-dashboard .charitable-submit-field .button.button-primary, .user-dashboard-menu li.current-menu-item a,
 .user-dashboard-menu li a:hover, .charitable-repeatable-form-field-table .remove:hover:before, .charitable-fieldset .legend, .entry-header .entry-title, .user-post-actions a:hover, body .edd-submit.button.gray, body .edd-submit.button.white, body .edd-submit.button.blue, body .edd-submit.button.red, body .edd-submit.button.orange, body .edd-submit.button.green, body .edd-submit.button.yellow, body .edd-submit.button.dark-gray, .widget.widget_pp_campaign_events .download-price {
   color: #d95b43; }
 
 .button-alt.accent:hover,
 .button-secondary.accent:hover,
 .button.button-alt.accent:hover,
-.button.button-secondary.accent:hover, .feature-block, .account-links .button.button-alt:hover, .banner, .sticky, .widget.widget_charitable_donate_widget .charitable-submit-field .button:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button:focus, .charitable-donation-form .charitable-form-field .button:hover, .charitable-donation-form .charitable-form-field .button:focus, .charitable-donation-form .charitable-form-field .button:active, body.user-dashboard .charitable-form .charitable-submit-field .button.button-primary:hover, body .edd-submit.button.gray:focus, body .edd-submit.button.gray:active, body .edd-submit.button.gray:hover, body .edd-submit.button.white:focus, body .edd-submit.button.white:active, body .edd-submit.button.white:hover, body .edd-submit.button.blue:focus, body .edd-submit.button.blue:active, body .edd-submit.button.blue:hover, body .edd-submit.button.red:focus, body .edd-submit.button.red:active, body .edd-submit.button.red:hover, body .edd-submit.button.orange:focus, body .edd-submit.button.orange:active, body .edd-submit.button.orange:hover, body .edd-submit.button.green:focus, body .edd-submit.button.green:active, body .edd-submit.button.green:hover, body .edd-submit.button.yellow:focus, body .edd-submit.button.yellow:active, body .edd-submit.button.yellow:hover, body .edd-submit.button.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .edd-submit.button.dark-gray:hover, #edd_checkout_wrap #edd-purchase-button {
+.button.button-secondary.accent:hover, .feature-block, .account-links .button.button-alt:hover, .banner, .sticky, .widget.widget_charitable_donate_widget .charitable-submit-field .button:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button:focus, .charitable-donation-form .charitable-form-field .button:hover, .charitable-donation-form .charitable-form-field .button:focus, .charitable-donation-form .charitable-form-field .button:active, body.user-dashboard .charitable-submit-field .button.button-primary:hover, body .edd-submit.button.gray:focus, body .edd-submit.button.gray:active, body .edd-submit.button.gray:hover, body .edd-submit.button.white:focus, body .edd-submit.button.white:active, body .edd-submit.button.white:hover, body .edd-submit.button.blue:focus, body .edd-submit.button.blue:active, body .edd-submit.button.blue:hover, body .edd-submit.button.red:focus, body .edd-submit.button.red:active, body .edd-submit.button.red:hover, body .edd-submit.button.orange:focus, body .edd-submit.button.orange:active, body .edd-submit.button.orange:hover, body .edd-submit.button.green:focus, body .edd-submit.button.green:active, body .edd-submit.button.green:hover, body .edd-submit.button.yellow:focus, body .edd-submit.button.yellow:active, body .edd-submit.button.yellow:hover, body .edd-submit.button.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .edd-submit.button.dark-gray:hover, #edd_checkout_wrap #edd-purchase-button {
   background-color: #d95b43; }
 
 .button-alt.accent,
 .button-secondary.accent,
 .button.button-alt.accent,
-.button.button-secondary.accent, .account-links .button.button-alt:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button, .charitable-donation-form .charitable-form-field .button, body.user-dashboard .charitable-form .charitable-submit-field .button.button-primary, body .edd-submit.button.gray, body .edd-submit.button.white, body .edd-submit.button.blue, body .edd-submit.button.red, body .edd-submit.button.orange, body .edd-submit.button.green, body .edd-submit.button.yellow, body .edd-submit.button.dark-gray, body .edd-submit.button.gray:focus, body .edd-submit.button.gray:active, body .edd-submit.button.gray:hover, body .edd-submit.button.white:focus, body .edd-submit.button.white:active, body .edd-submit.button.white:hover, body .edd-submit.button.blue:focus, body .edd-submit.button.blue:active, body .edd-submit.button.blue:hover, body .edd-submit.button.red:focus, body .edd-submit.button.red:active, body .edd-submit.button.red:hover, body .edd-submit.button.orange:focus, body .edd-submit.button.orange:active, body .edd-submit.button.orange:hover, body .edd-submit.button.green:focus, body .edd-submit.button.green:active, body .edd-submit.button.green:hover, body .edd-submit.button.yellow:focus, body .edd-submit.button.yellow:active, body .edd-submit.button.yellow:hover, body .edd-submit.button.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .edd-submit.button.dark-gray:hover {
+.button.button-secondary.accent, .account-links .button.button-alt:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button, .charitable-donation-form .charitable-form-field .button, body.user-dashboard .charitable-submit-field .button.button-primary, body .edd-submit.button.gray, body .edd-submit.button.white, body .edd-submit.button.blue, body .edd-submit.button.red, body .edd-submit.button.orange, body .edd-submit.button.green, body .edd-submit.button.yellow, body .edd-submit.button.dark-gray, body .edd-submit.button.gray:focus, body .edd-submit.button.gray:active, body .edd-submit.button.gray:hover, body .edd-submit.button.white:focus, body .edd-submit.button.white:active, body .edd-submit.button.white:hover, body .edd-submit.button.blue:focus, body .edd-submit.button.blue:active, body .edd-submit.button.blue:hover, body .edd-submit.button.red:focus, body .edd-submit.button.red:active, body .edd-submit.button.red:hover, body .edd-submit.button.orange:focus, body .edd-submit.button.orange:active, body .edd-submit.button.orange:hover, body .edd-submit.button.green:focus, body .edd-submit.button.green:active, body .edd-submit.button.green:hover, body .edd-submit.button.yellow:focus, body .edd-submit.button.yellow:active, body .edd-submit.button.yellow:hover, body .edd-submit.button.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .edd-submit.button.dark-gray:hover {
   border-color: #d95b43; }
 
 .toggled .menu-site, .toggled .menu-site ul {
@@ -238,8 +238,8 @@ input[type="reset"]:hover,
 input[type="submit"]:hover, .menu-site a, .button:hover, .button-alt,
 .button-secondary,
 .button.button-alt,
-.button.button-secondary, .modal .block-title, .modal-close:before, .meta a, #submit, .share-widget .modal,
-.share-widget .modal .block-title, .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .campaigns-grid .campaign-description, .campaigns-grid .campaign-stats, .charitable-donation-form .charitable-form-field .button, .donation-amounts .donation-amount, #custom-donation-amount-field.charitable-custom-donation-field-alone input, body.user-dashboard .charitable-form .charitable-submit-field .button, .charitable-form-field-editor .mce-btn button, .charitable-repeatable-form-field-table .remove:before, .charitable-repeatable-form-field-table .add-row.button, .user-post-actions a, div.printfriendly a,
+.button.button-secondary, .modal .block-title, .modal-close:before, .meta a, #submit, .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .campaigns-grid .campaign-description, .campaigns-grid .campaign-stats, .charitable-donation-form .charitable-form-field .button, .donation-amounts .donation-amount, #custom-donation-amount-field.charitable-custom-donation-field-alone input, body.user-dashboard .charitable-submit-field .button, .charitable-form-field-editor .mce-btn button, .charitable-repeatable-form-field-table .remove:before, .charitable-repeatable-form-field-table .add-row.button, .share-widget .modal,
+.share-widget .modal .block-title, .user-post-actions a, div.printfriendly a,
 div.printfriendly a:link,
 div.printfriendly a:visited, body.events-single .tribe-events-tickets .tickets_price, body.events-single .tribe-events-tickets .tickets_name, #tribe-events .tribe-events-button {
   color: #7d6e63; }
@@ -250,7 +250,7 @@ input[type="reset"],
 input[type="submit"], .button, .button-alt:hover,
 .button-secondary:hover,
 .button.button-alt:hover,
-.button.button-secondary:hover, #submit:hover, .widget.widget_campaign_creator_widget .creator-profile-link a, .charitable-donation-form .charitable-form-field .button:hover, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-form .charitable-submit-field .button:hover, #tribe-events .tribe-events-button:hover {
+.button.button-secondary:hover, .sticky .entry .more-link:hover, .sticky .entry .more-link:focus, .sticky .entry .more-link:active, #submit:hover, .widget.widget_campaign_creator_widget .creator-profile-link a, .charitable-donation-form .charitable-form-field .button:hover, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-submit-field .button:hover, #tribe-events .tribe-events-button:hover {
   background-color: #7d6e63; }
 
 button,
@@ -262,7 +262,7 @@ input[type="reset"]:hover,
 input[type="submit"]:hover, .button, .button:hover, .button-alt,
 .button-secondary,
 .button.button-alt,
-.button.button-secondary, #submit, .widget.widget_campaign_creator_widget .creator-profile-link a, .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .charitable-donation-form .charitable-form-field .button, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-form .charitable-submit-field .button, .charitable-repeatable-form-field-table .add-row.button, #tribe-events .tribe-events-button {
+.button.button-secondary, .sticky .entry .more-link:hover, .sticky .entry .more-link:focus, .sticky .entry .more-link:active, #submit, .widget.widget_campaign_creator_widget .creator-profile-link a, .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .charitable-donation-form .charitable-form-field .button, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-submit-field .button, .charitable-repeatable-form-field-table .add-row.button, #tribe-events .tribe-events-button {
   border-color: #7d6e63; }
 
 .shadow-wrapper::before {
@@ -287,7 +287,7 @@ input[type="submit"], .button, .button-alt:hover,
 .button-secondary.accent:hover,
 .button.button-alt.accent:hover,
 .button.button-secondary.accent:hover, .feature-block, .account-links a,
-.account-links a:before, .account-links .button.button-alt, .banner, .sticky, .sticky a, #submit:hover, .campaign-summary .campaign-image span, .campaign-summary .donate-button:hover, .campaign-summary .campaign-sharing .icon:before, .charitable-fes-campaign-creator-toolbar, .charitable-fes-campaign-creator-toolbar a, .charitable-fes-campaign-creator-toolbar a:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button:focus, .widget.widget_campaign_creator_widget .creator-profile-link a, .charitable-donation-form .charitable-form-field .button:hover, .charitable-donation-form .charitable-form-field .button:focus, .charitable-donation-form .charitable-form-field .button:active, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-form .charitable-submit-field .button:hover, body.user-dashboard .charitable-form .charitable-submit-field .button.button-primary:hover, body .edd-submit.button.gray:focus, body .edd-submit.button.gray:active, body .edd-submit.button.gray:hover, body .edd-submit.button.white:focus, body .edd-submit.button.white:active, body .edd-submit.button.white:hover, body .edd-submit.button.blue:focus, body .edd-submit.button.blue:active, body .edd-submit.button.blue:hover, body .edd-submit.button.red:focus, body .edd-submit.button.red:active, body .edd-submit.button.red:hover, body .edd-submit.button.orange:focus, body .edd-submit.button.orange:active, body .edd-submit.button.orange:hover, body .edd-submit.button.green:focus, body .edd-submit.button.green:active, body .edd-submit.button.green:hover, body .edd-submit.button.yellow:focus, body .edd-submit.button.yellow:active, body .edd-submit.button.yellow:hover, body .edd-submit.button.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .edd-submit.button.dark-gray:hover, #edd_checkout_wrap #edd-purchase-button, #tribe-events .tribe-events-button:hover {
+.account-links a:before, .account-links .button.button-alt, .banner, .sticky, .sticky a, #submit:hover, .campaign-image span, .widget.widget_charitable_donate_widget .charitable-submit-field .button:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button:focus, .widget.widget_campaign_creator_widget .creator-profile-link a, .charitable-donation-form .charitable-form-field .button:hover, .charitable-donation-form .charitable-form-field .button:focus, .charitable-donation-form .charitable-form-field .button:active, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-submit-field .button:hover, body.user-dashboard .charitable-submit-field .button.button-primary:hover, .campaign-summary .donate-button:hover, .campaign-summary .campaign-sharing .icon:before, .charitable-fes-campaign-creator-toolbar, .charitable-fes-campaign-creator-toolbar a, .charitable-fes-campaign-creator-toolbar a:hover, body .edd-submit.button.gray:focus, body .edd-submit.button.gray:active, body .edd-submit.button.gray:hover, body .edd-submit.button.white:focus, body .edd-submit.button.white:active, body .edd-submit.button.white:hover, body .edd-submit.button.blue:focus, body .edd-submit.button.blue:active, body .edd-submit.button.blue:hover, body .edd-submit.button.red:focus, body .edd-submit.button.red:active, body .edd-submit.button.red:hover, body .edd-submit.button.orange:focus, body .edd-submit.button.orange:active, body .edd-submit.button.orange:hover, body .edd-submit.button.green:focus, body .edd-submit.button.green:active, body .edd-submit.button.green:hover, body .edd-submit.button.yellow:focus, body .edd-submit.button.yellow:active, body .edd-submit.button.yellow:hover, body .edd-submit.button.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .edd-submit.button.dark-gray:hover, #edd_checkout_wrap #edd-purchase-button, #tribe-events .tribe-events-button:hover {
   color: #ffffff; }
 
 .entry-block, .content-block, .modal, .widget tfoot td,
@@ -301,13 +301,13 @@ input[type="submit"], .button, .button-alt:hover,
 .widget input[type=password]:active,
 .widget input[type=email]:active,
 .widget input[type=number]:active,
-.widget textarea:active, .widget.content-block, .widget_search.widget .search-field:focus, .stripped .site-main, .comments-section, body.author .site-main, .widget.widget_charitable_edd_campaign_downloads .widget-block, .widget.widget_charitable_donate_widget .widget-block, .widget.widget_charitable_donate_widget .charitable-donation-form-without-suggestions, .campaign-donation-page.stripped .charitable-donation-form, .charitable-donation-form #custom-donation-amount-field input, .charitable-donation-form .charitable-edd-connected-download.selected, .donation-amounts .donation-amount, .donation-amounts .donation-amount.custom-donation-amount input[type=text]:focus, .donation-amounts .donation-amount.custom-donation-amount input[type=text]:active, #custom-donation-amount-field.charitable-custom-donation-field-alone input, .user-dashboard-menu li.current-menu-item a,
+.widget textarea:active, .widget.content-block, .widget_search.widget .search-field:focus, .format-quote blockquote, .stripped .site-main, .comments-section, body.author .site-main, .widget.widget_charitable_edd_campaign_downloads .widget-block, .widget.widget_charitable_donate_widget .widget-block, .widget.widget_charitable_donate_widget .charitable-donation-form-without-suggestions, .campaign-donation-page.stripped .charitable-donation-form, .charitable-donation-form #custom-donation-amount-field input, .charitable-donation-form .charitable-edd-connected-download.selected, .donation-amounts .donation-amount, .donation-amounts .donation-amount.custom-donation-amount input[type=text]:focus, .donation-amounts .donation-amount.custom-donation-amount input[type=text]:active, #custom-donation-amount-field.charitable-custom-donation-field-alone input, .user-dashboard-menu li.current-menu-item a,
 .user-dashboard-menu li a:hover, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) select, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) textarea, .charitable-repeatable-form-field-table .add-row.button, .charitable-fieldset .legend, #edd_checkout_wrap fieldset#edd_cc_fields input,
 #edd_checkout_wrap fieldset#edd_cc_fields select,
 #edd_checkout_wrap fieldset#edd_cc_fields textarea, .edd-checkout-template.stripped .entry-block, .widget.widget_pp_campaign_events .widget-block {
   background-color: #ffffff; }
 
-.sticky {
+.sticky, .sticky .entry .more-link {
   border-color: #ffffff; }
 
 .user-dashboard-menu li.current-menu-item a,
@@ -330,12 +330,12 @@ input[type="submit"], .button, .button-alt:hover,
   color: #e2dedb; }
 
 .user-dashboard-menu li.current-menu-item a::after,
-.user-dashboard-menu li a:hover::after, .charitable-form-field-editor .wp-editor-container {
+.user-dashboard-menu li a:hover::after, .charitable-form-field-editor .wp-editor-container, .charitable-fieldset:before {
   background-color: #e2dedb; }
 
 table, th,
 td, .block, .widget, .stripped .site-main, body.author .site-main, .widget.widget_charitable_edd_campaign_downloads .widget-block, .widget.widget_charitable_donate_widget .widget-block, .widget.widget_charitable_donate_widget .charitable-donation-form-without-suggestions, .campaign-donation-page.stripped .charitable-donation-form, .charitable-donation-form .charitable-connected-downloads, .user-dashboard-menu li.current-menu-item a,
-.user-dashboard-menu li a:hover, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) select, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) textarea, .charitable-fieldset:before, .charitable-notice, .charitable-user-post, .charitable-user-post:after, .edd-checkout-template.stripped .entry-block, body.events-single .tribe-events-event-meta, .widget.widget_pp_campaign_events .widget-block {
+.user-dashboard-menu li a:hover, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) select, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) textarea, .charitable-notice, .charitable-user-post, .charitable-user-post:after, .edd-checkout-template.stripped .entry-block, body.events-single .tribe-events-event-meta, .widget.widget_pp_campaign_events .widget-block {
   border-color: #e2dedb; }
 
 .multi-block .content-block:nth-of-type(1n+2), .meta-below, body.author .author-activity-feed, .widget.widget_campaign_creator_widget .creator-bio, .campaign .campaign-stats, .campaigns-grid .campaign-stats, .charitable-campaign-form-table tfoot td, .charitable-repeatable-form-field-table td, .charitable-fieldset .charitable-fieldset, .user-post-actions, body.events-single .tribe-events-tickets {
@@ -356,10 +356,10 @@ th {
 .widget-title {
   border-bottom-color: #dbd5d1; }
 
-.campaign-summary .campaign-image .campaign-successful {
+.campaign-image .campaign-successful {
   background-color: #1ba714; }
 
-.campaign-summary .campaign-image .campaign-unsuccessful {
+.campaign-image .campaign-unsuccessful {
   background-color: #cc181e; }
 
 /*--------------------------------------------------------------
@@ -458,8 +458,8 @@ a img {
 --------------------------------------------------------------*/
 @font-face {
   font-family: 'Benny-Icons';
-  src: url("../fonts/Benny-Icons.eot?-hpwnxk");
-  src: url("../fonts/Benny-Icons.eot?#iefix-hpwnxk") format("embedded-opentype"), url("../fonts/Benny-Icons.woff?-hpwnxk") format("woff"), url("../fonts/Benny-Icons.ttf?-hpwnxk") format("truetype"), url("../fonts/Benny-Icons.svg?-hpwnxk#Benny-Icons") format("svg");
+  src: url("../fonts/benny-icons.eot?-hpwdfsk");
+  src: url("../fonts/benny-icons.eot?#iefix-hpwdfsk") format("embedded-opentype"), url("../fonts/benny-icons.woff?-hpwdfsk") format("woff"), url("../fonts/benny-icons.ttf?-hpwdfsk") format("truetype"), url("../fonts/benny-icons.svg?-hpwdfsk#Benny-Icons") format("svg");
   font-weight: normal;
   font-style: normal; }
 [class^="icon-"], [class*=" icon-"] {
@@ -616,7 +616,9 @@ a img {
   padding-left: 1.4rem; }
   .with-icon::before {
     position: absolute;
-    left: 0; }
+    left: 0;
+    top: 3px;
+    top: 0.3rem; }
 
 .icon:hover {
   text-decoration: none; }
@@ -948,8 +950,6 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   display: inline-block;
-  margin: 3px 0px 0px 3px;
-  margin: 0.3rem 0rem 0rem 0.3rem;
   padding: 8px 20px;
   padding: 0.8rem 2rem;
   font-size: 14px;
@@ -1026,8 +1026,7 @@ input[type="submit"] {
   input[type="submit"]:hover,
   input[type="submit"]:active,
   input[type="submit"]:focus {
-    background-color: transparent;
-    border-color: transparent; }
+    background-color: transparent; }
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -1499,8 +1498,6 @@ a {
 --------------------------------------------------------------*/
 .button {
   display: inline-block;
-  margin: 3px 0px 0px 3px;
-  margin: 0.3rem 0rem 0rem 0.3rem;
   padding: 8px 20px;
   padding: 0.8rem 2rem;
   font-size: 14px;
@@ -1553,8 +1550,6 @@ a {
 .button.button-alt,
 .button.button-secondary {
   display: inline-block;
-  margin: 3px 0px 0px 3px;
-  margin: 0.3rem 0rem 0rem 0.3rem;
   padding: 8px 20px;
   padding: 0.8rem 2rem;
   font-size: 14px;
@@ -1684,6 +1679,10 @@ a {
   .block-title:hover,
   .block-title a:hover {
     text-decoration: none; }
+
+.block-title.with-icon {
+  padding-left: 28px;
+  padding-left: 2.8rem; }
 
 /* Shadow wrapper */
 @media (min-width: 50em) {
@@ -1892,7 +1891,9 @@ a {
     text-decoration: none; }
     .account-links .button.button-alt::before {
       left: 10px;
-      left: 1rem; }
+      left: 1rem;
+      top: 8px;
+      top: 0.8rem; }
     .account-links .button.button-alt::after {
       display: none; }
   @media (min-width: 37.5em) {
@@ -1908,12 +1909,17 @@ a {
   position: absolute;
   right: 36px;
   right: 3.6rem;
-  top: 0; }
+  top: 0;
+  display: inline-block; }
+  .logout::before {
+    top: 16px;
+    top: 1.6rem; }
   .logout:hover {
     text-decoration: none; }
   @media (min-width: 37.5em) {
     .logout {
-      position: static;
+      position: relative;
+      right: 0;
       margin-left: 12px;
       margin-left: 1.2rem; } }
 
@@ -2215,6 +2221,12 @@ a {
   .meta span {
     padding: 12px 0px;
     padding: 1.2rem 0rem; }
+  .meta .with-icon {
+    padding-left: 14px;
+    padding-left: 1.4rem; }
+    .meta .with-icon::before {
+      top: 14px;
+      top: 1.4rem; }
   .meta .author,
   .meta .comment-count,
   .meta .tags {
@@ -2268,7 +2280,26 @@ a {
   line-height: 2.6rem; }
 
 /*--------------------------------------------------------------
-11.1.1 Page Templates
+11.1.1 Post Formats
+--------------------------------------------------------------*/
+/* Quote */
+.format-quote blockquote {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 30px;
+  font-size: 3rem;
+  line-height: 45px;
+  line-height: 4.5rem; }
+.format-quote cite {
+  margin-top: 12px;
+  margin-top: 1.2rem; }
+
+/* Link */
+.format-link .post-title, .format-link .entry-header .entry-title, .entry-header .format-link .entry-title {
+  border: none; }
+
+/*--------------------------------------------------------------
+11.1.2 Page Templates
 --------------------------------------------------------------*/
 /* Campaigns Homepage */
 /* Alternative Campaigns Homepage */
@@ -2279,19 +2310,16 @@ a {
   overflow: visible; }
 .page-template-page-template-home-slider .feature-block {
   float: left;
-  padding: 12px 9px;
-  padding: 1.2rem 0.9rem;
+  padding: 36px 45px;
+  padding: 3.6rem 4.5rem;
   border: none;
   border-radius: 0;
   box-shadow: none;
   overflow: visible; }
 .page-template-page-template-home-slider .page-title {
-  padding: 24px 0px 36px;
-  padding: 2.4rem 0rem 3.6rem;
-  border-bottom-width: 3px;
-  border-bottom-width: 0.3rem;
-  border-bottom-style: solid;
-  border-bottom-color: rgba(255, 255, 255, 0.3); }
+  padding: 24px 0px 0px;
+  padding: 2.4rem 0rem 0rem;
+  margin-bottom: 0; }
 .page-template-page-template-home-slider .entry {
   font-size: 18px;
   font-size: 1.8rem;
@@ -2478,8 +2506,6 @@ a {
 
 #submit {
   display: inline-block;
-  margin: 3px 0px 0px 3px;
-  margin: 0.3rem 0rem 0rem 0.3rem;
   padding: 8px 20px;
   padding: 0.8rem 2rem;
   font-size: 14px;
@@ -2983,366 +3009,33 @@ embed {
 18.1 Charitable
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-18.1.1 Campaign Summary
+18.1.1 Re-usable Classes
 --------------------------------------------------------------*/
-.single-campaign #main {
-  padding-top: 0; }
-.single-campaign.stripped #main {
-  padding-top: 36px;
-  padding-top: 3.6rem; }
-
-.campaign-summary {
-  margin-bottom: 36px;
-  margin-bottom: 3.6rem; }
-  .campaign-summary .campaign-title {
-    margin: 36px 0px 12px;
-    margin: 3.6rem 0rem 1.2rem;
-    text-align: center; }
-  .campaign-summary .campaign-description {
-    float: left;
-    width: 100%;
-    padding: 0px 0px 24px;
-    padding: 0rem 0rem 2.4rem;
-    text-align: center;
-    font-size: 22px;
-    font-size: 2.2rem;
-    line-height: 32px;
-    line-height: 3.2rem; }
-    .campaign-summary .campaign-description p:last-child {
-      margin-bottom: 0; }
-  .campaign-summary .campaign-image {
-    position: relative;
-    float: left;
-    width: 100%;
-    margin: 0px 0px 36px;
-    margin: 0rem 0rem 3.6rem;
-    line-height: 0;
-    overflow: hidden; }
-    .campaign-summary .campaign-image span {
-      position: absolute;
-      display: block;
-      line-height: 1em;
-      padding: 6px 0px;
-      padding: 0.6rem 0rem;
-      width: 200px;
-      width: 20rem;
-      margin: 30px 0px 0px -60px;
-      margin: 3rem 0rem 0rem -6rem;
-      text-align: center;
-      letter-spacing: 1px;
-      letter-spacing: 0.1rem;
-      font-size: 11px;
-      font-size: 1.1rem;
-      -moz-transform: rotate(-45deg);
-      -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
-      transform: rotate(-45deg); }
-  .campaign-summary .wp-post-image {
-    width: 100%; }
-  .campaign-summary .campaign-details {
-    padding: 36px 0px 0px;
-    padding: 3.6rem 0rem 0rem;
-    margin: 0 auto;
-    max-width: 100%;
-    width: 380px;
-    width: 38rem; }
-  .campaign-summary .campaign-donation {
-    padding: 0px 0px 24px;
-    padding: 0rem 0rem 2.4rem; }
-  .campaign-summary .donate-button {
-    margin: 0;
-    height: 100%;
-    padding: 12px 20px;
-    padding: 1.2rem 2rem;
-    font-size: 25px;
-    font-size: 2.5rem; }
-  .campaign-summary .campaign-ended {
-    margin-bottom: 24px;
-    margin-bottom: 2.4rem;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 300; }
-  .campaign-summary .barometer {
-    position: relative;
-    float: left;
-    margin-right: 10px;
-    margin-right: 1rem;
-    z-index: 30;
-    width: 146px;
-    width: 14.6rem;
-    height: 146px;
-    height: 14.6rem; }
-    .campaign-summary .barometer span {
-      position: absolute;
-      left: 0;
-      top: 47px;
-      top: 4.7rem;
-      width: 146px;
-      width: 14.6rem;
-      text-align: center;
-      display: inline-block;
-      font-size: 16px;
-      font-size: 1.6rem;
-      font-style: italic;
-      opacity: 0;
-      /* This is animated by JS */ }
-      .campaign-summary .barometer span span {
-        position: static;
-        font-size: 30px;
-        font-size: 3rem;
-        line-height: 30px;
-        line-height: 3rem;
-        font-style: normal; }
-  .campaign-summary .campaign-stats {
-    float: right;
-    text-align: right;
-    list-style: none;
-    padding-left: 0;
-    width: -webkit-calc(100% - 156px);
-    width: -moz-calc(100% - 156px);
-    width: calc(100% - 156px);
-    max-width: 180px;
-    max-width: 18rem;
-    margin-bottom: 0; }
-    .campaign-summary .campaign-stats li {
-      padding-bottom: 10px;
-      padding-bottom: 1rem;
-      margin-bottom: 10px;
-      margin-bottom: 1rem;
-      border-bottom-width: 1px;
-      border-bottom-width: 0.1rem;
-      border-bottom-style: solid;
-      border-bottom-color: rgba(255, 255, 255, 0.3);
-      font-size: 16px;
-      font-size: 1.6rem;
-      font-style: italic;
-      font-weight: 300; }
-      .campaign-summary .campaign-stats li span {
-        font-size: 20px;
-        font-size: 2rem;
-        line-height: 30px;
-        line-height: 3rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        letter-spacing: 0.1rem;
-        display: block;
-        font-style: normal; }
-      .campaign-summary .campaign-stats li:last-child {
-        padding-bottom: 0;
-        border-bottom: none; }
-  .campaign-summary .campaign-support {
-    float: left;
-    width: 100%;
-    padding-bottom: 30px;
-    padding-bottom: 3rem;
-    text-align: center; }
-  .campaign-summary .campaign-sharing {
-    padding: 0;
-    margin-top: 20px;
-    margin-top: 2rem;
-    max-width: 100%;
-    text-align: center; }
-    .campaign-summary .campaign-sharing h6 {
-      margin: 0px 10px;
-      margin: 0rem 1rem;
-      line-height: 22pxpx;
-      line-height: 2.2pxrem; }
-    .campaign-summary .campaign-sharing li {
-      width: auto !important;
-      margin-bottom: 0;
-      vertical-align: top; }
-    .campaign-summary .campaign-sharing .icon {
-      padding: 0px 10px;
-      padding: 0rem 1rem;
-      font-size: 22px;
-      font-size: 2.2rem;
-      cursor: pointer; }
-  @media all and (min-width: 37.5em) and (max-width: 55em) {
-    .campaign-summary .campaign-details {
-      position: relative;
-      width: 100%;
-      padding-bottom: 7.4rem; }
-      .campaign-summary .campaign-details .campaign-support {
-        float: right;
-        width: 70%; }
-      .campaign-summary .campaign-details ul {
-        width: 70%;
-        max-width: 88rem;
-        text-align: center; }
-      .campaign-summary .campaign-details li {
-        display: inline-block;
-        padding-right: 2rem;
-        padding-left: 2rem;
-        border-right: 0.1rem solid rgba(255, 255, 255, 0.3);
-        border-bottom: 0; }
-      .campaign-summary .campaign-details .campaign-backers {
-        border: none; }
-    .campaign-summary .campaign-countdown {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 1rem 13% 0 13%;
-      border-bottom: 0;
-      border-top: 0.1rem solid rgba(255, 255, 255, 0.3);
-      text-align: center; }
-    .campaign-summary .campaign-sharing {
-      padding-top: 2.4rem;
-      margin-top: 1.2rem;
-      border-top: 0.1rem solid rgba(255, 255, 255, 0.3); }
-    .campaign-summary.ended .campaign-summary {
-      padding-bottom: 1.2rem; }
-      .campaign-summary.ended .campaign-summary ul {
-        margin-top: 4.8rem; } }
-  @media (min-width: 55em) {
-    .campaign-summary .campaign-image {
-      width: 50%;
-      width: -moz-calc(100% - 43rem);
-      width: -webkit-calc(100% - 43rem);
-      width: calc(100% - 43rem);
-      float: left;
-      margin-right: 0; }
-      .campaign-summary .campaign-image .wp-post-image {
-        border-width: 5px;
-        border-width: 0.5rem;
-        border-style: solid;
-        border-color: rgba(255, 255, 255, 0.3);
-        border-radius: 0.4rem;
-        width: 95.3%;
-        width: -moz-calc(100% - 1.8rem);
-        width: -webkit-calc(100% - 1.8rem);
-        width: calc(100% - 1.8rem); }
-    .campaign-summary .campaign-details {
-      float: left;
-      padding-left: 0;
-      padding-top: 0.3rem;
-      margin-left: 4rem;
-      margin-right: 0; }
-    .campaign-summary .campaign-sharing {
-      float: right;
-      width: 38rem;
-      margin-left: 0; } }
-
-.campaign-countdown {
-  float: left;
-  width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-bottom: 0;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  border-color: rgba(255, 255, 255, 0.3); }
-  .campaign-countdown .countdown {
-    text-transform: none;
-    letter-spacing: 0; }
-  .campaign-countdown .countdown-rtl {
-    direction: rtl; }
-  .campaign-countdown .countdown-row {
-    clear: both;
-    width: 100%;
-    padding: 0px 2px;
-    text-align: center; }
-  .campaign-countdown .countdown-show1 .countdown-section {
-    width: 98%; }
-  .campaign-countdown .countdown-show2 .countdown-section {
-    width: 48%; }
-  .campaign-countdown .countdown-show3 .countdown-section {
-    width: 32.5%; }
-  .campaign-countdown .countdown-show4 .countdown-section {
-    width: 24.5%; }
-  .campaign-countdown .countdown-show5 .countdown-section {
-    width: 19.5%; }
-  .campaign-countdown .countdown-show6 .countdown-section {
-    width: 16.25%; }
-  .campaign-countdown .countdown-show7 .countdown-section {
-    width: 14%; }
-  .campaign-countdown .countdown-section {
-    display: block;
-    float: left;
-    text-align: center;
-    font-size: 12px;
-    font-size: 1.2rem;
-    font-weight: 300; }
-  .campaign-countdown .countdown-amount {
-    font-size: 20px;
-    font-size: 2rem;
-    line-height: 1em; }
-  .campaign-countdown .countdown-period {
-    display: block;
-    width: 100%; }
-
-.campaign-countdown .countdown {
-  float: left;
-  width: 68%;
-  font-style: normal; }
-
-.campaign-countdown .countdown-period {
-  display: block; }
-
-.campaign-countdown > span:last-child {
-  font-size: 16px;
-  font-size: 1.6rem;
-  float: right;
-  text-align: right;
-  font-style: italic;
-  font-weight: 300;
-  width: 30%; }
-
-.share-widget .modal {
-  text-align: left; }
-.share-widget pre {
-  word-break: break-word; }
-.share-widget .block {
-  border: none; }
-  .share-widget .block.iframe-block {
-    width: 275px;
-    width: 27.5rem; }
-@media (min-width: 48em) {
-  .share-widget .modal {
-    width: 634px;
-    width: 63.4rem; }
-  .share-widget .block {
-    float: left;
-    width: 275px;
-    width: 27.5rem;
-    padding-right: 12px;
-    padding-right: 1.2rem; }
-    .share-widget .block.iframe-block {
-      float: right;
-      padding: 0; } }
-
-.charitable-fes-campaign-creator-toolbar {
+.campaign-image {
   position: relative;
-  left: -24px;
-  width: -webkit-calc( 100% + 48px );
-  width: -moz-calc( 100% + 48px );
-  width: calc( 100% + 48px );
-  padding: 12px 45px;
-  padding: 1.2rem 4.5rem; }
-  @media (min-width: 50em) {
-    .charitable-fes-campaign-creator-toolbar {
-      left: -45px;
-      width: -webkit-calc( 100% + 90px );
-      width: -moz-calc( 100% + 90px );
-      width: calc( 100% + 90px ); } }
-  .charitable-fes-campaign-creator-toolbar a {
-    float: right;
-    font-weight: 100; }
-  .charitable-fes-campaign-creator-toolbar .edit-link::before {
-    font-family: "Benny-Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    content: "\f040"; }
-  .charitable-fes-campaign-creator-toolbar .campaign-status {
-    color: rgba(255, 255, 255, 0.5); }
+  width: 100%;
+  line-height: 0;
+  overflow: hidden; }
+  .campaign-image span {
+    position: absolute;
+    display: block;
+    line-height: 1em;
+    padding: 6px 0px;
+    padding: 0.6rem 0rem;
+    width: 200px;
+    width: 20rem;
+    margin: 30px 0px 0px -60px;
+    margin: 3rem 0rem 0rem -6rem;
+    text-align: center;
+    letter-spacing: 1px;
+    letter-spacing: 0.1rem;
+    font-size: 11px;
+    font-size: 1.1rem;
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
 
 /*--------------------------------------------------------------
 18.1.2 Widgets
@@ -3473,8 +3166,6 @@ embed {
     margin-bottom: 0; }
     .widget.widget_charitable_donate_widget .charitable-submit-field .button {
       display: inline-block;
-      margin: 3px 0px 0px 3px;
-      margin: 0.3rem 0rem 0rem 0.3rem;
       padding: 8px 20px;
       padding: 0.8rem 2rem;
       font-size: 14px;
@@ -3526,8 +3217,6 @@ embed {
     list-style: disc; }
 .widget.widget_campaign_creator_widget .creator-profile-link a {
   display: inline-block;
-  margin: 3px 0px 0px 3px;
-  margin: 0.3rem 0rem 0rem 0.3rem;
   padding: 8px 20px;
   padding: 0.8rem 2rem;
   font-size: 14px;
@@ -3991,8 +3680,6 @@ embed {
   position: static; }
 .charitable-donation-form .charitable-form-field .button {
   display: inline-block;
-  margin: 3px 0px 0px 3px;
-  margin: 0.3rem 0rem 0rem 0.3rem;
   padding: 8px 20px;
   padding: 0.8rem 2rem;
   font-size: 14px;
@@ -4080,19 +3767,20 @@ body.user-dashboard .site-main {
   width: 100%;
   padding: 0; }
 body.user-dashboard .entry-block {
-  padding: 36px;
-  padding: 3.6rem;
+  padding: 36px 36px 0px 36px;
+  padding: 3.6rem 3.6rem 0rem 3.6rem;
   border-radius: 0 0.4rem 0.4rem 0.4rem; }
-body.user-dashboard .charitable-user-details,
-body.user-dashboard .entry {
+body.user-dashboard .charitable-user-details {
   padding: 0;
   border: none; }
-body.user-dashboard .charitable-form .charitable-submit-field {
+body.user-dashboard .entry {
+  padding: 0px 0px 36px;
+  padding: 0rem 0rem 3.6rem;
+  border: none; }
+body.user-dashboard .charitable-submit-field {
   display: inline-block; }
-  body.user-dashboard .charitable-form .charitable-submit-field .button {
+  body.user-dashboard .charitable-submit-field .button {
     display: inline-block;
-    margin: 3px 0px 0px 3px;
-    margin: 0.3rem 0rem 0rem 0.3rem;
     padding: 8px 20px;
     padding: 0.8rem 2rem;
     font-size: 14px;
@@ -4118,7 +3806,7 @@ body.user-dashboard .charitable-form .charitable-submit-field {
     -moz-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
     -o-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
     transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms; }
-    body.user-dashboard .charitable-form .charitable-submit-field .button:hover {
+    body.user-dashboard .charitable-submit-field .button:hover {
       text-decoration: none; }
 
 .user-dashboard-menu {
@@ -4405,8 +4093,346 @@ body.user-dashboard .charitable-form .charitable-submit-field {
   .charitable-notice li:last-child {
     margin-bottom: 0; }
 
+/*--------------------------------------------------------------
+18.1.8 Campaign Summary
+--------------------------------------------------------------*/
+.single-campaign #main {
+  padding-top: 0; }
+.single-campaign.stripped #main {
+  padding-top: 36px;
+  padding-top: 3.6rem; }
+
+.campaign-summary {
+  margin-bottom: 36px;
+  margin-bottom: 3.6rem; }
+  .campaign-summary .campaign-title {
+    margin: 36px 0px 12px;
+    margin: 3.6rem 0rem 1.2rem;
+    text-align: center; }
+  .campaign-summary .campaign-description {
+    float: left;
+    width: 100%;
+    padding: 0px 0px 24px;
+    padding: 0rem 0rem 2.4rem;
+    text-align: center;
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 32px;
+    line-height: 3.2rem; }
+    .campaign-summary .campaign-description p:last-child {
+      margin-bottom: 0; }
+  .campaign-summary .campaign-image {
+    float: left;
+    margin: 0px 0px 36px;
+    margin: 0rem 0rem 3.6rem; }
+  .campaign-summary .wp-post-image {
+    width: 100%; }
+  .campaign-summary .campaign-details {
+    padding: 36px 0px 0px;
+    padding: 3.6rem 0rem 0rem;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 380px;
+    width: 38rem; }
+  .campaign-summary .campaign-donation {
+    padding: 0px 0px 24px;
+    padding: 0rem 0rem 2.4rem; }
+  .campaign-summary .donate-button {
+    margin: 0;
+    height: 100%;
+    padding: 12px 20px;
+    padding: 1.2rem 2rem;
+    font-size: 25px;
+    font-size: 2.5rem; }
+  .campaign-summary .campaign-ended {
+    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300; }
+  .campaign-summary .barometer {
+    position: relative;
+    float: left;
+    margin-right: 10px;
+    margin-right: 1rem;
+    z-index: 30;
+    width: 146px;
+    width: 14.6rem;
+    height: 146px;
+    height: 14.6rem; }
+    .campaign-summary .barometer span {
+      position: absolute;
+      left: 0;
+      top: 47px;
+      top: 4.7rem;
+      width: 146px;
+      width: 14.6rem;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      font-size: 1.6rem;
+      font-style: italic;
+      opacity: 0;
+      /* This is animated by JS */ }
+      .campaign-summary .barometer span span {
+        position: static;
+        font-size: 30px;
+        font-size: 3rem;
+        line-height: 30px;
+        line-height: 3rem;
+        font-style: normal; }
+  .campaign-summary .campaign-stats {
+    float: right;
+    text-align: right;
+    list-style: none;
+    padding-left: 0;
+    width: -webkit-calc(100% - 156px);
+    width: -moz-calc(100% - 156px);
+    width: calc(100% - 156px);
+    max-width: 180px;
+    max-width: 18rem;
+    margin-bottom: 0; }
+    .campaign-summary .campaign-stats li {
+      padding-bottom: 10px;
+      padding-bottom: 1rem;
+      margin-bottom: 10px;
+      margin-bottom: 1rem;
+      border-bottom-width: 1px;
+      border-bottom-width: 0.1rem;
+      border-bottom-style: solid;
+      border-bottom-color: rgba(255, 255, 255, 0.3);
+      font-size: 16px;
+      font-size: 1.6rem;
+      font-style: italic;
+      font-weight: 300; }
+      .campaign-summary .campaign-stats li span {
+        font-size: 20px;
+        font-size: 2rem;
+        line-height: 30px;
+        line-height: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        letter-spacing: 0.1rem;
+        display: block;
+        font-style: normal; }
+      .campaign-summary .campaign-stats li:last-child {
+        padding-bottom: 0;
+        border-bottom: none; }
+  .campaign-summary .campaign-support {
+    float: left;
+    width: 100%;
+    padding-bottom: 30px;
+    padding-bottom: 3rem;
+    text-align: center; }
+  .campaign-summary .campaign-sharing {
+    padding: 0;
+    margin-top: 20px;
+    margin-top: 2rem;
+    max-width: 100%;
+    text-align: center; }
+    .campaign-summary .campaign-sharing h6 {
+      margin: 0px 10px;
+      margin: 0rem 1rem;
+      line-height: 22pxpx;
+      line-height: 2.2pxrem; }
+    .campaign-summary .campaign-sharing li {
+      width: auto !important;
+      margin-bottom: 0;
+      vertical-align: top; }
+    .campaign-summary .campaign-sharing .icon {
+      padding: 0px 10px;
+      padding: 0rem 1rem;
+      font-size: 22px;
+      font-size: 2.2rem;
+      cursor: pointer; }
+  @media all and (min-width: 37.5em) and (max-width: 55em) {
+    .campaign-summary .campaign-details {
+      position: relative;
+      width: 100%;
+      padding-bottom: 7.4rem; }
+      .campaign-summary .campaign-details .campaign-support {
+        float: right;
+        width: 70%; }
+      .campaign-summary .campaign-details ul {
+        width: 70%;
+        max-width: 88rem;
+        text-align: center; }
+      .campaign-summary .campaign-details li {
+        display: inline-block;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        border-right: 0.1rem solid rgba(255, 255, 255, 0.3);
+        border-bottom: 0; }
+      .campaign-summary .campaign-details .campaign-backers {
+        border: none; }
+    .campaign-summary .campaign-countdown {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem 13% 0 13%;
+      border-bottom: 0;
+      border-top: 0.1rem solid rgba(255, 255, 255, 0.3);
+      text-align: center; }
+    .campaign-summary .campaign-sharing {
+      padding-top: 2.4rem;
+      margin-top: 1.2rem;
+      border-top: 0.1rem solid rgba(255, 255, 255, 0.3); }
+    .campaign-summary.ended .campaign-summary {
+      padding-bottom: 1.2rem; }
+      .campaign-summary.ended .campaign-summary ul {
+        margin-top: 4.8rem; } }
+  @media (min-width: 55em) {
+    .campaign-summary .campaign-image {
+      width: 50%;
+      width: -moz-calc(100% - 43rem);
+      width: -webkit-calc(100% - 43rem);
+      width: calc(100% - 43rem);
+      float: left;
+      margin-right: 0; }
+      .campaign-summary .campaign-image .wp-post-image {
+        border-width: 5px;
+        border-width: 0.5rem;
+        border-style: solid;
+        border-color: rgba(255, 255, 255, 0.3);
+        border-radius: 0.4rem;
+        width: 95.3%;
+        width: -moz-calc(100% - 1.8rem);
+        width: -webkit-calc(100% - 1.8rem);
+        width: calc(100% - 1.8rem); }
+    .campaign-summary .campaign-details {
+      float: left;
+      padding-left: 0;
+      padding-top: 0.3rem;
+      margin-left: 4rem;
+      margin-right: 0; }
+    .campaign-summary .campaign-sharing {
+      float: right;
+      width: 38rem;
+      margin-left: 0; } }
+
+.campaign-countdown {
+  float: left;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-color: rgba(255, 255, 255, 0.3); }
+  .campaign-countdown .countdown {
+    text-transform: none;
+    letter-spacing: 0; }
+  .campaign-countdown .countdown-rtl {
+    direction: rtl; }
+  .campaign-countdown .countdown-row {
+    clear: both;
+    width: 100%;
+    padding: 0px 2px;
+    text-align: center; }
+  .campaign-countdown .countdown-show1 .countdown-section {
+    width: 98%; }
+  .campaign-countdown .countdown-show2 .countdown-section {
+    width: 48%; }
+  .campaign-countdown .countdown-show3 .countdown-section {
+    width: 32.5%; }
+  .campaign-countdown .countdown-show4 .countdown-section {
+    width: 24.5%; }
+  .campaign-countdown .countdown-show5 .countdown-section {
+    width: 19.5%; }
+  .campaign-countdown .countdown-show6 .countdown-section {
+    width: 16.25%; }
+  .campaign-countdown .countdown-show7 .countdown-section {
+    width: 14%; }
+  .campaign-countdown .countdown-section {
+    display: block;
+    float: left;
+    text-align: center;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: 300; }
+  .campaign-countdown .countdown-amount {
+    font-size: 20px;
+    font-size: 2rem;
+    line-height: 1em; }
+  .campaign-countdown .countdown-period {
+    display: block;
+    width: 100%; }
+
+.campaign-countdown .countdown {
+  float: left;
+  width: 68%;
+  font-style: normal; }
+
+.campaign-countdown .countdown-period {
+  display: block; }
+
+.campaign-countdown > span:last-child {
+  font-size: 16px;
+  font-size: 1.6rem;
+  float: right;
+  text-align: right;
+  font-style: italic;
+  font-weight: 300;
+  width: 30%; }
+
+.share-widget .modal {
+  text-align: left; }
+.share-widget pre {
+  word-break: break-word; }
+.share-widget .block {
+  border: none; }
+  .share-widget .block.iframe-block {
+    width: 275px;
+    width: 27.5rem; }
+@media (min-width: 48em) {
+  .share-widget .modal {
+    width: 634px;
+    width: 63.4rem; }
+  .share-widget .block {
+    float: left;
+    width: 275px;
+    width: 27.5rem;
+    padding-right: 12px;
+    padding-right: 1.2rem; }
+    .share-widget .block.iframe-block {
+      float: right;
+      padding: 0; } }
+
+.charitable-fes-campaign-creator-toolbar {
+  position: relative;
+  left: -24px;
+  width: -webkit-calc( 100% + 48px );
+  width: -moz-calc( 100% + 48px );
+  width: calc( 100% + 48px );
+  padding: 12px 45px;
+  padding: 1.2rem 4.5rem; }
+  @media (min-width: 50em) {
+    .charitable-fes-campaign-creator-toolbar {
+      left: -45px;
+      width: -webkit-calc( 100% + 90px );
+      width: -moz-calc( 100% + 90px );
+      width: calc( 100% + 90px ); } }
+  .charitable-fes-campaign-creator-toolbar a {
+    float: right;
+    font-weight: 100; }
+  .charitable-fes-campaign-creator-toolbar .edit-link::before {
+    font-family: "Benny-Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f040"; }
+  .charitable-fes-campaign-creator-toolbar .campaign-status {
+    color: rgba(255, 255, 255, 0.5); }
+
 /*--------------------------------------------------------------  
-18.1.8 User Campaigns
+18.1.9 User Campaigns
 --------------------------------------------------------------*/
 .entry-header .entry-title {
   margin-top: 0; }
