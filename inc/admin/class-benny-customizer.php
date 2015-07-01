@@ -66,110 +66,189 @@ class Benny_Customizer {
      */
     public function customize_register($wp_customize) {
         
-        /* Title & tagline section */
-        $wp_customize->add_setting( 'logo_url', array( 'transport' => 'postMessage' ) );
-        $wp_customize->add_setting( 'retina_logo_url', array( 'transport' => 'postMessage' ) );
-        $wp_customize->add_setting( 'hide_site_title', array( 'transport' => 'postMessage' ) );
-        $wp_customize->add_setting( 'hide_site_tagline', array( 'transport' => 'postMessage' ) );
-        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'logo_url',
-            array(
-                'settings'  => 'logo_url',
-                'section'   => 'title_tagline',
-                'label'     => __( 'Logo', 'benny' )
-            ) )
-        );
-        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'retina_logo_url',
-            array(
-                'settings'  => 'retina_logo_url',
-                'section'   => 'title_tagline',
-                'label'     => __( 'Retina version of logo (2x)', 'benny' )
-            ) )
-        );        
-        $wp_customize->add_control( 'hide_site_title', array(
-            'settings'      => 'hide_site_title', 
-            'label'         => __( 'Hide the site title', 'benny' ),
-            'section'       => 'title_tagline', 
-            'type'          => 'checkbox'            
+        /* Logo section */
+
+        $wp_customize->add_section( 'logo', array(
+            'title'     => __( 'Logo', 'benny' ), 
+            'priority'  => 30
         ) );
-        $wp_customize->add_control( 'hide_site_tagline', array(
-            'settings'      => 'hide_site_tagline', 
-            'label'         => __( 'Hide the tagline', 'benny' ),
-            'section'       => 'title_tagline', 
-            'type'          => 'checkbox'            
+
+        $wp_customize->add_setting( 'logo', array( 
+            'transport' => 'postMessage',
+            'sanitize_callback' => 'esc_url_raw'
         ) );
-        
+
+        $wp_customize->add_control( new Sofa_Customizer_Retina_Image_Control( 
+            $wp_customize, 
+            'logo',
+            array(
+                'settings' => 'logo',
+                'section'  => 'logo',
+                'label'    => __( 'Logo', 'benny' ), 
+                'priority' => 32
+            )             
+        ) );
+
+        /* Colour section */
+
+        $wp_customize->add_section( 'colour', array(
+            'title'     => __( 'Colour', 'benny' ),
+            'priority'  => 40
+        ) );
+
+        $wp_customize->add_setting( 'accent_colour', array( 
+            'transport' => 'postMessage', 
+            'default'   => '#d95b43',
+            'sanitize_callback' => 'sanitize_hex_color'
+        ) );        
+
+        $wp_customize->add_control( new WP_Customize_Color_Control( 
+            $wp_customize, 
+            'accent_colour', 
+            array( 
+                'label' => __( 'Accent Colour', 'benny' ), 
+                'section' => 'colour', 
+                'settings' => 'accent_colour',
+                'priority' => 42
+            )            
+        ) );
+
+        $wp_customize->add_setting( 'background_colour', array( 
+            'transport' => 'postMessage', 
+            'default'   => '#aea198',
+            'sanitize_callback' => 'sanitize_hex_color'
+        ) );
+
+        $wp_customize->add_control( new WP_Customize_Color_Control( 
+            $wp_customize, 
+            'background_colour', 
+            array( 
+                'label' => __( 'Background Colour', 'benny' ), 
+                'section' => 'colour', 
+                'settings' => 'background_colour',
+                'priority' => 44
+            )
+        ) );
+
+        $wp_customize->add_setting( 'text_colour', array( 
+            'transport' => 'postMessage', 
+            'default'   => '#7d6e63',
+            'sanitize_callback' => 'sanitize_hex_color'
+        ) );
+
+        $wp_customize->add_control( new WP_Customize_Color_Control( 
+            $wp_customize, 
+            'text_colour', 
+            array( 
+                'label' => __( 'Text Colour', 'benny' ), 
+                'section' => 'colour', 
+                'settings' => 'text_colour',
+                'priority' => 46
+            )
+        ) );
+
+        /* Title & tagline section */        
+        // $wp_customize->add_setting( 'hide_site_title', array( 'transport' => 'postMessage' ) );
+        // $wp_customize->add_setting( 'hide_site_tagline', array( 'transport' => 'postMessage' ) );        
+        // $wp_customize->add_control( 'hide_site_title', array(
+        //     'settings'      => 'hide_site_title', 
+        //     'label'         => __( 'Hide the site title', 'benny' ),
+        //     'section'       => 'title_tagline', 
+        //     'type'          => 'checkbox'            
+        // ) );
+        // $wp_customize->add_control( 'hide_site_tagline', array(
+        //     'settings'      => 'hide_site_tagline', 
+        //     'label'         => __( 'Hide the tagline', 'benny' ),
+        //     'section'       => 'title_tagline', 
+        //     'type'          => 'checkbox'            
+        // ) );
+    
         /* Colors */
-        $priority = 10;
+        // $priority = 10;
+        // foreach ( Benny_Customizer_Styles::get_customizer_colours() as $key => $colour ) {          
+        //     $wp_customize->add_setting( $key, array( 
+        //         'default'   => $colour['default'], 
+        //         'transport' => 'postMessage' 
+        //     ) );
+        //     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $key, array( 
+        //         'label'     => $colour['title'], 
+        //         'section'   => 'colors', 
+        //         'settings'  => $key, 
+        //         'priority'  => $priority )
+        //     ));
+        //     $priority += 1;
+        // }
 
-        foreach ( Benny_Customizer_Styles::get_customizer_colours() as $key => $colour ) {          
-            $wp_customize->add_setting( $key, array( 
-                'default'   => $colour['default'], 
-                'transport' => 'postMessage' 
-            ) );
-            $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $key, array( 
-                'label'     => $colour['title'], 
-                'section'   => 'colors', 
-                'settings'  => $key, 
-                'priority'  => $priority )
-            ));
+        /* Backgrounds */
 
-            $priority += 1;
-        }
-
-        /* Textures */
-        $wp_customize->add_section( 'textures', array( 
-            'priority'      => $priority, 
-            'title'         => __( 'Background Textures', 'benny' ), 
-            'description'   => __( 'Upload background textures for the body and campaign section', 'benny' )
+        $wp_customize->add_panel( 'background_images_panel', array(
+            'title' => __( 'Background Images', 'benny' ),
+            'priority' => 50
         ) );
 
-        $priority += 1;
+        $wp_customize->add_section( 'background_images', array( 
+            'title'         => __( 'Background Images', 'benny' ), 
+            'priority'      => 51, 
+            'panel'         => 'background_images_panel'
+        ) );
 
-        $wp_customize->add_setting( 'body_texture_custom', array( 
+        $wp_customize->add_setting( 'body_background_image', array( 
+            'default'       => '', 
+            'transport'     => 'postMessage' 
+        ) );        
+
+        $wp_customize->add_control( new Sofa_Customizer_Retina_Image_Control( 
+            $wp_customize, 
+            'body_background_image',
+            array(
+                'settings' => 'body_background_image',
+                'section'  => 'background_images',                
+                'label'    => __( 'Body', 'benny' ),
+                'priority' => 52
+            )
+        ) );
+
+        $wp_customize->add_control( new Benny_Customizer_Misc_Control(
+            $wp_customize,
+            'body_background_control_group',
+            array(
+                'section'   => 'background_images',
+                'priority'  => 53,
+                'type'      => 'line',
+            )
+        ) );
+
+        $wp_customize->add_setting( 'campaign_feature_background', array( 
             'default'       => '', 
             'transport'     => 'postMessage' 
         ) );
-        $wp_customize->add_setting( 'campaign_texture_custom', array( 
-            'default'       => '', 
-            'transport'     => 'postMessage' 
+
+        $wp_customize->add_control( new Sofa_Customizer_Retina_Image_Control( 
+            $wp_customize, 
+            'campaign_feature_background',
+            array(
+                'settings' => 'campaign_feature_background',
+                'section'  => 'background_images',                
+                'label'    => __( 'Featured Campaign Block', 'benny' ),
+                'priority' => 54
+            )
         ) );
-        $wp_customize->add_setting( 'blog_banner_texture_custom', array( 
+
+        $wp_customize->add_setting( 'blog_banner_background', array( 
             'default'       => '', 
-            'transport'     => 'postMessage' 
+            'transport'     => 'postMessage'            
         ) );
 
-        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'body_texture_custom',
+        $wp_customize->add_control( new Sofa_Customizer_Retina_Image_Control( 
+            $wp_customize, 
+            'blog_banner_background',
             array(
-                'settings' => 'body_texture_custom',
-                'section'  => 'textures',
-                'priority' => $priority,
-                'label'    => __( 'Body', 'benny' )
-            ) )
-        );
-
-        $priority += 1;
-
-        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'campaign_texture_custom',
-            array(
-                'settings' => 'campaign_texture_custom',
-                'section'  => 'textures',
-                'priority' => $priority,
-                'label'    => __( 'Featured Campaign Block', 'benny' )
-            ) )
-        );
-        
-        $priority += 1;
-
-        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'blog_banner_texture_custom',
-            array(
-                'settings' => 'blog_banner_texture_custom',
-                'section'  => 'textures',
-                'priority' => $priority,
-                'label'    => __( 'Blog & Page Banners', 'benny' )
-            ) )
-        );
-        
-        $priority += 1;    
+                'settings' => 'blog_banner_background',
+                'section'  => 'background_images',                
+                'label'    => __( 'Blog & Page Banners', 'benny' ),
+                'priority' => 56
+            )
+        ) );        
 
         /** 
          * Campaign
@@ -186,7 +265,7 @@ class Benny_Customizer {
         //     );
 
         //     $wp_customize->add_section( 'campaign', array( 
-        //         'priority' => $priority, 
+    //          
         //         'title' => __( "Campaigns", 'benny' ), 
         //         'description' => __( 'Configure your campaign pages' )
         //     ) );
@@ -222,41 +301,46 @@ class Benny_Customizer {
         /* Footer */
         $wp_customize->add_section( 'footer', array( 
             'title'     => __( 'Footer', 'benny' ), 
-            'priority'  => $priority 
+            'priority'  => 60 
         ) );
 
-        $priority += 1; 
-
-        $wp_customize->add_setting( 'footer_notice', array( 
+        $wp_customize->add_setting( 'footer_tagline', array( 
             'transport' => 'postMessage' 
         ) );
-        $wp_customize->add_control( 'footer_notice', array( 
-            'setting'   => 'footer_notice', 
-            'label'     => __( 'Text for footer notice', 'benny' ), 
+
+        $wp_customize->add_control( 'footer_tagline', array( 
+            'setting'   => 'footer_tagline', 
+            'label'     => __( 'Footer Text', 'benny' ), 
             'type'      => 'text', 
             'section'   => 'footer', 
-            'priority'  => $priority
+            'priority'  => 62
         ));
 
-        $priority += 1; 
+        /* Social Profiles */ 
 
-        /* Social */ 
         $wp_customize->add_section( 'social', array( 
-            'priority'      => 103, 
-            'title'         => __( 'Social', 'benny' ),
+            'priority'      => 70, 
+            'title'         => __( 'Social Profiles', 'benny' ),
             'description'   => __( 'Set up links to your online social presences', 'benny' )
         ) );
 
-        foreach ( benny_get_social_sites() as $setting_key => $label ) {
+        $priority = 72;
+
+        foreach ( benny_get_social_sites() as $setting_key => $label ) {                    
+
             $wp_customize->add_setting( $setting_key, array( 
                 'transport' => 'postMessage' 
             ) );
+
             $wp_customize->add_control( $setting_key, array( 
                 'settings'  => $setting_key,
                 'label'     => $label, 
                 'section'   => 'social', 
-                'type'      => 'text'
+                'type'      => 'text',
+                'priority'  => $priority
             ) );
+
+            $priority += 2;
         }
     }        
 

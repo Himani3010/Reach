@@ -44,7 +44,7 @@ class Sofa_Customizer_Retina_Image_Control extends WP_Customize_Image_Control {
 	public function __construct( $manager, $id, $args ) {
 		parent::__construct( $manager, $id, $args );
 
-		$this->theme = crafted_get_theme();
+		$this->theme = benny_get_theme();
 
 		/**
 		 * Usually, this control will be instantiated during the customize_register
@@ -93,7 +93,7 @@ class Sofa_Customizer_Retina_Image_Control extends WP_Customize_Image_Control {
             'settings' => $checkbox_id, 
             'label' => __( 'Is this image retina-ready?', 'crafted' ),
             'section' => $this->section,
-            'priority' => $this->priority + 0.2, 
+            'priority' => $this->priority + 0.2,
             'type' => 'checkbox'            
         ) );
 	}

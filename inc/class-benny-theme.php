@@ -186,6 +186,8 @@ class Benny_Theme {
         if ( $wp_customize ) {
 
             require_once( get_template_directory() . '/inc/admin/class-benny-customizer.php');
+            require_once( get_template_directory() . '/inc/admin/customizer-controls/class-benny-customizer-misc-control.php');
+            require_once( get_template_directory() . '/inc/admin/customizer-controls/class-benny-customizer-retina-image-control.php');
 
             add_action( 'benny_theme_start', array( 'Benny_Customizer', 'start' ) );
         } 
