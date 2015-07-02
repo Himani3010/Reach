@@ -4680,12 +4680,11 @@ div.printfriendly {
   #edd_checkout_wrap #edd_final_total_wrap strong {
     font-weight: 400; }
 #edd_checkout_wrap #edd-purchase-button {
+  padding: 12px 24px;
+  padding: 1.2rem 2.4rem;
   font-size: 25px;
   font-size: 2.5rem;
-  height: 50px;
-  height: 5rem;
-  border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 0 3px #d95b43; }
+  border: none; }
 #edd_checkout_wrap .edd_empty_cart {
   display: block;
   padding: 0px 36px 36px;

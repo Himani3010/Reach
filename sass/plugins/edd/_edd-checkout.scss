@@ -72,12 +72,11 @@
 	}
 
 	#edd-purchase-button {
-		@include font-size( 25 );
-		@include height( 50 );
+		@include padding( 12, 24 );
+		@include font-size( 25 );		
+		border: none;
 		@include background-color( $color__accent );
-		border-color: rgba( 255, 255, 255, 0.3 );
-		box-shadow: 0 0 0 3px $color__accent;
-		@include color( $color__text-overlay );
+		@include color( $color__text-overlay );		
 	}
 
 	.edd_empty_cart {

@@ -4689,8 +4689,7 @@ div.printfriendly {
   font-size: 2.5rem;
   height: 50px;
   height: 5rem;
-  border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 0 3px #d95b43; }
+  border: none; }
 #edd_checkout_wrap .edd_empty_cart {
   display: block;
   padding: 0px 36px 36px;
