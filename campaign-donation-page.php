@@ -2,7 +2,7 @@
 /**
  * Donation page template.
  *
- * @package Benny
+ * @package Reach
  */
 
 get_header( 'stripped' );
@@ -19,7 +19,7 @@ get_header( 'stripped' );
 				
 				<aside class="campaign-benefiting">
 
-					<p class="header"><?php _e( 'Thank you for supporting this campaign', 'benny' ) ?></p>
+					<p class="header"><?php _e( 'Thank you for supporting this campaign', 'reach' ) ?></p>
 					
 					<?php 
 					if ( $campaign && has_post_thumbnail( $campaign->ID ) ) : 

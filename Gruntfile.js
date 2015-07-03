@@ -19,11 +19,11 @@ module.exports = function(grunt) {
                 tasks: ['sass:dist']
             },
             concat: {
-                files: ['js/benny/*.js', 'js/benny/**/*.js'], 
+                files: ['js/reach/*.js', 'js/reach/**/*.js'], 
                 tasks: ['concat']
             },            
             uglify: {
-                files: 'js/benny-lib.js', 
+                files: 'js/reach-lib.js', 
                 tasks: ['uglify']
             },
             sync: {
@@ -97,7 +97,7 @@ module.exports = function(grunt) {
                             '!css/palettes/_dark.css',
                             '!css/palettes/_custom.css'
                         ], 
-                        dest: '../../themes/benny'
+                        dest: '../../themes/reach'
                     }
                 ], 
                 verbose: true
@@ -113,9 +113,9 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'js/benny-lib.js' : [
-                        'js/benny/*.js', 
-                        'js/benny/**/*.js'
+                    'js/reach-lib.js' : [
+                        'js/reach/*.js', 
+                        'js/reach/**/*.js'
                     ]
                 }
             },
@@ -130,8 +130,8 @@ module.exports = function(grunt) {
             },
             all: [
                 'Gruntfile.js', 
-                'js/benny.js', 
-                'js/benny-lib.js', 
+                'js/reach.js', 
+                'js/reach-lib.js', 
                 'js/admin/theme-customizer.js',
             ]
         },
@@ -140,8 +140,8 @@ module.exports = function(grunt) {
         uglify: {
             dist: {
                 files: {
-                    'js/benny-lib.min.js': [ 
-                        'js/benny-lib.js'
+                    'js/reach-lib.min.js': [ 
+                        'js/reach-lib.js'
                     ]
                 }
             }
@@ -154,7 +154,7 @@ module.exports = function(grunt) {
                     cwd: '',                    // Directory of files to internationalize.
                     domainPath: '/languages',   // Where to save the POT file.                    
                     mainFile: 'style.css',      // Main project file.
-                    potFilename: 'benny.pot', // Name of the POT file.
+                    potFilename: 'reach.pot', // Name of the POT file.
                     type: 'wp-theme',           // Type of project (wp-plugin or wp-theme).
                     updateTimestamp: true       // Whether the POT-Creation-Date should be updated without other changes.
                 }

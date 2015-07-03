@@ -2,7 +2,7 @@
 /**
  * Campaign summary template. Shows the campaign short description and stats, as well as sharing buttons.
  *
- * @package Benny
+ * @package Reach
  */
 
 $campaign = charitable_get_current_campaign();

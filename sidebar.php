@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package Benny
+ * @package Reach
  */
 if ( ! is_active_sidebar( 'default' ) ) {
 	return;

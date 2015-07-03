@@ -4,7 +4,7 @@
  * 
  * This is one of the homepage templates.
  *
- * @package 	Benny
+ * @package 	Reach
  */
 
 get_header();

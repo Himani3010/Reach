@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package 	Benny
+ * @package 	Reach
  */
 
 get_header(); ?>

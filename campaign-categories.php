@@ -1,6 +1,6 @@
 <nav class="categories campaign-categories">
 
-	<h2 class="block-title"><?php _e( 'Browse by Category', 'benny' ) ?></h2>
+	<h2 class="block-title"><?php _e( 'Browse by Category', 'reach' ) ?></h2>
 
 	<ul class="horizontal">
 

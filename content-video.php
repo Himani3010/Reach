@@ -1,11 +1,11 @@
 <?php 
 /**
- * @package 	Benny
+ * @package 	Reach
  */
 ?>
 <article id="post-<?php the_ID() ?>" <?php post_class() ?>>	
 	<?php 
-	echo benny_get_media( array( 
+	echo reach_get_media( array( 
 		'split_media' 	=> true, 
 		'meta_key' 		=> 'video'
 	) );
@@ -16,13 +16,13 @@
 
 	endif;
 
-	benny_post_header();
+	reach_post_header();
 
 	?>
 	<div class="entry cf">				
 		<?php the_content() ?>			
 
-		<?php wp_link_pages(array( 'before' => '<p class="entry_pages">' . __('Pages: ', 'benny') ) ) ?>
+		<?php wp_link_pages(array( 'before' => '<p class="entry_pages">' . __('Pages: ', 'reach') ) ) ?>
 	</div>						
 	<?php 
 

@@ -2,7 +2,7 @@
 /**
  * Helper functions for the EDD functionality.
  *
- * @package     Benny/Functions/EDD
+ * @package     Reach/Functions/EDD
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * @return  string
  * @since   1.0.0
  */
-function benny_get_edd_product_price( $download_id, $args = array() ) {
+function reach_get_edd_product_price( $download_id, $args = array() ) {
     $download = new EDD_Download( $download_id );
 
     if ( ! $download->has_variable_prices() || false === $args[ 'price_id' ] ) {

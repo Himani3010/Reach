@@ -8,7 +8,7 @@
  *
  * This is like the Stripped template, except that it is narrower (max 600px). 
  * 
- * @package Benny
+ * @package Reach
  */
 
 get_header( 'stripped' );

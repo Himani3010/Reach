@@ -6,7 +6,7 @@
  * distractions. Great for use with action-oriented pages, like
  * the checkout, login, campaign-creation, etc.
  *
- * @package Benny
+ * @package Reach
  */
 
 get_header( 'stripped' );

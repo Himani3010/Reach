@@ -1,16 +1,16 @@
 <?php
 /**
- * Core functions and definitions for Benny Theme.
+ * Core functions and definitions for Reach Theme.
  *
- * @package 	Benny
+ * @package 	Reach
  */
 
-require_once( 'inc/class-benny-theme.php' );
+require_once( 'inc/class-reach-theme.php' );
 
 /**
  * Start the theme. 
  */
-benny_get_theme();
+reach_get_theme();
 
 /**
  * Set the content width based on the theme's design and stylesheet.
@@ -31,11 +31,11 @@ if ( ! defined( 'BENNY_DEBUG' ) ) {
 }
 
 /**
- * Return the one true instance of the Benny_Theme.
+ * Return the one true instance of the Reach_Theme.
  * 
- * @return 	Benny_Theme
+ * @return 	Reach_Theme
  * @since 	1.0.0
  */
-function benny_get_theme() {
-	return Benny_Theme::get_instance();
+function reach_get_theme() {
+	return Reach_Theme::get_instance();
 }

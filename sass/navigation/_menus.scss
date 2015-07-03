@@ -100,7 +100,7 @@
 		}
 
 		.menu-item-has-children > a:after {
-			font-family: 'benny-icons';
+			font-family: 'reach-icons';
 			content: '\f107';
 			position: relative;	
 			top: 0;
@@ -132,7 +132,11 @@
 	ul {
 		margin: 0;
 		padding-left: 0;
-		@include border-top( 1, $color__accent );		
+		@include border-top( 1, $color__border-primary );
+	}
+
+	> ul {
+		@include border-color( $color__accent );
 	}
 
 	li {

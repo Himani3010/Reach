@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Benny
+ * @package Reach
  */
 
 get_header();
@@ -23,7 +23,7 @@ if ( have_posts() ) : ?>
 
 		endwhile;
 
-		benny_paging_nav(); 
+		reach_paging_nav(); 
 		?>		
 	</main><!-- .site-main -->
 

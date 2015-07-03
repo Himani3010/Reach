@@ -1080,7 +1080,7 @@
 	],
 	"height": 1024,
 	"metadata": {
-		"name": "Benny-Icons"
+		"name": "Reach-Icons"
 	},
 	"preferences": {
 		"showGlyphs": true,
@@ -1090,7 +1090,7 @@
 		"fontPref": {
 			"prefix": "icon-",
 			"metadata": {
-				"fontFamily": "Benny-Icons",
+				"fontFamily": "Reach-Icons",
 				"majorVersion": 1,
 				"minorVersion": 0
 			},

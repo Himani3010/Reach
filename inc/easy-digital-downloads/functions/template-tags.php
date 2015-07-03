@@ -2,13 +2,13 @@
 /**
  * Custom template tags used when Easy Digital Downloads is enabled.
  *
- * @package     Benny
+ * @package     Reach
  * @category    Functions
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-if ( ! function_exists( 'benny_edd_variable_pricing' ) ) : 
+if ( ! function_exists( 'reach_edd_variable_pricing' ) ) : 
 
     /**
      * Variable price output
@@ -22,9 +22,9 @@ if ( ! function_exists( 'benny_edd_variable_pricing' ) ) :
      * @return  void
      * @since   2.0.0
      */
-    function benny_edd_variable_pricing( $download_id = 0, $args = array() ) {      
+    function reach_edd_variable_pricing( $download_id = 0, $args = array() ) {      
         if ( class_exists( 'EDD_Purchase_Limit' ) ) {
-            return benny_edd_variable_pricing_with_limits( $download_id, $args );
+            return reach_edd_variable_pricing_with_limits( $download_id, $args );
         }   
 
         $variable_pricing = edd_has_variable_prices( $download_id );        
@@ -66,7 +66,7 @@ if ( ! function_exists( 'benny_edd_variable_pricing' ) ) :
                             data-price="<?php echo edd_get_price_option_amount( $download_id, $price_id ) ?>" 
                             />
                         <h5 class="pledge-title">
-                            <?php printf( _x( 'Pledge %s', 'pledge amount', 'benny' ), '<strong>' . edd_currency_filter( edd_format_amount( $price['amount'] ) ) . '</strong>' ) ?>
+                            <?php printf( _x( 'Pledge %s', 'pledge amount', 'reach' ), '<strong>' . edd_currency_filter( edd_format_amount( $price['amount'] ) ) . '</strong>' ) ?>
                         </h5>
                         <label for="<?php echo esc_attr( 'edd_price_option_<?php echo $download_id ?>_' . $price_id ) ?>" class="pledge-description">
                             <span class="edd_price_option_name" itemprop="description"><?php echo esc_html( $price['name'] ) ?></span>
@@ -89,7 +89,7 @@ if ( ! function_exists( 'benny_edd_variable_pricing' ) ) :
 
 endif;
 
-if ( ! function_exists( 'benny_edd_variable_pricing_with_limits' ) ) : 
+if ( ! function_exists( 'reach_edd_variable_pricing_with_limits' ) ) : 
 
     /**
      * Variable price output when Purchase Limits is installed.
@@ -103,9 +103,9 @@ if ( ! function_exists( 'benny_edd_variable_pricing_with_limits' ) ) :
      * @return  void
      * @since   2.0.0
      */
-    function benny_edd_variable_pricing_with_limits( $download_id = 0, $args = array() ) {      
+    function reach_edd_variable_pricing_with_limits( $download_id = 0, $args = array() ) {      
         if ( ! class_exists( 'EDD_Purchase_Limit' ) ) {
-            return benny_edd_variable_pricing( $download_id, $args );
+            return reach_edd_variable_pricing( $download_id, $args );
         }
 
         $variable_pricing = edd_has_variable_prices( $download_id );        
@@ -126,7 +126,7 @@ if ( ! function_exists( 'benny_edd_variable_pricing_with_limits' ) ) :
         $schema         = edd_add_schema_microdata() ? ' itemprop="offers" itemscope itemtype="http://schema.org/Offer"' : '';
 
         // Purchase Limits settings
-        $sold_out_label = edd_get_option( 'edd_purchase_limit_sold_out_label', __( 'Sold Out', 'benny' ) );
+        $sold_out_label = edd_get_option( 'edd_purchase_limit_sold_out_label', __( 'Sold Out', 'reach' ) );
         $scope          = edd_get_option( 'edd_purchase_limit_scope', 'site-wide' );
         $sold_out       = array();
 
@@ -173,7 +173,7 @@ if ( ! function_exists( 'benny_edd_variable_pricing_with_limits' ) ) :
                                 disabled
                                 />
                             <h5 class="pledge-title">
-                                <?php printf( _x( 'Pledge %s', 'pledge amount', 'benny' ), '<strong>' . edd_currency_filter( edd_format_amount( $price['amount'] ) ) . '</strong>' ) ?>
+                                <?php printf( _x( 'Pledge %s', 'pledge amount', 'reach' ), '<strong>' . edd_currency_filter( edd_format_amount( $price['amount'] ) ) . '</strong>' ) ?>
                             </h5>
                             <span class="pledge-limit"><?php echo $sold_out_label ?></span>
                             <label for="<?php echo esc_attr( 'edd_price_option_<?php echo $download_id ?>_' . $price_id ) ?>" class="pledge-description" disabled>
@@ -189,8 +189,8 @@ if ( ! function_exists( 'benny_edd_variable_pricing_with_limits' ) ) :
                             $show_remaining = edd_get_option( 'edd_purchase_limit_show_counts', false );
 
                             if ( $show_remaining ) : 
-                                $remaining_txt = edd_get_option( 'edd_purchase_limit_remaining_label', __( 'Remaining', 'benny' ) );
-                                $remaining_msg  = $remaining > 0 ? sprintf( __( '%d of %d %s', 'benny' ), $remaining, $max_purchases, $remaining_txt ) : __( 'Limitless', 'benny' );
+                                $remaining_txt = edd_get_option( 'edd_purchase_limit_remaining_label', __( 'Remaining', 'reach' ) );
+                                $remaining_msg  = $remaining > 0 ? sprintf( __( '%d of %d %s', 'reach' ), $remaining, $max_purchases, $remaining_txt ) : __( 'Limitless', 'reach' );
                             endif;  
 
                             ?>                      
@@ -203,7 +203,7 @@ if ( ! function_exists( 'benny_edd_variable_pricing_with_limits' ) ) :
                                 data-price="<?php echo edd_get_price_option_amount( $download_id, $price_id ) ?>" 
                                 />
                             <h5 class="pledge-title">
-                                <?php printf( _x( 'Pledge %s', 'pledge amount', 'benny' ), '<strong>' . edd_currency_filter( edd_format_amount( $price['amount'] ) ) . '</strong>' ) ?>
+                                <?php printf( _x( 'Pledge %s', 'pledge amount', 'reach' ), '<strong>' . edd_currency_filter( edd_format_amount( $price['amount'] ) ) . '</strong>' ) ?>
                             </h5>
                             <?php if ( $show_remaining ) : ?>                               
                                 <span class="pledge-limit"><?php echo $remaining_msg ?></span>                          
@@ -234,7 +234,7 @@ if ( ! function_exists( 'benny_edd_variable_pricing_with_limits' ) ) :
 
 endif;
 
-if ( ! function_exists( 'benny_edd_purchase_form_quantity_input' ) ) : 
+if ( ! function_exists( 'reach_edd_purchase_form_quantity_input' ) ) : 
 
     /**
      * Display quantity input field with quantity label.
@@ -243,11 +243,11 @@ if ( ! function_exists( 'benny_edd_purchase_form_quantity_input' ) ) :
      * @return  string
      * @since   1.0.0
      */
-    function benny_edd_purchase_form_quantity_input( $quantity_input ) {
+    function reach_edd_purchase_form_quantity_input( $quantity_input ) {
         ob_start();
         ?>      
         <div class="edd_download_quantity_wrapper">
-            <label for="edd_download_quantity"><?php _e( 'Qty', 'benny' ) ?></label>
+            <label for="edd_download_quantity"><?php _e( 'Qty', 'reach' ) ?></label>
             <input type="number" min="1" step="1" name="edd_download_quantity" class="edd-input edd-item-quantity" value="1" />
         </div>
 
@@ -260,7 +260,7 @@ if ( ! function_exists( 'benny_edd_purchase_form_quantity_input' ) ) :
 endif;
 
 
-if ( ! function_exists( 'benny_edd_purchase_form_quantity_input' ) ) : 
+if ( ! function_exists( 'reach_edd_purchase_form_quantity_input' ) ) : 
 
     /**
      * Display quantity input field with quantity label.
@@ -271,7 +271,7 @@ if ( ! function_exists( 'benny_edd_purchase_form_quantity_input' ) ) :
      * @return  string
      * @since   1.0.0
      */
-    function benny_edd_purchase_form_variation_quantity_input( $quantity_input, $key, $price ) {
+    function reach_edd_purchase_form_variation_quantity_input( $quantity_input, $key, $price ) {
         ob_start();
         ?>      
         <div class="edd_download_quantity_wrapper edd_download_quantity_price_option_<?php echo sanitize_key( $price['name'] ) ?>">
@@ -286,7 +286,7 @@ if ( ! function_exists( 'benny_edd_purchase_form_quantity_input' ) ) :
 
 endif;
 
-if ( ! function_exists( 'benny_edd_purchase_link_text' ) ) : 
+if ( ! function_exists( 'reach_edd_purchase_link_text' ) ) : 
 
     /**
      * Filter the purchase link text.
@@ -295,7 +295,7 @@ if ( ! function_exists( 'benny_edd_purchase_link_text' ) ) :
      * @return  array
      * @since   1.0.0
      */
-    function benny_edd_purchase_link_text( $args ) {
+    function reach_edd_purchase_link_text( $args ) {
         if ( false !== strpos( $args[ 'text' ], '&nbsp;&ndash;&nbsp;' ) ) {
             list( $p, $text ) = explode( '&nbsp;&ndash;&nbsp;', $args[ 'text' ] );
             $args[ 'text' ] = $text;
@@ -306,7 +306,7 @@ if ( ! function_exists( 'benny_edd_purchase_link_text' ) ) :
 
 endif;
 
-if ( ! function_exists( 'benny_edd_show_price' ) ) : 
+if ( ! function_exists( 'reach_edd_show_price' ) ) : 
 
     /**
      * Display price before product purchase form.
@@ -317,7 +317,7 @@ if ( ! function_exists( 'benny_edd_show_price' ) ) :
      * @return  void
      * @since   1.0.0
      */
-    function benny_edd_show_price( $download_id, $args, $price = null ) {
+    function reach_edd_show_price( $download_id, $args, $price = null ) {
         if ( isset( $args[ 'price' ] ) && 'no' === $args[ 'price' ] ) {
             return;
         }
@@ -327,7 +327,7 @@ if ( ! function_exists( 'benny_edd_show_price' ) ) :
         }
 
         if ( is_null( $price ) ) {
-            $price = benny_get_edd_product_price( $download_id, $args );
+            $price = reach_get_edd_product_price( $download_id, $args );
         }
 
         if ( false === $price ) {

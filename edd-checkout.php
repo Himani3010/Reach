@@ -2,10 +2,10 @@
 /**
  * Checkout page template. 
  *
- * @package Benny
+ * @package Reach
  */
 
-if ( ! benny_has_edd() ) {
+if ( ! reach_has_edd() ) {
     return;
 }
 
@@ -26,7 +26,7 @@ get_header( 'stripped' );
 
                     <aside class="campaign-benefiting">
 
-                        <p class="header"><?php echo _n( 'Thank you for supporting this campaign', 'Thank you for supporting these campaigns', count( $campaigns ), 'benny' ) ?></p>
+                        <p class="header"><?php echo _n( 'Thank you for supporting this campaign', 'Thank you for supporting these campaigns', count( $campaigns ), 'reach' ) ?></p>
                         
                         <?php foreach ( $campaigns as $campaign_id => $benefits ) :
 

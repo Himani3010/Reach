@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="main">
  *
- * @package Benny
+ * @package Reach
  */
 ?><!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -24,11 +24,7 @@
 		<div class="body-wrapper">
 			<header id="header" class="cf wrapper site-header" role="banner">
 				<div class="site-branding site-identity">
-					<a class="home-link" href="<?php echo benny_site_url() ?>"></a>
-					<?php 
-					benny_site_title();
-					benny_site_tagline(); 
-					?>								
+					<?php reach_site_identity() ?>
 				</div><!-- .site-branding -->				
 			</header><!-- #header -->
 			<div id="main" class="site-content fullwidth cf">

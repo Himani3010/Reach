@@ -13,7 +13,7 @@ if ( has_post_thumbnail() ) :
 			
 		<?php else : ?>
 
-			<a href="<?php the_permalink() ?>" title="<?php printf( __( 'Go to %s', 'benny' ), get_the_title() ) ?>">
+			<a href="<?php the_permalink() ?>" title="<?php printf( __( 'Go to %s', 'reach' ), get_the_title() ) ?>">
 				<?php the_post_thumbnail() ?> 
 			</a>
 

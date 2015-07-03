@@ -2,7 +2,7 @@
 /**
  * Template name: User Dashboard
  *
- * @package 	Benny
+ * @package 	Reach
  */
 
 get_template_part( 'user-dashboard' );

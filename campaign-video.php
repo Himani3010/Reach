@@ -2,7 +2,7 @@
 /**
  * Campaign video.
  *
- * @package Benny
+ * @package Reach
  */
 
 $campaign  = charitable_get_current_campaign();

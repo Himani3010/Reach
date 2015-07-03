@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="main">
  *
- * @package Benny
+ * @package Reach
  */
 ?><!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -21,20 +21,16 @@
 </head>
 <body <?php body_class(); ?>>
 	<div id="page" class="hfeed site-container">
-		<a class="skip-link screen-reader-text" href="#main"><?php _e( 'Skip to content', 'benny' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#main"><?php _e( 'Skip to content', 'reach' ); ?></a>
 
-		<?php get_template_part( 'social-networks' ) ?>
+		<?php get_template_part( 'social-profiles' ) ?>
 
 		<?php get_template_part( 'account-links' ) ?>
 
 		<div class="body-wrapper">
 			<header id="header" class="cf wrapper site-header" role="banner">
 				<div class="site-branding site-identity">
-					<a class="home-link" href="<?php echo benny_site_url() ?>"></a>
-					<?php 
-					benny_site_title();
-					benny_site_tagline(); 
-					?>								
+					<?php reach_site_identity() ?>					
 				</div><!-- .site-branding -->
 				<div class="site-navigation">		
 					<nav role="navigation">

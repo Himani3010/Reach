@@ -2,10 +2,10 @@
 /**
  * Account links
  *
- * @package Benny
+ * @package Reach
  */
 
-if ( ! benny_has_charitable() ) {
+if ( ! reach_has_charitable() ) {
     return;
 }
 
@@ -17,21 +17,21 @@ $login_page = charitable_get_permalink( 'login_page' );
 <div class="account-links">
     <?php if ( $submit_page ) : ?>
 
-        <a class="user-campaign button with-icon button-alt button-small" href="<?php echo $submit_page ?>" data-icon="&#xf055;"><?php _e( 'Create a campaign', 'benny' ) ?></a>
+        <a class="user-campaign button with-icon button-alt button-small" href="<?php echo $submit_page ?>" data-icon="&#xf055;"><?php _e( 'Create a campaign', 'reach' ) ?></a>
 
     <?php endif ?>
 
     <?php if ( is_user_logged_in() ) : ?>
 
         <?php if ( $profile_page ) : ?>
-            <a class="user-account with-icon button button-alt button-small" href="<?php echo $profile_page ?>" data-icon="&#xf007;"><?php _e('Profile', 'benny') ?></a>
+            <a class="user-account with-icon button button-alt button-small" href="<?php echo $profile_page ?>" data-icon="&#xf007;"><?php _e('Profile', 'reach') ?></a>
         <?php endif ?>
 
-        <a class="logout with-icon" href="<?php echo wp_logout_url( get_permalink() ) ?>" data-icon="&#xf08b;"><?php _e('Log out', 'benny') ?></a>
+        <a class="logout with-icon" href="<?php echo wp_logout_url( get_permalink() ) ?>" data-icon="&#xf08b;"><?php _e('Log out', 'reach') ?></a>
 
     <?php else : ?>
 
-        <a class="user-login button with-icon button-alt button-small" href="<?php echo $login_page ?>" data-icon="&#xf007;"><?php _e('Login / Register', 'benny') ?></a>
+        <a class="user-login button with-icon button-alt button-small" href="<?php echo $login_page ?>" data-icon="&#xf007;"><?php _e('Login / Register', 'reach') ?></a>
 
     <?php endif ?>
 </div><!-- .account-links -->

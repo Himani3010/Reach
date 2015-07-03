@@ -2,7 +2,7 @@
 /**
  * Template name: Fullwidth
  *
- * @package Benny
+ * @package Reach
  */
 
 get_header();

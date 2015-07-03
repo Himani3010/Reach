@@ -2,7 +2,7 @@
 /**
  * Campaign content block.
  *
- * @package Benny
+ * @package Reach
  */
 ?>
 <div id="campaign-<?php echo get_the_ID() ?>" <?php post_class('campaign-content') ?>>

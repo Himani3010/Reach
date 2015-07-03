@@ -2,7 +2,7 @@
 /**
  * Partial template displaying the activity feed shown on user profiles.
  * 
- * @package 	Benny
+ * @package 	Reach
  */
 
 global $donor;
@@ -11,7 +11,7 @@ $activity = $donor->get_activity( array(
 	'post_type' => array( 'donation', 'campaign', 'post' )
 )) ?>
 
-<h3><?php _e( 'Activity Feed', 'benny' ) ?></h3>
+<h3><?php _e( 'Activity Feed', 'reach' ) ?></h3>
 
 <?php if ( $activity->have_posts() ) :  ?>
 	
@@ -29,7 +29,7 @@ $activity = $donor->get_activity( array(
 
 <?php else : ?>				
 
-	<p><?php printf( '%s %s', $donor->display_name, _x( 'has no activity to show yet.', 'user has no activity', 'benny' ) ) ?></p>
+	<p><?php printf( '%s %s', $donor->display_name, _x( 'has no activity to show yet.', 'user has no activity', 'reach' ) ) ?></p>
 
 <?php 
 

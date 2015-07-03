@@ -2,11 +2,11 @@
 /**
  * The template for displaying the title banner at the top of a page.
  *
- * @package Benny
+ * @package Reach
  */
 
-$banner_title = benny_get_banner_title();
-$banner_subtitle = benny_get_banner_subtitle();
+$banner_title = reach_get_banner_title();
+$banner_subtitle = reach_get_banner_subtitle();
 
 if ( ! empty( $banner_title ) ) : ?>
 

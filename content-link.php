@@ -2,7 +2,7 @@
 /**
  * Content of link format post.
  * 
- * @package 	Benny
+ * @package 	Reach
  */
 ?>
 <article id="post-<?php the_ID() ?>" <?php post_class() ?>>	
@@ -16,9 +16,9 @@
 
 	endif;
 
-	benny_post_header();
+	reach_post_header();
 
-	$content = benny_link_format_the_content( null, false, false );
+	$content = reach_link_format_the_content( null, false, false );
 
 	if ( strlen($content) ) : 
 

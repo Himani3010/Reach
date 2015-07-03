@@ -1,6 +1,6 @@
 <?php 
 /**
- * @package 	Benny
+ * @package 	Reach
  */
 ?>
 <article id="post-<?php the_ID() ?>" <?php post_class() ?>>			
@@ -14,16 +14,16 @@
 
 	endif;
 
-	benny_post_header();
+	reach_post_header();
 
 	?>			
 	<div class="entry cf">				
 		<?php 
-		echo benny_get_media( array( 'split_media' => true, 'meta_key' => '_format_audio_embed', 'type' => 'audio' ) );
+		echo reach_get_media( array( 'split_media' => true, 'meta_key' => '_format_audio_embed', 'type' => 'audio' ) );
 		
 		the_content();
 
-		wp_link_pages(array( 'before' => '<p class="entry_pages">' . __('Pages: ', 'benny') ) ); 
+		wp_link_pages(array( 'before' => '<p class="entry_pages">' . __('Pages: ', 'reach') ) ); 
 		?>
 	</div>						
 	<?php 

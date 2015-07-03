@@ -2,7 +2,7 @@
 /**
  * Single campaign template.
  *
- * @package Benny
+ * @package Reach
  */
 get_header();
 

@@ -2,7 +2,7 @@
 /**
  * Content of status format post.
  * 
- * @package 	Benny
+ * @package 	Reach
  */
 ?>		
 <article id="post-<?php the_ID() ?>" <?php post_class() ?>>			
@@ -14,13 +14,13 @@
 
 		get_template_part('meta', 'above');
 
-		benny_post_header();
+		reach_post_header();
 
 		get_template_part( 'meta', 'taxonomy' );
 
 	else : 
 
-		benny_post_header();
+		reach_post_header();
 		
 		get_template_part('meta', 'below');
 

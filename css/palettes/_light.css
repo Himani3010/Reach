@@ -217,13 +217,13 @@ body.author .author-activity-feed .activity-summary a, .widget.widget_charitable
 .button.button-secondary.accent:hover, .feature-block, .account-links .button.button-alt:hover, .banner, .sticky, .widget.widget_charitable_donate_widget .charitable-submit-field .button:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button:focus, .charitable-donation-form .charitable-form-field .button:hover, .charitable-donation-form .charitable-form-field .button:focus, .charitable-donation-form .charitable-form-field .button:active, body.user-dashboard .charitable-submit-field .button.button-primary:hover, body .edd-submit.button.gray:focus, body .edd-submit.button.gray:active, body .edd-submit.button.gray:hover, body .edd-submit.button.white:focus, body .edd-submit.button.white:active, body .edd-submit.button.white:hover, body .edd-submit.button.blue:focus, body .edd-submit.button.blue:active, body .edd-submit.button.blue:hover, body .edd-submit.button.red:focus, body .edd-submit.button.red:active, body .edd-submit.button.red:hover, body .edd-submit.button.orange:focus, body .edd-submit.button.orange:active, body .edd-submit.button.orange:hover, body .edd-submit.button.green:focus, body .edd-submit.button.green:active, body .edd-submit.button.green:hover, body .edd-submit.button.yellow:focus, body .edd-submit.button.yellow:active, body .edd-submit.button.yellow:hover, body .edd-submit.button.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .edd-submit.button.dark-gray:hover, #edd_checkout_wrap #edd-purchase-button {
   background-color: #d95b43; }
 
-.button-alt.accent,
+.toggled .menu-site > ul, .button-alt.accent,
 .button-secondary.accent,
 .button.button-alt.accent,
 .button.button-secondary.accent, .account-links .button.button-alt:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button, .charitable-donation-form .charitable-form-field .button, body.user-dashboard .charitable-submit-field .button.button-primary, body .edd-submit.button.gray, body .edd-submit.button.white, body .edd-submit.button.blue, body .edd-submit.button.red, body .edd-submit.button.orange, body .edd-submit.button.green, body .edd-submit.button.yellow, body .edd-submit.button.dark-gray, body .edd-submit.button.gray:focus, body .edd-submit.button.gray:active, body .edd-submit.button.gray:hover, body .edd-submit.button.white:focus, body .edd-submit.button.white:active, body .edd-submit.button.white:hover, body .edd-submit.button.blue:focus, body .edd-submit.button.blue:active, body .edd-submit.button.blue:hover, body .edd-submit.button.red:focus, body .edd-submit.button.red:active, body .edd-submit.button.red:hover, body .edd-submit.button.orange:focus, body .edd-submit.button.orange:active, body .edd-submit.button.orange:hover, body .edd-submit.button.green:focus, body .edd-submit.button.green:active, body .edd-submit.button.green:hover, body .edd-submit.button.yellow:focus, body .edd-submit.button.yellow:active, body .edd-submit.button.yellow:hover, body .edd-submit.button.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .edd-submit.button.dark-gray:hover {
   border-color: #d95b43; }
 
-.toggled .menu-site, .toggled .menu-site ul {
+.toggled .menu-site {
   border-top-color: #d95b43; }
 
 .charitable-fes-campaign-creator-toolbar {
@@ -338,7 +338,7 @@ td, .block, .widget, .stripped .site-main, body.author .site-main, .widget.widge
 .user-dashboard-menu li a:hover, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) select, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) textarea, .charitable-notice, .charitable-user-post, .charitable-user-post:after, .edd-checkout-template.stripped .entry-block, body.events-single .tribe-events-event-meta, .widget.widget_pp_campaign_events .widget-block {
   border-color: #e2dedb; }
 
-.multi-block .content-block:nth-of-type(1n+2), .meta-below, body.author .author-activity-feed, .widget.widget_campaign_creator_widget .creator-bio, .campaign .campaign-stats, .campaigns-grid .campaign-stats, .charitable-campaign-form-table tfoot td, .charitable-repeatable-form-field-table td, .charitable-fieldset .charitable-fieldset, .user-post-actions, body.events-single .tribe-events-tickets {
+.toggled .menu-site ul, .multi-block .content-block:nth-of-type(1n+2), .meta-below, body.author .author-activity-feed, .widget.widget_campaign_creator_widget .creator-bio, .campaign .campaign-stats, .campaigns-grid .campaign-stats, .charitable-campaign-form-table tfoot td, .charitable-repeatable-form-field-table td, .charitable-fieldset .charitable-fieldset, .user-post-actions, body.events-single .tribe-events-tickets {
   border-top-color: #e2dedb; }
 
 legend, .menu-site li, .block-title, .widget_search.widget .search-field, .post-title, .entry-header .entry-title, .meta-above, .comment,
@@ -457,13 +457,13 @@ a img {
 2.0 Typography
 --------------------------------------------------------------*/
 @font-face {
-  font-family: 'Benny-Icons';
-  src: url("../fonts/benny-icons.eot?-hpwdfsk");
-  src: url("../fonts/benny-icons.eot?#iefix-hpwdfsk") format("embedded-opentype"), url("../fonts/benny-icons.woff?-hpwdfsk") format("woff"), url("../fonts/benny-icons.ttf?-hpwdfsk") format("truetype"), url("../fonts/benny-icons.svg?-hpwdfsk#Benny-Icons") format("svg");
+  font-family: 'Reach-Icons';
+  src: url("../fonts/reach-icons.eot?-hpwdfsk");
+  src: url("../fonts/reach-icons.eot?#iefix-hpwdfsk") format("embedded-opentype"), url("../fonts/reach-icons.woff?-hpwdfsk") format("woff"), url("../fonts/reach-icons.ttf?-hpwdfsk") format("truetype"), url("../fonts/reach-icons.svg?-hpwdfsk#Reach-Icons") format("svg");
   font-weight: normal;
   font-style: normal; }
 [class^="icon-"], [class*=" icon-"] {
-  font-family: "Benny-Icons";
+  font-family: "Reach-Icons";
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -601,7 +601,7 @@ a img {
   content: "\f18b"; }
 
 [data-icon]:before {
-  font-family: "Benny-Icons";
+  font-family: "Reach-Icons";
   content: attr(data-icon);
   speak: none;
   font-weight: normal;
@@ -1218,7 +1218,7 @@ a {
       line-height: 1.3rem;
       text-align: center; }
     .menu-site .menu-item-has-children > a:after {
-      font-family: 'benny-icons';
+      font-family: 'reach-icons';
       content: '\f107';
       position: relative;
       top: 0;
@@ -1286,7 +1286,7 @@ a {
     line-height: 3.8rem; }
     .site-navigation .menu-button:before {
       content: "\f00b";
-      font-family: 'benny-icons';
+      font-family: 'reach-icons';
       speak: none;
       font-weight: normal;
       font-variant: normal;
@@ -1760,7 +1760,7 @@ a {
   font-size: 2rem;
   line-height: 1;
   cursor: pointer;
-  font-family: "Benny-Icons";
+  font-family: "Reach-Icons";
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -2642,7 +2642,7 @@ body.author .author-activity-feed {
       left: 0;
       font-size: 24px;
       font-size: 2.4rem;
-      font-family: "Benny-Icons"; }
+      font-family: "Reach-Icons"; }
     @media (min-width: 50em) {
       body.author .author-activity-feed .activity-summary {
         float: left;
@@ -3961,7 +3961,7 @@ body.user-dashboard .charitable-submit-field {
   box-shadow: none;
   color: transparent; }
   .charitable-repeatable-form-field-table .remove:before {
-    font-family: "Benny-Icons";
+    font-family: "Reach-Icons";
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -4417,7 +4417,7 @@ body.user-dashboard .charitable-submit-field {
     float: right;
     font-weight: 100; }
   .charitable-fes-campaign-creator-toolbar .edit-link::before {
-    font-family: "Benny-Icons";
+    font-family: "Reach-Icons";
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -4574,7 +4574,7 @@ body.user-dashboard .charitable-submit-field {
     padding-right: 0.6rem;
     font-size: 16px;
     font-size: 1.6rem;
-    font-family: "Benny-Icons";
+    font-family: "Reach-Icons";
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -4685,10 +4685,10 @@ div.printfriendly {
   #edd_checkout_wrap #edd_final_total_wrap strong {
     font-weight: 400; }
 #edd_checkout_wrap #edd-purchase-button {
+  padding: 12px 24px;
+  padding: 1.2rem 2.4rem;
   font-size: 25px;
   font-size: 2.5rem;
-  height: 50px;
-  height: 5rem;
   border: none; }
 #edd_checkout_wrap .edd_empty_cart {
   display: block;

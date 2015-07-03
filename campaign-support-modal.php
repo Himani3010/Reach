@@ -1,6 +1,6 @@
 <?php
 $campaign 		= charitable_get_current_campaign();
-$page_has_modal = wp_cache_get( sprintf( 'benny_page_has_campaign_%d_modal', $campaign->ID ) );
+$page_has_modal = wp_cache_get( sprintf( 'reach_page_has_campaign_%d_modal', $campaign->ID ) );
 
 if ( false === $page_has_modal ) : ?>
 	
@@ -11,6 +11,6 @@ if ( false === $page_has_modal ) : ?>
 		
 	</div><!-- #campaign-form-<?php echo $campaign->ID ?> -->
 
-	<?php wp_cache_set( sprintf( 'benny_page_has_campaign_%d_modal', $campaign->ID ), true );
+	<?php wp_cache_set( sprintf( 'reach_page_has_campaign_%d_modal', $campaign->ID ), true );
 
 endif;

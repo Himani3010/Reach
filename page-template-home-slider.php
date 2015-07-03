@@ -4,7 +4,7 @@
  * 
  * This is a homepage template with a slider at the top and campaign grid below.
  *
- * @package 	Benny 
+ * @package 	Reach 
  */
 
 get_header();
@@ -18,7 +18,7 @@ get_header();
 
 				<div class="shadow-wrapper">	
 
-					<?php echo benny_get_media( array( 'split_media' => true ) ) ?>
+					<?php echo reach_get_media( array( 'split_media' => true ) ) ?>
 
 					<h1 class="page-title"><?php the_title() ?></h1>
 

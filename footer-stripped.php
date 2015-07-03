@@ -2,7 +2,7 @@
 /**
  * A stripped back footer used by the Stripped page template.
  *
- * @package Benny
+ * @package Reach
  */
 ?>
 		</div><!-- #main -->

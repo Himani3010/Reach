@@ -2,7 +2,7 @@
 /**
  * The template for displaying individual events.
  *
- * @package     Benny
+ * @package     Reach
  */
 
 get_header() ?>

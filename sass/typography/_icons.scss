@@ -1,10 +1,10 @@
 @font-face {
-	font-family: 'Benny-Icons';
-	src:url('../fonts/benny-icons.eot?-hpwdfsk');
-	src:url('../fonts/benny-icons.eot?#iefix-hpwdfsk') format('embedded-opentype'),
-		url('../fonts/benny-icons.woff?-hpwdfsk') format('woff'),
-		url('../fonts/benny-icons.ttf?-hpwdfsk') format('truetype'),
-		url('../fonts/benny-icons.svg?-hpwdfsk#Benny-Icons') format('svg');
+	font-family: 'Reach-Icons';
+	src:url('../fonts/reach-icons.eot?-hpwdfsk');
+	src:url('../fonts/reach-icons.eot?#iefix-hpwdfsk') format('embedded-opentype'),
+		url('../fonts/reach-icons.woff?-hpwdfsk') format('woff'),
+		url('../fonts/reach-icons.ttf?-hpwdfsk') format('truetype'),
+		url('../fonts/reach-icons.svg?-hpwdfsk#Reach-Icons') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -196,7 +196,7 @@
 }
 
 [data-icon]:before {
-	font-family: "Benny-Icons";
+	font-family: "Reach-Icons";
 	content: attr(data-icon);
 	speak: none;
 	font-weight: normal;

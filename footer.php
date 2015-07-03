@@ -4,7 +4,7 @@
  *
  * Contains the closing of the #main div and all content after
  *
- * @package Benny
+ * @package Reach
  */
 ?>
 		</div><!-- #main -->
@@ -31,7 +31,7 @@
 						echo get_theme_mod( 'footer_notice' );
 					else: 
 					?>
-						<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'benny' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'benny' ), 'WordPress' ) ?></a>
+						<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'reach' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'reach' ), 'WordPress' ) ?></a>
 					<?php
 					endif  
 					?>
