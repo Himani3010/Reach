@@ -1,8 +1,7 @@
 #header {
 	position: relative;		
 	z-index: 50;
-	@include padding( 24, 36, 0, 36 );
-	border-radius: 0.4rem 0.4rem 0 0;
+	@include padding( 24, 36, 0, 36 );	
 	@include background-color( $color__background-wrapper );	
 }
 

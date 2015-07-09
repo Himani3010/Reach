@@ -10,36 +10,33 @@ get_header();
 		while( have_posts() ) :
 			the_post();
 			?>
-			<main class="site-main" role="main">
-				<?php 
-
-				do_action( 'charitable_single_campaign_before' );
+			<main class="site-main" role="main">				
+			
+				<?php do_action( 'charitable_single_campaign_before' ) ?>
 				
-				get_template_part('campaign', 'summary');
-	
-				get_template_part('campaign', 'video');
+				<?php get_template_part( 'campaign', 'summary' ) ?>
 
-				?>
-				<div class="content-area">
-	
-					<!-- Campaign content -->					
-					<?php get_template_part( 'content', 'campaign' ) ?>
-					<!-- End campaign content -->
+				<div class="layout-wrapper">
+				
+					<?php get_template_part( 'campaign', 'video' ) ?>
 
-					<!-- "Campaign Below Content" sidebar -->
-					<?php get_sidebar( 'campaign-after' ) ?>
-					<!-- End "Campaign Below Content" sidebar -->
+					<div class="content-area">
+		
+						<!-- Campaign content -->					
+						<?php get_template_part( 'content', 'campaign' ) ?>
+						<!-- End campaign content -->
 
-					<?php comments_template( '/comments-campaign.php', true ) ?>
+						<!-- "Campaign Below Content" sidebar -->
+						<?php get_sidebar( 'campaign-after' ) ?>
+						<!-- End "Campaign Below Content" sidebar -->
 
-				</div>
-				<?php 
+						<?php comments_template( '/comments-campaign.php', true ) ?>
 
-				get_sidebar( 'campaign' );
+					</div>
+					<?php get_sidebar( 'campaign' ) ?>
 
-				do_action( 'charitable_single_campaign_after' );
-
-				?>		
+					<?php do_action( 'charitable_single_campaign_after' ) ?>
+				</div><!-- .layout-wrapper -->
 			</main>
 		<?php 
 		endwhile;

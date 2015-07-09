@@ -6,7 +6,8 @@
  */
 
 get_header(); ?>
-
+	
+<div class="layout-wrapper">
 	<div id="primary" class="content-area">
 		<main class="site-main content" role="main">
 
@@ -26,5 +27,8 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+	<?php get_sidebar(); ?>
+
+</div><!--.layout-wrapper -->
+
 <?php get_footer(); ?>

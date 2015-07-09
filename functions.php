@@ -26,8 +26,8 @@ if ( ! isset( $content_width ) ) {
  * scripts and stylesheets are NOT cached or minified 
  * to make debugging easier. 
  */
-if ( ! defined( 'BENNY_DEBUG' ) ) {
-	define( 'BENNY_DEBUG', false );
+if ( ! defined( 'REACH_DEBUG' ) ) {
+	define( 'REACH_DEBUG', false );
 }
 
 /**

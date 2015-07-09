@@ -7,9 +7,13 @@
 	width: 0;
 	height: 0;
 	padding: 0;
-	overflow: hidden;
-	@include background-color( $color__background-screen );
+	overflow: hidden;	
 	@include property-transition( max-height, 500ms ); 
+
+	ul {
+		@include background-color( $color__background-content );
+		@include border-color( $color__accent );
+	}
 
 	li {
 		margin: 0;	
@@ -43,14 +47,13 @@
 		ul {
 			position: absolute;	
 			left: -999em;
-			width: 20rem;
-			margin-left: 0;
-			margin-top: 0.5rem;
-			padding: 0.6rem 0;		
+			@include width( 200 );
+			@include margin( 5, 0, 0, 0 );
+			@include padding( 6, 0 );
 			z-index: 100;
-			border-width: 0.3rem;
-			border-style: solid;
-			border-radius: 0.4rem;
+			@include border-width( 2 );
+			border-style: solid;			
+			border-radius: 0.4rem;			
 
 			a {
 				font-size: 1.2rem;
@@ -128,11 +131,13 @@
 	height: auto;
 	max-height: 10000px;
 	@include border-top( 2, $color__accent );
+	@include background-color( $color__background-wrapper );
 	
 	ul {
 		margin: 0;
 		padding-left: 0;
 		@include border-top( 1, $color__border-primary );
+		@include background-color( $color__background-wrapper );
 	}
 
 	> ul {

@@ -11,35 +11,36 @@ if ( $campaign ) :
 ?>
 	<section class="campaign-summary current-campaign feature-block cf <?php if ( $campaign->has_ended() ) : ?>ended<?php endif ?>">
 		<div class="shadow-wrapper">
-			<h1 class="campaign-title"><?php echo $campaign->post_title ?></h1>
-			<div class="campaign-description campaign-excerpt">				
-				<?php echo $campaign->get( 'description' ) ?>
-			</div>				
-			
-			<?php get_template_part( 'campaign', 'featured-image' ) ?>
+			<div class="layout-wrapper">
+				<h1 class="campaign-title"><?php echo $campaign->post_title ?></h1>
+				<div class="campaign-description campaign-excerpt">				
+					<?php echo $campaign->get( 'description' ) ?>
+				</div><!-- .campaign-description -->			
+				
+				<?php get_template_part( 'campaign', 'featured-image' ) ?>
 
-			<div class="campaign-details cf">		
-				<?php if ( $campaign->has_ended() ) :
+				<div class="campaign-details cf">		
+					<?php if ( $campaign->has_ended() ) :
 
-					get_template_part( 'campaign', 'ended' );
-			
-				else :
+						get_template_part( 'campaign', 'ended' );
+				
+					else :
 
-					$campaign->donate_button_template();
-					
-				endif;
+						$campaign->donate_button_template();
+						
+					endif;
 
-				get_template_part( 'campaign', 'barometer' );
+					get_template_part( 'campaign', 'barometer' );
 
-				get_template_part( 'campaign', 'stats' );
+					get_template_part( 'campaign', 'stats' );
 
-				get_template_part( 'campaign', 'countdown' );
-				?>				
-			</div>				
+					get_template_part( 'campaign', 'countdown' );
+					?>				
+				</div><!-- .campaign-details -->
 
-			<?php get_template_part( 'campaign', 'sharing' ) ?>
-
-		</div>
-	</section>
+				<?php get_template_part( 'campaign', 'sharing' ) ?>
+			</div><!-- .layout-wrapper -->
+		</div><!-- .shadow-wrapper -->
+	</section><!-- .campaign-summary -->
 <?php 
 endif;

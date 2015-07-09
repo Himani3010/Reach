@@ -13,20 +13,20 @@ get_header();
 			the_post();
 						
 			get_template_part( 'banner' ); 
-
-			if ( function_exists( 'charitable_user_dashboard' ) ) :
-
-				charitable_user_dashboard()->nav( array(
-					'container_class' 	=> 'user-dashboard-menu'
-				) );
-
-			endif;
 			?>
-
-			<main class="site-main content-area" role="main">
-				<?php get_template_part( 'content', 'page' ) ?>
-			</main><!-- .site-main -->
-		<?php 
+			<div class="layout-wrapper">
+				<?php 
+				if ( function_exists( 'charitable_user_dashboard' ) ) :
+					charitable_user_dashboard()->nav( array(
+						'container_class' 	=> 'user-dashboard-menu'
+					) );
+				endif;
+				?>
+				<main class="site-main content-area" role="main">
+					<?php get_template_part( 'content', 'page' ) ?>
+				</main><!-- .site-main -->
+			</div><!-- .layout-wrapper -->
+			<?php 
 		endwhile;
 	endif;
 

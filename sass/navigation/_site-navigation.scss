@@ -31,7 +31,9 @@
 	} 
 
 	@include bp( 800 ) {
-		position: static;
+		position: absolute;
+		right: 0;
+		bottom: 0;
 		text-align: right;			
 		box-shadow: none;
 		height: auto;
@@ -46,23 +48,18 @@
 		.menu-site {		
 			height: auto;
 			width: auto;
-			margin: 3.6rem 0 0 0;
-			left: 0;
+			margin: 0;
+			@include padding-right( 36 );
 			border-top: 0;
 			overflow: visible;
 
-			li {
-				margin: 0 0 0 1rem;
+			li {				
 				text-indent: 0;
 			}
 
 			> li {
-				padding-bottom: 0.9rem;
+				@include padding( 0, 0, 12, 12 );
 				border: none;
-
-				> a:hover {
-					// @include border-color( $color__accent );
-				}
 			}
 			
 			> li.hovering:last-child ul {

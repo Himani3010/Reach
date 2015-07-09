@@ -21,26 +21,27 @@
 </head>
 <body <?php body_class(); ?>>
 	<div id="page" class="hfeed site-container">
-		<a class="skip-link screen-reader-text" href="#main"><?php _e( 'Skip to content', 'reach' ); ?></a>
-
-		<?php get_template_part( 'social-profiles' ) ?>
-
-		<?php get_template_part( 'account-links' ) ?>
-
+		<div class="layout-wrapper">
+			<a class="skip-link screen-reader-text" href="#main"><?php _e( 'Skip to content', 'reach' ); ?></a>
+			<?php get_template_part( 'social-profiles' ) ?>
+			<?php get_template_part( 'account-links' ) ?>
+		</div><!-- .layout-wrapper -->
 		<div class="body-wrapper">
 			<header id="header" class="cf wrapper site-header" role="banner">
-				<div class="site-branding site-identity">
-					<?php reach_site_identity() ?>					
-				</div><!-- .site-branding -->
-				<div class="site-navigation">		
-					<nav role="navigation">
-						<a class="menu-toggle menu-button toggle-button" aria-controls="menu" aria-expanded="false"></a>
-						<?php wp_nav_menu( array(   
-							'theme_location' 	=> 'primary_navigation',
-							'container' 		=> false,
-							'menu_class' 		=> 'menu menu-site responsive_menu'
-						) ) ?>
-					</nav>
-			    </div><!-- .site-navigation -->
+				<div class="layout-wrapper">
+					<div class="site-branding site-identity">
+						<?php reach_site_identity() ?>					
+					</div><!-- .site-branding -->
+					<div class="site-navigation">		
+						<nav role="navigation">
+							<a class="menu-toggle menu-button toggle-button" aria-controls="menu" aria-expanded="false"></a>
+							<?php wp_nav_menu( array(   
+								'theme_location' 	=> 'primary_navigation',
+								'container' 		=> false,
+								'menu_class' 		=> 'menu menu-site responsive_menu'
+							) ) ?>
+						</nav>
+				    </div><!-- .site-navigation -->
+				</div><!-- .layout-wrapper -->
 			</header><!-- #header -->
 			<div id="main" class="site-content cf">

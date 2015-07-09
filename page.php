@@ -18,15 +18,16 @@ get_header();
 						
 			get_template_part( 'banner' ); ?>
 
-			<main class="site-main content-area" role="main">
-				<?php get_template_part( 'content', 'page' );
+			<div class="layout-wrapper">
+				<main class="site-main content-area" role="main">
+					<?php get_template_part( 'content', 'page' );
 
-				comments_template('', true); ?>
-			</main><!-- .site-main -->
+					comments_template('', true); ?>
+				</main><!-- .site-main -->
+				<?php get_sidebar() ?>
+			</div><!-- .layout-wrapper -->
 		<?php 
 		endwhile;
 	endif;
-
-get_sidebar();
 
 get_footer();

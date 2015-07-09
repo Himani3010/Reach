@@ -2,7 +2,11 @@
 	position: relative;
 	float: left;
 	width: 100%;
-	@include padding( 36, 0, 48 );
+	@include padding( 0, 0, 12 );
+
+	.section-title {
+		margin-top: 0;
+	}
 
 	.campaign.block {
 		max-width: 100%;

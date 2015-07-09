@@ -13,32 +13,32 @@
 
 get_header();
 
-if ( have_posts() ) : 
+get_template_part( 'banner' ) ?>
 
-	get_template_part( 'banner' ); ?>
-
-	<main class="site-main content-area" role="main">
-		
+<div class="layout-wrapper">
+	<main class="site-main content-area" role="main">					
 		<?php 
-		while ( have_posts() ) : 
-			the_post(); 
+		if ( have_posts() ) : 
+			while ( have_posts() ) : 
+				the_post(); 
 
-			get_template_part( 'content', get_post_format() );
+				get_template_part( 'content', get_post_format() );
 
-		endwhile; 
+			endwhile; 
 
-		reach_paging_nav();
-		?>		
+			reach_paging_nav();
 
+		else :
+
+			get_template_part( 'content', 'none' );
+
+		endif;		
+		?>	
 	</main><!-- .site-main -->
 
+	<?php get_sidebar() ?>
+	
+</div><!-- .layout-wrapper -->
 <?php 
-else :
-
-	get_template_part( 'content', 'none' );
-
-endif;
-
-get_sidebar();
 
 get_footer();

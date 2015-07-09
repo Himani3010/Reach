@@ -1,32 +1,17 @@
 #page {		
-	position: relative;
-	@include max-width( 600 );
-	margin: 0 auto;
-	overflow-x: hidden;
-
-	@include bp( 600 ) {
-		max-width: 100%;
-	}
-	@include bp( 1190 ) {
-		width: 119rem;
-	}
+	position: relative;	
+	overflow-x: hidden;	
 }
 
 .body-wrapper {
 	float: left;
 	clear: both;
-	width: 100%;	
-	border-radius: 0.4rem 0.4rem 0 0;
-	
-	@include bp( 1190 ) {
-		@include padding( 0, 10 );
-	}
+	width: 100%;			
 }
 
 #main {
 	@include padding( 36, 24 );	
-	@include background-color( $color__background-wrapper );
-	border-radius: 0 0 0.4rem 0.4rem;
+	@include background-color( $color__background-wrapper );	
 
 	@include bp ( 800 ) {
 		@include padding-right( 36 );

@@ -290,3 +290,134 @@
         margin-bottom: 0;
     }
 }
+
+/* Recipient selection */
+
+#charitable_field_recipient {    
+    float: left;
+    width: 100%;
+    @include padding( 24 );
+    @include border( 1 );
+    border-radius: 0.4rem;
+    @include background-color( $color__background-meta );
+}
+
+.charitable-recipient-type-options {
+    list-style: none;
+    padding: 0;
+    @include margin-bottom( 12 );
+    float: left;
+    width: 100%;
+
+    .charitable-recipient-type {
+        float: left;
+        @include padding( 12 );
+        @include border;
+        border-radius: 0.4rem;
+        @include background-color( $color__background-content );
+    }
+
+    .charitable-recipient-type.selected {
+        @include border-color( $color__accent );
+    }
+
+    h4 {
+        margin-top: 0;
+    }
+}
+
+.charitable-recipient-type-options-2 .charitable-recipient-type {
+    width: 49%;
+
+    &:nth-child(2n+2) {
+        margin-left: 2%;
+    }
+}
+
+.charitable-recipient-type-options-3 .charitable-recipient-type {
+    width: 33%;
+}
+
+.charitable-campaign-recipient-search {
+    float: left;
+    width: 100%; 
+
+    .select2-container {
+        display: block;
+        width: 100% !important;
+        @include max-width( 600 );
+        margin: 0 auto;
+        @include padding( 12 );
+        // @include font-size( 16 );
+        @include border;
+        border-radius: 0.4rem;
+        @include background-color( $color__background-content );
+
+        .select2-selection {
+            border: none;
+        }
+
+        .select2-selection--single .select2-selection__arrow {
+            @include top( 12 );
+            @include right( 12 );
+            @include width( 8 );
+        }              
+
+        .select2-selection--single {
+            .select2-selection__rendered {
+                padding-left: 0;
+            } 
+        } 
+
+        &.select2-container--open.select2-container--above {
+            // padding-top: 0;
+            border-top: 0;
+            border-radius: 0 0 0.4rem 0.4rem;
+        }
+
+        &.select2-container--open.select2-container--below {
+            // padding-bottom: 0;
+            border-bottom: 0;
+            border-radius: 0.4rem 0.4rem 0 0;    
+        }
+    }
+}
+
+body > .select2-container--open {
+    .select2-dropdown {
+        @include border-color( $color__border-primary );
+        border-style: solid; 
+
+        .select2-search--dropdown {
+            padding: 0;
+        }   
+
+        .select2-search__field {
+            @include padding( 12 );
+            max-width: 100%;
+            width: 100%;
+            @include border( 1 );
+            @include background-color( $color__background-wrapper );
+        }
+
+        .select2-results__option {
+            @include padding( 12 );
+            font-style: italic;
+
+            &.select2-results__option--highlighted {
+                @include color( $color__text );
+                @include background-color( $color__background-widget );
+            }
+        }
+    }
+
+    .select2-dropdown--below {
+        @include padding( 6, 12, 12 );
+        @include border-width( 0, 2, 2 );
+    }
+
+    .select2-dropdown--above {
+        @include padding( 12, 12, 6 );
+        @include border-width( 2, 2, 0 );
+    }    
+}

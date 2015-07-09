@@ -63,39 +63,3 @@
 .block-title.with-icon {
 	@include padding-left( 28 );
 }
-
-/* Shadow wrapper */
-.shadow-wrapper {
-	&::before {
-		@include border-right-color( $color__background-button );
-	}
-	
-	&::after {
-		@include border-left-color( $color__background-button );
-	}
-
-	@include bp( 800 ) {		
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			bottom: -0.9rem;
-			width: 0;
-			height: 0;
-			border-style: solid;			
-			border-width: 0 0.9rem 0.9rem 0.9rem;
-		}
-
-		&::before {
-			left: -0.9rem;
-			border-bottom-color: transparent;
-			border-left-color: transparent;
-		}
-
-		&::after {
-			right: -0.9rem;
-			border-right-color: transparent;
-			border-bottom-color: transparent;			
-		}
-	}
-}

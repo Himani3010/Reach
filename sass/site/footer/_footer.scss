@@ -2,22 +2,18 @@
 17.1 Footer Widget Area
 --------------------------------------------------------------*/
 #site-footer {
-	padding: {
-		@include top( 24 );
-		right: 4%;
-		left: 4%;
-	}
-	color: rgb( 255, 255, 255 );
+	@include padding( 24, 36 );
+	@include color( $color__text-overlay );
 
 	a {
-		color: rgb( 255, 255, 255 );
+		@include color( $color__text-overlay );
 		text-decoration: none;
 	}
 
 	.button {
 		background: transparent;
 		box-shadow: none;
-		border-color: rgb( 255, 255, 255 );
+		@include border-color( $color__text-overlay );
 	}
 }
 
