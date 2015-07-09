@@ -8,6 +8,8 @@
  */
 
 get_header();
+
+get_template_part( 'banner' );
 ?>
 <div class="layout-wrapper">
 	<main class="site-main content-area" role="main">

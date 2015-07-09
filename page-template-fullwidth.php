@@ -6,18 +6,19 @@
  */
 
 get_header();
-    
+
     if ( have_posts() ) :
         while ( have_posts() ) :
             the_post();
                         
             get_template_part( 'banner' ); ?>
+            <div class="layout-wrapper">
+                <main class="site-main content-area" role="main">
+                    <?php get_template_part( 'content', 'page' );
 
-            <main class="site-main content-area" role="main">
-                <?php get_template_part( 'content', 'page' );
-
-                comments_template('', true); ?>
-            </main><!-- .site-main -->
+                    comments_template('', true); ?>
+                </main><!-- .site-main -->
+            </div><!-- .layout-wrapper -->
         <?php 
         endwhile;
     endif;

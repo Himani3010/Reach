@@ -5,8 +5,11 @@
  * @package 	Reach
  */
 
-get_header(); ?>
-	
+get_header(); 
+
+get_template_part( 'banner' );
+
+?>	
 <div class="layout-wrapper">
 	<div id="primary" class="content-area">
 		<main class="site-main content" role="main">

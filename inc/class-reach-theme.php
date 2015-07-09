@@ -28,7 +28,7 @@ class Reach_Theme {
 	/**
 	 * The theme version. 
 	 */
-	const VERSION = '1.0.0-20150708';
+	const VERSION = '1.0.0-20150709';
 
 	/**
 	 * Database version number. 
@@ -680,6 +680,7 @@ class Reach_Theme {
      */
     public function add_valid_media_grabber_shortcodes( $shortcodes ) {
         $shortcodes[] = 'layerslider';
+        $shortcodes[] = 'rev_slider';
         return $shortcodes;
     }
 }
