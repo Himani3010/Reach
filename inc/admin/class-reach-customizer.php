@@ -80,6 +80,9 @@ class Reach_Customizer {
         /* Colour Section */
         $this->add_section( 'colour', $this->get_colour_section() );        
 
+        /* Social Profiles Section */
+        $this->add_section( 'social', $this->get_social_profiles_section() );
+
         /* Background Images Panel */
         $this->add_panel( 'background_images', $this->get_background_images_panel() );                
 
@@ -100,32 +103,6 @@ class Reach_Customizer {
         //     'section'   => 'footer', 
         //     'priority'  => 62
         // ));
-
-        /* Social Profiles */ 
-        // $wp_customize->add_section( 'social', array( 
-        //     'priority'      => 70, 
-        //     'title'         => __( 'Social Profiles', 'reach' ),
-        //     'description'   => __( 'Set up links to your online social presences', 'reach' )
-        // ) );
-
-        // $priority = 72;
-
-        // foreach ( reach_get_social_sites() as $setting_key => $label ) {                    
-
-        //     $wp_customize->add_setting( $setting_key, array( 
-        //         'transport' => 'postMessage' 
-        //     ) );
-
-        //     $wp_customize->add_control( $setting_key, array( 
-        //         'settings'  => $setting_key,
-        //         'label'     => $label, 
-        //         'section'   => 'social', 
-        //         'type'      => 'text',
-        //         'priority'  => $priority
-        //     ) );
-
-        //     $priority += 2;
-        // }
     }        
 
     /**
@@ -192,18 +169,16 @@ class Reach_Customizer {
             return;
         }
 
-        $section_args = array(
-            'title'     => $section[ 'title' ],
-            'priority'  => $section[ 'priority' ]
-        );
+        $settings = $section[ 'settings' ];
+        unset( $section[ 'settings' ] );
 
         if ( ! empty( $panel ) ) {
-            $section_args[ 'panel' ] = $panel;
+            $section[ 'panel' ] = $panel;
         } 
 
-        $wp_customize->add_section( $section_id, $section_args );
+        $wp_customize->add_section( $section_id, $section );
 
-        $this->add_section_settings( $section_id, $section[ 'settings' ] );
+        $this->add_section_settings( $section_id, $settings );
     }
 
 
@@ -395,6 +370,41 @@ class Reach_Customizer {
         );
 
         return apply_filters( 'reach_customizer_colour_section', $colour_settings );
+    }
+
+    /**
+     * Returns an array of social profiles settings. 
+     *
+     * @return  array[]
+     * @access  private
+     * @since   1.0.0
+     */
+    private function get_social_profiles_section() {
+        $priority = 60;
+
+        $social_settings = array(
+            'priority'      => $priority, 
+            'title'         => __( 'Social Profiles', 'reach' ),
+            'description'   => __( 'Enter the complete URL to your profile for each service below that you would like to share.', 'reach' ),
+            'settings'      => array()
+        );        
+
+        foreach ( reach_get_social_sites() as $setting_key => $label ) {
+            $social_settings[ 'settings' ][ $setting_key ] = array(
+                'setting'   => array(
+                    'transport' => 'postMessage' 
+                ),
+                'control'   => array(
+                    'type'      => 'text',
+                    'priority'  => $priority,
+                    'label'     => $label
+                )
+            );
+
+            $priority += 1;
+        }
+
+        return apply_filters( 'reach_customizer_social_section', $social_settings );
     }
 
     /**

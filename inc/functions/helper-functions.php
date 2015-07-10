@@ -103,20 +103,15 @@ function reach_get_social_sites() {
     $sites = apply_filters( 'sofa_social_sites', array() );
 
     $sites = array_merge( $sites, array(              
-        'bitbucket'     => __( 'Bitbucket', 'reach' ),                                               
-        'dribbble'      => __( 'Dribbble', 'reach' ), 
         'facebook'      => __( 'Facebook', 'reach' ),                
         'flickr'        => __( 'Flickr', 'reach' ), 
         'foursquare'    => __( 'Foursquare', 'reach' ), 
-        'github'        => __( 'Github', 'reach' ), 
         'google-plus'   => __( 'Google+', 'reach' ),                                     
-        'gittip'        => __( 'Gittip', 'reach' ),
         'instagram'     => __( 'Instagram', 'reach' ),
         'linkedin'      => __( 'Linkedin', 'reach'),
         'pinterest'     => __( 'Pinterest', 'reach' ), 
         'renren'        => __( 'Renren', 'reach' ), 
         'skype'         => __( 'Skype', 'reach' ), 
-        'trello'        => __( 'Trello', 'reach' ), 
         'tumblr'        => __( 'Tumblr', 'reach' ), 
         'twitter'       => __( 'Twitter', 'reach' ), 
         'vk'            => __( 'VK', 'reach' ), 
@@ -186,10 +181,10 @@ function reach_get_banner_title() {
     }
     /* Regular Page */
     elseif ( is_page() ) {
-        $title = get_the_title();
+        $title = apply_filters( 'reach_banner_title_page', get_the_title() );
     } 
     
-    return apply_filters( 'reach_banner_title', $title );   
+    return $title;   
 }
 
 /**
