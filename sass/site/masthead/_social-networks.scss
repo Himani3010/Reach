@@ -1,24 +1,30 @@
 .social {	
 	@include margin( 12, 0 );
-	@include padding-left( 36 );
+	@include padding-left( 36 );	
 	text-align: left;
 
 	li {
 		display: inline-block;
-		@include margin( 0, 12, 0, 0 );
-		@include font-size( 18 );
-		@include line-height( 24 );
+		@include margin( 0, 12, 0, 0 );			
 	}
 
-	a:hover {
-		text-decoration: none;
+	a {
+		@include color( $color__text-overlay );
+		&:hover {
+			text-decoration: none;
+		}
+	}	
+
+	i {
+		@include font-size( 18 );
+		@include line-height( 32 );
 	}
 
 	@include bp( 600 ) {
 	 	float: left;
 	}
 
-	@include bp( 1190 ) {
-		@include margin-left( 10 );
+	@include bp( 1400 ) {
+		padding-left: 0;
 	}
 }

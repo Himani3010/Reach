@@ -6,94 +6,40 @@
 	var
 
 	updateAccentColour = function(value) {
-		$('a:not(.button, .menu a, .social a), .menu-button, .block-title, .widget-title, .page-title, .post-title, .pledge-level.not-available .pledge-limit, .post-author i, .button.accent.button-alt, .hovering .on-hover').not('.featured-campaigns .block-title, .featured-campaign .campaign-summary h3 a').css('color', value);
-		$('.campaign-button, .active-campaign, .sticky, .button.accent').css('background-color', value);
-		$('.button.accent').css('boxShadow', '0 0 0 0.3rem ' + value);
-		$('#site-navigation .hovering > a, .button.accent.button-alt').css('border-color', value);
+		$("a:not(#site-footer a, .account-links a, .social a), .menu-button, .button-alt.accent, .button-secondary.accent, .button.button-alt.accent, .button.button-secondary.accent, .block-title, .site-title a, .post-title a, .entry-header .entry-title a, .bypostauthor .post-author i, body.author .author-activity-summary .number, body.author .author-activity-feed .activity-summary .display-name, body.author .author-activity-feed .activity-summary a, .widget.widget_charitable_edd_campaign_downloads .download-price, .widget.widget_charitable_donate_widget .charitable-submit-field .button, .campaign .campaign-stats li span, .campaigns-grid .campaign-stats li span, .charitable-donation-form .charitable-form-field .button, body.user-dashboard .charitable-submit-field .button.button-primary, .user-dashboard-menu li.current-menu-item a, .user-dashboard-menu li a, .charitable-fieldset .legend, .entry-header .entry-title, .user-post-actions a, body .edd-submit.button.gray, body .edd-submit.button.white, body .edd-submit.button.blue, body .edd-submit.button.red, body .edd-submit.button.orange, body .edd-submit.button.green, body .edd-submit.button.yellow, body .edd-submit.button.dark-gray, .widget.widget_pp_campaign_events .download-price").css("color", value);
+        $(".button-alt.accent, .button-secondary.accent, .button.button-alt.accent, .button.button-secondary.accent, .feature-block, .account-links .button.button-alt, .banner, .sticky, .widget.widget_charitable_donate_widget .charitable-submit-field .button, .widget.widget_charitable_donate_widget .charitable-submit-field .button:focus, .charitable-donation-form .charitable-form-field .button, .charitable-donation-form .charitable-form-field .button:focus, .charitable-donation-form .charitable-form-field .button:active, body.user-dashboard .charitable-submit-field .button.button-primary, body .edd-submit.button.gray:focus, body .edd-submit.button.gray:active, body .edd-submit.button.gray, body .edd-submit.button.white:focus, body .edd-submit.button.white:active, body .edd-submit.button.white, body .edd-submit.button.blue:focus, body .edd-submit.button.blue:active, body .edd-submit.button.blue, body .edd-submit.button.red:focus, body .edd-submit.button.red:active, body .edd-submit.button.red, body .edd-submit.button.orange:focus, body .edd-submit.button.orange:active, body .edd-submit.button.orange, body .edd-submit.button.green:focus, body .edd-submit.button.green:active, body .edd-submit.button.green, body .edd-submit.button.yellow:focus, body .edd-submit.button.yellow:active, body .edd-submit.button.yellow, body .edd-submit.button.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .edd-submit.button.dark-gray, #edd_checkout_wrap #edd-purchase-button").css("background-color", value);
+        $(".toggled .menu-site > ul, .button-alt.accent, .button-secondary.accent, .button.button-alt.accent, .button.button-secondary.accent, .account-links .button.button-alt, .widget.widget_charitable_donate_widget .charitable-submit-field .button, .charitable-donation-form .charitable-form-field .button, body.user-dashboard .charitable-submit-field .button.button-primary, body .edd-submit.button.gray, body .edd-submit.button.white, body .edd-submit.button.blue, body .edd-submit.button.red, body .edd-submit.button.orange, body .edd-submit.button.green, body .edd-submit.button.yellow, body .edd-submit.button.dark-gray, body .edd-submit.button.gray:focus, body .edd-submit.button.gray:active, body .edd-submit.button.gray, body .edd-submit.button.white:focus, body .edd-submit.button.white:active, body .edd-submit.button.white, body .edd-submit.button.blue:focus, body .edd-submit.button.blue:active, body .edd-submit.button.blue, body .edd-submit.button.red:focus, body .edd-submit.button.red:active, body .edd-submit.button.red, body .edd-submit.button.orange:focus, body .edd-submit.button.orange:active, body .edd-submit.button.orange, body .edd-submit.button.green:focus, body .edd-submit.button.green:active, body .edd-submit.button.green, body .edd-submit.button.yellow:focus, body .edd-submit.button.yellow:active, body .edd-submit.button.yellow, body .edd-submit.button.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .edd-submit.button.dark-gray").css("border-color", value);
+        $("toggled .menu-site").css("border-top-color", value);
 	},
 
-	updateAccentHover = function(value) {
-		$('.sticky .post-title, .barometer .filled, .button.accent, .active-campaign .campaign-image').css('border-color', value);
-		$('.active-campaign .campaign-image').css('boxShadow', '0 0 3px 1px ' + value);
-	},
-
-	updateAccentText = function(value) {
-		$('.campaign-button, .active-campaign, .sticky, .button.accent').css('color', value);
+	updateBackgroundColour = function(value) {
+		$("body, #custom-donation-amount-field.charitable-custom-donation-field-alone").css("background-color", value);
+        $(".donation-amounts .donation-amount").css("border-color", value);
 	}, 
 
-	updateAccentTextSecondary = function(value) {
-		$('.featured-campaigns .campaign-summary h3 a, .featured-campaigns .button.button-alt').css('color', value);
-		$('.featured-campaigns .button.button-alt').css('border-color', value);
+	updateTextColour = function(value) {
+		$("body, button,input[type='button'],input[type='reset'],input[type='submit'], .menu-site a, .button, .button-alt,.button-secondary,.button.button-alt,.button.button-secondary, .modal .block-title, .meta a, #submit, .widget.widget_campaign_creator_widget .creator-profile-link a, .campaigns-grid .campaign-description, .campaigns-grid .campaign-stats, .charitable-donation-form .charitable-form-field .button, .donation-amounts .donation-amount, #custom-donation-amount-field.charitable-custom-donation-field-alone input, body.user-dashboard .charitable-submit-field .button, .charitable-form-field-editor .mce-btn button, .charitable-repeatable-form-field-table .add-row.button, .share-widget .modal,.share-widget .modal .block-title, .user-post-actions a, div.printfriendly a,div.printfriendly a:link, div.printfriendly a:visited, body.events-single .tribe-events-tickets .tickets_price, body.events-single .tribe-events-tickets .tickets_name, #tribe-events .tribe-events-button").css("color", value);
+        $("button,input[type='button'],input[type='reset'],input[type='submit'], .button, .button-alt,.button-secondary,.button.button-alt,.button.button-secondary, .sticky .entry .more-link, .sticky .entry .more-link:focus, .sticky .entry .more-link:active, #submit, .widget.widget_campaign_creator_widget .creator-profile-link a, .charitable-donation-form .charitable-form-field .button, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount, body.user-dashboard .charitable-submit-field .button, #tribe-events .tribe-events-button").css("background-color", value);
+        $("button,input[type='button'],input[type='reset'],input[type='submit'], button,input[type='button'],input[type='reset'],input[type='submit'], .button, .button, .button-alt,.button-secondary,.button.button-alt,.button.button-secondary, .sticky .entry .more-link, .sticky .entry .more-link:focus, .sticky .entry .more-link:active, #submit, .widget.widget_campaign_creator_widget .creator-profile-link a, .widget.widget_campaign_creator_widget .creator-profile-link a, .charitable-donation-form .charitable-form-field .button, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount, body.user-dashboard .charitable-submit-field .button, .charitable-repeatable-form-field-table .add-row.button, #tribe-events .tribe-events-button").css("border-color", value);        
+	},
+
+	updateHeaderTextColour = function(value) {
+		$(".social a, .account-links a, .account-links .button.button-alt").css("color", value);
+	},
+
+	updateFooterTextColour = function(value) {
+		$("#site-footer, #site-footer a").css("color", value);
 	},
 
 	updateBodyBackground = function(value) {
-		$('body, .audiojs .loaded').css('background-color', value);
-		$('.audiojs .play-pause').css('border-right-color', value);
-	}, 
-
-	updateBodyText = function(value) {
-		$('body, .with-icon:before, .icon, .widget_search #searchsubmit::before, .button.button-alt, .menu a, .block-title.with-icon i, .meta a, .format-status .post-title, .countdown_holding span').not('.account-links a, .featured-campaigns .campaign-summary h3 a, .featured-campaigns .button.button-alt').css('color', value);
-		$('.footer-widget .widget-title').css('text-shadow', '0 1px 0 ' + value);
-		$('.button.button-alt, .shadow-wrapper::before, .shadow-wrapper::after').not('.account-links a, .featured-campaigns .button.button-alt').css('border-color', value);
-		$('input[type=submit], input[type=reset], button, .button, .audiojs').not('.account-links a, .featured-campaigns .button.button-alt').css('background-color', value);
-		$('input[type=submit], input[type=reset], button, .button').not('.account-links a, .featured-campaigns .button.button-alt').css('boxShadow', '0 0 0 3px ' + value);
-	},
-
-	updateButtonText = function(value) {
-		$('input[type=submit], input[type=reset], button, .button, .active-campaign .campaign-button, .menu-button, .sticky.block, .sticky.block a').css('color', value);
-		$('.campaign-support').css('boxShadow', '0 0 0 3px' + value);
-		$('.featured-campaign .button.button-alt').css('border-color', value);
-	},
-	
-	updateWrapperBackground = function (value) {
-		$('#main, #header, .menu, .even td, .widget td, .widget input[type=text], .widget input[type=password], .widget input[type=email], .widget input[type=number]').css('background-color', value);
-	},
-
-	updatePostsBackground = function (value) {
-		$('.entry-block, .content-block, .reveal-modal.multi-block .content-block, .widget th, .widget tfoot td, .format-status .meta, .format-quote .entry blockquote, .audiojs .progress, .comments-section, .campaign-pledge-levels.accordion .pledge-level').css('background-color', value);
-		$('.entry-block').css('boxShadow', '0 0 1px ' + value);
-		$('.sticky.block').css('border-color', value);
-	},
-
-	updateWidgetBackground = function (value) {
-		$('input[type=text], input[type=password], input[type=number], input[type=email], textarea, .featured-image, th, .entry blockquote, hr, pre, .meta, .audiojs .scrubber, .widget, .sidebar-block, .accordion h3').css('background-color', value);
-	},
-
-	updatePrimaryBorder = function (value) {
-		$('#header, .widget_search #s, .menu li, .block, .page-title, .block-title, .post-title, .meta, .meta .author, .meta .comment-count, .meta .tags, .comment, .pingback, .widget, .campaign-pledge-levels.accordion h3, .campaign-pledge-levels.accordion .pledge-level, .multi-block .content-block:nth-of-type(1n+2), #edd_checkout_form_wrap legend, table, td, th').css('border-color', value);
-	},
-
-	updateSecondaryBorder = function (value) {
-		$('th').css('border-right-color', value);
-		$('#site-navigation ul').css('border-top-color', value);
-		$('.widget-title').css('border-color', value);
-	},
-
-	updateMetaColour = function (value) {
-		$('.meta, .comment-meta, .pledge-limit').css('color', value);
-	},
-
-	updateFooterText = function (value) {
-		$('#site-footer, #site-footer a').css('color', value);
-	},
-
-	updateFooterTitles = function (value) {
-		$('.footer-widget .widget-title').css('color', value);
-	}, 
-
-	updateHeaderButtons = function (value) {
-		$('.social a, .account-links .button.button-alt, .account-links .button.button-alt::before').css('color', value);
-	}, 
-
-	updateBodyTexture = function(value) {
 		$('body').css('background-image', 'url(' + value + ')');
 	}, 
 
-	updateCampaignTexture = function(value) {
-		$('.active-campaign').css('background-image', 'url(' + value + ')');
+	updateCampaignFeatureBackground = function(value) {
+		$('.feature-block').css('background-image', 'url(' + value + ')');
 	}, 
 
-	updateBannerTexture = function(value) {
+	updateBannerBackground = function(value) {
 		$('.banner').css('background-image', 'url(' + value + ')');
 	}, 
 
@@ -124,7 +70,7 @@
 	// Update the site description in real time...
 	wp.customize( 'blogdescription', function( value ) {
 		value.bind( function( newval ) {
-			$( '.tagline' ).html( newval );
+			$( '.site-tagline' ).html( newval );
 		} );
 	} );
 
@@ -164,123 +110,64 @@
 	// Hide the site description
 	wp.customize( 'hide_site_tagline', function( value ) {
 		value.bind( function( newval ) {
-			$( '.tagline' ).toggleClass('hidden', newval);
+			$( '.site-tagline' ).toggleClass('hidden', newval);
 		} );
 	} );
+
+	// Update the footer tagline
+	wp.customize( 'footer_tagline', function( value ) {
+		value.bind( function( newval ) {
+			console.log( newval );
+			console.log( $( '.footer-notice' ) );
+			$( '.footer-notice' ).html( newval );
+		} );
+	} )
 
 	//  Update colours
 	wp.customize( 'accent_colour', function( value ) {
 		value.bind( function( newval ) {			
 			updateAccentColour( newval );			
 		} );
-	} );
-	wp.customize( 'accent_hover', function( value ) {
+	} );	
+	wp.customize( 'background_colour', function( value ) {
 		value.bind( function( newval ) {
-			updateAccentHover( newval );
-		} );
-	} );
-	wp.customize( 'accent_text', function( value ) {
-		value.bind( function( newval ) {
-			updateAccentText( newval );
-		} );  
-	} );
-	wp.customize( 'accent_text_secondary', function( value ) {
-		value.bind( function( newval ) {
-			updateAccentTextSecondary( newval );
+			updateBackgroundColour( newval );
 		});
-	});
+	} );
+	wp.customize( 'text_colour', function( value ) {
+		value.bind( function( newval ) {
+			updateTextColour( newval );
+		});
+	} );
+	wp.customize( 'header_text_colour', function( value ) {
+		value.bind( function( newval ) {
+			updateHeaderTextColour( newval );
+		});
+	} );
+	wp.customize( 'footer_text_colour', function( value ) {
+		value.bind( function( newval ) {
+			updateFooterTextColour( newval );
+		});
+	} );	
+
+	// Textures
 	wp.customize( 'body_background', function( value ) {
 		value.bind( function( newval ) {
 			updateBodyBackground( newval );
 		});
 	} );
-	wp.customize( 'body_text', function( value ) {
+	wp.customize( 'campaign_feature_background', function( value ) {
 		value.bind( function( newval ) {
-			updateBodyText( newval );
+			updateCampaignFeatureBackground( newval );
 		});
 	} );
-	wp.customize( 'button_text', function( value ) {
+	wp.customize( 'blog_banner_background', function( value ) {
 		value.bind( function( newval ) {
-			updateButtonText( newval );
-		});
-	} );
-	wp.customize( 'wrapper_background', function( value ) {
-		value.bind( function( newval ) {
-			updateWrapperBackground( newval );
-		});
-	} );
-	wp.customize( 'posts_background', function( value ) {
-		value.bind( function( newval ) {
-			updatePostsBackground( newval );
-		});
-	} );
-	wp.customize( 'widget_background', function( value ) {
-		value.bind( function( newval ) {
-			updateWidgetBackground( newval );
-		});
-	} );
-	wp.customize( 'primary_border', function( value ) {
-		value.bind( function( newval ) {
-			updatePrimaryBorder( newval );
-		});
-	} );
-	wp.customize( 'secondary_border', function( value ) {
-		value.bind( function( newval ) {
-			updateSecondaryBorder( newval );
-		});
-	} );
-	wp.customize( 'meta_colour', function( value ) {
-		value.bind( function( newval ) {
-			updateMetaColour( newval );
-		});
-	} );
-	wp.customize( 'footer_text', function( value ) {
-		value.bind( function( newval ) {
-			updateFooterText( newval );
-		});
-	} );
-	wp.customize( 'footer_titles', function( value ) {
-		value.bind( function( newval ) {
-			updateFooterTitles( newval );
-		});
-	} );
-	wp.customize( 'header_buttons', function( value ) {
-		value.bind( function( newval ) {
-			updateHeaderButtons( newval );
+			updateBannerBackground( newval );
 		});
 	} );
 
-	// Textures
-	wp.customize( 'body_texture_custom', function( value ) {
-		value.bind( function( newval ) {
-			updateBodyTexture( newval );
-		});
-	} );
-	wp.customize( 'campaign_texture_custom', function( value ) {
-		value.bind( function( newval ) {
-			updateCampaignTexture( newval );
-		});
-	} );
-	wp.customize( 'blog_banner_texture_custom', function( value ) {
-		value.bind( function( newval ) {
-			updateBannerTexture( newval );
-		});
-	} );
-
-	//
 	// Social networks
-	//
-
-	wp.customize( 'bitbucket', function( value ) {
-		value.bind( function( newval ) {
-			updateSocial( newval, 'bitbucket' );
-		});
-	});
-	wp.customize( 'dribbble', function( value ) {
-		value.bind( function( newval ) {
-			updateSocial( newval, 'dribbble' );
-		});
-	});
 	wp.customize( 'facebook', function( value ) {
 		value.bind( function( newval ) {
 			updateSocial( newval, 'facebook' );
@@ -296,19 +183,9 @@
 			updateSocial( newval, 'foursquare' );
 		});
 	});
-	wp.customize( 'github', function( value ) {
-		value.bind( function( newval ) {
-			updateSocial( newval, 'github' );
-		});
-	});
 	wp.customize( 'google-plus', function( value ) {
 		value.bind( function( newval ) {
 			updateSocial( newval, 'google-plus' );
-		});
-	});
-	wp.customize( 'gittip', function( value ) {
-		value.bind( function( newval ) {
-			updateSocial( newval, 'gittip' );
 		});
 	});
 	wp.customize( 'instagram', function( value ) {
@@ -334,16 +211,6 @@
 	wp.customize( 'skype', function( value ) {
 		value.bind( function( newval ) {
 			updateSocial( newval, 'skype' );
-		});
-	});
-	wp.customize( 'stackexchange', function( value ) {
-		value.bind( function( newval ) {
-			updateSocial( newval, 'stackexchange' );
-		});
-	});
-	wp.customize( 'trello', function( value ) {
-		value.bind( function( newval ) {
-			updateSocial( newval, 'trello' );
 		});
 	});
 	wp.customize( 'tumblr', function( value ) {

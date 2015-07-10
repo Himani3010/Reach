@@ -42,7 +42,7 @@ class Reach_Customizer {
         add_action('customize_save_after', array( $this, 'customize_save_after' ) );
         add_action('customize_register', array( $this, 'customize_register' ) );     
         add_action('customize_controls_print_scripts', array( $this, 'customize_controls_print_scripts' ), 100 );
-        add_action('wp_head', array( $this, 'preview_styles' ) );
+        add_action('customize_preview_init', array( $this, 'load_theme_customizer_script' ) );
     }
 
     /**
@@ -71,38 +71,15 @@ class Reach_Customizer {
         $wp_customize->get_control( 'blogdescription' )->priority = 10;
         $this->add_section_settings( 'title_tagline', $this->get_title_tagline_settings() );        
         
-        /* Logo Section */
         $this->add_section( 'logo', $this->get_logo_section() );
-
-        /* Layout Section */
-        $this->add_section( 'layout', $this->get_layout_section() );
-        
-        /* Colour Section */
-        $this->add_section( 'colour', $this->get_colour_section() );        
-
-        /* Social Profiles Section */
+        $this->add_section( 'layout', $this->get_layout_section() );        
+        $this->add_section( 'colour', $this->get_colour_section() );
+        $this->add_section( 'header', $this->get_header_section() );
+        $this->add_section( 'footer', $this->get_footer_section() );
         $this->add_section( 'social', $this->get_social_profiles_section() );
 
         /* Background Images Panel */
-        $this->add_panel( 'background_images', $this->get_background_images_panel() );                
-
-        /* Footer */
-        // $wp_customize->add_section( 'footer', array( 
-        //     'title'     => __( 'Footer', 'reach' ), 
-        //     'priority'  => 60 
-        // ) );
-
-        // $wp_customize->add_setting( 'footer_tagline', array( 
-        //     'transport' => 'postMessage' 
-        // ) );
-
-        // $wp_customize->add_control( 'footer_tagline', array( 
-        //     'setting'   => 'footer_tagline', 
-        //     'label'     => __( 'Footer Text', 'reach' ), 
-        //     'type'      => 'text', 
-        //     'section'   => 'footer', 
-        //     'priority'  => 62
-        // ));
+        $this->add_panel( 'background_images', $this->get_background_images_panel() );
     }        
 
     /**
@@ -373,6 +350,78 @@ class Reach_Customizer {
     }
 
     /**
+     * Returns the header section settings. 
+     *
+     * @return  array[]
+     * @access  private
+     * @since   1.0.0
+     */
+    private function get_header_section() {
+        $header_settings = array(
+            'priority'  => 50,
+            'title'     => __( 'Header', 'reach' ),
+            'settings'  => array(
+                'header_text_colour' => array(
+                    'setting'   => array(
+                        'transport'         => 'postMessage',
+                        'default'           => '#ffffff',
+                        'sanitize_callback' => 'sanitize_hex_color'
+                    ), 
+                    'control'   => array(
+                        'control_type'      => 'WP_Customize_Color_Control',
+                        'priority'          => 51,
+                        'label'             => __( 'Text Colour', 'reach' ),
+                        'description'       => __( 'Used for social profile icons & button text', 'reach' )
+                    )
+                )                
+            )
+        );
+
+        return apply_filters( 'reach_customizer_header_section', $header_settings );
+    }
+
+    /**
+     * Returns the footer section settings. 
+     *
+     * @return  array[]
+     * @access  private
+     * @since   1.0.0
+     */
+    private function get_footer_section() {
+        $footer_settings = array(
+            'priority'  => 50,
+            'title'     => __( 'Footer', 'reach' ),
+            'settings'  => array(
+                'footer_text_colour' => array(
+                    'setting'   => array(
+                        'transport'         => 'postMessage',
+                        'default'           => '#ffffff',
+                        'sanitize_callback' => 'sanitize_hex_color'
+                    ), 
+                    'control'   => array(
+                        'control_type'      => 'WP_Customize_Color_Control',
+                        'priority'          => 51,
+                        'label'             => __( 'Text Colour', 'reach' )
+                    )
+                ),
+                'footer_tagline' => array(
+                    'setting'   => array(
+                        'transport' => 'postMessage', 
+                        'default'   => sprintf( '<a href="%s">%s</a>', esc_url( 'http://wordpress.org/' ), __( 'Proudly powered by WordPress', 'reach' ) )
+                    ), 
+                    'control'   => array(
+                        'label'     => __( 'Tagline', 'reach' ), 
+                        'type'      => 'text', 
+                        'priority'  => 52,
+                    )
+                )                
+            )
+        );
+
+        return apply_filters( 'reach_customizer_footer_section', $footer_settings );
+    }
+
+    /**
      * Returns an array of social profiles settings. 
      *
      * @return  array[]
@@ -483,77 +532,71 @@ class Reach_Customizer {
      public function customize_controls_print_scripts() {
         ?>
         <script>
-        ( function($){
+        // ( function($){
 
-            // Variables
-            var $accent_colour, $accent_hover, $accent_text, $accent_text_secondary, $body_background, $body_text, $button_text, 
-            $wrapper_background, $posts_background, $widget_background, $primary_border, $secondary_border, 
-            $meta_colour, $footer_text, $footer_titles, $header_buttons, $header_buttons_hover, $palette,
+        //     // Variables
+        //     var $accent_colour, $accent_hover, $accent_text, $accent_text_secondary, $body_background, $body_text, $button_text, 
+        //     $wrapper_background, $posts_background, $widget_background, $primary_border, $secondary_border, 
+        //     $meta_colour, $footer_text, $footer_titles, $header_buttons, $header_buttons_hover, $palette,
 
-            // Swaps a palette
-            switchPalette = function() {                
-                var colours = JSON.parse( $palette.find('input:checked').val() );
+        //     // Swaps a palette
+        //     switchPalette = function() {                
+        //         var colours = JSON.parse( $palette.find('input:checked').val() );
                 
-                // General link styling
-                $accent_colour.wpColorPicker('color', colours.accent_colour);
-                $accent_hover.wpColorPicker('color', colours.accent_hover);
-                $accent_text.wpColorPicker('color', colours.accent_text);
-                $accent_text_secondary.wpColorPicker('color', colours.accent_text_secondary);
-                $body_background.wpColorPicker('color', colours.body_background);
-                $body_text.wpColorPicker('color', colours.body_text);
-                $button_text.wpColorPicker('color', colours.button_text);
-                $wrapper_background.wpColorPicker('color', colours.wrapper_background);
-                $posts_background.wpColorPicker('color', colours.posts_background);
-                $widget_background.wpColorPicker('color', colours.widget_background);
-                $primary_border.wpColorPicker('color', colours.primary_border);
-                $secondary_border.wpColorPicker('color', colours.secondary_border);
-                $meta_colour.wpColorPicker('color', colours.meta_colour);
-                $footer_text.wpColorPicker('color', colours.footer_text);
-                $footer_titles.wpColorPicker('color', colours.footer_titles);    
-                $header_buttons.wpColorPicker('color', colours.header_buttons);    
-                $header_buttons_hover.wpColorPicker('color', colours.header_buttons_hover);    
-            };
+        //         // General link styling
+        //         $accent_colour.wpColorPicker('color', colours.accent_colour);
+        //         $accent_hover.wpColorPicker('color', colours.accent_hover);
+        //         $accent_text.wpColorPicker('color', colours.accent_text);
+        //         $accent_text_secondary.wpColorPicker('color', colours.accent_text_secondary);
+        //         $body_background.wpColorPicker('color', colours.body_background);
+        //         $body_text.wpColorPicker('color', colours.body_text);
+        //         $button_text.wpColorPicker('color', colours.button_text);
+        //         $wrapper_background.wpColorPicker('color', colours.wrapper_background);
+        //         $posts_background.wpColorPicker('color', colours.posts_background);
+        //         $widget_background.wpColorPicker('color', colours.widget_background);
+        //         $primary_border.wpColorPicker('color', colours.primary_border);
+        //         $secondary_border.wpColorPicker('color', colours.secondary_border);
+        //         $meta_colour.wpColorPicker('color', colours.meta_colour);
+        //         $footer_text.wpColorPicker('color', colours.footer_text);
+        //         $footer_titles.wpColorPicker('color', colours.footer_titles);    
+        //         $header_buttons.wpColorPicker('color', colours.header_buttons);    
+        //         $header_buttons_hover.wpColorPicker('color', colours.header_buttons_hover);    
+        //     };
 
-            $(window).load(function() {             
+        //     $(window).load(function() {             
 
-                $accent_colour = $('.color-picker-hex', '#customize-control-accent_colour');
-                $accent_hover = $('.color-picker-hex', '#customize-control-accent_hover');
-                $accent_text = $('.color-picker-hex', '#customize-control-accent_text');
-                $accent_text_secondary = $('.color-picker-hex', '#customize-control-accent_text_secondary');
-                $body_background = $('.color-picker-hex', '#customize-control-body_background');
-                $body_text = $('.color-picker-hex', '#customize-control-body_text');
-                $button_text = $('.color-picker-hex', '#customize-control-button_text');
-                $wrapper_background = $('.color-picker-hex', '#customize-control-wrapper_background');
-                $posts_background = $('.color-picker-hex', '#customize-control-posts_background');
-                $widget_background = $('.color-picker-hex', '#customize-control-widget_background');
-                $primary_border = $('.color-picker-hex', '#customize-control-primary_border');
-                $secondary_border = $('.color-picker-hex', '#customize-control-secondary_border');
-                $meta_colour = $('.color-picker-hex', '#customize-control-meta_colour');
-                $footer_text = $('.color-picker-hex', '#customize-control-footer_text');
-                $footer_titles = $('.color-picker-hex', '#customize-control-footer_titles');
-                $header_buttons = $('.color-picker-hex', '#customize-control-header_buttons');
-                $header_buttons_hover = $('.color-picker-hex', '#customize-control-header_buttons_hover');
-            
-                $palette = $('#customize-control-palette'); 
-
-                // When one of the preset palettes is selected, change the relevant colours
-                $palette.on('change', function() {
-                    switchPalette();
-                });
-            });
-        })(jQuery);        
+        //         $accent_colour = $('.color-picker-hex', '#customize-control-accent_colour');
+        //         $accent_hover = $('.color-picker-hex', '#customize-control-accent_hover');
+        //         $accent_text = $('.color-picker-hex', '#customize-control-accent_text');
+        //         $accent_text_secondary = $('.color-picker-hex', '#customize-control-accent_text_secondary');
+        //         $body_background = $('.color-picker-hex', '#customize-control-body_background');
+        //         $body_text = $('.color-picker-hex', '#customize-control-body_text');
+        //         $button_text = $('.color-picker-hex', '#customize-control-button_text');
+        //         $wrapper_background = $('.color-picker-hex', '#customize-control-wrapper_background');
+        //         $posts_background = $('.color-picker-hex', '#customize-control-posts_background');
+        //         $widget_background = $('.color-picker-hex', '#customize-control-widget_background');
+        //         $primary_border = $('.color-picker-hex', '#customize-control-primary_border');
+        //         $secondary_border = $('.color-picker-hex', '#customize-control-secondary_border');
+        //         $meta_colour = $('.color-picker-hex', '#customize-control-meta_colour');
+        //         $footer_text = $('.color-picker-hex', '#customize-control-footer_text');
+        //         $footer_titles = $('.color-picker-hex', '#customize-control-footer_titles');
+        //         $header_buttons = $('.color-picker-hex', '#customize-control-header_buttons');
+        //         $header_buttons_hover = $('.color-picker-hex', '#customize-control-header_buttons_hover');
+        //     });
+        // })(jQuery);        
         </script>
         <?php
     }
 
-    public function preview_styles() {
-        ?>
-        <style>
-        .site-navigation .menu-site > li, 
-        .menu-site li.hovering { 
-            height: 1em; 
-        }
-        </style>
-        <?php
+    /**
+     * Load the theme-customizer.js file. 
+     *
+     * @return  void
+     * @access  public
+     * @since   1.0.0
+     */
+    public function load_theme_customizer_script() {
+        wp_register_script( 'theme-customizer', get_template_directory_uri().'/js/admin/theme-customizer.js', array( 'jquery', 'customize-preview' ), '1.0.0-20150710i', true );
+        wp_enqueue_script( 'theme-customizer' );        
     }
 }

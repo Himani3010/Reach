@@ -28,7 +28,7 @@ class Reach_Theme {
 	/**
 	 * The theme version. 
 	 */
-	const VERSION = '1.0.0-20150709';
+	const VERSION = '1.0.0-20150710';
 
 	/**
 	 * Database version number. 
@@ -609,7 +609,8 @@ class Reach_Theme {
      * @since   1.0.0
      */
     public function body_classes( $classes ) {
-        $classes[] = $this->get_theme_setting( 'layout', 'layout-wide' );
+        $layout = $this->get_theme_setting( 'layout', true );
+        $classes[] = $layout ? $layout : 'layout-wide';
         return $classes;
     }
 

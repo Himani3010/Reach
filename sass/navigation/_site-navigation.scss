@@ -8,7 +8,7 @@
 	.menu-button {
 		position: absolute;
 		z-index: 600;
-		@include right( 36 );
+		right: 0;
 		@include top( 36 );
 		@include line-height( 38 );
 
@@ -49,7 +49,6 @@
 			height: auto;
 			width: auto;
 			margin: 0;
-			@include padding-right( 36 );
 			border-top: 0;
 			overflow: visible;
 
