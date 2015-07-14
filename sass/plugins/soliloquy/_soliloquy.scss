@@ -1,0 +1,15 @@
+.page-template-page-template-home-slider {
+    .feature-block {
+        .soliloquy-container {
+            z-index: 1;
+            margin: 0 auto;
+            border: {
+                @include width( 5 );
+                style: solid;
+                color: rgba( 255, 255, 255, 0.3 );
+            }
+            border-radius: 0.4rem;
+            overflow: hidden;
+        }
+    }    
+}

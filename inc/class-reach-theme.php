@@ -28,7 +28,7 @@ class Reach_Theme {
 	/**
 	 * The theme version. 
 	 */
-	const VERSION = '1.0.0-20150710';
+	const VERSION = '1.0.0-20150714';
 
 	/**
 	 * Database version number. 
@@ -306,8 +306,7 @@ class Reach_Theme {
 		 * Core theme classes hooked in on the `reach_theme_start` hook. 
 		 */
 		add_action( 'reach_theme_start',		array( 'Reach_Customizer_Styles', 'start' ) );
-        // add_action('crafted_theme_start', array('Crafted_Customizer_Styles', 'crafted_theme_start'));        
-
+        
 		/**
 		 * Methods within this class that are hooked into core WordPress action hooks. 
 		 */
@@ -483,7 +482,7 @@ class Reach_Theme {
         ) );
 
         if ( ! wp_script_is( 'lean-modal', 'registered' ) ) {
-            wp_register_script( 'lean-modal', $theme_dir . '/js/vendors/leanmodal/jquery.leanModal.' . $ext, array( 'jquery' ), $this->get_theme_version(), true);
+            wp_register_script( 'lean-modal', $theme_dir . '/js/vendors/leanmodal/jquery.leanModal' . $ext, array( 'jquery' ), $this->get_theme_version(), true);
         }
 
         wp_register_script( 'audio-js', $theme_dir . '/js/vendors/audiojs/audio.min.js', array(), $this->get_theme_version(), true);
@@ -682,6 +681,7 @@ class Reach_Theme {
     public function add_valid_media_grabber_shortcodes( $shortcodes ) {
         $shortcodes[] = 'layerslider';
         $shortcodes[] = 'rev_slider';
+        $shortcodes[] = 'soliloquy';
         return $shortcodes;
     }
 }

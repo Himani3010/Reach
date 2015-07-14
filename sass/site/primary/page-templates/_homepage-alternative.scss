@@ -22,14 +22,11 @@
 	.page-title {
 		@include padding( 24, 0, 0 );
 		margin-bottom: 0;
-		// border-bottom: {
-		// 	@include width( 3 );
-		// 	style: solid;
-		// 	color: rgba(255, 255, 255, 0.3);
-		// } 
 	}
 
 	.entry {
+		position: relative;
+		z-index: 1;
 		@include font-size( 18 );
 		@include line-height( 28 );
 

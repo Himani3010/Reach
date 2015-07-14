@@ -2158,6 +2158,8 @@ a {
   padding: 2.4rem 0rem 0rem;
   margin-bottom: 0; }
 .page-template-page-template-home-slider .entry {
+  position: relative;
+  z-index: 1;
   font-size: 18px;
   font-size: 1.8rem;
   line-height: 28px;
@@ -4113,7 +4115,10 @@ body.user-dashboard .charitable-submit-field {
     margin-left: 2%; }
 
 .charitable-recipient-type-options-3 .charitable-recipient-type {
-  width: 33%; }
+  width: 32%;
+  margin-left: 2%; }
+  .charitable-recipient-type-options-3 .charitable-recipient-type:nth-child(3n+1) {
+    margin-left: 0; }
 
 .charitable-campaign-recipient-search {
   float: left;
@@ -5103,5 +5108,18 @@ body.tribe-mobile #main {
       border-bottom: 0;
       margin-bottom: 0;
       padding-bottom: 0; }
+
+/*--------------------------------------------------------------
+18.5 Soliloquy
+--------------------------------------------------------------*/
+.page-template-page-template-home-slider .feature-block .soliloquy-container {
+  z-index: 1;
+  margin: 0 auto;
+  border-width: 5px;
+  border-width: 0.5rem;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0.4rem;
+  overflow: hidden; }
 
 /*# sourceMappingURL=main.css.map */

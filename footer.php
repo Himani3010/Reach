@@ -28,8 +28,8 @@
 					?>
 					<p class="footer-notice aligncenter">
 						<?php 
-						if ( reach_get_theme()->get_theme_setting( 'footer_notice' ) ) : 
-							echo reach_get_theme()->get_theme_setting( 'footer_notice' );
+						if ( reach_get_theme()->get_theme_setting( 'footer_tagline' ) ) : 
+							echo reach_get_theme()->get_theme_setting( 'footer_tagline' );
 						else: 
 						?>
 							<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'reach' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'reach' ), 'WordPress' ) ?></a>

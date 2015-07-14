@@ -335,7 +335,12 @@
 }
 
 .charitable-recipient-type-options-3 .charitable-recipient-type {
-    width: 33%;
+    width: 32%;
+    margin-left: 2%;
+
+    &:nth-child(3n+1) {
+        margin-left: 0;
+    }
 }
 
 .charitable-campaign-recipient-search {
