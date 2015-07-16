@@ -610,6 +610,11 @@ class Reach_Theme {
     public function body_classes( $classes ) {
         $layout = $this->get_theme_setting( 'layout', true );
         $classes[] = $layout ? $layout : 'layout-wide';
+
+        if ( is_page_template( 'page-template-user-dashboard.php' ) ) {
+            $classes[] = 'user-dashboard';
+        } 
+
         return $classes;
     }
 

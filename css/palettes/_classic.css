@@ -2981,6 +2981,8 @@ embed {
   padding: 0;
   border: none;
   background: transparent !important; }
+  .footer-widget .title-wrapper {
+    text-align: left; }
   .footer-widget .widget-title {
     float: left;
     border: none;
