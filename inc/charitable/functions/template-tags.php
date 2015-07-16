@@ -53,3 +53,35 @@ if ( ! function_exists( 'reach_campaign_ended_text' ) ) :
     }
 
 endif;
+
+if ( ! function_exists( 'reach_template_campaign_loop_stats' ) ) : 
+
+    /**
+     * Display the campaign stats inside the campaign.
+     *
+     * @param   Charitable_Campaign $campaign
+     * @return  void
+     * @since   1.0.0
+     */
+    function reach_template_campaign_loop_stats( Charitable_Campaign $campaign ) {
+        charitable_template( 'campaign-loop/stats.php', array( 'campaign' => $campaign ) );
+    }
+
+endif;
+
+if ( ! function_exists( 'reach_template_campaign_loop_creator' ) ) : 
+
+    /**
+     * Display the campaign stats inside the campaign.
+     *
+     * @param   Charitable_Campaign $campaign
+     * @return  void
+     * @since   1.0.0
+     */
+    function reach_template_campaign_loop_creator( Charitable_Campaign $campaign ) {
+        charitable_template( 'campaign-loop/creator.php', array( 'campaign' => $campaign ) );
+    }
+
+endif;
+
+

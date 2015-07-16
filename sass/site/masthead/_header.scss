@@ -1,8 +1,13 @@
 #header {
 	position: relative;		
 	z-index: 50;
-	@include padding( 24, 36, 0, 36 );	
-	@include background-color( $color__background-wrapper );	
+	@include padding( 24, 24, 0, 24 );	
+	@include background-color( $color__background-wrapper );
+
+	@include bp( 800 ) {
+		@include padding-left( 36 );
+		@include padding-right( 36 );
+	}
 }
 
 .site-identity {
@@ -29,6 +34,11 @@
 
 	a {
 		@include color( $color__accent );
+
+		&:hover {
+			text-decoration: none;
+			opacity: 0.9;
+		}
 	}
 }
 

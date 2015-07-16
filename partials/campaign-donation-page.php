@@ -13,7 +13,7 @@ get_header( 'stripped' );
 
 			$campaign = charitable_get_current_campaign();
 						
-			get_template_part( 'banner' ); ?>
+			get_template_part( 'partials/banner' ); ?>
 
 			<main class="site-main content-area" role="main">
 				

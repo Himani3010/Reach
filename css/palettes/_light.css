@@ -88,8 +88,8 @@ input[type="submit"], .button, .button-alt:hover,
 .button.button-secondary:hover, .button-alt.accent:hover,
 .button-secondary.accent:hover,
 .button.button-alt.accent:hover,
-.button.button-secondary.accent:hover, .feature-block, .account-links a,
-.account-links a:before, .account-links .button.button-alt, .banner, .sticky, .sticky a, #submit:hover, #site-footer, #site-footer a, .campaign-image span, .widget.widget_charitable_donate_widget .charitable-submit-field .button:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button:focus, .widget.widget_campaign_creator_widget .creator-profile-link a, .charitable-donation-form .charitable-form-field .button:hover, .charitable-donation-form .charitable-form-field .button:focus, .charitable-donation-form .charitable-form-field .button:active, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-submit-field .button:hover, body.user-dashboard .charitable-submit-field .button.button-primary:hover, .campaign-summary .donate-button:hover, .campaign-summary .campaign-sharing .icon:before, .charitable-fes-campaign-creator-toolbar, .charitable-fes-campaign-creator-toolbar a, .charitable-fes-campaign-creator-toolbar a:hover, body .edd-submit.button.gray:focus, body .edd-submit.button.gray:active, body .edd-submit.button.gray:hover, body .edd-submit.button.white:focus, body .edd-submit.button.white:active, body .edd-submit.button.white:hover, body .edd-submit.button.blue:focus, body .edd-submit.button.blue:active, body .edd-submit.button.blue:hover, body .edd-submit.button.red:focus, body .edd-submit.button.red:active, body .edd-submit.button.red:hover, body .edd-submit.button.orange:focus, body .edd-submit.button.orange:active, body .edd-submit.button.orange:hover, body .edd-submit.button.green:focus, body .edd-submit.button.green:active, body .edd-submit.button.green:hover, body .edd-submit.button.yellow:focus, body .edd-submit.button.yellow:active, body .edd-submit.button.yellow:hover, body .edd-submit.button.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .edd-submit.button.dark-gray:hover, #edd_checkout_wrap #edd-purchase-button, #tribe-events .tribe-events-button:hover {
+.button.button-secondary.accent:hover, .feature-block, .social a, .account-links a,
+.account-links a:before, .account-links .button.button-alt, .banner, .sticky, .sticky a, #submit:hover, #site-footer, #site-footer a, .campaign-image .campaign-status-tag, .widget.widget_charitable_donate_widget .charitable-submit-field .button:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button:focus, .widget.widget_campaign_creator_widget .creator-profile-link a, .charitable-donation-form .charitable-form-field .button:hover, .charitable-donation-form .charitable-form-field .button:focus, .charitable-donation-form .charitable-form-field .button:active, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-submit-field .button:hover, body.user-dashboard .charitable-submit-field .button.button-primary:hover, .campaign-summary .donate-button:hover, .campaign-summary .campaign-sharing .icon:before, .charitable-fes-campaign-creator-toolbar, .charitable-fes-campaign-creator-toolbar a, .charitable-fes-campaign-creator-toolbar a:hover, body .edd-submit.button.gray:focus, body .edd-submit.button.gray:active, body .edd-submit.button.gray:hover, body .edd-submit.button.white:focus, body .edd-submit.button.white:active, body .edd-submit.button.white:hover, body .edd-submit.button.blue:focus, body .edd-submit.button.blue:active, body .edd-submit.button.blue:hover, body .edd-submit.button.red:focus, body .edd-submit.button.red:active, body .edd-submit.button.red:hover, body .edd-submit.button.orange:focus, body .edd-submit.button.orange:active, body .edd-submit.button.orange:hover, body .edd-submit.button.green:focus, body .edd-submit.button.green:active, body .edd-submit.button.green:hover, body .edd-submit.button.yellow:focus, body .edd-submit.button.yellow:active, body .edd-submit.button.yellow:hover, body .edd-submit.button.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .edd-submit.button.dark-gray:hover, #edd_checkout_wrap #edd-purchase-button, #tribe-events .tribe-events-button:hover {
   color: #ffffff; }
 
 .menu-site ul, .entry-block, .content-block, .modal, .widget tfoot td,
@@ -149,10 +149,10 @@ input[type="submit"]:hover, .button, .button:hover, .button-alt,
 .button.button-secondary, .sticky .entry .more-link:hover, .sticky .entry .more-link:focus, .sticky .entry .more-link:active, #submit, .widget.widget_campaign_creator_widget .creator-profile-link a, .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .charitable-donation-form .charitable-form-field .button, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-submit-field .button, .charitable-repeatable-form-field-table .add-row.button, #tribe-events .tribe-events-button {
   border-color: #7d6e63; }
 
-.shadow-wrapper::before {
+.layout-boxed .shadow-wrapper::before {
   border-right-color: #7d6e63; }
 
-.shadow-wrapper::after {
+.layout-boxed .shadow-wrapper::after {
   border-left-color: #7d6e63; }
 
 blockquote, pre, th, input[type="text"],
@@ -214,7 +214,7 @@ body.author .author-activity-feed .activity-summary a, .widget.widget_charitable
 .button-alt.accent:hover,
 .button-secondary.accent:hover,
 .button.button-alt.accent:hover,
-.button.button-secondary.accent:hover, .feature-block, .account-links .button.button-alt:hover, .banner, .sticky, .widget.widget_charitable_donate_widget .charitable-submit-field .button:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button:focus, .charitable-donation-form .charitable-form-field .button:hover, .charitable-donation-form .charitable-form-field .button:focus, .charitable-donation-form .charitable-form-field .button:active, body.user-dashboard .charitable-submit-field .button.button-primary:hover, body .edd-submit.button.gray:focus, body .edd-submit.button.gray:active, body .edd-submit.button.gray:hover, body .edd-submit.button.white:focus, body .edd-submit.button.white:active, body .edd-submit.button.white:hover, body .edd-submit.button.blue:focus, body .edd-submit.button.blue:active, body .edd-submit.button.blue:hover, body .edd-submit.button.red:focus, body .edd-submit.button.red:active, body .edd-submit.button.red:hover, body .edd-submit.button.orange:focus, body .edd-submit.button.orange:active, body .edd-submit.button.orange:hover, body .edd-submit.button.green:focus, body .edd-submit.button.green:active, body .edd-submit.button.green:hover, body .edd-submit.button.yellow:focus, body .edd-submit.button.yellow:active, body .edd-submit.button.yellow:hover, body .edd-submit.button.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .edd-submit.button.dark-gray:hover, #edd_checkout_wrap #edd-purchase-button {
+.button.button-secondary.accent:hover, .feature-block, .account-links .button.button-alt:hover, .banner, .sticky, .campaign-image .campaign-status-tag, .widget.widget_charitable_donate_widget .charitable-submit-field .button:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button:focus, .charitable-donation-form .charitable-form-field .button:hover, .charitable-donation-form .charitable-form-field .button:focus, .charitable-donation-form .charitable-form-field .button:active, body.user-dashboard .charitable-submit-field .button.button-primary:hover, body .edd-submit.button.gray:focus, body .edd-submit.button.gray:active, body .edd-submit.button.gray:hover, body .edd-submit.button.white:focus, body .edd-submit.button.white:active, body .edd-submit.button.white:hover, body .edd-submit.button.blue:focus, body .edd-submit.button.blue:active, body .edd-submit.button.blue:hover, body .edd-submit.button.red:focus, body .edd-submit.button.red:active, body .edd-submit.button.red:hover, body .edd-submit.button.orange:focus, body .edd-submit.button.orange:active, body .edd-submit.button.orange:hover, body .edd-submit.button.green:focus, body .edd-submit.button.green:active, body .edd-submit.button.green:hover, body .edd-submit.button.yellow:focus, body .edd-submit.button.yellow:active, body .edd-submit.button.yellow:hover, body .edd-submit.button.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .edd-submit.button.dark-gray:hover, #edd_checkout_wrap #edd-purchase-button {
   background-color: #d95b43; }
 
 .menu-site ul, .toggled .menu-site > ul, .button-alt.accent,
@@ -265,10 +265,10 @@ input[type="submit"]:hover, .button, .button:hover, .button-alt,
 .button.button-secondary, .sticky .entry .more-link:hover, .sticky .entry .more-link:focus, .sticky .entry .more-link:active, #submit, .widget.widget_campaign_creator_widget .creator-profile-link a, .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .charitable-donation-form .charitable-form-field .button, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-submit-field .button, .charitable-repeatable-form-field-table .add-row.button, #tribe-events .tribe-events-button {
   border-color: #7d6e63; }
 
-.shadow-wrapper::before {
+.layout-boxed .shadow-wrapper::before {
   border-right-color: #7d6e63; }
 
-.shadow-wrapper::after {
+.layout-boxed .shadow-wrapper::after {
   border-left-color: #7d6e63; }
 
 .assistive-text:hover, .assistive-text:active, .assistive-text:focus,
@@ -286,8 +286,8 @@ input[type="submit"], .button, .button-alt:hover,
 .button.button-secondary:hover, .button-alt.accent:hover,
 .button-secondary.accent:hover,
 .button.button-alt.accent:hover,
-.button.button-secondary.accent:hover, .feature-block, .account-links a,
-.account-links a:before, .account-links .button.button-alt, .banner, .sticky, .sticky a, #submit:hover, #site-footer, #site-footer a, .campaign-image span, .widget.widget_charitable_donate_widget .charitable-submit-field .button:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button:focus, .widget.widget_campaign_creator_widget .creator-profile-link a, .charitable-donation-form .charitable-form-field .button:hover, .charitable-donation-form .charitable-form-field .button:focus, .charitable-donation-form .charitable-form-field .button:active, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-submit-field .button:hover, body.user-dashboard .charitable-submit-field .button.button-primary:hover, .campaign-summary .donate-button:hover, .campaign-summary .campaign-sharing .icon:before, .charitable-fes-campaign-creator-toolbar, .charitable-fes-campaign-creator-toolbar a, .charitable-fes-campaign-creator-toolbar a:hover, body .edd-submit.button.gray:focus, body .edd-submit.button.gray:active, body .edd-submit.button.gray:hover, body .edd-submit.button.white:focus, body .edd-submit.button.white:active, body .edd-submit.button.white:hover, body .edd-submit.button.blue:focus, body .edd-submit.button.blue:active, body .edd-submit.button.blue:hover, body .edd-submit.button.red:focus, body .edd-submit.button.red:active, body .edd-submit.button.red:hover, body .edd-submit.button.orange:focus, body .edd-submit.button.orange:active, body .edd-submit.button.orange:hover, body .edd-submit.button.green:focus, body .edd-submit.button.green:active, body .edd-submit.button.green:hover, body .edd-submit.button.yellow:focus, body .edd-submit.button.yellow:active, body .edd-submit.button.yellow:hover, body .edd-submit.button.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .edd-submit.button.dark-gray:hover, #edd_checkout_wrap #edd-purchase-button, #tribe-events .tribe-events-button:hover {
+.button.button-secondary.accent:hover, .feature-block, .social a, .account-links a,
+.account-links a:before, .account-links .button.button-alt, .banner, .sticky, .sticky a, #submit:hover, #site-footer, #site-footer a, .campaign-image .campaign-status-tag, .widget.widget_charitable_donate_widget .charitable-submit-field .button:hover, .widget.widget_charitable_donate_widget .charitable-submit-field .button:focus, .widget.widget_campaign_creator_widget .creator-profile-link a, .charitable-donation-form .charitable-form-field .button:hover, .charitable-donation-form .charitable-form-field .button:focus, .charitable-donation-form .charitable-form-field .button:active, .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover, body.user-dashboard .charitable-submit-field .button:hover, body.user-dashboard .charitable-submit-field .button.button-primary:hover, .campaign-summary .donate-button:hover, .campaign-summary .campaign-sharing .icon:before, .charitable-fes-campaign-creator-toolbar, .charitable-fes-campaign-creator-toolbar a, .charitable-fes-campaign-creator-toolbar a:hover, body .edd-submit.button.gray:focus, body .edd-submit.button.gray:active, body .edd-submit.button.gray:hover, body .edd-submit.button.white:focus, body .edd-submit.button.white:active, body .edd-submit.button.white:hover, body .edd-submit.button.blue:focus, body .edd-submit.button.blue:active, body .edd-submit.button.blue:hover, body .edd-submit.button.red:focus, body .edd-submit.button.red:active, body .edd-submit.button.red:hover, body .edd-submit.button.orange:focus, body .edd-submit.button.orange:active, body .edd-submit.button.orange:hover, body .edd-submit.button.green:focus, body .edd-submit.button.green:active, body .edd-submit.button.green:hover, body .edd-submit.button.yellow:focus, body .edd-submit.button.yellow:active, body .edd-submit.button.yellow:hover, body .edd-submit.button.dark-gray:focus, body .edd-submit.button.dark-gray:active, body .edd-submit.button.dark-gray:hover, #edd_checkout_wrap #edd-purchase-button, #tribe-events .tribe-events-button:hover {
   color: #ffffff; }
 
 .menu-site ul, .entry-block, .content-block, .modal, .widget tfoot td,
@@ -356,10 +356,10 @@ th {
 .widget-title {
   border-bottom-color: #dbd5d1; }
 
-.campaign-image .campaign-successful {
+.campaign-image .campaign-status-tag.campaign-status-tag-successful {
   background-color: #1ba714; }
 
-.campaign-image .campaign-unsuccessful {
+.campaign-image .campaign-status-tag.campaign-status-tag-unsuccessful {
   background-color: #cc181e; }
 
 /*--------------------------------------------------------------
@@ -667,7 +667,7 @@ th,
 .campaign-status .campaign-pledged span,
 .campaign-status .campaign-time-left span,
 .widget_crowdfunding_stats_widget li span,
-.campaign-image span,
+.campaign-status-tag,
 .tabs .tab-title,
 .charitable-fes-campaign-creator-toolbar a,
 .donation-amounts .amount,
@@ -1281,8 +1281,7 @@ a {
   .site-navigation .menu-button {
     position: absolute;
     z-index: 600;
-    right: 36px;
-    right: 3.6rem;
+    right: 0;
     top: 36px;
     top: 3.6rem;
     line-height: 38px;
@@ -1315,8 +1314,6 @@ a {
         height: auto;
         width: auto;
         margin: 0;
-        padding-right: 36px;
-        padding-right: 3.6rem;
         border-top: 0;
         overflow: visible; }
         .site-navigation .menu-site li {
@@ -1326,13 +1323,15 @@ a {
           padding: 0rem 0rem 1.2rem 1.2rem;
           border: none; }
         .site-navigation .menu-site > li.hovering:last-child ul {
+          right: -18px;
           right: -1.8rem;
           left: auto; }
         .site-navigation .menu-site .site-navigation .menu-site ul {
+          margin-top: 9px;
+          margin-top: 0.9rem;
           padding-top: 0;
           border-top: 0;
-          border-radius: 0 0 0.4rem 0.4rem;
-          margin-top: 0.9rem; }
+          border-radius: 0 0 0.4rem 0.4rem; }
         .site-navigation .menu-site ul ul {
           margin-top: 0; }
       .site-navigation .current_page_item > a:hover,
@@ -1650,6 +1649,19 @@ a {
 .multi-block .content-block:last-of-type {
   border-radius: 0 0 0.4rem 0.4rem; }
 
+.layout-boxed .feature-block {
+  position: relative;
+  left: -24px;
+  width: -webkit-calc( 100% + 48px );
+  width: -moz-calc( 100% + 48px );
+  width: calc( 100% + 48px ); }
+  @media (min-width: 50em) {
+    .layout-boxed .feature-block {
+      left: -45px;
+      width: -webkit-calc( 100% + 90px );
+      width: -moz-calc( 100% + 90px );
+      width: calc( 100% + 90px ); } }
+
 .feature-block {
   position: relative;
   left: -24px;
@@ -1663,16 +1675,16 @@ a {
   border: none; }
   @media (min-width: 50em) {
     .feature-block {
-      left: -45px;
-      width: -webkit-calc( 100% + 90px );
-      width: -moz-calc( 100% + 90px );
-      width: calc( 100% + 90px ); } }
+      left: -36px;
+      width: -webkit-calc( 100% + 72px );
+      width: -moz-calc( 100% + 72px );
+      width: calc( 100% + 72px ); } }
   @media (min-width: 50em) {
     .feature-block {
-      padding-left: 45px;
-      padding-left: 4.5rem;
-      padding-right: 45px;
-      padding-right: 4.5rem; } }
+      padding-left: 36px;
+      padding-left: 3.6rem;
+      padding-right: 36px;
+      padding-right: 3.6rem; } }
 
 .block-title {
   margin-bottom: 12px;
@@ -1689,25 +1701,6 @@ a {
 .block-title.with-icon {
   padding-left: 28px;
   padding-left: 2.8rem; }
-
-/* Shadow wrapper */
-@media (min-width: 50em) {
-  .shadow-wrapper::before, .shadow-wrapper::after {
-    content: "";
-    position: absolute;
-    bottom: -0.9rem;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 0.9rem 0.9rem 0.9rem; }
-  .shadow-wrapper::before {
-    left: -0.9rem;
-    border-bottom-color: transparent;
-    border-left-color: transparent; }
-  .shadow-wrapper::after {
-    right: -0.9rem;
-    border-right-color: transparent;
-    border-bottom-color: transparent; } }
 
 /*-------------------------------------------------------------- 
 13.0 Modals
@@ -1807,8 +1800,14 @@ a {
 #header {
   position: relative;
   z-index: 50;
-  padding: 24px 36px 0px 36px;
-  padding: 2.4rem 3.6rem 0rem 3.6rem; }
+  padding: 24px 24px 0px 24px;
+  padding: 2.4rem 2.4rem 0rem 2.4rem; }
+  @media (min-width: 50em) {
+    #header {
+      padding-left: 36px;
+      padding-left: 3.6rem;
+      padding-right: 36px;
+      padding-right: 3.6rem; } }
 
 .site-identity {
   position: relative;
@@ -1832,6 +1831,9 @@ a {
   font-size: 3.4rem;
   line-height: 38px;
   line-height: 3.8rem; }
+  .site-title a:hover {
+    text-decoration: none;
+    opacity: 0.9; }
 
 .site-tagline {
   padding: 6px 0px;
@@ -1854,20 +1856,20 @@ a {
   .social li {
     display: inline-block;
     margin: 0px 12px 0px 0px;
-    margin: 0rem 1.2rem 0rem 0rem;
-    font-size: 18px;
-    font-size: 1.8rem;
-    line-height: 24px;
-    line-height: 2.4rem; }
+    margin: 0rem 1.2rem 0rem 0rem; }
   .social a:hover {
     text-decoration: none; }
+  .social i {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 32px;
+    line-height: 3.2rem; }
   @media (min-width: 37.5em) {
     .social {
       float: left; } }
-  @media (min-width: 74.375em) {
+  @media (min-width: 87.5em) {
     .social {
-      margin-left: 10px;
-      margin-left: 1rem; } }
+      padding-left: 0; } }
 
 /*-------------------------------------------------------------- 
 13.2 Account Links
@@ -2030,26 +2032,69 @@ a {
 /*--------------------------------------------------------------
 15.0 Content
 --------------------------------------------------------------*/
-.layout-boxed #page {
-  max-width: 600px;
-  max-width: 60rem;
+.layout-boxed {
+  /* Shadow wrapper */ }
+  .layout-boxed #page {
+    max-width: 600px;
+    max-width: 60rem;
+    margin: 0 auto; }
+    @media (min-width: 37.5em) {
+      .layout-boxed #page {
+        max-width: 100%; } }
+    @media (min-width: 74.375em) {
+      .layout-boxed #page {
+        width: 119rem; } }
+  @media (min-width: 74.375em) {
+    .layout-boxed .social {
+      padding-left: 45px;
+      padding-left: 4.5rem; } }
+  .layout-boxed .body-wrapper {
+    border-radius: 0.4rem 0.4rem 0 0; }
+    @media (min-width: 74.375em) {
+      .layout-boxed .body-wrapper {
+        padding: 0px 10px;
+        padding: 0rem 1rem; } }
+  .layout-boxed #header {
+    border-radius: 0.4rem 0.4rem 0 0; }
+  .layout-boxed #main {
+    border-radius: 0 0 0.4rem 0.4rem; }
+  .layout-boxed .site-navigation .menu-button {
+    right: 24px;
+    right: 2.4rem; }
+  @media (min-width: 50em) {
+    .layout-boxed .site-navigation {
+      padding-right: 36px;
+      padding-right: 3.6rem; } }
+  @media (min-width: 50em) {
+    .layout-boxed .shadow-wrapper::before, .layout-boxed .shadow-wrapper::after {
+      content: "";
+      position: absolute;
+      bottom: -0.9rem;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0.9rem 0.9rem 0.9rem; }
+    .layout-boxed .shadow-wrapper::before {
+      left: -0.9rem;
+      border-bottom-color: transparent;
+      border-left-color: transparent; }
+    .layout-boxed .shadow-wrapper::after {
+      right: -0.9rem;
+      border-right-color: transparent;
+      border-bottom-color: transparent; } }
+
+.layout-wide .layout-wrapper {
+  position: relative;
+  max-width: 1400px;
+  max-width: 140rem;
   margin: 0 auto; }
-  @media (min-width: 37.5em) {
-    .layout-boxed #page {
-      max-width: 100%; } }
-  @media (min-width: 74.375em) {
-    .layout-boxed #page {
-      width: 119rem; } }
-.layout-boxed .body-wrapper {
-  border-radius: 0.4rem 0.4rem 0 0; }
-  @media (min-width: 74.375em) {
-    .layout-boxed .body-wrapper {
-      padding: 0px 10px;
-      padding: 0rem 1rem; } }
-.layout-boxed #header {
-  border-radius: 0.4rem 0.4rem 0 0; }
-.layout-boxed #main {
-  border-radius: 0 0 0.4rem 0.4rem; }
+  .layout-wide .layout-wrapper:before {
+    content: "";
+    display: table; }
+  .layout-wide .layout-wrapper:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 .wrapper {
   width: 100%;
@@ -2321,8 +2366,8 @@ a {
   overflow: visible; }
 .page-template-page-template-home-slider .feature-block {
   float: left;
-  padding: 36px 45px;
-  padding: 3.6rem 4.5rem;
+  padding-top: 36px;
+  padding-top: 3.6rem;
   border: none;
   border-radius: 0;
   box-shadow: none;
@@ -2332,6 +2377,8 @@ a {
   padding: 2.4rem 0rem 0rem;
   margin-bottom: 0; }
 .page-template-page-template-home-slider .entry {
+  position: relative;
+  z-index: 1;
   font-size: 18px;
   font-size: 1.8rem;
   line-height: 28px;
@@ -2379,6 +2426,8 @@ a {
 .page-template-page-template-fullwidth .entry-block {
   border-top: 0;
   border-radius: 0 0 0.4rem 0.4rem; }
+.page-template-page-template-fullwidth .campaign.entry-block {
+  border-radius: 0.4rem; }
 
 /*--------------------------------------------------------------
 11.2 Asides
@@ -3022,9 +3071,8 @@ embed {
   width: 100%;
   line-height: 0;
   overflow: hidden; }
-  .campaign-image span {
+  .campaign-image .campaign-status-tag {
     position: absolute;
-    display: block;
     line-height: 1em;
     padding: 6px 0px;
     padding: 0.6rem 0rem;
@@ -4136,7 +4184,10 @@ body.user-dashboard .charitable-submit-field {
     margin-left: 2%; }
 
 .charitable-recipient-type-options-3 .charitable-recipient-type {
-  width: 33%; }
+  width: 32%;
+  margin-left: 2%; }
+  .charitable-recipient-type-options-3 .charitable-recipient-type:nth-child(3n+1) {
+    margin-left: 0; }
 
 .charitable-campaign-recipient-search {
   float: left;
@@ -5059,5 +5110,18 @@ body.tribe-mobile #main {
       border-bottom: 0;
       margin-bottom: 0;
       padding-bottom: 0; }
+
+/*--------------------------------------------------------------
+18.5 Soliloquy
+--------------------------------------------------------------*/
+.page-template-page-template-home-slider .feature-block .soliloquy-container {
+  z-index: 1;
+  margin: 0 auto;
+  border-width: 5px;
+  border-width: 0.5rem;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0.4rem;
+  overflow: hidden; }
 
 /*# sourceMappingURL=_light.css.map */

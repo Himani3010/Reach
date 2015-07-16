@@ -10,6 +10,12 @@
         }
     }
 
+    .social {
+        @include bp( 1190 ) {
+            @include padding-left( 45 );
+        }
+    }
+
     .body-wrapper {
         border-radius: 0.4rem 0.4rem 0 0;
         @include bp( 1190 ) {
@@ -23,6 +29,16 @@
 
     #main {
         border-radius: 0 0 0.4rem 0.4rem;
+    }
+
+    .site-navigation {        
+        .menu-button {
+            @include right( 24 );
+        }
+
+        @include bp( 800 ) {
+            @include padding-right( 36 );
+        }
     }
 
     /* Shadow wrapper */

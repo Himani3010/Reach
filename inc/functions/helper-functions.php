@@ -175,7 +175,11 @@ function reach_get_banner_title() {
     elseif ( is_search() ) {
         $title = apply_filters( 'reach_banner_title_search', __( 'Search Results', 'reach' ) );
     }   
-    /* Archive */
+    /* Post Type Archive */
+    elseif ( is_post_type_archive() ) {
+        $title = apply_filters( 'reach_banner_title_post_type_archive', post_type_archive_title( '', false ) );
+    }
+    /* General Archive */
     elseif ( is_archive() ) {
         $title = apply_filters( 'reach_banner_title_archive', single_term_title( '', false ) );
     }

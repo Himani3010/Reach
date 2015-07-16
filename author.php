@@ -13,7 +13,7 @@ $avatar 	= $donor->get_avatar( 140 );
 
 get_header();
 
-	get_template_part( 'banner' );
+	get_template_part( 'partials/banner' );
 
 	?>
 	<main class="site-main content-area" role="main">		
@@ -63,7 +63,7 @@ get_header();
 			</div><!-- .author-activity-summary -->
 			<?php 
 
-			get_template_part( 'author', 'activity' );
+			get_template_part( 'partials/author', 'activity' );
 
 			?>
 		</div><!-- .author-activity -->

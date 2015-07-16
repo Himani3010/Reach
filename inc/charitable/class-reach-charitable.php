@@ -57,6 +57,7 @@ class Reach_Charitable {
 	 */
 	private function load_dependencies() {
 		require_once( 'functions/helper-functions.php' );
+		require_once( 'functions/template-hooks.php' );
 		require_once( 'functions/template-tags.php' );
 	}
 

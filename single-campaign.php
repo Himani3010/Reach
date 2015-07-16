@@ -14,16 +14,16 @@ get_header();
 			
 				<?php do_action( 'charitable_single_campaign_before' ) ?>
 				
-				<?php get_template_part( 'campaign', 'summary' ) ?>
+				<?php get_template_part( 'partials/campaign', 'summary' ) ?>
 
 				<div class="layout-wrapper">
 				
-					<?php get_template_part( 'campaign', 'video' ) ?>
+					<?php get_template_part( 'partials/campaign', 'video' ) ?>
 
 					<div class="content-area">
 		
 						<!-- Campaign content -->					
-						<?php get_template_part( 'content', 'campaign' ) ?>
+						<?php get_template_part( 'partials/content', 'campaign' ) ?>
 						<!-- End campaign content -->
 
 						<!-- "Campaign Below Content" sidebar -->
@@ -42,6 +42,6 @@ get_header();
 		endwhile;
 	endif;
 	
-	get_template_part( 'campaign', 'share-modal' );
+	get_template_part( 'partials/campaign', 'share-modal' );
 	
 get_footer();

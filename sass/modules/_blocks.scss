@@ -40,8 +40,12 @@
 	}
 }
 
+.layout-boxed .feature-block {
+	@include fullwidth-wrapper-padded();
+}
+
 .feature-block {
-	@include fullwidth-wrapper-padded();	
+	@include fullwidth-wrapper();	
 	@include padding( 0, 24, 36, 24 );		
 	@include color( $color__text-overlay );
 	@include background-color( $color__accent );
@@ -50,8 +54,8 @@
 	border: none;
 
 	@include bp( 800 ) {		
-		@include padding-left( 45 );
-		@include padding-right( 45 );
+		@include padding-left( 36 );
+		@include padding-right( 36 );
 	}
 }
 

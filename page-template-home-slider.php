@@ -25,7 +25,7 @@ get_header();
 				</div>
 			</article>
 			<div class="layout-wrapper">			
-				<?php get_template_part('campaign', 'grid');
+				<?php get_template_part('partials/campaign', 'grid');
 
 				// if ( get_post_meta( get_the_ID(), '_franklin_homepage_2_show_categories', true ) ) :
 

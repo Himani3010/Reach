@@ -12,15 +12,22 @@ if ( have_posts() ) :
         the_post();
 
         $campaign = new Charitable_Campaign( get_post() );
+
         ?>
         <div class="campaign block entry-block cf" style="width: 275px;">
-            <div class="campaign-image">
-                <?php get_template_part( 'campaign', 'status-ribbon' ) ?>
+            <?php
+            
+            /**
+             * @hook charitable_campaign_content_loop_before
+             */
+            do_action( 'charitable_campaign_content_loop_before', $campaign );
 
-                <a href="<?php the_permalink() ?>" title="<?php printf( __( 'Go to %s', 'reach' ), get_the_title() ) ?>" target="_parent">
-                    <?php echo get_the_post_thumbnail( $campaign->ID, 'campaign-thumbnail-medium' ) ?>
-                </a>
-            </div>
+            /**
+             * @hook charitable_campaign_content_loop_before_title
+             */
+            do_action( 'charitable_campaign_content_loop_before_title', $campaign );
+            
+            ?>
             <div class="title-wrapper">
                 <h3 class="block-title">
                     <a href="<?php the_permalink() ?>" title="<?php printf( __('Link to %s', 'reach'), get_the_title() ) ?>" target="_parent"><?php 
@@ -28,13 +35,22 @@ if ( have_posts() ) :
                     ?></a>
                 </h3>
             </div>
-            <?php 
-            get_template_part( 'campaign', 'stats-small' ); 
+            <?php
 
-            get_template_part( 'meta', 'campaign' );
+            /**
+             * @hook charitable_campaign_content_loop_after_title
+             */
+            do_action( 'charitable_campaign_content_loop_after_title', $campaign );
+
+            /**
+             * @hook charitable_campaign_content_loop_after
+             */
+            do_action( 'charitable_campaign_content_loop_after', $campaign );
+
             ?>
         </div>
         <?php 
+        
     endwhile;
 endif;
 

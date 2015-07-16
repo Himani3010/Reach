@@ -12,7 +12,7 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 						
-			get_template_part( 'banner' ); 
+			get_template_part( 'partials/banner' ); 
 			?>
 			<div class="layout-wrapper">
 				<?php 
@@ -23,7 +23,7 @@ get_header();
 				endif;
 				?>
 				<main class="site-main content-area" role="main">
-					<?php get_template_part( 'content', 'page' ) ?>
+					<?php get_template_part( 'partials/content', 'page' ) ?>
 				</main><!-- .site-main -->
 			</div><!-- .layout-wrapper -->
 			<?php 

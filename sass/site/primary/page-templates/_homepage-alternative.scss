@@ -12,7 +12,7 @@
 
 	.feature-block {
 		float: left;
-		@include padding( 36, 45 );
+		@include padding-top( 36 );
 		border: none;
 		border-radius: 0;
 		box-shadow: none;		

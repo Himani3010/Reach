@@ -13,7 +13,7 @@
 
 get_header();
 
-get_template_part( 'banner' ) ?>
+get_template_part( 'partials/banner' ) ?>
 
 <div class="layout-wrapper">
 	<main class="site-main content-area" role="main">					
@@ -22,7 +22,7 @@ get_template_part( 'banner' ) ?>
 			while ( have_posts() ) : 
 				the_post(); 
 
-				get_template_part( 'content', get_post_format() );
+				get_template_part( 'partials/content', get_post_format() );
 
 			endwhile; 
 
@@ -30,7 +30,7 @@ get_template_part( 'banner' ) ?>
 
 		else :
 
-			get_template_part( 'content', 'none' );
+			get_template_part( 'partials/content', 'none' );
 
 		endif;		
 		?>	

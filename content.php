@@ -5,7 +5,7 @@
 ?>
 <article id="post-<?php the_ID() ?>" <?php post_class() ?>>			
 
-	<?php get_template_part( 'featured-image' ) ?>
+	<?php get_template_part( 'partials/featured-image' ) ?>
 
 	<?php if ( is_single() ) : ?>
 
@@ -27,7 +27,7 @@
 
 	<?php if ( is_single() ) : ?>
 			
-		<?php get_template_part( 'meta', 'taxonomy' ) ?>				
+		<?php get_template_part( 'partials/meta', 'taxonomy' ) ?>				
 
 	<?php else : ?>				
 

@@ -30,7 +30,7 @@
 
 	if ( is_single() ) :
 			
-		get_template_part( 'meta', 'taxonomy' );		
+		get_template_part( 'partials/meta', 'taxonomy' );		
 
 	else :				
 

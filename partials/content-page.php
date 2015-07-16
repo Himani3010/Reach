@@ -18,6 +18,6 @@
 		?>
 	</div><!-- .entry -->
 	
-	<?php get_template_part( 'meta', 'below' ) ?>
+	<?php get_template_part( 'partials/meta', 'below' ) ?>
 
 </article><!-- #post-## -->

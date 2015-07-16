@@ -18,7 +18,7 @@ get_header( 'stripped' );
         while ( have_posts() ) :
             the_post();
 
-            get_template_part( 'banner' ); ?>
+            get_template_part( 'partials/banner' ); ?>
 
             <main class="site-main content-area" role="main">
                 
@@ -44,7 +44,7 @@ get_header( 'stripped' );
 
                 <?php endif ?>
 
-                <?php get_template_part( 'content', 'page' ) ?>
+                <?php get_template_part( 'partials/content', 'page' ) ?>
 
             </main><!-- .site-main -->
         <?php 

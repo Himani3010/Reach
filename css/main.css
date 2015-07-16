@@ -343,7 +343,7 @@ th,
 .campaign-status .campaign-pledged span,
 .campaign-status .campaign-time-left span,
 .widget_crowdfunding_stats_widget li span,
-.campaign-image span,
+.campaign-status-tag,
 .tabs .tab-title,
 .charitable-fes-campaign-creator-toolbar a,
 .donation-amounts .amount,
@@ -1027,13 +1027,15 @@ a {
           padding: 0rem 0rem 1.2rem 1.2rem;
           border: none; }
         .site-navigation .menu-site > li.hovering:last-child ul {
+          right: -18px;
           right: -1.8rem;
           left: auto; }
         .site-navigation .menu-site .site-navigation .menu-site ul {
+          margin-top: 9px;
+          margin-top: 0.9rem;
           padding-top: 0;
           border-top: 0;
-          border-radius: 0 0 0.4rem 0.4rem;
-          margin-top: 0.9rem; }
+          border-radius: 0 0 0.4rem 0.4rem; }
         .site-navigation .menu-site ul ul {
           margin-top: 0; }
       .site-navigation .current_page_item > a:hover,
@@ -1392,6 +1394,19 @@ a {
 .multi-block .content-block:last-of-type {
   border-radius: 0 0 0.4rem 0.4rem; }
 
+.layout-boxed .feature-block {
+  position: relative;
+  left: -24px;
+  width: -webkit-calc( 100% + 48px );
+  width: -moz-calc( 100% + 48px );
+  width: calc( 100% + 48px ); }
+  @media (min-width: 50em) {
+    .layout-boxed .feature-block {
+      left: -45px;
+      width: -webkit-calc( 100% + 90px );
+      width: -moz-calc( 100% + 90px );
+      width: calc( 100% + 90px ); } }
+
 .feature-block {
   position: relative;
   left: -24px;
@@ -1407,16 +1422,16 @@ a {
   border: none; }
   @media (min-width: 50em) {
     .feature-block {
-      left: -45px;
-      width: -webkit-calc( 100% + 90px );
-      width: -moz-calc( 100% + 90px );
-      width: calc( 100% + 90px ); } }
+      left: -36px;
+      width: -webkit-calc( 100% + 72px );
+      width: -moz-calc( 100% + 72px );
+      width: calc( 100% + 72px ); } }
   @media (min-width: 50em) {
     .feature-block {
-      padding-left: 45px;
-      padding-left: 4.5rem;
-      padding-right: 45px;
-      padding-right: 4.5rem; } }
+      padding-left: 36px;
+      padding-left: 3.6rem;
+      padding-right: 36px;
+      padding-right: 3.6rem; } }
 
 .block-title {
   margin-bottom: 12px;
@@ -1539,9 +1554,15 @@ a {
 #header {
   position: relative;
   z-index: 50;
-  padding: 24px 36px 0px 36px;
-  padding: 2.4rem 3.6rem 0rem 3.6rem;
+  padding: 24px 24px 0px 24px;
+  padding: 2.4rem 2.4rem 0rem 2.4rem;
   background-color: #f9f8f7; }
+  @media (min-width: 50em) {
+    #header {
+      padding-left: 36px;
+      padding-left: 3.6rem;
+      padding-right: 36px;
+      padding-right: 3.6rem; } }
 
 .site-identity {
   position: relative;
@@ -1567,6 +1588,9 @@ a {
   line-height: 3.8rem; }
   .site-title a {
     color: #d95b43; }
+    .site-title a:hover {
+      text-decoration: none;
+      opacity: 0.9; }
 
 .site-tagline {
   padding: 6px 0px;
@@ -1807,6 +1831,10 @@ a {
     @media (min-width: 74.375em) {
       .layout-boxed #page {
         width: 119rem; } }
+  @media (min-width: 74.375em) {
+    .layout-boxed .social {
+      padding-left: 45px;
+      padding-left: 4.5rem; } }
   .layout-boxed .body-wrapper {
     border-radius: 0.4rem 0.4rem 0 0; }
     @media (min-width: 74.375em) {
@@ -1817,6 +1845,13 @@ a {
     border-radius: 0.4rem 0.4rem 0 0; }
   .layout-boxed #main {
     border-radius: 0 0 0.4rem 0.4rem; }
+  .layout-boxed .site-navigation .menu-button {
+    right: 24px;
+    right: 2.4rem; }
+  @media (min-width: 50em) {
+    .layout-boxed .site-navigation {
+      padding-right: 36px;
+      padding-right: 3.6rem; } }
   .layout-boxed .shadow-wrapper::before {
     border-right-color: #7d6e63; }
   .layout-boxed .shadow-wrapper::after {
@@ -2147,8 +2182,8 @@ a {
   overflow: visible; }
 .page-template-page-template-home-slider .feature-block {
   float: left;
-  padding: 36px 45px;
-  padding: 3.6rem 4.5rem;
+  padding-top: 36px;
+  padding-top: 3.6rem;
   border: none;
   border-radius: 0;
   box-shadow: none;
@@ -2209,6 +2244,8 @@ a {
 .page-template-page-template-fullwidth .entry-block {
   border-top: 0;
   border-radius: 0 0 0.4rem 0.4rem; }
+.page-template-page-template-fullwidth .campaign.entry-block {
+  border-radius: 0.4rem; }
 
 /*--------------------------------------------------------------
 11.2 Asides
@@ -2875,9 +2912,8 @@ embed {
   width: 100%;
   line-height: 0;
   overflow: hidden; }
-  .campaign-image span {
+  .campaign-image .campaign-status-tag {
     position: absolute;
-    display: block;
     line-height: 1em;
     padding: 6px 0px;
     padding: 0.6rem 0rem;
@@ -2890,16 +2926,17 @@ embed {
     letter-spacing: 0.1rem;
     font-size: 11px;
     font-size: 1.1rem;
+    background-color: #d95b43;
     color: #ffffff;
     -moz-transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg); }
-  .campaign-image .campaign-successful {
-    background-color: #1ba714; }
-  .campaign-image .campaign-unsuccessful {
-    background-color: #cc181e; }
+    .campaign-image .campaign-status-tag.campaign-status-tag-successful {
+      background-color: #1ba714; }
+    .campaign-image .campaign-status-tag.campaign-status-tag-unsuccessful {
+      background-color: #cc181e; }
 
 /*--------------------------------------------------------------
 18.1.2 Widgets

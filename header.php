@@ -23,8 +23,8 @@
 	<div id="page" class="hfeed site-container">
 		<div class="layout-wrapper">
 			<a class="skip-link screen-reader-text" href="#main"><?php _e( 'Skip to content', 'reach' ); ?></a>
-			<?php get_template_part( 'social-profiles' ) ?>
-			<?php get_template_part( 'account-links' ) ?>
+			<?php get_template_part( 'partials/social-profiles' ) ?>
+			<?php get_template_part( 'partials/account-links' ) ?>
 		</div><!-- .layout-wrapper -->
 		<div class="body-wrapper">
 			<header id="header" class="cf wrapper site-header" role="banner">

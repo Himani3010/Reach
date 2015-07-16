@@ -21,7 +21,7 @@ $activity = $donor->get_activity( array(
 
 		$activity->the_post();
 
-		get_template_part( 'author', 'activity-' . get_post_field( 'post_type', get_the_ID() ) );
+		get_template_part( 'partials/author', 'activity-' . get_post_field( 'post_type', get_the_ID() ) );
 		
 	endwhile ?>
 	

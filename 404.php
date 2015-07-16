@@ -7,7 +7,7 @@
 
 get_header();
 				
-get_template_part( 'banner' ); ?>
+get_template_part( 'partials/banner' ); ?>
 
 <div class="site-main error-404 not-found entry" role="main">
 	<h2><?php _e( 'Sorry, but you\'ve hit a dead end.', 'reach' ) ?></h2>

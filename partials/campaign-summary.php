@@ -17,12 +17,12 @@ if ( $campaign ) :
 					<?php echo $campaign->get( 'description' ) ?>
 				</div><!-- .campaign-description -->			
 				
-				<?php get_template_part( 'campaign', 'featured-image' ) ?>
+				<?php get_template_part( 'partials/campaign', 'featured-image' ) ?>
 
 				<div class="campaign-details cf">		
 					<?php if ( $campaign->has_ended() ) :
 
-						get_template_part( 'campaign', 'ended' );
+						get_template_part( 'partials/campaign', 'ended' );
 				
 					else :
 
@@ -30,15 +30,15 @@ if ( $campaign ) :
 						
 					endif;
 
-					get_template_part( 'campaign', 'barometer' );
+					get_template_part( 'partials/campaign', 'barometer' );
 
-					get_template_part( 'campaign', 'stats' );
+					get_template_part( 'partials/campaign', 'stats' );
 
-					get_template_part( 'campaign', 'countdown' );
+					get_template_part( 'partials/campaign', 'countdown' );
 					?>				
 				</div><!-- .campaign-details -->
 
-				<?php get_template_part( 'campaign', 'sharing' ) ?>
+				<?php get_template_part( 'partials/campaign', 'sharing' ) ?>
 			</div><!-- .layout-wrapper -->
 		</div><!-- .shadow-wrapper -->
 	</section><!-- .campaign-summary -->

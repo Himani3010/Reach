@@ -7,7 +7,7 @@
 
 get_header() ?>
     
-    <?php get_template_part( 'banner' ) ?>
+    <?php get_template_part( 'partials/banner' ) ?>
 
     <div id="primary" class="content-area">
         <main class="site-main content" role="main">        
@@ -19,7 +19,7 @@ get_header() ?>
 
             the_post();
 
-            get_template_part( 'content', 'event' );
+            get_template_part( 'partials/content', 'event' );
 
             if ( get_post_type() == TribeEvents::POSTTYPE && tribe_get_option( 'showComments', false ) ) :
 

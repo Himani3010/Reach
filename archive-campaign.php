@@ -1,6 +1,6 @@
 <?php 
 /**
- * Campaign category archive.
+ * Campaign post type archive.
  *
  * @package     Reach
  */

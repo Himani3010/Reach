@@ -16,7 +16,7 @@ get_header();
 			<main class="site-main content-area" role="main">
 			
 			<?php 
-			get_template_part( 'campaign', 'featured' );
+			get_template_part( 'partials/campaign', 'featured' );
 
 			if ( strlen( get_the_content() ) ) : ?>
 
