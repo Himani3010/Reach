@@ -174,6 +174,7 @@
 
 .charitable-form-field-multi-checkbox { 
     ul {
+        width: 100%;
         @include padding( 10 );
         margin: 0;      
         list-style-type: none;      

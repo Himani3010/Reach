@@ -65,18 +65,6 @@ class Reach_Jetpack {
 			'container' => 'main',
 			'footer'    => 'page',
 		) );	
-
-		/**
-		 * Add support for Site Logo. 
-		 * @link 	http://jetpack.me/support/site-logo/
-		 */
-		add_theme_support( 'site-logo', array(
-			'header-text' => array(
-				'site-title',
-				'site-description',
-			),
-			'size' => 'medium'
-		) );
 	}
 }
 

@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Reach 1.0.0-20150715\n"
+"Project-Id-Version: Reach 1.0.0-20150717\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-07-15 14:40:34+00:00\n"
+"POT-Creation-Date: 2015-07-17 14:35:04+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -53,6 +53,10 @@ msgstr ""
 msgid "Campaigns Created"
 msgstr ""
 
+#: campaign-donation-page.php:22 edd-checkout.php:29
+msgid "Thank you for supporting this campaign"
+msgstr ""
+
 #: campaign-widget.php:33 charitable/campaign-loop/campaign.php:34
 #: inc/functions/template-tags.php:288 partials/author-activity-campaign.php:18
 #: partials/author-activity-post.php:17
@@ -61,6 +65,38 @@ msgstr ""
 
 #: charitable/campaign/donation-button.php:16
 msgid "Donate"
+msgstr ""
+
+#: charitable/campaign/share.php:21 partials/campaign-sharing.php:12
+msgid "Share"
+msgstr ""
+
+#: charitable/campaign/share.php:41 partials/campaign-sharing.php:32
+msgid "Share Campaign"
+msgstr ""
+
+#: charitable/campaign/share.php:44 partials/campaign-sharing.php:35
+msgid "Embed Code"
+msgstr ""
+
+#: charitable/campaign/share.php:48 partials/campaign-sharing.php:39
+msgid "Preview"
+msgstr ""
+
+#: charitable/campaign/stats.php:23
+msgid "Donated"
+msgstr ""
+
+#: charitable/campaign/stats.php:29 partials/campaign-stats.php:18
+msgid "Goal"
+msgstr ""
+
+#: charitable/campaign/stats.php:35 partials/campaign-stats.php:22
+msgid "Donors"
+msgstr ""
+
+#: charitable/campaign/summary-time-left.php:24
+msgid "Time left to donate"
 msgstr ""
 
 #: charitable/campaign-loop/stats.php:25
@@ -128,12 +164,6 @@ msgstr ""
 msgid "Pages: "
 msgstr ""
 
-#: edd-checkout.php:29 partials/campaign-donation-page.php:22
-msgid "Thank you for supporting this campaign"
-msgid_plural "Thank you for supporting these campaigns"
-msgstr[0] ""
-msgstr[1] ""
-
 #: footer.php:35
 msgid "http://wordpress.org/"
 msgstr ""
@@ -146,103 +176,119 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:215
-msgid "Hide the title"
-msgstr ""
-
-#: inc/admin/class-reach-customizer.php:225
-msgid "Hide the tagline"
-msgstr ""
-
-#: inc/admin/class-reach-customizer.php:244
+#: inc/admin/class-reach-customizer.php:210
 msgid "Logo"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:272
+#: inc/admin/class-reach-customizer.php:239
 msgid "Layout"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:284
+#: inc/admin/class-reach-customizer.php:251
 msgid "Wide Layout"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:285
+#: inc/admin/class-reach-customizer.php:252
 msgid "Boxed Layout"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:304
+#: inc/admin/class-reach-customizer.php:272
 msgid "Colour"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:316
+#: inc/admin/class-reach-customizer.php:284
 msgid "Accent Colour"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:317
+#: inc/admin/class-reach-customizer.php:285
 msgid "Used for: site title, links, banner background, feature section background"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:329
+#: inc/admin/class-reach-customizer.php:297
 msgid "Body Background Colour"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:330
+#: inc/admin/class-reach-customizer.php:298
 msgid "Used for: site background"
 msgstr ""
 
+#: inc/admin/class-reach-customizer.php:310
 #: inc/admin/class-reach-customizer.php:342
-#: inc/admin/class-reach-customizer.php:373
-#: inc/admin/class-reach-customizer.php:404
+#: inc/admin/class-reach-customizer.php:394
 msgid "Text Colour"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:343
+#: inc/admin/class-reach-customizer.php:311
 msgid "Used for: text, buttons, site navigation"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:362
+#: inc/admin/class-reach-customizer.php:331
 msgid "Header"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:374
+#: inc/admin/class-reach-customizer.php:343
 msgid "Used for social profile icons & button text"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:393
+#: inc/admin/class-reach-customizer.php:351
+msgid "Hide the title"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:361
+msgid "Hide the tagline"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:383
 msgid "Footer"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:410
+#: inc/admin/class-reach-customizer.php:400
 msgid "Proudly powered by WordPress"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:413
+#: inc/admin/class-reach-customizer.php:403
 msgid "Tagline"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:436
+#: inc/admin/class-reach-customizer.php:425
+msgid "Campaigns"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:435
+msgid "Background image for campaign summary block"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:454
+msgid "Where would you like the campaign video and featured image to be displayed?"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:457
+msgid "Featured image in summary, video before content."
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:458
+msgid "Video in summary, featured image before content."
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:479
 msgid "Social Profiles"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:437
+#: inc/admin/class-reach-customizer.php:480
 msgid ""
 "Enter the complete URL to your profile for each service below that you "
 "would like to share."
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:468
+#: inc/admin/class-reach-customizer.php:511
 msgid "Background Images"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:474
+#: inc/admin/class-reach-customizer.php:517
 msgid "Body"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:491
-msgid "Featured Campaign Block"
-msgstr ""
-
-#: inc/admin/class-reach-customizer.php:508
+#: inc/admin/class-reach-customizer.php:551
 msgid "Blog & Page Banners"
 msgstr ""
 
@@ -268,111 +314,111 @@ msgstr ""
 msgid "All"
 msgstr ""
 
-#: inc/charitable/functions/template-tags.php:52
+#: inc/charitable/functions/template-tags.php:51
 msgid "Campaign"
 msgstr ""
 
-#: inc/charitable/functions/template-tags.php:52
+#: inc/charitable/functions/template-tags.php:51
 msgid "has ended"
 msgstr ""
 
-#: inc/class-reach-theme.php:372
+#: inc/class-reach-theme.php:392
 msgid "Primary Menu"
 msgstr ""
 
-#: inc/class-reach-theme.php:409
+#: inc/class-reach-theme.php:429
 msgid "Default sidebar"
 msgstr ""
 
-#: inc/class-reach-theme.php:410
+#: inc/class-reach-theme.php:430
 msgid "The default sidebar."
 msgstr ""
 
-#: inc/class-reach-theme.php:419
+#: inc/class-reach-theme.php:439
 msgid "Campaign sidebar"
 msgstr ""
 
-#: inc/class-reach-theme.php:420
+#: inc/class-reach-theme.php:440
 msgid "The campaign sidebar."
 msgstr ""
 
-#: inc/class-reach-theme.php:429
+#: inc/class-reach-theme.php:449
 msgid "Campaign below content"
 msgstr ""
 
-#: inc/class-reach-theme.php:430
+#: inc/class-reach-theme.php:450
 msgid "Displayed below the campaign's content, but above the comment section."
 msgstr ""
 
-#: inc/class-reach-theme.php:439
+#: inc/class-reach-theme.php:459
 msgid "Footer left"
 msgstr ""
 
-#: inc/class-reach-theme.php:448
+#: inc/class-reach-theme.php:468
 msgid "Footer right"
 msgstr ""
 
-#: inc/class-reach-theme.php:501
+#: inc/class-reach-theme.php:520
 msgid "Your pledge must be at least the minimum pledge amount."
 msgstr ""
 
-#: inc/class-reach-theme.php:502
+#: inc/class-reach-theme.php:521
 msgid "Years"
 msgstr ""
 
-#: inc/class-reach-theme.php:503
+#: inc/class-reach-theme.php:522
 msgid "Months"
 msgstr ""
 
-#: inc/class-reach-theme.php:504
+#: inc/class-reach-theme.php:523
 msgid "Weeks"
 msgstr ""
 
-#: inc/class-reach-theme.php:505
+#: inc/class-reach-theme.php:524
 msgid "Days"
 msgstr ""
 
-#: inc/class-reach-theme.php:506
+#: inc/class-reach-theme.php:525
 msgid "Hours"
 msgstr ""
 
-#: inc/class-reach-theme.php:507
+#: inc/class-reach-theme.php:526
 msgid "Minutes"
 msgstr ""
 
-#: inc/class-reach-theme.php:508
+#: inc/class-reach-theme.php:527
 msgid "Seconds"
 msgstr ""
 
-#: inc/class-reach-theme.php:509
+#: inc/class-reach-theme.php:528
 msgid "Year"
 msgstr ""
 
-#: inc/class-reach-theme.php:510
+#: inc/class-reach-theme.php:529
 msgid "Month"
 msgstr ""
 
-#: inc/class-reach-theme.php:511
+#: inc/class-reach-theme.php:530
 msgid "Day"
 msgstr ""
 
-#: inc/class-reach-theme.php:512
+#: inc/class-reach-theme.php:531
 msgid "Hour"
 msgstr ""
 
-#: inc/class-reach-theme.php:513
+#: inc/class-reach-theme.php:532
 msgid "Minute"
 msgstr ""
 
-#: inc/class-reach-theme.php:514
+#: inc/class-reach-theme.php:533
 msgid "Second"
 msgstr ""
 
-#: inc/class-reach-theme.php:582
+#: inc/class-reach-theme.php:601
 msgid "Page %s"
 msgstr ""
 
-#: inc/class-reach-theme.php:643
+#: inc/class-reach-theme.php:667
 msgid "Continue Reading"
 msgstr ""
 
@@ -394,6 +440,30 @@ msgstr ""
 
 #: inc/easy-digital-downloads/functions/template-tags.php:250
 msgid "Qty"
+msgstr ""
+
+#: inc/easy-google-fonts/class-reach-easy-google-fonts.php:70
+msgid "Body Text"
+msgstr ""
+
+#: inc/easy-google-fonts/class-reach-easy-google-fonts.php:71
+msgid "Please select a font for the theme's body text."
+msgstr ""
+
+#: inc/easy-google-fonts/class-reach-easy-google-fonts.php:75
+msgid "Site Title"
+msgstr ""
+
+#: inc/easy-google-fonts/class-reach-easy-google-fonts.php:76
+msgid "Please select a font for your site title."
+msgstr ""
+
+#: inc/easy-google-fonts/class-reach-easy-google-fonts.php:82
+msgid "Site Tagline"
+msgstr ""
+
+#: inc/easy-google-fonts/class-reach-easy-google-fonts.php:83
+msgid "Please select a font for your site tagline."
 msgstr ""
 
 #: inc/functions/comments.php:16
@@ -544,10 +614,6 @@ msgstr ""
 msgid "Browse by Category"
 msgstr ""
 
-#: partials/campaign-countdown.php:12
-msgid "Time left to donate"
-msgstr ""
-
 #: partials/campaign-ended.php:12
 msgid "This campaign successfully reached its funding goal and ended %s ago"
 msgstr ""
@@ -566,38 +632,6 @@ msgstr ""
 
 #: partials/campaign-grid.php:20
 msgid "Previous Campaigns"
-msgstr ""
-
-#: partials/campaign-sharing.php:12
-msgid "Share"
-msgstr ""
-
-#: partials/campaign-sharing.php:32
-msgid "Share Campaign"
-msgstr ""
-
-#: partials/campaign-sharing.php:35
-msgid "Embed Code"
-msgstr ""
-
-#: partials/campaign-sharing.php:39
-msgid "Preview"
-msgstr ""
-
-#: partials/campaign-stats.php:18
-msgid "Goal"
-msgstr ""
-
-#: partials/campaign-stats.php:22
-msgid "Donors"
-msgstr ""
-
-#: partials/campaign-status-ribbon.php:12
-msgid "Successful"
-msgstr ""
-
-#: partials/campaign-status-ribbon.php:17
-msgid "Unsuccessful"
 msgstr ""
 
 #: partials/content-none.php:13
@@ -678,6 +712,11 @@ msgstr ""
 msgid "User Dashboard"
 msgstr ""
 
+#: charitable/campaign/progress-barometer.php:27
+msgctxt "x percent funded"
+msgid "%s Funded"
+msgstr ""
+
 #: charitable/campaign-loop/creator.php:18
 msgctxt "by author"
 msgid "By"
@@ -693,7 +732,7 @@ msgctxt "post comment"
 msgid "Submit"
 msgstr ""
 
-#: inc/class-reach-theme.php:641
+#: inc/class-reach-theme.php:665
 msgctxt "keep reading post"
 msgid "Keep reading"
 msgstr ""
@@ -760,11 +799,6 @@ msgstr ""
 #: partials/author-activity.php:32
 msgctxt "user has no activity"
 msgid "has no activity to show yet."
-msgstr ""
-
-#: partials/campaign-barometer.php:20
-msgctxt "x percent funded"
-msgid "%s Funded"
 msgstr ""
 
 #: partials/meta-inside.php:2

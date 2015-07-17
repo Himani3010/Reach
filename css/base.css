@@ -3702,6 +3702,7 @@ body.user-dashboard .charitable-submit-field {
   #charitable-campaign-suggested-donations .charitable-form-field.even {
     width: 75%; } }
 .charitable-form-field-multi-checkbox ul {
+  width: 100%;
   padding: 10px;
   padding: 1rem;
   margin: 0;

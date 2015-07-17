@@ -28,7 +28,7 @@ class Reach_Theme {
 	/**
 	 * The theme version. 
 	 */
-	const VERSION = '1.0.0-20150715';
+	const VERSION = '1.0.0-20150717';
 
 	/**
 	 * Database version number. 
@@ -86,7 +86,9 @@ class Reach_Theme {
 
         $this->maybe_start_jetpack();
 
-        $this->maybe_start_tribe_events();   
+        $this->maybe_start_tribe_events();
+
+        $this->maybe_start_easy_google_fonts();   
 
         $this->maybe_start_customizer();
 
@@ -255,6 +257,24 @@ class Reach_Theme {
             add_action( 'reach_theme_start', array( 'Reach_Tribe_Events', 'start' ) );
 
             $this->active_modules[] = 'tribe-events';
+        }
+    }
+
+    /**
+     * Set up Easy Google Fonts support if it is enabled. 
+     *
+     * @return  void
+     * @access  private
+     * @since   1.0.0
+     */
+    private function maybe_start_easy_google_fonts() {
+        if ( class_exists( 'Easy_Google_Fonts' ) ) {
+
+            require_once( get_template_directory() . '/inc/easy-google-fonts/class-reach-easy-google-fonts.php' );
+
+            add_action( 'reach_theme_start', array( 'Reach_Easy_Google_Fonts', 'start' ) );
+
+            $this->active_modules[] = 'easy-google-fonts';
         }
     }
 
