@@ -1,7 +1,7 @@
 /*--------------------------------------------------------
  * Fitvids
 ---------------------------------------------------------*/
-BENNY.Fitvids = ( function( $ ){
+REACH.Fitvids = ( function( $ ){
 	return {
 		init : function() {
 			$( '.fit-video, .video-player' ).fitVids();

@@ -11,23 +11,23 @@
 
 		$('html').removeClass('no-js');
 
-		BENNY.DropdownMenus.init();
+		REACH.DropdownMenus.init();
 
-		BENNY.ResponsiveMenu.init();
+		REACH.ResponsiveMenu.init();
 
-		BENNY.CrossBrowserPlaceholders.init();
+		REACH.CrossBrowserPlaceholders.init();
 
-		BENNY.ImageHovers.init();
+		REACH.ImageHovers.init();
 
-		BENNY.Accordion.init();	
+		REACH.Accordion.init();	
 
-		BENNY.Fitvids.init();	
+		REACH.Fitvids.init();	
 
-		BENNY.LeanModal.init();
+		REACH.LeanModal.init();
 
-		if ( BENNY_CROWDFUNDING ) {
+		if ( REACH_CROWDFUNDING ) {
 
-			BENNY.Countdown.init();		
+			REACH.Countdown.init();		
 
 			$('.campaign-button').on( 'click', function() {
 				$(this).toggleClass('icon-remove');
@@ -43,15 +43,15 @@
 	}
 
   	$(window).resize( function() {
-  		if ( BENNY_CROWDFUNDING ) {
-  			BENNY.Grid.resizeGrid();
+  		if ( REACH_CROWDFUNDING ) {
+  			REACH.Grid.resizeGrid();
   		}
   	});
 
   	$(window).load( function() {
-  		if ( BENNY_CROWDFUNDING ) {
-  			BENNY.Grid.init();
-			BENNY.Barometer.init();
+  		if ( REACH_CROWDFUNDING ) {
+  			REACH.Grid.init();
+			REACH.Barometer.init();
   		}
   	});
 

@@ -1,0 +1,46 @@
+.single-campaign {  
+    #main {
+        padding-top: 0;
+    }
+
+    &.stripped #main {
+        @include padding-top( 36 );
+    }    
+
+    .content-area {
+        .campaign-image, 
+        .campaign-video {
+            border-radius: 0.4rem 0.4rem 0 0;
+        }
+
+        .fit-video {
+            margin-bottom: 0;
+        }
+
+        .campaign {
+            border-top: 0;
+            border-radius: 0 0 0.4rem 0.4rem;
+        }
+    }
+}
+
+.donation-form-display-same_page.single-campaign {
+    .content-area {
+        .campaign {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+        #charitable-donation-form {
+            @include margin-bottom( 36 );
+            @include padding( 24, 12 );
+            @include background-color( $color__background-content );
+            @include border( 1 );
+            border-top: 0;
+            border-radius: 0 0 0.4rem 0.4rem;
+        }
+    }
+}
+
+/* Campaign summary block */
+@import "campaign-summary";

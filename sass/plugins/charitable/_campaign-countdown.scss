@@ -1,0 +1,78 @@
+.campaign-countdown {
+    float: left;
+    width: 100%;
+    @include padding( 12, 0 );
+    margin-bottom: 0; 
+    @include border-top( 1, #fff );
+    @include border-bottom( 1, #fff );
+    border-color: rgba(255, 255, 255, 0.3);
+
+    .countdown {
+        text-transform: none;
+        letter-spacing: 0;
+    }
+    .countdown-rtl {
+        direction: rtl;
+    }
+    .countdown-row {
+        clear: both;
+        width: 100%;
+        @include padding( 0, 2 );
+        text-align: center;
+    }
+    .countdown-show1 .countdown-section {
+        width: 98%;
+    }
+    .countdown-show2 .countdown-section {
+        width: 48%;
+    }
+    .countdown-show3 .countdown-section {
+        width: 32.5%;
+    }
+    .countdown-show4 .countdown-section {
+        width: 24.5%;
+    }
+    .countdown-show5 .countdown-section {
+        width: 19.5%;
+    }
+    .countdown-show6 .countdown-section {
+        width: 16.25%;
+    }
+    .countdown-show7 .countdown-section {
+        width: 14%;
+    }
+    .countdown-section {
+        display: block;
+        float: left;    
+        text-align: center;
+        @include font-size( 12 );
+        font-weight: 300;
+    }
+    .countdown-amount { 
+        @include font-size( 20 );
+        line-height: 1em;
+    }
+    .countdown-period {
+        display: block;
+        width: 100%;
+    }
+}
+
+.campaign-countdown .countdown {
+    float: left; 
+    width: 68%;
+    font-style: normal; 
+}
+
+.campaign-countdown .countdown-period {
+    display: block;
+}
+
+.campaign-countdown > span:last-child {
+    float: right;
+    width: 30%;
+    @include font-size( 16 );    
+    text-align: right;
+    font-style: italic;
+    font-weight: 300;   
+}

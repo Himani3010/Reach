@@ -41,7 +41,6 @@ if ( ! function_exists( 'reach_crowdfunding_campaign_nav' ) ) :
 endif;
 
 if ( ! function_exists( 'reach_campaign_ended_text' ) ) : 
-
     /**
      * Return the text to display when a campaign has finished. 
      *
@@ -51,11 +50,9 @@ if ( ! function_exists( 'reach_campaign_ended_text' ) ) :
     function reach_campaign_ended_text() {
         return sprintf( '<span>%s</span> %s', __( 'Campaign', 'reach' ), __( 'has ended', 'reach' ) );
     }
-
 endif;
 
 if ( ! function_exists( 'reach_template_campaign_loop_stats' ) ) : 
-
     /**
      * Display the campaign stats inside the campaign.
      *
@@ -66,11 +63,9 @@ if ( ! function_exists( 'reach_template_campaign_loop_stats' ) ) :
     function reach_template_campaign_loop_stats( Charitable_Campaign $campaign ) {
         charitable_template( 'campaign-loop/stats.php', array( 'campaign' => $campaign ) );
     }
-
 endif;
 
 if ( ! function_exists( 'reach_template_campaign_loop_creator' ) ) : 
-
     /**
      * Display the campaign stats inside the campaign.
      *
@@ -81,7 +76,151 @@ if ( ! function_exists( 'reach_template_campaign_loop_creator' ) ) :
     function reach_template_campaign_loop_creator( Charitable_Campaign $campaign ) {
         charitable_template( 'campaign-loop/creator.php', array( 'campaign' => $campaign ) );
     }
-
 endif;
+
+if ( ! function_exists( 'reach_template_campaign_summary' ) ) : 
+    /**
+     * Display the campaign summary block. 
+     *
+     * @param   Charitable_Campaign $campaign
+     * @return  void
+     * @since   1.0.0
+     */
+    function reach_template_campaign_summary( Charitable_Campaign $campaign ) {
+        charitable_template( 'campaign/summary.php', array( 'campaign' => $campaign ) );
+    }
+endif;
+
+if ( ! function_exists( 'reach_template_campaign_title' ) ) : 
+    /**
+     * Display the campaign title. 
+     *
+     * @param   Charitable_Campaign $campaign
+     * @return  void
+     * @since   1.0.0
+     */
+    function reach_template_campaign_title( Charitable_Campaign $campaign ) {
+        charitable_template( 'campaign/title.php', array( 'campaign' => $campaign ) );
+    }
+endif;
+
+if ( ! function_exists( 'reach_template_campaign_featured_image' ) ) : 
+    /**
+     * Display the campaign featured image. 
+     *
+     * @param   Charitable_Campaign $campaign
+     * @return  void
+     * @since   1.0.0
+     */
+    function reach_template_campaign_featured_image( Charitable_Campaign $campaign ) {
+        charitable_template( 'campaign/featured-image.php', array( 'campaign' => $campaign ) );
+    }
+endif;
+
+if ( ! function_exists( 'reach_template_campaign_progress_barometer' ) ) : 
+    /**
+     * Display the campaign progress barometer. 
+     *
+     * @param   Charitable_Campaign $campaign
+     * @return  void
+     * @since   1.0.0
+     */
+    function reach_template_campaign_progress_barometer( Charitable_Campaign $campaign ) {
+        charitable_template( 'campaign/progress-barometer.php', array( 'campaign' => $campaign ) );
+    }
+endif;
+
+if ( ! function_exists( 'reach_template_campaign_stats' ) ) : 
+    /**
+     * Display the campaign stats. 
+     *
+     * @param   Charitable_Campaign $campaign
+     * @return  void
+     * @since   1.0.0
+     */
+    function reach_template_campaign_stats( Charitable_Campaign $campaign ) {
+        charitable_template( 'campaign/stats.php', array( 'campaign' => $campaign ) );
+    }
+endif;
+
+if ( ! function_exists( 'reach_template_campaign_share' ) ) : 
+    /**
+     * Display the campaign sharing icons. 
+     *
+     * @param   Charitable_Campaign $campaign
+     * @return  void
+     * @since   1.0.0
+     */
+    function reach_template_campaign_share( Charitable_Campaign $campaign ) {
+        charitable_template( 'campaign/share.php', array( 'campaign' => $campaign ) );
+    }    
+endif;
+
+if ( ! function_exists( 'reach_template_campaign_after_content_widget_area' ) ) : 
+    /**
+     * Add a widget-ready area below the campaign content.
+     *
+     * @return  void
+     * @since   1.0.0
+     */
+    function reach_template_campaign_after_content_widget_area() {
+        get_sidebar( 'campaign-after' );
+    }
+endif;
+
+if ( ! function_exists( 'reach_template_campaign_comments' ) ) : 
+    /**
+     * Add the campaign comments below the content.
+     *
+     * @return  void
+     * @since   1.0.0
+     */
+    function reach_template_campaign_comments() {
+        comments_template( '/comments-campaign.php', true );
+    }
+endif;
+
+if ( ! function_exists( 'reach_template_campaign_media_before_summary' ) ) :
+    /**
+     * Add the media element to display before the campaign summary. 
+     *
+     * @param   Charitable_Campaign $campaign
+     * @return  void
+     * @since   1.0.0
+     */
+    function reach_template_campaign_media_before_summary( Charitable_Campaign $campaign ) {
+        $media = reach_get_theme()->get_theme_setting( 'campaign_media_placement', 'featured_image_in_summary' );
+        
+        if ( 'video_in_summary' == $media ) {
+            charitable_template_campaign_video( $campaign );
+        }
+        else {        
+            reach_template_campaign_featured_image( $campaign );
+        }
+    }
+endif;
+
+if ( ! function_exists( 'reach_template_campaign_media_before_content' ) ) :
+    /**
+     * Add the media element to display before the campaign summary. 
+     *
+     * @param   Charitable_Campaign $campaign
+     * @return  void
+     * @since   1.0.0
+     */
+    function reach_template_campaign_media_before_content( Charitable_Campaign $campaign ) {
+        $media = reach_get_theme()->get_theme_setting( 'campaign_media_placement', 'featured_image_in_summary' );
+
+        if ( 'video_in_summary' == $media ) {
+            reach_template_campaign_featured_image( $campaign );
+        }
+        else {
+            charitable_template_campaign_video( $campaign );
+        }
+    }
+endif;
+
+
+
 
 

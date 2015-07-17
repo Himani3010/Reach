@@ -1,7 +1,7 @@
 /*--------------------------------------------------------
  * Fancy Select Elements
 ---------------------------------------------------------*/
-BENNY.FancySelect = ( function( $ ){
+REACH.FancySelect = ( function( $ ){
 	return {
 		init : function() {
 			var $select = $('select'), 

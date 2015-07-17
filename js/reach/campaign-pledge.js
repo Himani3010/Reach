@@ -1,7 +1,7 @@
 /*--------------------------------------------------------
  * Campaign Pledges
 ---------------------------------------------------------*/
-BENNY.Pledging = ( function( $ ) {
+REACH.Pledging = ( function( $ ) {
 
 	var $scope 		= $('#charitable-edd-pledge-form'),
 		$form 		= $scope.find('.edd_download_purchase_form'),
@@ -28,7 +28,7 @@ BENNY.Pledging = ( function( $ ) {
 		if ( parseInt( $minpledge.data('price') ) > new_pledge ) {
 
 			// Explain that the pledge has to be at least the minimum
-			alert( BENNY.need_minimum_pledge );
+			alert( REACH.need_minimum_pledge );
 
 			// Select the minimum pledge amount
 			$minpledge.find('input').prop('checked', true);

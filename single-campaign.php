@@ -6,42 +6,53 @@
  */
 get_header();
 
-	if ( have_posts() ) :
-		while( have_posts() ) :
-			the_post();
-			?>
-			<main class="site-main" role="main">				
-			
-				<?php do_action( 'charitable_single_campaign_before' ) ?>
-				
-				<?php get_template_part( 'partials/campaign', 'summary' ) ?>
+if ( have_posts() ) :
+	while( have_posts() ) :
+		the_post();
 
-				<div class="layout-wrapper">
-				
-					<?php get_template_part( 'partials/campaign', 'video' ) ?>
+		$campaign = charitable_get_current_campaign();
+		?>
+		<main class="site-main" role="main">				
+			<?php 
+			/**
+			 * @hook charitable_single_campaign_before
+			 */
+			do_action( 'charitable_single_campaign_before', $campaign );
 
-					<div class="content-area">
-		
-						<!-- Campaign content -->					
-						<?php get_template_part( 'partials/content', 'campaign' ) ?>
-						<!-- End campaign content -->
+			?>				
+			<div class="layout-wrapper">
+				<div class="content-area">
+					<?php
+					/**
+					 * @hook charitable_campaign_content_before
+					 */
+					do_action( 'charitable_campaign_content_before', $campaign ); 
+					
+					get_template_part( 'partials/content', 'campaign' );
+					
+					/**
+			         * @hook charitable_campaign_content_after
+			         */
+    				do_action( 'charitable_campaign_content_after', $campaign ); 
+ 
+					?>
+				</div><!-- .content-area -->
 
-						<!-- "Campaign Below Content" sidebar -->
-						<?php get_sidebar( 'campaign-after' ) ?>
-						<!-- End "Campaign Below Content" sidebar -->
+				<?php get_sidebar( 'campaign' ) ?>					
 
-						<?php comments_template( '/comments-campaign.php', true ) ?>
+			</div><!-- .layout-wrapper -->
+            <?php 
+            /**
+             * @hook charitable_single_campaign_after
+             */
+            do_action( 'charitable_single_campaign_after' );
 
-					</div>
-					<?php get_sidebar( 'campaign' ) ?>
+            ?>
+		</main>
+	<?php 
+	endwhile;
+endif;
 
-					<?php do_action( 'charitable_single_campaign_after' ) ?>
-				</div><!-- .layout-wrapper -->
-			</main>
-		<?php 
-		endwhile;
-	endif;
-	
-	get_template_part( 'partials/campaign', 'share-modal' );
+get_template_part( 'partials/campaign', 'share-modal' );
 	
 get_footer();

@@ -1,4 +1,4 @@
 /*--------------------------------------------------------
- * BENNY is the core object containing all components.
+ * REACH is the core object containing all components.
 ---------------------------------------------------------*/
-var BENNY = {};
+var REACH = {};

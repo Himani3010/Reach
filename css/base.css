@@ -314,10 +314,11 @@ th,
 .widget_crowdfunding_stats_widget li span,
 .campaign-status-tag,
 .tabs .tab-title,
-.charitable-fes-campaign-creator-toolbar a,
+.charitable-campaign-creator-toolbar a,
 .donation-amounts .amount,
 .donation-amounts .custom-donation-amount,
-.widget.widget_charitable_donation_stats_widget .figure {
+.widget.widget_charitable_donation_stats_widget .figure,
+.campaign-finished {
   font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -1085,11 +1086,11 @@ a {
 /*--------------------------------------------------------------
 8.0 Clearings
 --------------------------------------------------------------*/
-.cf:before, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form:before, #secondary .widget.widget_charitable_donation_stats_widget .donation-stats:before, .charitable-donation-form .donation-amounts:before, .charitable-repeatable-form-field-table .repeatable-field-wrapper:before, #edd_checkout_wrap #edd_checkout_form_wrap:before, .widget.widget_pp_campaign_events .edd_download_purchase_form:before, .event-tickets li:before,
+.cf:before, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form:before, #secondary .widget.widget_charitable_donation_stats_widget .donation-stats:before, #charitable-donation-form .donation-amounts:before, .charitable-repeatable-form-field-table .repeatable-field-wrapper:before, #edd_checkout_wrap #edd_checkout_form_wrap:before, .widget.widget_pp_campaign_events .edd_download_purchase_form:before, .event-tickets li:before,
 .cf:after,
 .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form:after,
 #secondary .widget.widget_charitable_donation_stats_widget .donation-stats:after,
-.charitable-donation-form .donation-amounts:after,
+#charitable-donation-form .donation-amounts:after,
 .charitable-repeatable-form-field-table .repeatable-field-wrapper:after,
 #edd_checkout_wrap #edd_checkout_form_wrap:after,
 .widget.widget_pp_campaign_events .edd_download_purchase_form:after,
@@ -1097,7 +1098,7 @@ a {
   content: "";
   display: table; }
 
-.cf:after, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form:after, #secondary .widget.widget_charitable_donation_stats_widget .donation-stats:after, .charitable-donation-form .donation-amounts:after, .charitable-repeatable-form-field-table .repeatable-field-wrapper:after, #edd_checkout_wrap #edd_checkout_form_wrap:after, .widget.widget_pp_campaign_events .edd_download_purchase_form:after, .event-tickets li:after {
+.cf:after, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form:after, #secondary .widget.widget_charitable_donation_stats_widget .donation-stats:after, #charitable-donation-form .donation-amounts:after, .charitable-repeatable-form-field-table .repeatable-field-wrapper:after, #edd_checkout_wrap #edd_checkout_form_wrap:after, .widget.widget_pp_campaign_events .edd_download_purchase_form:after, .event-tickets li:after {
   clear: both; }
 
 /*-------------------------------------------------------------- 
@@ -3288,7 +3289,7 @@ embed {
   background: transparent; }
   .campaign-donation-page.stripped .site-main .entry-block {
     padding: 0; }
-.campaign-donation-page.stripped .charitable-donation-form {
+.campaign-donation-page.stripped #charitable-donation-form {
   padding: 36px;
   padding: 3.6rem;
   border-width: 1px;
@@ -3298,23 +3299,23 @@ embed {
   border-radius: 0 0 0.4rem 0.4rem;
   box-shadow: 0 0 1px #ffffff; }
   @media (min-width: 50em) {
-    .campaign-donation-page.stripped .charitable-donation-form {
+    .campaign-donation-page.stripped #charitable-donation-form {
       float: left;
       width: 70%;
       padding-right: 36px;
       padding-right: 3.6rem; } }
 
-.charitable-donation-form .charitable-form-header {
+#charitable-donation-form .charitable-form-header {
   margin-top: 0;
   font-size: 16px;
   font-size: 1.6rem; }
-.charitable-donation-form .donation-amounts {
+#charitable-donation-form .donation-amounts {
   margin-bottom: 30px;
   margin-bottom: 3rem; }
-  .charitable-donation-form .donation-amounts .donation-amount {
+  #charitable-donation-form .donation-amounts .donation-amount {
     width: 100%; }
     @media (min-width: 37.5em) {
-      .charitable-donation-form .donation-amounts .donation-amount {
+      #charitable-donation-form .donation-amounts .donation-amount {
         float: left;
         width: 48%;
         margin-top: 0;
@@ -3322,23 +3323,23 @@ embed {
         margin-bottom: 12px;
         margin-bottom: 1.2rem;
         margin-left: 4%; }
-        .charitable-donation-form .donation-amounts .donation-amount:nth-child(2n + 1) {
+        #charitable-donation-form .donation-amounts .donation-amount:nth-child(2n + 1) {
           margin-left: 0;
           clear: left; } }
-.charitable-donation-form #custom-donation-amount-field {
+#charitable-donation-form #custom-donation-amount-field {
   margin: 12px 0px 0px;
   margin: 1.2rem 0rem 0rem; }
-  .charitable-donation-form #custom-donation-amount-field.charitable-custom-donation-field-alone {
+  #charitable-donation-form #custom-donation-amount-field.charitable-custom-donation-field-alone {
     margin-bottom: 36px;
     margin-bottom: 3.6rem; }
-.charitable-donation-form .charitable-connected-downloads {
+#charitable-donation-form .charitable-connected-downloads {
   margin-bottom: 24px;
   margin-bottom: 2.4rem;
   border-width: 2px;
   border-width: 0.2rem;
   border-style: solid;
   border-radius: 0.4rem; }
-.charitable-donation-form .charitable-edd-connected-download {
+#charitable-donation-form .charitable-edd-connected-download {
   position: relative;
   padding: 24px 12px 24px 12px;
   padding: 2.4rem 1.2rem 2.4rem 1.2rem;
@@ -3346,42 +3347,42 @@ embed {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   cursor: pointer; }
-  .charitable-donation-form .charitable-edd-connected-download:last-of-type {
+  #charitable-donation-form .charitable-edd-connected-download:last-of-type {
     border: none; }
-.charitable-donation-form .edd-price-option-price {
+#charitable-donation-form .edd-price-option-price {
   font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
   font-size: 1.6rem; }
-  .charitable-donation-form .edd-price-option-price .currency {
+  #charitable-donation-form .edd-price-option-price .currency {
     padding-left: 2px;
     padding-left: 0.2rem;
     font-size: 14px;
     font-size: 1.4rem; }
-.charitable-donation-form .charitable-edd-download-select {
+#charitable-donation-form .charitable-edd-download-select {
   position: relative;
   bottom: 2px;
   bottom: 0.2rem;
   width: 20px;
   width: 2rem; }
-.charitable-donation-form .charitable-option-no-download {
+#charitable-donation-form .charitable-option-no-download {
   font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
   font-size: 1.6rem;
   text-transform: uppercase; }
-.charitable-donation-form .charitable-edd-connected-download-description {
+#charitable-donation-form .charitable-edd-connected-download-description {
   padding-top: 12px;
   padding-top: 1.2rem; }
-  .charitable-donation-form .charitable-edd-connected-download-description .download-title {
+  #charitable-donation-form .charitable-edd-connected-download-description .download-title {
     margin-top: 0; }
   @media (min-width: 50em) {
-    .charitable-donation-form .charitable-edd-connected-download-description {
+    #charitable-donation-form .charitable-edd-connected-download-description {
       padding-top: 0; } }
-.charitable-donation-form .charitable-edd-price-options ul {
+#charitable-donation-form .charitable-edd-price-options ul {
   list-style-type: none;
   padding-left: 0; }
-.charitable-donation-form .charitable-edd-price-options .edd-price-option-price {
+#charitable-donation-form .charitable-edd-price-options .edd-price-option-price {
   position: static; }
-.charitable-donation-form .charitable-form-field .button {
+#charitable-donation-form .charitable-form-field .button {
   display: inline-block;
   padding: 8px 20px;
   padding: 0.8rem 2rem;
@@ -3410,7 +3411,7 @@ embed {
   transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
   margin: 0;
   width: auto; }
-  .charitable-donation-form .charitable-form-field .button:hover {
+  #charitable-donation-form .charitable-form-field .button:hover {
     text-decoration: none; }
 
 .donation-amounts .donation-amount {
@@ -3427,12 +3428,14 @@ embed {
   border-radius: 0.4rem; }
   .donation-amounts .donation-amount .amount {
     display: block;
-    margin-bottom: 6px;
-    margin-bottom: 0.6rem;
     font-size: 18px;
     font-size: 1.8rem; }
   .donation-amounts .donation-amount .description {
-    display: block; }
+    display: block;
+    margin-top: 6px;
+    margin-top: 0.6rem; }
+    .donation-amounts .donation-amount .description:empty {
+      display: none; }
   .donation-amounts .donation-amount.custom-donation-amount {
     width: 100%;
     margin-left: 0; }
@@ -3897,14 +3900,37 @@ body > .select2-container--open .select2-dropdown--above {
   border-width: 0.2rem 0.2rem 0rem; }
 
 /*--------------------------------------------------------------
-18.1.8 Campaign Summary
+18.1.8 Campaign Page
 --------------------------------------------------------------*/
 .single-campaign #main {
   padding-top: 0; }
 .single-campaign.stripped #main {
   padding-top: 36px;
   padding-top: 3.6rem; }
+.single-campaign .content-area .campaign-image,
+.single-campaign .content-area .campaign-video {
+  border-radius: 0.4rem 0.4rem 0 0; }
+.single-campaign .content-area .fit-video {
+  margin-bottom: 0; }
+.single-campaign .content-area .campaign {
+  border-top: 0;
+  border-radius: 0 0 0.4rem 0.4rem; }
 
+.donation-form-display-same_page.single-campaign .content-area .campaign {
+  margin-bottom: 0;
+  border-radius: 0; }
+.donation-form-display-same_page.single-campaign .content-area #charitable-donation-form {
+  margin-bottom: 36px;
+  margin-bottom: 3.6rem;
+  padding: 24px 12px;
+  padding: 2.4rem 1.2rem;
+  border-width: 1px;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-top: 0;
+  border-radius: 0 0 0.4rem 0.4rem; }
+
+/* Campaign summary block */
 .campaign-summary {
   margin-bottom: 36px;
   margin-bottom: 3.6rem; }
@@ -3924,10 +3950,19 @@ body > .select2-container--open .select2-dropdown--above {
     line-height: 3.2rem; }
     .campaign-summary .campaign-description p:last-child {
       margin-bottom: 0; }
+  .campaign-summary .campaign-video,
   .campaign-summary .campaign-image {
     float: left;
     margin: 0px 0px 36px;
     margin: 0rem 0rem 3.6rem; }
+  .campaign-summary .campaign-video {
+    border-width: 5px;
+    border-width: 0.5rem;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.3);
+    border-radius: 0.4rem; }
+    .campaign-summary .campaign-video .fit-video {
+      margin-bottom: 0; }
   .campaign-summary .wp-post-image {
     width: 100%; }
   .campaign-summary .campaign-details {
@@ -3947,9 +3982,13 @@ body > .select2-container--open .select2-dropdown--above {
     padding: 1.2rem 2rem;
     font-size: 25px;
     font-size: 2.5rem; }
-  .campaign-summary .campaign-ended {
+  .campaign-summary .campaign-finished {
     margin-bottom: 24px;
     margin-bottom: 2.4rem;
+    font-size: 20px;
+    font-size: 2rem;
+    line-height: 30px;
+    line-height: 3rem;
     text-align: center;
     text-transform: uppercase;
     font-weight: 300; }
@@ -4086,6 +4125,7 @@ body > .select2-container--open .select2-dropdown--above {
       .campaign-summary.ended .campaign-summary ul {
         margin-top: 4.8rem; } }
   @media (min-width: 55em) {
+    .campaign-summary .campaign-video,
     .campaign-summary .campaign-image {
       width: 50%;
       width: -moz-calc(100% - 43rem);
@@ -4093,6 +4133,7 @@ body > .select2-container--open .select2-dropdown--above {
       width: calc(100% - 43rem);
       float: left;
       margin-right: 0; }
+      .campaign-summary .campaign-video .wp-post-image,
       .campaign-summary .campaign-image .wp-post-image {
         border-width: 5px;
         border-width: 0.5rem;
@@ -4114,14 +4155,19 @@ body > .select2-container--open .select2-dropdown--above {
       width: 38rem;
       margin-left: 0; } }
 
+/* Countdown */
 .campaign-countdown {
   float: left;
   width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 12px 0px;
+  padding: 1.2rem 0rem;
   margin-bottom: 0;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-top-width: 1px;
+  border-top-width: 0.1rem;
+  border-top-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
   border-color: rgba(255, 255, 255, 0.3); }
   .campaign-countdown .countdown {
     text-transform: none;
@@ -4132,6 +4178,7 @@ body > .select2-container--open .select2-dropdown--above {
     clear: both;
     width: 100%;
     padding: 0px 2px;
+    padding: 0rem 0.2rem;
     text-align: center; }
   .campaign-countdown .countdown-show1 .countdown-section {
     width: 98%; }
@@ -4171,13 +4218,13 @@ body > .select2-container--open .select2-dropdown--above {
   display: block; }
 
 .campaign-countdown > span:last-child {
+  float: right;
+  width: 30%;
   font-size: 16px;
   font-size: 1.6rem;
-  float: right;
   text-align: right;
   font-style: italic;
-  font-weight: 300;
-  width: 30%; }
+  font-weight: 300; }
 
 .share-widget .modal {
   text-align: left; }
@@ -4202,7 +4249,7 @@ body > .select2-container--open .select2-dropdown--above {
       float: right;
       padding: 0; } }
 
-.charitable-fes-campaign-creator-toolbar {
+.charitable-ambassadors-campaign-creator-toolbar {
   position: relative;
   left: -24px;
   width: -webkit-calc( 100% + 48px );
@@ -4211,15 +4258,15 @@ body > .select2-container--open .select2-dropdown--above {
   padding: 12px 45px;
   padding: 1.2rem 4.5rem; }
   @media (min-width: 50em) {
-    .charitable-fes-campaign-creator-toolbar {
+    .charitable-ambassadors-campaign-creator-toolbar {
       left: -45px;
       width: -webkit-calc( 100% + 90px );
       width: -moz-calc( 100% + 90px );
       width: calc( 100% + 90px ); } }
-  .charitable-fes-campaign-creator-toolbar a {
+  .charitable-ambassadors-campaign-creator-toolbar a {
     float: right;
     font-weight: 100; }
-  .charitable-fes-campaign-creator-toolbar .edit-link::before {
+  .charitable-ambassadors-campaign-creator-toolbar .edit-link::before {
     font-family: "Reach-Icons";
     speak: none;
     font-style: normal;
@@ -4231,7 +4278,7 @@ body > .select2-container--open .select2-dropdown--above {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     content: "\f040"; }
-  .charitable-fes-campaign-creator-toolbar .campaign-status {
+  .charitable-ambassadors-campaign-creator-toolbar .campaign-status {
     color: rgba(255, 255, 255, 0.5); }
 
 /*--------------------------------------------------------------  

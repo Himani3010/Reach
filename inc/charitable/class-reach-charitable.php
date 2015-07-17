@@ -69,17 +69,19 @@ class Reach_Charitable {
 	 * @since 	2.0.0
 	 */
 	private function attach_hooks_and_filters() {
-		remove_filter( 'the_content', array( charitable_get_helper( 'templates' ), 'campaign_content' ), 2 );
+		// add_action( 'charitable_single_campaign_before', array( $this, 'campaign_media_placement' ) );
+
 		add_filter( 'reach_script_dependencies', array( $this, 'setup_script_dependencies' ) );
+		add_filter( 'body_class', array( $this, 'add_body_classes' ) );
 		add_filter( 'reach_banner_title', array( $this, 'set_banner_title' ) );
 		add_filter( 'charitable_campaign_ended', 'reach_campaign_ended_text' );		
 		add_filter( 'charitable_force_user_dashboard_template', '__return_true' );
 		add_filter( 'charitable_campaign_submission_campaign_fields', array( $this, 'campaign_submission_fields' ) );
-		add_filter( 'charitable_fes_my_campaign_thumbnail_size', array( $this, 'my_campaign_thumbnail_size' ) );
+		add_filter( 'charitable_ambassadors_my_campaign_thumbnail_size', array( $this, 'my_campaign_thumbnail_size' ) );
 		add_filter( 'charitable_use_campaign_template', '__return_false' );
 		add_filter( 'charitable_modal_window_class', array( $this, 'modal_window_class' ) );
 		add_filter( 'charitable_campaign_video_embed_args', array( $this, 'video_embed_args' ), 5 );
-	}	
+	}
 
 	/**
 	 * Register scripts required for crowdfunding functionality. 
@@ -91,7 +93,7 @@ class Reach_Charitable {
 	 */
 	public function setup_script_dependencies( $dependencies ) {
 		$dependencies[] = 'raphael';
-		$dependencies[] = 'jquery-masonry';		
+		$dependencies[] = 'jquery-masonry';
 		
 		wp_register_script( 'raphael', get_template_directory_uri() . '/js/vendors/raphael/raphael-min.js', array( 'jquery' ), reach_get_theme()->get_theme_version(), true );
 
@@ -103,6 +105,30 @@ class Reach_Charitable {
         }
 
 		return $dependencies;
+	}
+
+	/**
+	 * If we are viewing a single campaign page, add a class to the body for the style of donation form.	
+	 *
+	 * @param 	string[] $classes
+	 * @return  string[]
+	 * @access  public
+	 * @since   1.0.0
+	 */
+	public function add_body_classes( $classes ) {
+		if ( charitable_is_campaign_page() ) {
+
+			$campaign = new Charitable_Campaign( get_the_ID() );
+
+			if ( $campaign->has_ended() ) {
+				$classes[] = 'campaign-ended';
+			}
+			else {
+				$classes[] = 'donation-form-display-' . charitable_get_option( 'donation_form_display', 'separate_page' );
+			}
+		}
+
+		return $classes;
 	}
 
 	/**

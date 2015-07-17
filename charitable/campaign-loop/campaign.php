@@ -5,7 +5,7 @@
  * Override this template by copying it to yourtheme/charitable/campaign-loop/campaign.php
  *
  * @author  Studio 164a
- * @package Charitable/Templates/Campaign
+ * @package Reach
  * @since   1.0.0
  * @version 1.0.0
  */

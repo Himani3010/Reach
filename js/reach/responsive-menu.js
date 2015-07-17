@@ -1,7 +1,7 @@
 /*--------------------------------------------------------
  * Responsive Menus
 ---------------------------------------------------------*/
-BENNY.ResponsiveMenu = ( function( $ ) {
+REACH.ResponsiveMenu = ( function( $ ) {
 	return {
 		init : function() {
 			var $container, 

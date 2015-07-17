@@ -1,7 +1,7 @@
 /*--------------------------------------------------------
  * Dropdown Menus
 ---------------------------------------------------------*/
-BENNY.DropdownMenus = ( function( $ ){	
+REACH.DropdownMenus = ( function( $ ){	
 	return {
 		init : function() {
 			$('.menu li')

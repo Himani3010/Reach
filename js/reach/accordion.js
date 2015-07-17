@@ -1,7 +1,7 @@
 /*--------------------------------------------------------
  * Accordion
 ---------------------------------------------------------*/
-BENNY.Accordion = ( function( $ ){
+REACH.Accordion = ( function( $ ){
 	return {
 		init : function() {
 			if ( $.fn.accordion ) {

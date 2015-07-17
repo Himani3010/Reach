@@ -359,8 +359,8 @@ class Reach_Theme {
 		 * @link 	http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 		 */
 		add_theme_support( 'post-thumbnails' );
-        set_post_thumbnail_size( 706, 0, false );
-        add_image_size( 'campaign-thumbnail', 640, 427, true );
+        set_post_thumbnail_size( 786, 0, false );
+        add_image_size( 'campaign-thumbnail-summary', 640, 427, true );
         add_image_size( 'campaign-thumbnail-medium', 527, 351, true );
         add_image_size( 'campaign-thumbnail-small', 351, 234, true );
         add_image_size( 'widget-thumbnail', 294, 882, false );
@@ -475,14 +475,13 @@ class Reach_Theme {
             'jquery-ui-accordion', 
             'audio-js', 
             'rrssb',
-            'hoverIntent', 
-            'lean-modal',
+            'hoverIntent',             
             'fitvids',
             'jquery' 
         ) );
 
         if ( ! wp_script_is( 'lean-modal', 'registered' ) ) {
-            wp_register_script( 'lean-modal', $theme_dir . '/js/vendors/leanmodal/jquery.leanModal' . $ext, array( 'jquery' ), $this->get_theme_version(), true);
+            wp_register_script( 'lean-modal', $theme_dir . '/js/vendors/leanmodal/jquery.leanModal' . $ext, array( 'jquery' ), $this->get_theme_version(), true );            
         }
 
         wp_register_script( 'audio-js', $theme_dir . '/js/vendors/audiojs/audio.min.js', array(), $this->get_theme_version(), true);
@@ -497,7 +496,7 @@ class Reach_Theme {
 		}
 
 		if ( reach_has_charitable() ) {
-			wp_localize_script('reach', 'BENNY_CROWDFUNDING', array(
+			wp_localize_script('reach', 'REACH_CROWDFUNDING', array(
 	            'need_minimum_pledge'   => __( 'Your pledge must be at least the minimum pledge amount.', 'reach' ), 
 	            'years'                 => __( 'Years', 'reach' ), 
 	            'months'                => __( 'Months', 'reach' ), 

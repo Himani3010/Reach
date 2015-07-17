@@ -44,10 +44,11 @@ th,
 .widget_crowdfunding_stats_widget li span, 
 .campaign-status-tag, 
 .tabs .tab-title, 
-.charitable-fes-campaign-creator-toolbar a, 
+.charitable-campaign-creator-toolbar a, 
 .donation-amounts .amount, 
 .donation-amounts .custom-donation-amount, 
-.widget.widget_charitable_donation_stats_widget .figure {
+.widget.widget_charitable_donation_stats_widget .figure,
+.campaign-finished {
 	font-family: $font__secondary;
 	text-transform: uppercase;
 	@include letter-spacing(2);

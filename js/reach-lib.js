@@ -1,14 +1,14 @@
 /*! reach - v2.0.0 - 2015-07-16 */
 
 /*--------------------------------------------------------
- * BENNY is the core object containing all components.
+ * REACH is the core object containing all components.
 ---------------------------------------------------------*/
-var BENNY = {};
+var REACH = {};
 
 ;/*--------------------------------------------------------
  * Accordion
 ---------------------------------------------------------*/
-BENNY.Accordion = ( function( $ ){
+REACH.Accordion = ( function( $ ){
 	return {
 		init : function() {
 			if ( $.fn.accordion ) {
@@ -25,7 +25,7 @@ BENNY.Accordion = ( function( $ ){
 ;/*--------------------------------------------------------
  * Campaign Barometer
 ---------------------------------------------------------*/
-BENNY.Barometer = ( function($) {
+REACH.Barometer = ( function($) {
 
 	// Barometers collection
 	var $barometers = $('.barometer'), 
@@ -145,7 +145,7 @@ BENNY.Barometer = ( function($) {
 ;/*--------------------------------------------------------
  * Campaign Countdown
 ---------------------------------------------------------*/
-BENNY.Countdown = ( function( $ ) {
+REACH.Countdown = ( function( $ ) {
 
 	// Start the countdown script
 	var startCountdown = function() {
@@ -154,10 +154,10 @@ BENNY.Countdown = ( function( $ ) {
 		if ($countdown.length) {
 			
 			$countdown.countdown({
-				until: $.countdown.UTCDate( BENNY_CROWDFUNDING.timezone_offset, new Date( $countdown.data().enddate ) ), 
+				until: $.countdown.UTCDate( REACH_CROWDFUNDING.timezone_offset, new Date( $countdown.data().enddate ) ), 
 				format: 'dHMS', 
-				labels : [BENNY_CROWDFUNDING.years, BENNY_CROWDFUNDING.months, BENNY_CROWDFUNDING.weeks, BENNY_CROWDFUNDING.days, BENNY_CROWDFUNDING.hours, BENNY_CROWDFUNDING.minutes, BENNY_CROWDFUNDING.seconds],
-				labels1 : [BENNY_CROWDFUNDING.year, BENNY_CROWDFUNDING.month, BENNY_CROWDFUNDING.week, BENNY_CROWDFUNDING.day, BENNY_CROWDFUNDING.hour, BENNY_CROWDFUNDING.minute, BENNY_CROWDFUNDING.second]
+				labels : [REACH_CROWDFUNDING.years, REACH_CROWDFUNDING.months, REACH_CROWDFUNDING.weeks, REACH_CROWDFUNDING.days, REACH_CROWDFUNDING.hours, REACH_CROWDFUNDING.minutes, REACH_CROWDFUNDING.seconds],
+				labels1 : [REACH_CROWDFUNDING.year, REACH_CROWDFUNDING.month, REACH_CROWDFUNDING.week, REACH_CROWDFUNDING.day, REACH_CROWDFUNDING.hour, REACH_CROWDFUNDING.minute, REACH_CROWDFUNDING.second]
 			});
 		}		
 
@@ -174,7 +174,7 @@ BENNY.Countdown = ( function( $ ) {
 ;/*--------------------------------------------------------
  * Campaign Grid
 ---------------------------------------------------------*/
-BENNY.Grid = ( function( $ ) {
+REACH.Grid = ( function( $ ) {
 
 	var $grids = $('.masonry-grid');
 
@@ -209,7 +209,7 @@ BENNY.Grid = ( function( $ ) {
 ;/*--------------------------------------------------------
  * Campaign Pledges
 ---------------------------------------------------------*/
-BENNY.Pledging = ( function( $ ) {
+REACH.Pledging = ( function( $ ) {
 
 	var $scope 		= $('#charitable-edd-pledge-form'),
 		$form 		= $scope.find('.edd_download_purchase_form'),
@@ -236,7 +236,7 @@ BENNY.Pledging = ( function( $ ) {
 		if ( parseInt( $minpledge.data('price') ) > new_pledge ) {
 
 			// Explain that the pledge has to be at least the minimum
-			alert( BENNY.need_minimum_pledge );
+			alert( REACH.need_minimum_pledge );
 
 			// Select the minimum pledge amount
 			$minpledge.find('input').prop('checked', true);
@@ -287,7 +287,7 @@ BENNY.Pledging = ( function( $ ) {
  * attribute will still display the placeholder value as a 
  * preset value inside the element.
 ---------------------------------------------------------*/
-BENNY.CrossBrowserPlaceholders = ( function( $ ) {	
+REACH.CrossBrowserPlaceholders = ( function( $ ) {	
 	return {
 		init : function() {
 			var $form_elements = $(':text,textarea');
@@ -325,7 +325,7 @@ BENNY.CrossBrowserPlaceholders = ( function( $ ) {
 ;/*--------------------------------------------------------
  * Dropdown Menus
 ---------------------------------------------------------*/
-BENNY.DropdownMenus = ( function( $ ){	
+REACH.DropdownMenus = ( function( $ ){	
 	return {
 		init : function() {
 			$('.menu li')
@@ -342,7 +342,7 @@ BENNY.DropdownMenus = ( function( $ ){
 ;/*--------------------------------------------------------
  * Fancy Select Elements
 ---------------------------------------------------------*/
-BENNY.FancySelect = ( function( $ ){
+REACH.FancySelect = ( function( $ ){
 	return {
 		init : function() {
 			var $select = $('select'), 
@@ -371,7 +371,7 @@ BENNY.FancySelect = ( function( $ ){
 ;/*--------------------------------------------------------
  * Fitvids
 ---------------------------------------------------------*/
-BENNY.Fitvids = ( function( $ ){
+REACH.Fitvids = ( function( $ ){
 	return {
 		init : function() {
 			$( '.fit-video, .video-player' ).fitVids();
@@ -382,7 +382,7 @@ BENNY.Fitvids = ( function( $ ){
 ;/*--------------------------------------------------------
  * Image Hovers
 ---------------------------------------------------------*/
-BENNY.ImageHovers = ( function( $ ) {
+REACH.ImageHovers = ( function( $ ) {
 	return {
 		init : function() {
 			$('.on-hover').each( function() {
@@ -409,12 +409,14 @@ BENNY.ImageHovers = ( function( $ ) {
 ;/*--------------------------------------------------------
  * Lean Modal
 ---------------------------------------------------------*/
-BENNY.LeanModal = ( function( $ ){
+REACH.LeanModal = ( function( $ ){
 	return {
 		init : function() {
-			$('[data-trigger-modal]').leanModal({
-				closeButton	: ".close-modal"
-			});
+            if ( $.fn.leanModal ) {
+                $('[data-trigger-modal]').leanModal({
+                    closeButton : ".close-modal"
+                });
+            }			
 		}
 	}
 })( jQuery );
@@ -422,7 +424,7 @@ BENNY.LeanModal = ( function( $ ){
 ;/*--------------------------------------------------------
  * Responsive Menus
 ---------------------------------------------------------*/
-BENNY.ResponsiveMenu = ( function( $ ) {
+REACH.ResponsiveMenu = ( function( $ ) {
 	return {
 		init : function() {
 			var $container, 
@@ -473,7 +475,7 @@ BENNY.ResponsiveMenu = ( function( $ ) {
  *
  * Credit: https://github.com/Automattic/_s
 ---------------------------------------------------------*/
-BENNY.SkipLinkFocusFix = ( function() {
+REACH.SkipLinkFocusFix = ( function() {
 	var is_webkit = navigator.userAgent.toLowerCase().indexOf( 'webkit' ) > -1,
 	    is_opera  = navigator.userAgent.toLowerCase().indexOf( 'opera' )  > -1,
 	    is_ie     = navigator.userAgent.toLowerCase().indexOf( 'msie' )   > -1;

@@ -65,18 +65,17 @@ class Reach_Customizer {
      * @return  void
      */
     public function customize_register($wp_customize) {
+        $wp_customize->get_section( 'title_tagline' )->priority = 0;
+        $wp_customize->get_control( 'blogname' )->priority = 1;       
+        $wp_customize->get_control( 'blogdescription' )->priority = 2;
 
-        /* Site Title & Tagline Section */
-        $wp_customize->get_control( 'blogname' )->priority = 5;
-        $wp_customize->get_control( 'blogdescription' )->priority = 10;
-        $this->add_section_settings( 'title_tagline', $this->get_title_tagline_settings() );        
-        
-        $this->add_section( 'logo', $this->get_logo_section() );
-        $this->add_section( 'layout', $this->get_layout_section() );        
-        $this->add_section( 'colour', $this->get_colour_section() );
-        $this->add_section( 'header', $this->get_header_section() );
-        $this->add_section( 'footer', $this->get_footer_section() );
-        $this->add_section( 'social', $this->get_social_profiles_section() );
+        $this->add_section( 'logo', $this->get_logo_section( 20 ) );
+        $this->add_section( 'layout', $this->get_layout_section( 40 ) );        
+        $this->add_section( 'colour', $this->get_colour_section( 60 ) );
+        $this->add_section( 'header', $this->get_header_section( 80 ) );
+        $this->add_section( 'footer', $this->get_footer_section( 100 ) );
+        $this->add_section( 'campaigns', $this->get_campaign_section( 120 ) );
+        $this->add_section( 'social', $this->get_social_profiles_section( 140 ) );
 
         /* Background Images Panel */
         $this->add_panel( 'background_images', $this->get_background_images_panel() );
@@ -199,50 +198,17 @@ class Reach_Customizer {
     }
 
     /**
-     * Returns the settings for the Site Title & Tagline section. 
-     *
-     * @return  array[]
-     * @access  private
-     * @since   1.0.0
-     */
-    private function get_title_tagline_settings() {
-        $title_tagline_settings = array(
-            'hide_site_title'   => array(
-                'setting'       => array(
-                    'transport' => 'postMessage'
-                ), 
-                'control'       => array(
-                    'label'     => __( 'Hide the title', 'reach' ),
-                    'type'      => 'checkbox',
-                    'priority'  => 6
-                )
-            ),
-            'hide_site_tagline' => array(
-                'setting'       => array(
-                    'transport' => 'postMessage'
-                ), 
-                'control'       => array(
-                    'label'     => __( 'Hide the tagline', 'reach' ),
-                    'type'      => 'checkbox',
-                    'priority'  => 11
-                )
-            )
-        );
-        
-        return apply_filters( 'reach_customizer_title_tagline_section', $title_tagline_settings );
-    }
-
-    /**
      * Returns the logo section settings. 
      *
+     * @param   int     $priority
      * @return  array[]
      * @access  private
      * @since   1.0.0
      */
-    private function get_logo_section() {
+    private function get_logo_section( $priority ) {
         $logo_settings = array(
             'title'     => __( 'Logo', 'reach' ), 
-            'priority'  => 30,
+            'priority'  => $priority,
             'settings'  => array(
                 'logo' => array(
                     'setting'   => array(
@@ -251,7 +217,7 @@ class Reach_Customizer {
                     ), 
                     'control'   => array(
                         'control_type'  => 'Reach_Customizer_Retina_Image_Control', 
-                        'priority'      => 31
+                        'priority'      => $priority + 1
                     )
                 )
             )
@@ -263,14 +229,15 @@ class Reach_Customizer {
     /**
      * Returns the layout section settings. 
      *
+     * @param   int     $priority
      * @return  array[]
      * @access  private
      * @since   1.0.0
      */
-    private function get_layout_section() {
+    private function get_layout_section( $priority ) {
         $layout_settings = array(
             'title'     => __( 'Layout', 'reach' ), 
-            'priority'  => 35,
+            'priority'  => $priority,
             'settings'  => array(
                 'layout' => array(
                     'setting'   => array(
@@ -279,7 +246,7 @@ class Reach_Customizer {
                     ), 
                     'control'   => array(
                         'type'          => 'radio', 
-                        'priority'      => 36,
+                        'priority'      => $priority + 1,
                         'choices'       => array(
                             'layout-wide' => __( 'Wide Layout', 'reach' ),
                             'layout-boxed' => __( 'Boxed Layout', 'reach' )
@@ -295,14 +262,15 @@ class Reach_Customizer {
     /**
      * Returns the colour section settings. 
      *
+     * @param   int     $priority
      * @return  array[]
      * @access  private
      * @since   1.0.0
      */
-    private function get_colour_section() {
+    private function get_colour_section( $priority ) {
         $colour_settings = array(
             'title'     => __( 'Colour', 'reach' ),
-            'priority'  => 40,
+            'priority'  => $priority,
             'settings'  => array(
                 'accent_colour' => array(
                     'setting'   => array(
@@ -312,7 +280,7 @@ class Reach_Customizer {
                     ),
                     'control'   => array(
                         'control_type'      => 'WP_Customize_Color_Control',
-                        'priority'          => 41,
+                        'priority'          => $priority + 1,
                         'label'             => __( 'Accent Colour', 'reach' ),
                         'description'       => __( 'Used for: site title, links, banner background, feature section background', 'reach' )
                     )
@@ -325,7 +293,7 @@ class Reach_Customizer {
                     ),
                     'control'   => array(
                         'control_type'      => 'WP_Customize_Color_Control',
-                        'priority'          => 42,
+                        'priority'          => $priority + 2,
                         'label'             => __( 'Body Background Colour', 'reach' ),
                         'description'       => __( 'Used for: site background', 'reach' )
                     )
@@ -338,7 +306,7 @@ class Reach_Customizer {
                     ),
                     'control'   => array(
                         'control_type'      => 'WP_Customize_Color_Control',
-                        'priority'          => 43,
+                        'priority'          => $priority + 3,
                         'label'             => __( 'Text Colour', 'reach' ),
                         'description'       => __( 'Used for: text, buttons, site navigation', 'reach' )
                     )
@@ -352,13 +320,14 @@ class Reach_Customizer {
     /**
      * Returns the header section settings. 
      *
+     * @param   int     $priority
      * @return  array[]
      * @access  private
      * @since   1.0.0
      */
-    private function get_header_section() {
+    private function get_header_section( $priority ) {
         $header_settings = array(
-            'priority'  => 50,
+            'priority'  => $priority,
             'title'     => __( 'Header', 'reach' ),
             'settings'  => array(
                 'header_text_colour' => array(
@@ -369,11 +338,31 @@ class Reach_Customizer {
                     ), 
                     'control'   => array(
                         'control_type'      => 'WP_Customize_Color_Control',
-                        'priority'          => 51,
+                        'priority'          => $priority + 1,
                         'label'             => __( 'Text Colour', 'reach' ),
                         'description'       => __( 'Used for social profile icons & button text', 'reach' )
                     )
-                )                
+                ), 
+                'hide_site_title'   => array(
+                    'setting'       => array(
+                        'transport' => 'postMessage'
+                    ), 
+                    'control'       => array(
+                        'label'     => __( 'Hide the title', 'reach' ),
+                        'type'      => 'checkbox',
+                        'priority'  => $priority + 2
+                    )
+                ),
+                'hide_site_tagline' => array(
+                    'setting'       => array(
+                        'transport' => 'postMessage'
+                    ), 
+                    'control'       => array(
+                        'label'     => __( 'Hide the tagline', 'reach' ),
+                        'type'      => 'checkbox',
+                        'priority'  => $priority + 3
+                    )
+                )          
             )
         );
 
@@ -383,13 +372,14 @@ class Reach_Customizer {
     /**
      * Returns the footer section settings. 
      *
+     * @param   int     $priority
      * @return  array[]
      * @access  private
      * @since   1.0.0
      */
-    private function get_footer_section() {
+    private function get_footer_section( $priority ) {
         $footer_settings = array(
-            'priority'  => 50,
+            'priority'  => $priority,
             'title'     => __( 'Footer', 'reach' ),
             'settings'  => array(
                 'footer_text_colour' => array(
@@ -400,7 +390,7 @@ class Reach_Customizer {
                     ), 
                     'control'   => array(
                         'control_type'      => 'WP_Customize_Color_Control',
-                        'priority'          => 51,
+                        'priority'          => $priority + 1,
                         'label'             => __( 'Text Colour', 'reach' )
                     )
                 ),
@@ -412,7 +402,7 @@ class Reach_Customizer {
                     'control'   => array(
                         'label'     => __( 'Tagline', 'reach' ), 
                         'type'      => 'text', 
-                        'priority'  => 52,
+                        'priority'  => $priority + 2,
                     )
                 )                
             )
@@ -422,15 +412,68 @@ class Reach_Customizer {
     }
 
     /**
-     * Returns an array of social profiles settings. 
+     * Returns the campaign section settings. 
      *
+     * @param   int     $priority
      * @return  array[]
      * @access  private
      * @since   1.0.0
      */
-    private function get_social_profiles_section() {
-        $priority = 60;
+    private function get_campaign_section( $priority ) {
+        $campaign_setings = array(
+            'priority'  => $priority,
+            'title'     => __( 'Campaigns', 'reach' ),
+            'active_callback' => 'charitable_is_campaign_page',
+            'settings'  => array(
+                'campaign_feature_background' => array(
+                    'setting'   => array(
+                        'default'       => '', 
+                        'transport'     => 'postMessage', 
+                    ), 
+                    'control'   => array(
+                        'control_type'  => 'Reach_Customizer_Retina_Image_Control', 
+                        'label'         => __( 'Background image for campaign summary block', 'reach' ),
+                        'priority'      => $priority + 1
+                    )
+                ), 
+                'campaign_section_break_1' => array(
+                    'setting' => array(),
+                    'control' => array(
+                        'control_type'  => 'Reach_Customizer_Misc_Control',
+                        'type'          => 'line',
+                        'priority'      => $priority + 2
+                    )
+                ), 
+                'campaign_media_placement' => array(
+                    'setting' => array(
+                        'default'       => 'featured_image_in_summary',
+                        'transport'     => 'refresh'
+                    ),
+                    'control' => array(
+                        'type'          => 'radio',
+                        'label'         => __( 'Where would you like the campaign video and featured image to be displayed?', 'reach' ),
+                        'priority'      => $priority + 3,
+                        'choices'       => array(
+                            'featured_image_in_summary' => __( 'Featured image in summary, video before content.', 'reach' ),
+                            'video_in_summary' => __( 'Video in summary, featured image before content.', 'reach' )
+                        )
+                    )
+                )
+            )
+        );
 
+        return apply_filters( 'reach_customizer_campaign_section', $campaign_setings );
+    }
+
+    /**
+     * Returns an array of social profiles settings. 
+     *
+     * @param   int     $priority
+     * @return  array[]
+     * @access  private
+     * @since   1.0.0
+     */
+    private function get_social_profiles_section( $priority ) {
         $social_settings = array(
             'priority'      => $priority, 
             'title'         => __( 'Social Profiles', 'reach' ),
@@ -439,6 +482,8 @@ class Reach_Customizer {
         );        
 
         foreach ( reach_get_social_sites() as $setting_key => $label ) {
+            $priority += 1;
+
             $social_settings[ 'settings' ][ $setting_key ] = array(
                 'setting'   => array(
                     'transport' => 'postMessage' 
@@ -448,9 +493,7 @@ class Reach_Customizer {
                     'priority'  => $priority,
                     'label'     => $label
                 )
-            );
-
-            $priority += 1;
+            );            
         }
 
         return apply_filters( 'reach_customizer_social_section', $social_settings );
@@ -487,22 +530,22 @@ class Reach_Customizer {
             )
         );
 
-        $background_images_settings[ 'sections' ][ 'background_images_campaign' ] = array(
-            'title'         => __( 'Featured Campaign Block', 'reach' ), 
-            'priority'      => 53,
-            'settings'      => array(
-                'campaign_feature_background' => array(
-                    'setting'   => array(
-                        'default'       => '', 
-                        'transport'     => 'postMessage', 
-                    ), 
-                    'control'   => array(
-                        'control_type'  => 'Reach_Customizer_Retina_Image_Control', 
-                        'priority'      => 54
-                    )
-                )
-            )
-        );
+        // $background_images_settings[ 'sections' ][ 'background_images_campaign' ] = array(
+        //     'title'         => __( 'Featured Campaign Block', 'reach' ), 
+        //     'priority'      => 53,
+        //     'settings'      => array(
+        //         'campaign_feature_background' => array(
+        //             'setting'   => array(
+        //                 'default'       => '', 
+        //                 'transport'     => 'postMessage', 
+        //             ), 
+        //             'control'   => array(
+        //                 'control_type'  => 'Reach_Customizer_Retina_Image_Control', 
+        //                 'priority'      => 54
+        //             )
+        //         )
+        //     )
+        // );
 
         $background_images_settings[ 'sections' ][ 'background_images_blog' ] = array(
             'title'         => __( 'Blog & Page Banners', 'reach' ), 

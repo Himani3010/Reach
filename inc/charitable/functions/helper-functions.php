@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  *
  * @global 	array 		$edd_options
  * @return 	string
- * @since 	1.5.12
+ * @since 	1.0.0
  */
 function reach_crowdfunding_get_pledge_text() {
 	global $edd_options;
@@ -25,7 +25,7 @@ function reach_crowdfunding_get_pledge_text() {
  *
  * @param   amount
  * @return  string
- * @since   1.5.12
+ * @since   1.0.0
  */
 function reach_crowdfunding_get_pledge_amount_text( $amount ) {
     return sprintf( '%s %s', 
@@ -38,10 +38,10 @@ function reach_crowdfunding_get_pledge_amount_text( $amount ) {
  * Gets the timezone offset. 
  * 
  * @return  string
- * @since   1.5.5
+ * @since   1.0.0
  */
 function reach_get_timezone_offset() {        
-    $timezone = edd_get_timezone_id();
+    $timezone = charitable_get_timezone_id();
     $date_timezone = new DateTimeZone($timezone);
     $date_time = new DateTime('now', $date_timezone);
     $offset_secs = $date_time->format('Z');
@@ -53,3 +53,24 @@ function reach_get_timezone_offset() {
     }
     return str_replace( '+', '-', $offset );
 } 
+
+/**
+ * Return the image size to use for campaign featured images.
+ * 
+ * @return  string
+ * @since   1.0.0
+ */
+function reach_get_campaign_featured_image_size() {
+    if ( 'featured_image_in_summary' == reach_get_theme()->get_theme_setting( 'campaign_media_placement', 'featured_image_in_summary' ) ) {
+        $size = 'campaign-thumbnail-summary';
+    }
+    else {
+        $size = 'post-thumbnail';
+    }
+
+    return apply_filters( 'reach_campaign_featured_image_size', $size );
+}
+
+
+
+

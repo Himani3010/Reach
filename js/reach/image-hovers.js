@@ -1,7 +1,7 @@
 /*--------------------------------------------------------
  * Image Hovers
 ---------------------------------------------------------*/
-BENNY.ImageHovers = ( function( $ ) {
+REACH.ImageHovers = ( function( $ ) {
 	return {
 		init : function() {
 			$('.on-hover').each( function() {

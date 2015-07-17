@@ -1,7 +1,7 @@
 /*--------------------------------------------------------
  * Campaign Barometer
 ---------------------------------------------------------*/
-BENNY.Barometer = ( function($) {
+REACH.Barometer = ( function($) {
 
 	// Barometers collection
 	var $barometers = $('.barometer'), 

@@ -5,7 +5,7 @@
  * attribute will still display the placeholder value as a 
  * preset value inside the element.
 ---------------------------------------------------------*/
-BENNY.CrossBrowserPlaceholders = ( function( $ ) {	
+REACH.CrossBrowserPlaceholders = ( function( $ ) {	
 	return {
 		init : function() {
 			var $form_elements = $(':text,textarea');
