@@ -69,8 +69,6 @@ class Reach_Charitable {
 	 * @since 	2.0.0
 	 */
 	private function attach_hooks_and_filters() {
-		// add_action( 'charitable_single_campaign_before', array( $this, 'campaign_media_placement' ) );
-
 		add_filter( 'reach_script_dependencies', array( $this, 'setup_script_dependencies' ) );
 		add_filter( 'body_class', array( $this, 'add_body_classes' ) );
 		add_filter( 'reach_banner_title', array( $this, 'set_banner_title' ) );
