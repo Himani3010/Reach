@@ -145,12 +145,8 @@ function reach_get_current_author() {
 function reach_get_banner_title() {
     $title = "";
 
-    /* User Dashboard */
-    if ( function_exists( 'charitable_user_dashboard' ) && charitable_user_dashboard()->in_nav() ) {
-        $title = apply_filters( 'reach_banner_title_dashboard', __( 'Dashboard', 'reach' ) );
-    }
-    /* Blog Home */
-    elseif ( is_home() ) {
+    /* Homepage */
+    if ( is_home() ) {
         if ( 'page' == get_option('show_on_front') ) {
             $title = get_the_title( get_option( 'page_for_posts' ) );
         }
@@ -188,7 +184,7 @@ function reach_get_banner_title() {
         $title = apply_filters( 'reach_banner_title_page', get_the_title() );
     } 
     
-    return $title;   
+    return apply_filters( 'reach_banner_title', $title );
 }
 
 /**

@@ -18,16 +18,16 @@ if ( ! function_exists( 'reach_crowdfunding_campaign_nav' ) ) :
      * @since   1.0.0
      */
     function reach_crowdfunding_campaign_nav( $echo = true ) {  
-        $categories = get_categories( array( 'taxonomy' => 'download_category', 'orderby' => 'name', 'order' => 'ASC' ) );
+        $categories = get_categories( array( 'taxonomy' => 'campaign_category', 'orderby' => 'name', 'order' => 'ASC' ) );
 
         if ( empty( $categories ) )
             return;
 
-        $html = '<ul class="menu menu-site"><li class="download_category with-icon" data-icon="&#xf02c;">'.__('Categories', 'reach');
-        $html .= '<ul><li><a href="'.get_post_type_archive_link('download').'">'.__('All', 'reach').'</a></li>';
+        $html = sprintf( '<ul class="menu menu-site"><li class="campaign_category with-icon" data-icon="&#xf02c;">%s', __('Categories', 'reach') );
+        $html .= sprintf( '<ul><li><a href="%s">%s</a></li>', get_post_type_archive_link( 'campaign' ), __( 'All', 'reach' ) );
 
         foreach ( $categories as $category ) {
-            $html .= '<li><a href="'.esc_url( get_term_link($category) ).'">'.$category->name.'</a></li>';
+            $html .= sprintf( '<li><a href="%s">%s</a></li>', esc_url( get_term_link( $category ) ), $category->name );
         }
 
         $html .= '</li></ul>';
