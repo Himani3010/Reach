@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Reach 1.0.0-20150717\n"
+"Project-Id-Version: Reach 1.0.0-20150722\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-07-17 14:35:04+00:00\n"
+"POT-Creation-Date: 2015-07-23 04:26:54+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -160,10 +160,6 @@ msgstr ""
 msgid "Older Comments"
 msgstr ""
 
-#: content.php:23 partials/content-audio.php:26 partials/content-video.php:25
-msgid "Pages: "
-msgstr ""
-
 #: footer.php:35
 msgid "http://wordpress.org/"
 msgstr ""
@@ -300,6 +296,14 @@ msgstr ""
 
 #: inc/admin/customizer-controls/class-reach-customizer-retina-image-control.php:94
 msgid "Is this image retina-ready?"
+msgstr ""
+
+#: inc/charitable/class-reach-charitable.php:151
+msgid "Donation Receipt"
+msgstr ""
+
+#: inc/charitable/class-reach-charitable.php:154
+msgid "Dashboard"
 msgstr ""
 
 #: inc/charitable/functions/helper-functions.php:20
@@ -558,15 +562,11 @@ msgstr ""
 msgid "YouTube"
 msgstr ""
 
-#: inc/functions/helper-functions.php:150
-msgid "Dashboard"
-msgstr ""
-
-#: inc/functions/helper-functions.php:163
+#: inc/functions/helper-functions.php:159
 msgid "Blog"
 msgstr ""
 
-#: inc/functions/helper-functions.php:176
+#: inc/functions/helper-functions.php:172
 msgid "Search Results"
 msgstr ""
 
@@ -632,6 +632,11 @@ msgstr ""
 
 #: partials/campaign-grid.php:20
 msgid "Previous Campaigns"
+msgstr ""
+
+#: partials/content-audio.php:26 partials/content-video.php:25
+#: partials/content.php:23
+msgid "Pages: "
 msgstr ""
 
 #: partials/content-none.php:13
