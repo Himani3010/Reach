@@ -193,6 +193,7 @@
     position: relative;
     @include padding( 0, 0, 24 );
     @include margin-bottom( 24 );
+    border: none;
 
     &:before {
         content: "";
@@ -211,6 +212,7 @@
         @include left( 24 );
         @include padding( 0, 12, 24 );      
         @include font-size( 18 );
+        font-weight: normal;
         @include color( $color__accent );
         @include background-color( $color__background-content );
     }

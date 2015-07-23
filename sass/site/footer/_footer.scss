@@ -34,17 +34,7 @@
 		padding-left: 0;
 		padding-right: 0;
 		@include margin-bottom( 12 );
-	}
-
-	@include bp( 786 ) {
-		float: left;
-		width: 40%;
-
-		.footer-widget {
-			width: 100%;
-			margin: 0;	
-		}
-	}
+	}	
 }
 
 .footer-right {
@@ -80,6 +70,18 @@
 			@include padding-left( 24 );
 		}
 	}
+}
+
+@include bp( 786 ) {
+	.footer-left {
+		float: left;
+		width: 40%;
+
+		.footer-widget {
+			width: 100%;
+			margin: 0;	
+		}
+	}	
 }
 
 /*--------------------------------------------------------------
