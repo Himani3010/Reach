@@ -3013,11 +3013,9 @@ embed {
 
 .footer-widget {
   float: left;
-  width: 48%;
-  margin-right: 4%;
-  margin-bottom: 12px;
-  margin-bottom: 1.2rem;
   padding: 0;
+  margin: 0px 0px 12px;
+  margin: 0rem 0rem 1.2rem;
   border: none;
   background: transparent !important; }
   .footer-widget .title-wrapper {
@@ -3030,42 +3028,36 @@ embed {
     margin-bottom: 12px;
     margin-bottom: 1.2rem; }
 
-.footer-right .footer-widget:nth-child(2n+2) {
-  clear: left; }
+.footer-right .footer-widget {
+  width: 50%;
+  padding-left: 24px;
+  padding-left: 2.4rem; }
 .footer-right .footer-widget:nth-child(2n+1) {
-  margin-right: 0;
-  clear: right; }
-
-@media (min-width: 45em) {
-  .footer-widget {
-    padding-left: 0;
-    padding-right: 0; }
-
-  .footer-left {
-    float: left;
-    width: 34%;
-    margin-right: 4%;
-    padding-right: 0; }
-    .footer-left .footer-widget {
-      width: 100%;
-      margin: 0; }
-
+  padding-left: 0; }
+@media (min-width: 37.5em) {
+  .footer-right .footer-widget {
+    width: 33%; }
+  .footer-right .footer-widget:nth-of-type(2n+1) {
+    padding-left: 24px;
+    padding-left: 2.4rem; }
+  .footer-right .footer-widget:nth-of-type(3n+1) {
+    padding-left: 0; } }
+@media (min-width: 49.125em) {
   .footer-right {
     float: left;
-    width: 54%;
+    width: 60%;
     padding-left: 0; }
-    .footer-right .footer-widget {
-      width: 28.4%;
-      margin-right: 7.4%; }
-      .footer-right .footer-widget:nth-of-type(2n+1) {
-        margin-right: 7.4%; }
-      .footer-right .footer-widget:nth-of-type(2n+2) {
-        clear: none; }
-      .footer-right .footer-widget:nth-of-type(3n+3) {
-        width: 28.4%;
-        margin-right: 0; }
-      .footer-right .footer-widget:nth-of-type(3n+4) {
-        clear: left; } }
+    .footer-right .footer-widget:nth-of-type(3n+1) {
+      padding-left: 24px;
+      padding-left: 2.4rem; } }
+
+@media (min-width: 49.125em) {
+  .footer-left {
+    float: left;
+    width: 40%; }
+    .footer-left .footer-widget {
+      width: 100%;
+      margin: 0; } }
 /*--------------------------------------------------------------
 17.2 Colophon
 --------------------------------------------------------------*/
@@ -4108,7 +4100,8 @@ body.user-dashboard .charitable-submit-field {
   padding: 0px 0px 24px;
   padding: 0rem 0rem 2.4rem;
   margin-bottom: 24px;
-  margin-bottom: 2.4rem; }
+  margin-bottom: 2.4rem;
+  border: none; }
   .charitable-fieldset:before {
     content: "";
     display: block;
@@ -4127,7 +4120,8 @@ body.user-dashboard .charitable-submit-field {
     padding: 0px 12px 24px;
     padding: 0rem 1.2rem 2.4rem;
     font-size: 18px;
-    font-size: 1.8rem; }
+    font-size: 1.8rem;
+    font-weight: normal; }
   .charitable-fieldset .charitable-fieldset {
     margin-bottom: 0;
     padding: 0;
