@@ -330,7 +330,7 @@ input[type=reset],
 .entry-header .entry-title,
 .page-title,
 legend,
-.legend,
+.charitable-form-header,
 .account-links,
 .barometer span span,
 .bypostauthor .post-author,
@@ -4034,7 +4034,7 @@ body.user-dashboard .charitable-submit-field {
     height: 0.2rem;
     width: 100%;
     background-color: #e2dedb; }
-  .charitable-fieldset .legend {
+  .charitable-fieldset .charitable-form-header {
     position: relative;
     float: left;
     clear: both;
@@ -4056,7 +4056,7 @@ body.user-dashboard .charitable-submit-field {
     border-top-color: #e2dedb; }
     .charitable-fieldset .charitable-fieldset::before {
       display: none; }
-    .charitable-fieldset .charitable-fieldset .legend {
+    .charitable-fieldset .charitable-fieldset .charitable-form-header {
       background: transparent;
       left: 0;
       padding: 12px 0px;

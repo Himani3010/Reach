@@ -205,7 +205,7 @@
         @include background-color( $color__border-primary );
     }
 
-    .legend {
+    .charitable-form-header {
         position: relative;
         float: left;
         clear: both;
@@ -226,7 +226,7 @@
             display: none;
         }
 
-        .legend {
+        .charitable-form-header {
             background: transparent;
             left: 0;
             @include padding( 12, 0 );
