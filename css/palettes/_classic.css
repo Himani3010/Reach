@@ -3817,6 +3817,9 @@ embed {
     font-size: 1.8rem;
     font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif; }
 
+#charitable-donation-form-modal #custom-donation-amount-field {
+  width: 100%; }
+
 /*-------------------------------------------------------------- 
 18.1.6 User Dashboard
 --------------------------------------------------------------*/
