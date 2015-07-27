@@ -208,8 +208,10 @@
     .charitable-form-header {
         position: relative;
         float: left;
+        width: 100%;
         clear: both;
         @include left( 24 );
+        margin: 0;
         @include padding( 0, 12, 24 );      
         @include font-size( 18 );
         font-weight: normal;
@@ -275,7 +277,7 @@
     @include background-color( $color__background-form-fields );
     @include color( $color__text-dark );
     
-    ul {
+    .errors {
         list-style: none;
         padding: 0;
         margin: 0;
@@ -286,6 +288,12 @@
             li {
                 margin-bottom: 0;
             }   
+        }
+
+        li {
+            a {
+                @include color( $color__accent );
+            }
         }
     }
 

@@ -23,7 +23,7 @@
         right: 0;
         @include width( 150 );
         height: 100%;           
-        @include border( 1 );
+        @include border-left( 1 );
         border-radius: 0 0.4rem 0.4rem 0;
         @include background-color( $color__background-widget );
     }
@@ -53,7 +53,9 @@
 .user-post-summary {
     @include padding( 0, 12 );
     margin: 0;
+    border: none;
     background-color: transparent;                   
+
     /* Float image and campaign summary side by side, with actions below. */
     @include bp( 768 ) {
         float: left;
@@ -63,11 +65,13 @@
             @include margin-top( 12 );        
         }
     }
+
     /* Float actions to the right. */
     @include bp( 900 ) {
         min-width: 0;
         width: calc( 65% - 150px ); // This is the width used when the image is displayed at less than 320px            
     }
+
     @include bp( 1058 ) {
         width: calc( 100% - 470px ); // This is the width used when the image has maxed out at 320px
     }
@@ -80,7 +84,8 @@
     padding: 0;
     margin: 0;
     list-style: none;    
-    li {
+
+    .summary-item {
         float: none;
         width: 100%;
         @include padding( 12, 0 );
@@ -88,9 +93,28 @@
         @include border-bottom( 1 );
         @include font-size( 12 );
         text-align: left;
+        
+        span {
+            @include line-height( 24 );
+        }    
+
+        .amount, 
+        .donors-count {
+            @include font-size( 16 );
+            @include color( $color__accent );
+        }
+
+        .goal-amount {
+            display: inline;
+            font-size: 1em;
+            line-height: 1em;
+            font-weight: bolder;
+        }
+
         &:last-child {
             @include padding-bottom( 12 );               
         }
+
         @include bp( 600 ) {
             float: left;
             width: 50%;
@@ -98,22 +122,6 @@
                 border-bottom: 0;
             }
         }            
-    }
-
-    span {
-        @include line-height( 24 );
-    }
-
-    .amount, 
-    .donors-count {
-        @include font-size( 16 );
-    }
-
-    .goal-amount {
-        display: inline;
-        font-size: 1em;
-        line-height: 1em;
-        font-weight: bolder;
     }
 }
 

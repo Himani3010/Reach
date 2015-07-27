@@ -17,18 +17,18 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * @see reach_template_campaign_loop_stats
  * @see reach_template_campaign_loop_creator
  */
-add_action( 'charitable_campaign_content_loop_after', 'reach_template_campaign_loop_stats', 10 );
-add_action( 'charitable_campaign_content_loop_after', 'reach_template_campaign_loop_creator', 15 );
-remove_action( 'charitable_campaign_content_loop_after', 'charitable_template_campaign_progress_bar', 10 );
-remove_action( 'charitable_campaign_content_loop_after', 'charitable_template_campaign_loop_donation_stats', 15 );
-remove_action( 'charitable_campaign_content_loop_after', 'charitable_template_campaign_donate_link', 20 );
+add_action( 'charitable_campaign_content_loop_after', 'reach_template_campaign_loop_stats', 6 );
+add_action( 'charitable_campaign_content_loop_after', 'reach_template_campaign_loop_creator', 8 );
+remove_action( 'charitable_campaign_content_loop_after', 'charitable_template_campaign_progress_bar', 6 );
+remove_action( 'charitable_campaign_content_loop_after', 'charitable_template_campaign_loop_donation_stats', 8 );
+remove_action( 'charitable_campaign_content_loop_after', 'charitable_template_campaign_loop_donate_link', 10 );
 
 /** 
  * Single campaign, top of the page.
  *
  * @see reach_template_campaign_summary
  */
-add_action( 'charitable_single_campaign_before', 'reach_template_campaign_summary', 10 );
+add_action( 'charitable_single_campaign_before', 'reach_template_campaign_summary', 2 );
 
 /**
  * Single campaign, before summary. 
@@ -54,7 +54,7 @@ add_action( 'charitable_campaign_summary', 'reach_template_campaign_stats', 6 );
 remove_action( 'charitable_campaign_summary', 'charitable_template_campaign_percentage_raised', 4 );
 remove_action( 'charitable_campaign_summary', 'charitable_template_campaign_donation_summary', 6 );
 remove_action( 'charitable_campaign_summary', 'charitable_template_campaign_donor_count', 8 );
-remove_action( 'charitable_campaign_summary', 'charitable_template_donate_button', 14 );
+remove_action( 'charitable_campaign_summary', 'charitable_template_donate_button', 12 );
 
 /**
  * Single campaign, after summary.

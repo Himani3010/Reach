@@ -250,7 +250,7 @@ class Reach_Theme {
      * @since   1.0.0
      */
     private function maybe_start_tribe_events() {
-        if ( class_exists( 'TribeEvents' ) ) {
+        if ( class_exists( 'Tribe__Events__Main' ) ) {
 
             require_once( get_template_directory() . '/inc/tribe-events/class-reach-tribe-events.php' );
 

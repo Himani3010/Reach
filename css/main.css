@@ -3047,15 +3047,19 @@ embed {
     background-color: #ffffff; }
   .widget.widget_charitable_donate_widget #charitable-donation-form {
     padding-top: 0; }
-  .widget.widget_charitable_donate_widget .donation-amounts {
-    margin-bottom: 0; }
-    .widget.widget_charitable_donate_widget .donation-amounts li {
+    .widget.widget_charitable_donate_widget #charitable-donation-form .donation-amounts {
+      margin-bottom: 0; }
+      .widget.widget_charitable_donate_widget #charitable-donation-form .donation-amounts li {
+        width: 100%;
+        margin: 0px 0px 12px;
+        margin: 0rem 0rem 1.2rem; }
+      .widget.widget_charitable_donate_widget #charitable-donation-form .donation-amounts .charitable-form-field {
+        margin: 12px 0px 0px;
+        margin: 1.2rem 0rem 0rem; }
+    .widget.widget_charitable_donate_widget #charitable-donation-form #custom-donation-amount-field {
       width: 100%;
-      margin: 0px 0px 12px;
-      margin: 0rem 0rem 1.2rem; }
-    .widget.widget_charitable_donate_widget .donation-amounts .charitable-form-field {
-      margin: 12px 0px 0px;
-      margin: 1.2rem 0rem 0rem; }
+      margin-bottom: 12px;
+      margin-bottom: 1.2rem; }
   .widget.widget_charitable_donate_widget .charitable-donation-form-without-suggestions {
     padding: 12px;
     padding: 1.2rem;
@@ -3531,36 +3535,90 @@ embed {
       padding-right: 36px;
       padding-right: 3.6rem; } }
 
+#charitable-donation-form .charitable-fieldset {
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem; }
+  #charitable-donation-form .charitable-fieldset::before {
+    display: none; }
 #charitable-donation-form .charitable-form-header {
+  left: 0;
   margin-top: 0;
+  padding-left: 0;
+  padding-right: 0;
   font-size: 16px;
   font-size: 1.6rem; }
-#charitable-donation-form .donation-amounts {
-  margin-bottom: 30px;
-  margin-bottom: 3rem; }
-  #charitable-donation-form .donation-amounts .donation-amount {
-    width: 100%; }
-    @media (min-width: 37.5em) {
-      #charitable-donation-form .donation-amounts .donation-amount {
-        float: left;
-        width: 48%;
-        margin-top: 0;
-        margin-right: 0;
-        margin-bottom: 12px;
-        margin-bottom: 1.2rem;
-        margin-left: 4%; }
-        #charitable-donation-form .donation-amounts .donation-amount:nth-child(2n + 1) {
-          margin-left: 0;
-          clear: left; } }
+#charitable-donation-form .donation-amounts .donation-amount {
+  width: 100%;
+  position: relative;
+  padding: 12px 12px 12px 36px;
+  padding: 1.2rem 1.2rem 1.2rem 3.6rem;
+  margin: 0px 12px 12px 0px;
+  margin: 0rem 1.2rem 1.2rem 0rem;
+  line-height: 18px;
+  line-height: 1.8rem;
+  border-width: 2px;
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: #aea198;
+  border-radius: 0.4rem;
+  color: #7d6e63;
+  background-color: #ffffff; }
+  #charitable-donation-form .donation-amounts .donation-amount .amount {
+    display: block;
+    font-size: 18px;
+    font-size: 1.8rem; }
+  #charitable-donation-form .donation-amounts .donation-amount .description {
+    display: block;
+    margin-top: 6px;
+    margin-top: 0.6rem; }
+    #charitable-donation-form .donation-amounts .donation-amount .description:empty {
+      display: none; }
+  #charitable-donation-form .donation-amounts .donation-amount.selected, #charitable-donation-form .donation-amounts .donation-amount:hover {
+    border-color: #7d6e63;
+    background-color: #7d6e63;
+    color: #ffffff; }
+  #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount {
+    width: 100%;
+    margin-left: 0; }
+    #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount .description {
+      font-size: 12px;
+      font-size: 1.2rem;
+      font-family: Merriweather, Georgia, "Times New Roman", Times, serif;
+      letter-spacing: 0;
+      text-transform: none; }
+    #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount input[type=text] {
+      position: static;
+      max-width: 100%; }
+      #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount input[type=text]:focus, #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount input[type=text]:active {
+        background-color: #ffffff; }
+  #charitable-donation-form .donation-amounts .donation-amount input {
+    position: absolute;
+    top: 12px;
+    top: 1.2rem;
+    left: 12px;
+    left: 1.2rem; }
+  @media (min-width: 37.5em) {
+    #charitable-donation-form .donation-amounts .donation-amount {
+      float: left;
+      width: 48%;
+      margin-top: 0;
+      margin-right: 0;
+      margin-bottom: 12px;
+      margin-bottom: 1.2rem;
+      margin-left: 4%; }
+      #charitable-donation-form .donation-amounts .donation-amount:nth-child(2n + 1) {
+        margin-left: 0;
+        clear: left; } }
 #charitable-donation-form #custom-donation-amount-field {
   margin: 12px 0px 0px;
   margin: 1.2rem 0rem 0rem; }
   #charitable-donation-form #custom-donation-amount-field input {
     background-color: #ffffff; }
   #charitable-donation-form #custom-donation-amount-field.charitable-custom-donation-field-alone {
-    margin-bottom: 36px;
-    margin-bottom: 3.6rem; }
+    margin-top: 0; }
 #charitable-donation-form .charitable-connected-downloads {
+  float: left;
+  width: 100%;
   margin-bottom: 24px;
   margin-bottom: 2.4rem;
   border-width: 2px;
@@ -3657,56 +3715,6 @@ embed {
   #charitable-donation-form .charitable-form-field .button:hover, #charitable-donation-form .charitable-form-field .button:focus, #charitable-donation-form .charitable-form-field .button:active {
     background-color: #d95b43;
     color: #ffffff; }
-
-.donation-amounts .donation-amount {
-  position: relative;
-  padding: 12px 12px 12px 36px;
-  padding: 1.2rem 1.2rem 1.2rem 3.6rem;
-  margin: 0px 12px 12px 0px;
-  margin: 0rem 1.2rem 1.2rem 0rem;
-  line-height: 18px;
-  line-height: 1.8rem;
-  border-width: 2px;
-  border-width: 0.2rem;
-  border-style: solid;
-  border-color: #aea198;
-  border-radius: 0.4rem;
-  color: #7d6e63;
-  background-color: #ffffff; }
-  .donation-amounts .donation-amount .amount {
-    display: block;
-    font-size: 18px;
-    font-size: 1.8rem; }
-  .donation-amounts .donation-amount .description {
-    display: block;
-    margin-top: 6px;
-    margin-top: 0.6rem; }
-    .donation-amounts .donation-amount .description:empty {
-      display: none; }
-  .donation-amounts .donation-amount.selected, .donation-amounts .donation-amount:hover {
-    border-color: #7d6e63;
-    background-color: #7d6e63;
-    color: #ffffff; }
-  .donation-amounts .donation-amount.custom-donation-amount {
-    width: 100%;
-    margin-left: 0; }
-    .donation-amounts .donation-amount.custom-donation-amount .description {
-      font-size: 12px;
-      font-size: 1.2rem;
-      font-family: Merriweather, Georgia, "Times New Roman", Times, serif;
-      letter-spacing: 0;
-      text-transform: none; }
-    .donation-amounts .donation-amount.custom-donation-amount input[type=text] {
-      position: static;
-      max-width: 100%; }
-      .donation-amounts .donation-amount.custom-donation-amount input[type=text]:focus, .donation-amounts .donation-amount.custom-donation-amount input[type=text]:active {
-        background-color: #ffffff; }
-  .donation-amounts .donation-amount input {
-    position: absolute;
-    top: 12px;
-    top: 1.2rem;
-    left: 12px;
-    left: 1.2rem; }
 
 #custom-donation-amount-field.charitable-custom-donation-field-alone {
   padding: 2px;
@@ -4037,9 +4045,11 @@ body.user-dashboard .charitable-submit-field {
   .charitable-fieldset .charitable-form-header {
     position: relative;
     float: left;
+    width: 100%;
     clear: both;
     left: 24px;
     left: 2.4rem;
+    margin: 0;
     padding: 0px 12px 24px;
     padding: 0rem 1.2rem 2.4rem;
     font-size: 18px;
@@ -4098,16 +4108,18 @@ body.user-dashboard .charitable-submit-field {
   border-color: #e2dedb;
   background-color: #f1efee;
   color: #574c45; }
-  .charitable-notice ul {
+  .charitable-notice .errors {
     list-style: none;
     padding: 0;
     margin: 0; }
-    .charitable-notice ul ul {
+    .charitable-notice .errors ul {
       list-style: disc;
       padding-left: 16px;
       padding-left: 1.6rem; }
-      .charitable-notice ul ul li {
+      .charitable-notice .errors ul li {
         margin-bottom: 0; }
+    .charitable-notice .errors li a {
+      color: #d95b43; }
   .charitable-notice li:last-child {
     margin-bottom: 0; }
 
@@ -4654,10 +4666,10 @@ body > .select2-container--open .select2-dropdown--above {
     width: 150px;
     width: 15rem;
     height: 100%;
-    border-width: 1px;
-    border-width: 0.1rem;
-    border-style: solid;
-    border-color: #e2dedb;
+    border-left-width: 1px;
+    border-left-width: 0.1rem;
+    border-left-style: solid;
+    border-left-color: #e2dedb;
     border-radius: 0 0.4rem 0.4rem 0;
     background-color: #f1efee; }
   @media (min-width: 48em) {
@@ -4683,6 +4695,7 @@ body > .select2-container--open .select2-dropdown--above {
   padding: 0px 12px;
   padding: 0rem 1.2rem;
   margin: 0;
+  border: none;
   background-color: transparent;
   /* Float image and campaign summary side by side, with actions below. */
   /* Float actions to the right. */ }
@@ -4709,7 +4722,7 @@ body > .select2-container--open .select2-dropdown--above {
   padding: 0;
   margin: 0;
   list-style: none; }
-  .user-post-stats.campaign-stats li {
+  .user-post-stats.campaign-stats .summary-item {
     float: none;
     width: 100%;
     padding: 12px 0px;
@@ -4722,27 +4735,28 @@ body > .select2-container--open .select2-dropdown--above {
     font-size: 12px;
     font-size: 1.2rem;
     text-align: left; }
-    .user-post-stats.campaign-stats li:last-child {
+    .user-post-stats.campaign-stats .summary-item span {
+      line-height: 24px;
+      line-height: 2.4rem; }
+    .user-post-stats.campaign-stats .summary-item .amount,
+    .user-post-stats.campaign-stats .summary-item .donors-count {
+      font-size: 16px;
+      font-size: 1.6rem;
+      color: #d95b43; }
+    .user-post-stats.campaign-stats .summary-item .goal-amount {
+      display: inline;
+      font-size: 1em;
+      line-height: 1em;
+      font-weight: bolder; }
+    .user-post-stats.campaign-stats .summary-item:last-child {
       padding-bottom: 12px;
       padding-bottom: 1.2rem; }
     @media (min-width: 37.5em) {
-      .user-post-stats.campaign-stats li {
+      .user-post-stats.campaign-stats .summary-item {
         float: left;
         width: 50%; }
-        .user-post-stats.campaign-stats li.campaign-donors {
+        .user-post-stats.campaign-stats .summary-item.campaign-donors {
           border-bottom: 0; } }
-  .user-post-stats.campaign-stats span {
-    line-height: 24px;
-    line-height: 2.4rem; }
-  .user-post-stats.campaign-stats .amount,
-  .user-post-stats.campaign-stats .donors-count {
-    font-size: 16px;
-    font-size: 1.6rem; }
-  .user-post-stats.campaign-stats .goal-amount {
-    display: inline;
-    font-size: 1em;
-    line-height: 1em;
-    font-weight: bolder; }
 
 .user-post-actions {
   padding: 12px;
