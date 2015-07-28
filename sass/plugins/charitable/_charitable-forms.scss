@@ -17,7 +17,8 @@
         clear: left;
         @include bp( 600 ) {    
             float: left;
-            width: 50%;                     
+            width: 50%;
+            clear: none;
 
             &.odd {
                 @include padding-right( 36 );
@@ -191,9 +192,15 @@
 
 .charitable-fieldset {
     position: relative;
+    width: 100%;
     @include padding( 0, 0, 24 );
     @include margin-bottom( 24 );
     border: none;
+
+    > * {
+        float: left;
+        width: 100%;
+    }
 
     &:before {
         content: "";
@@ -207,8 +214,7 @@
 
     .charitable-form-header {
         position: relative;
-        float: left;
-        width: 100%;
+        float: left;        
         clear: both;
         @include left( 24 );
         margin: 0;
@@ -437,3 +443,5 @@ body > .select2-container--open {
         @include border-width( 2, 2, 0 );
     }    
 }
+
+@import "donation-form";

@@ -1,0 +1,236 @@
+#charitable-donation-form {  
+
+    .charitable-fieldset {
+        @include margin-bottom( 12 );
+
+        &::before {
+            display: none;
+        }   
+    }
+
+    .charitable-form-header {
+        left: 0;
+        margin-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        @include font-size( 16 );
+    }
+
+    .donation-amounts {
+        @extend .cf;
+        
+        .donation-amount {          
+            width: 100%;
+            position: relative;
+            @include padding( 12, 12, 12, 36 );
+            @include margin( 0, 12, 12, 0 );
+            @include line-height( 18 );
+            @include border-width( 2 );
+            border-style: solid;
+            @include border-color( $color__background-body );
+            border-radius: 0.4rem;            
+            @include color( $color__text );
+            @include background-color( $color__background-content );        
+
+            .amount {    
+                display: block;     
+                @include font-size( 18 );            
+            }
+
+            .description {
+                display: block;
+                @include margin-top( 6 );
+                
+                &:empty {
+                    display: none;
+                }
+            }
+
+            &.selected, 
+            &:hover {
+                @include border-color( $color__background-button );
+                @include background-color( $color__text );
+                @include color( $color__background-content );
+            }
+
+            &.custom-donation-amount {
+                width: 100%;
+                margin-left: 0;
+
+                .description {
+                    @include font-size( 12 );
+                    font-family: $font__main;
+                    letter-spacing: 0;
+                    text-transform: none;
+                }        
+
+                input[type=text] {
+                    position: static;
+                    max-width: 100%;
+
+                    &:focus, 
+                    &:active {
+                        @include background-color( $color__background-content );
+                    }
+                }
+            }
+
+            input {
+                position: absolute;
+                @include top( 12 );
+                @include left( 12 );
+            }
+
+            @include bp (600) {
+                float: left;
+                width: 48%;
+                margin: {
+                    top: 0;
+                    right: 0;
+                    @include bottom( 12 );
+                    left: 4%;
+                }
+
+                &:nth-child(2n + 1) {
+                    margin-left: 0;
+                    clear: left;
+                }
+            }
+        }
+    }
+
+    #custom-donation-amount-field {
+        width: 100%;
+        @include margin( 12, 0, 0 );
+
+        input {
+            @include background-color( $color__background-content );
+        }
+
+        &.charitable-custom-donation-field-alone {
+            margin-top: 0;
+        }
+    }       
+
+    .charitable-connected-downloads {   
+        float: left;
+        width: 100%;
+        @include margin-bottom( 24 );
+        @include border;        
+        border-radius: 0.4rem;
+        @include background-color( $color__background-widget );     
+    }
+
+    .charitable-edd-connected-download {
+        position: relative;
+        @include padding( 24, 12, 24, 12 );
+        @include border-bottom;     
+        cursor: pointer;
+
+        &:last-of-type {
+            border: none;
+        }
+
+        &.selected {
+            @include background-color( $color__background-content );
+        }
+
+        @include bp( 800 ) {
+            // @include padding-left( 140 );
+        }
+    }
+
+    .edd-price-option-price {
+        font-family: $font__secondary;
+        @include font-size( 16 );
+
+        .currency {
+            @include padding-left( 2 );
+            @include font-size( 14 );
+            @include color( $color__text-meta );
+        }
+    }
+
+    .charitable-edd-download-select {       
+        position: relative;
+        @include bottom( 2 );
+        @include width( 20 );
+    }
+
+    .charitable-option-no-download {
+        font-family: $font__secondary;
+        @include font-size( 16 );
+        text-transform: uppercase;
+    }
+
+    .charitable-edd-connected-download-description {
+        @include padding-top( 12 );
+
+        .download-title {
+            margin-top: 0;
+        }
+
+        @include bp( 800 ) {
+            padding-top: 0;
+        }
+    }
+
+    .charitable-edd-price-options {
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .edd-price-option-price {
+            position: static;
+        }
+    }   
+
+    .charitable-form-field .button {
+        @include button-inverted();
+        margin: 0;
+        width: auto;
+        @include color( $color__accent );
+        @include border-color( $color__accent );        
+
+        &:hover, 
+        &:focus, 
+        &:active {
+            @include background-color( $color__accent );
+            @include color( $color__text-overlay );
+        }
+    }
+}
+
+#custom-donation-amount-field.charitable-custom-donation-field-alone {    
+    @include padding( 2 );
+    border-radius: 0.4rem;
+    @include background-color( $color__background-body );
+
+    input {
+        width: 100%;      
+        max-width: 100%;  
+        @include font-size( 18 );
+        font-family: $font__secondary;
+        @include color( $color__text ); 
+        @include background-color( $color__background-content );
+    }
+
+    ::-webkit-input-placeholder {
+       @include color( $color__background-body );
+    }
+
+    ::-moz-placeholder {
+       @include color( $color__background-body );  
+    }
+
+    :-ms-input-placeholder {  
+       @include color( $color__background-body );  
+    }
+}
+
+#charitable-donation-form-modal {
+    #custom-donation-amount-field {
+        width: 100%;
+    }
+}

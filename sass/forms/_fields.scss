@@ -57,7 +57,6 @@ select {
 	@include padding( 11, 10 );	
 	border: none;
 	border-radius: 0.2rem;
-	@include size( text-indent, 3 );
 }
 
 .chrome input[type=file], 

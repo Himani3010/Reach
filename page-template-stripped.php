@@ -17,11 +17,13 @@ get_header( 'stripped' );
 						
 			get_template_part( 'partials/banner' ); ?>
 
-			<main class="site-main content-area" role="main">
-				<?php get_template_part( 'partials/content', 'page' );
+			<div class="layout-wrapper">
+				<main class="site-main content-area" role="main">
+					<?php get_template_part( 'partials/content', 'page' );
 
-				comments_template('', true); ?>
-			</main><!-- .site-main -->
+					comments_template('', true); ?>
+				</main><!-- .site-main -->
+			</div><!-- .layout-wrapper -->
 		<?php 
 		endwhile;
 	endif;
