@@ -84,7 +84,7 @@ if ( ! function_exists( 'sofa_crowdfunding_get_pledge_amount_text' ) ) {
 }
 
 if ( ! function_exists( 'atcf_get_campaign' ) ) {
-	function atcf_get_campaign( $id ) {
+	function atcf_get_campaign( $id ) {		
 		_deprecated_function( __FUNCTION__, '1.0.0', 'new Charitable_Campaign( $id )' );
 		return new Charitable_Campaign( $id );
 	}

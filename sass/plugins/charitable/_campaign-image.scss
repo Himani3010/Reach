@@ -13,8 +13,8 @@
         text-align: center;
         @include letter-spacing( 1 );
         @include font-size( 11 );
-        @include background-color( $color__accent );
-        @include color( $color__text-overlay );
+        @include color( $color__accent );
+        @include background-color( $color__text-overlay );
         -moz-transform: rotate(-45deg);
         -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
@@ -22,10 +22,12 @@
         transform: rotate(-45deg);
 
         &.campaign-status-tag-successful { 
+            @include color( $color__text-overlay );
             @include background-color( $color__success );
         }
 
         &.campaign-status-tag-unsuccessful {
+            @include color( $color__text-overlay );
             @include background-color( $color__failure );
         }
     }

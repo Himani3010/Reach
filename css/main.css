@@ -2921,16 +2921,18 @@ embed {
     letter-spacing: 0.1rem;
     font-size: 11px;
     font-size: 1.1rem;
-    background-color: #d95b43;
-    color: #ffffff;
+    color: #d95b43;
+    background-color: #ffffff;
     -moz-transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg); }
     .campaign-image .campaign-status-tag.campaign-status-tag-successful {
+      color: #ffffff;
       background-color: #1ba714; }
     .campaign-image .campaign-status-tag.campaign-status-tag-unsuccessful {
+      color: #ffffff;
       background-color: #cc181e; }
 
 /*--------------------------------------------------------------
