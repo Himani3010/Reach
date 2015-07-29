@@ -22,11 +22,13 @@
         transform: rotate(-45deg);
 
         &.campaign-status-tag-successful { 
+            @include color( $color__text-overlay );
             @include background-color( $color__success );
             @include color( $color__text-overlay );
         }
 
         &.campaign-status-tag-unsuccessful {
+            @include color( $color__text-overlay );
             @include background-color( $color__failure );
             @include color( $color__text-overlay );
         }

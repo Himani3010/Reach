@@ -11,12 +11,10 @@
 			margin-top: 0;
 			font-weight: bold;
 			font-style: italic;
-			// text-align: center;
 		}
 
 		.campaign-title {
 			@include margin( 0, 0, 36 );
-			// text-align: center;
 		}	
 	}	
 }

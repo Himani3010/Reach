@@ -3235,6 +3235,27 @@ body > .select2-container--open .select2-dropdown--above {
   #charitable-donation-form .charitable-form-field .button:hover {
     text-decoration: none; }
 
+#charitable-gateway-fields > label {
+  font-weight: bold; }
+#charitable-gateway-fields #charitable-gateway-selector {
+  padding: 12px 0px;
+  padding: 1.2rem 0rem; }
+#charitable-gateway-fields #charitable_field_cc_cvc,
+#charitable-gateway-fields #charitable_field_cc_expiration {
+  width: auto; }
+#charitable-gateway-fields .charitable-form-fields {
+  padding: 12px;
+  padding: 1.2rem;
+  border-width: 2px;
+  border-width: 0.2rem;
+  border-style: solid;
+  border-radius: 0.4rem; }
+  #charitable-gateway-fields .charitable-form-fields select,
+  #charitable-gateway-fields .charitable-form-fields input {
+    border-width: 2px;
+    border-width: 0.2rem;
+    border-style: solid; }
+
 #custom-donation-amount-field.charitable-custom-donation-field-alone {
   padding: 2px;
   padding: 0.2rem;
@@ -3640,6 +3661,8 @@ body > .select2-container--open .select2-dropdown--above {
   .campaigns-grid .campaign-image a {
     display: block;
     line-height: 0; }
+.campaigns-grid .wp-post-image {
+  padding-bottom: 0; }
 .campaigns-grid .block-title {
   padding: 0;
   border: 0; }

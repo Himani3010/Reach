@@ -71,7 +71,7 @@ input[type="number"],
 input[type="date"],
 textarea, .widget, .meta, .comments-section input[type=email],
 .comments-section input[type=text],
-.comments-section textarea, .charitable-campaign-form-table tfoot td, .charitable-form-field-multi-checkbox ul, .charitable-notice, #charitable_field_recipient, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .charitable-connected-downloads, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .charitable-user-post:after, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
+.comments-section textarea, .charitable-campaign-form-table tfoot td, .charitable-form-field-multi-checkbox ul, .charitable-notice, #charitable_field_recipient, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .charitable-connected-downloads, #charitable-gateway-fields .charitable-form-fields, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .charitable-user-post:after, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
   background-color: #f1efee; }
 
 button,
@@ -98,7 +98,8 @@ input[type="submit"], .button, .button-alt:hover,
 .widget input[type=password]:active,
 .widget input[type=email]:active,
 .widget input[type=number]:active,
-.widget textarea:active, .widget.content-block, .widget_search.widget .search-field:focus, .format-quote blockquote, .stripped .site-main, .comments-section, body.author .site-main, .campaign-image .campaign-status-tag, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) select, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) textarea, .charitable-repeatable-form-field-table .add-row.button, .charitable-fieldset .charitable-form-header, .charitable-recipient-type-options .charitable-recipient-type, .charitable-campaign-recipient-search .select2-container, #charitable-donation-form .donation-amounts .donation-amount, #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount input[type=text]:focus, #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount input[type=text]:active, #charitable-donation-form #custom-donation-amount-field input, #charitable-donation-form .charitable-edd-connected-download.selected, #custom-donation-amount-field.charitable-custom-donation-field-alone input, .widget.widget_charitable_edd_campaign_downloads .widget-block, .widget.widget_charitable_donate_widget .widget-block, .widget.widget_charitable_donate_widget .charitable-donation-form-without-suggestions, .donation-form-display-same_page.single-campaign .content-area #charitable-donation-form, .campaign-donation-page.stripped #charitable-donation-form, .user-dashboard-menu li.current-menu-item a,
+.widget textarea:active, .widget.content-block, .widget_search.widget .search-field:focus, .format-quote blockquote, .stripped .site-main, .comments-section, body.author .site-main, .campaign-image .campaign-status-tag, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) select, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) textarea, .charitable-repeatable-form-field-table .add-row.button, .charitable-fieldset .charitable-form-header, .charitable-recipient-type-options .charitable-recipient-type, .charitable-campaign-recipient-search .select2-container, #charitable-donation-form .donation-amounts .donation-amount, #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount input[type=text]:focus, #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount input[type=text]:active, #charitable-donation-form #custom-donation-amount-field input, #charitable-donation-form .charitable-edd-connected-download.selected, #charitable-gateway-fields .charitable-form-fields select,
+#charitable-gateway-fields .charitable-form-fields input, #custom-donation-amount-field.charitable-custom-donation-field-alone input, .widget.widget_charitable_edd_campaign_downloads .widget-block, .widget.widget_charitable_donate_widget .widget-block, .widget.widget_charitable_donate_widget .charitable-donation-form-without-suggestions, .donation-form-display-same_page.single-campaign .content-area #charitable-donation-form, .campaign-donation-page.stripped #charitable-donation-form, .user-dashboard-menu li.current-menu-item a,
 .user-dashboard-menu li a:hover, #edd_checkout_wrap fieldset#edd_cc_fields input,
 #edd_checkout_wrap fieldset#edd_cc_fields select,
 #edd_checkout_wrap fieldset#edd_cc_fields textarea, .edd-checkout-template.stripped .entry-block, .widget.widget_pp_campaign_events .widget-block {
@@ -159,7 +160,7 @@ input[type="number"],
 input[type="date"],
 textarea, .widget, .meta, .comments-section input[type=email],
 .comments-section input[type=text],
-.comments-section textarea, .charitable-campaign-form-table tfoot td, .charitable-form-field-multi-checkbox ul, .charitable-notice, #charitable_field_recipient, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .charitable-connected-downloads, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .charitable-user-post:after, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
+.comments-section textarea, .charitable-campaign-form-table tfoot td, .charitable-form-field-multi-checkbox ul, .charitable-notice, #charitable_field_recipient, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .charitable-connected-downloads, #charitable-gateway-fields .charitable-form-fields, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .charitable-user-post:after, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
   background-color: #f1efee; }
 
 blockquote, pre, th, input[type="text"],
@@ -171,7 +172,7 @@ input[type="number"],
 input[type="date"],
 textarea, .widget, .meta, .comments-section input[type=email],
 .comments-section input[type=text],
-.comments-section textarea, .charitable-campaign-form-table tfoot td, .charitable-form-field-multi-checkbox ul, .charitable-notice, #charitable_field_recipient, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .charitable-connected-downloads, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .charitable-user-post:after, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
+.comments-section textarea, .charitable-campaign-form-table tfoot td, .charitable-form-field-multi-checkbox ul, .charitable-notice, #charitable_field_recipient, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .charitable-connected-downloads, #charitable-gateway-fields .charitable-form-fields, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .charitable-user-post:after, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
   background-color: #f1efee; }
 
 blockquote, pre, th, input[type="text"],
@@ -183,7 +184,7 @@ input[type="number"],
 input[type="date"],
 textarea, .widget, .meta, .comments-section input[type=email],
 .comments-section input[type=text],
-.comments-section textarea, .charitable-campaign-form-table tfoot td, .charitable-form-field-multi-checkbox ul, .charitable-notice, #charitable_field_recipient, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .charitable-connected-downloads, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .charitable-user-post:after, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
+.comments-section textarea, .charitable-campaign-form-table tfoot td, .charitable-form-field-multi-checkbox ul, .charitable-notice, #charitable_field_recipient, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .charitable-connected-downloads, #charitable-gateway-fields .charitable-form-fields, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .charitable-user-post:after, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
   background-color: #f1efee; }
 
 blockquote, pre, th, input[type="text"],
@@ -195,7 +196,7 @@ input[type="number"],
 input[type="date"],
 textarea, .widget, .meta, .comments-section input[type=email],
 .comments-section input[type=text],
-.comments-section textarea, .charitable-campaign-form-table tfoot td, .charitable-form-field-multi-checkbox ul, .charitable-notice, #charitable_field_recipient, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .charitable-connected-downloads, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .charitable-user-post:after, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
+.comments-section textarea, .charitable-campaign-form-table tfoot td, .charitable-form-field-multi-checkbox ul, .charitable-notice, #charitable_field_recipient, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .charitable-connected-downloads, #charitable-gateway-fields .charitable-form-fields, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .charitable-user-post:after, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
   background-color: #f1efee; }
 
 a, .menu-site a:hover, .menu-button, .button-alt.accent,
@@ -297,7 +298,8 @@ input[type="submit"], .button, .button-alt:hover,
 .widget input[type=password]:active,
 .widget input[type=email]:active,
 .widget input[type=number]:active,
-.widget textarea:active, .widget.content-block, .widget_search.widget .search-field:focus, .format-quote blockquote, .stripped .site-main, .comments-section, body.author .site-main, .campaign-image .campaign-status-tag, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) select, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) textarea, .charitable-repeatable-form-field-table .add-row.button, .charitable-fieldset .charitable-form-header, .charitable-recipient-type-options .charitable-recipient-type, .charitable-campaign-recipient-search .select2-container, #charitable-donation-form .donation-amounts .donation-amount, #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount input[type=text]:focus, #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount input[type=text]:active, #charitable-donation-form #custom-donation-amount-field input, #charitable-donation-form .charitable-edd-connected-download.selected, #custom-donation-amount-field.charitable-custom-donation-field-alone input, .widget.widget_charitable_edd_campaign_downloads .widget-block, .widget.widget_charitable_donate_widget .widget-block, .widget.widget_charitable_donate_widget .charitable-donation-form-without-suggestions, .donation-form-display-same_page.single-campaign .content-area #charitable-donation-form, .campaign-donation-page.stripped #charitable-donation-form, .user-dashboard-menu li.current-menu-item a,
+.widget textarea:active, .widget.content-block, .widget_search.widget .search-field:focus, .format-quote blockquote, .stripped .site-main, .comments-section, body.author .site-main, .campaign-image .campaign-status-tag, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) select, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) textarea, .charitable-repeatable-form-field-table .add-row.button, .charitable-fieldset .charitable-form-header, .charitable-recipient-type-options .charitable-recipient-type, .charitable-campaign-recipient-search .select2-container, #charitable-donation-form .donation-amounts .donation-amount, #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount input[type=text]:focus, #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount input[type=text]:active, #charitable-donation-form #custom-donation-amount-field input, #charitable-donation-form .charitable-edd-connected-download.selected, #charitable-gateway-fields .charitable-form-fields select,
+#charitable-gateway-fields .charitable-form-fields input, #custom-donation-amount-field.charitable-custom-donation-field-alone input, .widget.widget_charitable_edd_campaign_downloads .widget-block, .widget.widget_charitable_donate_widget .widget-block, .widget.widget_charitable_donate_widget .charitable-donation-form-without-suggestions, .donation-form-display-same_page.single-campaign .content-area #charitable-donation-form, .campaign-donation-page.stripped #charitable-donation-form, .user-dashboard-menu li.current-menu-item a,
 .user-dashboard-menu li a:hover, #edd_checkout_wrap fieldset#edd_cc_fields input,
 #edd_checkout_wrap fieldset#edd_cc_fields select,
 #edd_checkout_wrap fieldset#edd_cc_fields textarea, .edd-checkout-template.stripped .entry-block, .widget.widget_pp_campaign_events .widget-block {
@@ -330,7 +332,8 @@ input[type="submit"], .button, .button-alt:hover,
   background-color: #e2dedb; }
 
 table, th,
-td, .block, .widget, .stripped .site-main, body.author .site-main, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) select, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) textarea, .charitable-notice, #charitable_field_recipient, .charitable-recipient-type-options .charitable-recipient-type, .charitable-campaign-recipient-search .select2-container, body > .select2-container--open .select2-dropdown, body > .select2-container--open .select2-dropdown .select2-search__field, #charitable-donation-form .charitable-connected-downloads, .widget.widget_charitable_edd_campaign_downloads .widget-block, .widget.widget_charitable_donate_widget .widget-block, .widget.widget_charitable_donate_widget .charitable-donation-form-without-suggestions, .donation-form-display-same_page.single-campaign .content-area #charitable-donation-form, .campaign-donation-page.stripped #charitable-donation-form, .user-dashboard-menu li.current-menu-item a,
+td, .block, .widget, .stripped .site-main, body.author .site-main, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) select, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) textarea, .charitable-notice, #charitable_field_recipient, .charitable-recipient-type-options .charitable-recipient-type, .charitable-campaign-recipient-search .select2-container, body > .select2-container--open .select2-dropdown, body > .select2-container--open .select2-dropdown .select2-search__field, #charitable-donation-form .charitable-connected-downloads, #charitable-gateway-fields .charitable-form-fields, #charitable-gateway-fields .charitable-form-fields select,
+#charitable-gateway-fields .charitable-form-fields input, .widget.widget_charitable_edd_campaign_downloads .widget-block, .widget.widget_charitable_donate_widget .widget-block, .widget.widget_charitable_donate_widget .charitable-donation-form-without-suggestions, .donation-form-display-same_page.single-campaign .content-area #charitable-donation-form, .campaign-donation-page.stripped #charitable-donation-form, .user-dashboard-menu li.current-menu-item a,
 .user-dashboard-menu li a:hover, .charitable-user-post, .edd-checkout-template.stripped .entry-block, body.events-single .tribe-events-event-meta, .widget.widget_pp_campaign_events .widget-block {
   border-color: #e2dedb; }
 
@@ -3586,6 +3589,27 @@ body > .select2-container--open .select2-dropdown--above {
   #charitable-donation-form .charitable-form-field .button:hover {
     text-decoration: none; }
 
+#charitable-gateway-fields > label {
+  font-weight: bold; }
+#charitable-gateway-fields #charitable-gateway-selector {
+  padding: 12px 0px;
+  padding: 1.2rem 0rem; }
+#charitable-gateway-fields #charitable_field_cc_cvc,
+#charitable-gateway-fields #charitable_field_cc_expiration {
+  width: auto; }
+#charitable-gateway-fields .charitable-form-fields {
+  padding: 12px;
+  padding: 1.2rem;
+  border-width: 2px;
+  border-width: 0.2rem;
+  border-style: solid;
+  border-radius: 0.4rem; }
+  #charitable-gateway-fields .charitable-form-fields select,
+  #charitable-gateway-fields .charitable-form-fields input {
+    border-width: 2px;
+    border-width: 0.2rem;
+    border-style: solid; }
+
 #custom-donation-amount-field.charitable-custom-donation-field-alone {
   padding: 2px;
   padding: 0.2rem;
@@ -3991,6 +4015,8 @@ body > .select2-container--open .select2-dropdown--above {
   .campaigns-grid .campaign-image a {
     display: block;
     line-height: 0; }
+.campaigns-grid .wp-post-image {
+  padding-bottom: 0; }
 .campaigns-grid .block-title {
   padding: 0;
   border: 0; }

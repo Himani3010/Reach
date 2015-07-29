@@ -199,6 +199,34 @@
             @include background-color( $color__accent );
             @include color( $color__text-overlay );
         }
+    }    
+}
+
+#charitable-gateway-fields {
+    > label {
+        font-weight: bold;
+    }
+
+    #charitable-gateway-selector {
+        @include padding( 12, 0 );
+    }
+
+    #charitable_field_cc_cvc,
+    #charitable_field_cc_expiration {
+        width: auto;
+    }
+
+    .charitable-form-fields {
+        @include padding( 12 );
+        @include border;
+        border-radius: 0.4rem;
+        @include background-color( $color__background-meta );
+     
+        select,
+        input {
+            @include background-color( $color__background-content );
+            @include border;
+        }
     }
 }
 
