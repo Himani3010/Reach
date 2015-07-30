@@ -43,14 +43,18 @@
 	}
 
   	$(window).resize( function() {
-  		if ( REACH_CROWDFUNDING ) {
+  		if ( REACH_CROWDFUNDING && $.fn.masonry ) {
   			REACH.Grid.resizeGrid();
   		}
   	});
 
   	$(window).load( function() {
   		if ( REACH_CROWDFUNDING ) {
-  			REACH.Grid.init();
+
+            if ( $.fn.masonry ) {
+                REACH.Grid.init();    
+            }
+
 			REACH.Barometer.init();
   		}
   	});

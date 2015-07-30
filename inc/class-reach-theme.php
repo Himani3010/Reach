@@ -513,27 +513,7 @@ class Reach_Theme {
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
-		}
-
-		if ( reach_has_charitable() ) {
-			wp_localize_script('reach', 'REACH_CROWDFUNDING', array(
-	            'need_minimum_pledge'   => __( 'Your pledge must be at least the minimum pledge amount.', 'reach' ), 
-	            'years'                 => __( 'Years', 'reach' ), 
-	            'months'                => __( 'Months', 'reach' ), 
-	            'weeks'                 => __( 'Weeks', 'reach' ), 
-	            'days'                  => __( 'Days', 'reach' ), 
-	            'hours'                 => __( 'Hours', 'reach' ), 
-	            'minutes'               => __( 'Minutes', 'reach' ), 
-	            'seconds'               => __( 'Seconds', 'reach' ), 
-	            'year'                  => __( 'Year', 'reach' ), 
-	            'month'                 => __( 'Month', 'reach' ), 
-	            'day'                   => __( 'Day', 'reach' ), 
-	            'hour'                  => __( 'Hour', 'reach' ), 
-	            'minute'                => __( 'Minute', 'reach' ), 
-	            'second'                => __( 'Second', 'reach' ), 
-	            'timezone_offset'       => reach_get_timezone_offset()
-	        ) ); 
-		}		
+		}	
 	}
 
 	/**

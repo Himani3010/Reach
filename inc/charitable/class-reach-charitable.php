@@ -68,7 +68,8 @@ class Reach_Charitable {
      * @access  private
      * @since   2.0.0
      */
-    private function attach_hooks_and_filters() {        
+    private function attach_hooks_and_filters() {
+        add_action( 'wp_enqueue_scripts', array( $this, 'setup_localized_scripts' ) );    
         add_filter( 'reach_script_dependencies', array( $this, 'setup_script_dependencies' ) );
         add_filter( 'body_class', array( $this, 'add_body_classes' ) );
         add_filter( 'reach_banner_title', array( $this, 'set_banner_title' ) );
@@ -82,6 +83,33 @@ class Reach_Charitable {
         add_filter( 'charitable_use_campaign_template', '__return_false' );
         add_filter( 'charitable_modal_window_class', array( $this, 'modal_window_class' ) );
         add_filter( 'charitable_campaign_video_embed_args', array( $this, 'video_embed_args' ), 5 );
+    }
+
+    /**
+     * Set up localized script. 
+     *
+     * @return  void
+     * @access  public
+     * @since   1.0.0
+     */
+    public function setup_localized_scripts() {
+        wp_localize_script('reach', 'REACH_CROWDFUNDING', array(
+            'need_minimum_pledge'   => __( 'Your pledge must be at least the minimum pledge amount.', 'reach' ), 
+            'years'                 => __( 'Years', 'reach' ), 
+            'months'                => __( 'Months', 'reach' ), 
+            'weeks'                 => __( 'Weeks', 'reach' ), 
+            'days'                  => __( 'Days', 'reach' ), 
+            'hours'                 => __( 'Hours', 'reach' ), 
+            'minutes'               => __( 'Minutes', 'reach' ), 
+            'seconds'               => __( 'Seconds', 'reach' ), 
+            'year'                  => __( 'Year', 'reach' ), 
+            'month'                 => __( 'Month', 'reach' ), 
+            'day'                   => __( 'Day', 'reach' ), 
+            'hour'                  => __( 'Hour', 'reach' ), 
+            'minute'                => __( 'Minute', 'reach' ), 
+            'second'                => __( 'Second', 'reach' ), 
+            'timezone_offset'       => reach_get_timezone_offset()
+        ) ); 
     }
 
     /**

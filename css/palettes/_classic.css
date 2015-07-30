@@ -119,7 +119,7 @@ input[type="submit"]:hover, .menu-site a, .button:hover, .button-alt,
 .button-secondary,
 .button.button-alt,
 .button.button-secondary, .modal .block-title, .modal-close:before, .meta a, #submit, .charitable-form-field-editor .mce-btn button, .charitable-repeatable-form-field-table .remove:before, .charitable-repeatable-form-field-table .add-row.button, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .donation-amounts .donation-amount, #charitable-donation-form .charitable-form-field .button, #custom-donation-amount-field.charitable-custom-donation-field-alone input, .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .campaigns-grid .campaign-description, .campaigns-grid .campaign-stats, .share-widget .modal,
-.share-widget .modal .block-title, body.user-dashboard .charitable-submit-field .button, .user-post-actions a, div.printfriendly a,
+.share-widget .modal .block-title, body.user-dashboard .charitable-submit-field .button, .user-post-actions a, .campaign .campaign-location, .charitable-campaign-map-marker .campaign-description, div.printfriendly a,
 div.printfriendly a:link,
 div.printfriendly a:visited, body.events-single .tribe-events-tickets .tickets_price, body.events-single .tribe-events-tickets .tickets_name, #tribe-events .tribe-events-button {
   color: #7d6e63; }
@@ -236,7 +236,7 @@ input[type="submit"]:hover, .menu-site a, .button:hover, .button-alt,
 .button-secondary,
 .button.button-alt,
 .button.button-secondary, .modal .block-title, .modal-close:before, .meta a, #submit, .charitable-form-field-editor .mce-btn button, .charitable-repeatable-form-field-table .remove:before, .charitable-repeatable-form-field-table .add-row.button, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .donation-amounts .donation-amount, #charitable-donation-form .charitable-form-field .button, #custom-donation-amount-field.charitable-custom-donation-field-alone input, .widget.widget_campaign_creator_widget .creator-profile-link a:hover, .campaigns-grid .campaign-description, .campaigns-grid .campaign-stats, .share-widget .modal,
-.share-widget .modal .block-title, body.user-dashboard .charitable-submit-field .button, .user-post-actions a, div.printfriendly a,
+.share-widget .modal .block-title, body.user-dashboard .charitable-submit-field .button, .user-post-actions a, .campaign .campaign-location, .charitable-campaign-map-marker .campaign-description, div.printfriendly a,
 div.printfriendly a:link,
 div.printfriendly a:visited, body.events-single .tribe-events-tickets .tickets_price, body.events-single .tribe-events-tickets .tickets_name, #tribe-events .tribe-events-button {
   color: #7d6e63; }
@@ -636,7 +636,8 @@ textarea,
 .entry-header .format-status .entry-title,
 #lang-sel,
 .alt,
-.banner-subtitle {
+.banner-subtitle,
+.charitable-campaign-map-marker .campaign-description {
   font-family: Merriweather, Georgia, "Times New Roman", Times, serif; }
 
 h1, h2, h3, h4, h5, h6,
@@ -2384,6 +2385,21 @@ a {
   .page-template-page-template-home-slider .entry .button {
     margin: 12px 3px 0px;
     margin: 1.2rem 0.3rem 0rem; }
+.page-template-page-template-home-slider .campaigns-grid {
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 20px;
+  line-height: 2rem; }
+  .page-template-page-template-home-slider .campaigns-grid .block-title {
+    text-transform: uppercase; }
+.page-template-page-template-home-slider .charitable-campaign-map-marker {
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 20px;
+  line-height: 2rem;
+  text-align: left; }
+  .page-template-page-template-home-slider .charitable-campaign-map-marker h3 {
+    text-transform: uppercase; }
 
 /* Stripped */
 .stripped #page {
@@ -4158,7 +4174,8 @@ body > .select2-container--open .select2-dropdown--above {
     font-size: 22px;
     font-size: 2.2rem;
     line-height: 32px;
-    line-height: 3.2rem; }
+    line-height: 3.2rem;
+    font-weight: normal; }
     .campaign-summary .campaign-description p:last-child {
       margin-bottom: 0; }
   .campaign-summary .campaign-video,
@@ -4844,6 +4861,19 @@ body.user-dashboard .charitable-submit-field {
         border-bottom-style: solid; }
         .user-post-actions li:first-child {
           padding-top: 0; } }
+
+/*--------------------------------------------------------------  
+18.1.10 Geolocation
+--------------------------------------------------------------*/
+.campaign-location {
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem; }
+
+.campaign .campaign-location {
+  font-style: italic; }
+
+.charitable-campaign-map-marker h3 {
+  font-weight: bolder; }
 
 /*-------------------------------------------------------------- 
 18.2 Easy Digital Downloads

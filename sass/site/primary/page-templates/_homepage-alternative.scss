@@ -32,6 +32,25 @@
 
 		.button {
 			@include margin( 12, 3, 0 );
+		}		
+	}
+
+	.campaigns-grid {
+		@include font-size( 12 );
+		@include line-height( 20 );
+
+		.block-title {
+			text-transform: uppercase;
+		}
+	}
+
+	.charitable-campaign-map-marker {
+		@include font-size( 12 );
+		@include line-height( 20 );
+		text-align: left;
+
+		h3 {
+			text-transform: uppercase;
 		}
 	}
 }

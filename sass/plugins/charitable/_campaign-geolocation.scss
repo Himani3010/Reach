@@ -1,0 +1,22 @@
+.campaign-location {
+    @include margin-bottom( 12 );
+}
+
+.campaign {
+    .campaign-location {
+        @include color( $color__text );
+        font-style: italic;
+    }
+}
+
+.charitable-campaign-map-marker {
+    h3 {
+        font-weight: bolder;
+    }
+
+    .campaign-description {
+        font-family: $font__main;
+        font-weight: normal;
+        @include color( $color__text );       
+    }
+}

@@ -282,7 +282,8 @@ textarea,
 .entry-header .format-status .entry-title,
 #lang-sel,
 .alt,
-.banner-subtitle {
+.banner-subtitle,
+.charitable-campaign-map-marker .campaign-description {
   font-family: Merriweather, Georgia, "Times New Roman", Times, serif; }
 
 h1, h2, h3, h4, h5, h6,
@@ -2030,6 +2031,21 @@ a {
   .page-template-page-template-home-slider .entry .button {
     margin: 12px 3px 0px;
     margin: 1.2rem 0.3rem 0rem; }
+.page-template-page-template-home-slider .campaigns-grid {
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 20px;
+  line-height: 2rem; }
+  .page-template-page-template-home-slider .campaigns-grid .block-title {
+    text-transform: uppercase; }
+.page-template-page-template-home-slider .charitable-campaign-map-marker {
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 20px;
+  line-height: 2rem;
+  text-align: left; }
+  .page-template-page-template-home-slider .charitable-campaign-map-marker h3 {
+    text-transform: uppercase; }
 
 /* Stripped */
 .stripped #page {
@@ -3804,7 +3820,8 @@ body > .select2-container--open .select2-dropdown--above {
     font-size: 22px;
     font-size: 2.2rem;
     line-height: 32px;
-    line-height: 3.2rem; }
+    line-height: 3.2rem;
+    font-weight: normal; }
     .campaign-summary .campaign-description p:last-child {
       margin-bottom: 0; }
   .campaign-summary .campaign-video,
@@ -4490,6 +4507,19 @@ body.user-dashboard .charitable-submit-field {
         border-bottom-style: solid; }
         .user-post-actions li:first-child {
           padding-top: 0; } }
+
+/*--------------------------------------------------------------  
+18.1.10 Geolocation
+--------------------------------------------------------------*/
+.campaign-location {
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem; }
+
+.campaign .campaign-location {
+  font-style: italic; }
+
+.charitable-campaign-map-marker h3 {
+  font-weight: bolder; }
 
 /*-------------------------------------------------------------- 
 18.2 Easy Digital Downloads
