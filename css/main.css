@@ -313,8 +313,7 @@ textarea,
 .entry-header .format-status .entry-title,
 #lang-sel,
 .alt,
-.banner-subtitle,
-.charitable-campaign-map-marker .campaign-description {
+.banner-subtitle {
   font-family: Merriweather, Georgia, "Times New Roman", Times, serif; }
 
 h1, h2, h3, h4, h5, h6,
@@ -1551,18 +1550,28 @@ a {
 /*-------------------------------------------------------------- 
 13.0 Masthead
 --------------------------------------------------------------*/
+#page > .layout-wrapper,
 #header {
-  position: relative;
-  z-index: 50;
-  padding: 24px 24px 0px 24px;
-  padding: 2.4rem 2.4rem 0rem 2.4rem;
-  background-color: #f9f8f7; }
+  padding: 0px 24px;
+  padding: 0rem 2.4rem; }
   @media (min-width: 50em) {
+    #page > .layout-wrapper,
     #header {
       padding-left: 36px;
       padding-left: 3.6rem;
       padding-right: 36px;
       padding-right: 3.6rem; } }
+
+#page > .layout-wrapper {
+  max-width: 1472px;
+  max-width: 147.2rem; }
+
+#header {
+  position: relative;
+  z-index: 50;
+  padding-top: 24px;
+  padding-top: 2.4rem;
+  background-color: #f9f8f7; }
 
 .site-identity {
   position: relative;
@@ -1605,10 +1614,9 @@ a {
 13.1 Social Networks
 --------------------------------------------------------------*/
 .social {
+  padding-left: 0;
   margin: 12px 0px;
   margin: 1.2rem 0rem;
-  padding-left: 36px;
-  padding-left: 3.6rem;
   text-align: left; }
   .social li {
     display: inline-block;
@@ -1672,10 +1680,7 @@ a {
   @media (min-width: 37.5em) {
     .account-links {
       float: right;
-      margin-left: 0;
-      margin-right: 36px;
-      margin-right: 3.6rem;
-      margin-bottom: 0;
+      margin: 0;
       width: auto; } }
 
 .logout {
@@ -2970,8 +2975,9 @@ embed {
   @media (min-width: 37.5em) {
     .charitable-form-fields .charitable-form-field {
       float: left;
-      width: 50%;
-      clear: none; }
+      width: 50%; }
+      .charitable-form-fields .charitable-form-field ~ .charitable-form-field {
+        clear: none; }
       .charitable-form-fields .charitable-form-field.odd {
         padding-right: 36px;
         padding-right: 3.6rem; }
@@ -3134,9 +3140,6 @@ embed {
   margin-bottom: 24px;
   margin-bottom: 2.4rem;
   border: none; }
-  .charitable-fieldset > * {
-    float: left;
-    width: 100%; }
   .charitable-fieldset:before {
     content: "";
     display: block;
@@ -4892,6 +4895,8 @@ body.user-dashboard .charitable-submit-field {
 .charitable-campaign-map-marker h3 {
   font-weight: bolder; }
 .charitable-campaign-map-marker .campaign-description {
+  font-family: Merriweather, Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
   color: #7d6e63; }
 
 /*-------------------------------------------------------------- 

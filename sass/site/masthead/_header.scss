@@ -1,13 +1,22 @@
+#page > .layout-wrapper, 
 #header {
-	position: relative;		
-	z-index: 50;
-	@include padding( 24, 24, 0, 24 );	
-	@include background-color( $color__background-wrapper );
+	@include padding( 0, 24 );
 
 	@include bp( 800 ) {
 		@include padding-left( 36 );
 		@include padding-right( 36 );
 	}
+}
+
+#page > .layout-wrapper {
+	@include max-width( 1472 );
+}
+
+#header {
+	position: relative;		
+	z-index: 50;
+	@include padding-top( 24 );
+	@include background-color( $color__background-wrapper );
 }
 
 .site-identity {

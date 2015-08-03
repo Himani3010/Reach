@@ -17,8 +17,11 @@
         clear: left;
         @include bp( 600 ) {    
             float: left;
-            width: 50%;
-            clear: none;
+            width: 50%;        
+
+            ~ .charitable-form-field {
+                clear: none;
+            }
 
             &.odd {
                 @include padding-right( 36 );
@@ -195,12 +198,7 @@
     width: 100%;
     @include padding( 0, 0, 24 );
     @include margin-bottom( 24 );
-    border: none;
-
-    > * {
-        float: left;
-        width: 100%;
-    }
+    border: none;    
 
     &:before {
         content: "";
@@ -240,7 +238,7 @@
             @include padding( 12, 0 );
             @include font-size( 14 );
         }
-    }   
+    }
 }
 
 .charitable-login-form {
