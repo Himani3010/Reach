@@ -1,15 +1,14 @@
-.donors-list {
-    .donor {
-        float: left;
-        width: 20%;
-        @include padding-right( 12 );
+.widget.widget_charitable_donors_widget {
+    .donors-list {
+        .donor {
+            float: left;
+            @include width( 100 );
+            @include padding( 0, 12, 0, 0 );
+            border: none;
 
-        &:nth-child(5n+6) {
-            clear: left;
+            &:nth-child(5n+6) {
+                clear: left;
+            }
         }
-    }
-
-    .donor-name {
-        @include margin( 0, 0, 6 );
     }
 }

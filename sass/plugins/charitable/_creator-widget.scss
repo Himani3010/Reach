@@ -1,47 +1,42 @@
 .widget.widget_campaign_creator_widget {
-    .avatar {
-        float: left;
-        @include margin( 0, 12, 12, 0 );
-    }
-
-    .creator-summary {
-        float: left;
-    }
-
-    .creator-name {
-        margin-top: 0;
-    }
-
-    .creator-bio, 
-    .creator-links,
-    .creator-profile-link {
-        float: left;
-        clear: both;
-        width: 100%;
-    }
-
-    .creator-bio {
-        @include padding-top( 12 );
-        @include border-top( 1 );
-    }
-
-    .creator-links {
-        @include margin-left( 16 );
-        li {            
-            list-style: disc;
+    .charitable-campaign-creator {
+        .avatar {
+            @include margin-bottom( 12 );
         }
-    }
 
-    .creator-profile-link {
-        a {
-            @include button;
-            margin: 0;            
+        .creator-name {
+            margin-top: 0;
         }
-    }
 
-    @media (min-width: 45em) and (max-width: 50em) {
-        .creator-summary {
-            float: none;
+        .creator-bio, 
+        .creator-links,
+        .creator-profile-link {
+            float: left;
+            clear: both;
+            width: 100%;
+            margin-bottom: 0;
         }
-    };
+
+        .creator-bio {
+            @include padding-top( 12 );
+            @include border-top( 1 );
+        }
+
+        .creator-links {
+            @include margin-left( 16 );
+            li {            
+                list-style: disc;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        @media (min-width: 45em) and (max-width: 50em) {
+            .creator-summary {
+                float: none;
+            }
+        }
+    }    
 }
