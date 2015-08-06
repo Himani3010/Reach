@@ -37,6 +37,54 @@
             }
         }
     }
+
+    .charitable-fieldset {
+        position: relative;
+        width: 100%;
+        @include padding( 0, 0, 24 );
+        @include margin-bottom( 24 );
+        border: none;    
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            @include top( 9 );
+            @include height( 2 );
+            width: 100%;
+            @include background-color( $color__border-primary );
+        }
+
+        .charitable-form-header {
+            position: relative;
+            float: left;        
+            clear: both;
+            @include left( 24 );
+            margin: 0;
+            @include padding( 0, 12, 24 );      
+            @include font-size( 18 );
+            font-weight: normal;
+            @include color( $color__accent );
+            @include background-color( $color__background-content );
+        }
+
+        .charitable-fieldset {
+            margin-bottom: 0;       
+            padding: 0;
+            @include border-top( 1 );
+
+            &::before {
+                display: none;
+            }
+
+            .charitable-form-header {
+                background: transparent;
+                left: 0;
+                @include padding( 12, 0 );
+                @include font-size( 14 );
+            }
+        }
+    }
 }
 
 .charitable-form-content {
@@ -185,54 +233,6 @@
         float: left;
         width: 50%;
         @include line-height( 22 );
-    }
-}
-
-.charitable-fieldset {
-    position: relative;
-    width: 100%;
-    @include padding( 0, 0, 24 );
-    @include margin-bottom( 24 );
-    border: none;    
-
-    &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        @include top( 9 );
-        @include height( 2 );
-        width: 100%;
-        @include background-color( $color__border-primary );
-    }
-
-    .charitable-form-header {
-        position: relative;
-        float: left;        
-        clear: both;
-        @include left( 24 );
-        margin: 0;
-        @include padding( 0, 12, 24 );      
-        @include font-size( 18 );
-        font-weight: normal;
-        @include color( $color__accent );
-        @include background-color( $color__background-content );
-    }
-
-    .charitable-fieldset {
-        margin-bottom: 0;       
-        padding: 0;
-        @include border-top( 1 );
-
-        &::before {
-            display: none;
-        }
-
-        .charitable-form-header {
-            background: transparent;
-            left: 0;
-            @include padding( 12, 0 );
-            @include font-size( 14 );
-        }
     }
 }
 

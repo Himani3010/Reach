@@ -191,8 +191,8 @@ if ( ! function_exists( 'reach_template_campaign_media_before_summary' ) ) :
     function reach_template_campaign_media_before_summary( Charitable_Campaign $campaign ) {
         $media = reach_get_theme()->get_theme_setting( 'campaign_media_placement', 'featured_image_in_summary' );
         
-        if ( 'video_in_summary' == $media ) {
-            charitable_template_campaign_video( $campaign );
+        if ( 'video_in_summary' == $media && function_exists( 'charitable_videos_template_campaign_video' ) ) {
+            charitable_videos_template_campaign_video( $campaign );
         }
         else {        
             reach_template_campaign_featured_image( $campaign );
@@ -214,8 +214,8 @@ if ( ! function_exists( 'reach_template_campaign_media_before_content' ) ) :
         if ( 'video_in_summary' == $media ) {
             reach_template_campaign_featured_image( $campaign );
         }
-        else {
-            charitable_template_campaign_video( $campaign );
+        elseif ( function_exists( 'charitable_videos_template_campaign_video' ) ) {
+            charitable_videos_template_campaign_video( $campaign );
         }
     }
 endif;

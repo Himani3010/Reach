@@ -70,8 +70,8 @@ add_action( 'charitable_campaign_summary_after', 'reach_template_campaign_share'
  */
 add_action( 'charitable_campaign_content_before', 'reach_template_campaign_media_before_content', 6 );
 remove_action( 'charitable_campaign_content_before', 'charitable_template_campaign_description', 4 );
-remove_action( 'charitable_campaign_content_before', 'charitable_template_campaign_video', 6 );
-remove_action( 'charitable_campaign_content_before', 'charitable_template_campaign_summary', 8 );
+remove_action( 'charitable_campaign_content_before', 'charitable_videos_template_campaign_video', 5 );
+remove_action( 'charitable_campaign_content_before', 'charitable_template_campaign_summary', 6 );
 
 /*
  * Single campaign, after content.
