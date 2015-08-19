@@ -1,5 +1,10 @@
 .widget.widget_charitable_donors_widget {
     .donors-list {
+        .donor-name {
+            @include font-size( 14 );
+            @include line-height( 22 );
+        }
+
         .donor {
             float: left;
             @include width( 100 );
