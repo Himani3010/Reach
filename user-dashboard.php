@@ -16,8 +16,8 @@ get_header();
 			?>
 			<div class="layout-wrapper">
 				<?php 
-				if ( function_exists( 'charitable_user_dashboard' ) ) :
-					charitable_user_dashboard()->nav( array(
+				if ( function_exists( 'charitable_get_user_dashboard' ) ) :
+					charitable_get_user_dashboard()->nav( array(
 						'container_class' 	=> 'user-dashboard-menu'
 					) );
 				endif;

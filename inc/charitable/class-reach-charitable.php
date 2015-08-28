@@ -73,7 +73,6 @@ class Reach_Charitable {
         add_filter( 'reach_script_dependencies', array( $this, 'setup_script_dependencies' ) );
         add_filter( 'body_class', array( $this, 'add_body_classes' ) );
         add_filter( 'reach_banner_title', array( $this, 'set_banner_title' ) );
-        add_filter( 'charitable_active_addons', array( $this, 'load_addons' ) );
         add_filter( 'charitable_is_in_user_dashboard', array( $this, 'load_donation_receipt_in_user_dashboard' ) );
         add_filter( 'charitable_user_dashboard_template', array( $this, 'set_user_dashboard_template' ) );
         add_filter( 'charitable_campaign_ended', 'reach_campaign_ended_text' );     
@@ -178,27 +177,11 @@ class Reach_Charitable {
         elseif ( charitable_is_page( 'donation_receipt_page' ) ) {
             $title = apply_filters( 'reach_banner_title_donation_receipt', __( 'Donation Receipt', 'reach' ) );
         }
-        elseif ( charitable_user_dashboard()->in_nav() ) {
+        elseif ( charitable_get_user_dashboard()->in_nav() ) {
             $title = apply_filters( 'reach_banner_title_user_dashboard', __( 'Dashboard', 'reach' ) );
         }
 
         return $title; 
-    }
-
-    /**
-     * Make sure the User Dashboard addon is activated. 
-     *
-     * @param   string[] $active_addons
-     * @return  string[] 
-     * @access  public
-     * @since   1.0.0
-     */
-    public function load_addons( $active_addons ) {
-        if ( ! in_array( 'charitable-user-dashboard', $active_addons ) ) {
-            $active_addons[] = 'charitable-user-dashboard';
-        }
-
-        return $active_addons;
     }
 
     /**
