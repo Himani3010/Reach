@@ -178,7 +178,7 @@ class Reach_Charitable {
         elseif ( charitable_is_page( 'donation_receipt_page' ) ) {
             $title = apply_filters( 'reach_banner_title_donation_receipt', __( 'Donation Receipt', 'reach' ) );
         }
-        elseif ( charitable_user_dashboard()->in_nav() ) {
+        elseif ( charitable_get_user_dashboard()->in_nav() ) {
             $title = apply_filters( 'reach_banner_title_user_dashboard', __( 'Dashboard', 'reach' ) );
         }
 

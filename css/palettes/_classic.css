@@ -3461,6 +3461,8 @@ body > .select2-container--open .select2-dropdown--above {
   padding-right: 0;
   font-size: 16px;
   font-size: 1.6rem; }
+#charitable-donation-form .set-donation-amount {
+  clear: left; }
 #charitable-donation-form .donation-amounts .donation-amount {
   width: 100%;
   position: relative;

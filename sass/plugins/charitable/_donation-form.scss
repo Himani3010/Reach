@@ -16,6 +16,10 @@
         @include font-size( 16 );
     }
 
+    .set-donation-amount {
+        clear: left;
+    }
+
     .donation-amounts {
         @extend .cf;
         
