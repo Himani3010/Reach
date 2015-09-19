@@ -259,10 +259,7 @@ function reach_post_header( $echo = true ) {
 
 	$post_format = get_post_format();
 
-	// Default title
-	$post_title = get_the_title();
-	
-	if ( strlen($post_title) == 0 )
+	if ( ! strlen( get_the_title() ) )
 		return '';
 
 	// Set up the wrapper
@@ -276,17 +273,18 @@ function reach_post_header( $echo = true ) {
 	}
 
 	// Link posts have a different title setup
-	if ( $post_format == 'link' ) {
+	if ( 'link' == $post_format ) {
 		$title = reach_link_format_title(false);
 	}
-	elseif ( $post_format == 'status' ) {
+	elseif ( 'status' == $post_format ) {
 		$title = get_the_content();
 	}
 	else {
 		$title = sprintf( '<a href="%s" title="%s">%s</a>', 
 			get_permalink(),
-			sprintf( __('Link to %s', 'reach'), $post_title ),
-			$post_title );	
+			the_title_attribute( array( 'before' => __('Link to', 'reach'), 'echo' => false ) ),
+			get_the_title() 
+		);	
 	}	
 
 	$output = $wrapper_start . $title . $wrapper_end;

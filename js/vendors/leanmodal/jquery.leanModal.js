@@ -93,8 +93,7 @@
                 if ( available_offset <= 0 ) {
                     $(modal_id).css({
                         'top' : '10px',
-                        'bottom' : '10px',
-                        'overflow' : 'scroll'
+                        'bottom' : '10px'                        
                     })
                 }
             }

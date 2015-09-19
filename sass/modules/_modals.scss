@@ -14,7 +14,7 @@
 	display: none;
     width: 96%;
 	@include padding( 24 );
-    overflow: scroll;
+    overflow: auto;
     border-radius: 0.4rem;
     @include background-color( $color__background-content );
 

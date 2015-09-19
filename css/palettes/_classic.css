@@ -1719,7 +1719,7 @@ a {
   width: 96%;
   padding: 24px;
   padding: 2.4rem;
-  overflow: scroll;
+  overflow: auto;
   border-radius: 0.4rem; }
   @media (min-width: 31.25em) {
     .modal {
@@ -3499,7 +3499,7 @@ body > .select2-container--open .select2-dropdown--above {
     #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount input[type=text] {
       position: static;
       max-width: 100%; }
-  #charitable-donation-form .donation-amounts .donation-amount input {
+  #charitable-donation-form .donation-amounts .donation-amount input[type=radio] {
     position: absolute;
     top: 12px;
     top: 1.2rem;

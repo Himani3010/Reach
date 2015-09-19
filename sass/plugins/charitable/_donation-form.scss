@@ -80,7 +80,7 @@
                 }
             }
 
-            input {
+            input[type=radio] {
                 position: absolute;
                 @include top( 12 );
                 @include left( 12 );
