@@ -1,3 +1,9 @@
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
 // Rem output with px fallback
 @mixin size($property, $value: 1.6, $right : "", $bottom : "", $left : "") { 
 	$px-val : $value + px;

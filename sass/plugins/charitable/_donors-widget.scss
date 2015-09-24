@@ -9,10 +9,59 @@
             float: left;
             @include width( 100 );
             @include padding( 0, 12, 0, 0 );
-            border: none;
+            border: none;                
 
-            &:nth-child(5n+6) {
+            &:nth-child( 6n+7 ) {
                 clear: left;
+            }
+        }        
+
+        @media (max-width: em(410)) { 
+            .donor:nth-child( 2n+3 ) {
+                clear: left;
+            }
+        }
+
+        @media (min-width: em(411)) and (max-width: em(510)) { 
+            .donor:nth-child( 3n+4 ) {
+                clear: left;
+            }
+        }
+
+        @media (min-width: em(511)) and (max-width: em(610)) { 
+            .donor:nth-child( 4n+5 ) {
+                clear: left;
+            }
+        }
+
+        @media (min-width: em(611)) and (max-width: em(719)) { 
+            .donor:nth-child( 5n+6 ) {
+                clear: left;
+            }
+        }
+
+        // This is when the sidebar comes in, so the width of the donor column is reduced
+        @media (min-width: em(720)) and (max-width: em(774)) { 
+            .donor:nth-child( 3n+4 ) {
+                clear: left;
+            }
+        }
+
+        @media (min-width: em(775)) and (max-width: em(945)) { 
+            .donor:nth-child( 4n+5 ) {
+                clear: left;
+            }
+        }
+
+        @media (min-width: em(946)) and (max-width: em(1093)) { 
+            .donor:nth-child( 5n+6 ) {
+                clear: left;
+            }
+        }
+
+        @media(max-width: em(1093)) {
+            .donor:nth-child(6n+7) {
+                clear: none;
             }
         }
     }

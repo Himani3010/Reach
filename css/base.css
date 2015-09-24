@@ -1084,9 +1084,10 @@ a {
 /*--------------------------------------------------------------
 8.0 Clearings
 --------------------------------------------------------------*/
-.cf:before, .charitable-repeatable-form-field-table .repeatable-field-wrapper:before, #charitable-donation-form .donation-amounts:before, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form:before, #secondary .widget.widget_charitable_donation_stats_widget .donation-stats:before, #edd_checkout_wrap #edd_checkout_form_wrap:before, .widget.widget_pp_campaign_events .edd_download_purchase_form:before, .event-tickets li:before,
+.cf:before, .charitable-repeatable-form-field-table .repeatable-field-wrapper:before, .charitable-recipient-type-fields > div:before, #charitable-donation-form .donation-amounts:before, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form:before, #secondary .widget.widget_charitable_donation_stats_widget .donation-stats:before, #edd_checkout_wrap #edd_checkout_form_wrap:before, .widget.widget_pp_campaign_events .edd_download_purchase_form:before, .event-tickets li:before,
 .cf:after,
 .charitable-repeatable-form-field-table .repeatable-field-wrapper:after,
+.charitable-recipient-type-fields > div:after,
 #charitable-donation-form .donation-amounts:after,
 .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form:after,
 #secondary .widget.widget_charitable_donation_stats_widget .donation-stats:after,
@@ -1096,7 +1097,7 @@ a {
   content: "";
   display: table; }
 
-.cf:after, .charitable-repeatable-form-field-table .repeatable-field-wrapper:after, #charitable-donation-form .donation-amounts:after, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form:after, #secondary .widget.widget_charitable_donation_stats_widget .donation-stats:after, #edd_checkout_wrap #edd_checkout_form_wrap:after, .widget.widget_pp_campaign_events .edd_download_purchase_form:after, .event-tickets li:after {
+.cf:after, .charitable-repeatable-form-field-table .repeatable-field-wrapper:after, .charitable-recipient-type-fields > div:after, #charitable-donation-form .donation-amounts:after, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form:after, #secondary .widget.widget_charitable_donation_stats_widget .donation-stats:after, #edd_checkout_wrap #edd_checkout_form_wrap:after, .widget.widget_pp_campaign_events .edd_download_purchase_form:after, .event-tickets li:after {
   clear: both; }
 
 /*-------------------------------------------------------------- 
@@ -2774,7 +2775,8 @@ embed {
         clear: none; }
       .charitable-form-fields .charitable-form-field.odd {
         padding-right: 36px;
-        padding-right: 3.6rem; }
+        padding-right: 3.6rem;
+        clear: left; }
       .charitable-form-fields .charitable-form-field.even {
         clear: none; }
       .charitable-form-fields .charitable-form-field.fullwidth, .charitable-form-fields .charitable-form-field.page-template-page-template-home-slider, .charitable-form-fields .charitable-form-field.page-template-page-template-fullwidth, .charitable-form-fields body.charitable-form-field.events-single {
@@ -3068,6 +3070,20 @@ embed {
       border-bottom: 0;
       border-radius: 0.4rem 0.4rem 0 0; }
 
+.charitable-recipient-type-fields > div {
+  clear: both;
+  width: 100%;
+  max-width: 600px;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 24px;
+  padding: 2.4rem;
+  border-width: 2px;
+  border-width: 0.2rem;
+  border-style: solid;
+  background-color: #fff;
+  border-radius: 0.4rem; }
+
 body > .select2-container--open .select2-dropdown {
   border-style: solid; }
   body > .select2-container--open .select2-dropdown .select2-search--dropdown {
@@ -3303,8 +3319,32 @@ body > .select2-container--open .select2-dropdown--above {
   padding: 0px 12px 0px 0px;
   padding: 0rem 1.2rem 0rem 0rem;
   border: none; }
-  .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(5n+6) {
+  .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(6n+7) {
     clear: left; }
+@media (max-width: 25.625em) {
+  .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(2n+3) {
+    clear: left; } }
+@media (min-width: 25.6875em) and (max-width: 31.875em) {
+  .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(3n+4) {
+    clear: left; } }
+@media (min-width: 31.9375em) and (max-width: 38.125em) {
+  .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(4n+5) {
+    clear: left; } }
+@media (min-width: 38.1875em) and (max-width: 44.9375em) {
+  .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(5n+6) {
+    clear: left; } }
+@media (min-width: 45em) and (max-width: 48.375em) {
+  .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(3n+4) {
+    clear: left; } }
+@media (min-width: 48.4375em) and (max-width: 59.0625em) {
+  .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(4n+5) {
+    clear: left; } }
+@media (min-width: 59.125em) and (max-width: 68.3125em) {
+  .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(5n+6) {
+    clear: left; } }
+@media (max-width: 68.3125em) {
+  .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(6n+7) {
+    clear: none; } }
 
 .widget.widget_charitable_edd_campaign_downloads {
   background: transparent;

@@ -1,6 +1,6 @@
 // Add a breakpoint. 
 @mixin bp($point, $min : true) {
-	$bp : ($point / 16) + em;
+	$bp : em($point);
 
 	@if ( $min ) {
 		@media (min-width: #{$bp}) { @content };
