@@ -283,14 +283,13 @@
         margin: 0;
 
         ul {
-            list-style: disc;
-            @include padding-left( 16 );
-            li {
-                margin-bottom: 0;
-            }   
-        }
+            padding-left: 0;            
 
-        li {
+            li {
+                list-style: disc;
+                @include margin-bottom( 6 );
+            }   
+
             a {
                 @include color( $color__accent );
             }

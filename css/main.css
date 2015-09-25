@@ -3217,13 +3217,13 @@ embed {
     padding: 0;
     margin: 0; }
     .charitable-notice .errors ul {
-      list-style: disc;
-      padding-left: 16px;
-      padding-left: 1.6rem; }
+      padding-left: 0; }
       .charitable-notice .errors ul li {
-        margin-bottom: 0; }
-    .charitable-notice .errors li a {
-      color: #d95b43; }
+        list-style: disc;
+        margin-bottom: 6px;
+        margin-bottom: 0.6rem; }
+      .charitable-notice .errors ul a {
+        color: #d95b43; }
   .charitable-notice li:last-child {
     margin-bottom: 0; }
 

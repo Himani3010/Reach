@@ -203,7 +203,7 @@ a, .menu-site a:hover, .menu-button, .button-alt.accent,
 .button-secondary.accent,
 .button.button-alt.accent,
 .button.button-secondary.accent, .block-title, .site-title a, .post-title a, .entry-header .entry-title a, .bypostauthor .post-author i, body.author .author-activity-summary .number, body.author .author-activity-feed .activity-summary .display-name,
-body.author .author-activity-feed .activity-summary a, .campaign-image .campaign-status-tag, .charitable-form-fields .charitable-fieldset .charitable-form-header, .charitable-repeatable-form-field-table .remove:hover:before, .charitable-notice .errors li a, #charitable-donation-form .charitable-form-field .button, .widget.widget_charitable_edd_campaign_downloads .download-price, .widget.widget_charitable_donate_widget .charitable-submit-field .button, .campaign .campaign-stats li span, .campaigns-grid .campaign-stats li span, body.user-dashboard .charitable-submit-field .button.button-primary, .user-dashboard-menu li.current-menu-item a,
+body.author .author-activity-feed .activity-summary a, .campaign-image .campaign-status-tag, .charitable-form-fields .charitable-fieldset .charitable-form-header, .charitable-repeatable-form-field-table .remove:hover:before, .charitable-notice .errors ul a, #charitable-donation-form .charitable-form-field .button, .widget.widget_charitable_edd_campaign_downloads .download-price, .widget.widget_charitable_donate_widget .charitable-submit-field .button, .campaign .campaign-stats li span, .campaigns-grid .campaign-stats li span, body.user-dashboard .charitable-submit-field .button.button-primary, .user-dashboard-menu li.current-menu-item a,
 .user-dashboard-menu li a:hover, .entry-header .entry-title, .user-post-stats.campaign-stats .summary-item .amount,
 .user-post-stats.campaign-stats .summary-item .donors-count, .user-post-actions a:hover, body .edd-submit.button.gray, body .edd-submit.button.white, body .edd-submit.button.blue, body .edd-submit.button.red, body .edd-submit.button.orange, body .edd-submit.button.green, body .edd-submit.button.yellow, body .edd-submit.button.dark-gray, .widget.widget_pp_campaign_events .download-price {
   color: #d95b43; }
@@ -3343,11 +3343,11 @@ embed {
     padding: 0;
     margin: 0; }
     .charitable-notice .errors ul {
-      list-style: disc;
-      padding-left: 16px;
-      padding-left: 1.6rem; }
+      padding-left: 0; }
       .charitable-notice .errors ul li {
-        margin-bottom: 0; }
+        list-style: disc;
+        margin-bottom: 6px;
+        margin-bottom: 0.6rem; }
   .charitable-notice li:last-child {
     margin-bottom: 0; }
 
