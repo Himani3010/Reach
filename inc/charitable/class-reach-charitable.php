@@ -69,7 +69,8 @@ class Reach_Charitable {
      * @since   2.0.0
      */
     private function attach_hooks_and_filters() {
-        add_action( 'wp_enqueue_scripts', array( $this, 'setup_localized_scripts' ) );    
+        add_action( 'wp_enqueue_scripts', array( $this, 'setup_localized_scripts' ) );
+        add_action( 'wp_enqueue_scripts', array( $this, 'dequeue_styles' ), 100 );
         add_filter( 'reach_script_dependencies', array( $this, 'setup_script_dependencies' ) );
         add_filter( 'body_class', array( $this, 'add_body_classes' ) );
         add_filter( 'reach_banner_title', array( $this, 'set_banner_title' ) );
@@ -81,7 +82,7 @@ class Reach_Charitable {
         add_filter( 'charitable_ambassadors_my_campaign_thumbnail_size', array( $this, 'my_campaign_thumbnail_size' ) );
         add_filter( 'charitable_use_campaign_template', '__return_false' );
         add_filter( 'charitable_modal_window_class', array( $this, 'modal_window_class' ) );
-        add_filter( 'charitable_campaign_video_embed_args', array( $this, 'video_embed_args' ), 5 );
+        add_filter( 'charitable_campaign_video_embed_args', array( $this, 'video_embed_args' ), 5 );        
     }
 
     /**
@@ -109,6 +110,17 @@ class Reach_Charitable {
             'second'                => __( 'Second', 'reach' ), 
             'timezone_offset'       => reach_get_timezone_offset()
         ) ); 
+    }
+
+    /**
+     * Dequeue styles. 
+     *
+     * @return  void
+     * @access  public
+     * @since   0.9.24
+     */
+    public function dequeue_styles() {
+        wp_deregister_style( 'charitable-ambassadors-my-campaigns-css' );
     }
 
     /**

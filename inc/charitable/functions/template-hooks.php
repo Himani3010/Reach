@@ -28,6 +28,7 @@ remove_action( 'charitable_campaign_content_loop_after', 'charitable_template_ca
  *
  * @see reach_template_campaign_summary
  */
+add_action( 'charitable_single_campaign_before', 'charitable_ambassadors_template_edit_campaign_link', 2 );
 add_action( 'charitable_single_campaign_before', 'reach_template_campaign_summary', 2 );
 
 /**
@@ -69,6 +70,7 @@ add_action( 'charitable_campaign_summary_after', 'reach_template_campaign_share'
  * @see reach_template_campaign_media_before_content
  */
 add_action( 'charitable_campaign_content_before', 'reach_template_campaign_media_before_content', 6 );
+remove_action( 'charitable_campaign_content_before', 'charitable_ambassadors_template_edit_campaign_link', 2 );
 remove_action( 'charitable_campaign_content_before', 'charitable_template_campaign_description', 4 );
 remove_action( 'charitable_campaign_content_before', 'charitable_videos_template_campaign_video', 5 );
 remove_action( 'charitable_campaign_content_before', 'charitable_template_campaign_summary', 6 );
