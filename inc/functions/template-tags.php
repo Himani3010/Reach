@@ -208,7 +208,7 @@ function reach_site_identity( $echo = true ) {
 	$hide_title = get_theme_mod( 'hide_site_title' );
 	$hide_tagline = get_theme_mod( 'hide_site_tagline' );
 	$logo = reach_get_customizer_image_data( 'logo' );
-
+	
 	if ( $logo ) {
 		$output .= apply_filters( 'reach_site_logo', sprintf( '<a href="%s" title="%s"><img src="%s" alt="%s" width="%s" height="%s" %s/></a>',  
 			$site_url,
