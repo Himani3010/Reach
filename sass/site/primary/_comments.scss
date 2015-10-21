@@ -45,7 +45,7 @@
 	input[type=text], 
 	textarea {
 		max-width: 100%;
-		@include background-color( $color__background-widget );
+		@include background-color( $color__background-wrapper );
 	}
 
 	.comment-text-input {

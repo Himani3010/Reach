@@ -275,7 +275,7 @@ class Reach_Customizer {
                 'accent_colour' => array(
                     'setting'   => array(
                         'transport'         => 'postMessage', 
-                        'default'           => '#d95b43',
+                        'default'           => '#7bb4e0',
                         'sanitize_callback' => 'sanitize_hex_color'
                     ),
                     'control'   => array(
@@ -288,7 +288,7 @@ class Reach_Customizer {
                 'background_colour' => array(
                     'setting'   => array(
                         'transport'         => 'postMessage', 
-                        'default'           => '#aea198',
+                        'default'           => '#8e989e',
                         'sanitize_callback' => 'sanitize_hex_color'
                     ),
                     'control'   => array(
@@ -301,7 +301,7 @@ class Reach_Customizer {
                 'text_colour' => array(
                     'setting'   => array(
                         'transport'         => 'postMessage', 
-                        'default'           => '#7d6e63',
+                        'default'           => '#70777c',
                         'sanitize_callback' => 'sanitize_hex_color'
                     ),
                     'control'   => array(

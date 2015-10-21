@@ -25,7 +25,7 @@
         height: 100%;           
         @include border-left( 1 );
         border-radius: 0 0.4rem 0.4rem 0;
-        @include background-color( $color__background-widget );
+        @include background-color( $color__background-wrapper );
     }
     /* Float image and campaign summary side by side, with actions below. */
     @include bp( 768 ) {
