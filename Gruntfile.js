@@ -44,6 +44,7 @@ module.exports = function(grunt) {
                     '!css/palettes/_classic.css',
                     '!css/palettes/_dark.css',
                     '!css/palettes/_light.css',
+                    '!css/palettes/_franklin.css',
                     '!css/palettes/_custom.css',
                 ],
                 tasks: ['sync']
@@ -58,7 +59,7 @@ module.exports = function(grunt) {
                     'css/editor-style.css' : 'sass/editor-style.scss', 
                     'css/base.css' : 'sass/base.scss',
                     'css/palettes/_classic.css' : 'sass/palette-classic.scss'
-                }, 
+                },
                 trace : true
             },
             palettes: {
@@ -66,7 +67,8 @@ module.exports = function(grunt) {
                     'css/palettes/_classic.css' : 'sass/palette-classic.scss', 
                     'css/palettes/_light.css' : 'sass/palette-light.scss',
                     'css/palettes/_dark.css' : 'sass/palette-dark.scss', 
-                    'css/palettes/_custom.css' : 'sass/palette-custom.scss'
+                    'css/palettes/_custom.css' : 'sass/palette-custom.scss',
+                    'css/palettes/_franklin.css' : 'sass/palette-franklin.scss'
                 },
                 trace : true
             },
@@ -95,7 +97,8 @@ module.exports = function(grunt) {
                             '!css/palettes/_classic.css', 
                             '!css/palettes/_light.css',
                             '!css/palettes/_dark.css',
-                            '!css/palettes/_custom.css'
+                            '!css/palettes/_custom.css', 
+                            '!css/palettes/_franklin.css'
                         ], 
                         dest: '../../themes/reach'
                     }
@@ -196,6 +199,17 @@ module.exports = function(grunt) {
                     }
                 }
             },
+            franklin : {
+                src: 'css/palettes/_franklin.css', 
+                dest: 'css/palettes/franklin.css',
+                options: {
+                    process: function(content, path) {
+                        var split1 = content.split( '0.1 Palette\n--------------------------------------------------------------*/\n' );
+                        var split2 = split1[1].split( '\n\n/*--------------------------------------------------------------\n1.0 Reset' );
+                        return split2[0];
+                    }
+                }
+            },
             custom : {
                 src: 'css/palettes/_custom.css', 
                 dest: 'css/palettes/custom.css',
@@ -212,6 +226,6 @@ module.exports = function(grunt) {
  
     // register task
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('buildPalettes', ['sass:palettes', 'copy:classic', 'copy:light', 'copy:dark', 'copy:custom']);
+    grunt.registerTask('buildPalettes', ['sass:palettes', 'copy:classic', 'copy:light', 'copy:dark', 'copy:franklin', 'copy:custom']);
     grunt.registerTask('build', ['sass', 'concat', 'uglify', 'sync', 'jshint', 'makepot']);
 };

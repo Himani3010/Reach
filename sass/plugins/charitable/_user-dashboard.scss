@@ -74,8 +74,10 @@ body.user-dashboard {
 
 		&.current-menu-item a, 
 		a:hover {						
-			@include border-color( $color__border-primary );
-			@include border-bottom-color( $color__background-content );			
+			@include border-top-color( $color__border-primary );
+			@include border-right-color( $color__border-primary );
+			@include border-left-color( $color__border-primary );
+			@include border-bottom-color( $color__background-content );
 			@include background-color( $color__background-content );
 			@include color( $color__accent );
 

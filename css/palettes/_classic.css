@@ -461,12 +461,16 @@ blockquote, pre, th, .menu-site ul, .entry-block, .content-block, .modal, .widge
 
 table, th,
 td, .block, .widget, .stripped .site-main, body.author .site-main, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) input, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) select, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd) textarea, .charitable-notice, #charitable_field_recipient, .charitable-recipient-type-options .charitable-recipient-type, .charitable-campaign-recipient-search .select2-container, .charitable-recipient-type-fields > div, body > .select2-container--open .select2-dropdown, body > .select2-container--open .select2-dropdown .select2-search__field, #charitable-donation-form .charitable-connected-downloads, #charitable-gateway-fields .charitable-form-fields, #charitable-gateway-fields .charitable-form-fields select,
-#charitable-gateway-fields .charitable-form-fields input, .widget.widget_charitable_edd_campaign_downloads .widget-block, .widget.widget_charitable_donate_widget .widget-block, .widget.widget_charitable_donate_widget .charitable-donation-form-without-suggestions, .donation-form-display-same_page.single-campaign .content-area #charitable-donation-form, .campaign-donation-page.stripped #charitable-donation-form, .user-dashboard-menu li.current-menu-item a,
-.user-dashboard-menu li a:hover, .charitable-user-post, .edd-checkout-template.stripped .entry-block, body.events-single .tribe-events-event-meta, .widget.widget_pp_campaign_events .widget-block {
+#charitable-gateway-fields .charitable-form-fields input, .widget.widget_charitable_edd_campaign_downloads .widget-block, .widget.widget_charitable_donate_widget .widget-block, .widget.widget_charitable_donate_widget .charitable-donation-form-without-suggestions, .donation-form-display-same_page.single-campaign .content-area #charitable-donation-form, .campaign-donation-page.stripped #charitable-donation-form, .charitable-user-post, .edd-checkout-template.stripped .entry-block, body.events-single .tribe-events-event-meta, .widget.widget_pp_campaign_events .widget-block {
   border-color: #e3e5e6; }
 
-.toggled .menu-site ul, .multi-block .content-block:nth-of-type(1n+2), .meta-below, body.author .author-activity-feed, .charitable-form-fields .charitable-fieldset .charitable-fieldset, .charitable-campaign-form-table tfoot td, .charitable-repeatable-form-field-table td, .widget.widget_campaign_creator_widget .charitable-campaign-creator .creator-bio, .campaign .campaign-stats, .campaigns-grid .campaign-stats, .user-post-actions, body.events-single .tribe-events-tickets {
+.toggled .menu-site ul, .multi-block .content-block:nth-of-type(1n+2), .meta-below, body.author .author-activity-feed, .charitable-form-fields .charitable-fieldset .charitable-fieldset, .charitable-campaign-form-table tfoot td, .charitable-repeatable-form-field-table td, .widget.widget_campaign_creator_widget .charitable-campaign-creator .creator-bio, .campaign .campaign-stats, .campaigns-grid .campaign-stats, .user-dashboard-menu li.current-menu-item a,
+.user-dashboard-menu li a:hover, .user-post-actions, body.events-single .tribe-events-tickets {
   border-top-color: #e3e5e6; }
+
+.user-dashboard-menu li.current-menu-item a,
+.user-dashboard-menu li a:hover {
+  border-right-color: #e3e5e6; }
 
 legend, .menu-site li, .block-title, .widget_search.widget .search-field, .post-title, .entry-header .entry-title, .meta-above, .comment,
 .pingback, body.author .author-description, body.author .author-activity-feed li, #charitable-donation-form .charitable-edd-connected-download, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd_price_options li, .user-post-stats.campaign-stats .summary-item, .user-post-actions .actions li, body.events-single .tribe-events-tickets .eddtickets-add, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd_price_options li, .event-tickets li {
@@ -474,7 +478,8 @@ legend, .menu-site li, .block-title, .widget_search.widget .search-field, .post-
 
 .meta .author,
 .meta .comment-count,
-.meta .tags, .campaign .campaign-stats li, .campaigns-grid .campaign-stats li, .charitable-user-post:after {
+.meta .tags, .campaign .campaign-stats li, .campaigns-grid .campaign-stats li, .user-dashboard-menu li.current-menu-item a,
+.user-dashboard-menu li a:hover, .charitable-user-post:after {
   border-left-color: #e3e5e6; }
 
 th {
