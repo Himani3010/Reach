@@ -47,18 +47,6 @@ class Reach_Tribe_Events {
      */
     private function __construct() {
         $this->attach_hooks_and_filters();
-        // $this->load_dependencies();
-    }
-
-    /**
-     * Include required files. 
-     *
-     * @return  void
-     * @access  private
-     * @since   1.0.0
-     */
-    private function load_dependencies() {
-        
     }
 
     /**
@@ -69,8 +57,8 @@ class Reach_Tribe_Events {
      * @since   1.0.0
      */
     private function attach_hooks_and_filters() {   
-        remove_action( 'tribe_events_single_event_after_the_content', array( 'TribeiCal', 'single_event_links' ) );
-        add_action( 'tribe_events_single_event_before_the_content', array( 'TribeiCal', 'single_event_links' ) );
+        remove_action( 'tribe_events_single_event_after_the_content', array( 'Tribe__Events__iCal', 'single_event_links' ) );
+        add_action( 'tribe_events_single_event_before_the_content', array( 'Tribe__Events__iCal', 'single_event_links' ) );
 
         add_filter( 'reach_banner_title', array( $this, 'set_banner_title' ) );
         add_filter( 'reach_banner_subtitle', array( $this, 'set_banner_subtitle' ) );
