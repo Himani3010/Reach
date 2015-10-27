@@ -5,6 +5,8 @@
  * pollution the global namespace. 
 ---------------------------------------------------------*/
 ( function( $ ){	
+
+    var REACH_CROWDFUNDING = REACH_CROWDFUNDING || false;
 	
 	// Perform other actions on ready event
 	$(document).ready( function() {

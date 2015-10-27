@@ -3486,13 +3486,13 @@ body > .select2-container--open .select2-dropdown--above {
   font-size: 16px;
   font-size: 1.6rem;
   text-transform: uppercase; }
-#charitable-donation-form .charitable-edd-connected-download-description {
+#charitable-donation-form .charitable-edd-download-details {
   padding-top: 12px;
   padding-top: 1.2rem; }
-  #charitable-donation-form .charitable-edd-connected-download-description .download-title {
+  #charitable-donation-form .charitable-edd-download-details .download-title {
     margin-top: 0; }
   @media (min-width: 50em) {
-    #charitable-donation-form .charitable-edd-connected-download-description {
+    #charitable-donation-form .charitable-edd-download-details {
       padding-top: 0; } }
 #charitable-donation-form .charitable-edd-price-options ul {
   list-style-type: none;
@@ -4662,7 +4662,9 @@ body.user-dashboard .charitable-submit-field {
         text-decoration: none; }
     .user-dashboard-menu li.current-menu-item a,
     .user-dashboard-menu li a:hover {
-      border-color: #e3e5e6;
+      border-top-color: #e3e5e6;
+      border-right-color: #e3e5e6;
+      border-left-color: #e3e5e6;
       border-bottom-color: #ffffff;
       background-color: #ffffff;
       color: #7bb4e0; }
@@ -4705,7 +4707,7 @@ body.user-dashboard .charitable-submit-field {
   border-radius: 0.4rem;
   /* Float image and campaign summary side by side, with actions below. */
   /* Float actions to the right. */ }
-  .charitable-user-post:after {
+  .charitable-user-post::after {
     position: absolute;
     top: 0;
     right: 0;
@@ -4717,7 +4719,7 @@ body.user-dashboard .charitable-submit-field {
     border-left-style: solid;
     border-left-color: #e3e5e6;
     border-radius: 0 0.4rem 0.4rem 0;
-    background-color: #f5f5f6; }
+    background-color: #ffffff; }
   @media (min-width: 48em) {
     .charitable-user-post {
       content: "";
@@ -4734,7 +4736,7 @@ body.user-dashboard .charitable-submit-field {
       overflow: hidden; }
       .charitable-user-post .wp-post-image {
         width: 35%; }
-      .charitable-user-post:after {
+      .charitable-user-post::after {
         content: ""; } }
 
 .user-post-summary {
