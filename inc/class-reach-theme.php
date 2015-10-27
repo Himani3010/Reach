@@ -80,17 +80,17 @@ class Reach_Theme {
 
 		$this->maybe_upgrade();
 
-		// $this->maybe_start_charitable();
+		$this->maybe_start_charitable();
 
-  //       $this->maybe_start_edd();        
+        $this->maybe_start_edd();        
 
-  //       $this->maybe_start_jetpack();
+        $this->maybe_start_jetpack();
 
-  //       $this->maybe_start_tribe_events();
+        $this->maybe_start_tribe_events();
 
-  //       $this->maybe_start_easy_google_fonts();   
+        $this->maybe_start_easy_google_fonts();   
 
-  //       $this->maybe_start_customizer();
+        $this->maybe_start_customizer();
 
 		$this->attach_hooks_and_filters();
 

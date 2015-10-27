@@ -99,7 +99,7 @@ class Reach_Customizer {
             
         $priority = $panel[ 'priority' ];
 
-        $wp_customize->add_panel( 'background_images', array(
+        $wp_customize->add_panel( $panel_id, array(
             'title' => $panel[ 'title' ],
             'priority' => $panel[ 'priority' ]  
         ) );
