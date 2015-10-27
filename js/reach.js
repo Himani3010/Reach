@@ -5,12 +5,13 @@
  * pollution the global namespace. 
 ---------------------------------------------------------*/
 ( function( $ ){	
-
-    var REACH_CROWDFUNDING = REACH_CROWDFUNDING || false;
 	
+    if ( 'undefined' === typeof REACH_CROWDFUNDING ) {
+        REACH_CROWDFUNDING = false;
+    }
+
 	// Perform other actions on ready event
 	$(document).ready( function() {
-
 		$('html').removeClass('no-js');
 
 		REACH.DropdownMenus.init();
@@ -35,7 +36,10 @@
 				$(this).toggleClass('icon-remove');
 				$(this).parent().toggleClass('is-active');
 			});
-		}	
+		}
+        else {
+
+        }
 	});
 	
 	if ( typeof audiojs !== 'undefined' ) {
@@ -45,13 +49,15 @@
 	}
 
   	$(window).resize( function() {
+        var REACH_CROWDFUNDING = REACH_CROWDFUNDING || false;
+
   		if ( REACH_CROWDFUNDING && $.fn.masonry ) {
   			REACH.Grid.resizeGrid();
   		}
   	});
 
   	$(window).load( function() {
-  		if ( REACH_CROWDFUNDING ) {
+        if ( REACH_CROWDFUNDING ) {
 
             if ( $.fn.masonry ) {
                 REACH.Grid.init();    

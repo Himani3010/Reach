@@ -109,7 +109,7 @@ class Reach_Charitable {
             'minute'                => __( 'Minute', 'reach' ), 
             'second'                => __( 'Second', 'reach' ), 
             'timezone_offset'       => reach_get_timezone_offset()
-        ) ); 
+        ) );
     }
 
     /**
