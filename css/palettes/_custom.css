@@ -57,7 +57,7 @@ body, #custom-donation-amount-field.charitable-custom-donation-field-alone {
 .screen-reader-text:active,
 .screen-reader-text:focus, #header, #main, .comments-section input[type=email],
 .comments-section input[type=text],
-.comments-section textarea, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd), body > .select2-container--open .select2-dropdown .select2-search__field, .charitable-user-post:after {
+.comments-section textarea, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd), body > .select2-container--open .select2-dropdown .select2-search__field {
   background-color: #f5f8f9; }
 
 .user-dashboard-menu li a {
@@ -68,7 +68,7 @@ body, #custom-donation-amount-field.charitable-custom-donation-field-alone {
 .screen-reader-text:active,
 .screen-reader-text:focus, #header, #main, .comments-section input[type=email],
 .comments-section input[type=text],
-.comments-section textarea, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd), body > .select2-container--open .select2-dropdown .select2-search__field, .charitable-user-post:after {
+.comments-section textarea, .charitable-repeatable-form-field-table .repeatable-field:nth-child(odd), body > .select2-container--open .select2-dropdown .select2-search__field {
   background-color: #f5f8f9; }
 
 .user-dashboard-menu li a {
@@ -81,7 +81,7 @@ input[type="password"],
 input[type="search"],
 input[type="number"],
 input[type="date"],
-textarea, .widget, .meta, .charitable-campaign-form-table tfoot td, .charitable-form-field.charitable-form-field-multi-checkbox ul, .charitable-notice, #charitable_field_recipient, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .charitable-connected-downloads, #charitable-gateway-fields .charitable-form-fields, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
+textarea, .widget, .meta, .charitable-campaign-form-table tfoot td, .charitable-form-field.charitable-form-field-multi-checkbox ul, .charitable-notice, #charitable_field_recipient, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .charitable-connected-downloads, #charitable-gateway-fields .charitable-form-fields, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .charitable-user-post::after, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
   background-color: #ebf2f2; }
 
 button,
@@ -171,7 +171,7 @@ input[type="password"],
 input[type="search"],
 input[type="number"],
 input[type="date"],
-textarea, .widget, .meta, .charitable-campaign-form-table tfoot td, .charitable-form-field.charitable-form-field-multi-checkbox ul, .charitable-notice, #charitable_field_recipient, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .charitable-connected-downloads, #charitable-gateway-fields .charitable-form-fields, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
+textarea, .widget, .meta, .charitable-campaign-form-table tfoot td, .charitable-form-field.charitable-form-field-multi-checkbox ul, .charitable-notice, #charitable_field_recipient, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .charitable-connected-downloads, #charitable-gateway-fields .charitable-form-fields, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .charitable-user-post::after, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
   background-color: #ebf2f2; }
 
 blockquote, pre, th, input[type="text"],
@@ -181,7 +181,7 @@ input[type="password"],
 input[type="search"],
 input[type="number"],
 input[type="date"],
-textarea, .widget, .meta, .charitable-campaign-form-table tfoot td, .charitable-form-field.charitable-form-field-multi-checkbox ul, .charitable-notice, #charitable_field_recipient, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .charitable-connected-downloads, #charitable-gateway-fields .charitable-form-fields, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
+textarea, .widget, .meta, .charitable-campaign-form-table tfoot td, .charitable-form-field.charitable-form-field-multi-checkbox ul, .charitable-notice, #charitable_field_recipient, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .charitable-connected-downloads, #charitable-gateway-fields .charitable-form-fields, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .charitable-user-post::after, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
   background-color: #ebf2f2; }
 
 blockquote, pre, th, input[type="text"],
@@ -191,7 +191,7 @@ input[type="password"],
 input[type="search"],
 input[type="number"],
 input[type="date"],
-textarea, .widget, .meta, .charitable-campaign-form-table tfoot td, .charitable-form-field.charitable-form-field-multi-checkbox ul, .charitable-notice, #charitable_field_recipient, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .charitable-connected-downloads, #charitable-gateway-fields .charitable-form-fields, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
+textarea, .widget, .meta, .charitable-campaign-form-table tfoot td, .charitable-form-field.charitable-form-field-multi-checkbox ul, .charitable-notice, #charitable_field_recipient, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .charitable-connected-downloads, #charitable-gateway-fields .charitable-form-fields, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .charitable-user-post::after, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
   background-color: #ebf2f2; }
 
 blockquote, pre, th, input[type="text"],
@@ -201,7 +201,7 @@ input[type="password"],
 input[type="search"],
 input[type="number"],
 input[type="date"],
-textarea, .widget, .meta, .charitable-campaign-form-table tfoot td, .charitable-form-field.charitable-form-field-multi-checkbox ul, .charitable-notice, #charitable_field_recipient, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .charitable-connected-downloads, #charitable-gateway-fields .charitable-form-fields, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
+textarea, .widget, .meta, .charitable-campaign-form-table tfoot td, .charitable-form-field.charitable-form-field-multi-checkbox ul, .charitable-notice, #charitable_field_recipient, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .charitable-connected-downloads, #charitable-gateway-fields .charitable-form-fields, .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-input, .charitable-user-post::after, .user-post-actions, #edd_checkout_wrap #edd_purchase_submit, #edd_checkout_wrap fieldset#edd_cc_fields, .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-input {
   background-color: #ebf2f2; }
 
 a, .menu-site a:hover, .menu-button, .button-alt.accent,
@@ -431,7 +431,7 @@ legend, .menu-site li, .block-title, .widget_search.widget .search-field, .post-
 .meta .author,
 .meta .comment-count,
 .meta .tags, .campaign .campaign-stats li, .campaigns-grid .campaign-stats li, .user-dashboard-menu li.current-menu-item a,
-.user-dashboard-menu li a:hover, .charitable-user-post:after {
+.user-dashboard-menu li a:hover, .charitable-user-post::after {
   border-left-color: #d6e4e5; }
 
 th {
@@ -3663,13 +3663,13 @@ body > .select2-container--open .select2-dropdown--above {
   font-size: 16px;
   font-size: 1.6rem;
   text-transform: uppercase; }
-#charitable-donation-form .charitable-edd-connected-download-description {
+#charitable-donation-form .charitable-edd-download-details {
   padding-top: 12px;
   padding-top: 1.2rem; }
-  #charitable-donation-form .charitable-edd-connected-download-description .download-title {
+  #charitable-donation-form .charitable-edd-download-details .download-title {
     margin-top: 0; }
   @media (min-width: 50em) {
-    #charitable-donation-form .charitable-edd-connected-download-description {
+    #charitable-donation-form .charitable-edd-download-details {
       padding-top: 0; } }
 #charitable-donation-form .charitable-edd-price-options ul {
   list-style-type: none;
@@ -4790,7 +4790,7 @@ body.user-dashboard .charitable-submit-field {
   border-radius: 0.4rem;
   /* Float image and campaign summary side by side, with actions below. */
   /* Float actions to the right. */ }
-  .charitable-user-post:after {
+  .charitable-user-post::after {
     position: absolute;
     top: 0;
     right: 0;
@@ -4817,7 +4817,7 @@ body.user-dashboard .charitable-submit-field {
       overflow: hidden; }
       .charitable-user-post .wp-post-image {
         width: 35%; }
-      .charitable-user-post:after {
+      .charitable-user-post::after {
         content: ""; } }
 
 .user-post-summary {

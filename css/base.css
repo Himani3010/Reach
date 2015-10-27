@@ -4351,7 +4351,7 @@ body.user-dashboard .charitable-submit-field {
   border-radius: 0.4rem;
   /* Float image and campaign summary side by side, with actions below. */
   /* Float actions to the right. */ }
-  .charitable-user-post:after {
+  .charitable-user-post::after {
     position: absolute;
     top: 0;
     right: 0;
@@ -4378,7 +4378,7 @@ body.user-dashboard .charitable-submit-field {
       overflow: hidden; }
       .charitable-user-post .wp-post-image {
         width: 35%; }
-      .charitable-user-post:after {
+      .charitable-user-post::after {
         content: ""; } }
 
 .user-post-summary {
