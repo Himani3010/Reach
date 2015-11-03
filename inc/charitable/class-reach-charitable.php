@@ -82,7 +82,8 @@ class Reach_Charitable {
         add_filter( 'charitable_ambassadors_my_campaign_thumbnail_size', array( $this, 'my_campaign_thumbnail_size' ) );
         add_filter( 'charitable_use_campaign_template', '__return_false' );
         add_filter( 'charitable_modal_window_class', array( $this, 'modal_window_class' ) );
-        add_filter( 'charitable_campaign_video_embed_args', array( $this, 'video_embed_args' ), 5 );        
+        add_filter( 'charitable_campaign_video_embed_args', array( $this, 'video_embed_args' ), 5 );
+        add_filter( 'charitable_add_custom_styles', '__return_false' );
     }
 
     /**

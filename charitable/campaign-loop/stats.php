@@ -2,7 +2,7 @@
 /**
  * Campaign stats.
  *
- * Override this template by copying it to yourtheme/charitable/campaign-loop/stats.php
+ * Override this template by copying it to your-child-theme/charitable/campaign-loop/stats.php
  *
  * @package Reach
  */
