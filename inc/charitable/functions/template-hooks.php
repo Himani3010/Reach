@@ -28,7 +28,10 @@ remove_action( 'charitable_campaign_content_loop_after', 'charitable_template_ca
  *
  * @see reach_template_campaign_summary
  */
-add_action( 'charitable_single_campaign_before', 'charitable_ambassadors_template_edit_campaign_link', 2 );
+if ( function_exists( 'charitable_ambassadors_template_edit_campaign_link' ) ) {
+    add_action( 'charitable_single_campaign_before', 'charitable_ambassadors_template_edit_campaign_link', 2 );    
+}
+
 add_action( 'charitable_single_campaign_before', 'reach_template_campaign_summary', 2 );
 
 /**
