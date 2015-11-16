@@ -12,8 +12,7 @@
 	<?php 
 	wp_reset_postdata();
 
-	// if ($campaigns->max_num_pages > 1) : 
-	if ( 0 ) : ?>	
+	if ($campaigns->max_num_pages > 1) : ?>	
 
 		<p class="center">
 			<a class="button button-alt" href="<?php echo site_url( apply_filters( 'reach_previous_campaigns_link', '/campaigns/page/2/' ) ) ?>">

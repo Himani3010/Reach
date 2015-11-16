@@ -23,12 +23,14 @@ $currency_helper = charitable()->get_currency_helper();
             __( 'Donated', 'reach' )
         ) ?>
     </li>
-    <li class="campaign-goal">
-        <?php printf( '<span>%s</span>%s', 
-            $currency_helper->get_monetary_amount( $campaign->get_goal() ),
-            __( 'Goal', 'reach' )
-        ) ?>
-    </li>
+    <?php if ( $campaign->has_goal() ) : ?>
+        <li class="campaign-goal">
+            <?php printf( '<span>%s</span>%s', 
+                $currency_helper->get_monetary_amount( $campaign->get_goal() ),
+                __( 'Goal', 'reach' )
+            ) ?>
+        </li>
+    <?php endif ?>
     <li class="campaign-backers">
         <?php printf( '<span>%d</span>%s',
             $campaign->get_donor_count(),

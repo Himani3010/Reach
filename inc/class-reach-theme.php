@@ -655,8 +655,8 @@ class Reach_Theme {
      * @since   1.0.0
      */
     public function posts_navigation_link_attributes() {
-        return 'class="button-alt button-small"';
-    }   
+        return 'class="button-alt"';
+    }
 
 	/**
      * Wrap videos inside fit_video class.

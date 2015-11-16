@@ -5,6 +5,8 @@
  * @package     Reach
  */
 
+global $wp_query;
+
 get_header();
 
 get_template_part( 'partials/banner' );        
@@ -16,7 +18,13 @@ get_template_part( 'partials/banner' );
                 <a class="menu-toggle menu-button toggle-button" aria-controls="menu" aria-expanded="false"></a>
                 <?php reach_crowdfunding_campaign_nav() ?>              
             </nav>
-            <?php charitable_template_campaign_loop( false, 3 ) ?>
+            <?php 
+
+            charitable_template_campaign_loop( false, 3 );
+
+            reach_paging_nav( __( 'Older Campaigns', 'reach' ), __( 'Newer Campaigns', 'reach' ) );
+
+            ?>
         </div><!-- .campaigns-grid-wrapper -->
     </main><!-- .site-main -->
 </div><!-- .layout-wrapper -->    

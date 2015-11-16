@@ -15,24 +15,35 @@ if ( ! function_exists( 'reach_paging_nav' ) ) :
 	/**
 	 * Display navigation to next/previous set of posts when applicable.
 	 *
+	 * @param 	string $older_posts 	Text to display for older posts button. 	
+	 * @param 	string $newer_posts		Text to display for newer posts button.
 	 * @return 	void
 	 * @since 	1.0.0
 	 */
-	function reach_paging_nav() {
+	function reach_paging_nav( $older_posts = '', $newer_posts = '' ) {
 		// Don't print empty markup if there's only one page.
 		if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
 			return;
 		}
+
+		if ( empty( $older_posts ) ) {
+			$older_posts = __( 'Older Posts', 'reach' );
+		}
+
+		if ( empty( $newer_posts ) ) {
+			$newer_posts = __( 'Newer Posts', 'reach' );
+		}
+
 		?>
 		<nav class="navigation paging-navigation pagination" role="navigation">
 			<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'reach' ); ?></h1>
 			<ul>
 				<?php if ( get_next_posts_link() ) : ?>
-				<li class="nav-previous"><?php next_posts_link( __( 'Older Posts', 'reach' ) ); ?></li>
+				<li class="nav-previous"><?php next_posts_link( $older_posts ) ?></li>
 				<?php endif; ?>
 
 				<?php if ( get_previous_posts_link() ) : ?>
-				<li class="nav-next"><?php previous_posts_link( __( 'Newer Posts', 'reach' ) ); ?></li>
+				<li class="nav-next"><?php previous_posts_link( $newer_posts ) ?></li>
 				<?php endif; ?>
 			</ul>
 		</nav><!-- .navigation -->
