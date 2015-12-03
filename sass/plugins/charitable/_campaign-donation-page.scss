@@ -5,7 +5,7 @@
 		display: block;
 		float: right;
 		width: 30%;
-		@include padding( 24, 0, 0, 36 );
+		@include padding( $size__margin-triple, 0, 0, $size__margin-triple );
 
 		.header {
 			margin-top: 0;
@@ -14,7 +14,7 @@
 		}
 
 		.campaign-title {
-			@include margin( 0, 0, 36 );
+			@include margin( 0, 0, $size__margin-triple );
 		}	
 	}	
 }
@@ -32,17 +32,16 @@
 	}
 
 	#charitable-donation-form {
-		@include padding( 36 );
+		@include padding( $size__margin-triple );
 		@include border( 1 );
 		border-top: none;
-		border-radius: 0 0 0.4rem 0.4rem;	    
-		@include background-color( $color__background-content );
+		border-radius: 0 0 0.4rem 0.4rem;		
 		box-shadow: 0 0 1px $color__background-content;
 
 		@include bp( 800 ) {
 			float: left;
 			width: 70%;
-			@include padding-right( 36 );
+			@include padding-right( $size__margin-triple );
 		}
 	}
 }

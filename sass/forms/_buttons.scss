@@ -5,8 +5,8 @@ input[type="submit"] {
 	@include button;
 	
 	&.button-large {
-		@include padding-top( 12 );
-		@include padding-bottom( 12 );
+		@include padding-top( $size__margin );
+		@include padding-bottom( $size__margin );
 		@include font-size( 25 );
 	}
 

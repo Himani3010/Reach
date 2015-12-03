@@ -4,41 +4,63 @@
     }
 
     &.stripped #main {
-        @include padding-top( 36 );
+        @include padding-top( $size__margin-triple );
     }    
 
-    .content-area {
-        .campaign-image, 
-        .campaign-video {
-            border-radius: 0.4rem 0.4rem 0 0;
-        }
-
+    .content-area {                
         .fit-video {
             margin-bottom: 0;
         }
 
-        .campaign {
-            border-top: 0;
-            border-radius: 0 0 0.4rem 0.4rem;
+        .campaign-image, 
+        .campaign-video {
+            @include padding( $size__margin-double, $size__margin-double, 0 );
+            @include background-color( $color__background-content );            
+            text-align: center;
+            @include border-color( $color__border-primary );
+            border-style: solid;
+
+            @include bp( 800 ) {
+                padding: 0;
+                @include border-width( 0, 1 );
+                border-radius: 0.4rem 0.4rem 0 0;
+            }
+        }
+    }
+
+    .sidebar {
+        margin-top: 0;
+
+        @include bp( 800 ) {
+            padding-top: 0;
         }
     }
 }
 
 .donation-form-display-same_page.single-campaign {
     .content-area {
-        .campaign {
+        .entry-block {
             margin-bottom: 0;
             border-radius: 0;
-        }
 
-        #charitable-donation-form {
-            @include margin-bottom( 36 );
-            @include padding( 24, 12 );
-            @include background-color( $color__background-content );
-            @include border( 1 );
-            border-top: 0;
-            border-radius: 0 0 0.4rem 0.4rem;
+            @include bp( 800 ) {
+                border-radius: 0.4rem 0.4rem 0 0;
+            }
         }
+    }
+
+    #charitable-donation-form {
+        @include border-color( $color__border-primary );
+        border-style: solid;
+
+        @include bp( 800 ) {
+            @include border-width( 0, 1 );
+        }
+    }
+
+    .campaign-comments.block,
+    .comment-form-block.content-block {
+        border-radius: 0 0 0.4rem 0.4rem;
     }
 }
 

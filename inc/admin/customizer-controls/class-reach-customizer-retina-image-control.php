@@ -86,7 +86,7 @@ class Reach_Customizer_Retina_Image_Control extends WP_Customize_Image_Control {
 
 		$wp_customize->add_setting( $checkbox_id, array( 
             'transport' => 'postMessage', 
-            'sanitize_callback' => array(  $this, 'sanitize_checkbox' )
+            'sanitize_callback' => 'absint'
         ) );
 
 		$wp_customize->add_control( $checkbox_id, array(

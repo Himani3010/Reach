@@ -2,14 +2,14 @@
     background: transparent;
     border: none;
     padding: 0;
-
+    
     .widget-title {
         margin-top: 0;
     }
 
     .widget-block {
-        @include padding( 24 );
-        @include margin-bottom( 24 );
+        @include padding( $size__margin-double );
+        @include margin-bottom( $size__margin-double );
         @include border( 1 );
         border-radius: 0.4rem;
         @include background-color( $color__background-content );
@@ -19,12 +19,12 @@
 @mixin product-widget() {
     .wp-post-image {
         position: relative;
-        @include fullwidth_calc( 24 );
-        @include top( -24 );
-        @include margin-bottom( -12 );
-        max-width: -webkit-calc( 100% + 48px );
-        max-width: -moz-calc( 100% + 48px );
-        max-width: calc( 100% + 48px );
+        @include fullwidth-calc( $size__margin-double );
+        @include top( -$size__margin-double );
+        @include margin-bottom( -$size__margin );
+        max-width: -webkit-calc( 100% + #{$size__margin_double * 2}px );
+        max-width: -moz-calc( 100% + #{$size__margin_double * 2}px );
+        max-width: calc( 100% + #{$size__margin_double * 2}px );
         border-radius: 0.4rem 0.4rem 0 0;
     }
 
@@ -34,7 +34,7 @@
 
     .download-price {
         float: left;
-        @include padding( 0, 0, 12 );
+        @include padding( 0, 0, $size__margin );
         font-family: $font__secondary;
         @include color( $color__accent );
     }
@@ -45,7 +45,7 @@
         .edd_price_options {
             li {
                 width: 100%;
-                @include padding-bottom( 6 );
+                @include padding-bottom( $size__margin-half );
                 @include border-bottom( 1 );                
             }
 
@@ -75,15 +75,15 @@
 
         .edd-item-quantity {
             @include width( 65 );
-            @include padding-left( 6 );
-            @include padding-right( 6 );   
+            @include padding-left( $size__margin-half );
+            @include padding-right( $size__margin-half );   
         }
         
         .edd-add-to-cart.button {
             float: right;
-            @include font-size( 12 );
-            @include padding-left( 6 );
-            @include padding-right( 6 );
+            @include font-size();
+            @include padding-left( $size__margin-half );
+            @include padding-right( $size__margin-half );
         }   
 
         .edd_go_to_checkout.button {

@@ -7,7 +7,7 @@
  * @package Reach
  */
 ?>
-		</div><!-- #main -->
+		<!--</div>--><!-- #main -->
 		<footer id="site-footer" role="contentinfo">
 			<div class="layout-wrapper">
 				<div class="footer-left">

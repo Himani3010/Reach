@@ -23,7 +23,7 @@
 		@include letter-spacing( 1 );
 		text-transform: uppercase;	
 		text-align: left;
-		text-indent: 4%;	
+		@include size( text-indent, $size__margin-double );	
 
 		&.hovering, 
 		&.hovering li {
@@ -33,7 +33,7 @@
 
 	a {
 		display: block;
-		@include padding( 12, 0 );
+		@include padding( $size__margin, 0 );
 		text-decoration: none;
 		font-weight: 400;
 		@include color( $color__text );
@@ -49,7 +49,7 @@
 			left: -999em;
 			@include width( 200 );
 			@include margin( 5, 0, 0, 0 );
-			@include padding( 6, 0 );
+			@include padding( $size__margin-half, 0 );
 			z-index: 100;
 			@include border-width( 2 );
 			border-style: solid;			
@@ -94,11 +94,11 @@
 			position: relative;
 			z-index: 50;
 			display: inline-block;
-			padding: 0.6rem;
-			border: 0.2rem solid transparent; border-width: 0.2rem;
+			@include padding( $size__margin-half );
+			@include border( 2, transparent );
 			border-radius: 0.4rem;		
-			font-size: 1.3rem;
-			line-height: 1.3rem;
+			@include font-size( 13 );
+			line-height: 1em;
 			text-align: center;
 		}
 
@@ -124,10 +124,7 @@
 
 .toggled .menu-site {
 	position: relative;
-	@include left( -36 );
-	width: -webkit-calc( 100% + 72px );
-	width: -moz-calc( 100% + 72px );
-	width: calc( 100% + 72px );
+	@include fullwidth-calc( $size__margin-double );
 	height: auto;
 	max-height: 10000px;
 	@include border-top( 2, $color__accent );
@@ -146,10 +143,10 @@
 
 	li {
 		li {
-			text-indent: 8%;
+			@include size( text-indent, $size__margin-triple );
 
 			li {
-				text-indent: 12%;
+				@include size( text-indent, $size__margin * 4 );
 			}
 
 			&:last-child {

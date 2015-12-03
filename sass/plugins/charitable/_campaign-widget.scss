@@ -1,9 +1,11 @@
-.campaign {
-    @include padding( 0, 12 );
+.campaign-widget {
+    @include padding( 0, $size__margin );
+    @include background-color( $color__background-widget );
     overflow: hidden;
 
     .campaign-image {
-        @include fullwidth-wrapper( 12, 12 );
+        position: relative;
+        @include fullwidth-calc( $size__margin );
         a {
             display: block;
             line-height: 0;
@@ -22,14 +24,14 @@
     .campaign-stats, 
     .meta {
         position: relative;
-        @include fullwidth_calc( 24 );  
+        @include fullwidth-calc( $size__margin-double );  
         @include bp( 600 ) {
-            @include fullwidth_calc( 12 );
+            @include fullwidth-calc( $size__margin );
         }
     }
 
     .campaign-stats {       
-        @include padding( 6, 0 );
+        @include padding( $size__margin-half, 0 );
         margin: 0;
         @include border-top( 1 );
         text-align: center;
@@ -62,14 +64,16 @@
     }
 }   
 
+body.campaign-widget {
+    padding: 0;
+}
+
 .campaign-widget {
-    background: transparent;
-    
     .campaign {
         margin: 0;
 
         .block-title {
-            @include margin-top( 12 );
+            @include margin-top( $size__margin );
         }
     }
 }

@@ -12,18 +12,18 @@
 
 .alignleft { 
 	float: left;
-	@include margin( 0, 10, 12, 0 );
+	@include margin( 0, $size__margin, $size__margin, 0 );
 }
 
 .alignright { 
 	float: right;
-	@include margin( 0, 0, 12, 10 );
+	@include margin( 0, 0, $size__margin, $size__margin );
 }
 
 .aligncenter { 
 	@include center-block();
-	@include margin-top( 12 ); 
-	@include margin-bottom( 12 );
+	@include margin-top( $size__margin ); 
+	@include margin-bottom( $size__margin );
 	clear: both;
 	text-align: center;
 }

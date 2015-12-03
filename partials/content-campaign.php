@@ -4,12 +4,13 @@
  *
  * @package Reach
  */
+
 ?>
-<div id="campaign-<?php echo get_the_ID() ?>" <?php post_class('campaign-content') ?>>
-	<div class="title-wrapper">	
-		<h2 class="block-title"><?php the_title() ?></h2>
-	</div>
-	<div class="entry">
-		<?php the_content() ?>
-	</div>
-</div>
+<article id="campaign-<?php echo get_the_ID() ?>" <?php post_class('campaign-content') ?>>
+	<div class="block entry-block">
+    	<div class="entry">
+            <h2><?php _e( 'About the Campaign', 'reach' ) ?></h2>
+    		<?php the_content() ?>
+    	</div>
+    </div>
+</article>

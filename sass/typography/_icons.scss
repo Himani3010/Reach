@@ -208,7 +208,7 @@
 
 .with-icon {
 	position: relative;
-	@include padding-left( 14 );
+	@include padding-left( 16 );
 
 	&::before {
 		position: absolute;		

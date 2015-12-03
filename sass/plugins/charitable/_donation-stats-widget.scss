@@ -1,8 +1,11 @@
 .widget.widget_charitable_donation_stats_widget {
-    
+    .donation-stats {
+        margin-bottom: 0;
+    }
+
     li {
-        @include margin-bottom( 12 );
-        @include font-size( 13 );
+        @include margin-bottom();
+        @include font-size();
         font-style: italic;
         font-weight: 300;
 
@@ -28,20 +31,21 @@
     
     li {
         float: left;
-        @include padding( 0, 6 );
+        @include padding( 0, $size__margin-half );
         width: 33.3%;
         margin-bottom: 0;
         text-align: center;
  
         &:last-child {
             padding-right: 0;
+            margin-bottom: 0;
         }
 
-        @media (min-width: 45em) and (max-width: 56.25em) {
+        @media (min-width: 45em) and (max-width: 70em) {
             float: none;
             width: 100%;
             padding: 0;
-            @include margin-bottom( 12 );        
+            @include margin-bottom( $size__margin );        
         }
     }
 }

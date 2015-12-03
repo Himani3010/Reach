@@ -1,43 +1,74 @@
 /* Various re-usable styled blocks */
 .block {
-	@include margin-bottom( 36 );
+	@include margin-bottom( $size__margin-triple );	
 	@include border( 1 );
-	border-radius: 0.4rem;	
+	border-radius: 0.4rem;
 }
 
 .entry-block {
 	position: relative;
-	@include padding( 0, 24 );
-	@include background-color( $color__background-content );
-	box-shadow: 0 0 1px $color__background-content;
+	@include padding( $size__margin, $size__margin-double, 0 );
+	@include background-color( $color__background-content );	
 	overflow-x: hidden;
+	@include border-width( 0, 0, 1, 0 );
+	border-radius: 0;
+
+	@include bp( 720 ) {
+		@include padding-left( $size__margin-triple );
+		@include padding-right( $size__margin-triple );		
+	}
 
 	@include bp( 800 ) {
-		@include padding-left( 36 );
-		@include padding-right( 36 );
+		@include border-width( 1 );
+		box-shadow: 0 0 1px $color__background-content;
+		border-radius: 0.4rem;
+	}
+}
+
+.has-post-thumbnail, 
+.format-video,
+.blog, 
+.archive {
+	.entry-block {
+		padding-top: 0;
+	}
+}
+
+.blog, 
+.archive {
+	.entry-block {
+		@include border-top-width( 1 );
 	}
 }
 
 .content-block {
-	@include padding( 0, 24, 24 );
+	@include padding( 0, $size__margin-double, $size__margin-double );
 	@include background-color( $color__background-content );
 	@include bp( 800 ) {
-		@include padding( 0, 36, 24 );
+		@include padding( 0, $size__margin-triple, $size__margin-double );
 	}	
 }
 
-.multi-block {
-	.content-block:first-of-type {
-		border-radius: 0.4rem 0.4rem 0 0;
+.multi-block .content-block {
+	@include border-top( 1 );
+
+	&:first-of-type {
+		border-top: none;
 	}
 
-	.content-block:nth-of-type(1n+2) {
-		@include border-top( 1 );
-	}
+	@include bp( 800 ) {
+		&:first-of-type {
+			border-radius: 0.4rem 0.4rem 0 0;
+		}
 
-	.content-block:last-of-type {
-		border-radius: 0 0 0.4rem 0.4rem;
-	}
+		&:last-of-type {
+			border-radius: 0 0 0.4rem 0.4rem;
+		}
+
+		&:first-of-type:last-of-type {
+			border-radius: 0.4rem;
+		}
+	}	
 }
 
 .layout-boxed .feature-block {
@@ -46,16 +77,16 @@
 
 .feature-block {
 	@include fullwidth-wrapper();	
-	@include padding( 0, 24, 36, 24 );		
+	@include padding( 0, $size__margin-double, $size__margin-triple, $size__margin-double );		
 	@include color( $color__text-overlay );
 	@include background-color( $color__accent );
 	background-repeat: repeat;
 	box-shadow: none;
 	border: none;
 
-	@include bp( 800 ) {		
-		@include padding-left( 36 );
-		@include padding-right( 36 );
+	@include bp( 800 ) {
+		@include padding-left( $size__margin-triple );
+		@include padding-right( $size__margin-triple );
 	}
 }
 
@@ -65,5 +96,5 @@
 }
 
 .block-title.with-icon {
-	@include padding-left( 28 );
+	@include padding-left( 32 );
 }

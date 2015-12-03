@@ -1,7 +1,7 @@
 .widget.widget_campaign_creator_widget {
     .charitable-campaign-creator {
         .avatar {
-            @include margin-bottom( 12 );
+            @include margin-bottom();
         }
 
         .creator-name {
@@ -18,7 +18,7 @@
         }
 
         .creator-bio {
-            @include padding-top( 12 );
+            @include padding-top();
             @include border-top( 1 );
         }
 

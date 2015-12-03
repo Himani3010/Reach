@@ -10,6 +10,8 @@
         max-width: 100%;
         width: 100%;
     }
+
+    @include font-size();
 }
 
 .charitable-form-fields {   
@@ -24,7 +26,7 @@
             }
 
             &.odd {
-                @include padding-right( 36 );
+                @include padding-right( $size__margin-triple );
                 clear: left;
             }
 
@@ -42,15 +44,15 @@
     .charitable-fieldset {
         position: relative;
         width: 100%;
-        @include padding( 0, 0, 24 );
-        @include margin-bottom( 24 );
+        @include padding( 0, 0, $size__margin-double );
+        @include margin-bottom( $size__margin-double );
         border: none;    
 
         &:before {
             content: "";
             display: block;
             position: absolute;
-            @include top( 9 );
+            @include top( 13 );
             @include height( 2 );
             width: 100%;
             @include background-color( $color__border-primary );
@@ -62,7 +64,7 @@
             clear: both;
             @include left( 24 );
             margin: 0;
-            @include padding( 0, 12, 24 );      
+            @include padding( 0, $size__margin, 24 );      
             @include font-size( 18 );
             font-weight: normal;
             @include color( $color__accent );
@@ -81,8 +83,8 @@
             .charitable-form-header {
                 background: transparent;
                 left: 0;
-                @include padding( 12, 0 );
-                @include font-size( 14 );
+                @include padding( $size__margin, 0 );
+                @include font-size();
             }
         }
     }
@@ -100,19 +102,19 @@
 }
 
 #charitable-campaign-submission-form {
-    @include fullwidth-wrapper( 36, 36 );
-    @include padding( 24, 12, 0, 12 );
+    @include fullwidth-wrapper( $size__margin-triple, $size__margin-triple );
+    @include padding( 24, $size__margin, 0, $size__margin );
 
     @include bp( 768 ) {
-        @include padding-right( 36 );
-        @include padding-left( 36 );
+        @include padding-right( $size__margin-triple );
+        @include padding-left( $size__margin-triple );
     }
 }
 
 .charitable-campaign-form-table {
     th,
     td {
-        @include padding( 12 );
+        @include padding( $size__margin );
     }
 
     tfoot td {
@@ -145,7 +147,7 @@
 
     th {
         @include width( 100 );
-        @include font-size( 12 );
+        @include font-size( $size__margin );
         @include line-height( 37 );
         background-color: transparent;
     }
@@ -252,7 +254,7 @@
     }
 
     .login-username {
-        @include padding-right( 36 );
+        @include padding-right( $size__margin-triple );
     }
 
     .login-submit {

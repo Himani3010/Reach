@@ -20,7 +20,7 @@ get_header( 'stripped' );
 
             get_template_part( 'partials/banner' ); ?>
 
-            <main class="site-main content-area" role="main">
+            <main class="site-main content-area <?php if ( empty( $campaigns ) ) : ?>no-sidebar<?php endif ?>" role="main">
                 
                 <?php if ( ! empty( $campaigns ) ) : ?>
 

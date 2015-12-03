@@ -1,39 +1,57 @@
-<?php 
+<?php
 /**
- * @package 	Reach
+ * @package Reach
  */
 ?>
-<article id="post-<?php the_ID() ?>" <?php post_class() ?>>	
+<article id="post-<?php the_ID() ?>" <?php post_class() ?>>
 	<?php 
-	echo reach_get_media( array( 
-		'split_media' 	=> true, 
-		'meta_key' 		=> 'video'
-	) );
 
-	if ( is_single() ) :
-
-		get_template_part('meta', 'above');
-
-	endif;
-
-	reach_post_header();
+	/* Add the header banner if this is a single post. */
+	if ( is_single() ) : 
+		get_template_part( 'partials/banner' );
+	endif; 
 
 	?>
-	<div class="entry cf">				
-		<?php the_content() ?>			
+	<div class="block entry-block">
+		<?php
 
-		<?php wp_link_pages(array( 'before' => '<p class="entry_pages">' . __('Pages: ', 'reach') ) ) ?>
-	</div>						
-	<?php 
+		echo reach_get_media( array( 
+			'split_media' 	=> true, 
+			'meta_key' 		=> 'video'
+		) );
 
-	if ( is_single() ) :
-			
-		get_template_part( 'partials/meta', 'taxonomy' );
+		/* Display meta above content if this is a single post. */
+		if ( is_single() ) :
+			get_template_part( 'meta', 'above' );
 
-	else :
+		/* If this is an archive, display the post title. */
+		else : 
+			reach_post_header();
+		endif;
 
-		get_template_part('meta', 'below');
+		?>
+		<div class="entry cf">				
+			<?php 
 
-	endif ?>
+			the_content(); 			
 
-</article>
+			wp_link_pages( array( 
+				'before' => '<p class="entry_pages">' . __( 'Pages: ', 'reach' ) 
+			) );
+
+			?>
+		</div><!-- .entry -->
+		<?php 
+
+		/* Display taxonomy meta on single posts. */
+		if ( is_single() ) :
+			get_template_part( 'partials/meta', 'taxonomy' );
+
+		/* Display alternative meta on archives. */
+		else :
+			get_template_part( 'meta', 'below' );
+		endif;
+
+		?>
+	</div><!-- .entry-block -->
+</article><!-- post-<?php the_ID() ?> -->

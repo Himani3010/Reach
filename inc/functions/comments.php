@@ -13,13 +13,13 @@ if ( !function_exists( 'reach_comment_form_default_fields') ) :
 	function reach_comment_form_default_fields( $fields ) {
 		$fields = '
 		<p class="comment-text-input required" tabindex="1">
-			<input type="text" name="author" id="commenter_name" placeholder="'.__( 'Name', 'reach' ).' *" required />			
+			<input type="text" name="author" id="commenter_name" placeholder="' . __( 'Name', 'reach' ) . ' *" required />			
 		</p>		
 		<p class="comment-text-input last" tabindex="2">
-			<input type="text" name="url" id="commenter_url" placeholder="'.__( 'Website', 'reach' ).'" />
+			<input type="text" name="url" id="commenter_url" placeholder="' . __( 'Website', 'reach' ) . '" />
 		</p>
 		<p class="comment-text-input fullwidth required" tabindex="3">
-			<input type="email" name="email" id="commenter_email" placeholder="'.__( 'Email', 'reach' ).' *" required />			
+			<input type="email" name="email" id="commenter_email" placeholder="' . __( 'Email', 'reach' ) . ' *" required />			
 		</p>
 		';
 		return $fields;
@@ -53,7 +53,7 @@ if ( !function_exists( 'reach_cancel_comment_reply_link') ) :
 	 * @since 	1.0
 	 */
 	function reach_cancel_comment_reply_link( $html ) {
-		return substr_replace( $html, 'class="icon icon-remove-sign" ', 3, 0 );
+		return substr_replace( $html, 'class="with-icon" data-icon="&#xf057;"', 3, 0 );
 	}
 
 endif;
@@ -149,4 +149,4 @@ if ( !function_exists( 'reach_comment_form_field_comment_filter' ) ) :
 
 endif;
 
-add_filter( 'comment_form_field_comment', 'reach_comment_form_field_comment_Filter' );
+// add_filter( 'comment_form_field_comment', 'reach_comment_form_field_comment_filter' );

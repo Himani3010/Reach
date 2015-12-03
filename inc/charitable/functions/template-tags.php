@@ -126,7 +126,9 @@ if ( ! function_exists( 'reach_template_campaign_progress_barometer' ) ) :
      * @since   1.0.0
      */
     function reach_template_campaign_progress_barometer( Charitable_Campaign $campaign ) {
-        charitable_template( 'campaign/progress-barometer.php', array( 'campaign' => $campaign ) );
+        if ( $campaign->has_goal() ) {
+            charitable_template( 'campaign/progress-barometer.php', array( 'campaign' => $campaign ) );
+        }        
     }
 endif;
 

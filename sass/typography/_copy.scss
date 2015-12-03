@@ -1,5 +1,5 @@
 p {
-	@include padding-bottom(12);
+	@include padding-bottom( $size__margin );
 }
 
 p:focus {
@@ -18,10 +18,10 @@ blockquote {
 	position: relative;
 	left: 0;
 	width: 100%;
-	@include padding( 24 );
-	@include margin( 0, 0, 12 );		
-	@include font-size( 14 );
-	@include line-height( 21 );
+	@include padding( $size__margin-double );
+	@include margin( 0, 0,  $size__margin  );		
+	@include font-size( $font__font-size-big );
+	@include line-height( $font__line-height-big );
 	@include background-color( $color__background-blockquote );
 
 	p:last-child {
@@ -30,8 +30,8 @@ blockquote {
 
 	cite {
 		display: block;
-		@include margin( 24, 0, 0 );
-		@include font-size( 12 );
+		@include margin( $size__margin-double, 0, 0 );
+		@include font-size();
 		text-transform: uppercase;
 		@include letter-spacing( 2 );
 		text-align: right;
@@ -45,8 +45,8 @@ address {
 
 pre {
 	max-width: 100%;
-	@include padding( 12 );
-	@include margin( 0, 0, 12 );
+	@include padding( $size__margin );
+	@include margin( 0, 0, $size__margin );
 	font-family: $font__code;	
 	@include background-color( $color__background-blockquote );
 	@include hidden-overflow();
@@ -90,9 +90,9 @@ sub {
 }
 
 small {
-	font-size: 90%;
+	@include font-size( $font__font-size-small );
 }
 
 big {
-	font-size: 120%;
+	@include font-size( $font__font-size-big );
 }

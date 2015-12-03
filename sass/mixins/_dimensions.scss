@@ -45,34 +45,34 @@ $browser-context: 16; // Default
 @mixin min-height($value) {
 	@include size(min-height, $value);
 }
-@mixin padding($value, $right : "", $bottom : "", $left : "") {
+@mixin padding($value : $size__margin, $right : "", $bottom : "", $left : "") {
 	@include size(padding, $value, $right, $bottom, $left);
 }
-@mixin padding-top($value) {
+@mixin padding-top($value : $size__margin) {
 	@include size(padding-top, $value);
 }
-@mixin padding-bottom($value) {
+@mixin padding-bottom($value : $size__margin) {
 	@include size(padding-bottom, $value);
 }
-@mixin padding-right($value) {
+@mixin padding-right($value : $size__margin) {
 	@include size(padding-right, $value);
 }
-@mixin padding-left($value) {
+@mixin padding-left($value : $size__margin) {
 	@include size(padding-left, $value);
 }
-@mixin margin($value, $right : "", $bottom : "", $left : "") {
+@mixin margin($value : $size__margin, $right : "", $bottom : "", $left : "") {
 	@include size(margin, $value, $right, $bottom, $left);
 }
-@mixin margin-top($value) {
+@mixin margin-top($value : $size__margin) {
 	@include size(margin-top, $value);
 }
-@mixin margin-bottom($value) {
+@mixin margin-bottom($value : $size__margin) {
 	@include size(margin-bottom, $value);
 }
-@mixin margin-right($value) {
+@mixin margin-right($value : $size__margin) {
 	@include size(margin-right, $value);
 }
-@mixin margin-left($value) {
+@mixin margin-left($value : $size__margin) {
 	@include size(margin-left, $value);
 }
 @mixin left($value) {
@@ -87,10 +87,10 @@ $browser-context: 16; // Default
 @mixin bottom($value) {
 	@include size(bottom, $value);
 }
-@mixin font-size($value) {
+@mixin font-size($value : $font__font-size) {
 	@include size(font-size, $value);
 }
-@mixin line-height($value) {
+@mixin line-height($value : $font__line-height) {
 	@include size(line-height, $value);
 }
 @mixin letter-spacing($value) {

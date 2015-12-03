@@ -6,7 +6,7 @@
  */
 ?>
 		</div><!-- #main -->
-		<footer id="site-footer" class="wrapper" role="contentinfo">
+		<footer id="site-footer" role="contentinfo">
 			<div class="layout-wrapper">
 				<div id="colophon">
 					<?php 

@@ -1,10 +1,10 @@
 #page > .layout-wrapper, 
 #header {
-	@include padding( 0, 24 );
+	@include padding( 0, $size__margin-double );
 
 	@include bp( 800 ) {
-		@include padding-left( 36 );
-		@include padding-right( 36 );
+		@include padding-left( $size__margin-triple );
+		@include padding-right( $size__margin-triple );
 	}
 }
 
@@ -15,7 +15,7 @@
 #header {
 	position: relative;		
 	z-index: 50;
-	@include padding-top( 24 );
+	@include padding-top( $size__margin-double );
 	@include background-color( $color__background-wrapper );
 }
 
@@ -23,7 +23,7 @@
 	position: relative;
 	z-index: 500;
 	float: left;
-	@include padding( 12, 20, 12, 0 );
+	@include padding( $size__margin, $size__margin-double, $size__margin, 0 );
 	text-transform: uppercase;
 }
 
@@ -52,9 +52,9 @@
 }
 
 .site-tagline {	
-	@include padding( 6, 0 );
+	@include padding( $size__margin-half, 0 );
 	margin: 0;
-	@include font-size( 13 );
+	@include font-size();
 	line-height: 1em;	
 	letter-spacing: 0;
 }

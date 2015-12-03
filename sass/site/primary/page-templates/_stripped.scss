@@ -1,6 +1,6 @@
 .stripped {
 	#page {
-		@include padding-top( 36 );		
+		@include padding-top( $size__margin-triple );		
 	}
 
 	.site-identity {
@@ -24,7 +24,7 @@
 	.entry-block {
 		background: transparent;
 		margin: 0;
-		@include padding( 0, 24 );	
+		@include padding( 0, $size__margin-double );	
 		border-radius: 0 0 0.4rem 0.4rem;
 
 		.entry {

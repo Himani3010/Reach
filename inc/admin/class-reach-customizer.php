@@ -174,7 +174,7 @@ class Reach_Customizer {
             return;
         }
 
-        foreach ( $settings as $setting_id => $setting ) {                
+        foreach ( $settings as $setting_id => $setting ) {    
             $wp_customize->add_setting( $setting_id, $setting[ 'setting' ] );        
 
             $setting_control = $setting[ 'control' ];
@@ -242,7 +242,8 @@ class Reach_Customizer {
                 'layout' => array(
                     'setting'   => array(
                         'transport' => 'postMessage',
-                        'default' => 'layout-wide'
+                        'default' => 'layout-wide', 
+                        'sanitize_callback' => array( $this, 'sanitize_layout' )
                     ), 
                     'control'   => array(
                         'type'          => 'radio', 
@@ -310,6 +311,31 @@ class Reach_Customizer {
                         'label'             => __( 'Text Colour', 'reach' ),
                         'description'       => __( 'Used for: text, buttons, site navigation', 'reach' )
                     )
+                ), 
+                'header_text_colour' => array(
+                    'setting'   => array(
+                        'transport'         => 'postMessage',
+                        'default'           => '#ffffff',
+                        'sanitize_callback' => 'sanitize_hex_color'
+                    ), 
+                    'control'   => array(
+                        'control_type'      => 'WP_Customize_Color_Control',
+                        'priority'          => $priority + 4,
+                        'label'             => __( 'Header Text', 'reach' ),
+                        'description'       => __( 'Used for social profile icons & button text', 'reach' )
+                    )
+                ),
+                'footer_text_colour' => array(
+                    'setting'   => array(
+                        'transport'         => 'postMessage',
+                        'default'           => '#ffffff',
+                        'sanitize_callback' => 'sanitize_hex_color'
+                    ), 
+                    'control'   => array(
+                        'control_type'      => 'WP_Customize_Color_Control',
+                        'priority'          => $priority + 5,
+                        'label'             => __( 'Footer Text', 'reach' )
+                    )
                 )
             )
         );
@@ -329,23 +355,11 @@ class Reach_Customizer {
         $header_settings = array(
             'priority'  => $priority,
             'title'     => __( 'Header', 'reach' ),
-            'settings'  => array(
-                'header_text_colour' => array(
-                    'setting'   => array(
-                        'transport'         => 'postMessage',
-                        'default'           => '#ffffff',
-                        'sanitize_callback' => 'sanitize_hex_color'
-                    ), 
-                    'control'   => array(
-                        'control_type'      => 'WP_Customize_Color_Control',
-                        'priority'          => $priority + 1,
-                        'label'             => __( 'Text Colour', 'reach' ),
-                        'description'       => __( 'Used for social profile icons & button text', 'reach' )
-                    )
-                ), 
+            'settings'  => array(                 
                 'hide_site_title'   => array(
                     'setting'       => array(
-                        'transport' => 'postMessage'
+                        'transport' => 'postMessage',
+                        'sanitize_callback' => 'absint'
                     ), 
                     'control'       => array(
                         'label'     => __( 'Hide the title', 'reach' ),
@@ -355,7 +369,8 @@ class Reach_Customizer {
                 ),
                 'hide_site_tagline' => array(
                     'setting'       => array(
-                        'transport' => 'postMessage'
+                        'transport' => 'postMessage',
+                        'sanitize_callback' => 'absint'
                     ), 
                     'control'       => array(
                         'label'     => __( 'Hide the tagline', 'reach' ),
@@ -381,23 +396,16 @@ class Reach_Customizer {
         $footer_settings = array(
             'priority'  => $priority,
             'title'     => __( 'Footer', 'reach' ),
-            'settings'  => array(
-                'footer_text_colour' => array(
-                    'setting'   => array(
-                        'transport'         => 'postMessage',
-                        'default'           => '#ffffff',
-                        'sanitize_callback' => 'sanitize_hex_color'
-                    ), 
-                    'control'   => array(
-                        'control_type'      => 'WP_Customize_Color_Control',
-                        'priority'          => $priority + 1,
-                        'label'             => __( 'Text Colour', 'reach' )
-                    )
-                ),
+            'settings'  => array(                
                 'footer_tagline' => array(
                     'setting'   => array(
                         'transport' => 'postMessage', 
-                        'default'   => sprintf( '<a href="%s">%s</a>', esc_url( 'http://wordpress.org/' ), __( 'Proudly powered by WordPress', 'reach' ) )
+                        'default'   => sprintf( 
+                            '<a href="%s">%s</a>', 
+                            esc_url( 'http://wordpress.org/' ), 
+                            __( 'Proudly powered by WordPress', 'reach' ) 
+                        ), 
+                        'sanitize_callback' => 'esc_html'
                     ), 
                     'control'   => array(
                         'label'     => __( 'Tagline', 'reach' ), 
@@ -429,6 +437,7 @@ class Reach_Customizer {
                     'setting'   => array(
                         'default'       => '', 
                         'transport'     => 'postMessage', 
+                        'sanitize_callback' => 'esc_url_raw'
                     ), 
                     'control'   => array(
                         'control_type'  => 'Reach_Customizer_Retina_Image_Control', 
@@ -437,7 +446,9 @@ class Reach_Customizer {
                     )
                 ), 
                 'campaign_section_break_1' => array(
-                    'setting' => array(),
+                    'setting' => array(
+                        'sanitize_callback' => '__return_true'
+                    ),
                     'control' => array(
                         'control_type'  => 'Reach_Customizer_Misc_Control',
                         'type'          => 'line',
@@ -447,7 +458,8 @@ class Reach_Customizer {
                 'campaign_media_placement' => array(
                     'setting' => array(
                         'default'       => 'featured_image_in_summary',
-                        'transport'     => 'refresh'
+                        'transport'     => 'refresh', 
+                        'sanitize_callback' => array( $this, 'sanitize_campaign_media_placement' )
                     ),
                     'control' => array(
                         'type'          => 'radio',
@@ -486,7 +498,8 @@ class Reach_Customizer {
 
             $social_settings[ 'settings' ][ $setting_key ] = array(
                 'setting'   => array(
-                    'transport' => 'postMessage' 
+                    'transport' => 'postMessage',
+                    'sanitize_callback' => 'esc_url_raw' 
                 ),
                 'control'   => array(
                     'type'      => 'text',
@@ -520,7 +533,8 @@ class Reach_Customizer {
                 'body_background' => array(
                     'setting'   => array(
                         'default'       => '', 
-                        'transport'     => 'postMessage', 
+                        'transport'     => 'postMessage',
+                        'sanitize_callback' => 'esc_url_raw' 
                     ), 
                     'control'   => array(
                         'control_type'  => 'Reach_Customizer_Retina_Image_Control', 
@@ -554,7 +568,8 @@ class Reach_Customizer {
                 'blog_banner_background' => array(
                     'setting'   => array(
                         'default'       => '', 
-                        'transport'     => 'postMessage', 
+                        'transport'     => 'postMessage',
+                        'sanitize_callback' => 'esc_url_raw'
                     ), 
                     'control'   => array(
                         'control_type'  => 'Reach_Customizer_Retina_Image_Control', 
@@ -642,4 +657,34 @@ class Reach_Customizer {
         wp_register_script( 'theme-customizer', get_template_directory_uri().'/js/admin/theme-customizer.js', array( 'jquery', 'customize-preview' ), '1.0.0-20150710i', true );
         wp_enqueue_script( 'theme-customizer' );        
     }
+
+    /**
+     * Sanitize the layout setting. 
+     *
+     * @return  string
+     * @access  public
+     * @since   1.0.0
+     */
+    public function sanitize_layout( $value ) {
+        if ( ! in_array( $value, array( 'layout-wide', 'layout-boxed' ) ) ) {
+            $value = 'layout-wide';
+        }
+
+        return $value;
+    }
+
+    /**
+     * Sanitize the value for the campaign media placement setting. 
+     *
+     * @return  string
+     * @access  public
+     * @since   1.0.0
+     */
+    public function sanitize_campaign_media_placement( $value ) {
+        if ( ! in_array( $value, array( 'featured_image_in_summary', 'video_in_summary' ) ) ) {
+            $value = 'featured_image_in_summary';
+        }
+
+        return $value;
+    }    
 }

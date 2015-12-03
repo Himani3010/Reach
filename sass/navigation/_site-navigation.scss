@@ -9,7 +9,7 @@
 		position: absolute;
 		z-index: 600;
 		right: 0;
-		@include top( 36 );
+		@include top( $size__margin-triple );
 		@include line-height( 38 );
 
 		&:before {
@@ -57,8 +57,12 @@
 			}
 
 			> li {
-				@include padding( 0, 0, 12, 12 );
+				@include padding( 0, 0, $size__margin, $size__margin );
 				border: none;
+
+				&:last-child a {
+					padding-right: 0;
+				}
 			}
 			
 			> li.hovering:last-child ul {
@@ -91,7 +95,7 @@
 @include bp( 800 ) {
 	.no-tagline {
 		.site-navigation .menu-site {
-			margin-top: 1.2rem;
+			@include margin-top( $size__margin );
 		}
 	}
 
@@ -99,14 +103,14 @@
 		.site-navigation .menu-site {
 			margin-top: 0;
 			li {
-				padding-top: 0.7rem;
+				@include padding-top( $size__margin-half );
 			}
 		}
 	}
 
 	.no-tagline.no-title {
 		.site-navigation .menu-site ul {
-			margin-top: 0.8rem;
+			@include margin-top( $size__margin-half );
 			ul {
 				margin-top: 0;
 			}

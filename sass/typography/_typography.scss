@@ -1,8 +1,8 @@
 @import "icons";
 
 body {
-	@include font-size(12);
-	@include line-height(20);
+	@include font-size();
+	@include line-height();
 	@include color( $color__text );
 }
 
@@ -48,10 +48,11 @@ th,
 .donation-amounts .amount, 
 .donation-amounts .custom-donation-amount, 
 .widget.widget_charitable_donation_stats_widget .figure,
-.campaign-finished {
+.campaign-finished, 
+.download-price {
 	font-family: $font__secondary;
 	text-transform: uppercase;
-	@include letter-spacing(2);
+	@include letter-spacing( 2 );
 }
 
 @import "headings";

@@ -7,7 +7,7 @@
     .campaign-status-tag {  
         position: absolute;
         line-height: 1em;
-        @include padding( 6, 0 );      
+        @include padding( $size__margin-half, 0 );      
         @include width( 200 );
         @include margin( 30, 0, 0, -60 );  
         text-align: center;

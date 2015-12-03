@@ -7,14 +7,14 @@ table {
 
 	caption {
 		@include padding( 4, 0 );
-		@include font-size( 12 );
+		@include font-size();
 		font-weight: 400;	
 	}
 }
 
 th,
 td {
-	@include padding( 6, 10 );
+	@include padding( $size__margin-half, 10 );
 	border-style: solid;
 	@include border-color( $color__border-primary );
 	vertical-align: top;	
@@ -44,8 +44,4 @@ td ul:last-child,
 td ol:last-child,
 td dl:last-child {
 	margin-bottom: 0;
-}
-
-.even > td {
-	// @include background-color( $color__background-screen );
 }

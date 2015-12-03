@@ -25,30 +25,7 @@ module.exports = function(grunt) {
             uglify: {
                 files: 'js/reach-lib.js', 
                 tasks: ['uglify']
-            },
-            sync: {
-                files: [
-                    '**',
-                    '!.git*', 
-                    '!node_modules', 
-                    '!node_modules/**', 
-                    '!.sass-cache', 
-                    '!Gruntfile.js', 
-                    '!package.json', 
-                    '!.DS_Store',
-                    '!**/.DS_Store',
-                    '!README.md', 
-                    '!.jshintrc',  
-                    '!sass', 
-                    '!sass/**', 
-                    '!css/palettes/_classic.css',
-                    '!css/palettes/_dark.css',
-                    '!css/palettes/_light.css',
-                    '!css/palettes/_franklin.css',
-                    '!css/palettes/_custom.css',
-                ],
-                tasks: ['sync']
-            }        
+            },     
         },    
 
         // Sass
@@ -72,40 +49,7 @@ module.exports = function(grunt) {
                 },
                 trace : true
             },
-        },
-
-        // Sync
-        sync: {            
-            dist: {
-                files: [
-                    // includes files within path
-                    {
-                        src: [  
-                            '**',
-                            '!.git*', 
-                            '!node_modules', 
-                            '!node_modules/**', 
-                            '!.sass-cache', 
-                            '!Gruntfile.js', 
-                            '!package.json', 
-                            '!.DS_Store',
-                            '!**/.DS_Store',
-                            '!README.md', 
-                            '!.jshintrc',  
-                            '!sass', 
-                            '!sass/**', 
-                            '!css/palettes/_classic.css', 
-                            '!css/palettes/_light.css',
-                            '!css/palettes/_dark.css',
-                            '!css/palettes/_custom.css', 
-                            '!css/palettes/_franklin.css'
-                        ], 
-                        dest: '../../themes/reach'
-                    }
-                ], 
-                verbose: true
-            }
-        },
+        },        
 
         // concat js
         concat: {            
@@ -134,7 +78,7 @@ module.exports = function(grunt) {
             all: [
                 'Gruntfile.js', 
                 'js/reach.js', 
-                'js/reach-lib.js', 
+                'js/reach/*.js', 
                 'js/admin/theme-customizer.js',
             ]
         },
@@ -150,22 +94,109 @@ module.exports = function(grunt) {
             }
         },           
 
-        // make POT file
+        checktextdomain: {
+            options:{
+                text_domain: 'reach',
+                create_report_file: true,
+                keywords: [
+                    '__:1,2d',
+                    '_e:1,2d',
+                    '_x:1,2c,3d',
+                    'esc_html__:1,2d',
+                    'esc_html_e:1,2d',
+                    'esc_html_x:1,2c,3d',
+                    'esc_attr__:1,2d',
+                    'esc_attr_e:1,2d',
+                    'esc_attr_x:1,2c,3d',
+                    '_ex:1,2c,3d',
+                    '_n:1,2,3,4d',
+                    '_nx:1,2,4c,5d',
+                    '_n_noop:1,2,3d',
+                    '_nx_noop:1,2,3c,4d',
+                    ' __ngettext:1,2,3d',
+                    '__ngettext_noop:1,2,3d',
+                    '_c:1,2d',
+                    '_nc:1,2,4c,5d'
+                ]
+            },
+            files: {
+                src: [
+                    '**/*.php', // Include all files
+                    '!node_modules/**', // Exclude node_modules/
+                    '!build/.*'// Exclude build/
+                ],
+                expand: true
+            }
+        },
+
         makepot: {
             target: {
                 options: {
-                    cwd: '',                    // Directory of files to internationalize.
-                    domainPath: '/languages',   // Where to save the POT file.                    
-                    mainFile: 'style.css',      // Main project file.
-                    potFilename: 'reach.pot', // Name of the POT file.
-                    type: 'wp-theme',           // Type of project (wp-plugin or wp-theme).
-                    updateTimestamp: true       // Whether the POT-Creation-Date should be updated without other changes.
+                    domainPath: '/languages/',    // Where to save the POT file.
+                    exclude: ['build/.*'],
+                    mainFile: 'style.css',    // Main project file.
+                    potFilename: 'reach.pot',    // Name of the POT file.
+                    potHeaders: {
+                        poedit: true,                 // Includes common Poedit headers.
+                        'x-poedit-keywordslist': true // Include a list of all possible gettext functions.
+                                },
+                    type: 'wp-theme',    // Type of project (wp-plugin or wp-theme).
+                    updateTimestamp: true,    // Whether the POT-Creation-Date should be updated without other changes.
+                    processPot: function( pot, options ) {
+                        pot.headers['report-msgid-bugs-to'] = 'https://www.wpcharitable.com/';
+                        pot.headers['last-translator'] = 'WP-Translations (http://wp-translations.org/)';
+                        pot.headers['language-team'] = 'WP-Translations <wpt@wp-translations.org>';
+                        pot.headers['language'] = 'en_US';
+                        var translation, // Exclude meta data from pot.
+                            excluded_meta = [
+                                'Plugin Name of the plugin/theme',
+                                'Plugin URI of the plugin/theme',
+                                'Author of the plugin/theme',
+                                'Author URI of the plugin/theme'
+                            ];
+                            
+                            for ( translation in pot.translations[''] ) {
+                                if ( 'undefined' !== typeof pot.translations[''][ translation ].comments.extracted ) {
+                                    if ( excluded_meta.indexOf( pot.translations[''][ translation ].comments.extracted ) >= 0 ) {
+                                        console.log( 'Excluded meta: ' + pot.translations[''][ translation ].comments.extracted );
+                                            delete pot.translations[''][ translation ];
+                                    }
+                                }
+                            }
+
+                        return pot;
+                    }
                 }
             }
         },
 
         // build Palette stylesheet
         copy : {
+            main: {
+                src:  [
+                    '**',
+                    '!bin/**',
+                    '!composer.json',
+                    '!composer.lock', 
+                    '!phpunit.xml',
+                    '!node_modules/**',
+                    '!build/**',
+                    '!.git/**',
+                    '!Gruntfile.js',
+                    '!package.json',
+                    '!.gitignore',
+                    '!tests/**',
+                    '!**/Gruntfile.js',
+                    '!**/package.json',
+                    '!**/README.md',
+                    '!**/*~', 
+                    '!css/**/*.map',
+                    '!css/**/_*.css',
+                    '!css/*.map',
+                    '!sass/**'                
+                ],
+                dest: 'build/<%= pkg.name %>/'
+            },
             classic : {
                 src: 'css/palettes/_classic.css', 
                 dest: 'css/palettes/classic.css', 
@@ -221,11 +252,32 @@ module.exports = function(grunt) {
                     }
                 }
             }
-        }
+        },
+
+        // Clean up build directory
+        clean: {
+            main: ['build/<%= pkg.name %>']
+        },
+
+        //Compress build directory into <name>.zip and <name>-<version>.zip
+        compress: {
+            main: {
+                options: {
+                    mode: 'zip',
+                    archive: './build/<%= pkg.name %>-<%= pkg.version %>.zip'
+                },
+                expand: true,
+                cwd: 'build/<%= pkg.name %>/',
+                src: ['**/*'],
+                dest: '<%= pkg.name %>/'
+            }
+        },
     });
  
     // register task
     grunt.registerTask('default', ['watch']);
+    
     grunt.registerTask('buildPalettes', ['sass:palettes', 'copy:classic', 'copy:light', 'copy:dark', 'copy:franklin', 'copy:custom']);
-    grunt.registerTask('build', ['sass', 'concat', 'uglify', 'sync', 'jshint', 'makepot']);
+    
+    grunt.registerTask('build', ['sass:dist', 'jshint', 'makepot', 'clean', 'copy:main', 'compress' ]);
 };

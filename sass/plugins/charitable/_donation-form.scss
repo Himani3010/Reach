@@ -1,7 +1,14 @@
 #charitable-donation-form {  
+    @include padding( $size__margin-double );
+    @include background-color( $color__background-content );    
+
+    @include bp( 720 ) {
+        @include padding-left( $size__margin-triple );
+        @include padding-right( $size__margin-triple );
+    }
 
     .charitable-fieldset {
-        @include margin-bottom( 12 );
+        @include margin-bottom();
 
         &::before {
             display: none;
@@ -10,10 +17,11 @@
 
     .charitable-form-header {
         left: 0;
+        width: 100%;
         margin-top: 0;
         padding-left: 0;
         padding-right: 0;
-        @include font-size( 16 );
+        @include font-size( 16 );        
     }
 
     .set-donation-amount {
@@ -26,8 +34,8 @@
         .donation-amount {          
             width: 100%;
             position: relative;
-            @include padding( 12, 12, 12, 36 );
-            @include margin( 0, 12, 12, 0 );
+            @include padding( $size__margin, $size__margin, $size__margin, $size__margin-triple );
+            @include margin( 0, $size__margin, $size__margin, 0 );
             @include line-height( 18 );
             @include border-width( 2 );
             border-style: solid;
@@ -44,7 +52,6 @@
 
             .description {
                 display: block;
-                @include margin-top( 6 );
                 
                 &:empty {
                     display: none;
@@ -63,7 +70,7 @@
                 margin-left: 0;
 
                 .description {
-                    @include font-size( 12 );
+                    @include font-size();
                     font-family: $font__main;
                     letter-spacing: 0;
                     text-transform: none;
@@ -82,8 +89,8 @@
 
             input[type=radio] {
                 position: absolute;
-                @include top( 12 );
-                @include left( 12 );
+                @include top( $size__margin );
+                @include left( $size__margin );
             }
 
             @include bp (600) {
@@ -92,7 +99,7 @@
                 margin: {
                     top: 0;
                     right: 0;
-                    @include bottom( 12 );
+                    @include bottom( $size__margin );
                     left: 4%;
                 }
 
@@ -106,7 +113,7 @@
 
     #custom-donation-amount-field {
         width: 100%;
-        @include margin( 12, 0, 0 );
+        @include margin( $size__margin, 0, 0 );
 
         input {
             @include background-color( $color__background-content );
@@ -120,7 +127,7 @@
     .charitable-connected-downloads {   
         float: left;
         width: 100%;
-        @include margin-bottom( 24 );
+        @include margin-bottom( $size__margin-double );
         @include border;        
         border-radius: 0.4rem;
         @include background-color( $color__background-widget );     
@@ -128,7 +135,7 @@
 
     .charitable-edd-connected-download {
         position: relative;
-        @include padding( 24, 12, 24, 12 );
+        @include padding( $size__margin-double, $size__margin, $size__margin-double, $size__margin );
         @include border-bottom;     
         cursor: pointer;
 
@@ -138,10 +145,6 @@
 
         &.selected {
             @include background-color( $color__background-content );
-        }
-
-        @include bp( 800 ) {
-            // @include padding-left( 140 );
         }
     }
 
@@ -169,7 +172,7 @@
     }
 
     .charitable-edd-download-details {
-        @include padding-top( 12 );
+        @include padding-top( $size__margin );
 
         .download-title {
             margin-top: 0;
@@ -207,32 +210,47 @@
     }    
 }
 
+#charitable-user-fields {
+    border-top: none;
+}
+
+#charitable-user-fields, 
+#charitable-gateway-fields .charitable-gateway-fields {
+    position: relative;
+    @include fullwidth-calc( $size__margin-triple );
+    @include padding( $size__margin-double, $size__margin-triple );
+    @include background-color( $color__background-content-pop );    
+
+    select,
+    input {
+        @include background-color( $color__background-content );
+        @include border;
+    }
+}
+
+#charitable-gateway-selector {
+    @include padding( $size__margin, 0 );
+    margin-bottom: 0;
+}
+
 #charitable-gateway-fields {
     > label {
         font-weight: bold;
     }
 
-    #charitable-gateway-selector {
-        @include padding( 12, 0 );
+    .charitable-gateway-fields {
+        float: left;
     }
+}
 
-    #charitable_field_cc_cvc,
-    #charitable_field_cc_expiration {
-        width: auto;
-    }
+#charitable_field_cc_cvc {
+    @include max-width( 160 );
+    @include width( 160 );
+}
 
-    .charitable-form-fields {
-        @include padding( 12 );
-        @include border;
-        border-radius: 0.4rem;
-        @include background-color( $color__background-meta );
-     
-        select,
-        input {
-            @include background-color( $color__background-content );
-            @include border;
-        }
-    }
+#charitable_field_cc_expiration {
+    @include width( 200 );
+    margin-left: 0;
 }
 
 #custom-donation-amount-field.charitable-custom-donation-field-alone {    

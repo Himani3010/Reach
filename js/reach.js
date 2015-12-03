@@ -28,6 +28,8 @@
 
 		REACH.LeanModal.init();
 
+        REACH.SidebarPositioning.init();
+
 		if ( REACH_CROWDFUNDING ) {
 
 			REACH.Countdown.init();		
@@ -54,6 +56,8 @@
   		if ( REACH_CROWDFUNDING && $.fn.masonry ) {
   			REACH.Grid.resizeGrid();
   		}
+
+        REACH.SidebarPositioning.init();
   	});
 
   	$(window).load( function() {

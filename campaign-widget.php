@@ -14,7 +14,7 @@ if ( have_posts() ) :
         $campaign = new Charitable_Campaign( get_post() );
 
         ?>
-        <div class="campaign block entry-block cf" style="width: 275px;">
+        <div class="campaign-widget campaign block cf" style="width: 275px;">
             <?php
             
             /**

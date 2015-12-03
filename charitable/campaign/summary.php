@@ -14,8 +14,26 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 $campaign = $view_args[ 'campaign' ];
 
+$classes = "campaign-summary current-campaign feature-block cf";
+
+if ( ! reach_campaign_has_media( $campaign->ID ) ) {
+    $classes .= " no-media";
+}
+
+if ( $campaign->has_ended() ) {
+    $classes .= " campaign-ended";
+}
+
+if ( 0 < $campaign->get( 'end_date' ) ) {
+    $classes .= " campaign-has-countdown";
+}
+
+if ( $campaign->has_goal() ) {
+    $classes .= " campaign-has-goal";
+}
+
 ?>
-<section class="campaign-summary current-campaign feature-block cf <?php if ( $campaign->has_ended() ) : ?>ended<?php endif ?>">
+<section class="<?php echo $classes ?>">
     <div class="shadow-wrapper">
         <div class="layout-wrapper">
             <?php 

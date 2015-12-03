@@ -22,7 +22,7 @@
 <body <?php body_class( 'stripped' ); ?>>
 	<div id="page" class="hfeed site-container">		
 		<div class="body-wrapper">
-			<header id="header" class="cf wrapper site-header" role="banner">
+			<header id="header" class="cf site-header" role="banner">
 				<div class="site-branding site-identity">
 					<?php reach_site_identity() ?>
 				</div><!-- .site-branding -->				

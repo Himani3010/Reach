@@ -3,12 +3,11 @@
 	margin: {
 		top: 0;
 		right: auto;
-		@include bottom( 24 );
+		@include bottom( $size__margin-double );
 		left: auto;
 	}
 	text-transform: uppercase;
-	@include font-size( 12 );
-	@include line-height( 44 );
+	@include font-size();
 	font-weight: 300;
 	text-align: center;
 
@@ -20,8 +19,8 @@
 	.button.button-alt {
 		display: inline-block;	
 		max-width: 100%;
-		@include margin( 10, 0, 10, 8 );		
-		@include padding-left( 24 );		
+		@include margin( $size__margin, 0, $size__margin, $size__margin - 4 ); // Negative left margin makes up for extra margin added by inline-block
+		@include padding-left( $size__margin-double );		
 		@include color( $color__text-overlay );
 		text-decoration: none;
 
@@ -48,13 +47,14 @@
 }
 
 .logout {
-	position: absolute;
-	@include right( 36 );
+	float: right;
 	top: 0;
 	display: inline-block;
+	@include padding-top( $size__margin );
+	@include line-height( 32 );
 
 	&::before {
-		@include top( 16 );
+		@include top( 23 );
 	}
 
 	&:hover {
@@ -62,8 +62,6 @@
 	}
 
 	@include bp( 600 ) {
-		position: relative;
-		right: 0;
-		@include margin-left( 12 );
+		@include margin-left( $size__margin );
 	}
 }

@@ -1,0 +1,21 @@
+.widget.widget_charitable_campaigns_widget {
+    .campaigns,
+    .campaign, 
+    .campaign .campaign-title, 
+    .campaign .wp-post-image {
+        margin-bottom: 0;
+    }    
+
+    .campaign-time-left {
+        @include margin-top( $size__margin-half );
+    }
+
+    .campaign:first-of-type {
+        padding-top: 0;
+    }
+
+    .campaign:last-of-type {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+}

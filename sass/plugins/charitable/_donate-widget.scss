@@ -1,8 +1,9 @@
 .widget.widget_charitable_donate_widget {
     @include transparent-widget();
     
-    #charitable-donation-form {
-        padding-top: 0;
+    #charitable-donation-form.charitable-form {
+        padding: 0;
+        background-color: transparent;
     
         .donation-amounts {
             margin-bottom: 0;

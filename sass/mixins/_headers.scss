@@ -1,6 +1,6 @@
 @mixin baseline-header() {
-    @include margin-bottom( 12 );
-    @include padding-bottom( 4 );
+    @include margin-bottom( $size__margin );
+    @include padding-bottom( 5 );
     @include border-bottom;
 
     &:hover,

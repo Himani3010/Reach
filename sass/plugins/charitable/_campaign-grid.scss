@@ -2,7 +2,12 @@
 	position: relative;
 	float: left;
 	width: 100%;
-	@include padding( 0, 0, 12 );
+	@include padding( 0, $size__margin-double, $size__margin, $size__margin-double );
+
+	@include bp( 800 ) {
+		padding-right: 0;
+		padding-left: 0;
+	}	
 
 	.section-title {
 		margin-top: 0;
@@ -10,7 +15,7 @@
 
 	.campaign.block {
 		max-width: 100%;
-		@include margin-bottom( 24 );
+		@include margin-bottom( $size__margin-double );
 		border: none;	
 		overflow: hidden;
 	}
@@ -19,14 +24,14 @@
 .campaigns-grid {	
 	.campaign {		
 		max-width: 100%;
-		@include margin-bottom( 24 );
+		@include margin-bottom( $size__margin-double );
 		border: none;
 		@include color( $color__border-primary ); // box-shadow will fall back to using this as the colour
 		box-shadow: 0 0 0 1px;
 	}	
 
 	.campaign-image {
-		@include fullwidth-wrapper( 12, 12 );
+		@include fullwidth-wrapper( $size__margin, $size__margin );
 		a {
 			display: block;
 			line-height: 0;
@@ -50,14 +55,14 @@
 	.campaign-stats, 
 	.meta {
 		position: relative;
-		@include fullwidth_calc( 24 );	
+		@include fullwidth-calc( $size__margin-double );	
 		@include bp( 600 ) {
-			@include fullwidth_calc( 12 );
+			@include fullwidth-calc( $size__margin );
 		}
 	}
 
 	.campaign-stats {		
-		@include padding( 6, 0 );
+		@include padding( $size__margin-half, 0 );
 		margin: 0;
 		@include border-top( 1 );
 		@include color( $color__text );
@@ -67,15 +72,15 @@
 		li {
 			position: relative;
 			display: inline-block;
-			@include padding( 0, 6, 0, 10 );
+			@include padding( 0, 7, 0, 11 );
 			margin: 0;
 			@include border-left( 1 );			
-			@include font-size ( 10 );
+			@include font-size ( $font__font-size-small );
 			font-style: italic;		
 			span {
 				display: block;
 				@include padding-top( 2 );				
-				@include font-size( 14 );
+				@include font-size( $font__font-size );
 				@include color( $color__accent );
 				font-family: $font__secondary;
 				font-style: normal;
@@ -97,7 +102,7 @@
 			width: 48%;
 			margin-right: 1.9%;
 			border: none !important;
-			@include padding( 0, 12 );
+			@include padding( 0, $size__margin );
 
 			&:nth-child(2n+2) {
 				margin-right: 0;
@@ -143,6 +148,6 @@
 	text-align: right;
 
 	&.is-active .menu {
-		@include margin-top( 12 );
+		@include margin-top( $size__margin );
 	}
 }

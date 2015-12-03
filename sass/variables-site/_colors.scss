@@ -4,9 +4,10 @@ $color__background-wrapper: 	#f5f5f6 !default;
 $color__background-screen: 		#f5f5f6 !default;
 $color__background-widget: 		#ffffff !default;
 $color__background-content: 	#ffffff !default;
+$color__background-content-pop: #f9f9fa !default;
 $color__background-button: 		#70777c !default;
 $color__background-meta: 		#ffffff !default;
-$color__background-blockquote: 	#ffffff !default;
+$color__background-blockquote: 	#f9f9fa !default;
 $color__background-th: 			#ffffff !default;
 $color__background-form-fields: #f5f5f6 !default;
 
@@ -24,6 +25,7 @@ $color__text-meta:				#b6bbbd !default;
 /* Borders */
 $color__border-primary: 		#e3e5e6 !default; 
 $color__border-secondary: 		#dadcde !default; 
+$color__border-input:           #ececee !default;
 
 /* Miscellaneous */
 $color__success: 				#1ba714 !default;

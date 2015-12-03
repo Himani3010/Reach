@@ -1,7 +1,7 @@
 ul, 
 ol, 
 dd {
-	@include margin( 0, 0, 12 );
+	@include margin( 0, 0, $size__margin );
 }
 
 ul, 
@@ -10,12 +10,12 @@ ol {
 
 	ul, 
 	ol {
-		@include margin( 6, 0, 0, 20 );
+		@include margin( $size__margin-half, 0, 0, 20 );
 	}
 }
 
 li {
-	@include margin-bottom( 6 );
+	@include margin-bottom( $size__margin-half );
 }
 
 ul {

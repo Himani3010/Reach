@@ -3,11 +3,11 @@
         padding-top: 0;
         padding-bottom: 0;
         @include font-size( 30 );
-        @include line-height( 45 );
+        @include line-height( 52 );
         @include background-color( $color__background-content ); 
     }
 
     cite {
-        @include margin-top( 12 );
+        @include margin-top( $size__margin );
     }
 }

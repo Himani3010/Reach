@@ -23,19 +23,31 @@ if ( ! comments_open() ) return; ?>
 			?>
 
 			<?php $req = get_option( 'require_name_email' ) ?>
-			<?php comment_form( array( 
-				'comment_notes_after'	=> '<p class="comment-notes">' 
-											. ( $req ? __( ' Required fields are marked *', 'reach' ) : '' ) 
-											. '<br />'
-											. __( 'Your email address will not be published.', 'reach' )
-											. '</p>'
-											. '<p class="form-allowed-tags">' . sprintf( __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s' ), ' <code>' . allowed_tags() . '</code>' ) . '</p>',
-				'comment_field'			=> '', 
-				'fields'				=> reach_comment_form_field_comment() . reach_comment_form_default_fields(''),
-				'title_reply'			=> '', 
-				'cancel_reply_link'		=> ' ',
-				'label_submit'			=> _x( 'Submit', 'post comment', 'reach' )
-			) ) ?>
+			<?php 
+			// comment_form( array( 
+			// 	'comment_notes_after'	=> '<p class="comment-notes">' 
+			// 								. ( $req ? __( ' Required fields are marked *', 'reach' ) : '' ) 
+			// 								. '<br />'
+			// 								. __( 'Your email address will not be published.', 'reach' )
+			// 								. '</p>'
+			// 								. '<p class="form-allowed-tags">' . sprintf( __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s' ), ' <code>' . allowed_tags() . '</code>' ) . '</p>',
+			// 	'comment_field'			=> '', 
+			// 	'fields'				=> reach_comment_form_field_comment() . reach_comment_form_default_fields(''),
+			// 	'title_reply'			=> '', 
+			// 	'cancel_reply_link'		=> ' ',
+			// 	'label_submit'			=> _x( 'Submit', 'post comment', 'reach' )
+			// ) ) 
+
+			comment_form( array(
+				'comment_field' => reach_comment_form_field_comment(), 
+				'title_reply'	=> ''
+			) );
+			// comment_form( array(
+			// 	// 'fields' => reach_comment_form_field_comment() . reach_comment_form_default_fields(''),
+			// 	// 'comment_field' => '', 
+			// 	'title_reply' => ''
+			// ) );
+			?>
 		</div>
 
 		<?php if ( have_comments() ) : ?>

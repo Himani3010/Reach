@@ -1,6 +1,6 @@
 .post-title {
 	@include baseline-header();
-	@include margin( 24, 0, 12 );	
+	margin-bottom: 0;
 	text-align: center;
 	word-break: break-word;
 
@@ -9,14 +9,24 @@
 	}
 }
 
-.banner {
-	@include fullwidth-wrapper-padded();
+.banner {	
+	width: 100vw;
 	@include min-height( 100 );
 	@include padding( 35, 0 );
-	@include margin( -36, 0, 36 );
 	@include background-color( $color__accent );
 	@include color( $color__text-overlay );
 	text-align: center;
+
+	@include bp( 800 ) {
+		position: relative;
+		@include left( -$size__margin-triple );
+		@include margin-bottom( $size__margin-triple );
+	}
+}
+
+.blog .banner, 
+.archive .banner {
+	@include margin-bottom( $size__margin-triple );
 }
 
 .banner-title {
@@ -27,44 +37,59 @@
 }
 
 .banner-subtitle {
-	@include margin( 12, 0, 0 );
+	@include margin( $size__margin, 0, 0 );
 	font-style: italic;
 	letter-spacing: 0;
 	text-transform: none;
 }
 
 .sticky {
-	@include color( $color__text-overlay );
-	@include background-color( $color__accent );
-	@include border( 1, $color__text-overlay );
+
+	// @include color( $color__text-overlay );
+	// @include background-color( $color__accent );
+	// border-color: $color__text-overlay;
 	
-	a {
-		@include color( $color__text-overlay );
-	}
+	// a {
+	// 	@include color( $color__text-overlay );
+	// }
 
-	.post-title {
-		@include border-color( $color__accent-hover );
-	}
+	// .post-title {
+	// 	@include border-color( $color__accent-hover );
+	// }
 	
-	.entry a {
-		text-decoration: underline;
-	}
+	// .entry a {
+	// 	text-decoration: underline;
+	// }
 
-	.entry .more-link {		
-		@include border-color( $color__text-overlay );
-		text-decoration: none;
+	// .entry .more-link {		
+	// 	@include border-color( $color__text-overlay );
+	// 	text-decoration: none;
 
-		&:hover,
-		&:focus,
-		&:active {
-			@include background-color( $color__background-button );
-			@include border-color( $color__background-button );
+	// 	&:hover,
+	// 	&:focus,
+	// 	&:active {
+	// 		@include background-color( $color__background-button );
+	// 		@include border-color( $color__background-button );
+	// 	}
+	// }
+}
+
+.entry-block {
+	.fit-video, 
+	blockquote {
+		position: relative;
+		@include fullwidth-calc( $size__margin-double );
+
+		@include bp( 800 ) {
+			@include fullwidth-calc( $size__margin-triple );
 		}
 	}
 }
 
 .entry {
-	@include padding( 24, 0, 12 );	
+	@include font-size( $font__font-size-big );
+	@include line-height( $font__line-height-big );
+	@include padding( $size__margin-double, 0, $size__margin );	
 
 	> *:first-child {
 		margin-top: 0;
@@ -77,10 +102,6 @@
 	h5 {
 		text-transform: none;
 		letter-spacing: 0;
-	}
-
-	blockquote {
-		@include fullwidth-wrapper();		
 	}	
 }
 
@@ -88,7 +109,7 @@
 	@include fullwidth-wrapper();
 	padding: 0;	
 	margin: 0;
-	@include font-size( 10 );
+	@include font-size( $font__font-size-small );
 	@include line-height( 38 );
 	@include letter-spacing( 1 );
 	font-weight: 300;	
@@ -100,14 +121,14 @@
 	}
 
 	span {
-		@include padding( 12, 0 );
+		@include padding( $size__margin - 4, 0 );
 	}
 
 	.with-icon {
-		@include padding-left( 14 );
+		@include padding-left( 18 );
 
 		&::before {
-			@include top( 14 );
+			@include top( 13 );
 		}
 	}
 
@@ -118,14 +139,14 @@
 	.author, 
 	.comment-count, 
 	.tags {
-		@include margin-left( 6 );
+		@include margin-left( $size__margin-half );
 		@include padding-left( 10 );
 		@include border-left( 1 );
 	}
 
 	@include bp( 600 ) {
-		font-size: 1.1rem;
-		line-height: 4rem;
+		@include font-size( $font__font-size-small );
+		@include line-height( 44 );
 	}
 }
 
@@ -143,7 +164,7 @@
 }
 
 .archive-title {
-	@include margin( 0, 0, 36 );
+	@include margin( 0, 0, $size__margin-triple );
 	text-align: center;	
 	text-transform: none;
 	letter-spacing: 0;
@@ -151,7 +172,7 @@
 
 .post-password-required {
 	label {
-		@include margin-bottom( 6 );
+		@include margin-bottom( $size__margin-half );
 
 		input {
 			max-width: 100%;
@@ -162,8 +183,8 @@
 }
 
 .lead {
-	@include margin-bottom( 12 );
-	@include font-size( 16 );
+	@include margin-bottom( $size__margin );
+	@include font-size( $font__font-size-big );
 	@include line-height( 26 );
 }
 

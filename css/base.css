@@ -257,8 +257,8 @@ a img {
 
 .with-icon {
   position: relative;
-  padding-left: 14px;
-  padding-left: 1.4rem; }
+  padding-left: 16px;
+  padding-left: 1.6rem; }
   .with-icon::before {
     position: absolute;
     left: 0;
@@ -269,10 +269,10 @@ a img {
   text-decoration: none; }
 
 body {
-  font-size: 12px;
-  font-size: 1.2rem;
-  line-height: 20px;
-  line-height: 2rem; }
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 24px;
+  line-height: 2.4rem; }
 
 body,
 input,
@@ -318,49 +318,50 @@ th,
 .donation-amounts .amount,
 .donation-amounts .custom-donation-amount,
 .widget.widget_charitable_donation_stats_widget .figure,
-.campaign-finished {
+.campaign-finished,
+.download-price {
   font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
   letter-spacing: 0.2rem; }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 24px 0px 12px;
-  margin: 2.4rem 0rem 1.2rem; }
+  margin: 28px 0px 14px;
+  margin: 2.8rem 0rem 1.4rem; }
 
 h1 {
-  font-size: 30px;
-  font-size: 3rem;
+  font-size: 34px;
+  font-size: 3.4rem;
   line-height: 38px;
   line-height: 3.8rem; }
 
 h2 {
-  font-size: 25px;
-  font-size: 2.5rem;
+  font-size: 26px;
+  font-size: 2.6rem;
   line-height: 34px;
   line-height: 3.4rem; }
 
 h3 {
-  font-size: 20px;
-  font-size: 2rem;
+  font-size: 22px;
+  font-size: 2.2rem;
   line-height: 30px;
   line-height: 3rem; }
 
 h4 {
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 20px;
+  font-size: 2rem;
   line-height: 28px;
   line-height: 2.8rem; }
 
 h5 {
-  font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 22px;
   line-height: 2.2rem; }
 
 h6 {
-  font-size: 12px;
-  font-size: 1.2rem;
+  font-size: 14px;
+  font-size: 1.4rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   letter-spacing: 0.2rem; }
@@ -378,8 +379,8 @@ h6 {
     padding: 0rem 1.2rem; }
 
 p {
-  padding-bottom: 12px;
-  padding-bottom: 1.2rem; }
+  padding-bottom: 14px;
+  padding-bottom: 1.4rem; }
 
 p:focus {
   outline: none; }
@@ -394,22 +395,22 @@ blockquote {
   position: relative;
   left: 0;
   width: 100%;
-  padding: 24px;
-  padding: 2.4rem;
-  margin: 0px 0px 12px;
-  margin: 0rem 0rem 1.2rem;
-  font-size: 14px;
-  font-size: 1.4rem;
-  line-height: 21px;
-  line-height: 2.1rem; }
+  padding: 28px;
+  padding: 2.8rem;
+  margin: 0px 0px 14px;
+  margin: 0rem 0rem 1.4rem;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 28px;
+  line-height: 2.8rem; }
   blockquote p:last-child {
     padding-bottom: 0; }
   blockquote cite {
     display: block;
-    margin: 24px 0px 0px;
-    margin: 2.4rem 0rem 0rem;
-    font-size: 12px;
-    font-size: 1.2rem;
+    margin: 28px 0px 0px;
+    margin: 2.8rem 0rem 0rem;
+    font-size: 14px;
+    font-size: 1.4rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     letter-spacing: 0.2rem;
@@ -422,10 +423,10 @@ address {
 
 pre {
   max-width: 100%;
-  padding: 12px;
-  padding: 1.2rem;
-  margin: 0px 0px 12px;
-  margin: 0rem 0rem 1.2rem;
+  padding: 14px;
+  padding: 1.4rem;
+  margin: 0px 0px 14px;
+  margin: 0rem 0rem 1.4rem;
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -466,10 +467,12 @@ sub {
   top: .5ex; }
 
 small {
-  font-size: 90%; }
+  font-size: 12px;
+  font-size: 1.2rem; }
 
 big {
-  font-size: 120%; }
+  font-size: 16px;
+  font-size: 1.6rem; }
 
 /*--------------------------------------------------------------
 3.0 Elements
@@ -483,8 +486,8 @@ hr {
 ul,
 ol,
 dd {
-  margin: 0px 0px 12px;
-  margin: 0rem 0rem 1.2rem; }
+  margin: 0px 0px 14px;
+  margin: 0rem 0rem 1.4rem; }
 
 ul,
 ol {
@@ -494,12 +497,12 @@ ol {
   ul ol,
   ol ul,
   ol ol {
-    margin: 6px 0px 0px 20px;
-    margin: 0.6rem 0rem 0rem 2rem; }
+    margin: 7px 0px 0px 20px;
+    margin: 0.7rem 0rem 0rem 2rem; }
 
 li {
-  margin-bottom: 6px;
-  margin-bottom: 0.6rem; }
+  margin-bottom: 7px;
+  margin-bottom: 0.7rem; }
 
 ul {
   list-style: disc; }
@@ -542,14 +545,14 @@ table {
   table caption {
     padding: 4px 0px;
     padding: 0.4rem 0rem;
-    font-size: 12px;
-    font-size: 1.2rem;
+    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 400; }
 
 th,
 td {
-  padding: 6px 10px;
-  padding: 0.6rem 1rem;
+  padding: 7px 10px;
+  padding: 0.7rem 1rem;
   border-style: solid;
   vertical-align: top; }
 
@@ -656,10 +659,10 @@ input[type="submit"] {
   input[type="button"].button-large,
   input[type="reset"].button-large,
   input[type="submit"].button-large {
-    padding-top: 12px;
-    padding-top: 1.2rem;
-    padding-bottom: 12px;
-    padding-bottom: 1.2rem;
+    padding-top: 14px;
+    padding-top: 1.4rem;
+    padding-bottom: 14px;
+    padding-bottom: 1.4rem;
     font-size: 25px;
     font-size: 2.5rem; }
   button:hover, button:active, button:focus,
@@ -704,13 +707,15 @@ textarea {
   max-width: 300px;
   max-width: 30rem;
   width: 100%;
-  padding: 11px 10px;
-  padding: 1.1rem 1rem;
+  padding: 14px 10px;
+  padding: 1.4rem 1rem;
   margin-top: 0;
-  border: none;
+  border-width: 1px;
+  border-width: 0.1rem;
+  border-style: solid;
   border-radius: 0.2rem;
-  font-size: 11px;
-  font-size: 1.1rem;
+  font-size: 14px;
+  font-size: 1.4rem;
   box-shadow: none;
   /* Default settings */
   -webkit-transition: background-color 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
@@ -736,9 +741,11 @@ select {
   width: 100%;
   max-width: 300px;
   max-width: 30rem;
-  padding: 11px 10px;
-  padding: 1.1rem 1rem;
-  border: none;
+  padding: 14px 10px;
+  padding: 1.4rem 1rem;
+  border-width: 1px;
+  border-width: 0.1rem;
+  border-style: solid;
   border-radius: 0.2rem; }
 
 .chrome input[type=file],
@@ -750,14 +757,12 @@ select {
 
 label {
   display: block;
-  padding: 8px 0px 0px;
-  padding: 0.8rem 0rem 0rem;
-  line-height: 22px;
-  line-height: 2.2rem; }
+  padding: 14px 0px 0px;
+  padding: 1.4rem 0rem 0rem; }
 
 legend {
-  padding-bottom: 6px;
-  padding-bottom: 0.6rem;
+  padding-bottom: 7px;
+  padding-bottom: 0.7rem;
   border-bottom-width: 1px;
   border-bottom-width: 0.1rem;
   border-bottom-style: solid;
@@ -807,13 +812,14 @@ a {
     letter-spacing: 0.1rem;
     text-transform: uppercase;
     text-align: left;
-    text-indent: 4%; }
+    text-indent: 28px;
+    text-indent: 2.8rem; }
     .menu-site li.hovering, .menu-site li.hovering li {
       height: auto; }
   .menu-site a {
     display: block;
-    padding: 12px 0px;
-    padding: 1.2rem 0rem;
+    padding: 14px 0px;
+    padding: 1.4rem 0rem;
     text-decoration: none;
     font-weight: 400; }
   @media (min-width: 50em) {
@@ -824,8 +830,8 @@ a {
       width: 20rem;
       margin: 5px 0px 0px 0px;
       margin: 0.5rem 0rem 0rem 0rem;
-      padding: 6px 0px;
-      padding: 0.6rem 0rem;
+      padding: 7px 0px;
+      padding: 0.7rem 0rem;
       z-index: 100;
       border-width: 2px;
       border-width: 0.2rem;
@@ -857,12 +863,15 @@ a {
       position: relative;
       z-index: 50;
       display: inline-block;
-      padding: 0.6rem;
-      border: 0.2rem solid transparent;
+      padding: 7px;
+      padding: 0.7rem;
+      border-width: 2px;
       border-width: 0.2rem;
+      border-style: solid;
       border-radius: 0.4rem;
+      font-size: 13px;
       font-size: 1.3rem;
-      line-height: 1.3rem;
+      line-height: 1em;
       text-align: center; }
     .menu-site .menu-item-has-children > a:after {
       font-family: 'reach-icons';
@@ -879,11 +888,10 @@ a {
 
 .toggled .menu-site {
   position: relative;
-  left: -36px;
-  left: -3.6rem;
-  width: -webkit-calc( 100% + 72px );
-  width: -moz-calc( 100% + 72px );
-  width: calc( 100% + 72px );
+  left: -28px;
+  width: -webkit-calc( 100% + 56px );
+  width: -moz-calc( 100% + 56px );
+  width: calc( 100% + 56px );
   height: auto;
   max-height: 10000px;
   border-top-width: 2px;
@@ -896,9 +904,11 @@ a {
     border-top-width: 0.1rem;
     border-top-style: solid; }
   .toggled .menu-site li li {
-    text-indent: 8%; }
+    text-indent: 42px;
+    text-indent: 4.2rem; }
     .toggled .menu-site li li li {
-      text-indent: 12%; }
+      text-indent: 56px;
+      text-indent: 5.6rem; }
     .toggled .menu-site li li:last-child {
       padding-bottom: 0;
       border: none; }
@@ -926,8 +936,8 @@ a {
     position: absolute;
     z-index: 600;
     right: 0;
-    top: 36px;
-    top: 3.6rem;
+    top: 42px;
+    top: 4.2rem;
     line-height: 38px;
     line-height: 3.8rem; }
     .site-navigation .menu-button:before {
@@ -963,9 +973,11 @@ a {
         .site-navigation .menu-site li {
           text-indent: 0; }
         .site-navigation .menu-site > li {
-          padding: 0px 0px 12px 12px;
-          padding: 0rem 0rem 1.2rem 1.2rem;
+          padding: 0px 0px 14px 14px;
+          padding: 0rem 0rem 1.4rem 1.4rem;
           border: none; }
+          .site-navigation .menu-site > li:last-child a {
+            padding-right: 0; }
         .site-navigation .menu-site > li.hovering:last-child ul {
           right: -18px;
           right: -1.8rem;
@@ -985,15 +997,18 @@ a {
 
 @media (min-width: 50em) {
   .no-tagline .site-navigation .menu-site {
-    margin-top: 1.2rem; }
+    margin-top: 14px;
+    margin-top: 1.4rem; }
 
   .no-title .site-navigation .menu-site {
     margin-top: 0; }
     .no-title .site-navigation .menu-site li {
+      padding-top: 7px;
       padding-top: 0.7rem; }
 
   .no-tagline.no-title .site-navigation .menu-site ul {
-    margin-top: 0.8rem; }
+    margin-top: 7px;
+    margin-top: 0.7rem; }
     .no-tagline.no-title .site-navigation .menu-site ul ul {
       margin-top: 0; } }
 /*--------------------------------------------------------------
@@ -1063,21 +1078,21 @@ a {
 
 .alignleft {
   float: left;
-  margin: 0px 10px 12px 0px;
-  margin: 0rem 1rem 1.2rem 0rem; }
+  margin: 0px 14px 14px 0px;
+  margin: 0rem 1.4rem 1.4rem 0rem; }
 
 .alignright {
   float: right;
-  margin: 0px 0px 12px 10px;
-  margin: 0rem 0rem 1.2rem 1rem; }
+  margin: 0px 0px 14px 14px;
+  margin: 0rem 0rem 1.4rem 1.4rem; }
 
 .aligncenter {
   display: block;
   margin: 0 auto;
-  margin-top: 12px;
-  margin-top: 1.2rem;
-  margin-bottom: 12px;
-  margin-bottom: 1.2rem;
+  margin-top: 14px;
+  margin-top: 1.4rem;
+  margin-bottom: 14px;
+  margin-bottom: 1.4rem;
   clear: both;
   text-align: center; }
 
@@ -1257,8 +1272,8 @@ a {
 --------------------------------------------------------------*/
 /* Various re-usable styled blocks */
 .block {
-  margin-bottom: 36px;
-  margin-bottom: 3.6rem;
+  margin-bottom: 42px;
+  margin-bottom: 4.2rem;
   border-width: 1px;
   border-width: 0.1rem;
   border-style: solid;
@@ -1266,76 +1281,92 @@ a {
 
 .entry-block {
   position: relative;
-  padding: 0px 24px;
-  padding: 0rem 2.4rem;
-  box-shadow: 0 0 1px #ffffff;
-  overflow-x: hidden; }
+  padding: 14px 28px 0px;
+  padding: 1.4rem 2.8rem 0rem;
+  overflow-x: hidden;
+  border-width: 0px 0px 1px 0px;
+  border-width: 0rem 0rem 0.1rem 0rem;
+  border-radius: 0; }
+  @media (min-width: 45em) {
+    .entry-block {
+      padding-left: 42px;
+      padding-left: 4.2rem;
+      padding-right: 42px;
+      padding-right: 4.2rem; } }
   @media (min-width: 50em) {
     .entry-block {
-      padding-left: 36px;
-      padding-left: 3.6rem;
-      padding-right: 36px;
-      padding-right: 3.6rem; } }
+      border-width: 1px;
+      border-width: 0.1rem;
+      box-shadow: 0 0 1px #ffffff;
+      border-radius: 0.4rem; } }
+
+.has-post-thumbnail .entry-block,
+.format-video .entry-block,
+.blog .entry-block,
+.archive .entry-block {
+  padding-top: 0; }
+
+.blog .entry-block,
+.archive .entry-block {
+  border-top-width: 1px;
+  border-top-width: 0.1rem; }
 
 .content-block {
-  padding: 0px 24px 24px;
-  padding: 0rem 2.4rem 2.4rem; }
+  padding: 0px 28px 28px;
+  padding: 0rem 2.8rem 2.8rem; }
   @media (min-width: 50em) {
     .content-block {
-      padding: 0px 36px 24px;
-      padding: 0rem 3.6rem 2.4rem; } }
+      padding: 0px 42px 28px;
+      padding: 0rem 4.2rem 2.8rem; } }
 
-.multi-block .content-block:first-of-type {
-  border-radius: 0.4rem 0.4rem 0 0; }
-.multi-block .content-block:nth-of-type(1n+2) {
+.multi-block .content-block {
   border-top-width: 1px;
   border-top-width: 0.1rem;
   border-top-style: solid; }
-.multi-block .content-block:last-of-type {
-  border-radius: 0 0 0.4rem 0.4rem; }
+  .multi-block .content-block:first-of-type {
+    border-top: none; }
+  @media (min-width: 50em) {
+    .multi-block .content-block:first-of-type {
+      border-radius: 0.4rem 0.4rem 0 0; }
+    .multi-block .content-block:last-of-type {
+      border-radius: 0 0 0.4rem 0.4rem; }
+    .multi-block .content-block:first-of-type:last-of-type {
+      border-radius: 0.4rem; } }
 
 .layout-boxed .feature-block {
-  position: relative;
-  left: -24px;
-  width: -webkit-calc( 100% + 48px );
-  width: -moz-calc( 100% + 48px );
-  width: calc( 100% + 48px ); }
+  position: relative; }
   @media (min-width: 50em) {
     .layout-boxed .feature-block {
-      left: -45px;
-      width: -webkit-calc( 100% + 90px );
-      width: -moz-calc( 100% + 90px );
-      width: calc( 100% + 90px ); } }
+      left: -51px;
+      width: -webkit-calc( 100% + 102px );
+      width: -moz-calc( 100% + 102px );
+      width: calc( 100% + 102px ); } }
 
 .feature-block {
   position: relative;
-  left: -24px;
-  width: -webkit-calc( 100% + 48px );
-  width: -moz-calc( 100% + 48px );
-  width: calc( 100% + 48px );
-  padding: 0px 24px 36px 24px;
-  padding: 0rem 2.4rem 3.6rem 2.4rem;
+  padding: 0px 28px 42px 28px;
+  padding: 0rem 2.8rem 4.2rem 2.8rem;
   background-repeat: repeat;
   box-shadow: none;
   border: none; }
   @media (min-width: 50em) {
     .feature-block {
-      left: -36px;
-      width: -webkit-calc( 100% + 72px );
-      width: -moz-calc( 100% + 72px );
-      width: calc( 100% + 72px ); } }
+      left: -42px;
+      width: -webkit-calc( 100% + 84px );
+      width: -moz-calc( 100% + 84px );
+      width: calc( 100% + 84px ); } }
   @media (min-width: 50em) {
     .feature-block {
-      padding-left: 36px;
-      padding-left: 3.6rem;
-      padding-right: 36px;
-      padding-right: 3.6rem; } }
+      padding-left: 42px;
+      padding-left: 4.2rem;
+      padding-right: 42px;
+      padding-right: 4.2rem; } }
 
 .block-title {
-  margin-bottom: 12px;
-  margin-bottom: 1.2rem;
-  padding-bottom: 4px;
-  padding-bottom: 0.4rem;
+  margin-bottom: 14px;
+  margin-bottom: 1.4rem;
+  padding-bottom: 5px;
+  padding-bottom: 0.5rem;
   border-bottom-width: 2px;
   border-bottom-width: 0.2rem;
   border-bottom-style: solid; }
@@ -1344,8 +1375,8 @@ a {
     text-decoration: none; }
 
 .block-title.with-icon {
-  padding-left: 28px;
-  padding-left: 2.8rem; }
+  padding-left: 32px;
+  padding-left: 3.2rem; }
 
 /*-------------------------------------------------------------- 
 13.0 Modals
@@ -1444,15 +1475,15 @@ a {
 --------------------------------------------------------------*/
 #page > .layout-wrapper,
 #header {
-  padding: 0px 24px;
-  padding: 0rem 2.4rem; }
+  padding: 0px 28px;
+  padding: 0rem 2.8rem; }
   @media (min-width: 50em) {
     #page > .layout-wrapper,
     #header {
-      padding-left: 36px;
-      padding-left: 3.6rem;
-      padding-right: 36px;
-      padding-right: 3.6rem; } }
+      padding-left: 42px;
+      padding-left: 4.2rem;
+      padding-right: 42px;
+      padding-right: 4.2rem; } }
 
 #page > .layout-wrapper {
   max-width: 1472px;
@@ -1461,15 +1492,15 @@ a {
 #header {
   position: relative;
   z-index: 50;
-  padding-top: 24px;
-  padding-top: 2.4rem; }
+  padding-top: 28px;
+  padding-top: 2.8rem; }
 
 .site-identity {
   position: relative;
   z-index: 500;
   float: left;
-  padding: 12px 20px 12px 0px;
-  padding: 1.2rem 2rem 1.2rem 0rem;
+  padding: 14px 28px 14px 0px;
+  padding: 1.4rem 2.8rem 1.4rem 0rem;
   text-transform: uppercase; }
 
 .home-link {
@@ -1491,11 +1522,11 @@ a {
     opacity: 0.9; }
 
 .site-tagline {
-  padding: 6px 0px;
-  padding: 0.6rem 0rem;
+  padding: 7px 0px;
+  padding: 0.7rem 0rem;
   margin: 0;
-  font-size: 13px;
-  font-size: 1.3rem;
+  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 1em;
   letter-spacing: 0; }
 
@@ -1503,14 +1534,15 @@ a {
 13.1 Social Networks
 --------------------------------------------------------------*/
 .social {
+  float: left;
   padding-left: 0;
-  margin: 12px 0px;
-  margin: 1.2rem 0rem;
+  margin: 14px 0px;
+  margin: 1.4rem 0rem;
   text-align: left; }
   .social li {
     display: inline-block;
-    margin: 0px 12px 0px 0px;
-    margin: 0rem 1.2rem 0rem 0rem; }
+    margin: 0px 14px 0px 0px;
+    margin: 0rem 1.4rem 0rem 0rem; }
   .social a:hover {
     text-decoration: none; }
   .social i {
@@ -1518,9 +1550,6 @@ a {
     font-size: 1.8rem;
     line-height: 32px;
     line-height: 3.2rem; }
-  @media (min-width: 37.5em) {
-    .social {
-      float: left; } }
   @media (min-width: 87.5em) {
     .social {
       padding-left: 0; } }
@@ -1532,23 +1561,21 @@ a {
   display: block;
   margin-top: 0;
   margin-right: auto;
-  margin-bottom: 24px;
-  margin-bottom: 2.4rem;
+  margin-bottom: 28px;
+  margin-bottom: 2.8rem;
   margin-left: auto;
   text-transform: uppercase;
-  font-size: 12px;
-  font-size: 1.2rem;
-  line-height: 44px;
-  line-height: 4.4rem;
+  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 300;
   text-align: center; }
   .account-links .button.button-alt {
     display: inline-block;
     max-width: 100%;
-    margin: 10px 0px 10px 8px;
-    margin: 1rem 0rem 1rem 0.8rem;
-    padding-left: 24px;
-    padding-left: 2.4rem;
+    margin: 14px 0px 14px 10px;
+    margin: 1.4rem 0rem 1.4rem 1rem;
+    padding-left: 28px;
+    padding-left: 2.8rem;
     text-decoration: none; }
     .account-links .button.button-alt::before {
       left: 10px;
@@ -1564,31 +1591,34 @@ a {
       width: auto; } }
 
 .logout {
-  position: absolute;
-  right: 36px;
-  right: 3.6rem;
+  float: right;
   top: 0;
-  display: inline-block; }
+  display: inline-block;
+  padding-top: 14px;
+  padding-top: 1.4rem;
+  line-height: 32px;
+  line-height: 3.2rem; }
   .logout::before {
-    top: 16px;
-    top: 1.6rem; }
+    top: 23px;
+    top: 2.3rem; }
   .logout:hover {
     text-decoration: none; }
   @media (min-width: 37.5em) {
     .logout {
-      position: relative;
-      right: 0;
-      margin-left: 12px;
-      margin-left: 1.2rem; } }
+      margin-left: 14px;
+      margin-left: 1.4rem; } }
 
 /*--------------------------------------------------------------
 14.0 Widgets
 --------------------------------------------------------------*/
+.sidebar .widget:last-of-type {
+  margin-bottom: 0; }
+
 .widget {
-  margin-bottom: 36px;
-  margin-bottom: 3.6rem;
-  padding: 0px 24px 12px;
-  padding: 0rem 2.4rem 1.2rem;
+  margin-bottom: 42px;
+  margin-bottom: 4.2rem;
+  padding: 28px;
+  padding: 2.8rem;
   border-width: 1px;
   border-width: 0.1rem;
   border-style: solid;
@@ -1612,8 +1642,8 @@ a {
     border-top-width: 0.1rem; }
 
 .widget-title {
-  margin: 12px 0px 24px;
-  margin: 1.2rem 0rem 2.4rem;
+  margin: 0px 0px 28px;
+  margin: 0rem 0rem 2.8rem;
   padding-bottom: 0;
   border-bottom-width: 2px;
   border-bottom-width: 0.2rem;
@@ -1622,7 +1652,8 @@ a {
   letter-spacing: 0.1rem; }
 
 .widget_calendar.widget {
-  padding: 0; }
+  padding: 28px 0px 0px;
+  padding: 2.8rem 0rem 0rem; }
   .widget_calendar.widget table {
     position: relative;
     width: 100%;
@@ -1658,12 +1689,11 @@ a {
   .widget_search.widget .search-field {
     max-width: 100%;
     margin: 0;
-    padding: 11px 40px 11px 10px;
-    padding: 1.1rem 4rem 1.1rem 1rem;
+    padding: 14px 40px 14px 10px;
+    padding: 1.4rem 4rem 1.4rem 1rem;
     border-bottom-width: 2px;
     border-bottom-width: 0.2rem;
-    border-bottom-style: solid;
-    background-color: transparent; }
+    border-bottom-style: solid; }
   .widget_search.widget .search-submit {
     position: absolute;
     bottom: 6px;
@@ -1697,8 +1727,8 @@ a {
         width: 119rem; } }
   @media (min-width: 74.375em) {
     .layout-boxed .social {
-      padding-left: 45px;
-      padding-left: 4.5rem; } }
+      padding-left: 51px;
+      padding-left: 5.1rem; } }
   .layout-boxed .body-wrapper {
     border-radius: 0.4rem 0.4rem 0 0; }
     @media (min-width: 74.375em) {
@@ -1710,12 +1740,12 @@ a {
   .layout-boxed #main {
     border-radius: 0 0 0.4rem 0.4rem; }
   .layout-boxed .site-navigation .menu-button {
-    right: 24px;
-    right: 2.4rem; }
+    right: 28px;
+    right: 2.8rem; }
   @media (min-width: 50em) {
     .layout-boxed .site-navigation {
-      padding-right: 36px;
-      padding-right: 3.6rem; } }
+      padding-right: 42px;
+      padding-right: 4.2rem; } }
   @media (min-width: 50em) {
     .layout-boxed .shadow-wrapper::before, .layout-boxed .shadow-wrapper::after {
       content: "";
@@ -1747,16 +1777,6 @@ a {
     display: table;
     clear: both; }
 
-.wrapper {
-  width: 100%;
-  padding: 0px 32px;
-  padding: 0rem 3.2rem; }
-  @media (min-width: full / 16em) {
-    .wrapper {
-      max-width: 1400px;
-      max-width: 140rem;
-      margin: 0 auto; } }
-
 #page {
   position: relative;
   overflow-x: hidden; }
@@ -1767,41 +1787,45 @@ a {
   width: 100%; }
 
 #main {
-  padding: 36px 24px;
-  padding: 3.6rem 2.4rem; }
+  padding: 0px 0px 42px;
+  padding: 0rem 0rem 4.2rem; }
   @media (min-width: 50em) {
     #main {
-      padding-right: 36px;
-      padding-right: 3.6rem;
-      padding-left: 36px;
-      padding-left: 3.6rem; } }
+      padding-left: 42px;
+      padding-left: 4.2rem;
+      padding-right: 42px;
+      padding-right: 4.2rem; } }
 
 .content-area,
 .sidebar {
-  width: 100%;
-  margin-bottom: 48px;
-  margin-bottom: 4.8rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  /* Non standard for webkit */
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto; }
+  float: left;
+  width: 100%; }
 
-@media (min-width: 45em) {
+.sidebar {
+  padding: 42px 28px 0px;
+  padding: 4.2rem 2.8rem 0rem; }
+
+@media (min-width: 50em) {
   .content-area {
-    float: left;
     width: 68%;
-    padding-right: 36px;
-    padding-right: 3.6rem; }
+    padding-right: 42px;
+    padding-right: 4.2rem; }
 
   .sidebar {
-    float: right;
-    width: 32%; } }
+    width: 32%;
+    margin-top: 104px;
+    margin-top: 10.4rem;
+    padding-right: 0;
+    padding-left: 0; }
+
+  .content-area.no-sidebar {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 0; } }
 #site-footer {
-  padding: 24px;
-  padding: 2.4rem; }
+  padding: 28px;
+  padding: 2.8rem; }
   #site-footer a {
     height: auto; }
 
@@ -1811,22 +1835,21 @@ a {
   width: 100%; }
 .fullwidth .site-main, .page-template-page-template-home-slider .site-main, .page-template-page-template-fullwidth .site-main, body.events-single .site-main {
   margin: 0; }
-.fullwidth .site-content .widget-area, .page-template-page-template-home-slider .site-content .widget-area, .page-template-page-template-fullwidth .site-content .widget-area, body.events-single .site-content .widget-area {
+.fullwidth .site-main .widget-area, .page-template-page-template-home-slider .site-main .widget-area, .page-template-page-template-fullwidth .site-main .widget-area, body.events-single .site-main .widget-area {
   width: 100%; }
 
 /*--------------------------------------------------------------
 11.1 Posts and pages
 --------------------------------------------------------------*/
 .post-title, .entry-header .entry-title {
-  margin-bottom: 12px;
-  margin-bottom: 1.2rem;
-  padding-bottom: 4px;
-  padding-bottom: 0.4rem;
+  margin-bottom: 14px;
+  margin-bottom: 1.4rem;
+  padding-bottom: 5px;
+  padding-bottom: 0.5rem;
   border-bottom-width: 2px;
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
-  margin: 24px 0px 12px;
-  margin: 2.4rem 0rem 1.2rem;
+  margin-bottom: 0;
   text-align: center;
   word-break: break-word; }
   .post-title:hover, .entry-header .entry-title:hover,
@@ -1835,24 +1858,24 @@ a {
     text-decoration: none; }
 
 .banner {
-  position: relative;
-  left: -24px;
-  width: -webkit-calc( 100% + 48px );
-  width: -moz-calc( 100% + 48px );
-  width: calc( 100% + 48px );
+  width: 100vw;
   min-height: 100px;
   min-height: 10rem;
   padding: 35px 0px;
   padding: 3.5rem 0rem;
-  margin: -36px 0px 36px;
-  margin: -3.6rem 0rem 3.6rem;
   text-align: center; }
   @media (min-width: 50em) {
     .banner {
-      left: -45px;
-      width: -webkit-calc( 100% + 90px );
-      width: -moz-calc( 100% + 90px );
-      width: calc( 100% + 90px ); } }
+      position: relative;
+      left: -42px;
+      left: -4.2rem;
+      margin-bottom: 42px;
+      margin-bottom: 4.2rem; } }
+
+.blog .banner,
+.archive .banner {
+  margin-bottom: 42px;
+  margin-bottom: 4.2rem; }
 
 .banner-title {
   margin: 0;
@@ -1862,24 +1885,34 @@ a {
   letter-spacing: 0.3rem; }
 
 .banner-subtitle {
-  margin: 12px 0px 0px;
-  margin: 1.2rem 0rem 0rem;
+  margin: 14px 0px 0px;
+  margin: 1.4rem 0rem 0rem;
   font-style: italic;
   letter-spacing: 0;
   text-transform: none; }
 
-.sticky {
-  border-width: 1px;
-  border-width: 0.1rem;
-  border-style: solid; }
-  .sticky .entry a {
-    text-decoration: underline; }
-  .sticky .entry .more-link {
-    text-decoration: none; }
+.entry-block .fit-video,
+.entry-block blockquote {
+  position: relative;
+  left: -28px;
+  width: -webkit-calc( 100% + 56px );
+  width: -moz-calc( 100% + 56px );
+  width: calc( 100% + 56px ); }
+  @media (min-width: 50em) {
+    .entry-block .fit-video,
+    .entry-block blockquote {
+      left: -42px;
+      width: -webkit-calc( 100% + 84px );
+      width: -moz-calc( 100% + 84px );
+      width: calc( 100% + 84px ); } }
 
 .entry {
-  padding: 24px 0px 12px;
-  padding: 2.4rem 0rem 1.2rem; }
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+  padding: 28px 0px 14px;
+  padding: 2.8rem 0rem 1.4rem; }
   .entry > *:first-child {
     margin-top: 0; }
   .entry h1,
@@ -1889,29 +1922,13 @@ a {
   .entry h5 {
     text-transform: none;
     letter-spacing: 0; }
-  .entry blockquote {
-    position: relative;
-    left: -24px;
-    width: -webkit-calc( 100% + 48px );
-    width: -moz-calc( 100% + 48px );
-    width: calc( 100% + 48px ); }
-    @media (min-width: 50em) {
-      .entry blockquote {
-        left: -36px;
-        width: -webkit-calc( 100% + 72px );
-        width: -moz-calc( 100% + 72px );
-        width: calc( 100% + 72px ); } }
 
 .meta {
   position: relative;
-  left: -24px;
-  width: -webkit-calc( 100% + 48px );
-  width: -moz-calc( 100% + 48px );
-  width: calc( 100% + 48px );
   padding: 0;
   margin: 0;
-  font-size: 10px;
-  font-size: 1rem;
+  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 38px;
   line-height: 3.8rem;
   letter-spacing: 1px;
@@ -1919,26 +1936,26 @@ a {
   font-weight: 300; }
   @media (min-width: 50em) {
     .meta {
-      left: -36px;
-      width: -webkit-calc( 100% + 72px );
-      width: -moz-calc( 100% + 72px );
-      width: calc( 100% + 72px ); } }
+      left: -42px;
+      width: -webkit-calc( 100% + 84px );
+      width: -moz-calc( 100% + 84px );
+      width: calc( 100% + 84px ); } }
   .meta p {
     padding: 0; }
   .meta span {
-    padding: 12px 0px;
-    padding: 1.2rem 0rem; }
+    padding: 10px 0px;
+    padding: 1rem 0rem; }
   .meta .with-icon {
-    padding-left: 14px;
-    padding-left: 1.4rem; }
+    padding-left: 18px;
+    padding-left: 1.8rem; }
     .meta .with-icon::before {
-      top: 14px;
-      top: 1.4rem; }
+      top: 13px;
+      top: 1.3rem; }
   .meta .author,
   .meta .comment-count,
   .meta .tags {
-    margin-left: 6px;
-    margin-left: 0.6rem;
+    margin-left: 7px;
+    margin-left: 0.7rem;
     padding-left: 10px;
     padding-left: 1rem;
     border-left-width: 1px;
@@ -1946,8 +1963,10 @@ a {
     border-left-style: solid; }
   @media (min-width: 37.5em) {
     .meta {
-      font-size: 1.1rem;
-      line-height: 4rem; } }
+      font-size: 12px;
+      font-size: 1.2rem;
+      line-height: 44px;
+      line-height: 4.4rem; } }
 
 .meta-above {
   border-bottom-width: 1px;
@@ -1964,23 +1983,23 @@ a {
   text-align: center; }
 
 .archive-title {
-  margin: 0px 0px 36px;
-  margin: 0rem 0rem 3.6rem;
+  margin: 0px 0px 42px;
+  margin: 0rem 0rem 4.2rem;
   text-align: center;
   text-transform: none;
   letter-spacing: 0; }
 
 .post-password-required label {
-  margin-bottom: 6px;
-  margin-bottom: 0.6rem; }
+  margin-bottom: 7px;
+  margin-bottom: 0.7rem; }
   .post-password-required label input {
     max-width: 100%;
     width: 100%;
     display: block; }
 
 .lead {
-  margin-bottom: 12px;
-  margin-bottom: 1.2rem;
+  margin-bottom: 14px;
+  margin-bottom: 1.4rem;
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 26px;
@@ -1995,11 +2014,11 @@ a {
   padding-bottom: 0;
   font-size: 30px;
   font-size: 3rem;
-  line-height: 45px;
-  line-height: 4.5rem; }
+  line-height: 52px;
+  line-height: 5.2rem; }
 .format-quote cite {
-  margin-top: 12px;
-  margin-top: 1.2rem; }
+  margin-top: 14px;
+  margin-top: 1.4rem; }
 
 /* Link */
 .format-link .post-title, .format-link .entry-header .entry-title, .entry-header .format-link .entry-title {
@@ -2017,15 +2036,15 @@ a {
   overflow: visible; }
 .page-template-page-template-home-slider .feature-block {
   float: left;
-  padding-top: 36px;
-  padding-top: 3.6rem;
+  padding-top: 42px;
+  padding-top: 4.2rem;
   border: none;
   border-radius: 0;
   box-shadow: none;
   overflow: visible; }
 .page-template-page-template-home-slider .page-title {
-  padding: 24px 0px 0px;
-  padding: 2.4rem 0rem 0rem;
+  padding: 28px 0px 0px;
+  padding: 2.8rem 0rem 0rem;
   margin-bottom: 0; }
 .page-template-page-template-home-slider .entry {
   position: relative;
@@ -2035,28 +2054,28 @@ a {
   line-height: 28px;
   line-height: 2.8rem; }
   .page-template-page-template-home-slider .entry .button {
-    margin: 12px 3px 0px;
-    margin: 1.2rem 0.3rem 0rem; }
+    margin: 14px 3px 0px;
+    margin: 1.4rem 0.3rem 0rem; }
 .page-template-page-template-home-slider .campaigns-grid {
-  font-size: 12px;
-  font-size: 1.2rem;
-  line-height: 20px;
-  line-height: 2rem; }
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 24px;
+  line-height: 2.4rem; }
   .page-template-page-template-home-slider .campaigns-grid .block-title {
     text-transform: uppercase; }
 .page-template-page-template-home-slider .charitable-campaign-map-marker {
-  font-size: 12px;
-  font-size: 1.2rem;
-  line-height: 20px;
-  line-height: 2rem;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 24px;
+  line-height: 2.4rem;
   text-align: left; }
   .page-template-page-template-home-slider .charitable-campaign-map-marker h3 {
     text-transform: uppercase; }
 
 /* Stripped */
 .stripped #page {
-  padding-top: 36px;
-  padding-top: 3.6rem; }
+  padding-top: 42px;
+  padding-top: 4.2rem; }
 .stripped .site-identity {
   float: none;
   text-align: center; }
@@ -2073,8 +2092,8 @@ a {
 .stripped .entry-block {
   background: transparent;
   margin: 0;
-  padding: 0px 24px;
-  padding: 0rem 2.4rem;
+  padding: 0px 28px;
+  padding: 0rem 2.8rem;
   border-radius: 0 0 0.4rem 0.4rem; }
   .stripped .entry-block .entry {
     padding: 0; }
@@ -2105,16 +2124,54 @@ a {
 /*--------------------------------------------------------------
 11.3 Comments
 --------------------------------------------------------------*/
-.comment-form-block {
-  padding-top: 24px;
-  padding-top: 2.4rem; }
+.comments-section {
+  float: left;
+  clear: both;
+  width: 100%;
+  margin-bottom: 0;
+  border-width: 1px 0px;
+  border-width: 0.1rem 0rem; }
+  @media (min-width: 50em) {
+    .comments-section {
+      border-width: 1px;
+      border-width: 0.1rem; } }
 
+/* Comment Form */
+.comment-form-block {
+  padding-top: 28px;
+  padding-top: 2.8rem;
+  border-right-width: 0;
+  border-left-width: 0; }
+  .comment-form-block input[type=email],
+  .comment-form-block input[type=text],
+  .comment-form-block textarea {
+    max-width: 100%; }
+
+.comment-text-input {
+  float: left;
+  width: 49%;
+  margin-right: 2%; }
+
+.comment-text-input.fullwidth, .comment-text-input.page-template-page-template-home-slider, .comment-text-input.page-template-page-template-fullwidth, body.comment-text-input.events-single {
+  width: 100%;
+  margin: 0; }
+
+.comment-text-input.last {
+  margin-right: 0; }
+
+#comment {
+  max-width: 100%; }
+
+.comment-notes {
+  clear: both; }
+
+/* Comments List */
 .comment,
 .pingback {
   float: left;
   clear: both;
-  margin-bottom: 24px;
-  margin-bottom: 2.4rem;
+  margin-bottom: 28px;
+  margin-bottom: 2.8rem;
   width: 100%;
   border-bottom-width: 1px;
   border-bottom-width: 0.1rem;
@@ -2142,35 +2199,23 @@ a {
 .avatar {
   border-radius: 0.4rem; }
 
-.comments-section {
+.comments-list {
   float: left;
-  clear: both;
-  width: 100%; }
-  .comments-section .children {
+  width: 100%;
+  margin: 28px 0px 0px;
+  margin: 2.8rem 0rem 0rem;
+  padding-left: 0; }
+  .comments-list .children {
     margin-left: 5%;
     padding-left: 0;
     width: 95%; }
-  .comments-section .avatar {
+  .comments-list .avatar {
     position: absolute; }
-  .comments-section input[type=email],
-  .comments-section input[type=text],
-  .comments-section textarea {
-    max-width: 100%; }
-  .comments-section .comment-text-input {
-    float: left;
-    width: 49%;
-    margin-right: 2%; }
-  .comments-section .comment-text-input.fullwidth, .comments-section .comment-text-input.page-template-page-template-home-slider, .comments-section .comment-text-input.page-template-page-template-fullwidth, .comments-section body.comment-text-input.events-single {
-    width: 100%;
-    margin: 0; }
-  .comments-section .comment-text-input.last {
-    margin-right: 0; }
-  .comments-section #comment {
-    max-width: 100%; }
-  .comments-section .comment-notes {
-    clear: both; }
+  .comments-list > .comment:last-of-type {
+    margin-bottom: 0;
+    border-bottom: none; }
   @media (min-width: 50em) {
-    .comments-section .children {
+    .comments-list .children {
       margin-left: -webkit-calc( 7rem );
       margin-left: -moz-calc( 7rem );
       margin-left: calc( 7rem );
@@ -2179,8 +2224,8 @@ a {
       width: calc(100% - 7rem); } }
 
 .comment-details {
-  margin: 0px 0px 12px 70px;
-  margin: 0rem 0rem 1.2rem 7rem; }
+  margin: 0px 0px 14px 70px;
+  margin: 0rem 0rem 1.4rem 7rem; }
 
 .comment-author {
   margin-top: 0; }
@@ -2188,17 +2233,10 @@ a {
 .no-avatars .comment-details {
   margin-left: 0; }
 
-.comments-list {
-  float: left;
-  width: 100%;
-  margin-top: 24px;
-  margin-top: 2.4rem;
-  padding-left: 0; }
-
 .comment-meta {
   padding-bottom: 0;
-  font-size: 10px;
-  font-size: 1rem; }
+  font-size: 12px;
+  font-size: 1.2rem; }
 
 .comment-date {
   font-style: italic; }
@@ -2213,22 +2251,20 @@ a {
     margin-right: 2px;
     margin-right: 0.2rem; }
 
-.logged-in-as,
-.comment-notes,
-.form-allowed-tags {
-  font-size: 11px;
-  font-size: 1.1rem; }
-
 #reply-title {
-  margin-top: 0;
-  font-size: 14px;
-  font-size: 1.4rem;
+  margin-top: 14px;
+  margin-top: 1.4rem;
+  font-size: 16px;
+  font-size: 1.6rem;
   text-transform: uppercase; }
 
 #cancel-comment-reply-link {
   float: right;
-  font-size: 20px;
-  font-size: 2rem; }
+  font-size: 14px;
+  font-size: 1.4rem; }
+  #cancel-comment-reply-link::before {
+    top: 8px;
+    top: 0.8rem; }
 
 #submit {
   display: inline-block;
@@ -2268,8 +2304,8 @@ body.author .banner {
 body.author .site-main {
   float: none;
   width: 100%;
-  padding: 24px;
-  padding: 2.4rem;
+  padding: 28px;
+  padding: 2.8rem;
   border-width: 1px;
   border-width: 0.1rem;
   border-style: solid;
@@ -2278,13 +2314,13 @@ body.author .site-main {
   box-shadow: 0 0 0.1rem #ffffff; }
   @media (min-width: 37.5em) {
     body.author .site-main {
-      padding: 36px;
-      padding: 3.6rem; } }
+      padding: 42px;
+      padding: 4.2rem; } }
 body.author .author-description {
-  padding-bottom: 24px;
-  padding-bottom: 2.4rem;
-  margin-bottom: 24px;
-  margin-bottom: 2.4rem;
+  padding-bottom: 28px;
+  padding-bottom: 2.8rem;
+  margin-bottom: 28px;
+  margin-bottom: 2.8rem;
   border-bottom-width: 2px;
   border-bottom-width: 0.2rem;
   border-bottom-style: solid; }
@@ -2298,8 +2334,8 @@ body.author .author-description {
 @media (min-width: 37.5em) {
   body.author .author-avatar {
     float: left;
-    padding-right: 12px;
-    padding-right: 1.2rem;
+    padding-right: 14px;
+    padding-right: 1.4rem;
     max-width: 50%; } }
 @media (min-width: 37.5em) {
   body.author .author-facts {
@@ -2322,8 +2358,8 @@ body.author .author-links {
   body.author .author-activity {
     float: left;
     width: 60%;
-    padding: 0px 0px 0px 36px;
-    padding: 0rem 0rem 0rem 3.6rem; }
+    padding: 0px 0px 0px 42px;
+    padding: 0rem 0rem 0rem 4.2rem; }
     body.author .author-activity h3 {
       text-align: center; } }
 body.author .author-activity-summary {
@@ -2344,8 +2380,8 @@ body.author .author-activity-feed {
   border-top-style: solid; }
   body.author .author-activity-feed li {
     position: relative;
-    padding: 24px 0px;
-    padding: 2.4rem 0rem;
+    padding: 28px 0px;
+    padding: 2.8rem 0rem;
     border-bottom-width: 2px;
     border-bottom-width: 0.2rem;
     border-bottom-style: solid; }
@@ -2373,8 +2409,8 @@ body.author .author-activity-feed {
       body.author .author-activity-feed .activity-summary {
         float: left;
         width: 70%;
-        padding-right: 12px;
-        padding-right: 1.2rem;
+        padding-right: 14px;
+        padding-right: 1.4rem;
         -webkit-transform: translateY(50%);
         -moz-transform: translateY(50%);
         -ms-transform: translateY(50%);
@@ -2449,8 +2485,8 @@ embed {
 16.2 Galleries
 --------------------------------------------------------------*/
 .gallery {
-  margin-bottom: 12px;
-  margin-bottom: 1.2rem;
+  margin-bottom: 14px;
+  margin-bottom: 1.4rem;
   float: left;
   width: 100%;
   clear: both; }
@@ -2461,8 +2497,8 @@ embed {
   position: relative;
   float: left;
   margin-right: 1%;
-  margin-bottom: 4px;
-  margin-bottom: 0.4rem;
+  margin-bottom: 7px;
+  margin-bottom: 0.7rem;
   width: 49.5%; }
   .gallery-item img {
     width: 100%;
@@ -2509,8 +2545,8 @@ embed {
   left: 0;
   width: 98%;
   max-height: 50%;
-  padding: 6px;
-  padding: 0.6rem;
+  padding: 7px;
+  padding: 0.7rem;
   margin: 0;
   overflow: hidden;
   color: #fff;
@@ -2528,7 +2564,8 @@ embed {
     clear: both !important; }
 
   .gallery-item {
-    margin-bottom: 0.6rem; }
+    margin-bottom: 7px;
+    margin-bottom: 0.7rem; }
     .gallery-item:nth-of-type(2n+2) {
       margin-right: 1%; }
 
@@ -2582,13 +2619,12 @@ embed {
 --------------------------------------------------------------*/
 .featured-image {
   position: relative;
-  left: -4.34783%;
-  width: 108.69565%;
+  left: -28px;
+  width: -webkit-calc( 100% + 56px );
+  width: -moz-calc( 100% + 56px );
+  width: calc( 100% + 56px );
   line-height: 0;
-  border-radius: 0.4rem 0.4rem 0 0;
   text-align: center; }
-  .featured-image a {
-    border-radius: 0.4rem 0.4rem 0 0; }
   .featured-image a {
     position: relative;
     display: inline-block;
@@ -2598,35 +2634,31 @@ embed {
     text-decoration: none; }
   @media (min-width: 50em) {
     .featured-image {
-      left: -3.6rem;
-      width: -webkit-calc( 100% + 73px );
-      width: -moz-calc( 100% + 73px );
-      width: calc( 100% + 73px ); } }
+      left: -42px;
+      width: -webkit-calc( 100% + 84px );
+      width: -moz-calc( 100% + 84px );
+      width: calc( 100% + 84px ); } }
 
 /*--------------------------------------------------------------
 16.4 Video
 --------------------------------------------------------------*/
 .format-video > .fit-video {
   position: relative;
-  left: -24px;
-  width: -webkit-calc( 100% + 48px );
-  width: -moz-calc( 100% + 48px );
-  width: calc( 100% + 48px );
   margin: 0; }
   @media (min-width: 50em) {
     .format-video > .fit-video {
-      left: -36px;
-      width: -webkit-calc( 100% + 72px );
-      width: -moz-calc( 100% + 72px );
-      width: calc( 100% + 72px ); } }
+      left: -42px;
+      width: -webkit-calc( 100% + 84px );
+      width: -moz-calc( 100% + 84px );
+      width: calc( 100% + 84px ); } }
 
 .fit-video {
-  margin-bottom: 24px;
-  margin-bottom: 2.4rem; }
+  margin-bottom: 28px;
+  margin-bottom: 2.8rem; }
 
 .campaign-video .fit-video {
-  margin-bottom: 36px;
-  margin-bottom: 3.6rem; }
+  margin-bottom: 42px;
+  margin-bottom: 4.2rem; }
 
 /*--------------------------------------------------------------
 17.0 Footer
@@ -2734,8 +2766,8 @@ embed {
   .campaign-image .campaign-status-tag {
     position: absolute;
     line-height: 1em;
-    padding: 6px 0px;
-    padding: 0.6rem 0rem;
+    padding: 7px 0px;
+    padding: 0.7rem 0rem;
     width: 200px;
     width: 20rem;
     margin: 30px 0px 0px -60px;
@@ -2754,16 +2786,19 @@ embed {
 /*-------------------------------------------------------------- 
 18.1.2 Forms
 --------------------------------------------------------------*/
-.charitable-form input[type=text],
-.charitable-form input[type=password],
-.charitable-form input[type=email],
-.charitable-form input[type=url],
-.charitable-form input[type=number],
-.charitable-form input[type=date],
-.charitable-form textarea,
-.charitable-form select {
-  max-width: 100%;
-  width: 100%; }
+.charitable-form {
+  font-size: 14px;
+  font-size: 1.4rem; }
+  .charitable-form input[type=text],
+  .charitable-form input[type=password],
+  .charitable-form input[type=email],
+  .charitable-form input[type=url],
+  .charitable-form input[type=number],
+  .charitable-form input[type=date],
+  .charitable-form textarea,
+  .charitable-form select {
+    max-width: 100%;
+    width: 100%; }
 
 .charitable-form-fields .charitable-form-field {
   clear: left; }
@@ -2774,8 +2809,8 @@ embed {
       .charitable-form-fields .charitable-form-field ~ .charitable-form-field {
         clear: none; }
       .charitable-form-fields .charitable-form-field.odd {
-        padding-right: 36px;
-        padding-right: 3.6rem;
+        padding-right: 42px;
+        padding-right: 4.2rem;
         clear: left; }
       .charitable-form-fields .charitable-form-field.even {
         clear: none; }
@@ -2785,17 +2820,17 @@ embed {
 .charitable-form-fields .charitable-fieldset {
   position: relative;
   width: 100%;
-  padding: 0px 0px 24px;
-  padding: 0rem 0rem 2.4rem;
-  margin-bottom: 24px;
-  margin-bottom: 2.4rem;
+  padding: 0px 0px 28px;
+  padding: 0rem 0rem 2.8rem;
+  margin-bottom: 28px;
+  margin-bottom: 2.8rem;
   border: none; }
   .charitable-form-fields .charitable-fieldset:before {
     content: "";
     display: block;
     position: absolute;
-    top: 9px;
-    top: 0.9rem;
+    top: 13px;
+    top: 1.3rem;
     height: 2px;
     height: 0.2rem;
     width: 100%; }
@@ -2806,8 +2841,8 @@ embed {
     left: 24px;
     left: 2.4rem;
     margin: 0;
-    padding: 0px 12px 24px;
-    padding: 0rem 1.2rem 2.4rem;
+    padding: 0px 14px 24px;
+    padding: 0rem 1.4rem 2.4rem;
     font-size: 18px;
     font-size: 1.8rem;
     font-weight: normal; }
@@ -2822,8 +2857,8 @@ embed {
     .charitable-form-fields .charitable-fieldset .charitable-fieldset .charitable-form-header {
       background: transparent;
       left: 0;
-      padding: 12px 0px;
-      padding: 1.2rem 0rem;
+      padding: 14px 0px;
+      padding: 1.4rem 0rem;
       font-size: 14px;
       font-size: 1.4rem; }
 
@@ -2835,29 +2870,25 @@ embed {
 
 #charitable-campaign-submission-form {
   position: relative;
-  left: -36px;
-  width: -webkit-calc( 100% + 72px );
-  width: -moz-calc( 100% + 72px );
-  width: calc( 100% + 72px );
-  padding: 24px 12px 0px 12px;
-  padding: 2.4rem 1.2rem 0rem 1.2rem; }
+  padding: 24px 14px 0px 14px;
+  padding: 2.4rem 1.4rem 0rem 1.4rem; }
   @media (min-width: 50em) {
     #charitable-campaign-submission-form {
-      left: -36px;
-      width: -webkit-calc( 100% + 72px );
-      width: -moz-calc( 100% + 72px );
-      width: calc( 100% + 72px ); } }
+      left: -42px;
+      width: -webkit-calc( 100% + 84px );
+      width: -moz-calc( 100% + 84px );
+      width: calc( 100% + 84px ); } }
   @media (min-width: 48em) {
     #charitable-campaign-submission-form {
-      padding-right: 36px;
-      padding-right: 3.6rem;
-      padding-left: 36px;
-      padding-left: 3.6rem; } }
+      padding-right: 42px;
+      padding-right: 4.2rem;
+      padding-left: 42px;
+      padding-left: 4.2rem; } }
 
 .charitable-campaign-form-table th,
 .charitable-campaign-form-table td {
-  padding: 12px;
-  padding: 1.2rem; }
+  padding: 14px;
+  padding: 1.4rem; }
 .charitable-campaign-form-table tfoot td {
   border-top-width: 1px;
   border-top-width: 0.1rem;
@@ -2879,8 +2910,8 @@ embed {
 .charitable-repeatable-form-field-table th {
   width: 100px;
   width: 10rem;
-  font-size: 12px;
-  font-size: 1.2rem;
+  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 37px;
   line-height: 3.7rem;
   background-color: transparent; }
@@ -2965,8 +2996,8 @@ embed {
     float: left;
     width: 50%; }
   .charitable-login-form .login-username {
-    padding-right: 36px;
-    padding-right: 3.6rem; }
+    padding-right: 42px;
+    padding-right: 4.2rem; }
   .charitable-login-form .login-submit {
     padding-bottom: 3px;
     padding-bottom: 0.3rem; }
@@ -3111,184 +3142,212 @@ body > .select2-container--open .select2-dropdown--above {
   border-width: 2px 2px 0px;
   border-width: 0.2rem 0.2rem 0rem; }
 
-#charitable-donation-form .charitable-fieldset {
-  margin-bottom: 12px;
-  margin-bottom: 1.2rem; }
-  #charitable-donation-form .charitable-fieldset::before {
-    display: none; }
-#charitable-donation-form .charitable-form-header {
-  left: 0;
-  margin-top: 0;
-  padding-left: 0;
-  padding-right: 0;
-  font-size: 16px;
-  font-size: 1.6rem; }
-#charitable-donation-form .set-donation-amount {
-  clear: left; }
-#charitable-donation-form .donation-amounts .donation-amount {
-  width: 100%;
-  position: relative;
-  padding: 12px 12px 12px 36px;
-  padding: 1.2rem 1.2rem 1.2rem 3.6rem;
-  margin: 0px 12px 12px 0px;
-  margin: 0rem 1.2rem 1.2rem 0rem;
-  line-height: 18px;
-  line-height: 1.8rem;
-  border-width: 2px;
-  border-width: 0.2rem;
-  border-style: solid;
-  border-radius: 0.4rem; }
-  #charitable-donation-form .donation-amounts .donation-amount .amount {
-    display: block;
-    font-size: 18px;
-    font-size: 1.8rem;
-    font-weight: normal; }
-  #charitable-donation-form .donation-amounts .donation-amount .description {
-    display: block;
-    margin-top: 6px;
-    margin-top: 0.6rem; }
-    #charitable-donation-form .donation-amounts .donation-amount .description:empty {
+#charitable-donation-form {
+  padding: 28px;
+  padding: 2.8rem; }
+  @media (min-width: 45em) {
+    #charitable-donation-form {
+      padding-left: 42px;
+      padding-left: 4.2rem;
+      padding-right: 42px;
+      padding-right: 4.2rem; } }
+  #charitable-donation-form .charitable-fieldset {
+    margin-bottom: 14px;
+    margin-bottom: 1.4rem; }
+    #charitable-donation-form .charitable-fieldset::before {
       display: none; }
-  #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount {
+  #charitable-donation-form .charitable-form-header {
+    left: 0;
     width: 100%;
-    margin-left: 0; }
-    #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount .description {
-      font-size: 12px;
-      font-size: 1.2rem;
-      font-family: Merriweather, Georgia, "Times New Roman", Times, serif;
-      letter-spacing: 0;
-      text-transform: none; }
-    #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount input[type=text] {
-      position: static;
-      max-width: 100%; }
-  #charitable-donation-form .donation-amounts .donation-amount input[type=radio] {
-    position: absolute;
-    top: 12px;
-    top: 1.2rem;
-    left: 12px;
-    left: 1.2rem; }
-  @media (min-width: 37.5em) {
-    #charitable-donation-form .donation-amounts .donation-amount {
-      float: left;
-      width: 48%;
-      margin-top: 0;
-      margin-right: 0;
-      margin-bottom: 12px;
-      margin-bottom: 1.2rem;
-      margin-left: 4%; }
-      #charitable-donation-form .donation-amounts .donation-amount:nth-child(2n + 1) {
-        margin-left: 0;
-        clear: left; } }
-#charitable-donation-form #custom-donation-amount-field {
-  width: 100%;
-  margin: 12px 0px 0px;
-  margin: 1.2rem 0rem 0rem; }
-  #charitable-donation-form #custom-donation-amount-field.charitable-custom-donation-field-alone {
-    margin-top: 0; }
-#charitable-donation-form .charitable-connected-downloads {
-  float: left;
-  width: 100%;
-  margin-bottom: 24px;
-  margin-bottom: 2.4rem;
-  border-width: 2px;
-  border-width: 0.2rem;
-  border-style: solid;
-  border-radius: 0.4rem; }
-#charitable-donation-form .charitable-edd-connected-download {
-  position: relative;
-  padding: 24px 12px 24px 12px;
-  padding: 2.4rem 1.2rem 2.4rem 1.2rem;
-  border-bottom-width: 2px;
-  border-bottom-width: 0.2rem;
-  border-bottom-style: solid;
-  cursor: pointer; }
-  #charitable-donation-form .charitable-edd-connected-download:last-of-type {
-    border: none; }
-#charitable-donation-form .edd-price-option-price {
-  font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 16px;
-  font-size: 1.6rem; }
-  #charitable-donation-form .edd-price-option-price .currency {
-    padding-left: 2px;
-    padding-left: 0.2rem;
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 16px;
+    font-size: 1.6rem; }
+  #charitable-donation-form .set-donation-amount {
+    clear: left; }
+  #charitable-donation-form .donation-amounts .donation-amount {
+    width: 100%;
+    position: relative;
+    padding: 14px 14px 14px 42px;
+    padding: 1.4rem 1.4rem 1.4rem 4.2rem;
+    margin: 0px 14px 14px 0px;
+    margin: 0rem 1.4rem 1.4rem 0rem;
+    line-height: 18px;
+    line-height: 1.8rem;
+    border-width: 2px;
+    border-width: 0.2rem;
+    border-style: solid;
+    border-radius: 0.4rem; }
+    #charitable-donation-form .donation-amounts .donation-amount .amount {
+      display: block;
+      font-size: 18px;
+      font-size: 1.8rem;
+      font-weight: normal; }
+    #charitable-donation-form .donation-amounts .donation-amount .description {
+      display: block; }
+      #charitable-donation-form .donation-amounts .donation-amount .description:empty {
+        display: none; }
+    #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount {
+      width: 100%;
+      margin-left: 0; }
+      #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount .description {
+        font-size: 14px;
+        font-size: 1.4rem;
+        font-family: Merriweather, Georgia, "Times New Roman", Times, serif;
+        letter-spacing: 0;
+        text-transform: none; }
+      #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount input[type=text] {
+        position: static;
+        max-width: 100%; }
+    #charitable-donation-form .donation-amounts .donation-amount input[type=radio] {
+      position: absolute;
+      top: 14px;
+      top: 1.4rem;
+      left: 14px;
+      left: 1.4rem; }
+    @media (min-width: 37.5em) {
+      #charitable-donation-form .donation-amounts .donation-amount {
+        float: left;
+        width: 48%;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 14px;
+        margin-bottom: 1.4rem;
+        margin-left: 4%; }
+        #charitable-donation-form .donation-amounts .donation-amount:nth-child(2n + 1) {
+          margin-left: 0;
+          clear: left; } }
+  #charitable-donation-form #custom-donation-amount-field {
+    width: 100%;
+    margin: 14px 0px 0px;
+    margin: 1.4rem 0rem 0rem; }
+    #charitable-donation-form #custom-donation-amount-field.charitable-custom-donation-field-alone {
+      margin-top: 0; }
+  #charitable-donation-form .charitable-connected-downloads {
+    float: left;
+    width: 100%;
+    margin-bottom: 28px;
+    margin-bottom: 2.8rem;
+    border-width: 2px;
+    border-width: 0.2rem;
+    border-style: solid;
+    border-radius: 0.4rem; }
+  #charitable-donation-form .charitable-edd-connected-download {
+    position: relative;
+    padding: 28px 14px 28px 14px;
+    padding: 2.8rem 1.4rem 2.8rem 1.4rem;
+    border-bottom-width: 2px;
+    border-bottom-width: 0.2rem;
+    border-bottom-style: solid;
+    cursor: pointer; }
+    #charitable-donation-form .charitable-edd-connected-download:last-of-type {
+      border: none; }
+  #charitable-donation-form .edd-price-option-price {
+    font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem; }
+    #charitable-donation-form .edd-price-option-price .currency {
+      padding-left: 2px;
+      padding-left: 0.2rem;
+      font-size: 14px;
+      font-size: 1.4rem; }
+  #charitable-donation-form .charitable-edd-download-select {
+    position: relative;
+    bottom: 2px;
+    bottom: 0.2rem;
+    width: 20px;
+    width: 2rem; }
+  #charitable-donation-form .charitable-option-no-download {
+    font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    text-transform: uppercase; }
+  #charitable-donation-form .charitable-edd-download-details {
+    padding-top: 14px;
+    padding-top: 1.4rem; }
+    #charitable-donation-form .charitable-edd-download-details .download-title {
+      margin-top: 0; }
+    @media (min-width: 50em) {
+      #charitable-donation-form .charitable-edd-download-details {
+        padding-top: 0; } }
+  #charitable-donation-form .charitable-edd-price-options ul {
+    list-style-type: none;
+    padding-left: 0; }
+  #charitable-donation-form .charitable-edd-price-options .edd-price-option-price {
+    position: static; }
+  #charitable-donation-form .charitable-form-field .button {
+    display: inline-block;
+    padding: 8px 20px;
+    padding: 0.8rem 2rem;
     font-size: 14px;
-    font-size: 1.4rem; }
-#charitable-donation-form .charitable-edd-download-select {
-  position: relative;
-  bottom: 2px;
-  bottom: 0.2rem;
-  width: 20px;
-  width: 2rem; }
-#charitable-donation-form .charitable-option-no-download {
-  font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 16px;
-  font-size: 1.6rem;
-  text-transform: uppercase; }
-#charitable-donation-form .charitable-edd-download-details {
-  padding-top: 12px;
-  padding-top: 1.2rem; }
-  #charitable-donation-form .charitable-edd-download-details .download-title {
-    margin-top: 0; }
-  @media (min-width: 50em) {
-    #charitable-donation-form .charitable-edd-download-details {
-      padding-top: 0; } }
-#charitable-donation-form .charitable-edd-price-options ul {
-  list-style-type: none;
-  padding-left: 0; }
-#charitable-donation-form .charitable-edd-price-options .edd-price-option-price {
-  position: static; }
-#charitable-donation-form .charitable-form-field .button {
-  display: inline-block;
-  padding: 8px 20px;
-  padding: 0.8rem 2rem;
-  font-size: 14px;
-  font-size: 1.4rem;
-  line-height: 1em;
-  border-radius: 0.4rem;
-  font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  letter-spacing: 0.2rem;
-  cursor: pointer;
-  /* Default settings */
-  -webkit-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
-  -moz-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
-  -o-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
-  transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
-  border-width: 2px;
-  border-width: 0.2rem;
-  border-style: solid;
-  background-color: transparent;
-  /* Default settings */
-  -webkit-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
-  -moz-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
-  -o-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
-  transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
-  margin: 0;
-  width: auto; }
-  #charitable-donation-form .charitable-form-field .button:hover {
-    text-decoration: none; }
+    font-size: 1.4rem;
+    line-height: 1em;
+    border-radius: 0.4rem;
+    font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+    /* Default settings */
+    -webkit-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+    -moz-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+    -o-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+    transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+    border-width: 2px;
+    border-width: 0.2rem;
+    border-style: solid;
+    background-color: transparent;
+    /* Default settings */
+    -webkit-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+    -moz-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+    -o-transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+    transition: background-color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0ms;
+    margin: 0;
+    width: auto; }
+    #charitable-donation-form .charitable-form-field .button:hover {
+      text-decoration: none; }
 
-#charitable-gateway-fields > label {
-  font-weight: bold; }
-#charitable-gateway-fields #charitable-gateway-selector {
-  padding: 12px 0px;
-  padding: 1.2rem 0rem; }
-#charitable-gateway-fields #charitable_field_cc_cvc,
-#charitable-gateway-fields #charitable_field_cc_expiration {
-  width: auto; }
-#charitable-gateway-fields .charitable-form-fields {
-  padding: 12px;
-  padding: 1.2rem;
-  border-width: 2px;
-  border-width: 0.2rem;
-  border-style: solid;
-  border-radius: 0.4rem; }
-  #charitable-gateway-fields .charitable-form-fields select,
-  #charitable-gateway-fields .charitable-form-fields input {
+#charitable-user-fields {
+  border-top: none; }
+
+#charitable-user-fields,
+#charitable-gateway-fields .charitable-gateway-fields {
+  position: relative;
+  left: -42px;
+  width: -webkit-calc( 100% + 84px );
+  width: -moz-calc( 100% + 84px );
+  width: calc( 100% + 84px );
+  padding: 28px 42px;
+  padding: 2.8rem 4.2rem; }
+  #charitable-user-fields select,
+  #charitable-user-fields input,
+  #charitable-gateway-fields .charitable-gateway-fields select,
+  #charitable-gateway-fields .charitable-gateway-fields input {
     border-width: 2px;
     border-width: 0.2rem;
     border-style: solid; }
+
+#charitable-gateway-selector {
+  padding: 14px 0px;
+  padding: 1.4rem 0rem;
+  margin-bottom: 0; }
+
+#charitable-gateway-fields > label {
+  font-weight: bold; }
+#charitable-gateway-fields .charitable-gateway-fields {
+  float: left; }
+
+#charitable_field_cc_cvc {
+  max-width: 160px;
+  max-width: 16rem;
+  width: 160px;
+  width: 16rem; }
+
+#charitable_field_cc_expiration {
+  width: 200px;
+  width: 20rem;
+  margin-left: 0; }
 
 #custom-donation-amount-field.charitable-custom-donation-field-alone {
   padding: 2px;
@@ -3307,44 +3366,55 @@ body > .select2-container--open .select2-dropdown--above {
 /*--------------------------------------------------------------
 18.1.3 Widgets
 --------------------------------------------------------------*/
-.widget.widget_charitable_donors_widget .donors-list .donor-name {
-  font-size: 14px;
-  font-size: 1.4rem;
-  line-height: 22px;
-  line-height: 2.2rem; }
-.widget.widget_charitable_donors_widget .donors-list .donor {
-  float: left;
-  width: 100px;
-  width: 10rem;
-  padding: 0px 12px 0px 0px;
-  padding: 0rem 1.2rem 0rem 0rem;
-  border: none; }
-  .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(6n+7) {
-    clear: left; }
-@media (max-width: 25.625em) {
-  .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(2n+3) {
-    clear: left; } }
-@media (min-width: 25.6875em) and (max-width: 31.875em) {
-  .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(3n+4) {
-    clear: left; } }
-@media (min-width: 31.9375em) and (max-width: 38.125em) {
-  .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(4n+5) {
-    clear: left; } }
-@media (min-width: 38.1875em) and (max-width: 44.9375em) {
-  .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(5n+6) {
-    clear: left; } }
-@media (min-width: 45em) and (max-width: 48.375em) {
-  .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(3n+4) {
-    clear: left; } }
-@media (min-width: 48.4375em) and (max-width: 59.0625em) {
-  .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(4n+5) {
-    clear: left; } }
-@media (min-width: 59.125em) and (max-width: 68.3125em) {
-  .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(5n+6) {
-    clear: left; } }
-@media (max-width: 68.3125em) {
-  .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(6n+7) {
-    clear: none; } }
+.widget.widget_charitable_donors_widget {
+  padding-bottom: 14px;
+  padding-bottom: 1.4rem; }
+  .widget.widget_charitable_donors_widget .donors-list {
+    margin: 0; }
+    .widget.widget_charitable_donors_widget .donors-list .donor-name {
+      font-size: 14px;
+      font-size: 1.4rem;
+      line-height: 22px;
+      line-height: 2.2rem; }
+    .widget.widget_charitable_donors_widget .donors-list .donor {
+      float: left;
+      width: 100px;
+      width: 10rem;
+      padding: 0px 14px 0px 0px;
+      padding: 0rem 1.4rem 0rem 0rem;
+      border: none; }
+      .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(6n+7) {
+        clear: left; }
+    .widget.widget_charitable_donors_widget .donors-list .donor-name,
+    .widget.widget_charitable_donors_widget .donors-list .donor-location,
+    .widget.widget_charitable_donors_widget .donors-list .donor-donation-amount {
+      margin: 0px 0px 7px;
+      margin: 0rem 0rem 0.7rem;
+      padding: 0; }
+    @media (max-width: 25.625em) {
+      .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(2n+3) {
+        clear: left; } }
+    @media (min-width: 25.6875em) and (max-width: 31.875em) {
+      .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(3n+4) {
+        clear: left; } }
+    @media (min-width: 31.9375em) and (max-width: 38.125em) {
+      .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(4n+5) {
+        clear: left; } }
+    @media (min-width: 38.1875em) and (max-width: 44.9375em) {
+      .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(5n+6) {
+        clear: left; } }
+    @media (min-width: 45em) and (max-width: 48.375em) {
+      .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(3n+4) {
+        clear: left; } }
+    @media (min-width: 48.4375em) and (max-width: 59.0625em) {
+      .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(4n+5) {
+        clear: left; } }
+    @media (min-width: 59.125em) and (max-width: 68.3125em) {
+      .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(5n+6) {
+        clear: left; } }
+    @media (max-width: 68.3125em) {
+      .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(6n+7) {
+        clear: none; } }
 
 .widget.widget_charitable_edd_campaign_downloads {
   background: transparent;
@@ -3353,39 +3423,39 @@ body > .select2-container--open .select2-dropdown--above {
   .widget.widget_charitable_edd_campaign_downloads .widget-title {
     margin-top: 0; }
   .widget.widget_charitable_edd_campaign_downloads .widget-block {
-    padding: 24px;
-    padding: 2.4rem;
-    margin-bottom: 24px;
-    margin-bottom: 2.4rem;
+    padding: 28px;
+    padding: 2.8rem;
+    margin-bottom: 28px;
+    margin-bottom: 2.8rem;
     border-width: 1px;
     border-width: 0.1rem;
     border-style: solid;
     border-radius: 0.4rem; }
   .widget.widget_charitable_edd_campaign_downloads .wp-post-image {
     position: relative;
-    left: -24px;
-    width: -webkit-calc( 100% + 48px );
-    width: -moz-calc( 100% + 48px );
-    width: calc( 100% + 48px );
-    top: -24px;
-    top: -2.4rem;
-    margin-bottom: -12px;
-    margin-bottom: -1.2rem;
-    max-width: -webkit-calc( 100% + 48px );
-    max-width: -moz-calc( 100% + 48px );
-    max-width: calc( 100% + 48px );
+    left: -28px;
+    width: -webkit-calc( 100% + 56px );
+    width: -moz-calc( 100% + 56px );
+    width: calc( 100% + 56px );
+    top: -28px;
+    top: -2.8rem;
+    margin-bottom: -14px;
+    margin-bottom: -1.4rem;
+    max-width: -webkit-calc( 100% + 56px );
+    max-width: -moz-calc( 100% + 56px );
+    max-width: calc( 100% + 56px );
     border-radius: 0.4rem 0.4rem 0 0; }
   .widget.widget_charitable_edd_campaign_downloads .download-title {
     margin-top: 0; }
   .widget.widget_charitable_edd_campaign_downloads .download-price {
     float: left;
-    padding: 0px 0px 12px;
-    padding: 0rem 0rem 1.2rem;
+    padding: 0px 0px 14px;
+    padding: 0rem 0rem 1.4rem;
     font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif; }
   .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd_price_options li {
     width: 100%;
-    padding-bottom: 6px;
-    padding-bottom: 0.6rem;
+    padding-bottom: 7px;
+    padding-bottom: 0.7rem;
     border-bottom-width: 1px;
     border-bottom-width: 0.1rem;
     border-bottom-style: solid; }
@@ -3404,18 +3474,18 @@ body > .select2-container--open .select2-dropdown--above {
   .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-item-quantity {
     width: 65px;
     width: 6.5rem;
-    padding-left: 6px;
-    padding-left: 0.6rem;
-    padding-right: 6px;
-    padding-right: 0.6rem; }
+    padding-left: 7px;
+    padding-left: 0.7rem;
+    padding-right: 7px;
+    padding-right: 0.7rem; }
   .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-add-to-cart.button {
     float: right;
-    font-size: 12px;
-    font-size: 1.2rem;
-    padding-left: 6px;
-    padding-left: 0.6rem;
-    padding-right: 6px;
-    padding-right: 0.6rem; }
+    font-size: 14px;
+    font-size: 1.4rem;
+    padding-left: 7px;
+    padding-left: 0.7rem;
+    padding-right: 7px;
+    padding-right: 0.7rem; }
   .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd_go_to_checkout.button {
     float: left; }
   .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-cart-ajax-alert {
@@ -3428,26 +3498,27 @@ body > .select2-container--open .select2-dropdown--above {
   .widget.widget_charitable_donate_widget .widget-title {
     margin-top: 0; }
   .widget.widget_charitable_donate_widget .widget-block {
-    padding: 24px;
-    padding: 2.4rem;
-    margin-bottom: 24px;
-    margin-bottom: 2.4rem;
+    padding: 28px;
+    padding: 2.8rem;
+    margin-bottom: 28px;
+    margin-bottom: 2.8rem;
     border-width: 1px;
     border-width: 0.1rem;
     border-style: solid;
     border-radius: 0.4rem; }
-  .widget.widget_charitable_donate_widget #charitable-donation-form {
-    padding-top: 0; }
-    .widget.widget_charitable_donate_widget #charitable-donation-form .donation-amounts {
+  .widget.widget_charitable_donate_widget #charitable-donation-form.charitable-form {
+    padding: 0;
+    background-color: transparent; }
+    .widget.widget_charitable_donate_widget #charitable-donation-form.charitable-form .donation-amounts {
       margin-bottom: 0; }
-      .widget.widget_charitable_donate_widget #charitable-donation-form .donation-amounts li {
+      .widget.widget_charitable_donate_widget #charitable-donation-form.charitable-form .donation-amounts li {
         width: 100%;
         margin: 0px 0px 12px;
         margin: 0rem 0rem 1.2rem; }
-      .widget.widget_charitable_donate_widget #charitable-donation-form .donation-amounts .charitable-form-field {
+      .widget.widget_charitable_donate_widget #charitable-donation-form.charitable-form .donation-amounts .charitable-form-field {
         margin: 12px 0px 0px;
         margin: 1.2rem 0rem 0rem; }
-    .widget.widget_charitable_donate_widget #charitable-donation-form #custom-donation-amount-field {
+    .widget.widget_charitable_donate_widget #charitable-donation-form.charitable-form #custom-donation-amount-field {
       width: 100%;
       margin-bottom: 12px;
       margin-bottom: 1.2rem; }
@@ -3490,8 +3561,8 @@ body > .select2-container--open .select2-dropdown--above {
         text-decoration: none; }
 
 .widget.widget_campaign_creator_widget .charitable-campaign-creator .avatar {
-  margin-bottom: 12px;
-  margin-bottom: 1.2rem; }
+  margin-bottom: 14px;
+  margin-bottom: 1.4rem; }
 .widget.widget_campaign_creator_widget .charitable-campaign-creator .creator-name {
   margin-top: 0; }
 .widget.widget_campaign_creator_widget .charitable-campaign-creator .creator-bio,
@@ -3502,8 +3573,8 @@ body > .select2-container--open .select2-dropdown--above {
   width: 100%;
   margin-bottom: 0; }
 .widget.widget_campaign_creator_widget .charitable-campaign-creator .creator-bio {
-  padding-top: 12px;
-  padding-top: 1.2rem;
+  padding-top: 14px;
+  padding-top: 1.4rem;
   border-top-width: 1px;
   border-top-width: 0.1rem;
   border-top-style: solid; }
@@ -3518,11 +3589,13 @@ body > .select2-container--open .select2-dropdown--above {
   .widget.widget_campaign_creator_widget .charitable-campaign-creator .creator-summary {
     float: none; } }
 
+.widget.widget_charitable_donation_stats_widget .donation-stats {
+  margin-bottom: 0; }
 .widget.widget_charitable_donation_stats_widget li {
-  margin-bottom: 12px;
-  margin-bottom: 1.2rem;
-  font-size: 13px;
-  font-size: 1.3rem;
+  margin-bottom: 14px;
+  margin-bottom: 1.4rem;
+  font-size: 14px;
+  font-size: 1.4rem;
   font-style: italic;
   font-weight: 300; }
   .widget.widget_charitable_donation_stats_widget li:last-child {
@@ -3539,69 +3612,64 @@ body > .select2-container--open .select2-dropdown--above {
 
 #secondary .widget.widget_charitable_donation_stats_widget li {
   float: left;
-  padding: 0px 6px;
-  padding: 0rem 0.6rem;
+  padding: 0px 7px;
+  padding: 0rem 0.7rem;
   width: 33.3%;
   margin-bottom: 0;
   text-align: center; }
   #secondary .widget.widget_charitable_donation_stats_widget li:last-child {
-    padding-right: 0; }
-  @media (min-width: 45em) and (max-width: 56.25em) {
+    padding-right: 0;
+    margin-bottom: 0; }
+  @media (min-width: 45em) and (max-width: 70em) {
     #secondary .widget.widget_charitable_donation_stats_widget li {
       float: none;
       width: 100%;
       padding: 0;
-      margin-bottom: 12px;
-      margin-bottom: 1.2rem; } }
+      margin-bottom: 14px;
+      margin-bottom: 1.4rem; } }
 
-.campaign {
-  padding: 0px 12px;
-  padding: 0rem 1.2rem;
+.campaign-widget {
+  padding: 0px 14px;
+  padding: 0rem 1.4rem;
   overflow: hidden; }
-  .campaign .campaign-image {
+  .campaign-widget .campaign-image {
     position: relative;
-    left: -12px;
-    width: -webkit-calc( 100% + 24px );
-    width: -moz-calc( 100% + 24px );
-    width: calc( 100% + 24px ); }
-    @media (min-width: 50em) {
-      .campaign .campaign-image {
-        left: -12px;
-        width: -webkit-calc( 100% + 24px );
-        width: -moz-calc( 100% + 24px );
-        width: calc( 100% + 24px ); } }
-    .campaign .campaign-image a {
+    left: -14px;
+    width: -webkit-calc( 100% + 28px );
+    width: -moz-calc( 100% + 28px );
+    width: calc( 100% + 28px ); }
+    .campaign-widget .campaign-image a {
       display: block;
       line-height: 0; }
-  .campaign .block-title {
+  .campaign-widget .block-title {
     padding: 0;
     border: 0; }
-  .campaign .campaign-description {
+  .campaign-widget .campaign-description {
     text-shadow: none; }
-  .campaign .campaign-stats,
-  .campaign .meta {
+  .campaign-widget .campaign-stats,
+  .campaign-widget .meta {
     position: relative;
-    left: -24px;
-    width: -webkit-calc( 100% + 48px );
-    width: -moz-calc( 100% + 48px );
-    width: calc( 100% + 48px ); }
+    left: -28px;
+    width: -webkit-calc( 100% + 56px );
+    width: -moz-calc( 100% + 56px );
+    width: calc( 100% + 56px ); }
     @media (min-width: 37.5em) {
-      .campaign .campaign-stats,
-      .campaign .meta {
-        left: -12px;
-        width: -webkit-calc( 100% + 24px );
-        width: -moz-calc( 100% + 24px );
-        width: calc( 100% + 24px ); } }
-  .campaign .campaign-stats {
-    padding: 6px 0px;
-    padding: 0.6rem 0rem;
+      .campaign-widget .campaign-stats,
+      .campaign-widget .meta {
+        left: -14px;
+        width: -webkit-calc( 100% + 28px );
+        width: -moz-calc( 100% + 28px );
+        width: calc( 100% + 28px ); } }
+  .campaign-widget .campaign-stats {
+    padding: 7px 0px;
+    padding: 0.7rem 0rem;
     margin: 0;
     border-top-width: 1px;
     border-top-width: 0.1rem;
     border-top-style: solid;
     text-align: center;
     list-style: none; }
-    .campaign .campaign-stats li {
+    .campaign-widget .campaign-stats li {
       position: relative;
       display: inline-block;
       padding: 0px 6px 0px 10px;
@@ -3613,7 +3681,7 @@ body > .select2-container--open .select2-dropdown--above {
       font-size: 10px;
       font-size: 1rem;
       font-style: italic; }
-      .campaign .campaign-stats li span {
+      .campaign-widget .campaign-stats li span {
         display: block;
         padding-top: 2px;
         padding-top: 0.2rem;
@@ -3621,7 +3689,7 @@ body > .select2-container--open .select2-dropdown--above {
         font-size: 1.4rem;
         font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
         font-style: normal; }
-    .campaign .campaign-stats .barometer {
+    .campaign-widget .campaign-stats .barometer {
       width: 52px;
       width: 5.2rem;
       height: 36px;
@@ -3629,13 +3697,28 @@ body > .select2-container--open .select2-dropdown--above {
       border: none;
       vertical-align: top; }
 
-.campaign-widget {
-  background: transparent; }
-  .campaign-widget .campaign {
-    margin: 0; }
-    .campaign-widget .campaign .block-title {
-      margin-top: 12px;
-      margin-top: 1.2rem; }
+body.campaign-widget {
+  padding: 0; }
+
+.campaign-widget .campaign {
+  margin: 0; }
+  .campaign-widget .campaign .block-title {
+    margin-top: 14px;
+    margin-top: 1.4rem; }
+
+.widget.widget_charitable_campaigns_widget .campaigns,
+.widget.widget_charitable_campaigns_widget .campaign,
+.widget.widget_charitable_campaigns_widget .campaign .campaign-title,
+.widget.widget_charitable_campaigns_widget .campaign .wp-post-image {
+  margin-bottom: 0; }
+.widget.widget_charitable_campaigns_widget .campaign-time-left {
+  margin-top: 7px;
+  margin-top: 0.7rem; }
+.widget.widget_charitable_campaigns_widget .campaign:first-of-type {
+  padding-top: 0; }
+.widget.widget_charitable_campaigns_widget .campaign:last-of-type {
+  border-bottom: 0;
+  padding-bottom: 0; }
 
 /*--------------------------------------------------------------
 18.1.4 Campaign Grid
@@ -3644,35 +3727,35 @@ body > .select2-container--open .select2-dropdown--above {
   position: relative;
   float: left;
   width: 100%;
-  padding: 0px 0px 12px;
-  padding: 0rem 0rem 1.2rem; }
+  padding: 0px 28px 14px 28px;
+  padding: 0rem 2.8rem 1.4rem 2.8rem; }
+  @media (min-width: 50em) {
+    .campaigns-grid-wrapper {
+      padding-right: 0;
+      padding-left: 0; } }
   .campaigns-grid-wrapper .section-title {
     margin-top: 0; }
   .campaigns-grid-wrapper .campaign.block {
     max-width: 100%;
-    margin-bottom: 24px;
-    margin-bottom: 2.4rem;
+    margin-bottom: 28px;
+    margin-bottom: 2.8rem;
     border: none;
     overflow: hidden; }
 
 .campaigns-grid .campaign {
   max-width: 100%;
-  margin-bottom: 24px;
-  margin-bottom: 2.4rem;
+  margin-bottom: 28px;
+  margin-bottom: 2.8rem;
   border: none;
   box-shadow: 0 0 0 1px; }
 .campaigns-grid .campaign-image {
-  position: relative;
-  left: -12px;
-  width: -webkit-calc( 100% + 24px );
-  width: -moz-calc( 100% + 24px );
-  width: calc( 100% + 24px ); }
+  position: relative; }
   @media (min-width: 50em) {
     .campaigns-grid .campaign-image {
-      left: -12px;
-      width: -webkit-calc( 100% + 24px );
-      width: -moz-calc( 100% + 24px );
-      width: calc( 100% + 24px ); } }
+      left: -14px;
+      width: -webkit-calc( 100% + 28px );
+      width: -moz-calc( 100% + 28px );
+      width: calc( 100% + 28px ); } }
   .campaigns-grid .campaign-image a {
     display: block;
     line-height: 0; }
@@ -3686,20 +3769,20 @@ body > .select2-container--open .select2-dropdown--above {
 .campaigns-grid .campaign-stats,
 .campaigns-grid .meta {
   position: relative;
-  left: -24px;
-  width: -webkit-calc( 100% + 48px );
-  width: -moz-calc( 100% + 48px );
-  width: calc( 100% + 48px ); }
+  left: -28px;
+  width: -webkit-calc( 100% + 56px );
+  width: -moz-calc( 100% + 56px );
+  width: calc( 100% + 56px ); }
   @media (min-width: 37.5em) {
     .campaigns-grid .campaign-stats,
     .campaigns-grid .meta {
-      left: -12px;
-      width: -webkit-calc( 100% + 24px );
-      width: -moz-calc( 100% + 24px );
-      width: calc( 100% + 24px ); } }
+      left: -14px;
+      width: -webkit-calc( 100% + 28px );
+      width: -moz-calc( 100% + 28px );
+      width: calc( 100% + 28px ); } }
 .campaigns-grid .campaign-stats {
-  padding: 6px 0px;
-  padding: 0.6rem 0rem;
+  padding: 7px 0px;
+  padding: 0.7rem 0rem;
   margin: 0;
   border-top-width: 1px;
   border-top-width: 0.1rem;
@@ -3709,14 +3792,14 @@ body > .select2-container--open .select2-dropdown--above {
   .campaigns-grid .campaign-stats li {
     position: relative;
     display: inline-block;
-    padding: 0px 6px 0px 10px;
-    padding: 0rem 0.6rem 0rem 1rem;
+    padding: 0px 7px 0px 11px;
+    padding: 0rem 0.7rem 0rem 1.1rem;
     margin: 0;
     border-left-width: 1px;
     border-left-width: 0.1rem;
     border-left-style: solid;
-    font-size: 10px;
-    font-size: 1rem;
+    font-size: 12px;
+    font-size: 1.2rem;
     font-style: italic; }
     .campaigns-grid .campaign-stats li span {
       display: block;
@@ -3740,8 +3823,8 @@ body > .select2-container--open .select2-dropdown--above {
       width: 48%;
       margin-right: 1.9%;
       border: none !important;
-      padding: 0px 12px;
-      padding: 0rem 1.2rem; }
+      padding: 0px 14px;
+      padding: 0rem 1.4rem; }
       .campaigns-grid .campaign:nth-child(2n+2) {
         margin-right: 0; }
       .campaigns-grid .campaign:nth-child(2n+3) {
@@ -3768,8 +3851,8 @@ body > .select2-container--open .select2-dropdown--above {
   width: 100%;
   text-align: right; }
   .campaigns-navigation.is-active .menu {
-    margin-top: 12px;
-    margin-top: 1.2rem; }
+    margin-top: 14px;
+    margin-top: 1.4rem; }
 
 /*--------------------------------------------------------------
 18.1.5 Campaign Page
@@ -3777,44 +3860,58 @@ body > .select2-container--open .select2-dropdown--above {
 .single-campaign #main {
   padding-top: 0; }
 .single-campaign.stripped #main {
-  padding-top: 36px;
-  padding-top: 3.6rem; }
-.single-campaign .content-area .campaign-image,
-.single-campaign .content-area .campaign-video {
-  border-radius: 0.4rem 0.4rem 0 0; }
+  padding-top: 42px;
+  padding-top: 4.2rem; }
 .single-campaign .content-area .fit-video {
   margin-bottom: 0; }
-.single-campaign .content-area .campaign {
-  border-top: 0;
-  border-radius: 0 0 0.4rem 0.4rem; }
+.single-campaign .content-area .campaign-image,
+.single-campaign .content-area .campaign-video {
+  padding: 28px 28px 0px;
+  padding: 2.8rem 2.8rem 0rem;
+  text-align: center;
+  border-style: solid; }
+  @media (min-width: 50em) {
+    .single-campaign .content-area .campaign-image,
+    .single-campaign .content-area .campaign-video {
+      padding: 0;
+      border-width: 0px 1px;
+      border-width: 0rem 0.1rem;
+      border-radius: 0.4rem 0.4rem 0 0; } }
+.single-campaign .sidebar {
+  margin-top: 0; }
+  @media (min-width: 50em) {
+    .single-campaign .sidebar {
+      padding-top: 0; } }
 
-.donation-form-display-same_page.single-campaign .content-area .campaign {
+.donation-form-display-same_page.single-campaign .content-area .entry-block {
   margin-bottom: 0;
   border-radius: 0; }
-.donation-form-display-same_page.single-campaign .content-area #charitable-donation-form {
-  margin-bottom: 36px;
-  margin-bottom: 3.6rem;
-  padding: 24px 12px;
-  padding: 2.4rem 1.2rem;
-  border-width: 1px;
-  border-width: 0.1rem;
-  border-style: solid;
-  border-top: 0;
+  @media (min-width: 50em) {
+    .donation-form-display-same_page.single-campaign .content-area .entry-block {
+      border-radius: 0.4rem 0.4rem 0 0; } }
+.donation-form-display-same_page.single-campaign #charitable-donation-form {
+  border-style: solid; }
+  @media (min-width: 50em) {
+    .donation-form-display-same_page.single-campaign #charitable-donation-form {
+      border-width: 0px 1px;
+      border-width: 0rem 0.1rem; } }
+.donation-form-display-same_page.single-campaign .campaign-comments.block,
+.donation-form-display-same_page.single-campaign .comment-form-block.content-block {
   border-radius: 0 0 0.4rem 0.4rem; }
 
 /* Campaign summary block */
 .campaign-summary {
-  margin-bottom: 36px;
-  margin-bottom: 3.6rem; }
+  margin-bottom: 0; }
   .campaign-summary .campaign-title {
-    margin: 36px 0px 12px;
-    margin: 3.6rem 0rem 1.2rem;
+    margin: 42px 0px 28px;
+    margin: 4.2rem 0rem 2.8rem;
     text-align: center; }
   .campaign-summary .campaign-description {
     float: left;
     width: 100%;
-    padding: 0px 0px 24px;
-    padding: 0rem 0rem 2.4rem;
+    padding: 0px 0px 42px;
+    padding: 0rem 0rem 4.2rem;
+    margin-bottom: 0;
     text-align: center;
     font-size: 22px;
     font-size: 2.2rem;
@@ -3823,41 +3920,41 @@ body > .select2-container--open .select2-dropdown--above {
     font-weight: normal; }
     .campaign-summary .campaign-description p:last-child {
       margin-bottom: 0; }
-  .campaign-summary .campaign-video,
-  .campaign-summary .campaign-image {
-    float: left;
-    margin: 0px 0px 36px;
-    margin: 0rem 0rem 3.6rem; }
-  .campaign-summary .campaign-video {
+  .campaign-summary .campaign-video .fit-video {
+    margin-bottom: 0;
     border-width: 5px;
     border-width: 0.5rem;
     border-style: solid;
     border-color: rgba(255, 255, 255, 0.3);
     border-radius: 0.4rem; }
-    .campaign-summary .campaign-video .fit-video {
-      margin-bottom: 0; }
+  .campaign-summary .campaign-image {
+    left: -28px;
+    width: -webkit-calc( 100% + 56px );
+    width: -moz-calc( 100% + 56px );
+    width: calc( 100% + 56px ); }
   .campaign-summary .wp-post-image {
     width: 100%; }
   .campaign-summary .campaign-details {
-    padding: 36px 0px 0px;
-    padding: 3.6rem 0rem 0rem;
-    margin: 0 auto;
-    max-width: 100%;
-    width: 380px;
-    width: 38rem; }
+    position: relative;
+    left: -28px;
+    width: -webkit-calc( 100% + 56px );
+    width: -moz-calc( 100% + 56px );
+    width: calc( 100% + 56px );
+    padding: 42px 0px 0px;
+    padding: 4.2rem 0rem 0rem; }
   .campaign-summary .campaign-donation {
-    padding: 0px 0px 24px;
-    padding: 0rem 0rem 2.4rem; }
+    padding: 0px 0px 28px;
+    padding: 0rem 0rem 2.8rem; }
   .campaign-summary .donate-button {
     margin: 0;
     height: 100%;
-    padding: 12px 20px;
-    padding: 1.2rem 2rem;
+    padding: 14px 20px;
+    padding: 1.4rem 2rem;
     font-size: 25px;
     font-size: 2.5rem; }
   .campaign-summary .campaign-finished {
-    margin-bottom: 24px;
-    margin-bottom: 2.4rem;
+    margin-bottom: 28px;
+    margin-bottom: 2.8rem;
     font-size: 20px;
     font-size: 2rem;
     line-height: 30px;
@@ -3868,8 +3965,8 @@ body > .select2-container--open .select2-dropdown--above {
   .campaign-summary .barometer {
     position: relative;
     float: left;
-    margin-right: 10px;
-    margin-right: 1rem;
+    margin: 0px 14px;
+    margin: 0rem 1.4rem;
     z-index: 30;
     width: 146px;
     width: 14.6rem;
@@ -3897,21 +3994,15 @@ body > .select2-container--open .select2-dropdown--above {
         line-height: 3rem;
         font-style: normal; }
   .campaign-summary .campaign-stats {
-    float: right;
-    text-align: right;
+    padding: 0;
+    margin-bottom: 0;
     list-style: none;
-    padding-left: 0;
-    width: -webkit-calc(100% - 156px);
-    width: -moz-calc(100% - 156px);
-    width: calc(100% - 156px);
-    max-width: 180px;
-    max-width: 18rem;
-    margin-bottom: 0; }
+    text-align: center; }
     .campaign-summary .campaign-stats li {
-      padding-bottom: 10px;
-      padding-bottom: 1rem;
-      margin-bottom: 10px;
-      margin-bottom: 1rem;
+      padding-bottom: 14px;
+      padding-bottom: 1.4rem;
+      margin-bottom: 14px;
+      margin-bottom: 1.4rem;
       border-bottom-width: 1px;
       border-bottom-width: 0.1rem;
       border-bottom-style: solid;
@@ -3940,11 +4031,18 @@ body > .select2-container--open .select2-dropdown--above {
     padding-bottom: 3rem;
     text-align: center; }
   .campaign-summary .campaign-sharing {
-    padding: 0;
-    margin-top: 20px;
-    margin-top: 2rem;
-    max-width: 100%;
-    text-align: center; }
+    position: relative;
+    left: -28px;
+    width: -webkit-calc( 100% + 56px );
+    width: -moz-calc( 100% + 56px );
+    width: calc( 100% + 56px );
+    padding: 14px 0px 0px 0px;
+    padding: 1.4rem 0rem 0rem 0rem;
+    text-align: center;
+    border-top-width: 1px;
+    border-top-width: 0.1rem;
+    border-top-color: rgba(255, 255, 255, 0.3);
+    border-top-style: solid; }
     .campaign-summary .campaign-sharing h6 {
       margin: 0px 10px;
       margin: 0rem 1rem;
@@ -3960,73 +4058,73 @@ body > .select2-container--open .select2-dropdown--above {
       font-size: 22px;
       font-size: 2.2rem;
       cursor: pointer; }
-  @media all and (min-width: 37.5em) and (max-width: 55em) {
-    .campaign-summary .campaign-details {
-      position: relative;
-      width: 100%;
-      padding-bottom: 7.4rem; }
-      .campaign-summary .campaign-details .campaign-support {
-        float: right;
-        width: 70%; }
-      .campaign-summary .campaign-details ul {
-        width: 70%;
-        max-width: 88rem;
-        text-align: center; }
-      .campaign-summary .campaign-details li {
-        display: inline-block;
-        padding-right: 2rem;
-        padding-left: 2rem;
-        border-right: 0.1rem solid rgba(255, 255, 255, 0.3);
-        border-bottom: 0; }
-      .campaign-summary .campaign-details .campaign-backers {
-        border: none; }
-    .campaign-summary .campaign-countdown {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 1rem 13% 0 13%;
-      border-bottom: 0;
-      border-top: 0.1rem solid rgba(255, 255, 255, 0.3);
-      text-align: center; }
+  @media (min-width: 27.5em) {
+    .campaign-summary .campaign-details,
     .campaign-summary .campaign-sharing {
-      padding-top: 2.4rem;
-      margin-top: 1.2rem;
-      border-top: 0.1rem solid rgba(255, 255, 255, 0.3); }
-    .campaign-summary.ended .campaign-summary {
-      padding-bottom: 1.2rem; }
-      .campaign-summary.ended .campaign-summary ul {
-        margin-top: 4.8rem; } }
-  @media (min-width: 55em) {
+      margin: 0 auto;
+      left: auto;
+      width: 100%;
+      max-width: 540px;
+      max-width: 54rem; } }
+  @media (min-width: 50em) {
+    .campaign-summary {
+      margin-bottom: 42px;
+      margin-bottom: 4.2rem; }
+      .campaign-summary .campaign-video,
+      .campaign-summary .campaign-image {
+        left: 0;
+        width: 55%;
+        float: left;
+        padding-right: 28px;
+        padding-right: 2.8rem; }
+        .campaign-summary .campaign-video .wp-post-image,
+        .campaign-summary .campaign-image .wp-post-image {
+          border-width: 5px;
+          border-width: 0.5rem;
+          border-style: solid;
+          border-color: rgba(255, 255, 255, 0.3);
+          border-radius: 0.4rem;
+          width: 100%; }
+      .campaign-summary .campaign-details {
+        float: left;
+        padding: 0;
+        margin: 0.3rem 0 0 0;
+        width: 45%; }
+      .campaign-summary .barometer {
+        margin-left: 0; }
+      .campaign-summary .campaign-stats li {
+        padding-right: 0; }
+      .campaign-summary .campaign-sharing {
+        float: right;
+        width: 45%;
+        margin-left: 0; } }
+  @media (min-width: 61.75em) {
     .campaign-summary .campaign-video,
     .campaign-summary .campaign-image {
-      width: 50%;
-      width: -moz-calc(100% - 43rem);
-      width: -webkit-calc(100% - 43rem);
-      width: calc(100% - 43rem);
-      float: left;
-      margin-right: 0; }
-      .campaign-summary .campaign-video .wp-post-image,
-      .campaign-summary .campaign-image .wp-post-image {
-        border-width: 5px;
-        border-width: 0.5rem;
-        border-style: solid;
-        border-color: rgba(255, 255, 255, 0.3);
-        border-radius: 0.4rem;
-        width: 95.3%;
-        width: -moz-calc(100% - 1.8rem);
-        width: -webkit-calc(100% - 1.8rem);
-        width: calc(100% - 1.8rem); }
-    .campaign-summary .campaign-details {
-      float: left;
-      padding-left: 0;
-      padding-top: 0.3rem;
-      margin-left: 4rem;
-      margin-right: 0; }
+      width: -moz-calc(100% - 40rem);
+      width: -webkit-calc(100% - 40rem);
+      width: calc(100% - 40rem); }
+    .campaign-summary .campaign-details,
     .campaign-summary .campaign-sharing {
-      float: right;
-      width: 38rem;
-      margin-left: 0; } }
+      width: 40rem; } }
+
+.campaign-summary.campaign-has-goal .campaign-stats {
+  float: right;
+  width: -webkit-calc(100% - 174px);
+  width: -moz-calc(100% - 174px);
+  width: calc(100% - 174px);
+  text-align: right; }
+  @media (max-width: 55em) {
+    .campaign-summary.campaign-has-goal .campaign-stats li {
+      padding-right: 14px;
+      padding-right: 1.4rem; } }
+
+.campaign-summary.no-media .campaign-details {
+  float: none;
+  margin: 0.3rem auto 0 auto; }
+.campaign-summary.no-media .campaign-sharing {
+  float: none;
+  margin-left: auto; }
 
 /* Countdown */
 .campaign-countdown {
@@ -4037,11 +4135,8 @@ body > .select2-container--open .select2-dropdown--above {
   margin-bottom: 0;
   border-top-width: 1px;
   border-top-width: 0.1rem;
-  border-top-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-width: 0.1rem;
-  border-bottom-style: solid;
-  border-color: rgba(255, 255, 255, 0.3); }
+  border-top-color: rgba(255, 255, 255, 0.3);
+  border-top-style: solid; }
   .campaign-countdown .countdown {
     text-transform: none;
     letter-spacing: 0; }
@@ -4071,8 +4166,8 @@ body > .select2-container--open .select2-dropdown--above {
     display: block;
     float: left;
     text-align: center;
-    font-size: 12px;
-    font-size: 1.2rem;
+    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 300; }
   .campaign-countdown .countdown-amount {
     font-size: 20px;
@@ -4093,11 +4188,16 @@ body > .select2-container--open .select2-dropdown--above {
 .campaign-countdown > span:last-child {
   float: right;
   width: 30%;
+  padding-right: 14px;
+  padding-right: 1.4rem;
   font-size: 16px;
   font-size: 1.6rem;
   text-align: right;
   font-style: italic;
   font-weight: 300; }
+  @media (min-width: 55em) {
+    .campaign-countdown > span:last-child {
+      padding-right: 0; } }
 
 .share-widget .modal {
   text-align: left; }
@@ -4116,26 +4216,28 @@ body > .select2-container--open .select2-dropdown--above {
     float: left;
     width: 275px;
     width: 27.5rem;
-    padding-right: 12px;
-    padding-right: 1.2rem; }
+    padding-right: 14px;
+    padding-right: 1.4rem; }
     .share-widget .block.iframe-block {
       float: right;
       padding: 0; } }
 
 .charitable-ambassadors-campaign-creator-toolbar {
   position: relative;
-  left: -24px;
-  width: -webkit-calc( 100% + 48px );
-  width: -moz-calc( 100% + 48px );
-  width: calc( 100% + 48px );
-  padding: 12px 45px;
-  padding: 1.2rem 4.5rem; }
+  padding: 14px 28px;
+  padding: 1.4rem 2.8rem; }
   @media (min-width: 50em) {
     .charitable-ambassadors-campaign-creator-toolbar {
-      left: -45px;
-      width: -webkit-calc( 100% + 90px );
-      width: -moz-calc( 100% + 90px );
-      width: calc( 100% + 90px ); } }
+      left: -51px;
+      width: -webkit-calc( 100% + 102px );
+      width: -moz-calc( 100% + 102px );
+      width: calc( 100% + 102px ); } }
+  @media (min-width: 50em) {
+    .charitable-ambassadors-campaign-creator-toolbar {
+      padding-left: 51px;
+      padding-left: 5.1rem;
+      padding-right: 51px;
+      padding-right: 5.1rem; } }
   .charitable-ambassadors-campaign-creator-toolbar a {
     float: right;
     font-weight: 100; }
@@ -4164,15 +4266,15 @@ body > .select2-container--open .select2-dropdown--above {
       display: block;
       float: right;
       width: 30%;
-      padding: 24px 0px 0px 36px;
-      padding: 2.4rem 0rem 0rem 3.6rem; }
+      padding: 42px 0px 0px 42px;
+      padding: 4.2rem 0rem 0rem 4.2rem; }
       .campaign-benefiting .header {
         margin-top: 0;
         font-weight: bold;
         font-style: italic; }
       .campaign-benefiting .campaign-title {
-        margin: 0px 0px 36px;
-        margin: 0rem 0rem 3.6rem; } }
+        margin: 0px 0px 42px;
+        margin: 0rem 0rem 4.2rem; } }
 
 .campaign-donation-page.stripped .site-main {
   padding: 0;
@@ -4181,8 +4283,8 @@ body > .select2-container--open .select2-dropdown--above {
   .campaign-donation-page.stripped .site-main .entry-block {
     padding: 0; }
 .campaign-donation-page.stripped #charitable-donation-form {
-  padding: 36px;
-  padding: 3.6rem;
+  padding: 42px;
+  padding: 4.2rem;
   border-width: 1px;
   border-width: 0.1rem;
   border-style: solid;
@@ -4193,21 +4295,21 @@ body > .select2-container--open .select2-dropdown--above {
     .campaign-donation-page.stripped #charitable-donation-form {
       float: left;
       width: 70%;
-      padding-right: 36px;
-      padding-right: 3.6rem; } }
+      padding-right: 42px;
+      padding-right: 4.2rem; } }
 
 /*--------------------------------------------------------------
 18.1.7 Campaign Pledge Form
 --------------------------------------------------------------*/
 .campaign-pledge-levels {
-  padding: 12px 0px 36px;
-  padding: 1.2rem 0rem 3.6rem;
+  padding: 14px 0px 42px;
+  padding: 1.4rem 0rem 4.2rem;
   list-style: none;
   text-align: left; }
   .campaign-pledge-levels li.pledge-level {
     position: relative;
-    margin-bottom: 12px;
-    margin-bottom: 1.2rem; }
+    margin-bottom: 14px;
+    margin-bottom: 1.4rem; }
     .campaign-pledge-levels li.pledge-level .pledge-title {
       position: absolute;
       left: 22px;
@@ -4234,8 +4336,8 @@ body > .select2-container--open .select2-dropdown--above {
 .edd-cart-ajax-alert {
   float: left;
   width: 100%;
-  padding-top: 24px;
-  padding-top: 2.4rem;
+  padding-top: 28px;
+  padding-top: 2.8rem;
   font-style: italic; }
 
 /*-------------------------------------------------------------- 
@@ -4511,8 +4613,8 @@ body.user-dashboard .charitable-submit-field {
 18.1.10 Geolocation
 --------------------------------------------------------------*/
 .campaign-location {
-  margin-bottom: 12px;
-  margin-bottom: 1.2rem; }
+  margin-bottom: 14px;
+  margin-bottom: 1.4rem; }
 
 .campaign .campaign-location {
   font-style: italic; }
@@ -4556,24 +4658,39 @@ div.printfriendly {
 #edd_checkout_wrap legend,
 #edd_checkout_wrap th {
   font-weight: 400; }
+#edd_checkout_wrap #edd_checkout_cart th {
+  padding: 14px 10px;
+  padding: 1.4rem 1rem; }
+#edd_checkout_wrap #edd_checkout_cart td {
+  padding: 14px 10px;
+  padding: 1.4rem 1rem; }
+#edd_checkout_wrap #edd_checkout_cart tr td:first-child,
+#edd_checkout_wrap #edd_checkout_cart tr th:first-child {
+  padding-left: 28px;
+  padding-left: 2.8rem; }
+#edd_checkout_wrap #edd_checkout_cart tr td:last-child,
+#edd_checkout_wrap #edd_checkout_cart tr th:last-child {
+  padding-right: 28px;
+  padding-right: 2.8rem; }
 #edd_checkout_wrap .edd-payment-icons,
 #edd_checkout_wrap #edd_purchase_form_wrap > img {
-  margin: 0px 0px 24px 24px;
-  margin: 0rem 0rem 2.4rem 2.4rem; }
+  margin: 0px 0px 28px 28px;
+  margin: 0rem 0rem 2.8rem 2.8rem; }
 #edd_checkout_wrap legend {
-  padding-bottom: 6px;
-  padding-bottom: 0.6rem; }
+  padding-bottom: 7px;
+  padding-bottom: 0.7rem; }
 #edd_checkout_wrap p {
-  margin-bottom: 24px;
-  margin-bottom: 2.4rem; }
+  padding-bottom: 0;
+  margin-bottom: 28px;
+  margin-bottom: 2.8rem; }
 #edd_checkout_wrap label {
   font-size: 100%;
   padding-top: 0;
-  margin-bottom: 6px;
-  margin-bottom: 0.6rem; }
+  margin-bottom: 7px;
+  margin-bottom: 0.7rem; }
 #edd_checkout_wrap span.edd-description {
-  font-size: 11px;
-  font-size: 1.1rem;
+  font-size: 12px;
+  font-size: 1.2rem;
   font-style: italic; }
 #edd_checkout_wrap input[type="text"],
 #edd_checkout_wrap input[type="email"],
@@ -4581,11 +4698,11 @@ div.printfriendly {
 #edd_checkout_wrap textarea {
   width: 100%;
   max-width: 100%;
-  padding: 11px 10px;
-  padding: 1.1rem 1rem; }
+  padding: 14px 10px;
+  padding: 1.4rem 1rem; }
 #edd_checkout_wrap #edd_purchase_submit {
-  padding: 36px 0px;
-  padding: 3.6rem 0rem;
+  padding: 42px 0px;
+  padding: 4.2rem 0rem;
   margin: 0;
   font-size: 16px;
   font-size: 1.6rem;
@@ -4599,29 +4716,32 @@ div.printfriendly {
   border: none; }
   #edd_checkout_wrap #edd_final_total_wrap strong {
     font-weight: 400; }
+#edd_checkout_wrap fieldset#edd_cc_fields {
+  border: none; }
+#edd_checkout_wrap fieldset#edd_cc_address {
+  border-top: 0; }
 #edd_checkout_wrap #edd-purchase-button {
-  padding: 12px 24px;
-  padding: 1.2rem 2.4rem;
+  padding: 14px 28px;
+  padding: 1.4rem 2.8rem;
   font-size: 25px;
   font-size: 2.5rem;
   border: none; }
 #edd_checkout_wrap .edd_empty_cart {
   display: block;
-  padding: 0px 36px 36px;
-  padding: 0rem 3.6rem 3.6rem; }
+  padding: 0px 42px 42px;
+  padding: 0rem 4.2rem 4.2rem; }
+
+#charitable-anonymous-checkbox-wrap label {
+  margin-bottom: 0; }
 
 .stripped #edd_checkout_wrap {
-  position: relative;
-  left: -24px;
-  width: -webkit-calc( 100% + 48px );
-  width: -moz-calc( 100% + 48px );
-  width: calc( 100% + 48px ); }
+  position: relative; }
   @media (min-width: 50em) {
     .stripped #edd_checkout_wrap {
-      left: -24px;
-      width: -webkit-calc( 100% + 48px );
-      width: -moz-calc( 100% + 48px );
-      width: calc( 100% + 48px ); } }
+      left: -28px;
+      width: -webkit-calc( 100% + 56px );
+      width: -moz-calc( 100% + 56px );
+      width: calc( 100% + 56px ); } }
   .stripped #edd_checkout_wrap tr td:first-child,
   .stripped #edd_checkout_wrap tr th:first-child {
     border-left: 0; }
@@ -4630,8 +4750,8 @@ div.printfriendly {
     border-right: 0; }
   .stripped #edd_checkout_wrap fieldset,
   .stripped #edd_checkout_wrap #edd_payment_mode_select {
-    padding: 24px;
-    padding: 2.4rem;
+    padding: 28px;
+    padding: 2.8rem;
     margin: 0;
     border-width: 1px 0px 0px 0px;
     border-width: 0.1rem 0rem 0rem 0rem; }
@@ -4643,8 +4763,8 @@ div.printfriendly {
   .edd-checkout-template.stripped .site-main .entry-block {
     padding: 0; }
 .edd-checkout-template.stripped .entry-block {
-  padding: 36px;
-  padding: 3.6rem;
+  padding: 42px;
+  padding: 4.2rem;
   border-width: 1px;
   border-width: 0.1rem;
   border-style: solid;
@@ -4655,11 +4775,122 @@ div.printfriendly {
     .edd-checkout-template.stripped .entry-block {
       float: left;
       width: 70%;
-      padding-right: 36px;
-      padding-right: 3.6rem; } }
+      padding-right: 42px;
+      padding-right: 4.2rem; } }
   .edd-checkout-template.stripped .entry-block .entry {
-    padding: 0px 24px;
-    padding: 0rem 2.4rem; }
+    padding: 0px 28px;
+    padding: 0rem 2.8rem; }
+.edd-checkout-template.stripped .no-sidebar .entry-block {
+  float: none;
+  margin-left: auto;
+  margin-right: auto; }
+
+/*--------------------------------------------------------------
+18.2.2 Downlaod Page
+--------------------------------------------------------------*/
+.download-price {
+  margin-bottom: 14px;
+  margin-bottom: 1.4rem;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+  text-align: center; }
+
+.edd_download_purchase_form .edd_price_options {
+  margin-bottom: 14px;
+  margin-bottom: 1.4rem; }
+  .edd_download_purchase_form .edd_price_options li {
+    padding: 0px 0px 7px;
+    padding: 0rem 0rem 0.7rem;
+    border-bottom-width: 1px;
+    border-bottom-width: 0.1rem;
+    border-bottom-style: solid; }
+  .edd_download_purchase_form .edd_price_options label {
+    padding-top: 7px;
+    padding-top: 0.7rem; }
+  .edd_download_purchase_form .edd_price_options .edd_price_option_name {
+    padding-left: 10px;
+    padding-left: 1rem; }
+
+.edd-cart-ajax-alert {
+  padding: 0;
+  text-align: center; }
+
+.edd-cart-added-alert {
+  position: relative;
+  padding-top: 14px;
+  padding-top: 1.4rem; }
+
+/* Single Download */
+.widget-download-purchase {
+  margin-bottom: 0;
+  border-bottom: none;
+  border-radius: 0.4rem 0.4rem 0 0; }
+  .widget-download-purchase .download-price {
+    margin-bottom: 28px;
+    margin-bottom: 2.8rem;
+    font-size: 34px;
+    font-size: 3.4rem;
+    line-height: 38px;
+    line-height: 3.8rem; }
+  .widget-download-purchase .edd_download_purchase_form {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 28px;
+    line-height: 2.8rem; }
+    .widget-download-purchase .edd_download_purchase_form .edd_price_options {
+      margin-bottom: 28px;
+      margin-bottom: 2.8rem; }
+    .widget-download-purchase .edd_download_purchase_form li {
+      padding-bottom: 14px;
+      padding-bottom: 1.4rem; }
+    .widget-download-purchase .edd_download_purchase_form label {
+      padding-top: 14px;
+      padding-top: 1.4rem; }
+  .widget-download-purchase .edd_download_purchase_form {
+    margin-bottom: 0; }
+  .widget-download-purchase .edd_purchase_submit_wrapper .edd-submit {
+    padding: 14px 28px;
+    padding: 1.4rem 2.8rem;
+    font-size: 25px;
+    font-size: 2.5rem; }
+
+.widget-download-details {
+  border-radius: 0 0 0.4rem 0.4rem; }
+
+.download-details-list {
+  margin-bottom: 0; }
+  .download-details-list li:last-child {
+    margin-bottom: 0; }
+
+/* Downloads List / Grid */
+.edd_downloads_list .edd_download {
+  padding: 0px 14px 14px 0px;
+  padding: 0rem 1.4rem 1.4rem 0rem; }
+.edd_downloads_list .edd_download_inner {
+  margin: 0;
+  padding: 0px 14px 14px;
+  padding: 0rem 1.4rem 1.4rem;
+  border-width: 1px;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-radius: 0.4rem; }
+.edd_downloads_list .edd-download-image {
+  position: relative;
+  left: -14px;
+  width: -webkit-calc( 100% + 28px );
+  width: -moz-calc( 100% + 28px );
+  width: calc( 100% + 28px );
+  line-height: 0; }
+  .edd_downloads_list .edd-download-image img {
+    border-radius: 0.4rem 0.4rem 0 0; }
+.edd_downloads_list .edd_download_excerpt,
+.edd_downloads_list .edd_download_buy_button {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 24px;
+  line-height: 2.4rem; }
 
 /*--------------------------------------------------------------
 18.3 Ninja Forms
@@ -4764,39 +4995,39 @@ body.tribe-mobile #main {
   .widget.widget_pp_campaign_events .widget-title {
     margin-top: 0; }
   .widget.widget_pp_campaign_events .widget-block {
-    padding: 24px;
-    padding: 2.4rem;
-    margin-bottom: 24px;
-    margin-bottom: 2.4rem;
+    padding: 28px;
+    padding: 2.8rem;
+    margin-bottom: 28px;
+    margin-bottom: 2.8rem;
     border-width: 1px;
     border-width: 0.1rem;
     border-style: solid;
     border-radius: 0.4rem; }
   .widget.widget_pp_campaign_events .wp-post-image {
     position: relative;
-    left: -24px;
-    width: -webkit-calc( 100% + 48px );
-    width: -moz-calc( 100% + 48px );
-    width: calc( 100% + 48px );
-    top: -24px;
-    top: -2.4rem;
-    margin-bottom: -12px;
-    margin-bottom: -1.2rem;
-    max-width: -webkit-calc( 100% + 48px );
-    max-width: -moz-calc( 100% + 48px );
-    max-width: calc( 100% + 48px );
+    left: -28px;
+    width: -webkit-calc( 100% + 56px );
+    width: -moz-calc( 100% + 56px );
+    width: calc( 100% + 56px );
+    top: -28px;
+    top: -2.8rem;
+    margin-bottom: -14px;
+    margin-bottom: -1.4rem;
+    max-width: -webkit-calc( 100% + 56px );
+    max-width: -moz-calc( 100% + 56px );
+    max-width: calc( 100% + 56px );
     border-radius: 0.4rem 0.4rem 0 0; }
   .widget.widget_pp_campaign_events .download-title {
     margin-top: 0; }
   .widget.widget_pp_campaign_events .download-price {
     float: left;
-    padding: 0px 0px 12px;
-    padding: 0rem 0rem 1.2rem;
+    padding: 0px 0px 14px;
+    padding: 0rem 0rem 1.4rem;
     font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif; }
   .widget.widget_pp_campaign_events .edd_download_purchase_form .edd_price_options li {
     width: 100%;
-    padding-bottom: 6px;
-    padding-bottom: 0.6rem;
+    padding-bottom: 7px;
+    padding-bottom: 0.7rem;
     border-bottom-width: 1px;
     border-bottom-width: 0.1rem;
     border-bottom-style: solid; }
@@ -4815,18 +5046,18 @@ body.tribe-mobile #main {
   .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-item-quantity {
     width: 65px;
     width: 6.5rem;
-    padding-left: 6px;
-    padding-left: 0.6rem;
-    padding-right: 6px;
-    padding-right: 0.6rem; }
+    padding-left: 7px;
+    padding-left: 0.7rem;
+    padding-right: 7px;
+    padding-right: 0.7rem; }
   .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-add-to-cart.button {
     float: right;
-    font-size: 12px;
-    font-size: 1.2rem;
-    padding-left: 6px;
-    padding-left: 0.6rem;
-    padding-right: 6px;
-    padding-right: 0.6rem; }
+    font-size: 14px;
+    font-size: 1.4rem;
+    padding-left: 7px;
+    padding-left: 0.7rem;
+    padding-right: 7px;
+    padding-right: 0.7rem; }
   .widget.widget_pp_campaign_events .edd_download_purchase_form .edd_go_to_checkout.button {
     float: left; }
   .widget.widget_pp_campaign_events .edd_download_purchase_form .edd-cart-ajax-alert {

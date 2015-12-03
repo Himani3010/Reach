@@ -1,341 +1,343 @@
 .campaign-summary {
-	@include margin-bottom( 36 );
+    margin-bottom: 0;
 
-	.campaign-title {
-		@include margin( 36, 0, 12 );
-		text-align: center;
-	}
+    .campaign-title {
+        @include margin( $size__margin-triple, 0, $size__margin-double );
+        text-align: center;
+    }
 
-	.campaign-description {
-		float: left;
-		width: 100%;
-		@include padding( 0, 0, 24 );
-		text-align: center;
-		@include font-size( 22 );
-		@include line-height( 32 );
-		font-weight: normal;
+    .campaign-description {
+        float: left;
+        width: 100%;
+        @include padding( 0, 0, $size__margin-triple );
+        margin-bottom: 0;
+        text-align: center;
+        @include font-size( 22 );
+        @include line-height( 32 );
+        font-weight: normal;
 
-		p:last-child {
-			margin-bottom: 0;
-		}
-	}
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }   
 
-	.campaign-video,
-	.campaign-image {
-		float: left;
-		@include margin( 0, 0, 36 );		
-	}
+    .campaign-video {
+        .fit-video {
+            margin-bottom: 0;
+            border: {
+                @include width( 5 );
+                style: solid;
+                color: rgba( 255, 255, 255, 0.3 );
+            }
+            border-radius: 0.4rem;
+        }
+    }
 
-	.campaign-video {
-		border: {
-			@include width( 5 );
-			style: solid;
-			color: rgba( 255, 255, 255, 0.3 );
-		}
-		border-radius: 0.4rem;
+    .campaign-image {
+        @include fullwidth-calc( $size__margin-double );        
+    }
 
-		.fit-video {
-			margin-bottom: 0;
-		}
-	}
+    .wp-post-image {
+        width: 100%;
+    }
 
-	.wp-post-image {
-		width: 100%;
-	}
+    .campaign-details {     
+        position: relative;
+        @include fullwidth-calc( $size__margin-double );
+        @include padding( $size__margin-triple, 0, 0 );        
+    }
 
-	.campaign-details {
-		@include padding( 36, 0, 0 );
-		margin: 0 auto;
-		max-width: 100%;
-		@include width( 380 );
-	}
+    .campaign-donation {
+        @include padding( 0, 0, $size__margin-double );     
+    }
 
-	.campaign-donation {
-		@include padding( 0, 0, 24 );		
-	}
+    .donate-button {            
+        margin: 0;
+        height: 100%;           
+        @include padding( $size__margin, 20 );
+        @include font-size( 25 );
+        &:hover {
+            @include color( $color__text-overlay );
+        }
+    }
 
-	.donate-button {			
-		margin: 0;
-		height: 100%;			
-		@include padding( 12, 20 );
-		@include font-size( 25 );
-		&:hover {
-			@include color( $color__text-overlay );
-		}
-	}
+    .campaign-finished {
+        @include margin-bottom( $size__margin-double );
+        @include font-size( 20 );
+        @include line-height( 30 );
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
 
-	.campaign-finished {
-		@include margin-bottom( 24 );
-		@include font-size( 20 );
-		@include line-height( 30 );
-		text-align: center;
-		text-transform: uppercase;
-		font-weight: 300;
-	}
+    .barometer {
+        position: relative; 
+        float: left;
+        @include margin( 0, $size__margin );
+        z-index: 30;
+        @include width( 146 );
+        @include height( 146 );
 
-	.barometer {
-		position: relative;	
-		float: left;
-		@include margin-right( 10 );
-		z-index: 30;
-		@include width( 146 );
-		@include height( 146 );
+        span {
+            position: absolute;
+            left: 0;
+            @include top( 47 );
+            @include width( 146 );
+            text-align: center;
+            display: inline-block;
+            @include font-size( $font__font-size-big );
+            font-style: italic;
+            opacity: 0; /* This is animated by JS */
 
-		span {
-			position: absolute;
-			left: 0;
-			@include top( 47 );
-			@include width( 146 );
-			text-align: center;
-			display: inline-block;
-			@include font-size( 16 );
-			font-style: italic;
-			opacity: 0; /* This is animated by JS */
+            span {
+                position: static;
+                @include font-size ( 30 );
+                @include line-height ( 30 );
+                font-style: normal;
+            }
+        }
+    }
 
-			span {
-				position: static;
-				@include font-size ( 30 );
-				@include line-height ( 30 );
-				font-style: normal;
-			}
-		}
-	}
+    .campaign-stats {
+        padding: 0;
+        margin-bottom: 0;
+        list-style: none;
+        text-align: center;
+            
+        li {            
+            @include padding-bottom( $size__margin );
+            @include margin-bottom( $size__margin );
+            border-bottom: {
+                @include width( 1 ); 
+                style: solid; 
+                color: rgba(255, 255, 255, 0.3);
+            }
+            @include font-size( $font__font-size-big );
+            font-style: italic;
+            font-weight: 300;
 
-	.campaign-stats {
-		float: right;
-		text-align: right;
-		list-style: none;
-		padding-left: 0;
-		width: -webkit-calc(100% - 156px);
-		width: -moz-calc(100% - 156px);
-		width: calc(100% - 156px);
-		@include max-width( 180 );
-		margin-bottom: 0;
-			
-		li {			
-			@include padding-bottom( 10 );
-			@include margin-bottom( 10 );
-			border-bottom: {
-				@include width( 1 ); 
-				style: solid; 
-				color: rgba(255, 255, 255, 0.3);
-			}
-			@include font-size( 16 );
-			font-style: italic;
-			font-weight: 300;
+            span {
+                @include font-size( 20 );
+                @include line-height( 30 );
+                text-transform: uppercase;
+                @include letter-spacing( 1 );
+                display: block;
+                font-style: normal;
+            }
 
-			span {
-				@include font-size( 20 );
-				@include line-height( 30 );
-				text-transform: uppercase;
-				@include letter-spacing( 1 );
-				display: block;
-				font-style: normal;
-			}
+            &:last-child {
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+        }
+    }
 
-			&:last-child {
-				padding-bottom: 0;
-				border-bottom: none;
-			}
-		}
-	}
+    .campaign-support {
+        float: left;
+        width: 100%;
+        @include padding-bottom( 30 );
+        text-align: center;
+    }
 
-	.campaign-support {
-		float: left;
-		width: 100%;
-		@include padding-bottom( 30 );
-		text-align: center;
-	}
+    .campaign-sharing {
+        position: relative;
+        @include fullwidth-calc( $size__margin-double );
+        @include padding( $size__margin, 0, 0, 0 );        
+        text-align: center;
+        border-top: {
+            @include width( 1 );
+            color: rgba(255, 255, 255, 0.3);
+            style: solid;
+        }
 
-	.campaign-sharing {
-		padding: 0;
-		@include margin-top( 20 );
-		max-width: 100%;	
-		text-align: center;		
+        h6 {
+            @include margin( 0, 10 );
+            @include line-height( 22px );
+        }       
 
-		h6 {
-			@include margin( 0, 10 );
-			@include line-height( 22px );
-		}		
+        li {
+            width: auto !important;
+            margin-bottom: 0;
+            vertical-align: top;
+        }
 
-		li {
-			width: auto !important;
-			margin-bottom: 0;
-			vertical-align: top;
-		}
+        .icon {
+            @include padding( 0, 10 );
+            @include font-size( 22 );
+            cursor: pointer;
+            &:before {
+                @include color( $color__text-overlay );
+            }
+        }       
+    }
 
-		.icon {
-			@include padding( 0, 10 );
-			@include font-size( 22 );
-			cursor: pointer;
-			&:before {
-				@include color( $color__text-overlay );
-			}
-		}		
-	}
+    @include bp( 440 ) {
+        .campaign-details,
+        .campaign-sharing {
+            margin: 0 auto;
+            left: auto;
+            width: 100%;
+            @include max-width( 540 );
+        }        
+    }
 
-	@media all and (min-width: 37.5em) and (max-width: 55em) {
+    @include bp ( 800 ) {
+        @include margin-bottom( $size__margin-triple );
+        
+        .campaign-video,
+        .campaign-image {
+            left: 0;
+            width: 55%;            
+            float: left;
+            @include padding-right( $size__margin-double );
+        
+            .wp-post-image {
+                border: {
+                    @include width( 5 );
+                    style: solid;
+                    color: rgba( 255, 255, 255, 0.3 );
+                }
+                border-radius: 0.4rem;
+                width: 100%;
+            }
+        }
 
-		.campaign-details {
-			position: relative;
-			width: 100%;			
-			padding-bottom: 7.4rem;	
-		
-			.campaign-support {
-				float: right; 
-				width: 70%;
-			}
+        .campaign-details {
+            float: left;
+            padding: 0;
+            margin: 0.3rem 0 0 0;      
+            width: 45%;
+        }
 
-			ul {
-				width: 70%;
-				max-width: 88rem;
-				text-align: center;
-			}
+        .barometer {
+            margin-left: 0;
+        }
 
-			li {
-				display: inline-block;
-				padding-right: 2rem; padding-left: 2rem;
-				border-right: 0.1rem solid rgba(255, 255, 255, 0.3);
-				border-bottom: 0;
-			}
+        .campaign-stats {            
+            li {
+                padding-right: 0;
+            }
+        }
 
-			.campaign-backers {
-				border: none;
-			}
-		}
+        .campaign-sharing {
+            float: right;
+            width: 45%;
+            margin-left: 0;
+        }
+    }
 
-		.campaign-countdown {
-			position: absolute;
-			bottom: 0;
-			left: 0;		
-			width: 100%;		
-			padding: 1rem 13% 0 13%;
-			border-bottom: 0;
-			border-top:  0.1rem solid rgba(255, 255, 255, 0.3);		
-			text-align: center;
-		}
+    @include bp( 988 ) {
+        .campaign-video, 
+        .campaign-image {
+            width: -moz-calc(100% - 40rem);
+            width: -webkit-calc(100% - 40rem);
+            width: calc(100% - 40rem);
+        }
 
-		.campaign-sharing {
-			padding-top: 2.4rem;
-			margin-top: 1.2rem;
-			border-top: 0.1rem solid rgba(255, 255, 255, 0.3);
-		}
+        .campaign-details, 
+        .campaign-sharing {
+            width: 40rem;
+        }
+    }
+}
 
-		&.ended {
-			.campaign-summary {
-				padding-bottom: 1.2rem;
-			
-				ul {
-					margin-top: 4.8rem; 
-				}
-			}
-		}
-	}
+.campaign-summary.campaign-has-goal {
+    .campaign-stats {
+        float: right;       
+        width: -webkit-calc(100% - #{146 + $size__margin * 2}px);
+        width: -moz-calc(100% - #{146 + $size__margin * 2}px);
+        width: calc(100% - #{146 + $size__margin * 2}px);       
+        text-align: right;
 
-	@include bp ( 880 ) {
-		.campaign-video,
-		.campaign-image {
-			width: 50%;
-			width: -moz-calc(100% - 43rem);
-			width: -webkit-calc(100% - 43rem);
-			width: calc(100% - 43rem);
-			float: left;
-			margin-right: 0;		
-		
-			.wp-post-image {
-				border: {
-					@include width( 5 );
-					style: solid;
-					color: rgba( 255, 255, 255, 0.3 );
-				}
-				border-radius: 0.4rem;
-				width: 95.3%;
-				width: -moz-calc(100% - 1.8rem);
-				width: -webkit-calc(100% - 1.8rem);
-				width: calc(100% - 1.8rem);
-			}
-		}
+        li {            
+            @include bp ( 880, false ) {
+                @include padding-right( $size__margin );
+            }
+        }
+    }
+}
 
-		.campaign-details {
-			float: left;
-			padding-left: 0;
-			padding-top: 0.3rem;
-			margin-left: 4rem;
-			margin-right: 0;
-		}	
+.campaign-summary.no-media {
+    .campaign-details {
+        float: none;
+        margin: 0.3rem auto 0 auto;
+    }
 
-		.campaign-sharing {
-			float: right;
-			width: 38rem;
-			margin-left: 0;
-		}
-	}
+    .campaign-sharing {
+        float: none;
+        margin-left: auto;
+    }    
 }
 
 /* Countdown */
 @import "campaign-countdown";
 
 .share-widget {
-	.modal {
-		text-align: left;
-	}
-	
-	.modal, 
-	.modal .block-title {
-		@include color( $color__text );
-	}
+    .modal {
+        text-align: left;
+    }
+    
+    .modal, 
+    .modal .block-title {
+        @include color( $color__text );
+    }
 
-	pre {
-		word-break: break-word;
-	}
+    pre {
+        word-break: break-word;
+    }
 
-	.block {
-		border: none;
-		&.iframe-block {
-			@include width( 275 );
-		}
-	}
+    .block {
+        border: none;
+        &.iframe-block {
+            @include width( 275 );
+        }
+    }
 
-	@include bp( 768 ) {
-		.modal {
-			@include width( 634 );
-		}
+    @include bp( 768 ) {
+        .modal {
+            @include width( 634 );
+        }
 
-		.block {
-			float: left;
-			@include width( 275 );
-			@include padding-right( 12 );
+        .block {
+            float: left;
+            @include width( 275 );
+            @include padding-right( $size__margin );
 
-			&.iframe-block {
-				float: right;
-				padding: 0;
-			}
-		}
-	}
+            &.iframe-block {
+                float: right;
+                padding: 0;
+            }
+        }
+    }
 }
 
 .charitable-ambassadors-campaign-creator-toolbar {
-	@include fullwidth-wrapper-padded();
-	@include padding( 12, 45 );
-	@include background-color( $color__accent-hover );
-	@include color( $color__text-overlay );
+    @include fullwidth-wrapper-padded();
+    @include padding( $size__margin, $size__margin-double );
+    @include background-color( $color__accent-hover );
+    @include color( $color__text-overlay );
 
-	a {
-		float: right;
-		@include color( $color__background-content );
-		font-weight: 100;
+    @include bp( 800 ) {
+        @include padding-left( $size__margin-triple + 9 );
+        @include padding-right( $size__margin-triple + 9 );
+    }
 
-		&:hover {
-			@include color( $color__text-overlay );
-		}
-	}
+    a {
+        float: right;
+        @include color( $color__background-content );
+        font-weight: 100;
 
-	.edit-link::before {
-		@include icon();
-		content: "\f040";
-	}
+        &:hover {
+            @include color( $color__text-overlay );
+        }
+    }
 
-	.campaign-status {
-		color: rgba(255, 255, 255, 0.5);
-	}
+    .edit-link::before {
+        @include icon();
+        content: "\f040";
+    }
+
+    .campaign-status {
+        color: rgba(255, 255, 255, 0.5);
+    }
 }

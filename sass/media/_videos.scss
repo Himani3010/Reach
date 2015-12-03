@@ -4,9 +4,9 @@
 }
 
 .fit-video {
-	@include margin-bottom( 24 );
+	@include margin-bottom( $size__margin-double );
 }
 
 .campaign-video .fit-video {
-	@include margin-bottom( 36 );
+	@include margin-bottom( $size__margin-triple );
 }

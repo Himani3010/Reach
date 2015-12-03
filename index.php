@@ -13,32 +13,35 @@
 
 get_header();
 
-get_template_part( 'partials/banner' ) ?>
+?>
+<main id="main" class="site-main site-content cf" role="main">	
+	<div id="primary" class="content-area <?php if ( ! is_active_sidebar( 'default' ) ) : ?>no-sidebar<?php endif ?>">
+	<?php 
 
-<div class="layout-wrapper">
-	<main class="site-main content-area" role="main">					
-		<?php 
-		if ( have_posts() ) : 
-			while ( have_posts() ) : 
-				the_post(); 
+	get_template_part( 'partials/banner' );
 
-				get_template_part( 'partials/content', get_post_format() );
+	if ( have_posts() ) : 
+		while ( have_posts() ) : 
+			the_post(); 
 
-			endwhile; 
+			get_template_part( 'partials/content', get_post_format() );
 
-			reach_paging_nav();
+		endwhile; 
 
-		else :
+		reach_paging_nav();
 
-			get_template_part( 'partials/content', 'none' );
+	else :
 
-		endif;		
-		?>	
-	</main><!-- .site-main -->
+		get_template_part( 'partials/content', 'none' );
+
+	endif;
+
+	?>
+	</div><!-- #primary -->
 
 	<?php get_sidebar() ?>
 	
-</div><!-- .layout-wrapper -->
+</main><!-- #main -->
 <?php 
 
 get_footer();

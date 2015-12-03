@@ -3,36 +3,52 @@
  * @package Reach
  */
 ?>
-<article id="post-<?php the_ID() ?>" <?php post_class() ?>>			
+<article id="post-<?php the_ID() ?>" <?php post_class() ?>>
+	<?php 
 
-	<?php get_template_part( 'partials/featured-image' ) ?>
+	/* Add the header banner if this is a single post. */
+	if ( is_single() ) : 
+		get_template_part( 'partials/banner' );
+	endif; 
 
-	<?php if ( is_single() ) : ?>
+	?>
+	<div class="block entry-block">
+		<?php
 
-		<?php get_template_part('meta', 'above') ?>
+		get_template_part( 'partials/featured-image' );
 
-	<?php endif ?>
+		/* Display meta above content if this is a single post. */
+		if ( is_single() ) :
+			get_template_part( 'meta', 'above' );
 
-	<?php reach_post_header() ?>			
+		/* If this is an archive, display the post title. */
+		else : 
+			reach_post_header();
+		endif;
 
-	<div class="entry cf">				
-		<?php 
-		the_content(); 			
-
-		wp_link_pages( array( 
-			'before' => '<p class="entry_pages">' . __('Pages: ', 'reach') 
-		) ); 
 		?>
-	</div>						
+		<div class="entry cf">				
+			<?php 
 
-	<?php if ( is_single() ) : ?>
-			
-		<?php get_template_part( 'partials/meta', 'taxonomy' ) ?>				
+			the_content(); 			
 
-	<?php else : ?>				
+			wp_link_pages( array( 
+				'before' => '<p class="entry_pages">' . __( 'Pages: ', 'reach' ) 
+			) );
 
-		<?php get_template_part('meta', 'below') ?>
+			?>
+		</div><!-- .entry -->
+		<?php 
 
-	<?php endif ?>			
+		/* Display taxonomy meta on single posts. */
+		if ( is_single() ) :
+			get_template_part( 'partials/meta', 'taxonomy' );
 
-</article>
+		/* Display alternative meta on archives. */
+		else :
+			get_template_part( 'meta', 'below' );
+		endif;
+
+		?>
+	</div><!-- .entry-block -->
+</article><!-- post-<?php the_ID() ?> -->

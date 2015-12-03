@@ -27,11 +27,11 @@ input[type="date"],
 textarea {
 	@include max-width( 300 );
 	width: 100%;
-	@include padding( 11, 10 );
+	@include padding( $size__margin, 10 );
 	margin-top: 0;
-	border: none;
+	@include border( 1, $color__border-input );
 	border-radius: 0.2rem;
-	@include font-size( 11 );
+	@include font-size();
 	box-shadow: none;
 	@include background-color( $color__background-form-fields );
 	@include property-transition( background-color, 200ms );
@@ -54,8 +54,8 @@ select {
 	position: relative;
 	width: 100%;
 	@include max-width( 300 );
-	@include padding( 11, 10 );	
-	border: none;
+	@include padding( $size__margin, 10 );	
+	@include border( 1, $color__border-input );
 	border-radius: 0.2rem;
 }
 
@@ -67,12 +67,11 @@ select {
 
 label {
 	display: block;
-	@include padding( 8, 0, 0 );
-	@include line-height( 22 );
+	@include padding( $size__margin, 0, 0 );
 }
 
 legend {	
-	@include padding-bottom( 6 );
+	@include padding-bottom( $size__margin-half );
 	@include border-bottom( 1, $color__border-primary );
 	@include font-size( 18 );
 }

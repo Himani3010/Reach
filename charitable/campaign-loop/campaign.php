@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 $campaign = charitable_get_current_campaign();
 
 ?>
-<div id="campaign-<?php echo get_the_ID() ?>" class="campaign block entry-block cf">    
+<div id="campaign-<?php echo get_the_ID() ?>" class="campaign-widget campaign block cf">    
     <?php
     
     /**

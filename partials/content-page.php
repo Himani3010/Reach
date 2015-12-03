@@ -7,17 +7,23 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	
-	<div class="entry cf">
-		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'reach' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry -->
-	
-	<?php get_template_part( 'partials/meta', 'below' ) ?>
+	<?php 
 
-</article><!-- #post-## -->
+	get_template_part( 'partials/banner' );
+
+	?>
+	<div class="block entry-block">
+		<div class="entry cf">
+			<?php the_content(); ?>
+			<?php
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . __( 'Pages:', 'reach' ),
+					'after'  => '</div>',
+				) );
+			?>
+		</div><!-- .entry -->
+	
+		<?php get_template_part( 'partials/meta', 'below' ) ?>
+		
+	</div><!-- .entry-block -->
+</article><!-- post-<?php the_ID() ?> -->

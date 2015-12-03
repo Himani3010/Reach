@@ -28,7 +28,7 @@ class Reach_Theme {
 	/**
 	 * The theme version. 
 	 */
-	const VERSION = '0.9.29';
+	const VERSION = '0.9.31';
 
 	/**
 	 * Database version number. 
@@ -406,7 +406,7 @@ class Reach_Theme {
 		 * @link 	http://codex.wordpress.org/Post_Formats
 		 */
 		add_theme_support( 'post-formats', array(
-			'aside', 'image', 'video', 'quote', 'link',
+			'aside', 'video', 'quote', 'link',
 		) );
 
         /**
@@ -628,6 +628,8 @@ class Reach_Theme {
         if ( is_page_template( 'page-template-home-slider.php' ) ) {
             return array_merge( $classes, array( 'feature-block', 'center', 'block' ) );
         }
+
+        return $classes;
 
         return array_merge( $classes, array( 'block', 'entry-block' ) );
     }

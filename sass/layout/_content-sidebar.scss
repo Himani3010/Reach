@@ -1,4 +1,4 @@
-#page {		
+#page {
 	position: relative;	
 	overflow-x: hidden;	
 }
@@ -10,37 +10,48 @@
 }
 
 #main {
-	@include padding( 36, 24 );	
-	@include background-color( $color__background-wrapper );	
+	@include padding( 0, 0, $size__margin-triple );	
+	@include background-color( $color__background-wrapper );
 
-	@include bp ( 800 ) {
-		@include padding-right( 36 );
-		@include padding-left( 36 );
+	@include bp( 800 ) {
+		@include padding-left( $size__margin-triple );
+		@include padding-right( $size__margin-triple );
 	}
 }
 
 .content-area,
 .sidebar {
+	float: left;
 	width: 100%;
-	@include margin-bottom( 48 );
-	@include hidden-overflow();
 }
 
-@include bp( 720 ) {
+.sidebar {
+	@include padding( $size__margin-triple, $size__margin-double, 0 );
+}
+
+@include bp( 800 ) {	
 	.content-area {
-		float: left;
 		width: 68%;
-		@include padding-right( 36 );
+		@include padding-right( $size__margin-triple );
 	}
 
 	.sidebar {
-		float: right;
 		width: 32%;
+		@include margin-top( 104 );
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	.content-area.no-sidebar {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+		padding-right: 0;
 	}
 }
 
 #site-footer {
-	@include padding( 24 );
+	@include padding( $size__margin-double );
 
 	a {
 		height: auto;

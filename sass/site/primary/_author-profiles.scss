@@ -7,7 +7,7 @@ body.author {
 	.site-main {
 		float: none;
 		width: 100%;
-		@include padding( 24 );
+		@include padding( $size__margin-double );
 		@include border( 1 );
 		border-top: none;
 		border-radius: 0 0 0.4rem 0.4rem;	    
@@ -15,13 +15,13 @@ body.author {
 		box-shadow: 0 0 0.1rem $color__background-content;
 
 		@include bp( 600 ) {
-			@include padding( 36 );
+			@include padding( $size__margin-triple );
 		}
 	}	
 
 	.author-description {
-		@include padding-bottom( 24 );
-		@include margin-bottom( 24 );
+		@include padding-bottom( $size__margin-double );
+		@include margin-bottom( $size__margin-double );
 		@include border-bottom;
 		@include bp( 800 ) {
 			float: left; 
@@ -35,7 +35,7 @@ body.author {
 	.author-avatar {
 		@include bp( 600 ) {
 			float: left;
-			@include padding-right( 12 );
+			@include padding-right( $size__margin );
 			max-width: 50%;
 		}
 	}
@@ -71,7 +71,7 @@ body.author {
 		@include bp( 800 ) {
 			float: left; 
 			width: 60%;
-			@include padding( 0, 0, 0, 36 );
+			@include padding( 0, 0, 0, $size__margin-triple );
 
 			h3 {			
 				text-align: center;
@@ -105,7 +105,7 @@ body.author {
 
 		li {
 			position: relative;
-			@include padding( 24, 0 );
+			@include padding( $size__margin-double, 0 );
 			@include border-bottom;
 
 			&:last-child {
@@ -140,7 +140,7 @@ body.author {
 			@include bp( 800 ) {
 				float: left;
 				width: 70%;
-				@include padding-right( 12 );
+				@include padding-right( $size__margin );
 				-webkit-transform: translateY( 50% );
 				-moz-transform: translateY( 50% );
 				-ms-transform: translateY( 50% );

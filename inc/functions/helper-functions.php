@@ -154,10 +154,6 @@ function reach_get_banner_title() {
             $title = apply_filters( 'reach_banner_title_blog', '' );
         }            
     }
-    /* Posts */
-    elseif ( is_single() ) {
-        $title = apply_filters( 'reach_banner_title_blog', __( 'Blog', 'reach' ) );
-    }
     /* 404 Page */
     elseif ( is_404() ) {
         $title = apply_filters( 'reach_banner_title_404', '404' );
@@ -179,8 +175,8 @@ function reach_get_banner_title() {
     elseif ( is_archive() ) {
         $title = apply_filters( 'reach_banner_title_archive', single_term_title( '', false ) );
     }
-    /* Regular Page */
-    elseif ( is_page() ) {
+    /* Fallback */
+    else {
         $title = apply_filters( 'reach_banner_title_page', get_the_title() );
     } 
     

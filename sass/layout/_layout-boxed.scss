@@ -12,7 +12,7 @@
 
     .social {
         @include bp( 1190 ) {
-            @include padding-left( 45 );
+            @include padding-left( $size__margin-triple + 9 );
         }
     }
 
@@ -33,11 +33,11 @@
 
     .site-navigation {        
         .menu-button {
-            @include right( 24 );
+            @include right( $size__margin-double );
         }
 
         @include bp( 800 ) {
-            @include padding-right( 36 );
+            @include padding-right( $size__margin-triple );
         }
     }
 
@@ -77,20 +77,3 @@
         }
     }
 }
-
-// body.wide-layout {}
-// body.wide-layout #page {width: 100%;}
-
-// .wide-layout .layout-wrapper {
-//     max-width: 120rem;
-//     margin: 0 auto;
-// }
-
-// .wide-layout .body-wrapper {
-//     padding: 0;
-//     border-radius: 0;
-// }
-
-// .wide-layout #header {
-//     border-radius: 0;
-// }

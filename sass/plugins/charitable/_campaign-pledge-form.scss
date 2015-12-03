@@ -1,11 +1,11 @@
 .campaign-pledge-levels {
-	@include padding( 12, 0, 36 );
+	@include padding( $size__margin, 0, $size__margin-triple );
 	list-style: none;
 	text-align: left;	
 
 	li.pledge-level {
 		position: relative;
-		@include margin-bottom( 12 );
+		@include margin-bottom();
 
 		.pledge-title {
 			position: absolute;
@@ -42,6 +42,6 @@
 .edd-cart-ajax-alert {
 	float: left;
 	width: 100%;
-	@include padding-top( 24 );
+	@include padding-top( $size__margin-double );
 	font-style: italic;
 }

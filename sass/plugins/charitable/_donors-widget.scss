@@ -1,20 +1,31 @@
 .widget.widget_charitable_donors_widget {
+    @include padding-bottom( $size__margin ); // The donors are going to add the bottom margin
+
     .donors-list {
+        margin: 0;
+
         .donor-name {
-            @include font-size( 14 );
+            @include font-size();
             @include line-height( 22 );
         }
 
         .donor {
             float: left;
             @include width( 100 );
-            @include padding( 0, 12, 0, 0 );
+            @include padding( 0, $size__margin, 0, 0 );
             border: none;                
 
             &:nth-child( 6n+7 ) {
                 clear: left;
             }
-        }        
+        }
+
+        .donor-name, 
+        .donor-location, 
+        .donor-donation-amount {
+            @include margin( 0, 0, $size__margin-half );
+            padding: 0;
+        }
 
         @media (max-width: em(410)) { 
             .donor:nth-child( 2n+3 ) {

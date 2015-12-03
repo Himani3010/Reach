@@ -12,7 +12,7 @@
 
 	.feature-block {
 		float: left;
-		@include padding-top( 36 );
+		@include padding-top( $size__margin-triple );
 		border: none;
 		border-radius: 0;
 		box-shadow: none;		
@@ -20,7 +20,7 @@
 	}		
 
 	.page-title {
-		@include padding( 24, 0, 0 );
+		@include padding( $size__margin-double, 0, 0 );
 		margin-bottom: 0;
 	}
 
@@ -31,13 +31,13 @@
 		@include line-height( 28 );
 
 		.button {
-			@include margin( 12, 3, 0 );
+			@include margin( $size__margin, 3, 0 );
 		}		
 	}
 
 	.campaigns-grid {
-		@include font-size( 12 );
-		@include line-height( 20 );
+		@include font-size();
+		@include line-height();
 
 		.block-title {
 			text-transform: uppercase;
@@ -45,8 +45,8 @@
 	}
 
 	.charitable-campaign-map-marker {
-		@include font-size( 12 );
-		@include line-height( 20 );
+		@include font-size();
+		@include line-height();
 		text-align: left;
 
 		h3 {

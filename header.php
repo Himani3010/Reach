@@ -27,7 +27,7 @@
 			<?php get_template_part( 'partials/account-links' ) ?>
 		</div><!-- .layout-wrapper -->
 		<div class="body-wrapper">
-			<header id="header" class="cf wrapper site-header" role="banner">
+			<header id="header" class="cf site-header" role="banner">
 				<div class="layout-wrapper">
 					<div class="site-branding site-identity">
 						<?php reach_site_identity() ?>					
@@ -44,4 +44,4 @@
 				    </div><!-- .site-navigation -->
 				</div><!-- .layout-wrapper -->
 			</header><!-- #header -->
-			<div id="main" class="site-content cf">
+			<!-- <div id="main" class="site-content cf"> -->

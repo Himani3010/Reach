@@ -70,6 +70,7 @@ class Reach_EDD {
      * @since   1.0.0
      */
     private function attach_hooks_and_filters() {   
+        remove_action( 'edd_after_download_content', 'edd_append_purchase_link' );
         add_action( 'edd_purchase_link_top', 'reach_edd_show_price', 8, 3 );    
 
         add_filter( 'template_include', array( $this, 'edd_checkout_template' ) );

@@ -7,12 +7,15 @@
 
 	<h3 class="section-title"><?php _e( 'Latest Projects', 'reach' ) ?></h3>
 
-	<?php charitable_template_campaign_loop( Charitable_Campaigns::query(), 3 ) ?>
-
 	<?php 
+	$campaigns = Charitable_Campaigns::query();
+
+	charitable_template_campaign_loop( $campaigns, 3 );
+	
 	wp_reset_postdata();
 
-	if ($campaigns->max_num_pages > 1) : ?>	
+	if ($campaigns->max_num_pages > 1) :
+	?>
 
 		<p class="center">
 			<a class="button button-alt" href="<?php echo site_url( apply_filters( 'reach_previous_campaigns_link', '/campaigns/page/2/' ) ) ?>">
