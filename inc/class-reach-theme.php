@@ -28,7 +28,7 @@ class Reach_Theme {
 	/**
 	 * The theme version. 
 	 */
-	const VERSION = '0.9.31';
+	const VERSION = '0.9.33';
 
 	/**
 	 * Database version number. 
@@ -456,16 +456,7 @@ class Reach_Theme {
 
         register_sidebar( array(
             'id'            => 'footer_left',            
-            'name'          => __( 'Footer left', 'reach' ),
-            'before_widget' => '<aside id="%1$s" class="widget footer-widget %2$s">',
-            'after_widget'  => '</aside>',
-            'before_title'  => '<div class="title-wrapper"><h4 class="widget-title">',
-            'after_title'   => '</h4></div>'
-        )   );
-
-        register_sidebar( array(
-            'id'            => 'footer_right',            
-            'name'          => __( 'Footer right', 'reach' ),
+            'name'          => __( 'Footer', 'reach' ),
             'before_widget' => '<aside id="%1$s" class="widget footer-widget %2$s">',
             'after_widget'  => '</aside>',
             'before_title'  => '<div class="title-wrapper"><h4 class="widget-title">',

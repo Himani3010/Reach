@@ -10,16 +10,7 @@
 		<!--</div>--><!-- #main -->
 		<footer id="site-footer" role="contentinfo">
 			<div class="layout-wrapper">
-				<div class="footer-left">
-					<?php 
-					dynamic_sidebar( 'footer_left' ) 
-					?>
-				</div>
-				<div class="footer-right">
-					<?php 
-					dynamic_sidebar( 'footer_right' ) 
-					?>
-				</div>
+				<?php dynamic_sidebar( 'footer_left' ) ?>
 				<div id="colophon">
 					<?php 
 					if ( function_exists('wpml_languages_list') ) :

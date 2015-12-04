@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         watch: {            
             sass: {
                 files: ['sass/*.scss', 'sass/**/*.scss'],
-                tasks: ['sass:dist']
+                tasks: ['sass:watch']
             },
             concat: {
                 files: ['js/reach/*.js', 'js/reach/**/*.js'], 
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         },    
 
         // Sass
-        sass: {
+        sass: {            
             dist: {
                 files: {
                     'css/main.css' : 'sass/main.scss', 
@@ -37,7 +37,13 @@ module.exports = function(grunt) {
                     'css/base.css' : 'sass/base.scss',
                     'css/palettes/_classic.css' : 'sass/palette-classic.scss'
                 },
-                trace : true
+                trace: true
+            },
+            watch: {
+                files: {
+                    'css/main.css' : 'sass/main.scss', 
+                }, 
+                trace: true
             },
             palettes: {
                 files: {
@@ -47,7 +53,7 @@ module.exports = function(grunt) {
                     'css/palettes/_custom.css' : 'sass/palette-custom.scss',
                     'css/palettes/_franklin.css' : 'sass/palette-franklin.scss'
                 },
-                trace : true
+                trace: true
             },
         },        
 

@@ -49,11 +49,3 @@
 		padding-right: 0;
 	}
 }
-
-#site-footer {
-	@include padding( $size__margin-double );
-
-	a {
-		height: auto;
-	}
-}

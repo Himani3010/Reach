@@ -2,10 +2,11 @@
 17.1 Footer Widget Area
 --------------------------------------------------------------*/
 #site-footer {
-	@include padding( 24, 36 );
+	@include padding( $size__margin-triple, $size__margin-double );
 	@include color( $color__text-overlay );
 
 	a {
+		height: auto;
 		@include color( $color__text-overlay );
 		text-decoration: none;
 	}
@@ -18,9 +19,8 @@
 }
 
 .footer-widget {
-	float: left;	
 	padding: 0;		
-	@include margin( 0, 0, 12 );
+	@include margin( 0, 0, $size__margin-double );
 	border: none;
 	background: transparent !important;
 
@@ -33,55 +33,30 @@
 		border: none;
 		padding-left: 0;
 		padding-right: 0;
-		@include margin-bottom( 12 );
+		@include margin-bottom( $size__margin );
 	}	
-}
 
-.footer-right {
-	.footer-widget {
-		width: 50%;
-		@include padding-left( 24 );
-	}
+	@include bp( 600 ) {	
+		float: left;
+		width: 33%;
+		@include padding-right( $size__margin-double );
 
-	.footer-widget:nth-child( 2n+1 ) {
-		padding-left: 0;
-	}
-
-	@include bp( 600 ) {
-		.footer-widget {
-			width: 33%;			
+		&:nth-child( 4n+1 ) {
+			width: 100%;
 		}
 
-		.footer-widget:nth-of-type( 2n+1 ) {
-			@include padding-left( 24 );
-		}
-
-		.footer-widget:nth-of-type( 3n+1 ) {
-			padding-left: 0;
+		&:nth-child( 4n+3 ) {
+			padding-right: 0;
 		}
 	}
 
 	@include bp( 786 ) {
-		float: left;
-		width: 60%;
-		padding-left: 0;
+		width: 20%;
 
-		.footer-widget:nth-of-type( 3n+1 ) {
-			@include padding-left( 24 );
+		&:nth-child( 4n+1 ) {
+			width: 40%;
 		}
 	}
-}
-
-@include bp( 786 ) {
-	.footer-left {
-		float: left;
-		width: 40%;
-
-		.footer-widget {
-			width: 100%;
-			margin: 0;	
-		}
-	}	
 }
 
 /*--------------------------------------------------------------

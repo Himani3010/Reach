@@ -22,6 +22,11 @@
 		@include left( -$size__margin-triple );
 		@include margin-bottom( $size__margin-triple );
 	}
+
+	@include bp( 1484 ) {
+		left: -50vw;
+		@include margin-left( 700 );
+	}
 }
 
 .blog .banner, 

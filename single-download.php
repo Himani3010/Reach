@@ -9,26 +9,27 @@ get_header();
 
 ?>  
 <main id="main" class="site-main site-content cf" role="main">  
-    <div id="primary" class="content-area <?php if ( ! is_active_sidebar( 'default' ) ) : ?>no-sidebar<?php endif ?>">
-    <?php 
+    <div class="layout-wrapper">
+        <div id="primary" class="content-area <?php if ( ! is_active_sidebar( 'default' ) ) : ?>no-sidebar<?php endif ?>">
+            <?php 
 
-    while ( have_posts() ) : 
-        the_post();
+            while ( have_posts() ) : 
+                the_post();
 
-        get_template_part( 'partials/content', 'download' );
-        
-        /* If comments are open or we have at least one comment, load up the comment template */
-        if ( comments_open() || get_comments_number() ) :
-            comments_template();
-        endif;            
+                get_template_part( 'partials/content', 'download' );
+                
+                /* If comments are open or we have at least one comment, load up the comment template */
+                if ( comments_open() || get_comments_number() ) :
+                    comments_template();
+                endif;            
 
-    endwhile; // end of the loop. 
+            endwhile; // end of the loop. 
 
-    ?>
-    </div><!-- #primary -->
+            ?>
+        </div><!-- #primary -->
 
-    <?php get_sidebar( 'download' ); ?>
-
+        <?php get_sidebar( 'download' ); ?>
+    </div><!-- .layout-wrapper -->
 </main><!-- #main -->
 
 <?php get_footer();
