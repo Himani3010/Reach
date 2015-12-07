@@ -1,3 +1,10 @@
+<?php 
+
+if ( ! reach_has_charitable() ) : 
+	return;
+endif;
+
+?>
 <div class="campaigns-grid-wrapper">								
 
 	<nav class="campaigns-navigation" role="navigation">
@@ -25,4 +32,4 @@
 
 	<?php endif ?>
 
-</div>
+</div><!-- .campaigns-grid-wrapper -->

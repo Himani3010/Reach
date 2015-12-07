@@ -1,10 +1,11 @@
-.format-video > .fit-video {
-	@include fullwidth-wrapper();
-	margin: 0;
+.fit-video {
+    @include margin-bottom( $size__margin-double );
+    text-align: center;
 }
 
-.fit-video {
-	@include margin-bottom( $size__margin-double );
+.format-video > .fit-video {
+	@include fullwidth-wrapper();
+	margin: 0;    
 }
 
 .campaign-video .fit-video {

@@ -18,11 +18,14 @@ if ( ! has_post_thumbnail( $campaign->ID ) ) :
     return;
 endif;
 
+$context = isset( $view_args[ 'context' ] ) ? $view_args[ 'context' ] : 'summary';
+$size = 'summary' == $context ? 'campaign-thumbnail-summary' : 'post-thumbnail';
+
 ?>
 <div class="campaign-image">
     <?php 
     echo charitable_template_campaign_status_tag( $campaign );
             
-    echo get_the_post_thumbnail( $campaign->ID, 'campaign-thumbnail-large' );
+    echo get_the_post_thumbnail( $campaign->ID, $size );
     ?>
 </div>

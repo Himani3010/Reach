@@ -2,8 +2,8 @@
 	float: left;
 	width: 100%;
 	clear: both;	
-	@include margin( 24, 0, 0 );
-	@include padding( 24, 0 );
+	@include margin( $size__margin-double, 0, 0 );
+	@include padding( $size__margin-double, 0 );
 	border-top: {
 		@include width( 1 ); 
 		style: solid;
@@ -20,5 +20,11 @@
 		width: 100%;	
 		margin: 0;
 		padding: 0;	
+	}
+
+	&.no-widgets {
+		margin: 0;
+		padding: 0;
+		border-top: 0;
 	}
 }

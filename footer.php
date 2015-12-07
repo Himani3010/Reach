@@ -11,7 +11,7 @@
 		<footer id="site-footer" role="contentinfo">
 			<div class="layout-wrapper">
 				<?php dynamic_sidebar( 'footer_left' ) ?>
-				<div id="colophon">
+				<div id="colophon" <?php if ( ! is_active_sidebar( 'footer_left' ) ) : ?>class="no-widgets"<?php endif ?>>
 					<?php 
 					if ( function_exists('wpml_languages_list') ) :
 						echo wpml_languages_list(0, 'language-list');

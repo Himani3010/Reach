@@ -1,11 +1,11 @@
 body.user-dashboard {
-	.site-main {
-		width: 100%;
-		padding: 0;		
+
+	.content-area {
+	    width: 100%;
 	}
 
 	.entry-block {
-		@include padding( 36, 36, 0, 36 );
+		@include padding( $size__margin-triple, $size__margin-triple, 0, $size__margin-triple );
 		border-radius: 0 0.4rem 0.4rem 0.4rem;
 	}
 
@@ -15,7 +15,7 @@ body.user-dashboard {
 	}
 	
 	.entry {
-		@include padding( 0, 0, 36 );
+		@include padding( 0, 0, $size__margin-triple );
 		border: none;
 	}
 	
@@ -41,7 +41,7 @@ body.user-dashboard {
 }
 
 .user-dashboard-menu {
-	@include font-size( 13 );
+	@include font-size();
 	font-family: $font__secondary;
 	text-transform: uppercase;
 	@include letter-spacing( 1 );
@@ -54,13 +54,13 @@ body.user-dashboard {
 
 	li {		
 		display: inline-block;
-		margin-bottom: 0;
+		@include margin( 0, $size__margin-half, 0, 0 );
 
 		a {			
 			position: relative;
 			z-index: 5;			
 			display: inline-block;
-			@include padding( 6, 24 );
+			@include padding( $size__margin-half, $size__margin-double );
 			@include border( 1, $color__background-wrapper );
 			border-bottom-color: transparent;
 			border-radius: 0.4rem 0.4rem 0 0;

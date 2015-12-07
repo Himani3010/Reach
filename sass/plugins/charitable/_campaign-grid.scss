@@ -1,3 +1,8 @@
+.post-type-archive-campaign .content-area {
+	width: 100%; 	
+	padding-right: 0;
+}
+
 .campaigns-grid-wrapper {
 	position: relative;
 	float: left;
@@ -6,7 +11,7 @@
 
 	@include bp( 800 ) {
 		padding-right: 0;
-		padding-left: 0;
+		padding-left: 0;		
 	}	
 
 	.section-title {

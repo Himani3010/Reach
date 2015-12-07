@@ -15,6 +15,8 @@
 	<div class="block entry-block">
 		<?php
 
+		get_template_part( 'partials/sticky' );
+
 		echo reach_get_media( array( 
 			'split_media' 	=> true, 
 			'meta_key' 		=> 'video'
@@ -22,7 +24,7 @@
 
 		/* Display meta above content if this is a single post. */
 		if ( is_single() ) :
-			get_template_part( 'meta', 'above' );
+			get_template_part( 'partials/meta', 'above' );
 
 		/* If this is an archive, display the post title. */
 		else : 
@@ -49,7 +51,7 @@
 
 		/* Display alternative meta on archives. */
 		else :
-			get_template_part( 'meta', 'below' );
+			get_template_part( 'partials/meta', 'below' );
 		endif;
 
 		?>

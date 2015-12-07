@@ -7,27 +7,26 @@
  */
 
 get_header();
-	
-	if ( have_posts() ) :
-		while ( have_posts() ) :
-			the_post();
-						
-			get_template_part( 'partials/banner' ); 
-			?>
-			<div class="layout-wrapper">
-				<?php 
-				if ( function_exists( 'charitable_get_user_dashboard' ) ) :
-					charitable_get_user_dashboard()->nav( array(
-						'container_class' 	=> 'user-dashboard-menu'
-					) );
-				endif;
-				?>
-				<main class="site-main content-area" role="main">
-					<?php get_template_part( 'partials/content', 'page' ) ?>
-				</main><!-- .site-main -->
-			</div><!-- .layout-wrapper -->
-			<?php 
-		endwhile;
-	endif;
+
+?>
+<main id="main" class="site-main site-content cf" role="main">  
+	<div class="layout-wrapper">
+        <div id="primary" class="content-area">  	
+		<?php 
+
+		if ( have_posts() ) :
+			while ( have_posts() ) :
+				the_post();
+			
+				get_template_part( 'partials/content', 'user-dashboard' );
+
+			endwhile;
+		endif;
+				
+		?>
+        </div><!-- #primary -->
+    </div><!-- .layout-wrapper -->
+</main><!-- #main -->
+<?php 
 
 get_footer();

@@ -242,7 +242,7 @@ function reach_site_identity( $echo = true ) {
 		$tag
 	) );
 
-	$output .= apply_filters( 'reach_site_tagline', sprintf( '<h3 class="site-tagline %s">%s</h3>', 
+	$output .= apply_filters( 'reach_site_tagline', sprintf( '<div class="site-tagline %s">%s</div>', 
 		$hide_tagline ? 'hidden' : '',
 		get_bloginfo( 'description' )
 	) );
@@ -293,10 +293,10 @@ function reach_post_header( $echo = true ) {
 	else {
 		$title = sprintf( '<a href="%s" title="%s">%s</a>', 
 			get_permalink(),
-			the_title_attribute( array( 'before' => __('Link to', 'reach'), 'echo' => false ) ),
+			the_title_attribute( array( 'echo' => false ) ),
 			get_the_title() 
 		);	
-	}	
+	}
 
 	$output = $wrapper_start . $title . $wrapper_end;
 

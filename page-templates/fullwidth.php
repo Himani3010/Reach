@@ -1,11 +1,6 @@
 <?php
 /**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
+ * Template name: Fullwidth
  *
  * @package Reach
  */
@@ -15,7 +10,7 @@ get_header();
 ?>
 <main id="main" class="site-main site-content cf" role="main">  
     <div class="layout-wrapper">
-        <div id="primary" class="content-area <?php if ( ! is_active_sidebar( 'default' ) ) : ?>no-sidebar<?php endif ?>">      
+        <div id="primary" class="content-area no-sidebar">      
         <?php 
 
         if ( have_posts() ) :
@@ -33,9 +28,7 @@ get_header();
         endif;
         
         ?>
-        </div><!-- #primary -->
-                
-        <?php get_sidebar() ?>
+        </div><!-- #primary -->      
     </div><!-- .layout-wrapper -->
 </main><!-- #main -->           
 

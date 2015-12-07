@@ -1,5 +1,6 @@
 table {
 	width: 100%;	
+	@include margin-bottom( $size__margin );
 	@include border-width( 0, 0, 1, 1 );
 	border-style: solid;
 	@include border-color( $color__border-primary );
@@ -15,15 +16,14 @@ table {
 th,
 td {
 	@include padding( $size__margin-half, 10 );
+	@include border-width( 1, 1, 0, 0 );
 	border-style: solid;
 	@include border-color( $color__border-primary );
 	vertical-align: top;	
 }
 
 th {		
-	@include border-width( 1, 1, 0, 0 );
 	@include background-color( $color__background-th );
-	@include border-right-color( $color__border-secondary );
 	text-align: left;
 	text-transform: uppercase;
 	@include letter-spacing( 2 );

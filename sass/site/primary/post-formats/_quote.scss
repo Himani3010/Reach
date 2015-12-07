@@ -1,13 +1,31 @@
 .format-quote {
+    .entry-block, 
+    .entry {
+        padding: 0;
+    }    
+
     blockquote {
-        padding-top: 0;
-        padding-bottom: 0;
+        width: 100%;
+        left: 0;
+        @include padding( $size__margin-triple );
         @include font-size( 30 );
         @include line-height( 52 );
-        @include background-color( $color__background-content ); 
+        @include background-color( $color__background-blockquote ); 
+
+        cite {
+            @include margin( $size__margin-triple, 0, - $size__margin-triple );
+        }
     }
 
     cite {
-        @include margin-top( $size__margin );
+        @include padding( $size__margin, $size__margin-triple );        
+    }
+
+    .entry > blockquote:last-child {
+        @include padding-bottom( $size__margin-triple );
+    }
+
+    .entry > cite:last-child {
+        @include padding-bottom( $size__margin-double );   
     }
 }

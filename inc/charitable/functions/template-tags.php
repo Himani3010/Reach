@@ -109,11 +109,12 @@ if ( ! function_exists( 'reach_template_campaign_featured_image' ) ) :
      * Display the campaign featured image. 
      *
      * @param   Charitable_Campaign $campaign
+     * @param   string $context
      * @return  void
      * @since   1.0.0
      */
-    function reach_template_campaign_featured_image( Charitable_Campaign $campaign ) {
-        charitable_template( 'campaign/featured-image.php', array( 'campaign' => $campaign ) );
+    function reach_template_campaign_featured_image( Charitable_Campaign $campaign, $context = 'summary' ) {
+        charitable_template( 'campaign/featured-image.php', array( 'campaign' => $campaign, 'context' => $context ) );
     }
 endif;
 
@@ -197,7 +198,7 @@ if ( ! function_exists( 'reach_template_campaign_media_before_summary' ) ) :
             charitable_videos_template_campaign_video( $campaign );
         }
         else {        
-            reach_template_campaign_featured_image( $campaign );
+            reach_template_campaign_featured_image( $campaign, 'summary' );
         }
     }
 endif;
@@ -214,7 +215,7 @@ if ( ! function_exists( 'reach_template_campaign_media_before_content' ) ) :
         $media = reach_get_theme()->get_theme_setting( 'campaign_media_placement', 'featured_image_in_summary' );
 
         if ( 'video_in_summary' == $media ) {
-            reach_template_campaign_featured_image( $campaign );
+            reach_template_campaign_featured_image( $campaign, 'content' );
         }
         elseif ( function_exists( 'charitable_videos_template_campaign_video' ) ) {
             charitable_videos_template_campaign_video( $campaign );

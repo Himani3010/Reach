@@ -14,42 +14,44 @@ $campaigns = $cart->get_benefits_by_campaign();
 
 get_header( 'stripped' );
     
-    if ( have_posts() ) :
-        while ( have_posts() ) :
-            the_post();
+?>    
+<main id="main" class="site-main site-content cf" role="main">  
+    <div class="layout-wrapper">    
+        <div id="primary" class="content-area <?php if ( empty( $campaigns ) ) : ?>no-sidebar<?php endif ?>">      
+        <?php
 
-            get_template_part( 'partials/banner' ); ?>
-
-            <main class="site-main content-area <?php if ( empty( $campaigns ) ) : ?>no-sidebar<?php endif ?>" role="main">
+        if ( have_posts() ) :
+            while ( have_posts() ) :
+                the_post();
                 
-                <?php if ( ! empty( $campaigns ) ) : ?>
+                get_template_part( 'partials/content', 'page' );
 
-                    <aside class="campaign-benefiting">
+            endwhile;
+        endif;
 
-                        <p class="header"><?php echo _n( 'Thank you for supporting this campaign', 'Thank you for supporting these campaigns', count( $campaigns ), 'reach' ) ?></p>
-                        
-                        <?php foreach ( $campaigns as $campaign_id => $benefits ) :
+        ?>
+        </div><!-- #primary -->
+        <?php if ( ! empty( $campaigns ) ) : ?>
+            <aside class="campaign-benefiting" role="complementary">
 
-                            if ( has_post_thumbnail( $campaign_id ) ) : 
+                <p class="header"><?php echo _n( 'Thank you for supporting this campaign', 'Thank you for supporting these campaigns', count( $campaigns ), 'reach' ) ?></p>
+                
+                <?php foreach ( $campaigns as $campaign_id => $benefits ) :
 
-                                echo get_the_post_thumbnail( $campaign_id, 'campaign-thumbnail-small' );
+                    if ( has_post_thumbnail( $campaign_id ) ) : 
 
-                            endif ?>
+                        echo get_the_post_thumbnail( $campaign_id, 'campaign-thumbnail-small' );
 
-                            <h6 class="campaign-title"><a href="<?php echo get_permalink( $campaign_id ) ?>"><?php echo get_the_title( $campaign_id ) ?></a></h6>
+                    endif ?>
 
-                        <?php endforeach ?>
+                    <div class="campaign-title"><a href="<?php echo get_permalink( $campaign_id ) ?>"><?php echo get_the_title( $campaign_id ) ?></a></div>
 
-                    </aside>
+                <?php endforeach ?>
 
-                <?php endif ?>
-
-                <?php get_template_part( 'partials/content', 'page' ) ?>
-
-            </main><!-- .site-main -->
-        <?php 
-
-        endwhile;
-    endif;
+            </aside>
+        <?php endif ?>
+    </div><!-- .layout-wrapper -->
+</main><!-- #main -->
+<?php 
 
 get_footer( 'stripped' );

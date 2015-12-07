@@ -1,0 +1,83 @@
+/**
+ * When the home is the posts page (default install).
+ */
+.home.blog {
+    #main {         
+        @include border-top( $size__margin-half, $color__accent );
+    }
+
+    .content-area {
+        @include padding-top( $size__margin-triple );
+    }
+
+    .sidebar {
+        margin-top: 0;
+    }
+}
+
+/**
+ * The "Homepage" static page layout template.
+ */
+body.page-template-homepage {
+    #main {
+        padding: 0;
+    }
+
+    #primary {
+        width: 100%;
+        padding: 0;
+        @include margin-bottom( $size__margin-triple );
+        overflow: visible;
+    }
+
+    .feature-block {
+        @include padding-top( $size__margin-triple );
+        border: none;
+        border-radius: 0;        
+        box-shadow: none;
+        text-align: center;       
+        overflow: visible;
+    }       
+
+    .page-title {
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    .entry {
+        position: relative;
+        z-index: 1;
+        @include font-size( 18 );
+        @include line-height( 28 );
+
+        .button {
+            @include margin( $size__margin, 3, 0 );
+        }       
+    }    
+    
+    .campaigns-grid {
+        @include font-size();
+        @include line-height();
+
+        .block-title {
+            text-transform: uppercase;
+        }
+    }
+
+    .charitable-campaign-map-marker {
+        @include font-size();
+        @include line-height();
+        text-align: left;
+
+        h3 {
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media (min-width: 50em) and (max-width: 92.75em) {
+    body.page-template-homepage .campaigns-grid-wrapper {
+        @include padding-right( $size__margin-triple );
+        @include padding-left( $size__margin-triple );
+    }     
+}

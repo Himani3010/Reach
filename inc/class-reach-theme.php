@@ -341,6 +341,7 @@ class Reach_Theme {
 		 */
 		add_filter( 'wp_title', 				array( $this, 'wp_title' ), 10, 2 );
 		add_filter( 'wp_page_menu_args', 		array( $this, 'page_menu_args' ) );
+        add_filter( 'theme_page_templates',     array( $this, 'filter_page_templates' ) );
         add_filter( 'body_class',               array( $this, 'body_classes' ) );
 		add_filter( 'post_class',      			array( $this, 'post_classes' ) );
 		add_filter(	'the_content_more_link', 	array( $this, 'the_content_more_link_filter' ), 10, 2);
@@ -590,6 +591,25 @@ class Reach_Theme {
 	}
 
     /**
+     * Remove any templates that require (or only make sense with) Charitable. 
+     *
+     * @param   string[] $page_templates
+     * @return  string[]
+     * @access  public
+     * @since   1.0.0
+     */
+    public function filter_page_templates( $page_templates ) {
+        if ( ! in_array( 'charitable', $this->active_modules ) ) {
+            unset( 
+                $page_templates[ 'page-templates/homepage.php' ], 
+                $page_templates[ 'page-templates/user-dashboard.php' ]
+            );
+        }
+
+        return $page_templates;
+    }
+
+    /**
      * Adds the layout class to the body. 
      *
      * @param   string[] $classes
@@ -601,7 +621,7 @@ class Reach_Theme {
         $layout = $this->get_theme_setting( 'layout', true );
         $classes[] = $layout ? $layout : 'layout-wide';
 
-        if ( is_page_template( 'page-template-user-dashboard.php' ) ) {
+        if ( is_page_template( 'page-templates/user-dashboard.php' ) ) {
             $classes[] = 'user-dashboard';
         } 
 
@@ -616,13 +636,11 @@ class Reach_Theme {
      * @since   1.0.0
      */
     public function post_classes( $classes ) {
-        if ( is_page_template( 'page-template-home-slider.php' ) ) {
-            return array_merge( $classes, array( 'feature-block', 'center', 'block' ) );
+        if ( is_page_template( 'page-templates/homepage.php' ) ) {
+            return array_merge( $classes, array( 'feature-block' ) );
         }
 
         return $classes;
-
-        return array_merge( $classes, array( 'block', 'entry-block' ) );
     }
 
     /**

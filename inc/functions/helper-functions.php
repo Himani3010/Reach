@@ -13,7 +13,7 @@
  * @since   1.0.0
  */
 function reach_has_module( $module ) {
-    return in_array( 'charitable', reach_get_theme()->active_modules );
+    return in_array( $module, reach_get_theme()->active_modules );
 }
 
 /**
@@ -151,7 +151,7 @@ function reach_get_banner_title() {
             $title = get_the_title( get_option( 'page_for_posts' ) );
         }
         else {
-            $title = apply_filters( 'reach_banner_title_blog', '' );
+            $title = apply_filters( 'reach_banner_title_posts', '' );
         }            
     }
     /* 404 Page */

@@ -24,18 +24,27 @@ blockquote {
 	@include line-height( $font__line-height-big );
 	@include background-color( $color__background-blockquote );
 
+	@include bp( 800 ) {
+		@include padding-left( $size__margin-triple );
+		@include padding-right( $size__margin-triple );
+	}
+
 	p:last-child {
 		padding-bottom: 0;
 	}
 
 	cite {
-		display: block;
-		@include margin( $size__margin-double, 0, 0 );
-		@include font-size();
-		text-transform: uppercase;
-		@include letter-spacing( 2 );
-		text-align: right;
-	}	
+		position: relative;		
+        @include fullwidth-calc( $size__margin-triple );
+        @include padding( $size__margin, $size__margin-triple );
+        @include margin( $size__margin, 0, - $size__margin-double );
+        @include background-color( $color__background-content );
+	}
+}
+
+cite {
+	display: block;
+	@include font-size();
 }
 
 address {

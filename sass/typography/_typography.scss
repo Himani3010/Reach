@@ -9,7 +9,6 @@ body {
 body, 
 input, 
 textarea, 
-.format-status .post-title, 
 #lang-sel, 
 .alt, 
 .banner-subtitle {
@@ -26,6 +25,7 @@ input[type=reset],
 .campaign-summary li span, 
 .countdown,
 .site-title,
+.site-tagline,
 .post-title,
 .page-title,
 legend, 
@@ -34,7 +34,7 @@ legend,
 .barometer span span, 
 .bypostauthor .post-author,
 .meta,
-blockquote cite,
+cite,
 th, 
 .edd_cart_amount, 
 #rockbottom,
@@ -49,7 +49,8 @@ th,
 .donation-amounts .custom-donation-amount, 
 .widget.widget_charitable_donation_stats_widget .figure,
 .campaign-finished, 
-.download-price {
+.download-price, 
+.sticky-tag {
 	font-family: $font__secondary;
 	text-transform: uppercase;
 	@include letter-spacing( 2 );

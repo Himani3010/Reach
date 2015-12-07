@@ -5,9 +5,7 @@ dd {
 }
 
 ul, 
-ol {
-	@include padding-left( 16 );
-
+ol {	
 	ul, 
 	ol {
 		@include margin( $size__margin-half, 0, 0, 20 );
@@ -19,6 +17,7 @@ li {
 }
 
 ul {
+	@include padding-left( 17 );
 	list-style: disc;
 
 	ul {
@@ -27,6 +26,7 @@ ul {
 }
 
 ol {
+	@include padding-left( 22 );
 	list-style: decimal;
 
 	ol {
