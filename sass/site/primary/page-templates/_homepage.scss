@@ -28,6 +28,14 @@ body.page-template-homepage {
         padding: 0;
         @include margin-bottom( $size__margin-triple );
         overflow: visible;
+
+        .media-container {
+            @include padding-bottom( $size__margin );
+
+            &:empty {
+                padding-bottom: 0;
+            }
+        }
     }
 
     .feature-block {

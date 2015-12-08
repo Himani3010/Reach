@@ -1,5 +1,5 @@
 .account-links {
-	display: block;
+	display: none;
 	margin: {
 		top: 0;
 		right: auto;
@@ -40,6 +40,7 @@
 	}
 
 	@include bp( 600 ) {
+		display: block;
 		float: right;
 		margin: 0;
 		width: auto;
@@ -51,6 +52,7 @@
 	top: 0;
 	display: inline-block;
 	@include padding-top( $size__margin );
+	@include padding-bottom( $size__margin );
 	@include line-height( 32 );
 
 	&::before {

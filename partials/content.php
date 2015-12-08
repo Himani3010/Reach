@@ -19,12 +19,8 @@
 
 		get_template_part( 'partials/featured-image' );
 
-		/* Display meta above content if this is a single post. */
-		if ( is_single() ) :
-			get_template_part( 'partials/meta', 'above' );
-
 		/* If this is an archive, display the post title. */
-		else : 
+		if ( is_archive() ) : 
 			reach_post_header();
 		endif;
 
@@ -42,13 +38,11 @@
 		</div><!-- .entry -->
 		<?php 
 
+		get_template_part( 'partials/meta', 'byline' );
+
 		/* Display taxonomy meta on single posts. */
 		if ( is_single() ) :
 			get_template_part( 'partials/meta', 'taxonomy' );
-
-		/* Display alternative meta on archives. */
-		else :
-			get_template_part( 'partials/meta', 'below' );
 		endif;
 
 		?>

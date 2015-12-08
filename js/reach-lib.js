@@ -1,4 +1,4 @@
-/*! reach - v1.0.0 - 2015-11-30 */
+/*! reach - v0.9.33 - 2015-12-07 */
 
 /*--------------------------------------------------------
  * REACH is the core object containing all components.
@@ -427,19 +427,23 @@ REACH.LeanModal = ( function( $ ){
 REACH.ResponsiveMenu = ( function( $ ) {
 	return {
 		init : function() {
-			var $container, 
+			var $container = $( '.site-navigation' ), 
+				$account_links = $( '.account-links' ),
 				$button, 
 				$menu;
 
-			$container = $( '.site-navigation' );
 			if ( ! $container ) {
 				return;
 			}
 
 			$button = $container.find( '.menu-toggle' );
+
 			if ( ! $button ) {
 				return;
 			}
+
+			// Append account-links div
+			$container.find( '.menu-site' ).append( '<li class="account-links">' + $account_links.html() + '</li>' );
 
 			$menu = $container.find( 'ul' );
 

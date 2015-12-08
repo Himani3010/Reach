@@ -152,7 +152,7 @@
 		.entry-block {
 			padding: 0;
 		}
-	}
+	}	
 	
 	.entry-block {
 		@include padding( $size__margin-triple );
@@ -162,17 +162,10 @@
 		@include background-color( $color__background-content );
 		box-shadow: 0 0 1px $color__background-content;
 
-		@include bp( 800 ) {
-			float: left;
-			width: 70%;
-			@include padding-right( $size__margin-triple );
-		}
-
 		.entry {
 			@include padding( 0, $size__margin-double );			
 		}
 	}
-
 
 	.no-sidebar .entry-block {
 		float: none;

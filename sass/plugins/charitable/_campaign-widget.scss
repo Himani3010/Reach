@@ -12,12 +12,17 @@
         }
     }
 
+    .wp-post-image {
+        padding-bottom: 0;
+    }
+
     .block-title {
         padding: 0;     
         border: 0;
     }
 
     .campaign-description {
+        @include color( $color__text );
         text-shadow: none;
     }
 
@@ -34,21 +39,22 @@
         @include padding( $size__margin-half, 0 );
         margin: 0;
         @include border-top( 1 );
+        @include color( $color__text );
         text-align: center;
         list-style: none;
 
         li {
             position: relative;
             display: inline-block;
-            @include padding( 0, 6, 0, 10 );
+            @include padding( 0, 7, 0, 11 );
             margin: 0;
             @include border-left( 1 );            
-            @include font-size ( 10 );
+            @include font-size ( $font__font-size-small );
             font-style: italic;     
             span {
                 display: block;
                 @include padding-top( 2 );              
-                @include font-size( 14 );
+                @include font-size;
                 @include color( $color__accent );
                 font-family: $font__secondary;
                 font-style: normal;
@@ -66,6 +72,16 @@
 
 body.campaign-widget {
     padding: 0;
+
+    .iframe-text-wrapper {
+        @include width( 245 );
+        @include height( 174 );
+        overflow-y: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;        
+    }
 }
 
 .campaign-widget {

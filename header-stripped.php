@@ -27,4 +27,3 @@
 					<?php reach_site_identity() ?>
 				</div><!-- .site-branding -->				
 			</header><!-- #header -->
-			<div id="main" class="site-content fullwidth cf">

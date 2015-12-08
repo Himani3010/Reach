@@ -4,8 +4,8 @@
 	@include bp( 800 ) {
 		display: block;
 		float: right;
-		width: 30%;
-		@include padding( $size__margin-triple, 0, 0, $size__margin-triple );
+		width: 32%;
+		@include padding-top( $size__margin-triple );
 
 		.header {
 			margin-top: 0;
@@ -32,6 +32,7 @@
 	}
 
 	#charitable-donation-form {
+		width: 100%;
 		@include padding( $size__margin-triple );
 		@include border( 1 );
 		border-top: none;
@@ -39,8 +40,7 @@
 		box-shadow: 0 0 1px $color__background-content;
 
 		@include bp( 800 ) {
-			float: left;
-			width: 70%;
+			float: left;			
 			@include padding-right( $size__margin-triple );
 		}
 	}

@@ -62,7 +62,7 @@ function reach_get_timezone_offset() {
  */
 function reach_get_campaign_featured_image_size() {
     if ( 'featured_image_in_summary' == reach_get_theme()->get_theme_setting( 'campaign_media_placement', 'featured_image_in_summary' ) ) {
-        $size = 'campaign-thumbnail-summary';
+        $size = 'post-thumbnail-large';
     }
     else {
         $size = 'post-thumbnail';

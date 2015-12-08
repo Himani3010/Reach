@@ -3,10 +3,6 @@
         padding-top: 0;
     }
 
-    &.stripped #main {
-        @include padding-top( $size__margin-triple );
-    }    
-
     .content-area {                
         .fit-video {
             margin-bottom: 0;

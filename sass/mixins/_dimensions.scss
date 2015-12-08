@@ -7,7 +7,7 @@ $browser-context: 16; // Default
 // Rem output with px fallback
 @mixin size($property, $value: 1.6, $right : "", $bottom : "", $left : "") { 
 	$px-val : $value + px;
-	$rem-val : ($value / 10) + rem;
+	$rem-val : ($value / 10) + rem;	
 
 	@if $right != "" {
 		$px-val : $px-val ($right + px);
@@ -24,7 +24,9 @@ $browser-context: 16; // Default
 		$rem-val : $rem-val (($left / 10) + rem);
 	}
 
-	#{$property}: $px-val;
+	@if ($use_pixels) {
+		#{$property}: $px-val;
+	}
 	#{$property}: $rem-val;
 }
 @mixin width($value) {

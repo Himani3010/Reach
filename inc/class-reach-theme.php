@@ -28,7 +28,7 @@ class Reach_Theme {
 	/**
 	 * The theme version. 
 	 */
-	const VERSION = '0.9.33';
+	const VERSION = '0.9.35';
 
 	/**
 	 * Database version number. 
@@ -38,7 +38,7 @@ class Reach_Theme {
 	 *
 	 * It is in the following format: YYYYMMDD
 	 */
-	const DATABASE_VERSION = '20150303';
+	const DATABASE_VERSION = '0.9.35';
 
 	/**
 	 * Whether crowdfunding is enabled. 
@@ -75,7 +75,6 @@ class Reach_Theme {
 	 * @since 	1.0.0
 	 */
 	private function __construct() {		
-		
 		$this->load_dependencies();
 
 		$this->maybe_upgrade();
@@ -195,6 +194,10 @@ class Reach_Theme {
 	 */
 	private function maybe_upgrade() {
 		$db_version = get_option( 'reach_version' );
+
+        if ( '20150303' == $db_version ) {
+            $db_version = false;
+        }
 
 		if ( self::DATABASE_VERSION !== $db_version ) {
 
@@ -380,11 +383,10 @@ class Reach_Theme {
 		 * @link 	http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 		 */
 		add_theme_support( 'post-thumbnails' );
-        set_post_thumbnail_size( 786, 0, false );
-        add_image_size( 'campaign-thumbnail-summary', 640, 427, true );
-        add_image_size( 'campaign-thumbnail-medium', 527, 351, true );
-        add_image_size( 'campaign-thumbnail-small', 351, 234, true );
-        add_image_size( 'widget-thumbnail', 294, 882, false );
+        set_post_thumbnail_size( 910, 607, true );
+        add_image_size( 'post-thumbnail-large', 784, 523, true );
+        add_image_size( 'post-thumbnail-medium', 527, 352, true );
+        add_image_size( 'post-thumbnail-small', 258, 172, true );
 
 		/**
 		 * This theme uses wp_nav_menu() in one location.
@@ -489,11 +491,12 @@ class Reach_Theme {
             'rrssb',
             'hoverIntent',             
             'fitvids',
+            'lean-modal',
             'jquery' 
         ) );
 
         if ( ! wp_script_is( 'lean-modal', 'registered' ) ) {
-            wp_register_script( 'lean-modal', $theme_dir . '/js/vendors/leanmodal/jquery.leanModal' . $ext, array( 'jquery' ), $this->get_theme_version(), true );            
+            wp_register_script( 'lean-modal', $theme_dir . '/js/vendors/leanmodal/jquery.leanModal' . $ext, array( 'jquery' ), $this->get_theme_version(), true );
         }
 
         wp_register_script( 'audio-js', $theme_dir . '/js/vendors/audiojs/audio.min.js', array(), $this->get_theme_version(), true);

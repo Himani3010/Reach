@@ -2,11 +2,18 @@ body.user-dashboard {
 
 	.content-area {
 	    width: 100%;
+	    padding-right: 0;
 	}
 
 	.entry-block {
-		@include padding( $size__margin-triple, $size__margin-triple, 0, $size__margin-triple );
+		@include padding( $size__margin-triple, $size__margin-double, 0, $size__margin-double );
+		@include border-top-width( 1 );
 		border-radius: 0 0.4rem 0.4rem 0.4rem;
+
+		@include bp( 800 ) {
+			@include padding-right( $size__margin-triple );
+			@include padding-left( $size__margin-triple );
+		}
 	}
 
 	.charitable-user-details {
@@ -41,14 +48,15 @@ body.user-dashboard {
 }
 
 .user-dashboard-menu {
+	@include padding-top( $size__margin-triple );
 	@include font-size();
 	font-family: $font__secondary;
 	text-transform: uppercase;
-	@include letter-spacing( 1 );
+	@include letter-spacing( 1 );	
 
 	.menu {
 		@include margin-bottom( -1 );
-		padding-left: 0;
+		@include padding-left( $size__margin );
 		list-style: none;
 	}
 
@@ -92,5 +100,13 @@ body.user-dashboard {
 				@include background-color( $color__border-primary );
 			}
 		}		
+	}
+
+	@include bp( 800 ) {
+		padding-top: 0;
+
+		.menu {
+			padding-left: 0;
+		}
 	}
 }

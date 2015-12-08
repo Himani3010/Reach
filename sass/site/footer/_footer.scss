@@ -16,6 +16,10 @@
 		box-shadow: none;
 		@include border-color( $color__text-overlay );
 	}
+
+	@include bp( 800 ) {
+		@include padding( $size__margin-triple );
+	}
 }
 
 .footer-widget {

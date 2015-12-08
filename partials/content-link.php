@@ -12,12 +12,6 @@
 	
 	get_template_part( 'partials/featured-image' );
 
-	if ( is_single() ) :
-
-		get_template_part( 'partials/meta', 'above' );
-
-	endif;
-
 	?>
 	<div class="block entry-block">
 		<?php 
@@ -36,14 +30,13 @@
 
 		endif;
 
+		get_template_part( 'partials/meta', 'byline' );
+
+		/* Display taxonomy meta on single posts. */
 		if ( is_single() ) :
-				
-			get_template_part( 'partials/meta', 'taxonomy' );		
+			get_template_part( 'partials/meta', 'taxonomy' );
+		endif; 
 
-		else :				
-
-			get_template_part( 'partials/meta', 'below' );
-
-		endif ?>
+		?>
 	</div><!-- .entry-block -->
 </article><!-- post-<?php the_ID() ?> -->

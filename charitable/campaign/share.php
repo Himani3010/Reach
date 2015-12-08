@@ -42,11 +42,11 @@ $title = urlencode( get_the_title( $campaign->ID ) );
             <div class="block"> 
                 <?php echo apply_filters( 'the_excerpt', get_theme_mod( 'campaign_sharing_text', '' ) ) ?>
                 <p><strong><?php _e( 'Embed Code', 'reach' ) ?></strong></p>
-                <pre><?php echo htmlspecialchars( '<iframe src="' . charitable_get_permalink( 'campaign_widget_page' ) . '" width="275px" height="400px" frameborder="0" scrolling="no" /></iframe>' ) ?></pre>
+                <pre><?php echo htmlspecialchars( '<iframe src="' . charitable_get_permalink( 'campaign_widget_page' ) . '" width="275px" height="468px" frameborder="0" scrolling="no" /></iframe>' ) ?></pre>
             </div>
             <div class="block iframe-block">
                 <p><strong><?php _e( 'Preview', 'reach' ) ?></strong></p>
-                <iframe src="<?php echo charitable_get_permalink( 'campaign_widget_page' ) ?>" width="275px" height="400px" frameborder="0" scrolling="no" /></iframe>
+                <iframe src="<?php echo charitable_get_permalink( 'campaign_widget_page' ) ?>" width="275px" height="468px" frameborder="0" scrolling="no" /></iframe>
             </div>
         </div>
     </li>   

@@ -32,7 +32,7 @@ get_header( 'stripped' );
         ?>
         </div><!-- #primary -->
         <?php if ( ! empty( $campaigns ) ) : ?>
-            <aside class="campaign-benefiting" role="complementary">
+            <aside id="secondary" class="campaign-benefiting" role="complementary">
 
                 <p class="header"><?php echo _n( 'Thank you for supporting this campaign', 'Thank you for supporting these campaigns', count( $campaigns ), 'reach' ) ?></p>
                 
@@ -40,11 +40,11 @@ get_header( 'stripped' );
 
                     if ( has_post_thumbnail( $campaign_id ) ) : 
 
-                        echo get_the_post_thumbnail( $campaign_id, 'campaign-thumbnail-small' );
+                        echo get_the_post_thumbnail( $campaign_id, 'post-thumbnail-medium' );
 
                     endif ?>
 
-                    <div class="campaign-title"><a href="<?php echo get_permalink( $campaign_id ) ?>"><?php echo get_the_title( $campaign_id ) ?></a></div>
+                    <div class="campaign-title"><a href="<?php echo get_permalink( $campaign_id ) ?>" title="<?php the_title_attribute() ?>"><?php echo get_the_title( $campaign_id ) ?></a></div>
 
                 <?php endforeach ?>
 

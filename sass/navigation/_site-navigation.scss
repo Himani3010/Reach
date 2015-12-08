@@ -1,119 +1,206 @@
 /* .site-navigation is the main navigation */
 .site-navigation {
-	float: left;
-	clear: both;
-	height: 0;	
-	width: 100%;
-	
-	.menu-button {
-		position: absolute;
-		z-index: 600;
-		right: 0;
-		@include top( $size__margin-triple );
-		@include line-height( 38 );
+    position: absolute;
+    @include top( -$size__margin-double );
+    z-index: 1000;
+    float: left;
+    clear: both;
+    height: 0;  
+    width: 100%;
+    
+    li:last-child {
+        @include border-bottom( 2, $color__background-button );
+    }
 
-		&:before {
-			content: "\f00b";
-			font-family: 'reach-icons';
-			speak: none;
-			font-weight: normal;
-			font-variant: normal;
-			text-transform: none;
-			line-height: 1;
-			-webkit-font-smoothing: antialiased;
-		}
-	}		
+    .menu-button {
+        position: absolute;
+        z-index: 600;
+        @include right( -28 );
+        @include top( -60 );
+        @include padding( 0, $size__margin-double, 0, 0 );
+        @include height( 60 );
+        @include line-height( 65 );
+        text-align: center;
+        @include color( $color__text-overlay );
 
-	&.toggled {
-		.menu-button:before {
-			content: "\f00d";
-		}
-	} 
+        &:before {
+            content: "\f00b";
+            font-family: 'reach-icons';
+            speak: none;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+        }        
+    }       
 
-	@include bp( 800 ) {
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		text-align: right;			
-		box-shadow: none;
-		height: auto;
-		float: none;
-		clear: none;
-		
-		/* Just adding this for added specifity */
-		&.wrapper {
-			background: transparent;
-		}		
+    &.toggled {        
+        .menu-button:before {
+            content: "\f00d";
+        }
 
-		.menu-site {		
-			height: auto;
-			width: auto;
-			margin: 0;
-			border-top: 0;
-			overflow: visible;
+        .menu-site {
+            @include border-top( 0, $color__accent );
+            @include background-color( $color__background-body );
 
-			li {				
-				text-indent: 0;
-			}
+            li {
+                border-bottom-color: rgba( 255, 255, 255, 0.2 );
+            }
 
-			> li {
-				@include padding( 0, 0, $size__margin, $size__margin );
-				border: none;
+            ul {
+                @include background-color( $color__background-body );
+                border-top-color: rgba( 255, 255, 255, 0.2 );
+            }
 
-				&:last-child a {
-					padding-right: 0;
-				}
-			}
-			
-			> li.hovering:last-child ul {
-				@include right( -18 );
-				left: auto;
-			}
+            a {
+                @include color( $color__text-overlay );
+                
+                &:hover {
+                    color: rgba( 255, 255, 255, 0.8 );
+                }
+            }
+        }
+    } 
 
-			.site-navigation .menu-site ul {
-				@include margin-top( 9 );
-				padding-top: 0;
-				border-top: 0;
-				border-radius: 0 0 0.4rem 0.4rem;	
-			}	
+    .account-links {
+        display: block;
+        @include padding-left( $size__margin-double );        
+        text-indent: 0;
 
-			ul ul {
-				margin-top: 0;
-			}
-		}			
+        .button.button-alt {
+            display: inline-block;
+            @include margin( $size__margin, $size__margin - 4, 0, 0 );
+            @include background-color( $color__background-button );
+        }   
 
-		.current_page_item > a,
-		.current-menu-item > a,
-		.current_page_ancestor > a {
-			&:hover {
-				border-color: transparent !important;
-			}
-		}
-	}
+        .logout {
+            float: none;
+            @include padding( $size__margin, 0, $size__margin, $size__margin+4 );            
+            margin: 0;
+            text-align: left;            
+            text-indent: 0;            
+            @include color( $color__text );
+            @include font-size( $font__font-size-small );
+            line-height: 2em;
+
+            &::before {
+                @include top( 20 );
+            }
+        }
+    }
+
+    @include bp( 600 ) {
+        top: auto;
+        bottom: 0;
+
+        &.toggled .menu-site {
+            border-top-width: 0.3rem;
+        }        
+
+        .menu-button {
+            @include right( 0 );
+            @include top( -40 );
+            padding: 0;
+            height: auto;
+            line-height: 1em;
+            color: $color__text;
+        }        
+
+        .account-links {
+            display: none;
+        }
+    }
+
+    @include bp( 800 ) {
+        position: absolute;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        text-align: right;          
+        box-shadow: none;
+        height: auto;
+        float: none;
+        clear: none;
+        
+        /* Just adding this for added specifity */
+        &.wrapper {
+            background: transparent;
+        }       
+
+        .menu-site {        
+            height: auto;
+            width: auto;
+            margin: 0;
+            border-top: 0;
+            overflow: visible;
+
+            li {                
+                text-indent: 0;
+
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
+
+            > li {
+                @include padding( 0, 0, $size__margin, $size__margin );
+                border: none;
+
+                &:last-child a {
+                    padding-right: 0;
+                }
+            }
+            
+            > li.hovering:last-child ul {
+                @include right( -18 );
+                left: auto;
+            }
+
+            .site-navigation .menu-site ul {
+                @include margin-top( 9 );
+                padding-top: 0;
+                border-top: 0;
+                border-radius: 0 0 0.4rem 0.4rem;   
+            }   
+
+            ul ul {
+                margin-top: 0;
+            }
+        }           
+
+        .current_page_item > a,
+        .current-menu-item > a,
+        .current_page_ancestor > a {
+            &:hover {
+                border-color: transparent !important;
+            }
+        }
+    }
 }
 
 @include bp( 800 ) {
-	.no-tagline {
-		.site-navigation .menu-site {
-			@include margin-top( $size__margin );
-		}
-	}
+    .no-tagline {
+        .site-navigation .menu-site {
+            @include margin-top( $size__margin );
+        }
+    }
 
-	.no-title {
-		.site-navigation .menu-site {
-			margin-top: 0;
-			li {
-				@include padding-top( $size__margin-half );
-			}
-		}
-	}
+    .no-title {
+        .site-navigation .menu-site {
+            margin-top: 0;
+            li {
+                @include padding-top( $size__margin-half );
+            }
+        }
+    }
 
-	.no-tagline.no-title {
-		.site-navigation .menu-site ul {
-			@include margin-top( $size__margin-half );
-			ul {
-				margin-top: 0;
-			}
-		}
-	}
+    .no-tagline.no-title {
+        .site-navigation .menu-site ul {
+            @include margin-top( $size__margin-half );
+            ul {
+                margin-top: 0;
+            }
+        }
+    }
 }

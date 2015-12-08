@@ -4,19 +4,23 @@
 REACH.ResponsiveMenu = ( function( $ ) {
 	return {
 		init : function() {
-			var $container, 
+			var $container = $( '.site-navigation' ), 
+				$account_links = $( '.account-links' ),
 				$button, 
 				$menu;
 
-			$container = $( '.site-navigation' );
 			if ( ! $container ) {
 				return;
 			}
 
 			$button = $container.find( '.menu-toggle' );
+
 			if ( ! $button ) {
 				return;
 			}
+
+			// Append account-links div
+			$container.find( '.menu-site' ).append( '<li class="account-links">' + $account_links.html() + '</li>' );
 
 			$menu = $container.find( 'ul' );
 

@@ -189,7 +189,7 @@
             left: 0;
             width: 55%;            
             float: left;
-            @include padding-right( $size__margin-double );
+            @include padding-right( $size__margin-triple );
         
             .wp-post-image {
                 border: {
@@ -237,6 +237,21 @@
         .campaign-details, 
         .campaign-sharing {
             width: 40rem;
+        }        
+    }
+
+    @include bp( 1422 ) {
+        .campaign-video, 
+        .campaign-image {
+            @include width( 952 ); // Ensures that the image maxes out at 910
+        }
+
+        .campaign-details, 
+        .campaign-sharing {
+            float: right;
+            width: -moz-calc(100% - 95.2rem);
+            width: -webkit-calc(100% - 95.2rem);
+            width: calc(100% - 95.2rem);           
         }
     }
 }
@@ -290,6 +305,7 @@
         border: none;
         &.iframe-block {
             @include width( 275 );
+            margin: 0;
         }
     }
 
@@ -305,7 +321,7 @@
 
             &.iframe-block {
                 float: right;
-                padding: 0;
+                padding: 0;                
             }
         }
     }

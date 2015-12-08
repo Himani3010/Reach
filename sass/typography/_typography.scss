@@ -50,7 +50,10 @@ th,
 .widget.widget_charitable_donation_stats_widget .figure,
 .campaign-finished, 
 .download-price, 
-.sticky-tag {
+.sticky-tag, 
+.campaign-title, 
+.author .author-facts h2, 
+.author .author-bio h3 {
 	font-family: $font__secondary;
 	text-transform: uppercase;
 	@include letter-spacing( 2 );

@@ -57,7 +57,8 @@
 
 			a {
 				font-size: 1.2rem;
-				border: none;		
+				line-height: 2rem;
+				border: none;
 			}
 
 			ul {
@@ -85,7 +86,7 @@
 
 				a {
 					text-align: left;
-					padding: 1.2rem;
+					padding: 0.8rem 1.2rem;
 				}
 			}
 		}
@@ -127,7 +128,6 @@
 	@include fullwidth-calc( $size__margin-double );
 	height: auto;
 	max-height: 10000px;
-	@include border-top( 2, $color__accent );
 	@include background-color( $color__background-wrapper );
 	
 	ul {

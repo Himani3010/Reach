@@ -40,7 +40,7 @@ function reach_has_edd() {
  * Return the home URL. Checks if WPML is installed and defers to the WPML function if it is. 
  * 
  * @return 	string
- * @since 	1.3.0
+ * @since 	1.0.0
  */
 function reach_site_url() {
 	return function_exists('wpml_get_home_url') ? wpml_get_home_url() : site_url();
@@ -51,12 +51,12 @@ function reach_site_url() {
  *
  * @param 	string 		$url
  * @return 	string
- * @since 	1.5.0
+ * @since 	1.0.0
  */
 function reach_condensed_url( $url ) {
 	$parts = parse_url($url);
 
-    if ( isset( $parts[ 'hosts' ] ) ) {
+    if ( isset( $parts[ 'host' ] ) ) {
 
         $output = $parts[ 'host' ];
 
@@ -96,7 +96,7 @@ function reach_hide_post_meta( $post = '' ) {
  * Returns the array of supported social media sites for profiles. 
  *
  * @return  array
- * @since   2.0.0
+ * @since   1.0.0
  */
 function reach_get_social_sites() {
     /* This is used for backwards compatibility. */
@@ -140,7 +140,7 @@ function reach_get_current_author() {
  * Return the banner title for the current page. 
  *
  * @return  string
- * @since   2.0.0
+ * @since   1.0.0
  */
 function reach_get_banner_title() {
     $title = "";
@@ -187,7 +187,7 @@ function reach_get_banner_title() {
  * Return the banner sub title for the current page. 
  *
  * @return  string
- * @since   2.0.0
+ * @since   1.0.0
  */
 function reach_get_banner_subtitle() {
     $title = "";
@@ -200,7 +200,7 @@ function reach_get_banner_subtitle() {
  *
  * @param   array       $args
  * @return  string
- * @since   2.0.0
+ * @since   1.0.0
  */
 function reach_get_media( $args = array() ) {
     $media = new Reach_Media_Grabber( $args );
@@ -239,9 +239,9 @@ function reach_strip_anchors( $content, $limit = 1 ) {
  *
  * Based on http://manas.tungare.name/software/css-compression-in-php/
  *
- * @param string $css The block of CSS to be compressed. 
- * @return string The compressed CSS
- * @since 0.2
+ * @param   string $css The block of CSS to be compressed. 
+ * @return  string The compressed CSS
+ * @since   1.0.0
  */ 
 if ( ! function_exists('reach_compress_css') ) : 
 

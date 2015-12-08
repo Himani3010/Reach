@@ -35,71 +35,18 @@
 		box-shadow: 0 0 0 1px;
 	}	
 
-	.campaign-image {
-		@include fullwidth-wrapper( $size__margin, $size__margin );
-		a {
-			display: block;
-			line-height: 0;
-		}
-	}
+	// .campaign-image {
+	// 	@include fullwidth-wrapper( $size__margin, $size__margin );
+	// 	a {
+	// 		display: block;
+	// 		line-height: 0;
+	// 	}
+	// }
 
-	.wp-post-image {
-		padding-bottom: 0;
-	}
-
-	.block-title {
-		padding: 0;		
-		border: 0;
-	}	
-
-	.campaign-description {
-		@include color( $color__text );
-		text-shadow: none;
-	}
-
-	.campaign-stats, 
-	.meta {
-		position: relative;
-		@include fullwidth-calc( $size__margin-double );	
-		@include bp( 600 ) {
-			@include fullwidth-calc( $size__margin );
-		}
-	}
-
-	.campaign-stats {		
-		@include padding( $size__margin-half, 0 );
-		margin: 0;
-		@include border-top( 1 );
-		@include color( $color__text );
-		text-align: center;
-		list-style: none;
-
-		li {
-			position: relative;
-			display: inline-block;
-			@include padding( 0, 7, 0, 11 );
-			margin: 0;
-			@include border-left( 1 );			
-			@include font-size ( $font__font-size-small );
-			font-style: italic;		
-			span {
-				display: block;
-				@include padding-top( 2 );				
-				@include font-size( $font__font-size );
-				@include color( $color__accent );
-				font-family: $font__secondary;
-				font-style: normal;
-			}
-		}
-
-		.barometer {
-			@include width( 52 );
-			@include height( 36 );
-			border: none;
-			vertical-align: top;
-		}	
-	}
-
+	// .wp-post-image {
+	// 	padding-bottom: 0;
+	// }
+	
 	@include bp( 600 ) {
 		width: 102%;
 

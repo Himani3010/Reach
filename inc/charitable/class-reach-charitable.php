@@ -84,6 +84,7 @@ class Reach_Charitable {
         add_filter( 'charitable_modal_window_class', array( $this, 'modal_window_class' ) );
         add_filter( 'charitable_campaign_video_embed_args', array( $this, 'video_embed_args' ), 5 );
         add_filter( 'charitable_add_custom_styles', '__return_false' );
+        add_filter( 'charitable_campaign_widget_thumbnail_size', array( $this, 'set_campaign_widget_thumbnail_size' ) );
     }
 
     /**
@@ -222,7 +223,7 @@ class Reach_Charitable {
      * @since   1.0.0
      */
     public function set_user_dashboard_template( $template ) {
-        return 'page-template-user-dashboard.php';
+        return 'page-templates/user-dashboard.php';
     }
 
     /**
@@ -281,6 +282,17 @@ class Reach_Charitable {
     public function video_embed_args( $args ) {
         $args[ 'width' ] = 1098;
         return $args;
+    }
+
+    /**
+     * Set the thumbnail size for campaign widgets. 
+     *
+     * @return  string
+     * @access  public
+     * @since   1.0.0
+     */
+    public function set_campaign_widget_thumbnail_size() {
+        return 'post-thumbnail-medium';
     }
 }
 

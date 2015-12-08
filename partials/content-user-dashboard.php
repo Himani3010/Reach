@@ -26,9 +26,6 @@
                     'after'  => '</div>',
                 ) );
             ?>
-        </div><!-- .entry -->
-    
-        <?php get_template_part( 'partials/meta', 'below' ) ?>
-        
+        </div><!-- .entry -->    
     </div><!-- .entry-block -->
 </article><!-- post-<?php the_ID() ?> -->

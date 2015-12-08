@@ -21,6 +21,6 @@ $campaign = $view_args[ 'campaign' ];
 <div class="campaign-image">    
     <?php echo charitable_template_campaign_status_tag( $campaign ); ?>
     <a href="<?php the_permalink() ?>" title="<?php printf( __( 'Go to %s', 'reach' ), get_the_title() ) ?>" target="_parent">
-        <?php echo get_the_post_thumbnail( get_the_ID(), 'campaign-thumbnail-medium' ) ?>
+        <?php echo get_the_post_thumbnail( get_the_ID(), 'post-thumbnail-medium' ) ?>
     </a>
 </div>

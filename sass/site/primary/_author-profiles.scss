@@ -1,176 +1,209 @@
 body.author {
 
-	.banner {
-		margin-bottom: 0;
-	}
+    .banner {
+        margin-bottom: 0;
+    }
 
-	.site-main {
-		float: none;
-		width: 100%;
-		@include padding( $size__margin-double );
-		@include border( 1 );
-		border-top: none;
-		border-radius: 0 0 0.4rem 0.4rem;	    
-		@include background-color( $color__background-content );
-		box-shadow: 0 0 0.1rem $color__background-content;
+    .entry {
+        @include padding( $size__margin-triple, 0 );
+    }
 
-		@include bp( 600 ) {
-			@include padding( $size__margin-triple );
-		}
-	}	
+    .entry-block {
+        border-top: 0;
+        border-radius: 0 0 0.4rem 0.4rem;
+    }
 
-	.author-description {
-		@include padding-bottom( $size__margin-double );
-		@include margin-bottom( $size__margin-double );
-		@include border-bottom;
-		@include bp( 800 ) {
-			float: left; 
-			width: 40%;
-			margin: 0;
-			padding: 0;
-			border: none;			
-		}
-	}
+    .site-main {
+        float: none;
+        width: 100%;
+        @include padding( $size__margin-double );
+        @include border( 1 );
+        border-top: none;
+        border-radius: 0 0 0.4rem 0.4rem;       
+        @include background-color( $color__background-content );
+        box-shadow: 0 0 0.1rem $color__background-content;
 
-	.author-avatar {
-		@include bp( 600 ) {
-			float: left;
-			@include padding-right( $size__margin );
-			max-width: 50%;
-		}
-	}
+        @include bp( 600 ) {
+            @include padding( $size__margin-triple );
+        }
+    }   
 
-	.author-facts {
-		@include bp( 600 ) {
-			float: left;
-			clear: right;
-			width: 50%;
-			width: -webkit-calc( 100% - 15.3rem );
-			width: -moz-calc( 100% - 15.3rem );			
-			width: calc( 100% - 15.3rem );
+    .content-area {
+        width: 100%;
+        padding: 0;
+    }
 
-			h3 {
-				margin-top: 0;
-			}
-		}
-	}
+    .author-description {
+        @include padding-bottom( $size__margin-double );
+        @include border-bottom;
+        @include bp( 800 ) {
+            float: left; 
+            width: 40%;
+            margin: 0;
+            padding: 0;
+            border: none;           
+        }
+    }
 
-	.author-links, 
-	.author-bio {
-		clear: both;
-		width: 100%;
-	}
+    .author-avatar {
+        line-height: 0;
+        @include margin-bottom( $size__margin );        
+    }
 
-	.author-links {
-		list-style: none;
-		padding-left: 0;
-	}
+    .author-facts h2 {
+        margin-top: 0;
+        @include font-size( 22 );
+        @include line-height( 30 );
+        font-family: $font__secondary;
+        text-transform: uppercase;
+        @include letter-spacing( 1 );
+    }
 
-	.author-activity {		
+    @include bp( 500 ) {
+        .author-avatar {
+            float: left;
+            @include padding-right( $size__margin );
+            max-width: 50%;
+        }
 
-		@include bp( 800 ) {
-			float: left; 
-			width: 60%;
-			@include padding( 0, 0, 0, $size__margin-triple );
+        .author-facts {
+            float: left;
+            clear: right;
+            width: 50%;
+            width: -webkit-calc( 100% - 15.4rem );
+            width: -moz-calc( 100% - 15.4rem );         
+            width: calc( 100% - 15.4rem );
+        }
+    }
 
-			h3 {			
-				text-align: center;
-			}
-		}		
-	}
+    .author-links,
+    .author-bio {
+        clear: both;
+        width: 100%;
+    }
 
-	.author-activity-summary {
-		font-family: $font__secondary;
-		text-transform: uppercase;
+    .author-bio h3 {
+        margin-top: 0;
+        @include font-size( 20 );
+        @include line-height( 28 );
+        font-family: $font__secondary;
+        text-transform: uppercase;
+        @include letter-spacing( 1 );
+    }
 
-		.number {
-			@include color( $color__accent );
-		}
+    .author-links {
+        list-style: none;
+        padding-left: 0;
+    }
 
-		.separator {
-			// display: none;
-			@include padding( 0, 4 );
-		}
+    .author-activity {
+        h2 {    
+            @include margin-top( $size__margin );
+            // @include font-size( 20 );
+            // @include line-height( 28 );
+            font-family: $font__secondary;
+            text-transform: uppercase;
+            @include letter-spacing( 1 );
+        }
 
-		@include bp( 800 ) {
-			text-align: center;
-		}
-	}
+        @include bp( 800 ) {
+            float: left; 
+            width: 60%;
+            @include padding( 0, 0, 0, $size__margin-triple );
 
-	.author-activity-feed {
-		list-style-type: none;
-		padding-left: 0;
-		margin: 0;
-		@include border-top();
+            h2 {    
+                margin-top: 0;
+                text-align: center;
+            }
+        }       
+    }
 
-		li {
-			position: relative;
-			@include padding( $size__margin-double, 0 );
-			@include border-bottom;
+    .author-activity-summary {
+        @include margin-top( $size__margin );
+        font-family: $font__secondary;
+        text-transform: uppercase;
+        @include letter-spacing( 1 );
 
-			&:last-child {
-				padding-bottom: 0;
-				border-bottom: none;				
-			}		
-		}
+        .separator {
+            @include padding( 0, 4 );
+        }
 
-		.activity-summary {
-			@include padding-left( 40 );
-			.display-name, 
-			a {
-				@include color( $color__accent );
-				font-weight: 700;
-			}
-			
-			.time-ago {
-				font-family: $font__secondary;
-				text-transform: uppercase;
-				@include color( $color__text-meta );
-			}
+        @include bp( 800 ) {
+            text-align: center;
+        }
+    }
 
-			&::before {
-				position: absolute;
-				@include top( 2 );
-				left: 0;
-				@include font-size( 24 );
-				font-family: $font__icons;
-				@include color( $color__text-meta );
-			}
+    .author-activity-feed {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 0;
+        @include border-top();
 
-			@include bp( 800 ) {
-				float: left;
-				width: 70%;
-				@include padding-right( $size__margin );
-				-webkit-transform: translateY( 50% );
-				-moz-transform: translateY( 50% );
-				-ms-transform: translateY( 50% );
-				-o-transform: translateY( 50% );
-				transform: translateY( 50% );
-			}			
-		}		
+        li {
+            position: relative;
+            @include padding( $size__margin-double, 0 );
+            margin-bottom: 0;
+            @include border-bottom;
 
-		.activity-type-post .activity-summary::before {
-			content: "\f040";
-		}
+            &:last-child {
+                padding-bottom: 0;
+                border-bottom: none;                
+            }       
+        }
 
-		.activity-type-campaign .activity-summary::before {
-			content: "\f055";
-		}
+        .activity-summary {
+            @include padding-left( 40 );
 
-		.activity-type-donation .activity-summary::before {
-			content: "\f058";
-		}
+            .display-name, 
+            a {
+                @include color( $color__accent );
+                font-weight: 700;
+            }
+            
+            .time-ago {
+                @include font-size( $font__font-size-small );
+                font-family: $font__secondary;
+                text-transform: uppercase;
+                @include color( $color__text-meta );
+            }
 
-		.wp-post-image {
-			display: none;
+            &::before {
+                position: absolute;             
+                left: 0;
+                @include font-size( 24 );
+                font-family: $font__icons;
+                @include color( $color__text-meta );
+            }
 
-			@include bp( 800 ) {
-				display: block;
-				float: right;
-				@include width( 150 );
-				max-width: 30%;
-				border-radius: 0.4rem;
-			}
-		}
-	}
+            @include bp( 800 ) {
+                float: left;
+                width: 70%;
+                @include padding( 0, $size__margin, 0, 40 );
+            }           
+        }       
+
+        .activity-type-post .activity-summary::before {
+            content: "\f040";
+        }
+
+        .activity-type-campaign .activity-summary::before {
+            content: "\f055";
+        }
+
+        .activity-type-donation .activity-summary::before {
+            content: "\f058";
+        }
+
+        .wp-post-image {
+            display: none;
+
+            @include bp( 800 ) {
+                display: block;
+                float: right;
+                @include width( 100 );
+                max-width: 30%;
+                border-radius: 0.4rem;
+            }
+        }
+    }
 }

@@ -349,7 +349,10 @@ th,
 .widget.widget_charitable_donation_stats_widget .figure,
 .campaign-finished,
 .download-price,
-.sticky-tag {
+.sticky-tag,
+.campaign-title,
+.author .author-facts h2,
+.author .author-bio h3 {
   font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -905,6 +908,7 @@ a {
       border-radius: 0.4rem; }
       .menu-site ul a {
         font-size: 1.2rem;
+        line-height: 2rem;
         border: none; }
       .menu-site ul ul {
         top: 0;
@@ -924,7 +928,7 @@ a {
         margin: 0; }
         .menu-site li li a {
           text-align: left;
-          padding: 1.2rem; }
+          padding: 0.8rem 1.2rem; }
     .menu-site a {
       position: relative;
       z-index: 50;
@@ -961,10 +965,6 @@ a {
   width: calc( 100% + 56px );
   height: auto;
   max-height: 10000px;
-  border-top-width: 2px;
-  border-top-width: 0.2rem;
-  border-top-style: solid;
-  border-top-color: #7bb4e0;
   background-color: #f5f5f6; }
   .toggled .menu-site ul {
     margin: 0;
@@ -1002,18 +1002,34 @@ a {
 --------------------------------------------------------------*/
 /* .site-navigation is the main navigation */
 .site-navigation {
+  position: absolute;
+  top: -28px;
+  top: -2.8rem;
+  z-index: 1000;
   float: left;
   clear: both;
   height: 0;
   width: 100%; }
+  .site-navigation li:last-child {
+    border-bottom-width: 2px;
+    border-bottom-width: 0.2rem;
+    border-bottom-style: solid;
+    border-bottom-color: #70777c; }
   .site-navigation .menu-button {
     position: absolute;
     z-index: 600;
-    right: 0;
-    top: 42px;
-    top: 4.2rem;
-    line-height: 38px;
-    line-height: 3.8rem; }
+    right: -28px;
+    right: -2.8rem;
+    top: -60px;
+    top: -6rem;
+    padding: 0px 28px 0px 0px;
+    padding: 0rem 2.8rem 0rem 0rem;
+    height: 60px;
+    height: 6rem;
+    line-height: 65px;
+    line-height: 6.5rem;
+    text-align: center;
+    color: #ffffff; }
     .site-navigation .menu-button:before {
       content: "\f00b";
       font-family: 'reach-icons';
@@ -1025,9 +1041,66 @@ a {
       -webkit-font-smoothing: antialiased; }
   .site-navigation.toggled .menu-button:before {
     content: "\f00d"; }
+  .site-navigation.toggled .menu-site {
+    border-top-width: 0px;
+    border-top-width: 0rem;
+    border-top-style: solid;
+    border-top-color: #7bb4e0;
+    background-color: #8e989e; }
+    .site-navigation.toggled .menu-site li {
+      border-bottom-color: rgba(255, 255, 255, 0.2); }
+    .site-navigation.toggled .menu-site ul {
+      background-color: #8e989e;
+      border-top-color: rgba(255, 255, 255, 0.2); }
+    .site-navigation.toggled .menu-site a {
+      color: #ffffff; }
+      .site-navigation.toggled .menu-site a:hover {
+        color: rgba(255, 255, 255, 0.8); }
+  .site-navigation .account-links {
+    display: block;
+    padding-left: 28px;
+    padding-left: 2.8rem;
+    text-indent: 0; }
+    .site-navigation .account-links .button.button-alt {
+      display: inline-block;
+      margin: 14px 10px 0px 0px;
+      margin: 1.4rem 1rem 0rem 0rem;
+      background-color: #70777c; }
+    .site-navigation .account-links .logout {
+      float: none;
+      padding: 14px 0px 14px 18px;
+      padding: 1.4rem 0rem 1.4rem 1.8rem;
+      margin: 0;
+      text-align: left;
+      text-indent: 0;
+      color: #70777c;
+      font-size: 12px;
+      font-size: 1.2rem;
+      line-height: 2em; }
+      .site-navigation .account-links .logout::before {
+        top: 20px;
+        top: 2rem; }
+  @media (min-width: 37.5em) {
+    .site-navigation {
+      top: auto;
+      bottom: 0; }
+      .site-navigation.toggled .menu-site {
+        border-top-width: 0.3rem; }
+      .site-navigation .menu-button {
+        right: 0px;
+        right: 0rem;
+        top: -40px;
+        top: -4rem;
+        padding: 0;
+        height: auto;
+        line-height: 1em;
+        color: #70777c; }
+      .site-navigation .account-links {
+        display: none; } }
   @media (min-width: 50em) {
     .site-navigation {
       position: absolute;
+      top: auto;
       right: 0;
       bottom: 0;
       text-align: right;
@@ -1046,6 +1119,8 @@ a {
         overflow: visible; }
         .site-navigation .menu-site li {
           text-indent: 0; }
+          .site-navigation .menu-site li:last-child {
+            border-bottom: 0; }
         .site-navigation .menu-site > li {
           padding: 0px 0px 14px 14px;
           padding: 0rem 0rem 1.4rem 1.4rem;
@@ -1687,7 +1762,7 @@ a {
 13.2 Account Links
 --------------------------------------------------------------*/
 .account-links {
-  display: block;
+  display: none;
   margin-top: 0;
   margin-right: auto;
   margin-bottom: 28px;
@@ -1722,6 +1797,7 @@ a {
       border-color: #7bb4e0; }
   @media (min-width: 37.5em) {
     .account-links {
+      display: block;
       float: right;
       margin: 0;
       width: auto; } }
@@ -1732,6 +1808,8 @@ a {
   display: inline-block;
   padding-top: 14px;
   padding-top: 1.4rem;
+  padding-bottom: 14px;
+  padding-bottom: 1.4rem;
   line-height: 32px;
   line-height: 3.2rem; }
   .logout::before {
@@ -2131,6 +2209,11 @@ a {
   position: relative;
   padding: 0;
   margin: 0;
+  border-top-width: 1px;
+  border-top-width: 0.1rem;
+  border-top-style: solid;
+  border-top-color: #e3e5e6;
+  border-radius: 0 0 0.4rem 0.4rem;
   font-size: 12px;
   font-size: 1.2rem;
   line-height: 38px;
@@ -2177,18 +2260,8 @@ a {
       line-height: 44px;
       line-height: 4.4rem; } }
 
-.meta-above {
-  border-bottom-width: 1px;
-  border-bottom-width: 0.1rem;
-  border-bottom-style: solid;
-  border-bottom-color: #e3e5e6; }
-
-.meta-below {
-  border-top-width: 1px;
-  border-top-width: 0.1rem;
-  border-top-style: solid;
-  border-top-color: #e3e5e6;
-  border-radius: 0 0 0.4rem 0.4rem; }
+.meta-taxonomy {
+  background-color: #f9f9fa; }
 
 .site-main.not-found {
   text-align: center; }
@@ -2279,6 +2352,11 @@ body.page-template-homepage #primary {
   margin-bottom: 42px;
   margin-bottom: 4.2rem;
   overflow: visible; }
+  body.page-template-homepage #primary .media-container {
+    padding-bottom: 14px;
+    padding-bottom: 1.4rem; }
+    body.page-template-homepage #primary .media-container:empty {
+      padding-bottom: 0; }
 body.page-template-homepage .feature-block {
   padding-top: 42px;
   padding-top: 4.2rem;
@@ -2563,6 +2641,12 @@ body.page-template-homepage .charitable-campaign-map-marker {
 --------------------------------------------------------------*/
 body.author .banner {
   margin-bottom: 0; }
+body.author .entry {
+  padding: 42px 0px;
+  padding: 4.2rem 0rem; }
+body.author .entry-block {
+  border-top: 0;
+  border-radius: 0 0 0.4rem 0.4rem; }
 body.author .site-main {
   float: none;
   width: 100%;
@@ -2580,11 +2664,12 @@ body.author .site-main {
     body.author .site-main {
       padding: 42px;
       padding: 4.2rem; } }
+body.author .content-area {
+  width: 100%;
+  padding: 0; }
 body.author .author-description {
   padding-bottom: 28px;
   padding-bottom: 2.8rem;
-  margin-bottom: 28px;
-  margin-bottom: 2.8rem;
   border-bottom-width: 2px;
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
@@ -2596,42 +2681,73 @@ body.author .author-description {
       margin: 0;
       padding: 0;
       border: none; } }
-@media (min-width: 37.5em) {
+body.author .author-avatar {
+  line-height: 0;
+  margin-bottom: 14px;
+  margin-bottom: 1.4rem; }
+body.author .author-facts h2 {
+  margin-top: 0;
+  font-size: 22px;
+  font-size: 2.2rem;
+  line-height: 30px;
+  line-height: 3rem;
+  font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem; }
+@media (min-width: 31.25em) {
   body.author .author-avatar {
     float: left;
     padding-right: 14px;
     padding-right: 1.4rem;
-    max-width: 50%; } }
-@media (min-width: 37.5em) {
+    max-width: 50%; }
   body.author .author-facts {
     float: left;
     clear: right;
     width: 50%;
-    width: -webkit-calc( 100% - 15.3rem );
-    width: -moz-calc( 100% - 15.3rem );
-    width: calc( 100% - 15.3rem ); }
-    body.author .author-facts h3 {
-      margin-top: 0; } }
+    width: -webkit-calc( 100% - 15.4rem );
+    width: -moz-calc( 100% - 15.4rem );
+    width: calc( 100% - 15.4rem ); } }
 body.author .author-links,
 body.author .author-bio {
   clear: both;
   width: 100%; }
+body.author .author-bio h3 {
+  margin-top: 0;
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+  font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem; }
 body.author .author-links {
   list-style: none;
   padding-left: 0; }
+body.author .author-activity h2 {
+  margin-top: 14px;
+  margin-top: 1.4rem;
+  font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem; }
 @media (min-width: 50em) {
   body.author .author-activity {
     float: left;
     width: 60%;
     padding: 0px 0px 0px 42px;
     padding: 0rem 0rem 0rem 4.2rem; }
-    body.author .author-activity h3 {
+    body.author .author-activity h2 {
+      margin-top: 0;
       text-align: center; } }
 body.author .author-activity-summary {
+  margin-top: 14px;
+  margin-top: 1.4rem;
   font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
-  text-transform: uppercase; }
-  body.author .author-activity-summary .number {
-    color: #7bb4e0; }
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem; }
   body.author .author-activity-summary .separator {
     padding: 0px 4px;
     padding: 0rem 0.4rem; }
@@ -2650,6 +2766,7 @@ body.author .author-activity-feed {
     position: relative;
     padding: 28px 0px;
     padding: 2.8rem 0rem;
+    margin-bottom: 0;
     border-bottom-width: 2px;
     border-bottom-width: 0.2rem;
     border-bottom-style: solid;
@@ -2665,13 +2782,13 @@ body.author .author-activity-feed {
       color: #7bb4e0;
       font-weight: 700; }
     body.author .author-activity-feed .activity-summary .time-ago {
+      font-size: 12px;
+      font-size: 1.2rem;
       font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
       text-transform: uppercase;
       color: #b6bbbd; }
     body.author .author-activity-feed .activity-summary::before {
       position: absolute;
-      top: 2px;
-      top: 0.2rem;
       left: 0;
       font-size: 24px;
       font-size: 2.4rem;
@@ -2681,13 +2798,8 @@ body.author .author-activity-feed {
       body.author .author-activity-feed .activity-summary {
         float: left;
         width: 70%;
-        padding-right: 14px;
-        padding-right: 1.4rem;
-        -webkit-transform: translateY(50%);
-        -moz-transform: translateY(50%);
-        -ms-transform: translateY(50%);
-        -o-transform: translateY(50%);
-        transform: translateY(50%); } }
+        padding: 0px 14px 0px 40px;
+        padding: 0rem 1.4rem 0rem 4rem; } }
   body.author .author-activity-feed .activity-type-post .activity-summary::before {
     content: "\f040"; }
   body.author .author-activity-feed .activity-type-campaign .activity-summary::before {
@@ -2700,8 +2812,8 @@ body.author .author-activity-feed {
       body.author .author-activity-feed .wp-post-image {
         display: block;
         float: right;
-        width: 150px;
-        width: 15rem;
+        width: 100px;
+        width: 10rem;
         max-width: 30%;
         border-radius: 0.4rem; } }
 
@@ -2909,9 +3021,11 @@ embed {
 16.4 Video
 --------------------------------------------------------------*/
 .fit-video {
-  margin-bottom: 28px;
-  margin-bottom: 2.8rem;
   text-align: center; }
+
+.archive .fit-video {
+  margin-bottom: 28px;
+  margin-bottom: 2.8rem; }
 
 .format-video > .fit-video {
   position: relative;
@@ -2945,6 +3059,10 @@ embed {
     background: transparent;
     box-shadow: none;
     border-color: #ffffff; }
+  @media (min-width: 50em) {
+    #site-footer {
+      padding: 42px;
+      padding: 4.2rem; } }
 
 .footer-widget {
   padding: 0;
@@ -4008,10 +4126,13 @@ body > .select2-container--open .select2-dropdown--above {
     .campaign-widget .campaign-image a {
       display: block;
       line-height: 0; }
+  .campaign-widget .wp-post-image {
+    padding-bottom: 0; }
   .campaign-widget .block-title {
     padding: 0;
     border: 0; }
   .campaign-widget .campaign-description {
+    color: #70777c;
     text-shadow: none; }
   .campaign-widget .campaign-stats,
   .campaign-widget .meta {
@@ -4035,20 +4156,21 @@ body > .select2-container--open .select2-dropdown--above {
     border-top-width: 0.1rem;
     border-top-style: solid;
     border-top-color: #e3e5e6;
+    color: #70777c;
     text-align: center;
     list-style: none; }
     .campaign-widget .campaign-stats li {
       position: relative;
       display: inline-block;
-      padding: 0px 6px 0px 10px;
-      padding: 0rem 0.6rem 0rem 1rem;
+      padding: 0px 7px 0px 11px;
+      padding: 0rem 0.7rem 0rem 1.1rem;
       margin: 0;
       border-left-width: 1px;
       border-left-width: 0.1rem;
       border-left-style: solid;
       border-left-color: #e3e5e6;
-      font-size: 10px;
-      font-size: 1rem;
+      font-size: 12px;
+      font-size: 1.2rem;
       font-style: italic; }
       .campaign-widget .campaign-stats li span {
         display: block;
@@ -4069,6 +4191,16 @@ body > .select2-container--open .select2-dropdown--above {
 
 body.campaign-widget {
   padding: 0; }
+  body.campaign-widget .iframe-text-wrapper {
+    width: 245px;
+    width: 24.5rem;
+    height: 174px;
+    height: 17.4rem;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; }
 
 .campaign-widget .campaign {
   margin: 0; }
@@ -4123,79 +4255,6 @@ body.campaign-widget {
   border: none;
   color: #e3e5e6;
   box-shadow: 0 0 0 1px; }
-.campaigns-grid .campaign-image {
-  position: relative; }
-  @media (min-width: 50em) {
-    .campaigns-grid .campaign-image {
-      left: -14px;
-      width: -webkit-calc( 100% + 28px );
-      width: -moz-calc( 100% + 28px );
-      width: calc( 100% + 28px ); } }
-  .campaigns-grid .campaign-image a {
-    display: block;
-    line-height: 0; }
-.campaigns-grid .wp-post-image {
-  padding-bottom: 0; }
-.campaigns-grid .block-title {
-  padding: 0;
-  border: 0; }
-.campaigns-grid .campaign-description {
-  color: #70777c;
-  text-shadow: none; }
-.campaigns-grid .campaign-stats,
-.campaigns-grid .meta {
-  position: relative;
-  left: -28px;
-  width: -webkit-calc( 100% + 56px );
-  width: -moz-calc( 100% + 56px );
-  width: calc( 100% + 56px ); }
-  @media (min-width: 37.5em) {
-    .campaigns-grid .campaign-stats,
-    .campaigns-grid .meta {
-      left: -14px;
-      width: -webkit-calc( 100% + 28px );
-      width: -moz-calc( 100% + 28px );
-      width: calc( 100% + 28px ); } }
-.campaigns-grid .campaign-stats {
-  padding: 7px 0px;
-  padding: 0.7rem 0rem;
-  margin: 0;
-  border-top-width: 1px;
-  border-top-width: 0.1rem;
-  border-top-style: solid;
-  border-top-color: #e3e5e6;
-  color: #70777c;
-  text-align: center;
-  list-style: none; }
-  .campaigns-grid .campaign-stats li {
-    position: relative;
-    display: inline-block;
-    padding: 0px 7px 0px 11px;
-    padding: 0rem 0.7rem 0rem 1.1rem;
-    margin: 0;
-    border-left-width: 1px;
-    border-left-width: 0.1rem;
-    border-left-style: solid;
-    border-left-color: #e3e5e6;
-    font-size: 12px;
-    font-size: 1.2rem;
-    font-style: italic; }
-    .campaigns-grid .campaign-stats li span {
-      display: block;
-      padding-top: 2px;
-      padding-top: 0.2rem;
-      font-size: 14px;
-      font-size: 1.4rem;
-      color: #7bb4e0;
-      font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
-      font-style: normal; }
-  .campaigns-grid .campaign-stats .barometer {
-    width: 52px;
-    width: 5.2rem;
-    height: 36px;
-    height: 3.6rem;
-    border: none;
-    vertical-align: top; }
 @media (min-width: 37.5em) {
   .campaigns-grid {
     width: 102%; }
@@ -4239,9 +4298,6 @@ body.campaign-widget {
 --------------------------------------------------------------*/
 .single-campaign #main {
   padding-top: 0; }
-.single-campaign.stripped #main {
-  padding-top: 42px;
-  padding-top: 4.2rem; }
 .single-campaign .content-area .fit-video {
   margin-bottom: 0; }
 .single-campaign .content-area .campaign-image,
@@ -4462,8 +4518,8 @@ body.campaign-widget {
         left: 0;
         width: 55%;
         float: left;
-        padding-right: 28px;
-        padding-right: 2.8rem; }
+        padding-right: 42px;
+        padding-right: 4.2rem; }
         .campaign-summary .campaign-video .wp-post-image,
         .campaign-summary .campaign-image .wp-post-image {
           border-width: 5px;
@@ -4494,6 +4550,17 @@ body.campaign-widget {
     .campaign-summary .campaign-details,
     .campaign-summary .campaign-sharing {
       width: 40rem; } }
+  @media (min-width: 88.875em) {
+    .campaign-summary .campaign-video,
+    .campaign-summary .campaign-image {
+      width: 952px;
+      width: 95.2rem; }
+    .campaign-summary .campaign-details,
+    .campaign-summary .campaign-sharing {
+      float: right;
+      width: -moz-calc(100% - 95.2rem);
+      width: -webkit-calc(100% - 95.2rem);
+      width: calc(100% - 95.2rem); } }
 
 .campaign-summary.campaign-has-goal .campaign-stats {
   float: right;
@@ -4597,7 +4664,8 @@ body.campaign-widget {
   border: none; }
   .share-widget .block.iframe-block {
     width: 275px;
-    width: 27.5rem; }
+    width: 27.5rem;
+    margin: 0; }
 @media (min-width: 48em) {
   .share-widget .modal {
     width: 634px;
@@ -4660,9 +4728,9 @@ body.campaign-widget {
     .campaign-benefiting {
       display: block;
       float: right;
-      width: 30%;
-      padding: 42px 0px 0px 42px;
-      padding: 4.2rem 0rem 0rem 4.2rem; }
+      width: 32%;
+      padding-top: 42px;
+      padding-top: 4.2rem; }
       .campaign-benefiting .header {
         margin-top: 0;
         font-weight: bold;
@@ -4678,6 +4746,7 @@ body.campaign-widget {
   .campaign-donation-page.stripped .site-main .entry-block {
     padding: 0; }
 .campaign-donation-page.stripped #charitable-donation-form {
+  width: 100%;
   padding: 42px;
   padding: 4.2rem;
   border-width: 1px;
@@ -4690,7 +4759,6 @@ body.campaign-widget {
   @media (min-width: 50em) {
     .campaign-donation-page.stripped #charitable-donation-form {
       float: left;
-      width: 70%;
       padding-right: 42px;
       padding-right: 4.2rem; } }
 
@@ -4740,11 +4808,20 @@ body.campaign-widget {
 18.1.8 User Dashboard
 --------------------------------------------------------------*/
 body.user-dashboard .content-area {
-  width: 100%; }
+  width: 100%;
+  padding-right: 0; }
 body.user-dashboard .entry-block {
-  padding: 42px 42px 0px 42px;
-  padding: 4.2rem 4.2rem 0rem 4.2rem;
+  padding: 42px 28px 0px 28px;
+  padding: 4.2rem 2.8rem 0rem 2.8rem;
+  border-top-width: 1px;
+  border-top-width: 0.1rem;
   border-radius: 0 0.4rem 0.4rem 0.4rem; }
+  @media (min-width: 50em) {
+    body.user-dashboard .entry-block {
+      padding-right: 42px;
+      padding-right: 4.2rem;
+      padding-left: 42px;
+      padding-left: 4.2rem; } }
 body.user-dashboard .charitable-user-details {
   padding: 0;
   border: none; }
@@ -4799,6 +4876,8 @@ body.user-dashboard .charitable-submit-field {
       color: #ffffff; }
 
 .user-dashboard-menu {
+  padding-top: 42px;
+  padding-top: 4.2rem;
   font-size: 14px;
   font-size: 1.4rem;
   font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
@@ -4808,7 +4887,8 @@ body.user-dashboard .charitable-submit-field {
   .user-dashboard-menu .menu {
     margin-bottom: -1px;
     margin-bottom: -0.1rem;
-    padding-left: 0;
+    padding-left: 14px;
+    padding-left: 1.4rem;
     list-style: none; }
   .user-dashboard-menu li {
     display: inline-block;
@@ -4852,6 +4932,11 @@ body.user-dashboard .charitable-submit-field {
         height: 1px;
         height: 0.1rem;
         background-color: #e3e5e6; }
+  @media (min-width: 50em) {
+    .user-dashboard-menu {
+      padding-top: 0; }
+      .user-dashboard-menu .menu {
+        padding-left: 0; } }
 
 /*--------------------------------------------------------------  
 18.1.9 User Campaigns
@@ -4937,7 +5022,7 @@ body.user-dashboard .charitable-submit-field {
     .user-post-summary {
       min-width: 0;
       width: calc( 65% - 150px ); } }
-  @media (min-width: 66.125em) {
+  @media (min-width: 71.125em) {
     .user-post-summary {
       width: calc( 100% - 470px ); } }
 
@@ -4961,6 +5046,8 @@ body.user-dashboard .charitable-submit-field {
     border-bottom-color: #e3e5e6;
     font-size: 14px;
     font-size: 1.4rem;
+    line-height: 18px;
+    line-height: 1.8rem;
     text-align: left; }
     .user-post-stats.campaign-stats .summary-item span {
       font-size: 16px;
@@ -4986,14 +5073,32 @@ body.user-dashboard .charitable-submit-field {
     @media (min-width: 37.5em) {
       .user-post-stats.campaign-stats .summary-item {
         float: left;
-        width: 50%; }
+        width: 50%;
+        padding-left: 0;
+        padding-right: 0; }
         .user-post-stats.campaign-stats .summary-item:nth-child(2) {
           padding-top: 0;
-          border-top: 0; }
+          border-top-width: 0; }
         .user-post-stats.campaign-stats .summary-item:nth-child(2n+1) {
           clear: left; }
         .user-post-stats.campaign-stats .summary-item:nth-child(1n+3) {
-          border-bottom: 0; } }
+          border-bottom-width: 0; } }
+    @media (min-width: 48em) and (max-width: 68.125em) {
+      .user-post-stats.campaign-stats .summary-item {
+        float: none;
+        width: 100%; }
+        .user-post-stats.campaign-stats .summary-item:nth-child(2) {
+          padding-top: 14px;
+          padding-top: 1.4rem;
+          border-top-width: 1px;
+          border-top-width: 0.1rem; }
+        .user-post-stats.campaign-stats .summary-item:nth-child(2n+1) {
+          clear: none; }
+        .user-post-stats.campaign-stats .summary-item:nth-child(1n+3) {
+          border-bottom-width: 1px;
+          border-bottom-width: 0.1rem; }
+        .user-post-stats.campaign-stats .summary-item:last-child {
+          border-bottom-width: 0; } }
 
 .user-post-actions {
   padding: 14px;
@@ -5249,12 +5354,6 @@ div.printfriendly {
   border-radius: 0 0 0.4rem 0.4rem;
   background-color: #ffffff;
   box-shadow: 0 0 1px #ffffff; }
-  @media (min-width: 50em) {
-    .edd-checkout-template.stripped .entry-block {
-      float: left;
-      width: 70%;
-      padding-right: 42px;
-      padding-right: 4.2rem; } }
   .edd-checkout-template.stripped .entry-block .entry {
     padding: 0px 28px;
     padding: 0rem 2.8rem; }

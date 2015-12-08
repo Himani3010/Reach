@@ -44,4 +44,3 @@
 				    </div><!-- .site-navigation -->
 				</div><!-- .layout-wrapper -->
 			</header><!-- #header -->
-			<!-- <div id="main" class="site-content cf"> -->

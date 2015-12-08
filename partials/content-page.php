@@ -21,8 +21,10 @@
 				) );
 			?>
 		</div><!-- .entry -->
-	
-		<?php get_template_part( 'partials/meta', 'below' ) ?>
-		
+		<?php
+
+		get_template_part( 'partials/meta', 'byline' );
+
+		?>
 	</div><!-- .entry-block -->
 </article><!-- post-<?php the_ID() ?> -->

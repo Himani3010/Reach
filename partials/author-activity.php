@@ -11,7 +11,7 @@ $activity = $donor->get_activity( array(
 	'post_type' => array( 'donation', 'campaign', 'post' )
 )) ?>
 
-<h3><?php _e( 'Activity Feed', 'reach' ) ?></h3>
+<h2><?php _e( 'Activity Feed', 'reach' ) ?></h2>
 
 <?php if ( $activity->have_posts() ) :  ?>
 	
