@@ -4,12 +4,85 @@
 /*--------------------------------------------------------------
 1.0 Body
 --------------------------------------------------------------*/
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
 body {
-	margin: 24px;
-	font-size: 13px;
-	line-height: 21px;
+    @include margin( $size__margin, $size__margin-double );
+    @include font-size;
+    @include line-height;
 	font-family: $font__main;
 	@include color( $color__text );
 	font-weight: 400;
 	vertical-align: baseline;
+}
+
+/*--------------------------------------------------------------
+2.0 Typography
+--------------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6, th, legend, button, input[type=submit], input[type=reset], cite {
+    font-family: $font__secondary;
+}
+
+/*--------------------------------------------------------------
+    Headings
+--------------------------------------------------------------*/
+@import "typography/headings";
+
+h1, h2, h3, h4, h5, h6 {    
+    font-weight: 400;
+}
+
+/*--------------------------------------------------------------
+4.0 Copy
+--------------------------------------------------------------*/
+@import "typography/copy";
+
+p {
+    margin: 0;
+}
+
+blockquote {
+    @include fullwidth-calc( $size__margin-double );
+}
+
+cite {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+a {
+    @include color( $color__accent );
+    text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+5.0 Elements
+--------------------------------------------------------------*/
+@import "elements/elements";
+
+table.mce-item-table {
+    border-spacing: 0;
+    @include border-width( 0, 0, 1, 1 );
+    border-style: solid;
+    @include border-color( $color__border-primary );
+
+    th {
+        font-family: $font__secondary;
+    }
+
+    td, th {
+        @include border-width( 1, 1, 0, 0 );
+        border-style: solid;
+        @include border-color( $color__border-primary );
+    }
+}
+
+address, var {
+    font-style: normal;
 }

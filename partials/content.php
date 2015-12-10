@@ -20,7 +20,7 @@
 		get_template_part( 'partials/featured-image' );
 
 		/* If this is an archive, display the post title. */
-		if ( is_archive() ) : 
+		if ( ! is_single() ) : 
 			reach_post_header();
 		endif;
 

@@ -26,7 +26,7 @@ get_header();
                             <?php echo $avatar ?>
                         </div><!-- .author-avatar -->
                         <div class="author-facts">
-                            <h2><?php printf( __( 'About %s', 'about person', 'reach' ), $first_name ) ?></h2>
+                            <h2><?php printf( _x( 'About %s', 'about person', 'reach' ), $first_name ) ?></h2>
                             <p><?php printf( __( 'Joined %s', 'reach' ), date('F Y', strtotime( $donor->user_registered ) ) ) ?></p>
                             <?php if ( get_current_user_id() == $donor->ID && get_theme_mod( 'edit_profile_page', false ) ) : ?>
                                 <a href="<?php echo get_theme_mod( 'edit_profile_page' ) ?>" class="button"><?php _e( 'Edit Profile', 'reach' ) ?></a>

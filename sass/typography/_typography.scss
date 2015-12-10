@@ -1,8 +1,8 @@
 @import "icons";
 
 body {
-	@include font-size();
-	@include line-height();
+	@include font-size;
+	@include line-height;
 	@include color( $color__text );
 }
 

@@ -319,7 +319,9 @@ th,
 .campaign-finished,
 .download-price,
 .sticky-tag,
-.campaign-title {
+.campaign-title,
+.author .author-facts h2,
+.author .author-bio h3 {
   font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -980,6 +982,12 @@ a {
     border-top-width: 0px;
     border-top-width: 0rem;
     border-top-style: solid; }
+    .site-navigation.toggled .menu-site li {
+      border-bottom-color: rgba(255, 255, 255, 0.2); }
+    .site-navigation.toggled .menu-site ul {
+      border-top-color: rgba(255, 255, 255, 0.2); }
+    .site-navigation.toggled .menu-site a:hover {
+      color: rgba(255, 255, 255, 0.8); }
   .site-navigation .account-links {
     display: block;
     padding-left: 28px;
@@ -1853,7 +1861,6 @@ a {
 
 #page {
   position: relative;
-  z-index: 100000;
   overflow-x: hidden; }
 
 .body-wrapper {
@@ -2038,6 +2045,10 @@ a {
   position: relative;
   padding: 0;
   margin: 0;
+  border-top-width: 1px;
+  border-top-width: 0.1rem;
+  border-top-style: solid;
+  border-radius: 0 0 0.4rem 0.4rem;
   font-size: 12px;
   font-size: 1.2rem;
   line-height: 38px;
@@ -2078,17 +2089,6 @@ a {
       font-size: 1.2rem;
       line-height: 44px;
       line-height: 4.4rem; } }
-
-.meta-above {
-  border-bottom-width: 1px;
-  border-bottom-width: 0.1rem;
-  border-bottom-style: solid; }
-
-.meta-below {
-  border-top-width: 1px;
-  border-top-width: 0.1rem;
-  border-top-style: solid;
-  border-radius: 0 0 0.4rem 0.4rem; }
 
 .site-main.not-found {
   text-align: center; }
@@ -2177,6 +2177,11 @@ body.page-template-homepage #primary {
   margin-bottom: 42px;
   margin-bottom: 4.2rem;
   overflow: visible; }
+  body.page-template-homepage #primary .media-container {
+    padding-bottom: 14px;
+    padding-bottom: 1.4rem; }
+    body.page-template-homepage #primary .media-container:empty {
+      padding-bottom: 0; }
 body.page-template-homepage .feature-block {
   padding-top: 42px;
   padding-top: 4.2rem;
@@ -2448,8 +2453,13 @@ body.page-template-homepage .charitable-campaign-map-marker {
 11.4 Author Profiles
 --------------------------------------------------------------*/
 body.author .banner {
-  margin-bottom: 42px;
-  margin-bottom: 4.2rem; }
+  margin-bottom: 0; }
+body.author .entry {
+  padding: 42px 0px;
+  padding: 4.2rem 0rem; }
+body.author .entry-block {
+  border-top: 0;
+  border-radius: 0 0 0.4rem 0.4rem; }
 body.author .site-main {
   float: none;
   width: 100%;
@@ -2471,8 +2481,6 @@ body.author .content-area {
 body.author .author-description {
   padding-bottom: 28px;
   padding-bottom: 2.8rem;
-  margin-bottom: 28px;
-  margin-bottom: 2.8rem;
   border-bottom-width: 2px;
   border-bottom-width: 0.2rem;
   border-bottom-style: solid; }
@@ -2483,40 +2491,73 @@ body.author .author-description {
       margin: 0;
       padding: 0;
       border: none; } }
-@media (min-width: 37.5em) {
+body.author .author-avatar {
+  line-height: 0;
+  margin-bottom: 14px;
+  margin-bottom: 1.4rem; }
+body.author .author-facts h2 {
+  margin-top: 0;
+  font-size: 22px;
+  font-size: 2.2rem;
+  line-height: 30px;
+  line-height: 3rem;
+  font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem; }
+@media (min-width: 31.25em) {
   body.author .author-avatar {
     float: left;
     padding-right: 14px;
     padding-right: 1.4rem;
-    max-width: 50%; } }
-@media (min-width: 37.5em) {
+    max-width: 50%; }
   body.author .author-facts {
     float: left;
     clear: right;
     width: 50%;
-    width: -webkit-calc( 100% - 15.3rem );
-    width: -moz-calc( 100% - 15.3rem );
-    width: calc( 100% - 15.3rem ); }
-    body.author .author-facts h3 {
-      margin-top: 0; } }
+    width: -webkit-calc( 100% - 15.4rem );
+    width: -moz-calc( 100% - 15.4rem );
+    width: calc( 100% - 15.4rem ); } }
 body.author .author-links,
 body.author .author-bio {
   clear: both;
   width: 100%; }
+body.author .author-bio h3 {
+  margin-top: 0;
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+  font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem; }
 body.author .author-links {
   list-style: none;
   padding-left: 0; }
+body.author .author-activity h2 {
+  margin-top: 14px;
+  margin-top: 1.4rem;
+  font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem; }
 @media (min-width: 50em) {
   body.author .author-activity {
     float: left;
     width: 60%;
     padding: 0px 0px 0px 42px;
     padding: 0rem 0rem 0rem 4.2rem; }
-    body.author .author-activity h3 {
+    body.author .author-activity h2 {
+      margin-top: 0;
       text-align: center; } }
 body.author .author-activity-summary {
+  margin-top: 14px;
+  margin-top: 1.4rem;
   font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem; }
   body.author .author-activity-summary .separator {
     padding: 0px 4px;
     padding: 0rem 0.4rem; }
@@ -2534,6 +2575,7 @@ body.author .author-activity-feed {
     position: relative;
     padding: 28px 0px;
     padding: 2.8rem 0rem;
+    margin-bottom: 0;
     border-bottom-width: 2px;
     border-bottom-width: 0.2rem;
     border-bottom-style: solid; }
@@ -2547,12 +2589,12 @@ body.author .author-activity-feed {
     body.author .author-activity-feed .activity-summary a {
       font-weight: 700; }
     body.author .author-activity-feed .activity-summary .time-ago {
+      font-size: 12px;
+      font-size: 1.2rem;
       font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
       text-transform: uppercase; }
     body.author .author-activity-feed .activity-summary::before {
       position: absolute;
-      top: 2px;
-      top: 0.2rem;
       left: 0;
       font-size: 24px;
       font-size: 2.4rem;
@@ -2561,13 +2603,8 @@ body.author .author-activity-feed {
       body.author .author-activity-feed .activity-summary {
         float: left;
         width: 70%;
-        padding-right: 14px;
-        padding-right: 1.4rem;
-        -webkit-transform: translateY(50%);
-        -moz-transform: translateY(50%);
-        -ms-transform: translateY(50%);
-        -o-transform: translateY(50%);
-        transform: translateY(50%); } }
+        padding: 0px 14px 0px 40px;
+        padding: 0rem 1.4rem 0rem 4rem; } }
   body.author .author-activity-feed .activity-type-post .activity-summary::before {
     content: "\f040"; }
   body.author .author-activity-feed .activity-type-campaign .activity-summary::before {
@@ -2580,8 +2617,8 @@ body.author .author-activity-feed {
       body.author .author-activity-feed .wp-post-image {
         display: block;
         float: right;
-        width: 150px;
-        width: 15rem;
+        width: 100px;
+        width: 10rem;
         max-width: 30%;
         border-radius: 0.4rem; } }
 
@@ -2789,9 +2826,11 @@ embed {
 16.4 Video
 --------------------------------------------------------------*/
 .fit-video {
-  margin-bottom: 28px;
-  margin-bottom: 2.8rem;
   text-align: center; }
+
+.archive .fit-video {
+  margin-bottom: 28px;
+  margin-bottom: 2.8rem; }
 
 .format-video > .fit-video {
   position: relative;
@@ -4364,9 +4403,9 @@ body.campaign-widget {
     .campaign-benefiting {
       display: block;
       float: right;
-      width: 30%;
-      padding: 42px 0px 0px 42px;
-      padding: 4.2rem 0rem 0rem 4.2rem; }
+      width: 32%;
+      padding-top: 42px;
+      padding-top: 4.2rem; }
       .campaign-benefiting .header {
         margin-top: 0;
         font-weight: bold;
@@ -4929,12 +4968,6 @@ div.printfriendly {
   border-top: none;
   border-radius: 0 0 0.4rem 0.4rem;
   box-shadow: 0 0 1px #ffffff; }
-  @media (min-width: 50em) {
-    .edd-checkout-template.stripped .entry-block {
-      float: left;
-      width: 70%;
-      padding-right: 42px;
-      padding-right: 4.2rem; } }
   .edd-checkout-template.stripped .entry-block .entry {
     padding: 0px 28px;
     padding: 0rem 2.8rem; }

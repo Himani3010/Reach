@@ -28,7 +28,7 @@ class Reach_Theme {
 	/**
 	 * The theme version. 
 	 */
-	const VERSION = '0.9.35';
+	const VERSION = '0.9.36';
 
 	/**
 	 * Database version number. 
@@ -176,6 +176,7 @@ class Reach_Theme {
 	 * @since 	1.0.0
 	 */
 	private function load_dependencies() {
+        require get_template_directory() . '/inc/plugins/plugins.php';
 		require get_template_directory() . '/inc/vendors/hybrid-media-grabber.php';
 		require get_template_directory() . '/inc/class-reach-media-grabber.php';
 		require get_template_directory() . '/inc/class-reach-customizer-styles.php';
@@ -337,6 +338,7 @@ class Reach_Theme {
 		add_action( 'widgets_init', 			array( $this, 'setup_sidebars' ) );
 		add_action( 'wp_enqueue_scripts', 		array( $this, 'setup_scripts' ) );		
 		add_action( 'wp', 						array( $this, 'setup_author' ) );
+        add_action( 'wp_head',                  array( $this, 'maybe_setup_title_tag' ) );
 		add_action( 'wp_footer', 				array( $this, 'setup_fonts' ) );
 		
 		/**
@@ -416,6 +418,19 @@ class Reach_Theme {
          * Enable support for Hide Meta plugin.
          */
         add_theme_support( 'hide-meta' );
+
+        /**
+         * Add support for the title tag.
+         */
+        add_theme_support( 'title-tag' );
+
+        /**
+         * Add editor styles.
+         */
+        $editor_fonts = apply_filters( 'reach_font_path', "//fonts.googleapis.com/css?family=Merriweather:400,400italic,700italic,700,300italic,300|Oswald:400,300" );
+        $editor_fonts = str_replace( ',', '%2C', $editor_fonts );
+        add_editor_style( $editor_fonts );
+        add_editor_style( 'css/editor-style.css' );
 	}
 
 	/**
@@ -534,6 +549,23 @@ class Reach_Theme {
 		}
 	}
 
+    /**
+     * Set up title tag in <HEAD> in versions prior to 4.1. 
+     *
+     * @return  void
+     * @access  public
+     * @since   1.0.0
+     */
+    public function maybe_setup_title_tag() {        
+        if ( function_exists( '_wp_render_title_tag' ) ) {
+            return;
+        }
+        
+?>
+<title><?php wp_title(); ?></title>
+<?php 
+    }
+
 	/**
 	 * Set up custom fonts. 
 	 *
@@ -546,7 +578,7 @@ class Reach_Theme {
 	}
 
 	/**
-	 * Filters wp_title to print a neat <title> tag based on what is being viewed.
+	 * Filters <title> tag based on what is being viewed.
 	 *
 	 * @hook 	wp_title
 	 * @param 	string 	$title 		Default title text for current view.

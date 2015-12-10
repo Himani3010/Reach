@@ -25,14 +25,18 @@ module.exports = function(grunt) {
             uglify: {
                 files: 'js/reach-lib.js', 
                 tasks: ['uglify']
-            },     
-        },    
+            }, 
+            editor: {
+                files: ['sass/editor-style.scss'],
+                tasks: ['sass:editor']
+            },
+        },
 
         // Sass
         sass: {            
             dist: {
                 files: {
-                    'css/main.css' : 'sass/main.scss', 
+                    'css/main.css' : 'sass/main.scss',
                     'css/editor-style.css' : 'sass/editor-style.scss', 
                     'css/base.css' : 'sass/base.scss',
                     'css/palettes/_classic.css' : 'sass/palette-classic.scss'
@@ -43,6 +47,12 @@ module.exports = function(grunt) {
                 files: {
                     'css/main.css' : 'sass/main.scss', 
                 }, 
+                trace: true
+            },
+            editor: {
+                files: {
+                    'css/editor-style.css' : 'sass/editor-style.scss'
+                },
                 trace: true
             },
             palettes: {
@@ -281,8 +291,10 @@ module.exports = function(grunt) {
     });
  
     // register task
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', ['watch:sass', 'watch:concat', 'watch:uglify']);
     
+    grunt.registerTask('watchEditor', ['watch:editor']);
+
     grunt.registerTask('buildPalettes', ['sass:palettes', 'copy:classic', 'copy:light', 'copy:dark', 'copy:franklin', 'copy:custom']);
     
     grunt.registerTask('build', ['sass:dist', 'jshint', 'makepot', 'clean', 'copy:main', 'compress' ]);

@@ -174,8 +174,28 @@ class Reach_Customizer {
             return;
         }
 
-        foreach ( $settings as $setting_id => $setting ) {    
-            $wp_customize->add_setting( $setting_id, $setting[ 'setting' ] );        
+        foreach ( $settings as $setting_id => $setting ) {
+            $defaults = array(
+                'type'                 => 'theme_mod',
+                'capability'           => 'edit_theme_options',
+                'theme_supports'       => '',
+                'default'              => '',
+                'transport'            => 'refresh',
+                'sanitize_callback'    => '',
+                'sanitize_js_callback' => '',
+            );
+            
+            $setting_setting = wp_parse_args( $setting['setting'], $defaults );
+
+            $wp_customize->add_setting( $setting_id, array(
+                'type'                 => $setting_setting['type'],
+                'capability'           => $setting_setting['capability'],
+                'theme_supports'       => $setting_setting['theme_supports'],
+                'default'              => $setting_setting['default'],
+                'transport'            => $setting_setting['transport'],
+                'sanitize_callback'    => $setting_setting['sanitize_callback'],
+                'sanitize_js_callback' => $setting_setting['sanitize_js_callback']
+            ) );
 
             $setting_control = $setting[ 'control' ];
             $setting_control[ 'section' ] = $section_id;
