@@ -5316,7 +5316,8 @@ div.printfriendly {
   margin-bottom: 0; }
 
 .stripped #edd_checkout_wrap {
-  position: relative; }
+  position: relative;
+  z-index: 1; }
   @media (min-width: 50em) {
     .stripped #edd_checkout_wrap {
       left: -28px;

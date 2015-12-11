@@ -119,8 +119,9 @@
 }
 
 .stripped {
-	#edd_checkout_wrap {
+	#edd_checkout_wrap {		
 		@include fullwidth-wrapper( $size__margin-double, $size__margin-double );
+		z-index: 1;
 
 		tr {
 			td:first-child, 
