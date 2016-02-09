@@ -44,21 +44,7 @@ class Reach_Charitable {
      * @since   1.0.0
      */
     private function __construct() {
-        $this->attach_hooks_and_filters();
-        $this->load_dependencies();
-    }
-
-    /**
-     * Include required files. 
-     *
-     * @return  void
-     * @access  private
-     * @since   2.0.0
-     */
-    private function load_dependencies() {
-        require_once( 'functions/helper-functions.php' );
-        require_once( 'functions/template-hooks.php' );
-        require_once( 'functions/template-tags.php' );
+        $this->attach_hooks_and_filters();        
     }
 
     /**
@@ -69,6 +55,7 @@ class Reach_Charitable {
      * @since   2.0.0
      */
     private function attach_hooks_and_filters() {
+        add_action( 'after_setup_theme', array( $this, 'load_dependencies' ), 20 ); // Priority must be greater than 10
         add_action( 'wp_enqueue_scripts', array( $this, 'setup_localized_scripts' ) );
         add_action( 'wp_enqueue_scripts', array( $this, 'dequeue_styles' ), 100 );
         add_filter( 'reach_script_dependencies', array( $this, 'setup_script_dependencies' ) );
@@ -87,6 +74,19 @@ class Reach_Charitable {
         add_filter( 'charitable_campaign_widget_thumbnail_size', array( $this, 'set_campaign_widget_thumbnail_size' ) );
     }
 
+    /**
+     * Include required files. 
+     *
+     * @return  void
+     * @access  public
+     * @since   2.0.0
+     */
+    public function load_dependencies() {
+        require_once( 'functions/helper-functions.php' );
+        require_once( 'functions/template-hooks.php' );
+        require_once( 'functions/template-tags.php' );
+    }
+    
     /**
      * Set up localized script. 
      *

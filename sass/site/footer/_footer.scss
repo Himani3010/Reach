@@ -2,6 +2,7 @@
 17.1 Footer Widget Area
 --------------------------------------------------------------*/
 #site-footer {
+	clear: both;
 	@include padding( $size__margin-triple, $size__margin-double );
 	@include color( $color__text-overlay );
 

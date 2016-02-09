@@ -2231,6 +2231,7 @@ body.page-template-homepage .charitable-campaign-map-marker {
   padding-top: 4.2rem; }
 .stripped .site-identity {
   float: none;
+  padding-right: 0;
   text-align: center; }
 .stripped .banner {
   margin-bottom: 0; }
@@ -2853,6 +2854,7 @@ embed {
 17.1 Footer Widget Area
 --------------------------------------------------------------*/
 #site-footer {
+  clear: both;
   padding: 42px 28px;
   padding: 4.2rem 2.8rem; }
   #site-footer a {
@@ -3348,8 +3350,7 @@ body > .select2-container--open .select2-dropdown--above {
   #charitable-donation-form .donation-amounts .donation-amount {
     width: 100%;
     position: relative;
-    padding: 14px 14px 14px 42px;
-    padding: 1.4rem 1.4rem 1.4rem 4.2rem;
+    padding: 0;
     margin: 0px 14px 14px 0px;
     margin: 0rem 1.4rem 1.4rem 0rem;
     line-height: 18px;
@@ -3358,6 +3359,9 @@ body > .select2-container--open .select2-dropdown--above {
     border-width: 0.2rem;
     border-style: solid;
     border-radius: 0.4rem; }
+    #charitable-donation-form .donation-amounts .donation-amount label {
+      padding: 14px 14px 14px 42px;
+      padding: 1.4rem 1.4rem 1.4rem 4.2rem; }
     #charitable-donation-form .donation-amounts .donation-amount .amount {
       display: block;
       font-size: 18px;
@@ -4932,7 +4936,8 @@ div.printfriendly {
   margin-bottom: 0; }
 
 .stripped #edd_checkout_wrap {
-  position: relative; }
+  position: relative;
+  z-index: 1; }
   @media (min-width: 50em) {
     .stripped #edd_checkout_wrap {
       left: -28px;
