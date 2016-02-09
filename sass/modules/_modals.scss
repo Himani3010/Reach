@@ -55,6 +55,7 @@
 
 .modal-close {
 	position: absolute;
+    z-index: 1;
 	@include top( 6 );
 	@include right( 6 );
 	@include font-size( 20 );

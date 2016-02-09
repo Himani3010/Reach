@@ -1623,6 +1623,7 @@ a {
 
 .modal-close {
   position: absolute;
+  z-index: 1;
   top: 6px;
   top: 0.6rem;
   right: 6px;
