@@ -33,16 +33,26 @@
 		width: 102vw;
 	}
 
-	.content-area:not(.no-sidebar) .banner { 
+	.content-area .banner { 
 		@include left( -$size__margin-triple );
 	}
 }
 
 @include bp( 1484 ) {	
-	.content-area:not(.no-sidebar) .banner {
+	// .content-area:not(.no-sidebar) .banner {
+	// 	left: -50vw;
+	// 	@include margin-left( 700 );
+	// }
+
+	.content-area .banner {
 		left: -50vw;
 		@include margin-left( 700 );
 	}
+
+
+	// .content-area.no-sidebar .banner {
+	// 	@include left( -266 );
+	// }
 }
 
 .blog .banner, 

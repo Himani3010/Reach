@@ -43,9 +43,14 @@
 	}	
 
 	.content-area.no-sidebar {
-		float: none;
-		margin-left: auto;
-		margin-right: auto;
+		width: 100%;
+		float: none;		
 		padding-right: 0;
+
+		.entry-block {
+			width: 68%;
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 }

@@ -171,10 +171,22 @@ function reach_get_banner_title() {
     elseif ( is_post_type_archive() ) {
         $title = apply_filters( 'reach_banner_title_post_type_archive', post_type_archive_title( '', false ) );
     }
+    /* Year Archive */
+    elseif ( is_year() ) {
+        $title = apply_filters( 'reach_banner_title_year_archive', sprintf( __( 'Year: %s' ), get_the_date( _x( 'Y', 'yearly archives date format' ) ) ) );
+    }
+    /* Month Archive */    
+    elseif ( is_month() ) {
+        $title = apply_filters( 'reach_banner_title_month_archive', sprintf( __( 'Month: %s' ), get_the_date( _x( 'F Y', 'monthly archives date format' ) ) ) );
+    } 
+    /* Day Archive */
+    elseif ( is_day() ) {
+        $title = apply_filters( 'reach_banner_title_day_archive', sprintf( __( 'Day: %s' ), get_the_date( _x( 'F j, Y', 'daily archives date format' ) ) ) );
+    }
     /* General Archive */
     elseif ( is_archive() ) {
         $title = apply_filters( 'reach_banner_title_archive', single_term_title( '', false ) );
-    }
+    }    
     /* Fallback */
     else {
         $title = apply_filters( 'reach_banner_title_page', get_the_title() );

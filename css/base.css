@@ -1506,6 +1506,7 @@ a {
 
 .modal-close {
   position: absolute;
+  z-index: 1;
   top: 6px;
   top: 0.6rem;
   right: 6px;
@@ -3362,19 +3363,30 @@ body > .select2-container--open .select2-dropdown--above {
     #charitable-donation-form .donation-amounts .donation-amount label {
       padding: 14px 14px 14px 42px;
       padding: 1.4rem 1.4rem 1.4rem 4.2rem; }
+      #charitable-donation-form .donation-amounts .donation-amount label .amount {
+        padding: 0; }
+      #charitable-donation-form .donation-amounts .donation-amount label .description {
+        padding: 7px 0px 0px 0px;
+        padding: 0.7rem 0rem 0rem 0rem; }
     #charitable-donation-form .donation-amounts .donation-amount .amount {
       display: block;
+      padding: 14px 14px 0px 42px;
+      padding: 1.4rem 1.4rem 0rem 4.2rem;
       font-size: 18px;
       font-size: 1.8rem;
       font-weight: normal; }
     #charitable-donation-form .donation-amounts .donation-amount .description {
-      display: block; }
+      display: block;
+      padding: 7px 14px 14px 42px;
+      padding: 0.7rem 1.4rem 1.4rem 4.2rem; }
       #charitable-donation-form .donation-amounts .donation-amount .description:empty {
         display: none; }
     #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount {
       width: 100%;
       margin-left: 0; }
       #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount .description {
+        padding: 14px 14px 0px 42px;
+        padding: 1.4rem 1.4rem 0rem 4.2rem;
         font-size: 14px;
         font-size: 1.4rem;
         font-family: Merriweather, Georgia, "Times New Roman", Times, serif;
@@ -3382,6 +3394,16 @@ body > .select2-container--open .select2-dropdown--above {
         text-transform: none; }
       #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount input[type=text] {
         position: static;
+        margin: 7px 14px 14px;
+        margin: 0.7rem 1.4rem 1.4rem;
+        width: -webkit-calc( 100% - 28px );
+        width: -moz-calc( 100% - 28px );
+        width: calc( 100% - 28px ); }
+      #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount label .description {
+        padding: 0; }
+      #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount label input[type=text] {
+        margin: 7px 0px 0px 0px;
+        margin: 0.7rem 0rem 0rem 0rem;
         max-width: 100%; }
     #charitable-donation-form .donation-amounts .donation-amount input[type=radio] {
       position: absolute;

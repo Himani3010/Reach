@@ -46,16 +46,26 @@
 
             label {
                 @include padding( $size__margin, $size__margin, $size__margin, $size__margin-triple );
+
+                .amount {
+                    padding: 0;
+                }
+
+                .description {
+                    @include padding( $size__margin-half, 0, 0, 0 );
+                }
             }
 
             .amount {    
-                display: block;                     
+                display: block;
+                @include padding( $size__margin, $size__margin, 0, $size__margin-triple );
                 @include font-size( 18 );
                 font-weight: normal;
             }
 
             .description {
                 display: block;
+                @include padding( $size__margin-half, $size__margin, $size__margin, $size__margin-triple );
                 
                 &:empty {
                     display: none;
@@ -74,6 +84,7 @@
                 margin-left: 0;
 
                 .description {
+                    @include padding( $size__margin, $size__margin, 0, $size__margin-triple );
                     @include font-size();
                     font-family: $font__main;
                     letter-spacing: 0;
@@ -82,13 +93,28 @@
 
                 input[type=text] {
                     position: static;
-                    max-width: 100%;
+                    @include margin( $size__margin-half, $size__margin, $size__margin );
+                    width: -webkit-calc( 100% - #{$size__margin * 2}px );
+                    width: -moz-calc( 100% - #{$size__margin * 2}px );
+                    width: calc( 100% - #{$size__margin * 2}px );
 
                     &:focus, 
                     &:active {
                         @include background-color( $color__background-content );
                     }
                 }
+
+                label {
+                    .description {
+                        padding: 0;
+                    }
+
+                    input[type=text] {
+                        @include margin( $size__margin-half, 0, 0, 0 );
+                        max-width: 100%;
+                    }
+                }
+
             }
 
             input[type=radio] {
