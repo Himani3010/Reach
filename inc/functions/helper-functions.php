@@ -173,15 +173,15 @@ function reach_get_banner_title() {
     }
     /* Year Archive */
     elseif ( is_year() ) {
-        $title = apply_filters( 'reach_banner_title_year_archive', sprintf( __( 'Year: %s' ), get_the_date( _x( 'Y', 'yearly archives date format' ) ) ) );
+        $title = apply_filters( 'reach_banner_title_year_archive', sprintf( __( 'Year: %s', 'charitable' ), get_the_date( _x( 'Y', 'yearly archives date format', 'charitable' ) ) ) );
     }
     /* Month Archive */    
     elseif ( is_month() ) {
-        $title = apply_filters( 'reach_banner_title_month_archive', sprintf( __( 'Month: %s' ), get_the_date( _x( 'F Y', 'monthly archives date format' ) ) ) );
+        $title = apply_filters( 'reach_banner_title_month_archive', sprintf( __( 'Month: %s', 'charitable' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'charitable' ) ) ) );
     } 
     /* Day Archive */
     elseif ( is_day() ) {
-        $title = apply_filters( 'reach_banner_title_day_archive', sprintf( __( 'Day: %s' ), get_the_date( _x( 'F j, Y', 'daily archives date format' ) ) ) );
+        $title = apply_filters( 'reach_banner_title_day_archive', sprintf( __( 'Day: %s', 'charitable' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'charitable' ) ) ) );
     }
     /* General Archive */
     elseif ( is_archive() ) {
