@@ -2375,10 +2375,13 @@ a {
     padding-left: 0; }
 
   .content-area.no-sidebar {
+    width: 100%;
     float: none;
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: 0; } }
+    padding-right: 0; }
+    .content-area.no-sidebar .entry-block {
+      width: 68%;
+      margin-left: auto;
+      margin-right: auto; } }
 .fullwidth .content-area, .page-template-page-template-fullwidth .content-area, body.events-single .content-area {
   float: none;
   margin: 0;
@@ -2428,11 +2431,11 @@ a {
     left: -32%;
     width: 102vw; }
 
-  .content-area:not(.no-sidebar) .banner {
+  .content-area .banner {
     left: -42px;
     left: -4.2rem; } }
 @media (min-width: 92.75em) {
-  .content-area:not(.no-sidebar) .banner {
+  .content-area .banner {
     left: -50vw;
     margin-left: 700px;
     margin-left: 70rem; } }

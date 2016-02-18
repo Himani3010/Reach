@@ -1,6 +1,6 @@
 {
   "name": "reach",
-  "version": "0.9.38",
+  "version": "0.9.39",
   "private": true,
   "devDependencies": {
     "grunt": "~0.4.5",
