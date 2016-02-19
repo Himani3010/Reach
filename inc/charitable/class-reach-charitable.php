@@ -15,7 +15,7 @@ if ( ! class_exists( 'Reach_Charitable' ) ) :
 /**
  * Reach_Charitable
  *
- * @since       2.0.0
+ * @since       1.0.0
  */
 class Reach_Charitable {
 
@@ -52,13 +52,14 @@ class Reach_Charitable {
      *
      * @return  void
      * @access  private
-     * @since   2.0.0
+     * @since   1.0.0
      */
     private function attach_hooks_and_filters() {
         add_action( 'after_setup_theme', array( $this, 'load_dependencies' ), 20 ); // Priority must be greater than 10
         add_action( 'wp_enqueue_scripts', array( $this, 'setup_localized_scripts' ) );
-        add_action( 'wp_enqueue_scripts', array( $this, 'dequeue_styles' ), 100 );
+        add_action( 'wp_enqueue_scripts', array( $this, 'dequeue_styles' ), 100 );        
         add_filter( 'reach_script_dependencies', array( $this, 'setup_script_dependencies' ) );
+        add_filter( 'charitable_campaign_post_type', array( $this, 'turn_on_campaign_archives' ) );
         add_filter( 'body_class', array( $this, 'add_body_classes' ) );
         add_filter( 'reach_banner_title', array( $this, 'set_banner_title' ) );
         add_filter( 'charitable_is_in_user_dashboard', array( $this, 'load_donation_receipt_in_user_dashboard' ) );
@@ -79,7 +80,7 @@ class Reach_Charitable {
      *
      * @return  void
      * @access  public
-     * @since   2.0.0
+     * @since   1.0.0
      */
     public function load_dependencies() {
         require_once( 'functions/helper-functions.php' );
@@ -131,7 +132,7 @@ class Reach_Charitable {
      * @param   array       $dependencies
      * @return  array
      * @access  public
-     * @since   2.0.0
+     * @since   1.0.0
      */
     public function setup_script_dependencies( $dependencies ) {
         $dependencies[] = 'raphael';
@@ -147,6 +148,19 @@ class Reach_Charitable {
         }
 
         return $dependencies;
+    }
+
+    /**
+     * Turn on post type archives for the campaigns. 
+     *
+     * @param   array $post_type_args
+     * @return  array
+     * @access  public
+     * @since   1.0.0
+     */
+    public function turn_on_campaign_archives( $post_type_args ) {
+        $post_type_args[ 'has_archive' ] = true;
+        return $post_type_args;
     }
 
     /**

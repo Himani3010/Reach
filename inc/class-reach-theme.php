@@ -28,7 +28,7 @@ class Reach_Theme {
 	/**
 	 * The theme version. 
 	 */
-	const VERSION = '0.9.40';
+	const VERSION = '0.9.41';
 
 	/**
 	 * Database version number. 
