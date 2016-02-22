@@ -13,41 +13,41 @@ get_header();
 <?php 
 
 if ( have_posts() ) :
-	while( have_posts() ) :
-		the_post();
+    while( have_posts() ) :
+        the_post();
 
-		/**
-		 * @var 	Charitable_Campaign
-		 */
-		$campaign = charitable_get_current_campaign();
-					
-		/**
-		 * @hook charitable_single_campaign_before
-		 */
-		do_action( 'charitable_single_campaign_before', $campaign );
+        /**
+         * @var     Charitable_Campaign
+         */
+        $campaign = charitable_get_current_campaign();
+                    
+        /**
+         * @hook charitable_single_campaign_before
+         */
+        do_action( 'charitable_single_campaign_before', $campaign );
 
-		?>				
-		<div class="layout-wrapper">
-			<div id="primary" class="content-area <?php if ( ! is_active_sidebar( 'default' ) ) : ?>no-sidebar<?php endif ?>">
-				<?php
-				/**
-				 * @hook charitable_campaign_content_before
-				 */
-				do_action( 'charitable_campaign_content_before', $campaign ); 
-				
-				get_template_part( 'partials/content', 'campaign' );
-				
-				/**
-		         * @hook charitable_campaign_content_after
-		         */
-				do_action( 'charitable_campaign_content_after', $campaign ); 
+        ?>              
+        <div class="layout-wrapper">
+            <div id="primary" class="content-area <?php if ( ! is_active_sidebar( 'sidebar_campaign' ) ) : ?>no-sidebar<?php endif ?>">
+                <?php
+                /**
+                 * @hook charitable_campaign_content_before
+                 */
+                do_action( 'charitable_campaign_content_before', $campaign ); 
+                
+                get_template_part( 'partials/content', 'campaign' );
+                
+                /**
+                 * @hook charitable_campaign_content_after
+                 */
+                do_action( 'charitable_campaign_content_after', $campaign ); 
 
-				?>
-			</div><!-- #primary -->
+                ?>
+            </div><!-- #primary -->
 
-			<?php get_sidebar( 'campaign' ) ?>					
+            <?php get_sidebar( 'campaign' ) ?>                  
 
-		</div><!-- .layout-wrapper -->
+        </div><!-- .layout-wrapper -->
         <?php 
 
         /**
@@ -55,7 +55,7 @@ if ( have_posts() ) :
          */
         do_action( 'charitable_single_campaign_after' );
 
-	endwhile;
+    endwhile;
 endif;
 
 ?>
@@ -65,5 +65,5 @@ endif;
 <?php 
 
 get_template_part( 'partials/campaign', 'share-modal' );
-	
+    
 get_footer();
