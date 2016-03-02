@@ -7,39 +7,40 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main class="site-main content" role="main">
+<main id="main" class="site-main site-content cf" role="main">  
+    <div class="layout-wrapper">
+        <div id="primary" class="content-area <?php if ( ! is_active_sidebar( 'default' ) ) : ?>no-sidebar<?php endif ?>">
+        <?php 
 
-		<?php if ( have_posts() ) : ?>
+        get_template_part( 'partials/banner' );
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'reach' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+        if ( have_posts() ) : 
+            while ( have_posts() ) : 
+                the_post(); 
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
 				/**
 				 * Run the loop for the search to output the results.
 				 * If you want to overload this in a child theme then include a file
 				 * called content-search.php and that will be used instead.
 				 */
 				get_template_part( 'partials/content', 'search' );
-				?>
 
-			<?php endwhile; ?>
+            endwhile; 
 
-			<?php reach_paging_nav(); ?>
+            reach_paging_nav();
 
-		<?php else : ?>
+        else :
 
-			<?php get_template_part( 'partials/content', 'none' ); ?>
+            get_template_part( 'partials/content', 'none' );
 
-		<?php endif; ?>
+        endif;
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+        ?>
+        </div><!-- #primary -->
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+        <?php get_sidebar() ?>
+    </div><!-- .layout-wrapper -->
+</main><!-- #main -->
+<?php 
+
+get_footer();

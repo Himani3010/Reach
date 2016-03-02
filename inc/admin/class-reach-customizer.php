@@ -474,25 +474,38 @@ class Reach_Customizer {
                         'type'          => 'line',
                         'priority'      => $priority + 2
                     )
-                ), 
+                ),
                 'campaign_media_placement' => array(
                     'setting' => array(
-                        'default'       => 'featured_image_in_summary',
-                        'transport'     => 'refresh', 
+                        'default'   => 'featured_image_in_summary',
                         'sanitize_callback' => array( $this, 'sanitize_campaign_media_placement' )
-                    ),
+                    ), 
                     'control' => array(
-                        'type'          => 'radio',
-                        'label'         => __( 'Where would you like the campaign video and featured image to be displayed?', 'reach' ),
-                        'priority'      => $priority + 3,
-                        'choices'       => array(
-                            'featured_image_in_summary' => __( 'Featured image in summary, video before content.', 'reach' ),
-                            'video_in_summary' => __( 'Video in summary, featured image before content.', 'reach' )
-                        )
+                        'type'      => 'hidden',
+                        'priority'  => $priority + 3
                     )
                 )
             )
         );
+
+        if ( class_exists( 'Charitable_Videos' ) ) {
+            $campaign_setings[ 'campaign_media_placement' ] = array(
+                'setting' => array(
+                    'default'       => 'featured_image_in_summary',
+                    'transport'     => 'refresh', 
+                    'sanitize_callback' => array( $this, 'sanitize_campaign_media_placement' )
+                ),
+                'control' => array(
+                    'type'          => 'radio',
+                    'label'         => __( 'Where would you like the campaign video and featured image to be displayed?', 'reach' ),
+                    'priority'      => $priority + 3,
+                    'choices'       => array(
+                        'featured_image_in_summary' => __( 'Featured image in summary, video before content.', 'reach' ),
+                        'video_in_summary' => __( 'Video in summary, featured image before content.', 'reach' )
+                    )
+                )
+            );
+        }
 
         return apply_filters( 'reach_customizer_campaign_section', $campaign_setings );
     }

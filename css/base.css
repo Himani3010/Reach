@@ -1905,18 +1905,23 @@ a {
     width: 100%;
     float: none;
     padding-right: 0; }
-    .content-area.no-sidebar .entry-block {
+    .content-area.no-sidebar .entry-block,
+    .content-area.no-sidebar .comments-section {
       width: 68%;
       margin-left: auto;
-      margin-right: auto; } }
-.fullwidth .content-area, .page-template-page-template-fullwidth .content-area, body.events-single .content-area {
+      margin-right: auto; }
+    .content-area.no-sidebar .comments-section {
+      float: none; } }
+.fullwidth .site-main, .page-template-fullwidth .site-main, body.events-single .site-main {
+  margin: 0; }
+.fullwidth .site-main .widget-area, .page-template-fullwidth .site-main .widget-area, body.events-single .site-main .widget-area {
+  width: 100%; }
+.fullwidth .content-area.no-sidebar, .page-template-fullwidth .content-area.no-sidebar, body.events-single .content-area.no-sidebar {
   float: none;
   margin: 0;
   width: 100%; }
-.fullwidth .site-main, .page-template-page-template-fullwidth .site-main, body.events-single .site-main {
-  margin: 0; }
-.fullwidth .site-main .widget-area, .page-template-page-template-fullwidth .site-main .widget-area, body.events-single .site-main .widget-area {
-  width: 100%; }
+  .fullwidth .content-area.no-sidebar .entry-block, .page-template-fullwidth .content-area.no-sidebar .entry-block, body.events-single .content-area.no-sidebar .entry-block {
+    width: 100%; }
 
 /*--------------------------------------------------------------
 11.1 Posts and pages
@@ -2264,12 +2269,12 @@ body.page-template-homepage .charitable-campaign-map-marker {
   max-width: 80rem; }
 
 /* Fullwidth */
-.page-template-page-template-fullwidth .banner {
+.page-template-fullwidth .banner {
   margin-bottom: 0; }
-.page-template-page-template-fullwidth .entry-block {
+.page-template-fullwidth .entry-block {
   border-top: 0;
   border-radius: 0 0 0.4rem 0.4rem; }
-.page-template-page-template-fullwidth .campaign.entry-block {
+.page-template-fullwidth .campaign.entry-block {
   border-radius: 0.4rem; }
 
 /*--------------------------------------------------------------
@@ -2310,7 +2315,7 @@ body.page-template-homepage .charitable-campaign-map-marker {
   width: 49%;
   margin-right: 2%; }
 
-.comment-text-input.fullwidth, .comment-text-input.page-template-page-template-fullwidth, body.comment-text-input.events-single {
+.comment-text-input.fullwidth, .comment-text-input.page-template-fullwidth, body.comment-text-input.events-single {
   width: 100%;
   margin: 0; }
 
@@ -2999,7 +3004,7 @@ embed {
         clear: left; }
       .charitable-form-fields .charitable-form-field.even {
         clear: none; }
-      .charitable-form-fields .charitable-form-field.fullwidth, .charitable-form-fields .charitable-form-field.page-template-page-template-fullwidth, .charitable-form-fields body.charitable-form-field.events-single {
+      .charitable-form-fields .charitable-form-field.fullwidth, .charitable-form-fields .charitable-form-field.page-template-fullwidth, .charitable-form-fields body.charitable-form-field.events-single {
         width: 100%;
         padding: 0; } }
 .charitable-form-fields .charitable-fieldset {

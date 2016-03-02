@@ -7,23 +7,32 @@
  * @package Reach
  */
 ?>
+<article id="post-<?php the_ID() ?>" <?php post_class() ?>>
+	<div class="block entry-block">
+		<?php
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+		get_template_part( 'partials/sticky' );
 
-		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php reach_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+		get_template_part( 'partials/featured-image' );
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+		reach_post_header();
 
-	<footer class="entry-footer">
-		<?php reach_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+		?>
+		<div class="entry cf">				
+			<?php 
+
+			the_content(); 			
+
+			wp_link_pages( array( 
+				'before' => '<p class="entry_pages">' . __( 'Pages: ', 'reach' ) 
+			) );
+
+			?>
+		</div><!-- .entry -->
+		<?php 
+
+		get_template_part( 'partials/meta', 'byline' );
+
+		?>
+	</div><!-- .entry-block -->
+</article><!-- post-<?php the_ID() ?> -->

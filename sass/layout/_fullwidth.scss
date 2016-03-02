@@ -1,15 +1,19 @@
 .fullwidth {
-	.content-area {
-		float: none;
-		margin: 0;
-		width: 100%;
-	}
-
 	.site-main {
 		margin: 0;
 	}
 
 	.site-main .widget-area {
 		width: 100%;
+	}
+
+	.content-area.no-sidebar {
+		float: none;
+		margin: 0;
+		width: 100%; 
+
+		.entry-block {
+			width: 100%;
+		}
 	}
 }

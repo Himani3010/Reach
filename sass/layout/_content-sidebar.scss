@@ -47,10 +47,15 @@
 		float: none;		
 		padding-right: 0;
 
-		.entry-block {
+		.entry-block, 
+		.comments-section {
 			width: 68%;
 			margin-left: auto;
 			margin-right: auto;
+		}
+
+		.comments-section {
+			float: none;
 		}
 	}
 }

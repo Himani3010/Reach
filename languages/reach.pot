@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Reach 0.9.41\n"
+"Project-Id-Version: Reach 0.9.42\n"
 "Report-Msgid-Bugs-To: https://www.wpcharitable.com/\n"
-"POT-Creation-Date: 2016-02-22 03:31:15+00:00\n"
+"POT-Creation-Date: 2016-03-02 07:47:37+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -262,37 +262,37 @@ msgstr ""
 msgid "Background image for campaign summary block"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:486
+#: inc/admin/class-reach-customizer.php:500
 msgid "Where would you like the campaign video and featured image to be displayed?"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:489
+#: inc/admin/class-reach-customizer.php:503
 msgid "Featured image in summary, video before content."
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:490
+#: inc/admin/class-reach-customizer.php:504
 msgid "Video in summary, featured image before content."
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:511
+#: inc/admin/class-reach-customizer.php:524
 msgid "Social Profiles"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:512
+#: inc/admin/class-reach-customizer.php:525
 msgid ""
 "Enter the complete URL to your profile for each service below that you "
 "would like to share."
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:544
+#: inc/admin/class-reach-customizer.php:557
 msgid "Background Images"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:550
+#: inc/admin/class-reach-customizer.php:563
 msgid "Body"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:585
+#: inc/admin/class-reach-customizer.php:598
 msgid "Blog & Page Banners"
 msgstr ""
 
@@ -547,7 +547,7 @@ msgid "YouTube"
 msgstr ""
 
 #: inc/functions/helper-functions.php:168
-msgid "Search Results"
+msgid "Search Results for: %s"
 msgstr ""
 
 #: inc/functions/helper-functions.php:176
@@ -1086,7 +1086,8 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: partials/content-video.php:37 partials/content.php:34
+#: partials/content-search.php:27 partials/content-video.php:37
+#: partials/content.php:34
 msgid "Pages: "
 msgstr ""
 
@@ -1098,10 +1099,6 @@ msgstr[1] ""
 
 #: partials/sticky.php:11
 msgid "Sticky"
-msgstr ""
-
-#: search.php:16
-msgid "Search Results for: %s"
 msgstr ""
 
 #: sidebar-download.php:25

@@ -61,11 +61,11 @@ function reach_get_timezone_offset() {
  * @since   1.0.0
  */
 function reach_get_campaign_featured_image_size() {
-    if ( 'featured_image_in_summary' == reach_get_theme()->get_theme_setting( 'campaign_media_placement', 'featured_image_in_summary' ) ) {
-        $size = 'post-thumbnail-large';
+    if ( 'video_in_summary' == reach_get_theme()->get_theme_setting( 'campaign_media_placement', 'featured_image_in_summary' ) ) {
+        $size = 'post-thumbnail';
     }
     else {
-        $size = 'post-thumbnail';
+        $size = 'post-thumbnail-large';        
     }
 
     return apply_filters( 'reach_campaign_featured_image_size', $size );
@@ -79,13 +79,14 @@ function reach_get_campaign_featured_image_size() {
  * @since   1.0.0
  */
 function reach_campaign_has_media( $campaign_id ) {
-    if ( 'featured_image_in_summary' == reach_get_theme()->get_theme_setting( 'campaign_media_placement', 'featured_image_in_summary' ) ) {
-        return has_post_thumbnail( $campaign_id );
+    if ( 'video_in_summary' == reach_get_theme()->get_theme_setting( 'campaign_media_placement', 'featured_image_in_summary' ) ) {
+
+        $video = trim( get_post_meta( $campaign_id, '_campaign_video', true ) );
+
+        return strlen( $video ) > 0;        
     }
 
-    $video = trim( get_post_meta( $campaign_id, '_campaign_video', true ) );
-
-    return strlen( $video ) > 0;
+    return has_post_thumbnail( $campaign_id );
 }
 
 

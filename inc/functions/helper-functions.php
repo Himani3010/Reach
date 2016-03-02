@@ -165,7 +165,7 @@ function reach_get_banner_title() {
     }
     /* Search Results */
     elseif ( is_search() ) {
-        $title = apply_filters( 'reach_banner_title_search', __( 'Search Results', 'reach' ) );
+        $title = apply_filters( 'reach_banner_title_search', sprintf( __( 'Search Results for: %s', 'reach' ), get_search_query() ) );
     }   
     /* Post Type Archive */
     elseif ( is_post_type_archive() ) {
