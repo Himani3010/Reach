@@ -884,6 +884,7 @@ a {
       border-width: 2px;
       border-width: 0.2rem;
       border-style: solid;
+      border-color: transparent;
       border-radius: 0.4rem;
       font-size: 13px;
       font-size: 1.3rem;

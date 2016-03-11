@@ -46,6 +46,7 @@ module.exports = function(grunt) {
             watch: {
                 files: {
                     'css/main.css' : 'sass/main.scss', 
+                    'css/base.css' : 'sass/base.scss'
                 }, 
                 trace: true
             },
