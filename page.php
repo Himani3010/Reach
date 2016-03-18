@@ -15,7 +15,7 @@ get_header();
 ?>
 <main id="main" class="site-main site-content cf" role="main">  
     <div class="layout-wrapper">
-        <div id="primary" class="content-area <?php if ( ! is_active_sidebar( 'default' ) ) : ?>no-sidebar<?php endif ?>">      
+        <div id="primary" class="content-area <?php if ( ! is_active_sidebar( 'default' ) ) : ?>no-sidebar<?php endif ?>">
         <?php 
 
         if ( have_posts() ) :

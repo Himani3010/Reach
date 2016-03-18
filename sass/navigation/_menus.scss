@@ -96,7 +96,8 @@
 			z-index: 50;
 			display: inline-block;
 			@include padding( $size__margin-half );
-			@include border( 2 );
+			@include border-width( 2 );
+			border-style: solid;
 			border-color: transparent;
 			border-radius: 0.4rem;		
 			@include font-size( 13 );
