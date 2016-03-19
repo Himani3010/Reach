@@ -123,7 +123,7 @@ wp_enqueue_style( 'charitable-admin-pages' );
             <?php endif ?>
             <hr />
             <h3><?php _e( 'Supported Plugins', 'reach' ) ?></h3>
-            <p><?php _e( 'Below are some plugins that can help you get the most out of Reach. They\'re all optional — Reach will function perfectly well without theme.', 'reach' ) ?></p>
+            <p><?php _e( 'Below are some plugins that can help you get the most out of Reach. They\'re all optional; Reach will work just fine without them.', 'reach' ) ?></p>
             <ul class="recommended-plugins">
                 <li>
                     <p><?php _e( '<strong>Charitable</strong> is a free WordPress donation plugin that we created to help you raise money on your website. Supports PayPal & offline donations out of the box.', 'reach' ) ?></p>

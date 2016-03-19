@@ -2,8 +2,8 @@
 /**
  * A collection of handy functions that are used by the theme.
  *
- * @package 	Reach
- * @category 	Functions
+ * @package     Reach
+ * @category    Functions
  */
 
 /**
@@ -39,22 +39,22 @@ function reach_has_edd() {
 /**
  * Return the home URL. Checks if WPML is installed and defers to the WPML function if it is. 
  * 
- * @return 	string
- * @since 	1.0.0
+ * @return  string
+ * @since   1.0.0
  */
 function reach_site_url() {
-	return function_exists('wpml_get_home_url') ? wpml_get_home_url() : site_url();
+    return function_exists('wpml_get_home_url') ? wpml_get_home_url() : site_url();
 }
 
 /**
  * Returns the given URL minus the 
  *
- * @param 	string 		$url
- * @return 	string
- * @since 	1.0.0
+ * @param   string      $url
+ * @return  string
+ * @since   1.0.0
  */
 function reach_condensed_url( $url ) {
-	$parts = parse_url($url);
+    $parts = parse_url($url);
 
     if ( isset( $parts[ 'host' ] ) ) {
 
@@ -68,8 +68,8 @@ function reach_condensed_url( $url ) {
     else {
         $output = $url;
     }
-	
-	return $output;
+    
+    return $output;
 }
 
 /**
@@ -173,15 +173,15 @@ function reach_get_banner_title() {
     }
     /* Year Archive */
     elseif ( is_year() ) {
-        $title = apply_filters( 'reach_banner_title_year_archive', sprintf( __( 'Year: %s', 'charitable' ), get_the_date( _x( 'Y', 'yearly archives date format', 'charitable' ) ) ) );
+        $title = apply_filters( 'reach_banner_title_year_archive', sprintf( __( 'Year: %s', 'reach' ), get_the_date( _x( 'Y', 'yearly archives date format', 'reach' ) ) ) );
     }
     /* Month Archive */    
     elseif ( is_month() ) {
-        $title = apply_filters( 'reach_banner_title_month_archive', sprintf( __( 'Month: %s', 'charitable' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'charitable' ) ) ) );
+        $title = apply_filters( 'reach_banner_title_month_archive', sprintf( __( 'Month: %s', 'reach' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'reach' ) ) ) );
     } 
     /* Day Archive */
     elseif ( is_day() ) {
-        $title = apply_filters( 'reach_banner_title_day_archive', sprintf( __( 'Day: %s', 'charitable' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'charitable' ) ) ) );
+        $title = apply_filters( 'reach_banner_title_day_archive', sprintf( __( 'Day: %s', 'reach' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'reach' ) ) ) );
     }
     /* General Archive */
     elseif ( is_archive() ) {
