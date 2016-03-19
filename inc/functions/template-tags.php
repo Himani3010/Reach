@@ -207,7 +207,7 @@ if ( ! function_exists( 'reach_site_identity' ) ) :
  *
  * This may include the logo, site title and/or site tagline.
  *
- * @param 	boolean 	$echo
+ * @param 	boolean $echo
  * @return 	string
  * @since 	1.0.0
  */
@@ -221,14 +221,20 @@ function reach_site_identity( $echo = true ) {
 	$logo = reach_get_customizer_image_data( 'logo' );
 	
 	if ( $logo ) {
-		$output .= apply_filters( 'reach_site_logo', sprintf( '<a href="%s" title="%s"><img src="%s" alt="%s" width="%s" height="%s" %s/></a>',  
+		$srcset = "{$logo[ 'image' ]} 1x";
+
+		if ( isset( $logo[ 'retina_image' ] ) ) {
+			$srcset .= ", {$logo[ 'retina_image' ]} 2x";
+		}
+
+		$output .= apply_filters( 'reach_site_logo', sprintf( '<a href="%s" title="%s"><img src="%s" alt="%s" width="%s" height="%s" srcset="%s" /></a>',  
 			$site_url,
 		__( 'Go to homepage', 'reach' ),
 			$logo[ 'image' ], 
 			$site_title, 
 			$logo[ 'width' ],
 			$logo[ 'height' ],
-			isset( $logo[ 'retina_image' ] ) ? "srcset={$logo[ 'retina_image' ]}" : ''
+			$srcset
 		) );
 	}
 

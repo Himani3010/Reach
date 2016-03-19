@@ -1,7 +1,5 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
-    exit; // Exit if accessed directly
-}
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 if ( ! class_exists( 'WP_Customize_Control' ) ) return;
 
@@ -10,22 +8,21 @@ if ( ! class_exists( 'Reach_Customizer_Retina_Image_Control' ) ) :
 /**
  * Adds a new control for retina images. 
  *
- * @class Reach_Customizer_Retina_Image_Control
- * @author Studio 164a
- * @category Admin
- * @package Crafted/Admin/Customizer/Controls
- * @since 1.0
+ * @author      Studio 164a
+ * @category    Admin
+ * @package     Reach/Admin/Customizer/Controls
+ * @since       1.0
  */
 class Reach_Customizer_Retina_Image_Control extends WP_Customize_Image_Control {
 
 	/**
 	 * @access public
-	 * @var string
+	 * @var    string
 	 */
 	public $type = 'image';
 
 	/**
-	 * @var Crafted_Theme
+	 * @var    Reach_Theme
 	 */
 	private $theme;
 
@@ -34,12 +31,11 @@ class Reach_Customizer_Retina_Image_Control extends WP_Customize_Image_Control {
 	 *
 	 * If $args['settings'] is not defined, use the $id as the setting ID.
 	 *
-	 * @uses WP_Customize_Image_Control::__construct()
-	 * @param WP_Customize_Manager $manager
-	 * @param string $id
-	 * @param array $args
-	 * @return void
-	 * @since 1.0
+	 * @uses   WP_Customize_Image_Control::__construct()
+	 * @param  WP_Customize_Manager $manager
+	 * @param  string $id
+	 * @param  array $args
+	 * @since  1.0.0
 	 */
 	public function __construct( $manager, $id, $args ) {
 		parent::__construct( $manager, $id, $args );
@@ -51,7 +47,6 @@ class Reach_Customizer_Retina_Image_Control extends WP_Customize_Image_Control {
 		 * event, so if that is the current filter, call the method directly. 
 		 */ 
 		if ( current_filter() == 'customize_register' ) {
-			//global $wp_customize;
 			$this->customize_register( $manager );	
 		}
 		/**
@@ -75,11 +70,11 @@ class Reach_Customizer_Retina_Image_Control extends WP_Customize_Image_Control {
 	/**
 	 * Register an extra control & setting for any setting using this control. 
 	 * 
-	 * @see customize_register hook
+	 * @see    customize_register
 	 * 
-	 * @param WP_Customize_Manager $wp_customize
+	 * @param  WP_Customize_Manager $wp_customize
 	 * @return void
-	 * @since 1.0
+	 * @since  1.0.0
 	 */
 	public function customize_register($wp_customize) {
 		$checkbox_id = $this->id . '_is_retina';
@@ -94,10 +89,23 @@ class Reach_Customizer_Retina_Image_Control extends WP_Customize_Image_Control {
             'label' => __( 'Is this image retina-ready?', 'reach'  ),
             'section' => $this->section,
             'priority' => $this->priority + 0.2,
-            'type' => 'checkbox'            
+            'type' => 'checkbox'
         ) );
 	}
 
+    /**
+     * Renders the control wrapper and calls $this->render_content() for the internals.
+     *
+     * @since   1.0.0
+     */
+    protected function render() {
+        $id    = 'customize-control-' . str_replace( array( '[', ']' ), array( '-', '' ), $this->id );
+        $class = 'customize-control customize-control-image customize-control-retina-image';
+
+        ?><li id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $class ); ?>">
+            <?php $this->render_content(); ?>
+        </li><?php
+    }
 
 	/**
      * Before the customizer has finished saving each of the fields, store the current image state.
@@ -108,7 +116,7 @@ class Reach_Customizer_Retina_Image_Control extends WP_Customize_Image_Control {
      * @param WP_Customize_Manager $wp_customize
      * @return void
      * @access public
-     * @since 1.0
+     * @since   1.0.0
      */
     public function customize_save(WP_Customize_Manager $wp_customize) {
         $this->set_current_image_state();
@@ -122,10 +130,9 @@ class Reach_Customizer_Retina_Image_Control extends WP_Customize_Image_Control {
      * @param WP_Customize_Manager $wp_customize
      * @return void
      * @access public
-     * @since 1.0
+     * @since   1.0.0
      */
     public function customize_save_after(WP_Customize_Manager $wp_customize) {
-
         /**
          * If the image has changed, update the meta we store for the image. 
          */
@@ -142,7 +149,7 @@ class Reach_Customizer_Retina_Image_Control extends WP_Customize_Image_Control {
      * @param string $image_url
      * @return void
      * @access private
-     * @since 1.0
+     * @since   1.0.0
      */
     private function update_image($image_url) {
         /**
@@ -178,7 +185,7 @@ class Reach_Customizer_Retina_Image_Control extends WP_Customize_Image_Control {
      * @param array image_meta An array containing the image's URL, width and height.
      * @return WP_Error|array
      * @access private
-     * @since 1.0
+     * @since   1.0.0
      */
     private function create_non_retina_copy($image_id, array $image_meta) {
 
@@ -248,9 +255,9 @@ class Reach_Customizer_Retina_Image_Control extends WP_Customize_Image_Control {
      * @see Crafted_Customizer::set_current_image_state()
      * @see Crafted_Customizer::is_image_changed()
      *
-     * @return string The state as a simple string. 
-     * @access private
-     * @since 1.0
+     * @return  string The state as a simple string. 
+     * @access  private
+     * @since   1.0.0
      */
     private function get_image_state() {
         return $this->theme->get_theme_setting( $this->id . '_is_retina', false ) . '_' . $this->theme->get_theme_setting( $this->id , false);
@@ -263,7 +270,7 @@ class Reach_Customizer_Retina_Image_Control extends WP_Customize_Image_Control {
      *
      * @return void
      * @access private
-     * @since 1.0
+     * @since   1.0.0
      */
     private function set_current_image_state() {
         $this->image_state = $this->get_image_state();

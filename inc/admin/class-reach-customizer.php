@@ -2,7 +2,7 @@
 /**
  * Sets up the Wordpress customizer
  *
- * @since 1.2
+ * @since   1.0.0
  */
 
 class Reach_Customizer {
@@ -36,13 +36,13 @@ class Reach_Customizer {
      * Set up callbacks for the class.
      *
      * @return  void
-     * @since   1.6.0
+     * @since   1.0.0
      */
     public function setup_callbacks() {
         add_action('customize_save_after', array( $this, 'customize_save_after' ) );
         add_action('customize_register', array( $this, 'customize_register' ) );     
-        add_action('customize_controls_print_scripts', array( $this, 'customize_controls_print_scripts' ), 100 );
         add_action('customize_preview_init', array( $this, 'load_theme_customizer_script' ) );
+        add_action('customize_controls_print_styles', array( $this, 'add_custom_styles' ) );
     }
 
     /**
@@ -52,7 +52,7 @@ class Reach_Customizer {
      * @param   WP_Customize_Manager $wp_customize
      * @return  void
      * @access  public
-     * @since   1.6.0
+     * @since   1.0.0
      */
     public function customize_save_after( WP_Customize_Manager $wp_customize ) {
         delete_transient( Reach_Customizer_Styles::get_transient_key() );
@@ -66,13 +66,14 @@ class Reach_Customizer {
      */
     public function customize_register($wp_customize) {
         $wp_customize->get_section( 'title_tagline' )->priority = 0;
-        $wp_customize->get_control( 'blogname' )->priority = 1;       
-        $wp_customize->get_control( 'blogdescription' )->priority = 2;
+        $wp_customize->get_control( 'blogname' )->priority = 2;       
+        $wp_customize->get_control( 'blogdescription' )->priority = 3;
+        $this->add_section_settings( 'title_tagline', $this->get_site_identity_settings() );
 
-        $this->add_section( 'logo', $this->get_logo_section( 20 ) );
+        // $this->add_section( 'logo', $this->get_logo_section( 20 ) );
         $this->add_section( 'layout', $this->get_layout_section( 40 ) );        
         $this->add_section( 'colour', $this->get_colour_section( 60 ) );
-        $this->add_section( 'header', $this->get_header_section( 80 ) );
+        // $this->add_section( 'header', $this->get_header_section( 80 ) );
         $this->add_section( 'footer', $this->get_footer_section( 100 ) );
         $this->add_section( 'campaigns', $this->get_campaign_section( 120 ) );
         $this->add_section( 'social', $this->get_social_profiles_section( 140 ) );
@@ -215,6 +216,53 @@ class Reach_Customizer {
 
             }
         }
+    }
+
+    /**
+     * Returns the logo setting. 
+     *
+     * @param   int     $priority
+     * @return  array[]
+     * @access  private
+     * @since   1.0.0
+     */
+    private function get_site_identity_settings() {
+        $site_identity_settings = array(
+            'logo' => array(
+                'setting'   => array(
+                    'transport' => 'postMessage',
+                    'sanitize_callback' => 'esc_url_raw'
+                ), 
+                'control'   => array(
+                    'control_type'  => 'Reach_Customizer_Retina_Image_Control', 
+                    'priority'      => 1
+                )
+            ),
+            'hide_site_title'   => array(
+                'setting'       => array(
+                    'transport' => 'postMessage',
+                    'sanitize_callback' => 'absint'
+                ), 
+                'control'       => array(
+                    'label'     => __( 'Hide the title', 'reach' ),
+                    'type'      => 'checkbox',
+                    'priority'  => 4
+                )
+            ),
+            'hide_site_tagline' => array(
+                'setting'       => array(
+                    'transport' => 'postMessage',
+                    'sanitize_callback' => 'absint'
+                ), 
+                'control'       => array(
+                    'label'     => __( 'Hide the tagline', 'reach' ),
+                    'type'      => 'checkbox',
+                    'priority'  => 5
+                )
+            )  
+        );
+
+        return apply_filters( 'reach_customizer_site_identity_settings', $site_identity_settings );
     }
 
     /**
@@ -361,47 +409,6 @@ class Reach_Customizer {
         );
 
         return apply_filters( 'reach_customizer_colour_section', $colour_settings );
-    }
-
-    /**
-     * Returns the header section settings. 
-     *
-     * @param   int     $priority
-     * @return  array[]
-     * @access  private
-     * @since   1.0.0
-     */
-    private function get_header_section( $priority ) {
-        $header_settings = array(
-            'priority'  => $priority,
-            'title'     => __( 'Header', 'reach' ),
-            'settings'  => array(                 
-                'hide_site_title'   => array(
-                    'setting'       => array(
-                        'transport' => 'postMessage',
-                        'sanitize_callback' => 'absint'
-                    ), 
-                    'control'       => array(
-                        'label'     => __( 'Hide the title', 'reach' ),
-                        'type'      => 'checkbox',
-                        'priority'  => $priority + 2
-                    )
-                ),
-                'hide_site_tagline' => array(
-                    'setting'       => array(
-                        'transport' => 'postMessage',
-                        'sanitize_callback' => 'absint'
-                    ), 
-                    'control'       => array(
-                        'label'     => __( 'Hide the tagline', 'reach' ),
-                        'type'      => 'checkbox',
-                        'priority'  => $priority + 3
-                    )
-                )          
-            )
-        );
-
-        return apply_filters( 'reach_customizer_header_section', $header_settings );
     }
 
     /**
@@ -577,23 +584,6 @@ class Reach_Customizer {
             )
         );
 
-        // $background_images_settings[ 'sections' ][ 'background_images_campaign' ] = array(
-        //     'title'         => __( 'Featured Campaign Block', 'reach' ), 
-        //     'priority'      => 53,
-        //     'settings'      => array(
-        //         'campaign_feature_background' => array(
-        //             'setting'   => array(
-        //                 'default'       => '', 
-        //                 'transport'     => 'postMessage', 
-        //             ), 
-        //             'control'   => array(
-        //                 'control_type'  => 'Reach_Customizer_Retina_Image_Control', 
-        //                 'priority'      => 54
-        //             )
-        //         )
-        //     )
-        // );
-
         $background_images_settings[ 'sections' ][ 'background_images_blog' ] = array(
             'title'         => __( 'Blog & Page Banners', 'reach' ), 
             'priority'      => 55,
@@ -616,70 +606,6 @@ class Reach_Customizer {
     }
 
     /**
-     * customize_controls_print_scripts
-     * 
-     * 
-     */
-     public function customize_controls_print_scripts() {
-        ?>
-        <script>
-        // ( function($){
-
-        //     // Variables
-        //     var $accent_colour, $accent_hover, $accent_text, $accent_text_secondary, $body_background, $body_text, $button_text, 
-        //     $wrapper_background, $posts_background, $widget_background, $primary_border, $secondary_border, 
-        //     $meta_colour, $footer_text, $footer_titles, $header_buttons, $header_buttons_hover, $palette,
-
-        //     // Swaps a palette
-        //     switchPalette = function() {                
-        //         var colours = JSON.parse( $palette.find('input:checked').val() );
-                
-        //         // General link styling
-        //         $accent_colour.wpColorPicker('color', colours.accent_colour);
-        //         $accent_hover.wpColorPicker('color', colours.accent_hover);
-        //         $accent_text.wpColorPicker('color', colours.accent_text);
-        //         $accent_text_secondary.wpColorPicker('color', colours.accent_text_secondary);
-        //         $body_background.wpColorPicker('color', colours.body_background);
-        //         $body_text.wpColorPicker('color', colours.body_text);
-        //         $button_text.wpColorPicker('color', colours.button_text);
-        //         $wrapper_background.wpColorPicker('color', colours.wrapper_background);
-        //         $posts_background.wpColorPicker('color', colours.posts_background);
-        //         $widget_background.wpColorPicker('color', colours.widget_background);
-        //         $primary_border.wpColorPicker('color', colours.primary_border);
-        //         $secondary_border.wpColorPicker('color', colours.secondary_border);
-        //         $meta_colour.wpColorPicker('color', colours.meta_colour);
-        //         $footer_text.wpColorPicker('color', colours.footer_text);
-        //         $footer_titles.wpColorPicker('color', colours.footer_titles);    
-        //         $header_buttons.wpColorPicker('color', colours.header_buttons);    
-        //         $header_buttons_hover.wpColorPicker('color', colours.header_buttons_hover);    
-        //     };
-
-        //     $(window).load(function() {             
-
-        //         $accent_colour = $('.color-picker-hex', '#customize-control-accent_colour');
-        //         $accent_hover = $('.color-picker-hex', '#customize-control-accent_hover');
-        //         $accent_text = $('.color-picker-hex', '#customize-control-accent_text');
-        //         $accent_text_secondary = $('.color-picker-hex', '#customize-control-accent_text_secondary');
-        //         $body_background = $('.color-picker-hex', '#customize-control-body_background');
-        //         $body_text = $('.color-picker-hex', '#customize-control-body_text');
-        //         $button_text = $('.color-picker-hex', '#customize-control-button_text');
-        //         $wrapper_background = $('.color-picker-hex', '#customize-control-wrapper_background');
-        //         $posts_background = $('.color-picker-hex', '#customize-control-posts_background');
-        //         $widget_background = $('.color-picker-hex', '#customize-control-widget_background');
-        //         $primary_border = $('.color-picker-hex', '#customize-control-primary_border');
-        //         $secondary_border = $('.color-picker-hex', '#customize-control-secondary_border');
-        //         $meta_colour = $('.color-picker-hex', '#customize-control-meta_colour');
-        //         $footer_text = $('.color-picker-hex', '#customize-control-footer_text');
-        //         $footer_titles = $('.color-picker-hex', '#customize-control-footer_titles');
-        //         $header_buttons = $('.color-picker-hex', '#customize-control-header_buttons');
-        //         $header_buttons_hover = $('.color-picker-hex', '#customize-control-header_buttons_hover');
-        //     });
-        // })(jQuery);        
-        </script>
-        <?php
-    }
-
-    /**
      * Load the theme-customizer.js file. 
      *
      * @return  void
@@ -687,8 +613,24 @@ class Reach_Customizer {
      * @since   1.0.0
      */
     public function load_theme_customizer_script() {
-        wp_register_script( 'theme-customizer', get_template_directory_uri().'/js/admin/theme-customizer.js', array( 'jquery', 'customize-preview' ), '1.0.0-20150710i', true );
+        wp_register_script( 'theme-customizer', get_template_directory_uri().'/js/admin/theme-customizer.js', array( 'jquery', 'customize-preview' ), reach_get_theme()->get_theme_version(), true );
         wp_enqueue_script( 'theme-customizer' );        
+    }
+
+    /**
+     * Add custom styles for the Customizer. 
+     *
+     * @return  void
+     * @access  public
+     * @since   1.0.0
+     */
+    public function add_custom_styles() {
+?>
+<style>
+.customize-control-retina-image { margin-bottom: 0; }
+.customize-control-retina-image .actions { margin-bottom: 12px; }
+</style>
+<?php    
     }
 
     /**
