@@ -28,7 +28,7 @@ class Reach_Theme {
 	/**
 	 * The theme version. 
 	 */
-	const VERSION = '0.9.42';
+	const VERSION = '0.9.43';
 
 	/**
 	 * Database version number. 
@@ -90,6 +90,8 @@ class Reach_Theme {
         $this->maybe_start_easy_google_fonts();   
 
         $this->maybe_start_customizer();
+
+        $this->maybe_start_admin();
 
 		$this->attach_hooks_and_filters();
 
@@ -227,6 +229,23 @@ class Reach_Theme {
             add_action( 'reach_theme_start', array( 'Reach_Customizer', 'start' ) );
         } 
 	}
+
+    /**
+     * Set up admin support. 
+     *
+     * @return  void
+     * @access  public
+     * @since   1.0.0
+     */
+    public function maybe_start_admin() {
+        if ( ! is_admin() ) {
+            return;
+        }
+
+        require_once( get_template_directory() . '/inc/admin/class-reach-admin-page.php' );
+
+        new Reach_Admin_Page();
+    }
 
 	/**
      * Set up Jetpack support if it's enabled.
