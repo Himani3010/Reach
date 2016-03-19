@@ -11,16 +11,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Reach is the perfect theme for charities & non-profits. Designed and developed by the creators of Charitable, a beautiful WordPress donation plugin, Reach is focused on helping organisations create an attractive website with a strong focus on fundraising campaigns. 
 
 -------------------------------------------------------
-Getting started with Crafted WordPress Theme
+Getting started with Reach WordPress Theme
 -------------------------------------------------------
 
 = Using the Theme Customizer =
-You can change Crafted’s theme options via the Customizer.
+You can change Reach's theme options via the Customizer.
 
 * To access the theme customizer, click Appearance → Customize in the WordPress admin menu. 
-* Header: Upload your own logo to use in place of your site’s text title. If you're using Crafted Pro, you can also change the header border pattern. If the images you use are retina-ready, tick the box to cater for people visiting your site with HiDPI displays.
-* Colour: Select an Accent Colour to replace the default blue.
-* Footer (Pro only): Upload your own image to display in the footer. If it's a horizontally repeating pattern, set it to Tile Horizontally. You can also add a tagline to display on the right side of your footer. 
+* Footer: Upload your own image to display in the footer. If it's a horizontally repeating pattern, set it to Tile Horizontally. You can also add a tagline to display on the right side of your footer. 
 * Social Networks: Add your social media URLs. Leave blank any networks that you don't use.
 * When you’re finished making changes, click Save & Publish to save the settings. Check out your site to confirm your changes.
 

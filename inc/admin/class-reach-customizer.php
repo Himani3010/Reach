@@ -427,10 +427,9 @@ class Reach_Customizer {
                 'footer_tagline' => array(
                     'setting'   => array(
                         'transport' => 'postMessage', 
-                        'default'   => sprintf( 
-                            '<a href="%s">%s</a>', 
-                            esc_url( 'http://wordpress.org/' ), 
-                            __( 'Proudly powered by WordPress', 'reach' ) 
+                        'default'   => sprintf( '<a href="https://www.wpcharitable.com" title="%">%s</a>', 
+                            __( 'The WP Charitable homepage', 'reach' ),
+                            __( 'Reach: A WordPress theme by WP Charitable', 'reach' ) 
                         ), 
                         'sanitize_callback' => 'esc_html'
                     ), 

@@ -20,9 +20,6 @@
 	var getImageDimensions = function(img, setting) {
 		var dimensions = {};
 
-        console.log( wp.customize( setting + '_is_retina' ).get() );
-        console.log( img );
-
 		if ( wp.customize( setting + '_is_retina' ).get() == true ) {
 			dimensions.height = img.height / 2;
 			dimensions.width = img.width / 2;

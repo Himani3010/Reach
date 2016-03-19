@@ -9,8 +9,9 @@
 		style: solid;
 		color: rgba( 255, 255, 255, 0.5 );
 	}
+	@include font-size( 13 );
 	font-family: $font__secondary;
-	text-transform: none;
+	text-transform: uppercase;
 	@include letter-spacing( 1 );
 	font-weight: 300;
 	text-align: center;

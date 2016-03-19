@@ -3121,8 +3121,10 @@ embed {
   border-top-width: 0.1rem;
   border-top-style: solid;
   border-top-color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  font-size: 1.3rem;
   font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
-  text-transform: none;
+  text-transform: uppercase;
   letter-spacing: 1px;
   letter-spacing: 0.1rem;
   font-weight: 300;
@@ -3131,7 +3133,10 @@ embed {
     float: left;
     width: 100%;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-size: 1.3rem; }
   #colophon.no-widgets {
     margin: 0;
     padding: 0;
