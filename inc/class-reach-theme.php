@@ -178,8 +178,7 @@ class Reach_Theme {
 	 * @since 	1.0.0
 	 */
 	private function load_dependencies() {
-        require get_template_directory() . '/inc/plugins/plugins.php';
-		require get_template_directory() . '/inc/vendors/hybrid-media-grabber.php';
+        require get_template_directory() . '/inc/vendors/hybrid-media-grabber.php';
 		require get_template_directory() . '/inc/class-reach-media-grabber.php';
 		require get_template_directory() . '/inc/class-reach-customizer-styles.php';
 		require get_template_directory() . '/inc/functions/template-tags.php';
