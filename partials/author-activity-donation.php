@@ -2,26 +2,29 @@
 /**
  * Partial template displaying donations in the activity feed shown on user profiles.
  * 
- * @package 	Reach
+ * @package     Reach
  */
 
-global $donor;
+if ( ! reach_has_charitable() ) :
+    return;
+endif;
 
-$donation 		= new Charitable_Donation( get_the_ID() );
-$campaign_id 	= current( $donation->get_campaign_donations() )->campaign_id;
+$donation = new Charitable_Donation( get_the_ID() );
+$campaign_id = current( $donation->get_campaign_donations() )->campaign_id;
+
 ?>
 <li class="activity-type-donation cf">
-	<p class="activity-summary">
-		<?php printf( '<span class="display-name">%s</span> %s %s.', 
-			$donor->display_name, 
-			_x( 'backed', 'user backed campaign', 'reach' ), 
-			$donation->get_campaigns_donated_to( true ) 
-		) ?><br />
-		<span class="time-ago"><?php printf( '%s %s', human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ), _x( 'ago', 'time ago', 'reach' ) ) ?></span>
-	</p>
-	<?php if ( has_post_thumbnail( $campaign_id ) ) :
+    <p class="activity-summary">
+        <?php printf( '<span class="display-name">%s</span> %s %s.', 
+            reach_get_current_author()->display_name, 
+            _x( 'backed', 'user backed campaign', 'reach' ), 
+            $donation->get_campaigns_donated_to( true ) 
+        ) ?><br />
+        <span class="time-ago"><?php printf( '%s %s', human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ), _x( 'ago', 'time ago', 'reach' ) ) ?></span>
+    </p>
+    <?php if ( has_post_thumbnail( $campaign_id ) ) :
 
-		echo get_the_post_thumbnail( $campaign_id, 'thumbnail' );
+        echo get_the_post_thumbnail( $campaign_id, 'thumbnail' );
 
-	endif ?>
+    endif ?>
 </li><!-- .activity-type-donation -->

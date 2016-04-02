@@ -7,10 +7,9 @@
  * @package     Reach
  */
 
-$donor      = new Charitable_User( reach_get_current_author() );
-$campaigns  = Charitable_Campaigns::query( array( 'author' => $donor->ID ) );
-$avatar     = $donor->get_avatar( 140 );
-$first_name = strlen( $donor->first_name ) ? $donor->first_name : $donor->display_name;
+$author = reach_get_current_author();
+    
+$first_name = strlen( $author->first_name ) ? $author->first_name : $author->display_name;
 
 get_header();
 
@@ -22,36 +21,32 @@ get_header();
             <div class="entry-block block">
                 <div class="entry cf">
                     <div class="author-description">
-                        <div class="author-avatar">
-                            <?php echo $avatar ?>
-                        </div><!-- .author-avatar -->
+                        <?php get_template_part( 'partials/author', 'avatar' ) ?>                        
                         <div class="author-facts">
                             <h2><?php printf( _x( 'About %s', 'about person', 'reach' ), $first_name ) ?></h2>
-                            <p><?php printf( __( 'Joined %s', 'reach' ), date('F Y', strtotime( $donor->user_registered ) ) ) ?></p>
-                            <?php if ( get_current_user_id() == $donor->ID && get_theme_mod( 'edit_profile_page', false ) ) : ?>
-                                <a href="<?php echo get_theme_mod( 'edit_profile_page' ) ?>" class="button"><?php _e( 'Edit Profile', 'reach' ) ?></a>
-                            <?php endif ?>
+                            <p><?php printf( __( 'Joined %s', 'reach' ), date('F Y', strtotime( $author->user_registered ) ) ) ?></p>
+                            <?php echo reach_author_edit_profile_link( $author->ID ) ?>                            
                         </div><!-- .author-facts -->            
                         <div class="author-bio">                
                             <h3><?php _e( 'Bio', 'reach' ) ?></h3>
-                            <?php echo apply_filters( 'the_content', $donor->description ) ?>
+                            <?php echo apply_filters( 'the_content', $author->description ) ?>
                         </div><!-- .author-bio -->
                         <ul class="author-links">
-                            <?php if ( $donor->user_url ) : ?>
+                            <?php if ( $author->user_url ) : ?>
                                 <li class="with-icon" data-icon="&#xf0c1;">
-                                    <a target="_blank" href="<?php echo $donor->user_url ?>" title="<?php printf( __("Visit %s's website", 'reach'), $donor->display_name ) ?>"><?php echo reach_condensed_url( $donor->user_url ) ?></a>
+                                    <a target="_blank" href="<?php echo $author->user_url ?>" title="<?php printf( __("Visit %s's website", 'reach'), $author->display_name ) ?>"><?php echo reach_condensed_url( $author->user_url ) ?></a>
                                 </li>
                             <?php endif ?>
 
-                            <?php if ( $donor->twitter ) : ?>
+                            <?php if ( $author->twitter ) : ?>
                                 <li class="with-icon" data-icon="&#xf099;">
-                                    <a target="_blank" href="<?php echo $donor->twitter ?>" title="<?php printf( __("Visit %s's Twitter profile", 'reach'), $donor->display_name ) ?>"><?php echo reach_condensed_url( $donor->twitter ) ?></a>
+                                    <a target="_blank" href="<?php echo $author->twitter ?>" title="<?php printf( __("Visit %s's Twitter profile", 'reach'), $author->display_name ) ?>"><?php echo reach_condensed_url( $author->twitter ) ?></a>
                                 </li>
                             <?php endif ?>
 
-                            <?php if ( $donor->facebook ) : ?>
+                            <?php if ( $author->facebook ) : ?>
                                 <li class="with-icon" data-icon="&#xf09a;">
-                                    <a target="_blank" href="<?php echo $donor->facebook ?>" title="<?php printf( __("Visit %s's Facebook profile", 'reach'), $donor->display_name ) ?>"><?php echo reach_condensed_url( $donor->facebook ) ?></a>
+                                    <a target="_blank" href="<?php echo $author->facebook ?>" title="<?php printf( __("Visit %s's Facebook profile", 'reach'), $author->display_name ) ?>"><?php echo reach_condensed_url( $author->facebook ) ?></a>
                                 </li>
                             <?php endif ?>
                         </ul><!-- .author-links -->

@@ -141,6 +141,7 @@ body.author {
 
         li {
             position: relative;
+            word-wrap: break-word;
             @include padding( $size__margin-double, 0 );
             margin-bottom: 0;
             @include border-bottom;

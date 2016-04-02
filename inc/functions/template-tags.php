@@ -202,200 +202,229 @@ add_action( 'save_post',     'reach_category_transient_flusher' );
 
 if ( ! function_exists( 'reach_site_identity' ) ) : 
 
-/**
- * Displays the site identity section. 
- *
- * This may include the logo, site title and/or site tagline.
- *
- * @param 	boolean $echo
- * @return 	string
- * @since 	1.0.0
- */
-function reach_site_identity( $echo = true ) {
-	$output = "";	
+	/**
+	 * Displays the site identity section. 
+	 *
+	 * This may include the logo, site title and/or site tagline.
+	 *
+	 * @param 	boolean $echo
+	 * @return 	string
+	 * @since 	1.0.0
+	 */
+	function reach_site_identity( $echo = true ) {
+		$output = "";	
 
-	$site_url = site_url();
-	$site_title = get_bloginfo( 'title' );
-	$hide_title = get_theme_mod( 'hide_site_title' );
-	$hide_tagline = get_theme_mod( 'hide_site_tagline' );
-	$logo = reach_get_customizer_image_data( 'logo' );
-	
-	if ( $logo ) {
-		$srcset = "{$logo[ 'image' ]} 1x";
+		$site_url = site_url();
+		$site_title = get_bloginfo( 'title' );
+		$hide_title = get_theme_mod( 'hide_site_title' );
+		$hide_tagline = get_theme_mod( 'hide_site_tagline' );
+		$logo = reach_get_customizer_image_data( 'logo' );
+		
+		if ( $logo ) {
+			$srcset = "{$logo[ 'image' ]} 1x";
 
-		if ( isset( $logo[ 'retina_image' ] ) ) {
-			$srcset .= ", {$logo[ 'retina_image' ]} 2x";
+			if ( isset( $logo[ 'retina_image' ] ) ) {
+				$srcset .= ", {$logo[ 'retina_image' ]} 2x";
+			}
+
+			$output .= apply_filters( 'reach_site_logo', sprintf( '<a href="%s" title="%s"><img src="%s" alt="%s" width="%s" height="%s" srcset="%s" /></a>',  
+				$site_url,
+			__( 'Go to homepage', 'reach' ),
+				$logo[ 'image' ], 
+				$site_title, 
+				$logo[ 'width' ],
+				$logo[ 'height' ],
+				$srcset
+			) );
 		}
 
-		$output .= apply_filters( 'reach_site_logo', sprintf( '<a href="%s" title="%s"><img src="%s" alt="%s" width="%s" height="%s" srcset="%s" /></a>',  
+		$tag = is_front_page() ? 'h1' : 'div';
+		$output .= apply_filters( 'reach_site_title', sprintf( '<%s class="site-title %s"><a href="%s" title="%s">%s</a></%s>', 
+			$tag,
+			$hide_title ? 'hidden' : '',
 			$site_url,
-		__( 'Go to homepage', 'reach' ),
-			$logo[ 'image' ], 
-			$site_title, 
-			$logo[ 'width' ],
-			$logo[ 'height' ],
-			$srcset
+			__( 'Go to homepage', 'reach' ),
+			$site_title,
+			$tag
 		) );
+
+		$output .= apply_filters( 'reach_site_tagline', sprintf( '<div class="site-tagline %s">%s</div>', 
+			$hide_tagline ? 'hidden' : '',
+			get_bloginfo( 'description' )
+		) );
+
+		if ( ! $echo ) {
+			return $output;
+		}
+
+		echo $output;
 	}
-
-	$tag = is_front_page() ? 'h1' : 'div';
-	$output .= apply_filters( 'reach_site_title', sprintf( '<%s class="site-title %s"><a href="%s" title="%s">%s</a></%s>', 
-		$tag,
-		$hide_title ? 'hidden' : '',
-		$site_url,
-		__( 'Go to homepage', 'reach' ),
-		$site_title,
-		$tag
-	) );
-
-	$output .= apply_filters( 'reach_site_tagline', sprintf( '<div class="site-tagline %s">%s</div>', 
-		$hide_tagline ? 'hidden' : '',
-		get_bloginfo( 'description' )
-	) );
-
-	if ( ! $echo ) {
-		return $output;
-	}
-
-	echo $output;
-}
 
 endif;
 
 if ( ! function_exists( 'reach_post_header' ) ) :
 
-/**
- * Displays the post title. 
- * 
- * @param 	bool 		$echo
- * @return 	string|void
- * @since 	2.0.0
- */
-function reach_post_header( $echo = true ) {
-	global $post;
+	/**
+	 * Displays the post title. 
+	 * 
+	 * @param 	bool 		$echo
+	 * @return 	string|void
+	 * @since 	2.0.0
+	 */
+	function reach_post_header( $echo = true ) {
+		global $post;
 
-	$post_format = get_post_format();
+		$post_format = get_post_format();
 
-	if ( ! strlen( get_the_title() ) )
-		return '';
+		if ( ! strlen( get_the_title() ) )
+			return '';
 
-	// Set up the wrapper
-	if ( is_single() ) {
-		$wrapper_start = '<h1 class="post-title">';
-		$wrapper_end = '</h1>';
+		// Set up the wrapper
+		if ( is_single() ) {
+			$wrapper_start = '<h1 class="post-title">';
+			$wrapper_end = '</h1>';
+		}
+		else {
+			$wrapper_start = '<h2 class="post-title">';
+			$wrapper_end = '</h2>';
+		}
+
+		// Link posts have a different title setup
+		if ( 'link' == $post_format ) {
+			$title = reach_link_format_title(false);
+		}
+		elseif ( 'status' == $post_format ) {
+			$title = get_the_content();
+		}
+		else {
+			$title = sprintf( '<a href="%s" title="%s">%s</a>', 
+				get_permalink(),
+				the_title_attribute( array( 'echo' => false ) ),
+				get_the_title() 
+			);	
+		}
+
+		$output = $wrapper_start . $title . $wrapper_end;
+
+		if ( $echo === false )
+			return $output;
+
+		echo $output;
 	}
-	else {
-		$wrapper_start = '<h2 class="post-title">';
-		$wrapper_end = '</h2>';
-	}
-
-	// Link posts have a different title setup
-	if ( 'link' == $post_format ) {
-		$title = reach_link_format_title(false);
-	}
-	elseif ( 'status' == $post_format ) {
-		$title = get_the_content();
-	}
-	else {
-		$title = sprintf( '<a href="%s" title="%s">%s</a>', 
-			get_permalink(),
-			the_title_attribute( array( 'echo' => false ) ),
-			get_the_title() 
-		);	
-	}
-
-	$output = $wrapper_start . $title . $wrapper_end;
-
-	if ( $echo === false )
-		return $output;
-
-	echo $output;
-}
 
 endif;
 
 if ( ! function_exists( 'reach_video_format_the_content' ) ) :
 
-/**
- * Prints the content for a video post.
- * 
- * @return 	void
- * @since 	1.0.0
- */ 
-function reach_video_format_the_content($more_link_text = null, $stripteaser = false) {
-	$content = get_the_content($more_link_text, $stripteaser);
-	$content = reach_strip_embed_shortcode( $content, 1 );
-	$content = apply_filters('the_content', $content);
-	$content = str_replace(']]>', ']]&gt;', $content);		
-	echo $content;
-}
+	/**
+	 * Prints the content for a video post.
+	 * 
+	 * @return 	void
+	 * @since 	1.0.0
+	 */ 
+	function reach_video_format_the_content($more_link_text = null, $stripteaser = false) {
+		$content = get_the_content($more_link_text, $stripteaser);
+		$content = reach_strip_embed_shortcode( $content, 1 );
+		$content = apply_filters('the_content', $content);
+		$content = str_replace(']]>', ']]&gt;', $content);		
+		echo $content;
+	}
 
 endif;
 
 if ( ! function_exists( 'reach_link_format_the_content' ) ) :
 
-/**
- * Prints the content for a link post.
- * 
- * @param 	string 		$more_link_text
- * @param 	string 		$stripteaser
- * @param 	bool 		$echo
- * @return 	void|string
- * @since 	1.0.0
- */
-function reach_link_format_the_content($more_link_text = null, $stripteaser = false, $echo = true) {
-	$content = get_the_content($more_link_text, $stripteaser);
-	$content = reach_strip_anchors( $content, 1 );
-	$content = apply_filters('the_content', $content);
-	$content = str_replace(']]>', ']]&gt;', $content);		
+	/**
+	 * Prints the content for a link post.
+	 * 
+	 * @param 	string 		$more_link_text
+	 * @param 	string 		$stripteaser
+	 * @param 	bool 		$echo
+	 * @return 	void|string
+	 * @since 	1.0.0
+	 */
+	function reach_link_format_the_content($more_link_text = null, $stripteaser = false, $echo = true) {
+		$content = get_the_content($more_link_text, $stripteaser);
+		$content = reach_strip_anchors( $content, 1 );
+		$content = apply_filters('the_content', $content);
+		$content = str_replace(']]>', ']]&gt;', $content);		
 
-	if ($echo === false) 
-		return $content;
+		if ($echo === false) 
+			return $content;
 
-	echo $content;
-}
+		echo $content;
+	}
 
 endif;
 
 if ( ! function_exists( 'reach_link_format_title' ) ) :
 
-/**
- * Returns or prints the title for a link post.
- * 
- * @uses 	reach_link_format_title
- * @param 	bool 		$echo
- * @return 	string
- * @since 	1.0.0
- */
-function reach_link_format_title($echo = true) {
-	global $post;
-	$anchors = reach_get_first_anchor( $post->post_content );
+	/**
+	 * Returns or prints the title for a link post.
+	 * 
+	 * @uses 	reach_link_format_title
+	 * @param 	bool 		$echo
+	 * @return 	string
+	 * @since 	1.0.0
+	 */
+	function reach_link_format_title($echo = true) {
+		global $post;
+		$anchors = reach_get_first_anchor( $post->post_content );
 
-	// If there are no anchors, just return the normal title.
-	if ( empty( $anchors ) ) 
-		return sprintf( '<a href="%s" title="%s">%s</a>', get_permalink(), $post->post_title, $post->post_title );
+		// If there are no anchors, just return the normal title.
+		if ( empty( $anchors ) ) 
+			return sprintf( '<a href="%s" title="%s">%s</a>', get_permalink(), $post->post_title, $post->post_title );
 
-	$anchor = apply_filters( 'reach_link_format_title', $anchors[0] );
+		$anchor = apply_filters( 'reach_link_format_title', $anchors[0] );
 
-	if ( $echo === false )
-		return $anchor;
+		if ( $echo === false )
+			return $anchor;
 
-	echo $anchor;
-}
+		echo $anchor;
+	}
 
 endif;
 
 if ( ! function_exists( 'reach_fullwidth_video' ) ) : 
 
-/**
- * Wraps the video in the fit-video class to ensure it is displayed at fullwidth.
- *
- * @param 	string 		$video
- * @return 	string
- * @since 	1.0.0
- */
-function reach_fullwidth_video( $video ) {
-	return sprintf( '<div class="fit-video">%s</div>', $video );
-}
+	/**
+	 * Wraps the video in the fit-video class to ensure it is displayed at fullwidth.
+	 *
+	 * @param 	string 		$video
+	 * @return 	string
+	 * @since 	1.0.0
+	 */
+	function reach_fullwidth_video( $video ) {
+		return sprintf( '<div class="fit-video">%s</div>', $video );
+	}
+
+endif;
+
+if ( ! function_exists( 'reach_author_edit_profile_link' ) ) :
+
+	/**
+	 * Display a link to edit your profile when you are logged in and viewing your author profile.
+	 *
+	 * @param 	int $author_id
+	 * @return 	string
+	 * @since 	1.0.0
+	 */
+	function reach_author_edit_profile_link( $author_id ) {
+		if ( ! reach_has_charitable() ) {
+			return '';
+		}
+
+		if ( get_current_user_id() != $author_id ) {
+			return '';
+		}
+
+		$profile_page = charitable_get_permalink( 'profile_page' );
+
+		if ( ! $profile_page ) {
+			return '';
+		}
+
+		return sprintf( '<a href="%s" title="%s" class="button">%s</a>', $profile_page, __( 'Edit your profile', 'reach' ), __( 'Edit Profile', 'reach' ) );
+	}
 
 endif;

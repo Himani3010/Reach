@@ -127,14 +127,52 @@ function reach_get_social_sites() {
 /**
  * The currently viewed author on an author archive. 
  * 
- * @return  string
+ * @return  WP_User
  * @since   1.0.0
  */
 function reach_get_current_author() {
-    return get_query_var('author_name')
-        ? get_user_by( 'slug', get_query_var( 'author_name' ) ) 
-        : get_userdata( get_query_var( 'author' ) );
+    $author = wp_cache_get( 'current_author', 'reach' );
+
+    if ( false === $author ) {
+        $author = get_query_var('author_name')
+            ? get_user_by( 'slug', get_query_var( 'author_name' ) ) 
+            : get_userdata( get_query_var( 'author' ) );
+
+        wp_cache_set( 'current_author', $author, 'reach' );
+    }
+
+    return $author;
 }
+
+/**
+ * Get the Charitable_User object of the currently viewed author on an author archive. 
+ * 
+ * @return  Charitable_User
+ * @since   1.0.0
+ */
+function reach_get_current_charitable_user() {
+    $charitable_user = wp_cache_get( 'current_charitable_user', 'reach' );
+
+    if ( false === $charitable_user ) {
+        $charitable_user = new Charitable_User( reach_get_current_author()->ID );
+
+        wp_cache_set( 'current_charitable_user', $charitable_user, 'reach' );
+    }
+
+    return $charitable_user;
+}
+
+// /**
+//  * The WP_User object of the current user on an author archive.
+//  * 
+//  * @return  string
+//  * @since   1.0.0
+//  */
+// function reach_get_current_author() {
+//     return get_query_var('author_name')
+//         ? get_user_by( 'slug', get_query_var( 'author_name' ) ) 
+//         : get_userdata( get_query_var( 'author' ) );
+// }
 
 /**
  * Return the banner title for the current page. 

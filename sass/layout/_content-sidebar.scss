@@ -1,6 +1,6 @@
 #page {
 	position: relative;	
-	overflow-x: hidden;
+	// overflow-x: hidden;
 }
 
 .body-wrapper {
@@ -9,7 +9,8 @@
 	width: 100%;			
 }
 
-#main {
+#main {	
+	overflow-x: hidden;
 	@include padding( 0, 0, $size__margin-triple );	
 	@include background-color( $color__background-wrapper );
 

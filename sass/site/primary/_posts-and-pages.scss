@@ -6,6 +6,7 @@
 	@include baseline-header();
 	margin-bottom: 0;
 	text-align: center;
+	-ms-word-wrap: break-word;
 	word-break: break-word;
 
 	a {
@@ -16,8 +17,9 @@
 .banner {
 	position: relative;	
 	width: 100vw;
+	word-wrap: break-word;
 	@include min-height( 100 );
-	@include padding( 35, 0 );
+	@include padding( 35, $size__margin-double );
 	@include background-color( $color__accent );
 	@include color( $color__text-overlay );
 	text-align: center;	
@@ -25,6 +27,8 @@
 
 @include bp( 800 ) {
 	.banner {
+		@include padding-left( $size__margin-triple );
+		@include padding-right( $size__margin-triple );
 		@include margin-bottom( $size__margin-triple );
 	}
 
@@ -39,20 +43,10 @@
 }
 
 @include bp( 1484 ) {	
-	// .content-area:not(.no-sidebar) .banner {
-	// 	left: -50vw;
-	// 	@include margin-left( 700 );
-	// }
-
 	.content-area .banner {
 		left: -50vw;
 		@include margin-left( 700 );
 	}
-
-
-	// .content-area.no-sidebar .banner {
-	// 	@include left( -266 );
-	// }
 }
 
 .blog .banner, 
@@ -111,10 +105,12 @@
 	}
 }
 
-.entry {
+.entry {	
+	@include padding( $size__margin-double, 0 );	
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
 	@include font-size( $font__font-size-big );
 	@include line-height( $font__line-height-big );
-	@include padding( $size__margin-double, 0 );	
 
 	> *:first-child {
 		margin-top: 0;

@@ -5,11 +5,17 @@
  * @package 	Reach
  */
 
-global $donor;
+$author = reach_get_current_author();
 
-$activity = $donor->get_activity( array(
-	'post_type' => array( 'donation', 'campaign', 'post' )
-)) ?>
+$activity = new WP_Query( array(
+    'author'        => $author->ID,
+    'post_status'   => array( 'charitable-completed', 'charitable-preapproved', 'publish' ),
+    'post_type'     => array( 'donation', 'campaign', 'post' ),
+    'order'         => 'DESC', 
+    'orderby'       => 'date'
+) );
+
+?>
 
 <h2><?php _e( 'Activity Feed', 'reach' ) ?></h2>
 
@@ -29,7 +35,7 @@ $activity = $donor->get_activity( array(
 
 <?php else : ?>				
 
-	<p><?php printf( '%s %s', $donor->display_name, _x( 'has no activity to show yet.', 'user has no activity', 'reach' ) ) ?></p>
+	<p><?php printf( '%s %s', $author->display_name, _x( 'has no activity to show yet.', 'user has no activity', 'reach' ) ) ?></p>
 
 <?php 
 

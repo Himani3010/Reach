@@ -5,14 +5,15 @@
  * @package 	Reach
  */
 
-global $donor;
-
+if ( ! reach_has_charitable() ) :
+    return;
+endif;
 
 ?>
 <li class="activity-type-campaign cf">
 	<p class="activity-summary">
 		<?php printf( '<span class="display-name">%s</span> %s <a href="%s" title="%s">%s</a>.', 
-			$donor->display_name, 
+			reach_get_current_author()->display_name, 
 			_x( 'created', 'user created campaign', 'reach' ), 
 			get_permalink(),
 			sprintf( __('Link to %s', 'reach'), get_the_title()  ),
