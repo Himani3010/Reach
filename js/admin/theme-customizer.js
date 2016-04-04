@@ -207,6 +207,18 @@
 		} );
 	} );
 
+	// Layout
+	wp.customize( 'layout', function( value ) {
+		value.bind( function( newval ) {
+			if ( 'layout-wide' === newval ) {
+				$( 'body' ).removeClass( 'layout-boxed' ).addClass( 'layout-wide' );			
+			}
+			else {
+				$( 'body' ).addClass( 'layout-boxed' ).removeClass( 'layout-wide' );
+			}
+		} );
+	} );
+
 	// Update the footer tagline
 	wp.customize( 'footer_tagline', function( value ) {
 		value.bind( function( newval ) {
@@ -214,7 +226,7 @@
 			console.log( $( '.footer-notice' ) );
 			$( '.footer-notice' ).html( newval );
 		} );
-	} )
+	} );
 
 	//  Update colours
 	wp.customize( 'accent_colour', function( value ) {
