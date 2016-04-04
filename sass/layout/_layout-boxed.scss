@@ -76,4 +76,12 @@
             }
         }
     }
+
+    @include bp( 800 ) {
+        .content-area .banner {
+            position: static;
+            max-width: 119rem;
+            margin-left: -5.1rem;
+        }
+    }    
 }

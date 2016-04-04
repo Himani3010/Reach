@@ -2335,8 +2335,7 @@ a {
     clear: both; }
 
 #page {
-  position: relative;
-  overflow-x: hidden; }
+  position: relative; }
 
 .body-wrapper {
   float: left;
@@ -2344,6 +2343,7 @@ a {
   width: 100%; }
 
 #main {
+  overflow-x: hidden;
   padding: 0px 0px 42px;
   padding: 0rem 0rem 4.2rem; }
   @media (min-width: 50em) {
@@ -2413,6 +2413,7 @@ a {
   border-bottom-style: solid;
   margin-bottom: 0;
   text-align: center;
+  -ms-word-wrap: break-word;
   word-break: break-word; }
   .post-title:hover, .entry-header .entry-title:hover,
   .post-title a:hover,
@@ -2422,14 +2423,19 @@ a {
 .banner {
   position: relative;
   width: 100vw;
+  word-wrap: break-word;
   min-height: 100px;
   min-height: 10rem;
-  padding: 35px 0px;
-  padding: 3.5rem 0rem;
+  padding: 35px 28px;
+  padding: 3.5rem 2.8rem;
   text-align: center; }
 
 @media (min-width: 50em) {
   .banner {
+    padding-left: 42px;
+    padding-left: 4.2rem;
+    padding-right: 42px;
+    padding-right: 4.2rem;
     margin-bottom: 42px;
     margin-bottom: 4.2rem; }
 
@@ -2505,12 +2511,14 @@ a {
       width: calc( 100% + 84px ); } }
 
 .entry {
+  padding: 28px 0px;
+  padding: 2.8rem 0rem;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 28px;
-  line-height: 2.8rem;
-  padding: 28px 0px;
-  padding: 2.8rem 0rem; }
+  line-height: 2.8rem; }
   .entry > *:first-child {
     margin-top: 0; }
   .entry > *:last-child {
@@ -3057,6 +3065,7 @@ body.author .author-activity-feed {
   border-top-style: solid; }
   body.author .author-activity-feed li {
     position: relative;
+    word-wrap: break-word;
     padding: 28px 0px;
     padding: 2.8rem 0rem;
     margin-bottom: 0;

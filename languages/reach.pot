@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Reach 0.9.44\n"
+"Project-Id-Version: Reach 0.9.45\n"
 "Report-Msgid-Bugs-To: https://www.wpcharitable.com/\n"
-"POT-Creation-Date: 2016-03-19 15:34:25+00:00\n"
+"POT-Creation-Date: 2016-04-04 11:57:14+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -40,27 +40,23 @@ msgstr ""
 msgid "Newer Campaigns"
 msgstr ""
 
-#: author.php:30
+#: author.php:27
 msgid "Joined %s"
 msgstr ""
 
-#: author.php:32
-msgid "Edit Profile"
-msgstr ""
-
-#: author.php:36
+#: author.php:31
 msgid "Bio"
 msgstr ""
 
-#: author.php:42
+#: author.php:37
 msgid "Visit %s's website"
 msgstr ""
 
-#: author.php:48
+#: author.php:43
 msgid "Visit %s's Twitter profile"
 msgstr ""
 
-#: author.php:54
+#: author.php:49
 msgid "Visit %s's Facebook profile"
 msgstr ""
 
@@ -69,8 +65,8 @@ msgid "Thank you for supporting this campaign"
 msgstr ""
 
 #: campaign-widget.php:26 charitable/campaign-loop/campaign.php:34
-#: partials/author-activity-campaign.php:18
-#: partials/author-activity-post.php:17
+#: partials/author-activity-campaign.php:19
+#: partials/author-activity-post.php:15
 msgid "Link to %s"
 msgstr ""
 
@@ -130,7 +126,7 @@ msgstr ""
 msgid "Edit campaign"
 msgstr ""
 
-#: comments-campaign.php:9 comments.php:14
+#: comments-campaign.php:9
 msgid "This post is password protected. Enter the password to view any comments."
 msgstr ""
 
@@ -138,26 +134,26 @@ msgstr ""
 msgid "Your email address will not be published."
 msgstr ""
 
-#: comments-campaign.php:40 comments.php:59
+#: comments-campaign.php:40 comments.php:26
 msgid "One comment"
 msgid_plural "%1$s comments"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments-campaign.php:53 comments-campaign.php:75 comments.php:72
-#: comments.php:94
+#: comments-campaign.php:53 comments-campaign.php:75 comments.php:39
+#: comments.php:61
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:10
+#: comments.php:11
 msgid "Leave a comment"
 msgstr ""
 
-#: comments.php:67
+#: comments.php:34
 msgid "Newer Comments"
 msgstr ""
 
-#: comments.php:68
+#: comments.php:35
 msgid "Older Comments"
 msgstr ""
 
@@ -714,19 +710,19 @@ msgstr ""
 msgid "YouTube"
 msgstr ""
 
-#: inc/functions/helper-functions.php:168
+#: inc/functions/helper-functions.php:206
 msgid "Search Results for: %s"
 msgstr ""
 
-#: inc/functions/helper-functions.php:176
+#: inc/functions/helper-functions.php:214
 msgid "Year: %s"
 msgstr ""
 
-#: inc/functions/helper-functions.php:180
+#: inc/functions/helper-functions.php:218
 msgid "Month: %s"
 msgstr ""
 
-#: inc/functions/helper-functions.php:184
+#: inc/functions/helper-functions.php:222
 msgid "Day: %s"
 msgstr ""
 
@@ -750,6 +746,14 @@ msgstr ""
 msgid "Go to homepage"
 msgstr ""
 
+#: inc/functions/template-tags.php:427
+msgid "Edit your profile"
+msgstr ""
+
+#: inc/functions/template-tags.php:427
+msgid "Edit Profile"
+msgstr ""
+
 #: partials/account-links.php:20
 msgid "Create a campaign"
 msgstr ""
@@ -766,16 +770,16 @@ msgstr ""
 msgid "Login / Register"
 msgstr ""
 
-#: partials/author-activity.php:14
-msgid "Activity Feed"
-msgstr ""
-
-#: partials/banner-author.php:20
+#: partials/author-activity-summary.php:19
 msgid "Campaigns Backed"
 msgstr ""
 
-#: partials/banner-author.php:22
+#: partials/author-activity-summary.php:21
 msgid "Campaigns Created"
+msgstr ""
+
+#: partials/author-activity.php:20
+msgid "Activity Feed"
 msgstr ""
 
 #: partials/campaign-categories.php:3
@@ -887,7 +891,7 @@ msgstr ""
 msgid "User Dashboard"
 msgstr ""
 
-#: author.php:29
+#: author.php:26
 msgctxt "about person"
 msgid "About %s"
 msgstr ""
@@ -922,17 +926,17 @@ msgctxt "reply to comment"
 msgid "Reply"
 msgstr ""
 
-#: inc/functions/helper-functions.php:176
+#: inc/functions/helper-functions.php:214
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: inc/functions/helper-functions.php:180
+#: inc/functions/helper-functions.php:218
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: inc/functions/helper-functions.php:184
+#: inc/functions/helper-functions.php:222
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr ""
@@ -957,29 +961,29 @@ msgctxt "by post author"
 msgid "by %s"
 msgstr ""
 
-#: partials/author-activity-campaign.php:16
+#: partials/author-activity-campaign.php:17
 msgctxt "user created campaign"
 msgid "created"
 msgstr ""
 
-#: partials/author-activity-campaign.php:21
-#: partials/author-activity-donation.php:20
-#: partials/author-activity-post.php:20
+#: partials/author-activity-campaign.php:22
+#: partials/author-activity-donation.php:23
+#: partials/author-activity-post.php:18
 msgctxt "time ago"
 msgid "ago"
 msgstr ""
 
-#: partials/author-activity-donation.php:17
+#: partials/author-activity-donation.php:20
 msgctxt "user backed campaign"
 msgid "backed"
 msgstr ""
 
-#: partials/author-activity-post.php:15
+#: partials/author-activity-post.php:13
 msgctxt "user published post"
 msgid "published"
 msgstr ""
 
-#: partials/author-activity.php:32
+#: partials/author-activity.php:38
 msgctxt "user has no activity"
 msgid "has no activity to show yet."
 msgstr ""
