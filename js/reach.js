@@ -43,12 +43,6 @@
 
         }
 	});
-	
-	if ( typeof audiojs !== 'undefined' ) {
-		audiojs.events.ready(function() {
-	    	var as = audiojs.createAll();
-	  	});
-	}
 
   	$(window).resize( function() {
         var REACH_CROWDFUNDING = REACH_CROWDFUNDING || false;

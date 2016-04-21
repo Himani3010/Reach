@@ -3,7 +3,7 @@ Contributors: WPCharitable, Studio164a
 Donate link: https://www.wpcharitable.com
 Tags: blue, light, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-colors, custom-menu, featured-images, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 4.2
-Tested up to: 4.4
+Tested up to: 4.5
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -14,7 +14,29 @@ Reach is the perfect theme for charities & non-profits. Designed and developed b
 Getting started with Reach WordPress Theme
 -------------------------------------------------------
 
+= Installation =
+
+1. Sign into your WordPress dashboard, go to Appearance > Themes.
+2. Click Add New.
+3. Search for "Reach".
+4. Click Install.
+5. After WordPress installs the theme, click Activate.
+6. You've successfully installed your new theme!
+
+We strongly recommend installing the Reach child theme if you think you will make any modifications to your theme. You can download the child theme from https://s3-us-west-1.amazonaws.com/charitable-bucket/wp-content/uploads/2016/02/reach-child-theme-1.0.0.zip
+
+To install the child theme, first make sure you have installed Reach. Once you have done that, go to Appearance > Themes and follow these steps:
+
+1. Click Add New. 
+2. Click "Upload Theme".
+3. Upload the Reach child theme zip file.
+4. Click Install Now. 
+5. After WordPress installs the theme, click Activate.
+
+----------
+
 = Using the Theme Customizer =
+
 You can change Reach's theme options via the Customizer.
 
 * To access the theme customizer, click Appearance → Customize in the WordPress admin menu. 
@@ -25,6 +47,7 @@ You can change Reach's theme options via the Customizer.
 ----------
 
 = Menu Setup =
+
 You’ll need to create at least one new menu for the header.
 
 * WordPress menus can be found under Appearence → Menus.
@@ -33,72 +56,41 @@ You’ll need to create at least one new menu for the header.
 * Now that you have the menu created, you need to assign it to the Primary Navigation location in the Theme Locations section.
 * Save the menu when finished.
 
-----------
-
-= Installing Jetpack =
-
-----------
-
-= Installing Ninja Forms = 
-
-----------
-
-= Installing Custom Content Portfolio =
-
-----------
-
-= Widgets =
-The widget section of Crafted is located below the comments area on single posts and pages.
-
-----------
-
-= Creating Media Posts =
-Crafted makes it easy to share your images, videos, and quotes.
-
-** Featured Image Posts **
-
-
-
-** Quote Post **
-
-
-** Video Post **
-
-
-----------
-
-= License Info =
-Font Awesome - ​http://fontawesome.io
-License: SIL OFL 1.1, CSS: MIT License - http://fontawesome.io/license
-Copyright: @davegandy
-
-FitVids, Copyright 2013 Chris Coyier
-Released under the WTFPL license - http://sam.zoy.org/wtfpl/
-Source: http://fitvidsjs.com/
-
-SlickNav, Copyright 2014 Josh Cope
-licensed under the MIT License - https://github.com/ComputerWolf/SlickNav/blob/master/MIT-LICENSE.txt
-Source: http://slicknav.com/
-
-
-== Installation ==
-
-1. Sign into your WordPress dashboard, go to Appearance > Themes, and click Add New.
-2. Click Add New.
-3. Click Upload.
-4. Click Choose File and select the theme zip file you downloaded from Studio 164a.
-5. Click Install Now.
-6. Click Add New, then click Upload, then click Choose File.
-7. After WordPress installs the theme, click Activate.
-8. You've successfully installed your new theme!
-
 == Frequently Asked Questions ==
 
 = I need help! What should I do? =
 
-Get in touch via our contact form at http://164a.com/contact-us/
+Get in touch via our contact form at https://www.wpcharitable.com/support/
+
+= Is there more documentation? =
+
+There sure is! You can find more documentation about Reach on the Reach demo site at http://demo.wpcharitable.com/reach/documentation/
+
+= License Info =
+Font Awesome - ​http://fontawesome.io
+License: SIL OFL 1.1, CSS: MIT License (http://fontawesome.io/license)
+Copyright: @davegandy
+
+FitVids, Copyright 2013 Chris Coyier
+License: WTFPL license (http://sam.zoy.org/wtfpl/)
+Source: http://fitvidsjs.com/
+
+RRSSB - http://kurtnoble.com/labs/rrssb/
+License: MIT License (https://github.com/kni-labs/rrssb/blob/master/LICENSE.md)
+Copyright: 2014-2015 Daniel Box and Joshua Tuscan
+
+Countdown for jQuery - http://keith-wood.name/countdown.html
+License: MIT license (http://keith-wood.name/licence.html) 
+
+leanModal - http://leanmodal.finelysliced.com.au/
+License: MIT and GPL licenses
+
+Raphaël - http://raphaeljs.com
+License: MIT license (http://raphaeljs.com/license.html)
+Copyright © 2008-2012 Dmitry Baranovskiy (http://raphaeljs.com)
+Copyright © 2008-2012 Sencha Labs (http://sencha.com)   
 
 == Change Log ==
 
-= 1.0 - 19/08/2014 =
+= 1.0 - 21/04/2016 =
 * Initial release.

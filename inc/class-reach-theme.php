@@ -674,7 +674,7 @@ class Reach_Theme {
     public function flush_primary_navigation_width( $menu_id ) {
         $locations = get_nav_menu_locations();
 
-        if ( $locations[ 'primary_navigation' ] == $menu_id ) {
+        if ( isset( $locations[ 'primary_navigation' ] ) && $locations[ 'primary_navigation' ] == $menu_id ) {
             delete_transient( 'reach_navigation_width' );
         }
     }

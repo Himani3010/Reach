@@ -222,6 +222,10 @@ class Reach_Charitable {
      * @since   1.0.0
      */
     public function load_donation_receipt_in_user_dashboard( $ret ) {
+        if ( is_front_page() || is_home() ) {
+            return false;
+        }
+
         if ( charitable_is_page( 'donation_receipt_page' ) ) {
             $ret = true;
         }
