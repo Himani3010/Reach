@@ -17,18 +17,10 @@ if ( ! comments_open() ) return; ?>
 			endif;
 			?>
 
-			<?php $req = get_option( 'require_name_email' ) ?>
-			<?php comment_form( array( 
-				'comment_notes_after'	=> '<p class="comment-notes">' 
-											. __( 'Your email address will not be published.', 'reach' )
-											. '</p>',
-				'comment_notes_before'	=> '',
-				'comment_field'			=> '', 
-				'fields'				=> reach_comment_form_field_comment() . reach_comment_form_default_fields(''),
-				'title_reply'			=> '', 
-				'cancel_reply_link'		=> ' ',
-				'label_submit'			=> _x( 'Submit', 'post comment', 'reach' )
-			) ) ?>
+			<?php comment_form( array(
+	            'comment_field' => reach_comment_form_field_comment(), 
+	            'title_reply'   => ''
+	        ) ) ?>
 		</div>
 
 		<?php if ( have_comments() ) : ?>
