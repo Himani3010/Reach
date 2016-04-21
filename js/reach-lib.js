@@ -1,4 +1,4 @@
-/*! reach - v0.9.33 - 2015-12-07 */
+/*! reach - v0.9.45 - 2016-04-13 */
 
 /*--------------------------------------------------------
  * REACH is the core object containing all components.
@@ -207,80 +207,6 @@ REACH.Grid = ( function( $ ) {
 })( jQuery );
 
 ;/*--------------------------------------------------------
- * Campaign Pledges
----------------------------------------------------------*/
-REACH.Pledging = ( function( $ ) {
-
-	var $scope 		= $('#charitable-edd-pledge-form'),
-		$form 		= $scope.find('.edd_download_purchase_form'),
-		$price 		= $scope.find('input[name=atcf_custom_price]'),
-		$pledges 	= $scope.find('.edd_download_purchase_form .pledge-level').sort( function( a, b ) {
-			return parseInt( $(a).data('price') ) - parseInt( $(b).data('price') );
-		}), 
-		$button 	= $scope.find('.pledge-button a'),
-		$minpledge 	= $pledges.first(), 
-		$maxpledge;
-
-	var priceChange = function() {
-		var new_pledge = parseInt( $price.val() );
-
-		if ( $minpledge.length === 0 ) {
-			return;
-		}	
-
-		if ( $pledges.length === 0 ) {
-			return;
-		}
-
-		// The pledge has to equal or exceed the minimum pledge amount
-		if ( parseInt( $minpledge.data('price') ) > new_pledge ) {
-
-			// Explain that the pledge has to be at least the minimum
-			alert( REACH.need_minimum_pledge );
-
-			// Select the minimum pledge amount
-			$minpledge.find('input').prop('checked', true);
-			$minpledge.change();
-
-			// Exit
-			return;
-		}			
-
-		$pledges.each( function() {
-
-			if ( $(this).data('price') <= new_pledge && $(this).hasClass('not-available') === false ) {
-				$maxpledge = $(this);
-			} 
-			// This pledge's amount is greater than the amount set
-			else {										
-				return false;
-			}
-		});
-
-		// Select the maximum pledge
-		$maxpledge.find('input').prop('checked', true);
-	}
-
-	return {
-		init : function() {
-			// Set up event handlers
-			$button.on( 'click', function() {
-				var price = $(this).data('price');				
-				console.log( $(this) );
-				$form.find('[data-price="' + price + '"] input').prop('checked', true).trigger('change');
-			});
-
-			$form.on( 'change', '.pledge-level', function() {
-				$price.val( $(this).data().price );
-			})
-			.on( 'change', 'input[name=atcf_custom_price]', function() {
-				priceChange();
-			});
-		}
-	}
-})( jQuery );
-
-;/*--------------------------------------------------------
  * Cross-Browser Placeholders
  *
  * Ensure that browsers which don't support the placeholder 
@@ -380,6 +306,58 @@ REACH.Fitvids = ( function( $ ){
 })( jQuery );
 
 ;/*--------------------------------------------------------
+ * Header Layout
+---------------------------------------------------------*/
+REACH.HeaderLayout = ( function( $ ) {
+
+    return {
+        init : function() {
+            if ( REACH_VARS.primary_navigation_width.length ) {            
+                return;
+            }
+
+            // We can't calculate the navigation width when on a small screen
+            if ( $( window ).width() < 800 ) {
+                return;
+            }
+
+            var width = $( '.site-navigation' ).width(), 
+                stylesheet = ( function(){
+                    var style = document.createElement("style");
+                    style.appendChild(document.createTextNode(""));
+                    document.head.appendChild(style);
+                    return style.sheet;
+                })();
+
+            stylesheet.insertRule('@media screen and (min-width: 50em) { .site-branding { margin-right:' + width + 'px; } }', 0);
+
+            $.ajax({
+                type: "POST",
+                data: {
+                    action : 'set_primary_navigation_width', 
+                    width : $( '.site-navigation' ).width()
+                },
+                dataType: "json",
+                url: REACH_VARS.ajaxurl,
+                xhrFields: {
+                    withCredentials: true
+                },
+                success: function ( response ) {
+                    console.log( response );
+                },
+                error: function( error ) {
+                    console.log( error );
+                }
+            }).fail(function ( response ) {
+                if ( window.console && window.console.log ) {
+                    console.log( response );
+                }
+            });
+        }
+    }
+})( jQuery );
+
+;/*--------------------------------------------------------
  * Image Hovers
 ---------------------------------------------------------*/
 REACH.ImageHovers = ( function( $ ) {
@@ -443,7 +421,7 @@ REACH.ResponsiveMenu = ( function( $ ) {
 			}
 
 			// Append account-links div
-			$container.find( '.menu-site' ).append( '<li class="account-links">' + $account_links.html() + '</li>' );
+			$container.find( '.menu-site' ).append( '<div class="account-links">' + $account_links.html() + '</div>' );
 
 			$menu = $container.find( 'ul' );
 

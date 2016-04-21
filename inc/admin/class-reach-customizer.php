@@ -56,6 +56,8 @@ class Reach_Customizer {
      */
     public function customize_save_after( WP_Customize_Manager $wp_customize ) {
         delete_transient( Reach_Customizer_Styles::get_transient_key() );
+
+        delete_transient( 'reach_navigation_width' );
     }
 
     /**
@@ -65,21 +67,50 @@ class Reach_Customizer {
      * @return  void
      */
     public function customize_register($wp_customize) {
-        $wp_customize->get_section( 'title_tagline' )->priority = 0;
+        $wp_customize->get_section( 'title_tagline' )->priority = 0;        
         $wp_customize->get_control( 'blogname' )->priority = 2;       
+        $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
         $wp_customize->get_control( 'blogdescription' )->priority = 3;
+        $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
         $this->add_section_settings( 'title_tagline', $this->get_site_identity_settings() );
 
-        // $this->add_section( 'logo', $this->get_logo_section( 20 ) );
         $this->add_section( 'layout', $this->get_layout_section( 40 ) );        
         $this->add_section( 'colour', $this->get_colour_section( 60 ) );
-        // $this->add_section( 'header', $this->get_header_section( 80 ) );
         $this->add_section( 'footer', $this->get_footer_section( 100 ) );
         $this->add_section( 'campaigns', $this->get_campaign_section( 120 ) );
         $this->add_section( 'social', $this->get_social_profiles_section( 140 ) );
 
         /* Background Images Panel */
         $this->add_panel( 'background_images', $this->get_background_images_panel() );
+
+        /* Abort if selective refresh is not available. */
+        if ( ! isset( $wp_customize->selective_refresh ) ) {
+            return;
+        }
+
+        $wp_customize->selective_refresh->add_partial( 'header_site_title', array(
+            'selector' => '.site-title a',
+            'settings' => array( 'blogname' ),
+            'render_callback' => array( $this, 'render_site_title' )
+        ) );
+
+        $wp_customize->selective_refresh->add_partial( 'document_title', array(
+            'selector' => 'head > title',
+            'settings' => array( 'blogname' ),
+            'render_callback' => 'wp_get_document_title',
+        ) );
+
+        $wp_customize->selective_refresh->add_partial( 'header_site_description', array(
+            'selector' => '.site-tagline',
+            'settings' => array( 'blogdescription' ),
+            'render_callback' => array( $this, 'render_site_description' )
+        ) );
+
+        $wp_customize->selective_refresh->add_partial( 'footer_text', array(
+            'selector' => '.footer-notice',
+            'settings' => array( 'footer_tagline' ),
+            'render_callback' => array( $this, 'render_footer_text' )
+        ) );
     }        
 
     /**
@@ -259,7 +290,7 @@ class Reach_Customizer {
                     'type'      => 'checkbox',
                     'priority'  => 5
                 )
-            )  
+            )
         );
 
         return apply_filters( 'reach_customizer_site_identity_settings', $site_identity_settings );
@@ -427,7 +458,7 @@ class Reach_Customizer {
                 'footer_tagline' => array(
                     'setting'   => array(
                         'transport' => 'postMessage', 
-                        'default'   => sprintf( '<a href="https://www.wpcharitable.com" title="%">%s</a>', 
+                        'default'   => sprintf( '<a href="https://www.wpcharitable.com" title="%s">%s</a>', 
                             __( 'The WP Charitable homepage', 'reach' ),
                             __( 'Reach: A WordPress theme by WP Charitable', 'reach' ) 
                         ), 
@@ -435,7 +466,7 @@ class Reach_Customizer {
                     ), 
                     'control'   => array(
                         'label'     => __( 'Tagline', 'reach' ), 
-                        'type'      => 'text', 
+                        'type'      => 'textarea', 
                         'priority'  => $priority + 2,
                     )
                 )                
@@ -454,6 +485,10 @@ class Reach_Customizer {
      * @since   1.0.0
      */
     private function get_campaign_section( $priority ) {
+        if ( ! reach_has_charitable() ) {
+            return array();
+        }
+
         $campaign_setings = array(
             'priority'  => $priority,
             'title'     => __( 'Campaigns', 'reach' ),
@@ -660,5 +695,38 @@ class Reach_Customizer {
         }
 
         return $value;
-    }    
+    }
+
+    /**
+     * Renders the site title (used by partial).
+     *
+     * @return  string
+     * @access  public
+     * @since   1.0.0
+     */
+    public function render_site_title() {
+        return get_bloginfo( 'name', 'display' );
+    }
+
+    /**
+     * Renders the site description (used by partial).
+     *
+     * @return  string
+     * @access  public
+     * @since   1.0.0
+     */
+    public function render_site_description() {
+        return get_bloginfo( 'description', 'display' );
+    }
+
+    /**
+     * Renders the footer text.
+     *
+     * @return  string
+     * @access  public
+     * @since   1.0.0
+     */
+    public function render_footer_text( $text ) {
+        get_template_part( 'partials/footer', 'notice' );
+    }
 }

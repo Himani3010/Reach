@@ -28,7 +28,7 @@
 
 		REACH.LeanModal.init();
 
-        REACH.SidebarPositioning.init();
+        REACH.SidebarPositioning.init();        
 
 		if ( REACH_CROWDFUNDING ) {
 
@@ -69,6 +69,8 @@
 
 			REACH.Barometer.init();
   		}
+
+        REACH.HeaderLayout.init();
   	});
 
 })( jQuery );

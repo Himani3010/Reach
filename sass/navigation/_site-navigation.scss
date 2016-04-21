@@ -65,7 +65,8 @@
 
     .account-links {
         display: block;
-        @include padding-left( $size__margin-double );        
+        @include padding-left( $size__margin-double );
+        text-align: left;
         text-indent: 0;
 
         .button.button-alt {
@@ -122,6 +123,7 @@
         height: auto;
         float: none;
         clear: none;
+        width: auto;        
         
         /* Just adding this for added specifity */
         &.wrapper {
@@ -165,7 +167,13 @@
             }   
 
             ul ul {
-                margin-top: 0;
+                @include margin( -9, 0, 0, 194 );
+            }
+
+            > li:nth-last-of-type(2) ul ul,
+            > li:nth-last-of-type(1) ul ul, 
+            ul ul ul {
+                @include margin-left( -197 ); // We go backwards
             }
         }           
 

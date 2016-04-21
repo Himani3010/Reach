@@ -215,7 +215,7 @@ if ( ! function_exists( 'reach_site_identity' ) ) :
 		$output = "";	
 
 		$site_url = site_url();
-		$site_title = get_bloginfo( 'title' );
+		$site_title = get_bloginfo( 'name' );
 		$hide_title = get_theme_mod( 'hide_site_title' );
 		$hide_tagline = get_theme_mod( 'hide_site_tagline' );
 		$logo = reach_get_customizer_image_data( 'logo' );

@@ -124,6 +124,7 @@ class Reach_Charitable {
      */
     public function dequeue_styles() {
         wp_deregister_style( 'charitable-ambassadors-my-campaigns-css' );
+        wp_deregister_style( 'charitable-ambassadors-styles' );
     }
 
     /**

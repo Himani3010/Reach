@@ -292,7 +292,7 @@ module.exports = function(grunt) {
     });
  
     // register task
-    grunt.registerTask('default', ['watch:sass', 'watch:concat', 'watch:uglify']);
+    grunt.registerTask('default', 'watch');
     
     grunt.registerTask('watchEditor', ['watch:editor']);
 

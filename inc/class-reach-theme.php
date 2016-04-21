@@ -9,77 +9,77 @@ if ( ! class_exists( 'Reach_Theme' ) ) :
  * The purpose of this class is to encapsulate all the core theme definitions
  * inside a single class, to avoid namespace collisions.
  *
- * @package 	Reach
- * @subpackage 	Core
- * @author 		Studio 164a
- * @since 		1.0.0
+ * @package     Reach
+ * @subpackage  Core
+ * @author      Studio 164a
+ * @since       1.0.0
  */
 class Reach_Theme {
 
-	/**
-	 * The one and only class instance. 
-	 *
-	 * @var 	Reach_Theme
-	 * @static
-	 * @access  private
-	 */
-	private static $instance = null;
+    /**
+     * The one and only class instance. 
+     *
+     * @var     Reach_Theme
+     * @static
+     * @access  private
+     */
+    private static $instance = null;
 
-	/**
-	 * The theme version. 
-	 */
-	const VERSION = '0.9.45';
+    /**
+     * The theme version. 
+     */
+    const VERSION = '1.0.0';
 
-	/**
-	 * Database version number. 
-	 *
-	 * This is different to the theme version since it is used only to 
-	 * manage theme updates that require some sort of upgrade process. 
-	 *
-	 * It is in the following format: YYYYMMDD
-	 */
-	const DATABASE_VERSION = '0.9.35';
+    /**
+     * Database version number. 
+     *
+     * This is different to the theme version since it is used only to 
+     * manage theme updates that require some sort of upgrade process. 
+     *
+     * It is in the following format: YYYYMMDD
+     */
+    const DATABASE_VERSION = '0.9.35';
 
-	/**
-	 * Whether crowdfunding is enabled. 
-	 *
-	 * @var 	string[]
-	 * @access  public
-	 */
-	public $active_modules = array();
+    /**
+     * Whether crowdfunding is enabled. 
+     *
+     * @var     string[]
+     * @access  public
+     */
+    public $active_modules = array();
 
-	/**
-	 * Retrieve the class instance. If one hasn't been created yet, create it first. 
-	 *
-	 * @return 	Reach_Theme
-	 * @static
-	 * @access  public
-	 * @since 	1.0.0
-	 */
-	public static function get_instance() {
-		if ( is_null( self::$instance ) ) {
-			self::$instance = new Reach_Theme();
-		}
+    /**
+     * Retrieve the class instance. If one hasn't been created yet, create it first. 
+     *
+     * @return  Reach_Theme
+     * @static
+     * @access  public
+     * @since   1.0.0
+     */
+    public static function get_instance() {
+        if ( is_null( self::$instance ) ) {
+            self::$instance = new Reach_Theme();
+        }
 
-		return self::$instance;
-	}
+        return self::$instance;
+    }
 
-	/**
-	 * Class constructor. 
-	 *
-	 * This is only called once, since the only way to instantiate
-	 * the theme is with the get_instance() method above.
-	 *
-	 * @return 	void
-	 * @access  private
-	 * @since 	1.0.0
-	 */
-	private function __construct() {		
-		$this->load_dependencies();
+    /**
+     * Class constructor. 
+     *
+     * This is only called once, since the only way to instantiate
+     * the theme is with the get_instance() method above.
+     *
+     * @return  void
+     * @access  private
+     * @since   1.0.0
+     */
+    private function __construct() {        
+        $this->load_dependencies();
 
-		$this->maybe_upgrade();
+        $this->maybe_upgrade();
 
-		$this->maybe_start_charitable();
+        $this->maybe_start_charitable();
 
         $this->maybe_start_edd();        
 
@@ -93,53 +93,53 @@ class Reach_Theme {
 
         $this->maybe_start_admin();
 
-		$this->attach_hooks_and_filters();
+        $this->attach_hooks_and_filters();
 
-		/**
-		 * If you want to do anything during the start of the 
-		 * theme, use this hook. You can also use this hook
-		 * to remove any of the hooks or filters called during 
-		 * this phase.
-		 */
-		do_action( 'reach_theme_start', $this );
-	}
+        /**
+         * If you want to do anything during the start of the 
+         * theme, use this hook. You can also use this hook
+         * to remove any of the hooks or filters called during 
+         * this phase.
+         */
+        do_action( 'reach_theme_start', $this );
+    }
 
-	/**
-	 * Returns the version number of the theme. 
-	 *
-	 * @return 	string
-	 * @access  public
-	 * @since 	1.0.0
-	 */
-	public function get_theme_version() {
-		if ( defined( 'REACH_DEBUG' ) && REACH_DEBUG ) {
+    /**
+     * Returns the version number of the theme. 
+     *
+     * @return  string
+     * @access  public
+     * @since   1.0.0
+     */
+    public function get_theme_version() {
+        if ( defined( 'REACH_DEBUG' ) && REACH_DEBUG ) {
             return time();
         }
 
-        return self::VERSION;	
-	}
+        return self::VERSION;   
+    }
 
-	/**
-	 * Checks whether the theme's start hook has already run.  
-	 *
-	 * @return 	boolean
-	 * @access  public
-	 * @since 	1.0.0
-	 */
-	public function started() {
-		return did_action( 'reach_theme_start' );
-	}
+    /**
+     * Checks whether the theme's start hook has already run.  
+     *
+     * @return  boolean
+     * @access  public
+     * @since   1.0.0
+     */
+    public function started() {
+        return did_action( 'reach_theme_start' );
+    }
 
-	/**
-	 * Checks whether we are currently on the `reach_theme_start` hook.
-	 *	
-	 * @return 	boolean
-	 * @access  public
-	 * @since 	1.0.0
-	 */
-	public function is_start() {
-		return 'reach_theme_start' == current_filter();
-	}
+    /**
+     * Checks whether we are currently on the `reach_theme_start` hook.
+     *  
+     * @return  boolean
+     * @access  public
+     * @since   1.0.0
+     */
+    public function is_start() {
+        return 'reach_theme_start' == current_filter();
+    }
 
     /**
      * Returns the theme's user-defined settings. 
@@ -170,54 +170,54 @@ class Reach_Theme {
         return isset( $settings[$key] ) ? $settings[$key] : false;
     }
 
-	/**
-	 * Load required files. 
-	 *
-	 * @return 	void
-	 * @access  private
-	 * @since 	1.0.0
-	 */
-	private function load_dependencies() {
+    /**
+     * Load required files. 
+     *
+     * @return  void
+     * @access  private
+     * @since   1.0.0
+     */
+    private function load_dependencies() {
         require get_template_directory() . '/inc/vendors/hybrid-media-grabber.php';
-		require get_template_directory() . '/inc/class-reach-media-grabber.php';
-		require get_template_directory() . '/inc/class-reach-customizer-styles.php';
-		require get_template_directory() . '/inc/functions/template-tags.php';
-		require get_template_directory() . '/inc/functions/helper-functions.php';
-		require get_template_directory() . '/inc/functions/comments.php';
-		require get_template_directory() . '/inc/functions/compatibility.php';
-	}
+        require get_template_directory() . '/inc/class-reach-media-grabber.php';
+        require get_template_directory() . '/inc/class-reach-customizer-styles.php';
+        require get_template_directory() . '/inc/functions/template-tags.php';
+        require get_template_directory() . '/inc/functions/helper-functions.php';
+        require get_template_directory() . '/inc/functions/comments.php';
+        require get_template_directory() . '/inc/functions/compatibility.php';
+    }
 
-	/**
-	 * Check whether the theme has been updated and needs an upgrade.  
-	 *
-	 * @return 	void
-	 * @access  private
-	 * @since 	1.0.0
-	 */
-	private function maybe_upgrade() {
-		$db_version = get_option( 'reach_version' );
+    /**
+     * Check whether the theme has been updated and needs an upgrade.  
+     *
+     * @return  void
+     * @access  private
+     * @since   1.0.0
+     */
+    private function maybe_upgrade() {
+        $db_version = get_option( 'reach_version' );
 
         if ( '20150303' == $db_version ) {
             $db_version = false;
         }
 
-		if ( self::DATABASE_VERSION !== $db_version ) {
+        if ( self::DATABASE_VERSION !== $db_version ) {
 
-			require_once( get_template_directory() . '/inc/class-reach-upgrade.php' );
+            require_once( get_template_directory() . '/inc/class-reach-upgrade.php' );
 
-			Reach_Upgrade::upgrade_from( $db_version, self::DATABASE_VERSION );
-		}
-	}
+            Reach_Upgrade::upgrade_from( $db_version, self::DATABASE_VERSION );
+        }
+    }
 
-	/**
-	 * Load up the Customizer helper class if we're using the Customizer. 
-	 *
-	 * @return 	void
-	 * @access  public
-	 * @since 	1.0.0
-	 */
-	public function maybe_start_customizer() {
-		global $wp_customize;
+    /**
+     * Load up the Customizer helper class if we're using the Customizer. 
+     *
+     * @return  void
+     * @access  public
+     * @since   1.0.0
+     */
+    public function maybe_start_customizer() {
+        global $wp_customize;
 
         if ( $wp_customize ) {
 
@@ -227,7 +227,7 @@ class Reach_Theme {
 
             add_action( 'reach_theme_start', array( 'Reach_Customizer', 'start' ) );
         } 
-	}
+    }
 
     /**
      * Set up admin support. 
@@ -246,12 +246,12 @@ class Reach_Theme {
         new Reach_Admin_Page();
     }
 
-	/**
+    /**
      * Set up Jetpack support if it's enabled.
      *
-     * @return 	void
-     * @access 	private
-     * @since 	1.0
+     * @return  void
+     * @access  private
+     * @since   1.0
      */
     private function maybe_start_jetpack() {
         if ( defined( 'JETPACK__VERSION' ) ) {
@@ -303,19 +303,19 @@ class Reach_Theme {
     /**
      * Set up Charitable support if it is enabled.
      *
-     * @return 	void
+     * @return  void
      * @access  private
-     * @since 	1.0.0
+     * @since   1.0.0
      */
-    private function maybe_start_charitable() {    	
-    	if ( class_exists( 'Charitable' ) ) {
+    private function maybe_start_charitable() {     
+        if ( class_exists( 'Charitable' ) ) {
 
-    		require_once( get_template_directory() . '/inc/charitable/class-reach-charitable.php' );
+            require_once( get_template_directory() . '/inc/charitable/class-reach-charitable.php' );
 
-    		add_action( 'reach_theme_start', array( 'Reach_Charitable', 'start' ) );
+            add_action( 'reach_theme_start', array( 'Reach_Charitable', 'start' ) );
 
-    		$this->active_modules[] = 'charitable';
-    	}
+            $this->active_modules[] = 'charitable';
+        }
     }
 
     /**
@@ -336,101 +336,137 @@ class Reach_Theme {
         }
     }
 
-	/**
-	 * Set up callback methods for various core WordPress hooks and filters. 
-	 *
-	 * @return 	void
-	 * @access  private
-	 * @since 	1.0.0
-	 */
-	private function attach_hooks_and_filters() {
-		/**
-		 * Core theme classes hooked in on the `reach_theme_start` hook. 
-		 */
-		add_action( 'reach_theme_start',		array( 'Reach_Customizer_Styles', 'start' ) );
+    /**
+     * Set up callback methods for various core WordPress hooks and filters. 
+     *
+     * @return  void
+     * @access  private
+     * @since   1.0.0
+     */
+    private function attach_hooks_and_filters() {
+        /**
+         * Core theme classes hooked in on the `reach_theme_start` hook. 
+         */
+        add_action( 'reach_theme_start',        array( 'Reach_Customizer_Styles', 'start' ) );
         
-		/**
-		 * Methods within this class that are hooked into core WordPress action hooks. 
-		 */
-		add_action( 'after_setup_theme', 		array( $this, 'setup_theme' ) );
-		add_action( 'widgets_init', 			array( $this, 'setup_sidebars' ) );
-		add_action( 'wp_enqueue_scripts', 		array( $this, 'setup_scripts' ) );		
-		add_action( 'wp', 						array( $this, 'setup_author' ) );
+        /**
+         * Methods within this class that are hooked into core WordPress action hooks. 
+         */
+        add_action( 'after_switch_theme',       array( $this, 'add_welcome_message' ) );
+        add_action( 'after_setup_theme',        array( $this, 'setup_theme' ) );
+        add_action( 'widgets_init',             array( $this, 'setup_sidebars' ) );
+        add_action( 'wp_enqueue_scripts',       array( $this, 'setup_scripts' ) );      
+        add_action( 'wp',                       array( $this, 'setup_author' ) );
         add_action( 'wp_head',                  array( $this, 'maybe_setup_title_tag' ) );
-		add_action( 'wp_footer', 				array( $this, 'setup_fonts' ) );
-		
-		/**
-		 * Methods within this class that are hooked into core WordPress filter hooks.
-		 */
-		add_filter( 'wp_title', 				array( $this, 'wp_title' ), 10, 2 );
-		add_filter( 'wp_page_menu_args', 		array( $this, 'page_menu_args' ) );
+        add_action( 'wp_head',                  array( $this, 'setup_header_styling' ) );
+        add_action( 'wp_footer',                array( $this, 'setup_fonts' ) );
+        add_action( 'wp_update_nav_menu',       array( $this, 'flush_primary_navigation_width' ) );
+        add_action( 'wp_ajax_set_primary_navigation_width', array( $this, 'save_primary_navigation_width' ) );
+        add_action( 'wp_ajax_nopriv_set_primary_navigation_width', array( $this, 'save_primary_navigation_width' ) );
+        
+        /**
+         * Methods within this class that are hooked into core WordPress filter hooks.
+         */
+        add_filter( 'wp_title',                 array( $this, 'wp_title' ), 10, 2 );
+        add_filter( 'wp_page_menu_args',        array( $this, 'page_menu_args' ) );
         add_filter( 'theme_page_templates',     array( $this, 'filter_page_templates' ) );
         add_filter( 'body_class',               array( $this, 'body_classes' ) );
-		add_filter( 'post_class',      			array( $this, 'post_classes' ) );
-		add_filter(	'the_content_more_link', 	array( $this, 'the_content_more_link_filter' ), 10, 2);
-        add_filter(	'next_posts_link_attributes', array( $this, 'posts_navigation_link_attributes' ) );
-        add_filter(	'previous_posts_link_attributes', array( $this, 'posts_navigation_link_attributes' ) );
-        add_filter(	'next_comments_link_attributes', array( $this, 'posts_navigation_link_attributes' ) );
-        add_filter(	'previous_comments_link_attributes', array( $this, 'posts_navigation_link_attributes' ) );                
-        add_filter(	'oembed_dataparse', 		array( $this, 'wrap_fullwidth_videos' ), 10, 3 );
+        add_filter( 'post_class',               array( $this, 'post_classes' ) );
+        add_filter( 'the_content_more_link',    array( $this, 'the_content_more_link_filter' ), 10, 2);
+        add_filter( 'next_posts_link_attributes', array( $this, 'posts_navigation_link_attributes' ) );
+        add_filter( 'previous_posts_link_attributes', array( $this, 'posts_navigation_link_attributes' ) );
+        add_filter( 'next_comments_link_attributes', array( $this, 'posts_navigation_link_attributes' ) );
+        add_filter( 'previous_comments_link_attributes', array( $this, 'posts_navigation_link_attributes' ) );                
+        add_filter( 'oembed_dataparse',         array( $this, 'wrap_fullwidth_videos' ), 10, 3 );
         add_filter( 'hybrid_media_grabber_valid_shortcodes', array( $this, 'add_valid_media_grabber_shortcodes' ) );
-        add_filter(	'video_embed_html', 		'reach_fullwidth_video' );        
-	}
+        add_filter( 'video_embed_html',         'reach_fullwidth_video' );        
+    }
 
-	/**
-	 * Set up main theme supports and definitions. 
-	 *
-	 * @hook 	after_setup_theme
-	 * @return 	void
-	 * @access  public
-	 * @since 	1.0.0
-	 */
-	public function setup_theme() {
-		/**
-		 * Make theme available for translation.
-		 * Translations can be filed in the /languages/ directory.
-		 */
-		load_theme_textdomain( 'reach', get_template_directory() . '/languages' );
+    /**
+     * Add a welcome message as an admin notification immediately after switching to Reach. 
+     *
+     * @return  void
+     * @access  public
+     * @since   1.0.0
+     */
+    public function add_welcome_message() {
+        add_action( 'admin_notices', array( $this, 'print_welcome_message' ) );
+    }
 
-		/** 
-		 * Add default posts and comments RSS feed links to head.
-		 */
-		add_theme_support( 'automatic-feed-links' );
+    /**
+     * Prints a welcome message in the admin notices. 
+     *
+     * @return  void
+     * @access  public
+     * @since   1.0.0
+     */
+    public function print_welcome_message() {
+        if ( ! current_user_can( 'switch_themes' ) ) {
+            return;
+        }
+        
+?>
+        <div class="updated notice is-dismissible">
+            <p><?php echo sprintf( esc_html__( 'Thanks for choosing Reach! You can read hints and tips on how get the most out of your new theme on the %swelcome screen%s.', 'reach' ), '<a href="' . esc_url( admin_url( 'themes.php?page=about-reach' ) ) . '">', '</a>' ); ?></p>
+            <p><a href="<?php echo esc_url( admin_url( 'themes.php?page=about-reach' ) ); ?>" class="button" style="text-decoration: none;"><?php _e( 'Get started with Reach', 'reach' ); ?></a></p>
+        </div>        
+<?php      
+    }
 
-		/**
-		 * Enable support for Post Thumbnails on posts and pages.
-		 *
-		 * @link 	http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-		 */
-		add_theme_support( 'post-thumbnails' );
+    /**
+     * Set up main theme supports and definitions. 
+     *
+     * @hook    after_setup_theme
+     * @return  void
+     * @access  public
+     * @since   1.0.0
+     */
+    public function setup_theme() {
+        /**
+         * Make theme available for translation.
+         * Translations can be filed in the /languages/ directory.
+         */
+        load_theme_textdomain( 'reach', get_template_directory() . '/languages' );
+
+        /** 
+         * Add default posts and comments RSS feed links to head.
+         */
+        add_theme_support( 'automatic-feed-links' );
+
+        /**
+         * Enable support for Post Thumbnails on posts and pages.
+         *
+         * @link    http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+         */
+        add_theme_support( 'post-thumbnails' );
         set_post_thumbnail_size( 910, 607, true );
         add_image_size( 'post-thumbnail-large', 784, 523, true );
         add_image_size( 'post-thumbnail-medium', 527, 352, true );
         add_image_size( 'post-thumbnail-small', 258, 172, true );
 
-		/**
-		 * This theme uses wp_nav_menu() in one location.
-		 */
-		register_nav_menus( array(
-			'primary_navigation' => __( 'Primary Menu', 'reach' ),
-		) );
+        /**
+         * This theme uses wp_nav_menu() in one location.
+         */
+        register_nav_menus( array(
+            'primary_navigation' => __( 'Primary Menu', 'reach' ),
+        ) );
 
-		/**
-		 * Switch default core markup for search form, comment form, and comments
-		 * to output valid HTML5.
-		 */
-		add_theme_support( 'html5', array(
-			'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
-		) );
+        /**
+         * Switch default core markup for search form, comment form, and comments
+         * to output valid HTML5.
+         */
+        add_theme_support( 'html5', array(
+            'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
+        ) );
 
-		/**
-		 * Enable support for Post Formats.
-		 * 
-		 * @link 	http://codex.wordpress.org/Post_Formats
-		 */
-		add_theme_support( 'post-formats', array(
-			'aside', 'video', 'quote', 'link',
-		) );
+        /**
+         * Enable support for Post Formats.
+         * 
+         * @link    http://codex.wordpress.org/Post_Formats
+         */
+        add_theme_support( 'post-formats', array(
+            'aside', 'video', 'quote', 'link',
+        ) );
 
         /**
          * Enable support for Hide Meta plugin.
@@ -443,24 +479,29 @@ class Reach_Theme {
         add_theme_support( 'title-tag' );
 
         /**
+         * Add theme support for selective refresh of widgets.
+         */
+        add_theme_support( 'customize-selective-refresh-widgets' );
+
+        /**
          * Add editor styles.
          */
         $editor_fonts = apply_filters( 'reach_font_path', "//fonts.googleapis.com/css?family=Merriweather:400,400italic,700italic,700,300italic,300|Oswald:400,300" );
         $editor_fonts = str_replace( ',', '%2C', $editor_fonts );
         add_editor_style( $editor_fonts );
         add_editor_style( 'css/editor-style.css' );
-	}
+    }
 
-	/**
-	 * Set up sidebars.  
-	 *
-	 * @hook 	widgets_init
-	 * @return 	void
-	 * @access  public
-	 * @since 	1.0.0
-	 */
-	public function setup_sidebars() {
-		register_sidebar( array(
+    /**
+     * Set up sidebars.  
+     *
+     * @hook    widgets_init
+     * @return  void
+     * @access  public
+     * @since   1.0.0
+     */
+    public function setup_sidebars() {
+        register_sidebar( array(
             'id'            => 'default',            
             'name'          => __( 'Default sidebar', 'reach' ),
             'description'   => __( 'The default sidebar.', 'reach' ),
@@ -498,26 +539,26 @@ class Reach_Theme {
             'before_title'  => '<div class="title-wrapper"><h4 class="widget-title">',
             'after_title'   => '</h4></div>'
         ));
-	}
+    }
 
-	/**
-	 * Register and enqueue scripts and stylesheets.  
-	 *
-	 * @hook 	wp_enqueue_scripts
-	 * @return 	void
-	 * @access  public
-	 * @since 	1.0.0
-	 */
-	public function setup_scripts() {
+    /**
+     * Register and enqueue scripts and stylesheets.  
+     *
+     * @hook    wp_enqueue_scripts
+     * @return  void
+     * @access  public
+     * @since   1.0.0
+     */
+    public function setup_scripts() {
         $theme_dir = untrailingslashit( get_template_directory_uri() );
         
         wp_register_style( 'reach-base', $theme_dir . '/css/base.css', array(), $this->get_theme_version() );
-		wp_register_style( 'reach-style', $theme_dir . '/css/main.css', array(), $this->get_theme_version() );
+        wp_register_style( 'reach-style', $theme_dir . '/css/main.css', array(), $this->get_theme_version() );
         wp_enqueue_style( 'reach-style' );
 
-		$ext = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '.js' : '.min.js'; 
-		
-		// Allow other scripts to add their scripts to the dependencies.
+        $ext = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '.js' : '.min.js'; 
+        
+        // Allow other scripts to add their scripts to the dependencies.
         $reach_script_dependencies = apply_filters( 'reach_script_dependencies', array( 
             'jquery-ui-accordion', 
             'audio-js', 
@@ -535,37 +576,43 @@ class Reach_Theme {
         wp_register_script( 'audio-js', $theme_dir . '/js/vendors/audiojs/audio.min.js', array(), $this->get_theme_version(), true);
         wp_register_script( 'rrssb', $theme_dir . '/js/vendors/rrssb/rrssb.min.js', array('jquery'), $this->get_theme_version(), true );
         wp_register_script( 'fitvids', $theme_dir . '/js/vendors/fitvids/jquery.fitvids.min.js', array('jquery'), '1.0', true );
-		wp_register_script( 'reach-lib', $theme_dir . '/js/reach-lib' . $ext, $reach_script_dependencies, $this->get_theme_version(), true );
+        wp_register_script( 'reach-lib', $theme_dir . '/js/reach-lib' . $ext, $reach_script_dependencies, $this->get_theme_version(), true );
         wp_register_script( 'reach', $theme_dir . '/js/reach.js', array( 'reach-lib' ), $this->get_theme_version(), true );
+
+        wp_localize_script( 'reach', 'REACH_VARS', array(
+            'primary_navigation_width' => get_transient( 'reach_navigation_width' ), 
+            'ajaxurl' => admin_url( 'admin-ajax.php' )
+        ) );
+
         wp_enqueue_script( 'reach' ); 
 
-		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-			wp_enqueue_script( 'comment-reply' );
-		}	
-	}
+        if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+            wp_enqueue_script( 'comment-reply' );
+        }   
+    }
 
-	/**
-	 * Sets the authordata global when viewing an author archive.
-	 *
-	 * This provides backwards compatibility with
-	 * http://core.trac.wordpress.org/changeset/25574
-	 *
-	 * It removes the need to call the_post() and rewind_posts() in an author
-	 * template to print information about the author.
-	 *
-	 * @hook 	wp
-	 * @global 	WP_Query 	$wp_query 		WordPress Query object.
-	 * @return 	void
-	 * @access 	public
-	 * @since 	1.0.0
-	 */
-	public function setup_author() {
-		global $wp_query;
+    /**
+     * Sets the authordata global when viewing an author archive.
+     *
+     * This provides backwards compatibility with
+     * http://core.trac.wordpress.org/changeset/25574
+     *
+     * It removes the need to call the_post() and rewind_posts() in an author
+     * template to print information about the author.
+     *
+     * @hook    wp
+     * @global  WP_Query    $wp_query       WordPress Query object.
+     * @return  void
+     * @access  public
+     * @since   1.0.0
+     */
+    public function setup_author() {
+        global $wp_query;
 
-		if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
-			$GLOBALS['authordata'] = get_userdata( $wp_query->post->post_author );
-		}
-	}
+        if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
+            $GLOBALS['authordata'] = get_userdata( $wp_query->post->post_author );
+        }
+    }
 
     /**
      * Set up title tag in <HEAD> in versions prior to 4.1. 
@@ -584,64 +631,118 @@ class Reach_Theme {
 <?php 
     }
 
-	/**
-	 * Set up custom fonts. 
-	 *
-	 * @return 	void
-	 * @access  public
-	 * @since 	1.0.0
-	 */
-	public function setup_fonts() {
-		echo apply_filters( 'reach_font_link', "<link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700italic,700,300italic,300|Oswald:400,300' rel='stylesheet' type='text/css'>" );
-	}
+    /**
+     * Sets up styles for the header to ensure that the nav & branding bits don't overlap.
+     *
+     * @return  void
+     * @since   1.0.0
+     */
+    public function setup_header_styling() {
+        $width = get_transient( 'reach_navigation_width' );
 
-	/**
-	 * Filters <title> tag based on what is being viewed.
-	 *
-	 * @hook 	wp_title
-	 * @param 	string 	$title 		Default title text for current view.
-	 * @param 	string 	$sep 		Optional separator.
-	 * @return 	string 				The filtered title.
-	 * @access 	public
-	 * @since 	1.0.0
-	 */
-	public function wp_title( $title, $sep ) {
-		if ( is_feed() ) {
-			return $title;
-		}
+        if ( ! $width ) {
+            return;
+        }
+?>
+<style>@media screen and (min-width: 50em) {
+    .site-branding{ 
+        margin-right: <?php echo $width ?>px;
+    } 
+}</style>
+<?php
+    }
 
-		global $page, $paged;
+    /**
+     * Set up custom fonts. 
+     *
+     * @return  void
+     * @access  public
+     * @since   1.0.0
+     */
+    public function setup_fonts() {
+        echo apply_filters( 'reach_font_link', "<link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700italic,700,300italic,300|Oswald:400,300' rel='stylesheet' type='text/css'>" );
+    }
 
-		// Add the blog name
-		$title .= get_bloginfo( 'name', 'display' );
+    /**
+     * Delete the primary navigation width transient after updating the menu. 
+     *
+     * @param   int $menu_id
+     * @return  void
+     * @access  public
+     * @since   1.0.0
+     */
+    public function flush_primary_navigation_width( $menu_id ) {
+        $locations = get_nav_menu_locations();
 
-		// Add the blog description for the home/front page.
-		$site_description = get_bloginfo( 'description', 'display' );
-		if ( $site_description && ( is_home() || is_front_page() ) ) {
-			$title .= " $sep $site_description";
-		}
+        if ( $locations[ 'primary_navigation' ] == $menu_id ) {
+            delete_transient( 'reach_navigation_width' );
+        }
+    }
 
-		// Add a page number if necessary:
-		if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
-			$title .= " $sep " . sprintf( __( 'Page %s', 'reach' ), max( $paged, $page ) );
-		}
+    /**
+     * Save the width of the primary navigation. 
+     *
+     * @return  void
+     * @access  public
+     * @since   1.0.0
+     */
+    public function save_primary_navigation_width() {
+        if ( ! isset( $_POST[ 'width' ] ) ) {
+            wp_send_json_error();
+        }
 
-		return $title;
-	}
+        set_transient( 'reach_navigation_width', $_POST[ 'width' ] );
 
-	/**
-	 * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
-	 *
-	 * @hook 	page_menu_args
-	 * @param 	array 	$args 		Configuration arguments.
-	 * @return 	array
-	 * @access 	public
-	 * @since 	1.0.0
-	 */
-	public function page_menu_args( $args ) {
-		$args['show_home'] = true;
-		return $args;
-	}
+        wp_send_json_success();
+    }
+
+    /**
+     * Filters <title> tag based on what is being viewed.
+     *
+     * @hook    wp_title
+     * @param   string  $title      Default title text for current view.
+     * @param   string  $sep        Optional separator.
+     * @return  string              The filtered title.
+     * @access  public
+     * @since   1.0.0
+     */
+    public function wp_title( $title, $sep ) {
+        if ( is_feed() ) {
+            return $title;
+        }
+
+        global $page, $paged;
+
+        // Add the blog name
+        $title .= get_bloginfo( 'name', 'display' );
+
+        // Add the blog description for the home/front page.
+        $site_description = get_bloginfo( 'description', 'display' );
+        if ( $site_description && ( is_home() || is_front_page() ) ) {
+            $title .= " $sep $site_description";
+        }
+
+        // Add a page number if necessary:
+        if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
+            $title .= " $sep " . sprintf( __( 'Page %s', 'reach' ), max( $paged, $page ) );
+        }
+
+        return $title;
+    }
+
+    /**
+     * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
+     *
+     * @hook    page_menu_args
+     * @param   array   $args       Configuration arguments.
+     * @return  array
+     * @access  public
+     * @since   1.0.0
+     */
+    public function page_menu_args( $args ) {
+        $args['show_home'] = true;
+        return $args;
+    }
 
     /**
      * Remove any templates that require (or only make sense with) Charitable. 
@@ -681,7 +782,7 @@ class Reach_Theme {
         return $classes;
     }
 
-	/**
+    /**
      * Filters the post class.
      * 
      * @param   string[] $classes
@@ -722,18 +823,18 @@ class Reach_Theme {
         return 'class="button-alt"';
     }
 
-	/**
+    /**
      * Wrap videos inside fit_video class.
      * 
-     * @param 	string 		$html 
-     * @param 	WP_oEmbed 	$data
-     * @param 	string 		$url
-     * @return 	string
-     * @since 	1.0.0
+     * @param   string      $html 
+     * @param   WP_oEmbed   $data
+     * @param   string      $url
+     * @return  string
+     * @since   1.0.0
      */
     public function wrap_fullwidth_videos( $html, $data, $url ) {
-    	if ( $data->type == 'video'  ) {
-			return reach_fullwidth_video( $html );
+        if ( $data->type == 'video'  ) {
+            return reach_fullwidth_video( $html );
         }
         return $html;
     } 

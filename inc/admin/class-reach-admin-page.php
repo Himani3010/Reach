@@ -131,7 +131,7 @@ wp_enqueue_style( 'charitable-admin-pages' );
                 </li>
                 <li>
                     <p><?php printf( __( '<strong>Easy Digital Downloads</strong> by Pippin Williamson is a plugin that allows you to sell digital downloads through WordPress, for free. An optional add-on is the <a href="%s" title="Charitable Easy Digital Downloads product page" alt="Charitable Easy Digital Downloads product page">Charitable Easy Digital Downloads Connect plugin</a>, which allows you to also accept donations through Easy Digital Downloads.', 'reach' ), 'https://www.wpcharitable.com/extensions/charitable-easy-digital-downloads-connect/?utm_source=reach-welcome-page&amp;utm_medium=wordpress-dashboard&amp;utm_campaign=documentation' ) ?></p>
-                    <p><a href="https://wordpress.org/plugins/easy-digital-downloads/" title="<?php _e( 'Easy Digital Downloads WordPress.org page', 'reach' ) ?>" alt="<?php _e( 'Easy Digital Downloads WordPress.org page', 'reach' ) ?>"><?php _e( 'View Easy digital Downloads', 'reach' ) ?></a></p>
+                    <p><a href="https://wordpress.org/plugins/easy-digital-downloads/" title="<?php _e( 'Easy Digital Downloads WordPress.org page', 'reach' ) ?>" alt="<?php _e( 'Easy Digital Downloads WordPress.org page', 'reach' ) ?>"><?php _e( 'View Easy Digital Downloads', 'reach' ) ?></a></p>
                 </li>
                 <li>
                     <p><?php _e( '<strong>The Events Calendar</strong> by Modern Tribe is a brilliant event management plugin. It\'s available as a free, fully featured plugin, with premium upgrades that allow you to do things like sell tickets, create recurring events and import events from Facebook.', 'reach' ) ?></p>

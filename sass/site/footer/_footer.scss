@@ -21,6 +21,13 @@
 	@include bp( 800 ) {
 		@include padding( $size__margin-triple );
 	}
+
+	// .widget_calendar.widget {
+	// 	tbody a {
+	// 		background-color: $color__text-overlay;
+	// 		color: $color__background-body;
+	// 	}
+	// }
 }
 
 .footer-widget {
@@ -52,6 +59,33 @@
 
 		&:nth-child( 4n+3 ) {
 			padding-right: 0;
+		}
+
+		&.widget_calendar.widget {
+			padding-top: 0;
+			@include padding-right( $size__margin-double );
+
+			td, th {
+				@include padding( 1 );
+				border-color: rgba( 255, 255, 255, 0.3 );
+			}
+
+			th, 
+			tfoot td {
+				background-color: transparent;
+			}
+
+			tbody {
+				a {
+					display: block;
+					background-color: $color__text-overlay;
+					color: $color__background-body !important;
+				}
+			}
+		}
+
+		&.widget_search.widget {
+			@include padding-right( $size__margin-double );
 		}
 	}
 

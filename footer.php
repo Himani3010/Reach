@@ -16,18 +16,9 @@
 					if ( function_exists('wpml_languages_list') ) :
 						echo wpml_languages_list(0, 'language-list');
 					endif;
-					?>
-					<p class="footer-notice aligncenter">
-						<?php 
-						if ( reach_get_theme()->get_theme_setting( 'footer_tagline' ) ) : 
-							echo html_entity_decode( reach_get_theme()->get_theme_setting( 'footer_tagline' ) );
-						else: 
-						?>
-							<a href="https://www.wpcharitable.com" title="<php _e( 'The WP Charitable homepage', 'reach' ) ?>"><?php __( 'Reach: A WordPress theme by WP Charitable', 'reach' ) ?></a>
-						<?php
-						endif  
-						?>
-					</p>			
+					
+					get_template_part( 'partials/footer', 'notice' );
+					?>					
 				</div><!-- #rockbottom -->	
 			</div><!-- .layout-wrapper -->
 		</footer><!-- #site-footer -->

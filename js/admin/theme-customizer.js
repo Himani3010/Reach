@@ -208,7 +208,7 @@
 	} );
 
 	// Layout
-	wp.customize( 'layout', function( value ) {
+	wp.customize( 'layout', function( value ) {		
 		value.bind( function( newval ) {
 			if ( 'layout-wide' === newval ) {
 				$( 'body' ).removeClass( 'layout-boxed' ).addClass( 'layout-wide' );			
@@ -222,8 +222,6 @@
 	// Update the footer tagline
 	wp.customize( 'footer_tagline', function( value ) {
 		value.bind( function( newval ) {
-			console.log( newval );
-			console.log( $( '.footer-notice' ) );
 			$( '.footer-notice' ).html( newval );
 		} );
 	} );

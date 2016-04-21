@@ -1466,6 +1466,7 @@ a {
     display: block;
     padding-left: 28px;
     padding-left: 2.8rem;
+    text-align: left;
     text-indent: 0; }
     .site-navigation .account-links .button.button-alt {
       display: inline-block;
@@ -1512,6 +1513,7 @@ a {
       height: auto;
       float: none;
       clear: none;
+      width: auto;
       /* Just adding this for added specifity */ }
       .site-navigation.wrapper {
         background: transparent; }
@@ -1542,7 +1544,13 @@ a {
           border-top: 0;
           border-radius: 0 0 0.4rem 0.4rem; }
         .site-navigation .menu-site ul ul {
-          margin-top: 0; }
+          margin: -9px 0px 0px 194px;
+          margin: -0.9rem 0rem 0rem 19.4rem; }
+        .site-navigation .menu-site > li:nth-last-of-type(2) ul ul,
+        .site-navigation .menu-site > li:nth-last-of-type(1) ul ul,
+        .site-navigation .menu-site ul ul ul {
+          margin-left: -197px;
+          margin-left: -19.7rem; }
       .site-navigation .current_page_item > a:hover,
       .site-navigation .current-menu-item > a:hover,
       .site-navigation .current_page_ancestor > a:hover {
@@ -2320,6 +2328,11 @@ a {
       right: -0.9rem;
       border-right-color: transparent;
       border-bottom-color: transparent; } }
+  @media (min-width: 50em) {
+    .layout-boxed .content-area .banner {
+      position: static;
+      max-width: 119rem;
+      margin-left: -5.1rem; } }
 
 .layout-wide .layout-wrapper {
   position: relative;
@@ -3384,7 +3397,25 @@ embed {
       .footer-widget:nth-child(4n+1) {
         width: 100%; }
       .footer-widget:nth-child(4n+3) {
-        padding-right: 0; } }
+        padding-right: 0; }
+      .footer-widget.widget_calendar.widget {
+        padding-top: 0;
+        padding-right: 28px;
+        padding-right: 2.8rem; }
+        .footer-widget.widget_calendar.widget td, .footer-widget.widget_calendar.widget th {
+          padding: 1px;
+          padding: 0.1rem;
+          border-color: rgba(255, 255, 255, 0.3); }
+        .footer-widget.widget_calendar.widget th,
+        .footer-widget.widget_calendar.widget tfoot td {
+          background-color: transparent; }
+        .footer-widget.widget_calendar.widget tbody a {
+          display: block;
+          background-color: #ffffff;
+          color: #8e989e !important; }
+      .footer-widget.widget_search.widget {
+        padding-right: 28px;
+        padding-right: 2.8rem; } }
   @media (min-width: 49.125em) {
     .footer-widget {
       width: 20%; }
