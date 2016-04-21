@@ -4791,9 +4791,7 @@ body.user-dashboard .charitable-submit-field {
     @media (min-width: 37.5em) {
       .user-post-stats.campaign-stats .summary-item {
         float: left;
-        width: 50%;
-        padding-left: 0;
-        padding-right: 0; }
+        width: 50%; }
         .user-post-stats.campaign-stats .summary-item:nth-child(2) {
           padding-top: 0;
           border-top-width: 0; }
@@ -4804,7 +4802,9 @@ body.user-dashboard .charitable-submit-field {
     @media (min-width: 48em) and (max-width: 68.125em) {
       .user-post-stats.campaign-stats .summary-item {
         float: none;
-        width: 100%; }
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0; }
         .user-post-stats.campaign-stats .summary-item:nth-child(2) {
           padding-top: 14px;
           padding-top: 1.4rem;
