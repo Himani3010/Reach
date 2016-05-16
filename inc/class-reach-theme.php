@@ -184,7 +184,6 @@ class Reach_Theme {
         require get_template_directory() . '/inc/functions/template-tags.php';
         require get_template_directory() . '/inc/functions/helper-functions.php';
         require get_template_directory() . '/inc/functions/comments.php';
-        require get_template_directory() . '/inc/functions/compatibility.php';
     }
 
     /**
