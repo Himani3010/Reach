@@ -3,8 +3,8 @@ Contributors: WPCharitable, Studio164a
 Donate link: https://www.wpcharitable.com
 Tags: blue, light, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-colors, custom-menu, featured-images, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 4.2
-Tested up to: 4.5
-Stable tag: 1.0.1
+Tested up to: 4.5.2
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -92,5 +92,18 @@ Copyright © 2008-2012 Sencha Labs (http://sencha.com)
 
 == Change Log ==
 
-= 1.0 - 21/04/2016 =
+= 1.0.2 - 16/05/2016 = 
+* Fixed HTML error in comments area. 
+* Improved the way the layout is handled to prevent the menu and site branding areas from overlapping with each other.
+* Removed deprecated functions (left over from the Franklin theme).
+* Added templates for campaign category & tag archives.
+* Removed empty campaign-share-modal.php template file.
+* Removed unused audio.js file. 
+
+= 1.0.1 - 21/04/2016 = 
+* Auto calculate the layout of the header using a little touch of Javascript.
+* Expanded readme with more detailed information, particularly about licensing.
+* Fixed Customizer issues. 
+
+= 1.0.0 - 13/04/2016 =
 * Initial release.
