@@ -156,7 +156,7 @@ class Reach_Customizer_Retina_Image_Control extends WP_Customize_Image_Control {
          * Save the image's post ID, width and height to the theme settings. 
          */
         $image_id = reach_get_image_id_from_url( $image_url );
-        $image_meta = wp_get_attachment_metadata( $image_id );        
+        $image_meta = wp_get_attachment_metadata( $image_id );
 
         set_theme_mod( $this->id . '_id', $image_id );        
 

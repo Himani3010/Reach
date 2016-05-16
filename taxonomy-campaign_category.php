@@ -10,7 +10,7 @@ get_header();
 get_template_part( 'partials/banner' );        
 ?>  
 <div class="layout-wrapper fullwidth">
-    <main class="site-main content-area" role="main">        
+    <main class="site-main content-area">        
         <div class="campaigns-grid-wrapper">                                
             <nav class="campaigns-navigation" role="navigation">
                 <a class="menu-toggle menu-button toggle-button" aria-controls="menu" aria-expanded="false"></a>

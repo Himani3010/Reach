@@ -79,11 +79,13 @@
 	width: 100%;
 	@include margin( $size__margin-double, 0, 0 );
 	padding-left: 0;
+	list-style: none;
 
 	.children {
 		margin-left: 5%;
 		padding-left: 0;
 		width: 95%;
+		list-style: none;
 	}
 
 	.avatar {

@@ -47,10 +47,10 @@ if ( ! comments_open() || post_password_required() ) return;
             <ul class="comments-list">
                 <?php
                     /* Loop through and list the comments. Tell wp_list_comments()
-                     * to use textural_comment() to format the comments.
+                     * to use reach_comment() to format the comments.
                      * If you want to overload this in a child theme then you can
-                     * define textural_comment() and that will be used instead.
-                     * See textural_comment() in reach/functions.php for more.
+                     * define reach_comment() and that will be used instead.
+                     * See reach_comment() in reach/functions.php for more.
                      */
                     wp_list_comments( array( 'callback' => 'reach_comment' ) );
                 ?>

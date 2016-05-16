@@ -1100,16 +1100,14 @@ a {
         display: none; } }
   @media (min-width: 50em) {
     .site-navigation {
-      position: absolute;
-      top: auto;
-      right: 0;
-      bottom: 0;
+      position: static;
+      float: right;
       text-align: right;
       box-shadow: none;
       height: auto;
-      float: none;
       clear: none;
       width: auto;
+      max-width: 75%;
       /* Just adding this for added specifity */ }
       .site-navigation.wrapper {
         background: transparent; }
@@ -1708,6 +1706,7 @@ a {
   position: relative;
   z-index: 500;
   float: left;
+  max-width: 25%;
   padding: 14px 28px 14px 0px;
   padding: 1.4rem 2.8rem 1.4rem 0rem;
   text-transform: uppercase; }
@@ -2568,11 +2567,13 @@ body.page-template-homepage .charitable-campaign-map-marker {
   width: 100%;
   margin: 28px 0px 0px;
   margin: 2.8rem 0rem 0rem;
-  padding-left: 0; }
+  padding-left: 0;
+  list-style: none; }
   .comments-list .children {
     margin-left: 5%;
     padding-left: 0;
-    width: 95%; }
+    width: 95%;
+    list-style: none; }
   .comments-list .avatar {
     position: absolute; }
   .comments-list > .comment:last-of-type {
@@ -4391,10 +4392,11 @@ body.campaign-widget {
       border-width: 0px 1px;
       border-width: 0rem 0.1rem;
       border-radius: 0.4rem 0.4rem 0 0; } }
-.single-campaign .sidebar {
+
+.sidebar-campaign.sidebar {
   margin-top: 0; }
   @media (min-width: 50em) {
-    .single-campaign .sidebar {
+    .sidebar-campaign.sidebar {
       padding-top: 0; } }
 
 .donation-form-display-same_page.single-campaign .content-area .entry-block {

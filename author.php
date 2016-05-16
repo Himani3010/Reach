@@ -14,7 +14,7 @@ $first_name = strlen( $author->first_name ) ? $author->first_name : $author->dis
 get_header();
 
 ?>
-<main id="main" class="site-main site-content cf" role="main">  
+<main id="main" class="site-main site-content cf">  
     <div class="layout-wrapper">
         <div id="primary" class="content-area">
             <?php get_template_part( 'partials/banner', 'author' ) ?>

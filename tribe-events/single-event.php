@@ -10,7 +10,7 @@ get_header() ?>
     <?php get_template_part( 'partials/banner' ) ?>
 
     <div id="primary" class="content-area">
-        <main class="site-main content" role="main">        
+        <main class="site-main content">        
         <?php 
 
         tribe_events_the_notices();

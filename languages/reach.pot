@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Reach 1.0.0\n"
+"Project-Id-Version: Reach 1.0.1\n"
 "Report-Msgid-Bugs-To: https://www.wpcharitable.com/\n"
-"POT-Creation-Date: 2016-04-13 07:31:11+00:00\n"
+"POT-Creation-Date: 2016-04-21 03:44:50+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -130,17 +130,13 @@ msgstr ""
 msgid "This post is password protected. Enter the password to view any comments."
 msgstr ""
 
-#: comments-campaign.php:23
-msgid "Your email address will not be published."
-msgstr ""
-
-#: comments-campaign.php:40 comments.php:26
+#: comments-campaign.php:32 comments.php:26
 msgid "One comment"
 msgid_plural "%1$s comments"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments-campaign.php:53 comments-campaign.php:75 comments.php:39
+#: comments-campaign.php:45 comments-campaign.php:67 comments.php:39
 #: comments.php:61
 msgid "Comment navigation"
 msgstr ""
@@ -407,56 +403,52 @@ msgid "Footer"
 msgstr ""
 
 #: inc/admin/class-reach-customizer.php:462 partials/footer-notice.php:5
-msgid "The WP Charitable homepage"
-msgstr ""
-
-#: inc/admin/class-reach-customizer.php:463 partials/footer-notice.php:6
 msgid "Reach: A WordPress theme by WP Charitable"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:468
+#: inc/admin/class-reach-customizer.php:467
 msgid "Tagline"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:494
+#: inc/admin/class-reach-customizer.php:493
 msgid "Campaigns"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:505
+#: inc/admin/class-reach-customizer.php:504
 msgid "Background image for campaign summary block"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:541
+#: inc/admin/class-reach-customizer.php:540
 msgid "Where would you like the campaign video and featured image to be displayed?"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:544
+#: inc/admin/class-reach-customizer.php:543
 msgid "Featured image in summary, video before content."
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:545
+#: inc/admin/class-reach-customizer.php:544
 msgid "Video in summary, featured image before content."
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:565
+#: inc/admin/class-reach-customizer.php:564
 msgid "Social Profiles"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:566
+#: inc/admin/class-reach-customizer.php:565
 msgid ""
 "Enter the complete URL to your profile for each service below that you "
 "would like to share."
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:598
+#: inc/admin/class-reach-customizer.php:597
 msgid "Background Images"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:604
+#: inc/admin/class-reach-customizer.php:603
 msgid "Body"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:622
+#: inc/admin/class-reach-customizer.php:621
 msgid "Blog & Page Banners"
 msgstr ""
 
@@ -526,11 +518,11 @@ msgstr ""
 msgid "Second"
 msgstr ""
 
-#: inc/charitable/class-reach-charitable.php:206
+#: inc/charitable/class-reach-charitable.php:207
 msgid "Donation Receipt"
 msgstr ""
 
-#: inc/charitable/class-reach-charitable.php:209
+#: inc/charitable/class-reach-charitable.php:210
 msgid "Dashboard"
 msgstr ""
 
@@ -914,11 +906,6 @@ msgstr ""
 #: charitable/campaign-loop/creator.php:18
 msgctxt "by author"
 msgid "By"
-msgstr ""
-
-#: comments-campaign.php:30
-msgctxt "post comment"
-msgid "Submit"
 msgstr ""
 
 #: inc/class-reach-theme.php:810

@@ -20,7 +20,7 @@ get_header( 'stripped' );
 			get_template_part( 'partials/banner' ); ?>
 
 			<div class="layout-wrapper">
-				<main class="site-main content-area" role="main">
+				<main class="site-main content-area">
 					<?php get_template_part( 'partials/content', 'page' );
 
 					comments_template('', true); ?>

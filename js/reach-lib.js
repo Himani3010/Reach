@@ -1,4 +1,4 @@
-/*! reach - v0.9.45 - 2016-04-13 */
+/*! reach - v1.0.1 - 2016-05-11 */
 
 /*--------------------------------------------------------
  * REACH is the core object containing all components.
@@ -321,7 +321,14 @@ REACH.HeaderLayout = ( function( $ ) {
                 return;
             }
 
-            var width = $( '.site-navigation' ).width(), 
+            var width = ( function(){
+                    var wrapper = $('#header .layout-wrapper').width(),
+                        width = $( '.site-navigation' ).width();
+
+                    // Max out at 70%
+                    // if ( ( width / wrapper ) > )
+                    return width;
+                })();
                 stylesheet = ( function(){
                     var style = document.createElement("style");
                     style.appendChild(document.createTextNode(""));
@@ -329,13 +336,15 @@ REACH.HeaderLayout = ( function( $ ) {
                     return style.sheet;
                 })();
 
+
+
             stylesheet.insertRule('@media screen and (min-width: 50em) { .site-branding { margin-right:' + width + 'px; } }', 0);
 
             $.ajax({
                 type: "POST",
                 data: {
                     action : 'set_primary_navigation_width', 
-                    width : $( '.site-navigation' ).width()
+                    width : width
                 },
                 dataType: "json",
                 url: REACH_VARS.ajaxurl,

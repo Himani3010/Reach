@@ -28,7 +28,7 @@ class Reach_Theme {
     /**
      * The theme version. 
      */
-    const VERSION = '1.0.0';
+    const VERSION = '1.0.1';
 
     /**
      * Database version number. 
@@ -561,7 +561,6 @@ class Reach_Theme {
         // Allow other scripts to add their scripts to the dependencies.
         $reach_script_dependencies = apply_filters( 'reach_script_dependencies', array( 
             'jquery-ui-accordion', 
-            'audio-js', 
             'rrssb',
             'hoverIntent',             
             'fitvids',
@@ -573,7 +572,6 @@ class Reach_Theme {
             wp_register_script( 'lean-modal', $theme_dir . '/js/vendors/leanmodal/jquery.leanModal' . $ext, array( 'jquery' ), $this->get_theme_version(), true );
         }
 
-        wp_register_script( 'audio-js', $theme_dir . '/js/vendors/audiojs/audio.min.js', array(), $this->get_theme_version(), true);
         wp_register_script( 'rrssb', $theme_dir . '/js/vendors/rrssb/rrssb.min.js', array('jquery'), $this->get_theme_version(), true );
         wp_register_script( 'fitvids', $theme_dir . '/js/vendors/fitvids/jquery.fitvids.min.js', array('jquery'), '1.0', true );
         wp_register_script( 'reach-lib', $theme_dir . '/js/reach-lib' . $ext, $reach_script_dependencies, $this->get_theme_version(), true );
@@ -660,7 +658,7 @@ class Reach_Theme {
      * @since   1.0.0
      */
     public function setup_fonts() {
-        echo apply_filters( 'reach_font_link', "<link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700italic,700,300italic,300|Oswald:400,300' rel='stylesheet' type='text/css'>" );
+        echo apply_filters( 'reach_font_link', "<link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700italic,700,300italic,300%7COswald:400,300' rel='stylesheet' type='text/css'>" );
     }
 
     /**

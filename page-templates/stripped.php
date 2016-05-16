@@ -12,7 +12,7 @@
 get_header( 'stripped' );
 
 ?>
-<main id="main" class="site-main site-content cf" role="main">  
+<main id="main" class="site-main site-content cf">  
     <div class="layout-wrapper">    
         <div id="primary" class="content-area">
         <?php

@@ -8,7 +8,7 @@ get_header();
 
 ?>
 
-<main id="main" class="site-main site-content cf" role="main">      
+<main id="main" class="site-main site-content cf">      
 
 <?php 
 

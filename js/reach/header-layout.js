@@ -14,7 +14,14 @@ REACH.HeaderLayout = ( function( $ ) {
                 return;
             }
 
-            var width = $( '.site-navigation' ).width(), 
+            var width = ( function(){
+                    var wrapper = $('#header .layout-wrapper').width(),
+                        width = $( '.site-navigation' ).width();
+
+                    // Max out at 70%
+                    // if ( ( width / wrapper ) > )
+                    return width;
+                })();
                 stylesheet = ( function(){
                     var style = document.createElement("style");
                     style.appendChild(document.createTextNode(""));
@@ -22,13 +29,15 @@ REACH.HeaderLayout = ( function( $ ) {
                     return style.sheet;
                 })();
 
+
+
             stylesheet.insertRule('@media screen and (min-width: 50em) { .site-branding { margin-right:' + width + 'px; } }', 0);
 
             $.ajax({
                 type: "POST",
                 data: {
                     action : 'set_primary_navigation_width', 
-                    width : $( '.site-navigation' ).width()
+                    width : width
                 },
                 dataType: "json",
                 url: REACH_VARS.ajaxurl,

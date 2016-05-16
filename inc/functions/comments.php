@@ -82,7 +82,6 @@ if ( !function_exists( 'reach_comment' ) ) :
 		<li class="pingback">
 			<p><?php _e( 'Pingback:', 'reach' ); ?> <?php comment_author_link() ?></p>
 			<?php edit_comment_link( __( 'Edit', 'reach' ), '<p class="comment_meta">', '</p>' ); ?>
-		</li>
 		
 		<?php	
 				break;
@@ -90,9 +89,7 @@ if ( !function_exists( 'reach_comment' ) ) :
 		?>
 
 		<li <?php comment_class( get_option('show_avatars') ? 'avatars' : 'no-avatars' ) ?> id="li-comment-<?php comment_ID(); ?>">
-
 			<?php echo get_avatar( $comment, 50 ) ?>
-
 			<div class="comment-details">
 				<?php if ( reach_comment_is_by_author($comment) ) : ?><small class="post-author with-icon alignright"><i class="icon-star"></i><?php _e('Author', 'reach') ?></small><?php endif ?>
 				<h6 class="comment-author vcard"><?php comment_author_link() ?></h6>				
@@ -100,10 +97,8 @@ if ( !function_exists( 'reach_comment' ) ) :
 				<p class="comment-meta">
 					<span class="comment-date"><?php printf( '<i class="icon-comment"></i> %1$s %2$s %3$s', get_comment_date(), _x( 'at', 'comment post on date at time', 'reach'), get_comment_time() ) ?></span>
 					<span class="comment-reply floatright"><?php comment_reply_link( array_merge( $args, array( 'reply_text' => sprintf( '<i class="icon-pencil"></i> %s', _x( 'Reply', 'reply to comment' , 'reach' ) ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ) ?></span>
-				</p>
-			</div>		
-
-		</li>
+				</p><!-- .comment-meta -->
+			</div><!-- .comment-details -->
 
 		<?php
 				break;

@@ -22,14 +22,14 @@
                 border-radius: 0.4rem 0.4rem 0 0;
             }
         }
-    }
+    }    
+}
 
-    .sidebar {
-        margin-top: 0;
+.sidebar-campaign.sidebar {
+    margin-top: 0;
 
-        @include bp( 800 ) {
-            padding-top: 0;
-        }
+    @include bp( 800 ) {
+        padding-top: 0;
     }
 }
 

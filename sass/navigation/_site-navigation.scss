@@ -114,16 +114,19 @@
     }
 
     @include bp( 800 ) {
-        position: absolute;
-        top: auto;
-        right: 0;
-        bottom: 0;
+        // position: absolute;
+        // top: auto;
+        // right: 0;
+        // bottom: 0;
+        position: static;
+        float: right;
         text-align: right;          
         box-shadow: none;
         height: auto;
-        float: none;
+        // float: none;
         clear: none;
-        width: auto;        
+        width: auto;
+        max-width: 75%;        
         
         /* Just adding this for added specifity */
         &.wrapper {

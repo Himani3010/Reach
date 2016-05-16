@@ -26,20 +26,19 @@
 			<?php get_template_part( 'partials/account-links' ) ?>
 		</div><!-- .layout-wrapper -->
 		<div class="body-wrapper">
-			<header id="header" class="cf site-header" role="banner">
+			<header id="header" class="cf site-header">
 				<div class="layout-wrapper">
 					<div class="site-branding site-identity">
 						<?php reach_site_identity() ?>					
 					</div><!-- .site-branding -->
-					<div class="site-navigation">		
-						<nav role="navigation">
-							<a class="menu-toggle menu-button toggle-button" aria-controls="menu" aria-expanded="false"></a>
-							<?php wp_nav_menu( array(   
-								'theme_location' 	=> 'primary_navigation',
-								'container' 		=> false,
-								'menu_class' 		=> 'menu menu-site responsive_menu'
-							) ) ?>
-						</nav>
-				    </div><!-- .site-navigation -->
+					<nav class="site-navigation">		
+						<a class="menu-toggle menu-button toggle-button" aria-controls="primary-navigation" aria-expanded="false"></a>
+						<?php wp_nav_menu( array(   							
+							'theme_location' 	=> 'primary_navigation',
+							'container' 		=> false,
+							'menu_class' 		=> 'menu menu-site responsive_menu', 
+							'menu_id'			=> 'primary-navigation'
+						) ) ?>
+				    </nav><!-- .site-navigation -->
 				</div><!-- .layout-wrapper -->
 			</header><!-- #header -->
