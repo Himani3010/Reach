@@ -1586,7 +1586,6 @@ a {
   position: relative;
   z-index: 500;
   float: left;
-  max-width: 25%;
   padding: 14px 28px 14px 0px;
   padding: 1.4rem 2.8rem 1.4rem 0rem;
   text-transform: uppercase; }

@@ -359,9 +359,8 @@ class Reach_Theme {
         add_action( 'wp_head',                  array( $this, 'maybe_setup_title_tag' ) );
         add_action( 'wp_head',                  array( $this, 'setup_header_styling' ) );
         add_action( 'wp_footer',                array( $this, 'setup_fonts' ) );
-        add_action( 'wp_update_nav_menu',       array( $this, 'flush_primary_navigation_width' ) );
-        add_action( 'wp_ajax_set_primary_navigation_width', array( $this, 'save_primary_navigation_width' ) );
-        add_action( 'wp_ajax_nopriv_set_primary_navigation_width', array( $this, 'save_primary_navigation_width' ) );
+        add_action( 'wp_ajax_set_primary_navigation_offset', array( $this, 'save_primary_navigation_offset' ) );
+        add_action( 'wp_ajax_nopriv_set_primary_navigation_offset', array( $this, 'save_primary_navigation_offset' ) );
         
         /**
          * Methods within this class that are hooked into core WordPress filter hooks.
@@ -577,7 +576,7 @@ class Reach_Theme {
         wp_register_script( 'reach', $theme_dir . '/js/reach.js', array( 'reach-lib' ), $this->get_theme_version(), true );
 
         wp_localize_script( 'reach', 'REACH_VARS', array(
-            'primary_navigation_width' => get_transient( 'reach_navigation_width' ), 
+            'primary_navigation_offset' => get_transient( 'reach_navigation_offset' ), 
             'ajaxurl' => admin_url( 'admin-ajax.php' )
         ) );
 
@@ -635,15 +634,19 @@ class Reach_Theme {
      * @since   1.0.0
      */
     public function setup_header_styling() {
-        $width = get_transient( 'reach_navigation_width' );
+        $offset = get_transient( 'reach_navigation_offset' );
 
-        if ( ! $width ) {
+        if ( ! $offset ) {
             return;
         }
 ?>
 <style>@media screen and (min-width: 50em) {
-    .site-branding{ 
-        margin-right: <?php echo $width ?>px;
+    .site-navigation{ 
+        margin-top: <?php echo $offset['top'] ?>px;
+        margin-top: <?php echo $offset['top'] / 10 ?>rem;
+        max-width: -webkit-calc(100% - <?php echo $offset['left'] / 10 ?>rem);
+        max-width: -moz-calc(100% - <?php echo $offset['left'] / 10 ?>rem);
+        max-width: calc(100% - <?php echo $offset['left'] / 10 ?>rem);
     } 
 }</style>
 <?php
@@ -661,34 +664,18 @@ class Reach_Theme {
     }
 
     /**
-     * Delete the primary navigation width transient after updating the menu. 
-     *
-     * @param   int $menu_id
-     * @return  void
-     * @access  public
-     * @since   1.0.0
-     */
-    public function flush_primary_navigation_width( $menu_id ) {
-        $locations = get_nav_menu_locations();
-
-        if ( isset( $locations[ 'primary_navigation' ] ) && $locations[ 'primary_navigation' ] == $menu_id ) {
-            delete_transient( 'reach_navigation_width' );
-        }
-    }
-
-    /**
-     * Save the width of the primary navigation. 
+     * Save the top offset for the primary navigation. 
      *
      * @return  void
      * @access  public
      * @since   1.0.0
      */
-    public function save_primary_navigation_width() {
-        if ( ! isset( $_POST[ 'width' ] ) ) {
+    public function save_primary_navigation_offset() {
+        if ( ! isset( $_POST[ 'offset_t' ] ) || ! isset( $_POST[ 'offset_l' ] ) ) {
             wp_send_json_error();
         }
 
-        set_transient( 'reach_navigation_width', $_POST[ 'width' ] );
+        set_transient( 'reach_navigation_offset', array( 'top' => $_POST[ 'offset_t' ], 'left' => $_POST[ 'offset_l' ] ) );
 
         wp_send_json_success();
     }

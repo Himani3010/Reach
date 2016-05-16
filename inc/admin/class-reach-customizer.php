@@ -57,7 +57,7 @@ class Reach_Customizer {
     public function customize_save_after( WP_Customize_Manager $wp_customize ) {
         delete_transient( Reach_Customizer_Styles::get_transient_key() );
 
-        delete_transient( 'reach_navigation_width' );
+        delete_transient( 'reach_navigation_offset' );
     }
 
     /**

@@ -55,6 +55,22 @@
 	};
 
 	/**
+	 * Update the navigation offset. 
+	 */
+	var updateNavigationOffset = function() {
+		var offset_t = $('.site-branding').outerHeight() - 45, 
+			offset_l = $('.site-branding').outerWidth() + 1;
+
+			console.log(offset_l)
+
+		$('.site-navigation').css({
+			marginTop : offset_t, 
+			maxWidth : 'calc(100% - ' + offset_l + 'px)'
+		});
+
+	};
+
+	/**
 	 * Update the accent colour.
 	 */
 	var updateAccentColour = function(value) {
@@ -146,6 +162,8 @@
 	wp.customize( 'blogname', function( value ) {
 		value.bind( function( newval ) {
 			$( '.site-title a' ).html( newval );
+
+			updateNavigationOffset();
 		} );
 	} );
 	
@@ -153,6 +171,8 @@
 	wp.customize( 'blogdescription', function( value ) {
 		value.bind( function( newval ) {
 			$( '.site-tagline' ).html( newval );
+
+			updateNavigationOffset();
 		} );
 	} );
 
@@ -170,6 +190,9 @@
 			updateImage(newval, function() {
 				logo_dimensions = getImageDimensions( this, 'logo' );
 				updateLogo();
+
+				// Update the offset of the nav
+				updateNavigationOffset();
 			} );
 		} ); 
 	} );
@@ -189,7 +212,10 @@
 				logo_dimensions.is_retina = false;
 			}
 
-			updateLogo();
+			updateLogo();	
+
+			// Update the offset of the nav
+			updateNavigationOffset();
 		} ); 
 	} );
 
@@ -197,6 +223,9 @@
 	wp.customize( 'hide_site_title', function( value ) {
 		value.bind( function( newval ) {
 			$( '.site-title' ).toggleClass('hidden', newval);
+
+			// Update the offset of the nav
+			updateNavigationOffset();
 		} );
 	} );
 
@@ -204,6 +233,9 @@
 	wp.customize( 'hide_site_tagline', function( value ) {
 		value.bind( function( newval ) {
 			$( '.site-tagline' ).toggleClass('hidden', newval);
+
+			// Update the offset of the nav
+			updateNavigationOffset();
 		} );
 	} );
 

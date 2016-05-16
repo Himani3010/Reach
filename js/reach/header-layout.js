@@ -5,7 +5,7 @@ REACH.HeaderLayout = ( function( $ ) {
 
     return {
         init : function() {
-            if ( REACH_VARS.primary_navigation_width.length ) {            
+            if ( REACH_VARS.primary_navigation_offset.length ) {            
                 return;
             }
 
@@ -14,14 +14,8 @@ REACH.HeaderLayout = ( function( $ ) {
                 return;
             }
 
-            var width = ( function(){
-                    var wrapper = $('#header .layout-wrapper').width(),
-                        width = $( '.site-navigation' ).width();
-
-                    // Max out at 70%
-                    // if ( ( width / wrapper ) > )
-                    return width;
-                })();
+            var offset_t = $('.site-branding').outerHeight() - 45, // 45px is the height of the nav when it's a single row
+                offset_l = $('.site-branding').outerWidth() + 1, 
                 stylesheet = ( function(){
                     var style = document.createElement("style");
                     style.appendChild(document.createTextNode(""));
@@ -31,13 +25,14 @@ REACH.HeaderLayout = ( function( $ ) {
 
 
 
-            stylesheet.insertRule('@media screen and (min-width: 50em) { .site-branding { margin-right:' + width + 'px; } }', 0);
+            stylesheet.insertRule('@media screen and (min-width: 50em) { .site-navigation { margin-top:' + offset_t + 'px; max-width: -webkit-calc(100% - ' + offset_l + + 'px); max-width: -moz-calc(100% - ' + offset_l + 'px); max-width: calc(100% - ' + offset_l + 'px);) } }', 0);
 
             $.ajax({
                 type: "POST",
                 data: {
-                    action : 'set_primary_navigation_width', 
-                    width : width
+                    action : 'set_primary_navigation_offset', 
+                    offset_t : offset_t, 
+                    offset_l : offset_l
                 },
                 dataType: "json",
                 url: REACH_VARS.ajaxurl,

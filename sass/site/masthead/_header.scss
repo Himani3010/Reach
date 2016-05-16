@@ -22,8 +22,7 @@
 .site-identity {
 	position: relative;
 	z-index: 500;
-	float: left;
-	max-width: 25%;
+	float: left;	
 	@include padding( $size__margin, $size__margin-double, $size__margin, 0 );
 	text-transform: uppercase;
 }
