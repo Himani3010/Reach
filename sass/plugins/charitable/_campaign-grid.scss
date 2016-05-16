@@ -1,8 +1,3 @@
-.post-type-archive-campaign .content-area {
-	width: 100%; 	
-	padding-right: 0;
-}
-
 .campaigns-grid-wrapper {
 	position: relative;
 	float: left;
@@ -34,18 +29,6 @@
 		@include color( $color__border-primary ); // box-shadow will fall back to using this as the colour
 		box-shadow: 0 0 0 1px;
 	}	
-
-	// .campaign-image {
-	// 	@include fullwidth-wrapper( $size__margin, $size__margin );
-	// 	a {
-	// 		display: block;
-	// 		line-height: 0;
-	// 	}
-	// }
-
-	// .wp-post-image {
-	// 	padding-bottom: 0;
-	// }
 	
 	@include bp( 600 ) {
 		width: 102%;

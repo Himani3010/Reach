@@ -15,7 +15,7 @@ if ( ! function_exists( 'reach_crowdfunding_campaign_nav' ) ) :
      * 
      * @param   bool    $echo
      * @return  string
-     * @since   1.0.0
+     * @since   1.0.2
      */
     function reach_crowdfunding_campaign_nav( $echo = true ) {  
         $categories = get_categories( array( 'taxonomy' => 'campaign_category', 'orderby' => 'name', 'order' => 'ASC' ) );

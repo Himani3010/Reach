@@ -10,7 +10,7 @@ get_header();
 ?>  
 <main id="main" class="site-main site-content cf">  
     <div class="layout-wrapper">
-        <div id="primary" class="content-area">
+        <div id="primary" class="content-area no-sidebar">
             <?php
 
             get_template_part( 'partials/banner' );

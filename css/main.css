@@ -4301,10 +4301,6 @@ body.campaign-widget {
 /*--------------------------------------------------------------
 18.1.4 Campaign Grid
 --------------------------------------------------------------*/
-.post-type-archive-campaign .content-area {
-  width: 100%;
-  padding-right: 0; }
-
 .campaigns-grid-wrapper {
   position: relative;
   float: left;
