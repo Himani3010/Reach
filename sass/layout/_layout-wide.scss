@@ -1,8 +1,12 @@
-.layout-wide {
+.layout-wide {    
     #main {
         overflow-x: hidden;
     }
     
+    .page-template-homepage #main {
+        padding: 0;   
+    }
+
     .layout-wrapper {
         position: relative;
         @include max-width( 1400 );

@@ -23,21 +23,18 @@
         }
     }
 
-    #header {
-        border-radius: 0.4rem 0.4rem 0 0;
-    }
-
-    #main {
-        border-radius: 0 0 0.4rem 0.4rem;
+    .feature-block {
+        @include fullwidth-wrapper-padded();
+        @include padding( $size__margin-triple, $size__margin-triple + 9 );
     }
 
     .site-navigation {        
-        .menu-button {
-            // @include right( $size__margin-double );
-        }
+        .menu-button {            
+            @include right( $size__margin-double );
 
-        @include bp( 800 ) {
-            @include padding-right( $size__margin-triple );
+            @include bp( 600, false ) {
+                @include top( -1 );
+            }
         }
     }
 
@@ -52,34 +49,42 @@
         }
     }
 
-    .content-area {
-        @include bp( 1190 ) {
-            .shadow-wrapper {
-                &::before,
-                &::after {
-                    content: "";
-                    position: absolute;
-                    z-index: -1;
-                    bottom: -0.9rem;
-                    width: 0;
-                    height: 0;
-                    border-style: solid;            
-                    border-width: 0 0.9rem 0.9rem 0.9rem;
-                }
+    @include bp( 1190 ) {
+         #header {
+            border-radius: 0.4rem 0.4rem 0 0;
+        }
 
-                &::before {
-                    left: -0.9rem;
-                    border-bottom-color: transparent;
-                    border-left-color: transparent;
-                }
+        #main {
+            border-radius: 0 0 0.4rem 0.4rem;
+        }
 
-                &::after {
-                    right: -0.9rem;
-                    border-right-color: transparent;
-                    border-bottom-color: transparent;           
-                }
+        .shadow-wrapper {
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                bottom: -0.9rem;
+                width: 0;
+                height: 0;
+                border-style: solid;            
+                border-width: 0 0.9rem 0.9rem 0.9rem;
             }
 
+            &::before {
+                left: -0.9rem;
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+            }
+
+            &::after {
+                right: -0.9rem;
+                border-right-color: transparent;
+                border-bottom-color: transparent;           
+            }
+        }
+        
+        .content-area {            
             .banner {
                 position: relative;
                 width: -webkit-calc((100% + #{$size__margin-triple}px)/ 0.68 + #{($size__margin-triple + 9) * 2}px);
@@ -94,5 +99,5 @@
                 width: calc(100% + #{($size__margin-triple + 9) * 2}px);
             }
         }
-    }
+    }    
 }

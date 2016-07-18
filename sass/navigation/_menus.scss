@@ -127,7 +127,10 @@
 
 .toggled .menu-site {
 	position: relative;
-	@include fullwidth-calc( $size__margin-double );
+	@include left( -$size__margin-double );
+	width: -webkit-calc( 100% + #{$size__margin-double}px );
+	width: -moz-calc( 100% + #{$size__margin-double}px );
+	width: calc( 100% + #{$size__margin-double}px );
 	height: auto;
 	max-height: 10000px;
 	@include background-color( $color__background-wrapper );

@@ -189,7 +189,7 @@ if ( ! class_exists( 'Reach_Upgrade' ) ) :
 				'page-template-homepage.php'        => 'page-templates/homepage.php',
 				'page-template-home-slider.php'     => 'page-templates/homepage.php',
 				'page-template-stripped.php'        => 'page-templates/stripped.php',
-				'page-template-stripped-narrow.php' => 'page-templates/stripped-narrow.php',
+				'page-template-stripped-narrow.php' => 'page-templates/stripped.php',
 				'page-template-fullwidth.php'       => 'page-templates/fullwidth.php',
 				'page-template-user-dashboard.php'  => 'page-templates/user-dashboard.php',
 			);

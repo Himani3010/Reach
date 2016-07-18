@@ -912,9 +912,10 @@ a {
 .toggled .menu-site {
   position: relative;
   left: -28px;
-  width: -webkit-calc( 100% + 56px );
-  width: -moz-calc( 100% + 56px );
-  width: calc( 100% + 56px );
+  left: -2.8rem;
+  width: -webkit-calc( 100% + 28px );
+  width: -moz-calc( 100% + 28px );
+  width: calc( 100% + 28px );
   height: auto;
   max-height: 10000px; }
   .toggled .menu-site ul {
@@ -978,8 +979,8 @@ a {
   .site-navigation.toggled .menu-button:before {
     content: "\f00d"; }
   .site-navigation.toggled .menu-site {
-    padding: 28px 28px 0px;
-    padding: 2.8rem 2.8rem 0rem;
+    padding: 28px 0px 0px 28px;
+    padding: 2.8rem 0rem 0rem 2.8rem;
     border-top-width: 0px;
     border-top-width: 0rem;
     border-top-style: solid; }
@@ -1419,15 +1420,6 @@ a {
     .multi-block .content-block:first-of-type:last-of-type {
       border-radius: 0.4rem; } }
 
-.layout-boxed .feature-block {
-  position: relative; }
-  @media (min-width: 50em) {
-    .layout-boxed .feature-block {
-      left: -51px;
-      width: -webkit-calc( 100% + 102px );
-      width: -moz-calc( 100% + 102px );
-      width: calc( 100% + 102px ); } }
-
 .feature-block {
   position: relative;
   padding: 0px 28px 42px 28px;
@@ -1825,16 +1817,29 @@ a {
       .layout-boxed .body-wrapper {
         padding: 0px 10px;
         padding: 0rem 1rem; } }
-  .layout-boxed #header {
-    border-radius: 0.4rem 0.4rem 0 0; }
-  .layout-boxed #main {
-    border-radius: 0 0 0.4rem 0.4rem; }
-  @media (min-width: 50em) {
-    .layout-boxed .site-navigation {
-      padding-right: 42px;
-      padding-right: 4.2rem; } }
+  .layout-boxed .feature-block {
+    position: relative;
+    padding: 42px 51px;
+    padding: 4.2rem 5.1rem; }
+    @media (min-width: 50em) {
+      .layout-boxed .feature-block {
+        left: -51px;
+        width: -webkit-calc( 100% + 102px );
+        width: -moz-calc( 100% + 102px );
+        width: calc( 100% + 102px ); } }
+  .layout-boxed .site-navigation .menu-button {
+    right: 28px;
+    right: 2.8rem; }
+    @media (max-width: 37.5em) {
+      .layout-boxed .site-navigation .menu-button {
+        top: -1px;
+        top: -0.1rem; } }
   @media (min-width: 74.375em) {
-    .layout-boxed .content-area .shadow-wrapper::before, .layout-boxed .content-area .shadow-wrapper::after {
+    .layout-boxed #header {
+      border-radius: 0.4rem 0.4rem 0 0; }
+    .layout-boxed #main {
+      border-radius: 0 0 0.4rem 0.4rem; }
+    .layout-boxed .shadow-wrapper::before, .layout-boxed .shadow-wrapper::after {
       content: "";
       position: absolute;
       z-index: -1;
@@ -1843,11 +1848,11 @@ a {
       height: 0;
       border-style: solid;
       border-width: 0 0.9rem 0.9rem 0.9rem; }
-    .layout-boxed .content-area .shadow-wrapper::before {
+    .layout-boxed .shadow-wrapper::before {
       left: -0.9rem;
       border-bottom-color: transparent;
       border-left-color: transparent; }
-    .layout-boxed .content-area .shadow-wrapper::after {
+    .layout-boxed .shadow-wrapper::after {
       right: -0.9rem;
       border-right-color: transparent;
       border-bottom-color: transparent; }
@@ -1864,6 +1869,8 @@ a {
 
 .layout-wide #main {
   overflow-x: hidden; }
+.layout-wide .page-template-homepage #main {
+  padding: 0; }
 .layout-wide .layout-wrapper {
   position: relative;
   max-width: 1400px;
@@ -2215,8 +2222,6 @@ a {
 /**
  * The "Homepage" static page layout template.
  */
-body.page-template-homepage #main {
-  padding: 0; }
 body.page-template-homepage #primary {
   width: 100%;
   padding: 0;
@@ -2281,29 +2286,23 @@ body.page-template-homepage .charitable-campaign-map-marker {
   text-align: center; }
 .stripped .banner {
   margin-bottom: 0; }
-.stripped .site-main {
-  padding: 0;
-  border-width: 1px;
-  border-width: 0.1rem;
-  border-style: solid;
-  border-top: none;
-  border-radius: 0 0 0.4rem 0.4rem;
-  box-shadow: 0 0 1px #ffffff; }
+.stripped #main {
+  padding: 0px 42px 42px;
+  padding: 0rem 4.2rem 4.2rem; }
 .stripped .entry-block {
-  background: transparent;
   margin: 0;
-  padding: 0px 28px;
-  padding: 0rem 2.8rem;
-  border-radius: 0 0 0.4rem 0.4rem; }
-  .stripped .entry-block .entry {
-    padding: 0; }
+  padding: 0;
+  border: none;
+  border-radius: 0 0 0.4rem 0.4rem;
+  box-shadow: none; }
+.stripped .entry {
+  width: 68%;
+  margin-left: auto;
+  margin-right: auto; }
 .stripped #site-footer {
   padding: 0; }
 .stripped #colophon {
   border: none; }
-.stripped .page-template-page-template-stripped-narrow #page {
-  max-width: 800px;
-  max-width: 80rem; }
 
 /* Fullwidth */
 .page-template-fullwidth .banner {
@@ -4505,12 +4504,10 @@ body.campaign-widget {
         margin: 0px 0px 42px;
         margin: 0rem 0rem 4.2rem; } }
 
-.campaign-donation-page.stripped .site-main {
+.campaign-donation-page.stripped #main .entry {
+  width: 100%;
   padding: 0;
-  border: none;
-  background: transparent; }
-  .campaign-donation-page.stripped .site-main .entry-block {
-    padding: 0; }
+  margin: 0; }
 .campaign-donation-page.stripped #charitable-donation-form {
   width: 100%;
   padding: 42px;

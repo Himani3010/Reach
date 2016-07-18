@@ -37,7 +37,7 @@
         }
 
         .menu-site {
-            @include padding( 28, 28, 0 );
+            @include padding( $size__margin-double, 0, 0, $size__margin-double );
             @include border-top( 0, $color__accent );
             @include background-color( $color__background-body );
 

@@ -13,25 +13,25 @@
 		margin-bottom: 0;
 	}
 
-	.site-main {
-		padding: 0;
-		@include border( 1 );
-		border-top: none;
-		border-radius: 0 0 0.4rem 0.4rem;	    
+	#main {
+		@include padding( 0, $size__margin-triple, $size__margin-triple );
 		@include background-color( $color__background-content );
-		box-shadow: 0 0 1px $color__background-content;
-	}
+	}	
 
 	.entry-block {
-		background: transparent;
+		@include background-color( $color__background-content );
 		margin: 0;
-		@include padding( 0, $size__margin-double );	
+		padding: 0;		
+		border: none;
 		border-radius: 0 0 0.4rem 0.4rem;
+		box-shadow: none;
+	}
 
-		.entry {
-			padding: 0;
-		}
-	}	
+	.entry {
+		width: 68%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
 	#site-footer {
 		padding: 0;
@@ -39,11 +39,5 @@
 
 	#colophon {
 		border: none;
-	}
-
-	.page-template-page-template-stripped-narrow {
-		#page {
-			@include max-width( 800 );
-		}		
 	}
 }

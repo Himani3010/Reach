@@ -71,10 +71,6 @@
 	}	
 }
 
-.layout-boxed .feature-block {
-	@include fullwidth-wrapper-padded();
-}
-
 .feature-block {
 	@include fullwidth-wrapper();	
 	@include padding( 0, $size__margin-double, $size__margin-triple, $size__margin-double );		

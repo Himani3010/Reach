@@ -64,6 +64,7 @@ if ( ! class_exists( 'Reach_Charitable' ) ) :
 			add_filter( 'reach_banner_title', array( $this, 'set_banner_title' ) );
 			add_filter( 'charitable_is_in_user_dashboard', array( $this, 'load_donation_receipt_in_user_dashboard' ) );
 			add_filter( 'charitable_user_dashboard_template', array( $this, 'set_user_dashboard_template' ) );
+			add_filter( 'charitable_donation_processing_page_template', array( $this, 'set_stripped_template' ) );
 			add_filter( 'charitable_campaign_ended', 'reach_campaign_ended_text' );
 			add_filter( 'charitable_force_user_dashboard_template', '__return_true' );
 			add_filter( 'charitable_campaign_submission_campaign_fields', array( $this, 'campaign_submission_fields' ) );
@@ -233,13 +234,27 @@ if ( ! class_exists( 'Reach_Charitable' ) ) :
 		/**
 		 * Use the User Dashboard page template for donation receipts.
 		 *
-		 * @param   string  $template
+		 * @param   string $template
 		 * @return  string
 		 * @access  public
 		 * @since   1.0.0
 		 */
 		public function set_user_dashboard_template( $template ) {
 			return 'page-templates/user-dashboard.php';
+		}
+
+		/**
+		 * Use the Stripped page template.
+		 *
+		 * This is used for the Donation Processing page.
+		 *
+		 * @param   string $template
+		 * @return  string
+		 * @access  public
+		 * @since   1.0.3
+		 */
+		public function set_stripped_template( $template ) {
+			return 'page-templates/stripped.php';
 		}
 
 		/**
