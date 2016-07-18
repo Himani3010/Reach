@@ -152,7 +152,7 @@ if ( ! class_exists( 'Reach_Customizer_Styles' ) ) :
 		 * @since   1.0.0
 		 */
 		private function get_accent_colour_css() {
-			$colour = reach_get_theme()->get_theme_setting( 'accent_colour' );
+			$colour = esc_attr( reach_get_theme()->get_theme_setting( 'accent_colour' ) );
 
 			if ( ! strlen( $colour ) ) {
 				return '';
@@ -174,7 +174,7 @@ if ( ! class_exists( 'Reach_Customizer_Styles' ) ) :
 		 * @since   1.0.0
 		 */
 		private function get_background_colour_css() {
-			$colour = reach_get_theme()->get_theme_setting( 'background_colour' );
+			$colour = esc_attr( reach_get_theme()->get_theme_setting( 'background_colour' ) );
 
 			if ( ! strlen( $colour ) ) {
 				return '';
@@ -195,7 +195,7 @@ if ( ! class_exists( 'Reach_Customizer_Styles' ) ) :
 		 * @since   1.0.0
 		 */
 		private function get_text_colour_css() {
-			$colour = reach_get_theme()->get_theme_setting( 'text_colour' );
+			$colour = esc_attr( reach_get_theme()->get_theme_setting( 'text_colour' ) );
 
 			if ( ! strlen( $colour ) ) {
 				return '';
@@ -218,7 +218,7 @@ if ( ! class_exists( 'Reach_Customizer_Styles' ) ) :
 		 * @since   1.0.0
 		 */
 		private function get_footer_text_colour_css() {
-			$colour = reach_get_theme()->get_theme_setting( 'footer_text_colour' );
+			$colour = esc_attr( reach_get_theme()->get_theme_setting( 'footer_text_colour' ) );
 
 			if ( ! strlen( $colour ) ) {
 				return '';
@@ -237,7 +237,7 @@ if ( ! class_exists( 'Reach_Customizer_Styles' ) ) :
 		 * @since   1.0.0
 		 */
 		private function get_header_text_colour_css() {
-			$colour = reach_get_theme()->get_theme_setting( 'header_text_colour' );
+			$colour = esc_attr( reach_get_theme()->get_theme_setting( 'header_text_colour' ) );
 
 			if ( ! strlen( $colour ) ) {
 				return '';
@@ -268,7 +268,7 @@ if ( ! class_exists( 'Reach_Customizer_Styles' ) ) :
 			$output = sprintf( '%s { background-image: url("%s"); background-repeat: %s; }',
 				$element,
 				esc_url( $image['image'] ),
-				$repeat
+				esc_attr( $repeat )
 			);
 
 			if ( isset( $image['retina_image'] ) ) {
@@ -278,8 +278,8 @@ if ( ! class_exists( 'Reach_Customizer_Styles' ) ) :
 				$output .= sprintf( '%s { background-image: url("%s"); background-size: %spx %spx; }',
 					$element,
 					esc_url( $image['retina_image'] ),
-					$image['width'],
-					$image['height']
+					esc_attr( $image['width'] ),
+					esc_attr( $image['height'] )
 				);
 
 				$output .= '}';
