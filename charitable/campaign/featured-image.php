@@ -10,19 +10,19 @@
  * @version 1.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
 
-$campaign = $view_args[ 'campaign' ];
+$campaign = $view_args['campaign'];
 
-if ( ! has_post_thumbnail( $campaign->ID ) ) : 
-    return;
+if ( ! has_post_thumbnail( $campaign->ID ) ) :
+	return;
 endif;
 
 ?>
 <div class="campaign-image">
-    <?php 
-    echo charitable_template_campaign_status_tag( $campaign );
+	<?php
+	echo charitable_template_campaign_status_tag( $campaign );
 
-    echo get_the_post_thumbnail( $campaign->ID );
-    ?>
+	echo get_the_post_thumbnail( $campaign->ID );
+	?>
 </div>

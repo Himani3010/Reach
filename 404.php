@@ -6,7 +6,7 @@
  */
 
 get_header();
-				
+
 get_template_part( 'partials/banner' ); ?>
 
 <div class="site-main error-404 not-found entry" role="main">

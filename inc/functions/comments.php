@@ -1,54 +1,65 @@
 <?php
 
-if ( !function_exists( 'reach_comment_form_default_fields') ) :
-	
+if ( ! function_exists( 'reach_comment_form_default_fields' ) ) :
+
 	/**
 	 * Customize comment form default fields
 	 *
-	 * @uses comment_form_field_comment filter
-	 * @param string $field
+	 * @uses 	comment_form_field_comment filter
+	 *
 	 * @return 	string
 	 * @since 	1.0.0
 	 */
 	function reach_comment_form_default_fields( $fields ) {
-		$fields = '
+		ob_start();
+?>		
 		<p class="comment-text-input required" tabindex="1">
-			<input type="text" name="author" id="commenter_name" placeholder="' . __( 'Name', 'reach' ) . ' *" required />			
+			<label class="screen-reader-text" for="author"><?php _e( 'Name', 'reach' ) ?></label>
+			<input type="text" name="author" id="commenter_name" placeholder="<?php esc_attr_e( 'Name', 'reach' ) ?> *" required />
 		</p>		
 		<p class="comment-text-input last" tabindex="2">
-			<input type="text" name="url" id="commenter_url" placeholder="' . __( 'Website', 'reach' ) . '" />
+			<label class="screen-reader-text" for="url"><?php _e( 'Website', 'reach' ) ?></label>
+			<input type="text" name="url" id="commenter_url" placeholder="<?php esc_attr_e( 'Website', 'reach' ) ?>" />
 		</p>
 		<p class="comment-text-input fullwidth required" tabindex="3">
-			<input type="email" name="email" id="commenter_email" placeholder="' . __( 'Email', 'reach' ) . ' *" required />			
+			<label class="screen-reader-text" for="email"><?php _e( 'Email', 'reach' ) ?></label>
+			<input type="email" name="email" id="commenter_email" placeholder="<?php esc_attr_e( 'Email', 'reach' ) ?> *" required />
 		</p>
-		';
-		return $fields;
-	}	
+<?php
+		return ob_get_clean();
+	}
 
 endif;
 
 add_filter( 'comment_form_default_fields', 'reach_comment_form_default_fields', 10, 2 );
 
-if ( !function_exists( 'reach_comment_form_field_comment') ) :
+if ( ! function_exists( 'reach_comment_form_field_comment' ) ) :
 
 	/**
-	 * The comment field. 
-	 * 
+	 * The comment field.
+	 *
 	 * @return 	string
 	 * @since 	1.0.0
 	 */
 	function reach_comment_form_field_comment() {
-		return '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="'.__( 'Leave your comment', 'reach' ).' *"></textarea></p>';
+		ob_start();
+?>		
+		<p class="comment-form-comment">
+			<label class="screen-reader-text" for="comment"><?php _e( 'Leave your comment', 'reach' ) ?></label>
+			<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="<?php esc_attr_e( 'Leave your comment', 'reach' ) ?> *"></textarea>
+		</p>
+<?php
+		return ob_get_clean();
 	}
 
 endif;
 
-if ( !function_exists( 'reach_cancel_comment_reply_link') ) :
+if ( ! function_exists( 'reach_cancel_comment_reply_link' ) ) :
 
-	/** 
+	/**
 	 * Filters the comment reply close link.
-	 * 
-	 * @param 	string 	$html
+	 *
+	 * @param 	string $html
 	 * @return 	string
 	 * @since 	1.0
 	 */
@@ -60,10 +71,10 @@ endif;
 
 add_filter( 'cancel_comment_reply_link', 'reach_cancel_comment_reply_link' );
 
-if ( !function_exists( 'reach_comment' ) ) :
+if ( ! function_exists( 'reach_comment' ) ) :
 
 	/**
-	 * Customize comment output. 
+	 * Customize comment output.
 	 *
 	 * @param 	stdClass 	$comment
 	 * @param 	array 		$args
@@ -74,6 +85,7 @@ if ( !function_exists( 'reach_comment' ) ) :
 	function reach_comment( $comment, $args, $depth ) {
 
 		$GLOBALS['comment'] = $comment;
+
 		switch ( $comment->comment_type ) :
 			case 'pingback' :
 			case 'trackback' :
@@ -83,65 +95,57 @@ if ( !function_exists( 'reach_comment' ) ) :
 			<p><?php _e( 'Pingback:', 'reach' ); ?> <?php comment_author_link() ?></p>
 			<?php edit_comment_link( __( 'Edit', 'reach' ), '<p class="comment_meta">', '</p>' ); ?>
 		
-		<?php	
+		<?php
 				break;
 			default :
+
+				$comment_reply_args = array(
+					'reply_text' => sprintf( '<i class="icon-pencil"></i> %s', _x( 'Reply', 'reply to comment' , 'reach' ) ),
+					'depth' 	 => $depth,
+					'max_depth'  => $args['max_depth'],
+				);
+
+				$comment_reply_args = array_merge( $args, $comment_reply_args );
 		?>
 
-		<li <?php comment_class( get_option('show_avatars') ? 'avatars' : 'no-avatars' ) ?> id="li-comment-<?php comment_ID(); ?>">
+		<li <?php comment_class( get_option( 'show_avatars' ) ? 'avatars' : 'no-avatars' ) ?> id="li-comment-<?php comment_ID(); ?>">
 			<?php echo get_avatar( $comment, 50 ) ?>
 			<div class="comment-details">
-				<?php if ( reach_comment_is_by_author($comment) ) : ?><small class="post-author with-icon alignright"><i class="icon-star"></i><?php _e('Author', 'reach') ?></small><?php endif ?>
+				<?php if ( reach_comment_is_by_author( $comment ) ) : ?>
+					<small class="post-author with-icon alignright"><i class="icon-star"></i><?php _e( 'Author', 'reach' ) ?></small>
+				<?php endif ?>
 				<h6 class="comment-author vcard"><?php comment_author_link() ?></h6>				
 				<div class="comment-text"><?php comment_text() ?></div>
 				<p class="comment-meta">
-					<span class="comment-date"><?php printf( '<i class="icon-comment"></i> %1$s %2$s %3$s', get_comment_date(), _x( 'at', 'comment post on date at time', 'reach'), get_comment_time() ) ?></span>
-					<span class="comment-reply floatright"><?php comment_reply_link( array_merge( $args, array( 'reply_text' => sprintf( '<i class="icon-pencil"></i> %s', _x( 'Reply', 'reply to comment' , 'reach' ) ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ) ?></span>
+					<span class="comment-date"><i class="icon-comment"></i><?php printf(
+						_x( '%s at %s', 'date at time', 'reach' ),
+						get_comment_date(),
+						get_comment_time()
+					) ?></span>
+					<span class="comment-reply floatright"><?php comment_reply_link( $comment_reply_args ) ?></span>
 				</p><!-- .comment-meta -->
 			</div><!-- .comment-details -->
 
 		<?php
 				break;
-		endswitch;	
+		endswitch;
 	}
 
 endif;
 
-if ( !function_exists( 'reach_comment_is_by_author') ) :
+if ( ! function_exists( 'reach_comment_is_by_author' ) ) :
 
-	/** 
-	 * Return whether the comment was created by the post author. 
-	 * 
-	 * @param 	stdClass 		$comment
+	/**
+	 * Return whether the comment was created by the post author.
+	 *
+	 * @param 	object $comment
 	 * @return 	bool
 	 * @since 	1.0
 	 */
-	function reach_comment_is_by_author($comment) {
+	function reach_comment_is_by_author( $comment ) {
 		global $post;
 
-		return isset( $comment->user_id ) && $comment->user_id == $post->post_author ? true : false;
+		return isset( $comment->user_id ) && $comment->user_id == $post->post_author;
 	}
 
 endif;
-
-if ( !function_exists( 'reach_comment_form_field_comment_filter' ) ) :
-
-	/**
-	 * Displays the comment field if the user is logged in and this is a campaign.
-	 * 
-	 * @uses 	comment_form_field_comment
-	 * @param 	string 		$default
-	 * @return 	string
-	 * @since 	1.0.0
-	 */
-	function reach_comment_form_field_comment_filter( $default ) {
-		global $post;
-
-		if ( is_user_logged_in() ) {
-			return reach_comment_form_field_comment();
-		}
-	}
-
-endif;
-
-// add_filter( 'comment_form_field_comment', 'reach_comment_form_field_comment_filter' );

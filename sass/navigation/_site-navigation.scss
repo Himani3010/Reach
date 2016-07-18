@@ -1,10 +1,9 @@
 /* .site-navigation is the main navigation */
 .site-navigation {
     position: absolute;
-    @include top( -$size__margin-double );
+    @include top( 5 - $size__margin-double  );
+    right: 0;
     z-index: 1000;
-    float: left;
-    clear: both;
     height: 0;  
     width: 100%;
     
@@ -15,11 +14,8 @@
     .menu-button {
         position: absolute;
         z-index: 600;
-        @include right( -28 );
-        @include top( -60 );
-        @include padding( 0, $size__margin-double, 0, 0 );
-        @include height( 60 );
-        @include line-height( 65 );
+        right: 0;
+        @include padding( 0, $size__margin-double, 0, 0 );        
         text-align: center;
         @include color( $color__text-overlay );
 
@@ -41,6 +37,7 @@
         }
 
         .menu-site {
+            @include padding( 28, 28, 0 );
             @include border-top( 0, $color__accent );
             @include background-color( $color__background-body );
 
@@ -140,6 +137,12 @@
 
                 &:last-child {
                     border-bottom: 0;
+                }
+            }
+
+            li:focus {
+                > a {
+                    @include color( $color__accent );
                 }
             }
 

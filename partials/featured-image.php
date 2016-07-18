@@ -1,9 +1,11 @@
 <?php
 /**
  * Display the post thumbnail, if there is one.
+ *
+ * @package Reach
  */
 
-if ( has_post_thumbnail() ) : 
+if ( has_post_thumbnail() ) :
 	?> 
 	<div class="featured-image">
 

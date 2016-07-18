@@ -1,23 +1,30 @@
-<?php 
+<?php
 /**
- * Campaign summary template. Shows the campaign short description and stats, as well as sharing buttons.
+ * Campaign ended template.
+ *
+ * This template displays a message for Charitable campaigns that have finished. It will
+ * not be used if Charitable is not active.
  *
  * @package Reach
  */
 
+if ( ! reach_has_charitable() ) :
+	return;
+endif;
+
 $campaign = charitable_get_current_campaign();
 
 if ( $campaign->has_goal() && $campaign->has_achieved_goal() ) :
-	
-	$message = __( 'This campaign successfully reached its funding goal and ended %s ago', 'reach' );
-	
-elseif ( $campaign->has_goal() && ! $campaign->has_achieved_goal() ) : 
 
-	$message = __( 'This campaign failed to reach its funding goal %s ago', 'reach' ); 
+	$message = _x( 'This campaign successfully reached its funding goal and ended %s ago', 'campaign successfully reached its funding goal and ended x time ago', 'reach' );
+
+elseif ( $campaign->has_goal() && ! $campaign->has_achieved_goal() ) :
+
+	$message = _x( 'This campaign failed to reach its funding goal %s ago', 'campaign failed to reach its funding goal x time ago', 'reach' );
 
 else :
 
-	$message = __( 'This campaign ended %s ago', 'reach' );
+	$message = _x( 'This campaign ended %s ago', 'campaign end x time ago', 'reach' );
 
 endif;
 ?>

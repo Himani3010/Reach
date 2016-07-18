@@ -1,14 +1,30 @@
-.layout-wide .layout-wrapper {
-    position: relative;
-    @include max-width( 1400 );
-    margin: 0 auto;
-
-    &:before {
-        @include clearfix;
+.layout-wide {
+    #main {
+        overflow-x: hidden;
     }
+    
+    .layout-wrapper {
+        position: relative;
+        @include max-width( 1400 );
+        margin: 0 auto;
 
-    &:after {
-        @include clearfix;
-        @include clearfix-after;
+        &:before {
+            @include clearfix;
+        }
+
+        &:after {
+            @include clearfix;
+            @include clearfix-after;
+        }    
+
+        @include bp( 1484 ) {   
+            .content-area {
+                .banner {
+                    width: 100vw;
+                    left: -50vw;
+                    @include margin-left( 700 );
+                }
+            }
+        }
     }    
 }

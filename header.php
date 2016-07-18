@@ -33,11 +33,11 @@
 					</div><!-- .site-branding -->
 					<nav class="site-navigation">		
 						<a class="menu-toggle menu-button toggle-button" aria-controls="primary-navigation" aria-expanded="false"></a>
-						<?php wp_nav_menu( array(   							
+						<?php wp_nav_menu( array(
 							'theme_location' 	=> 'primary_navigation',
 							'container' 		=> false,
-							'menu_class' 		=> 'menu menu-site responsive_menu', 
-							'menu_id'			=> 'primary-navigation'
+							'menu_class' 		=> 'menu menu-site responsive_menu',
+							'menu_id'			=> 'primary-navigation',
 						) ) ?>
 				    </nav><!-- .site-navigation -->
 				</div><!-- .layout-wrapper -->

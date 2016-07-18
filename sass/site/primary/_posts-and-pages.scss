@@ -16,7 +16,7 @@
 
 .banner {
 	position: relative;	
-	width: 100vw;
+	width: 100%;	
 	word-wrap: break-word;
 	@include min-height( 100 );
 	@include padding( 35, $size__margin-double );
@@ -27,14 +27,12 @@
 
 @include bp( 800 ) {
 	.banner {
+		width: -webkit-calc((100% + #{$size__margin-triple}px)/ 0.68 + #{$size__margin-triple * 2}px);
+		width: -moz-calc((100% + #{$size__margin-triple}px)/ 0.68 + #{$size__margin-triple * 2}px);
+		width: calc((100% + #{$size__margin-triple}px)/ 0.68 + #{$size__margin-triple * 2}px);
 		@include padding-left( $size__margin-triple );
 		@include padding-right( $size__margin-triple );
 		@include margin-bottom( $size__margin-triple );
-	}
-
-	.no-sidebar .banner {		
-		left: -32%;
-		width: 102vw;
 	}
 
 	.content-area .banner { 
@@ -42,10 +40,9 @@
 	}
 }
 
-@include bp( 1484 ) {	
-	.content-area .banner {
-		left: -50vw;
-		@include margin-left( 700 );
+@include bp( 1484 ) {
+	.banner {
+		width: 100vw;
 	}
 }
 

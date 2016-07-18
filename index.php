@@ -15,34 +15,34 @@ get_header();
 
 ?>
 <main id="main" class="site-main site-content cf">  
-    <div class="layout-wrapper">
-        <div id="primary" class="content-area <?php if ( ! is_active_sidebar( 'default' ) ) : ?>no-sidebar<?php endif ?>">
-        <?php 
+	<div class="layout-wrapper">
+		<div id="primary" class="content-area <?php if ( ! is_active_sidebar( 'default' ) ) : ?>no-sidebar<?php endif ?>">
+		<?php
 
-        get_template_part( 'partials/banner' );
+		get_template_part( 'partials/banner' );
 
-        if ( have_posts() ) : 
-            while ( have_posts() ) : 
-                the_post(); 
+		if ( have_posts() ) :
+			while ( have_posts() ) :
+				the_post();
 
-                get_template_part( 'partials/content', get_post_format() );
+				get_template_part( 'partials/content', get_post_format() );
 
-            endwhile; 
+			endwhile;
 
-            reach_paging_nav();
+			reach_paging_nav();
 
-        else :
+		else :
 
-            get_template_part( 'partials/content', 'none' );
+			get_template_part( 'partials/content', 'none' );
 
-        endif;
+		endif;
 
-        ?>
-        </div><!-- #primary -->
+		?>
+		</div><!-- #primary -->
 
-        <?php get_sidebar() ?>
-    </div><!-- .layout-wrapper -->
+		<?php get_sidebar() ?>
+	</div><!-- .layout-wrapper -->
 </main><!-- #main -->
-<?php 
+<?php
 
 get_footer();

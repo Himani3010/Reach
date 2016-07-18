@@ -2,6 +2,8 @@
 /**
  * The sidebar containing the campaigns widget area.
  *
+ * This template is only used if Charitable is active.
+ *
  * @package Reach
  */
 

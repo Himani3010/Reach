@@ -2,34 +2,36 @@
 /**
  * The template for displaying Download posts.
  *
+ * This template is only used if Easy Digital Downloads is active.
+ *
  * @package     Reach
  */
 
-get_header(); 
+get_header();
 
 ?>  
 <main id="main" class="site-main site-content cf">  
-    <div class="layout-wrapper">
-        <div id="primary" class="content-area">
-            <?php 
+	<div class="layout-wrapper">
+		<div id="primary" class="content-area">
+			<?php
 
-            while ( have_posts() ) : 
-                the_post();
+			while ( have_posts() ) :
+				the_post();
 
-                get_template_part( 'partials/content' );
-                
-                /* If comments are open or we have at least one comment, load up the comment template */
-                if ( comments_open() || get_comments_number() ) :
-                    comments_template();
-                endif;            
+				get_template_part( 'partials/content' );
 
-            endwhile; // end of the loop. 
+				/* If comments are open or we have at least one comment, load up the comment template */
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
 
-            ?>
-        </div><!-- #primary -->
+			endwhile; // end of the loop.
 
-        <?php get_sidebar( 'download' ); ?>
-    </div><!-- .layout-wrapper -->
+			?>
+		</div><!-- #primary -->
+
+		<?php get_sidebar( 'download' ); ?>
+	</div><!-- .layout-wrapper -->
 </main><!-- #main -->
 
 <?php get_footer();

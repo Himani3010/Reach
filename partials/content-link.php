@@ -1,32 +1,33 @@
-<?php 
+<?php
 /**
  * Content of link format post.
- * 
+ *
  * @package 	Reach
  */
+
 ?>
 <article id="post-<?php the_ID() ?>" <?php post_class() ?>>	
-	<?php 
+	<?php
 
 	get_template_part( 'partials/sticky' );
-	
+
 	get_template_part( 'partials/featured-image' );
 
 	?>
 	<div class="block entry-block">
-		<?php 
+		<?php
 
 		reach_post_header();
 
 		$content = reach_link_format_the_content( null, false, false );
 
-		if ( strlen( $content ) ) : 
+		if ( strlen( $content ) ) :
 
 		?>
 			<div class="entry cf">
 				<?php echo $content ?>
 			</div><!-- .entry -->
-		<?php 
+		<?php
 
 		endif;
 
@@ -35,7 +36,7 @@
 		/* Display taxonomy meta on single posts. */
 		if ( is_single() ) :
 			get_template_part( 'partials/meta', 'taxonomy' );
-		endif; 
+		endif;
 
 		?>
 	</div><!-- .entry-block -->

@@ -1,18 +1,17 @@
-<?php 
+<?php
 /**
  * Partial template displaying the activity feed shown on user profiles.
- * 
+ *
  * @package 	Reach
  */
 
-$author = reach_get_current_author();
-
+$author   = reach_get_current_author();
 $activity = new WP_Query( array(
-    'author'        => $author->ID,
-    'post_status'   => array( 'charitable-completed', 'charitable-preapproved', 'publish' ),
-    'post_type'     => array( 'donation', 'campaign', 'post' ),
-    'order'         => 'DESC', 
-    'orderby'       => 'date'
+	'author'        => $author->ID,
+	'post_status'   => array( 'charitable-completed', 'charitable-preapproved', 'publish' ),
+	'post_type'     => array( 'donation', 'campaign', 'post' ),
+	'order'         => 'DESC',
+	'orderby'       => 'date',
 ) );
 
 ?>
@@ -23,20 +22,20 @@ $activity = new WP_Query( array(
 	
 	<ul class="author-activity-feed">
 	
-	<?php while( $activity->have_posts() ) : 
+	<?php while ( $activity->have_posts() ) :
 
 		$activity->the_post();
 
 		get_template_part( 'partials/author', 'activity-' . get_post_field( 'post_type', get_the_ID() ) );
-		
+
 	endwhile ?>
 	
 	</ul>
 
 <?php else : ?>				
 
-	<p><?php printf( '%s %s', $author->display_name, _x( 'has no activity to show yet.', 'user has no activity', 'reach' ) ) ?></p>
+	<p><?php printf( _x( '%s has no activity to show yet.', 'user has no activity', 'reach' ), $author->display_name ) ?></p>
 
-<?php 
+<?php
 
 endif;

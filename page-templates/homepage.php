@@ -1,10 +1,10 @@
-<?php 
+<?php
 /**
  * Template name: Homepage
- * 
+ *
  * This is a homepage template with a content block at the top and campaigns grid below.
  *
- * @package 	Reach 
+ * @package 	Reach
  */
 
 get_header();
@@ -12,17 +12,17 @@ get_header();
 ?>
 <main id="main" class="site-main site-content cf">  
 	<div id="primary" class="content-area">
-		<?php 
+		<?php
 
 		if ( have_posts() ) :
-            while ( have_posts() ) :
-                the_post();
+			while ( have_posts() ) :
+				the_post();
 
-                ?>
+				?>
 				<article id="post-<?php the_ID() ?>" <?php post_class() ?>>
 					<div class="shadow-wrapper">
 						<div class="layout-wrapper">						
-							<div class="media-container"><?php 
+							<div class="media-container"><?php
 								echo reach_get_media( array( 'split_media' => true ) );
 							?></div><!-- .media-container -->
 							<header>
@@ -34,7 +34,7 @@ get_header();
 						</div><!-- .layout-wrapper -->
 					</div><!-- .shadow-wrapper -->
 				</article><!-- post-<?php the_ID() ?> -->
-				<?php 
+				<?php
 
 			endwhile;
 		endif;
@@ -45,6 +45,6 @@ get_header();
 		<?php get_template_part( 'partials/campaign', 'grid' ) ?>
 	</div><!-- .layout-wrapper -->
 </main><!-- #main -->
-<?php	
+<?php
 
 get_footer();

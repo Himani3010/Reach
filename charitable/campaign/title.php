@@ -10,7 +10,7 @@
  * @version 1.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
 
 ?>
-<h1 class="campaign-title"><?php echo get_the_title( $view_args[ 'campaign' ]->ID ) ?></h1>
+<h1 class="campaign-title"><?php echo get_the_title( $view_args['campaign']->ID ) ?></h1>

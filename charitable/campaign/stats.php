@@ -10,31 +10,27 @@
  * @version 1.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
 
-$campaign = $view_args[ 'campaign' ];
-$currency_helper = charitable()->get_currency_helper();
+/**
+ * @var 	Charitable_Campaign
+ */
+$campaign = $view_args['campaign'];
 
 ?>
 <ul class="campaign-stats">
-    <li class="campaign-raised">
-        <?php printf( '<span>%s</span>%s', 
-            $currency_helper->get_monetary_amount( $campaign->get_donated_amount() ), 
-            __( 'Donated', 'reach' )
-        ) ?>
-    </li>
-    <?php if ( $campaign->has_goal() ) : ?>
-        <li class="campaign-goal">
-            <?php printf( '<span>%s</span>%s', 
-                $currency_helper->get_monetary_amount( $campaign->get_goal() ),
-                __( 'Goal', 'reach' )
-            ) ?>
-        </li>
-    <?php endif ?>
-    <li class="campaign-backers">
-        <?php printf( '<span>%d</span>%s',
-            $campaign->get_donor_count(),
-            __( 'Donors', 'reach' )
-        ) ?>
-    </li>               
+	<li class="campaign-raised">
+		<span><?php echo charitable_format_money( $campaign->get_donated_amount() ) ?></span>
+		<?php _e( 'Donated', 'reach' ) ?>
+	</li>
+	<?php if ( $campaign->has_goal() ) : ?>
+		<li class="campaign-goal">
+			<span><?php echo charitable_format_money( $campaign->get_goal() ) ?></span>
+			<?php _e( 'Goal', 'reach' ) ?>
+		</li>
+	<?php endif ?>
+	<li class="campaign-backers">
+		<span><?php echo $campaign->get_donor_count() ?></span>
+		<?php _e( 'Donors', 'reach' ) ?>
+	</li>
 </ul>

@@ -1,12 +1,20 @@
-<?php 
+<?php
 /**
  * Campaign sharing options.
+ *
+ * This template will not be used if Charitable is not active.
  *
  * @package Reach
  */
 
-$permalink 	= urlencode( get_the_permalink() );
-$title 		= urlencode( get_the_title() );
+if ( ! reach_has_charitable() ) :
+	return;
+endif;
+
+$permalink  = urlencode( get_the_permalink() );
+$title 	    = urlencode( get_the_title() );
+$widget_url = esc_url( charitable_get_permalink( 'campaign_widget_page' ) );
+
 ?>
 <ul class="campaign-sharing share horizontal rrssb-buttons">
 	<li><h6><?php _e( 'Share', 'reach' ) ?></h6></li>
@@ -33,11 +41,11 @@ $title 		= urlencode( get_the_title() );
 			<div class="block">	
 				<?php echo apply_filters( 'the_excerpt', get_theme_mod( 'campaign_sharing_text', '' ) ) ?>
 				<p><strong><?php _e( 'Embed Code', 'reach' ) ?></strong></p>
-				<pre><?php echo htmlspecialchars( '<iframe src="' . charitable_get_permalink( 'campaign_widget_page' ) . '" width="275px" height="468px" frameborder="0" scrolling="no" /></iframe>' ) ?></pre>
+				<pre><?php echo htmlspecialchars( '<iframe src="' . $widget_url . '" width="275px" height="468px" frameborder="0" scrolling="no" /></iframe>' ) ?></pre>
 			</div>
 			<div class="block iframe-block">
 				<p><strong><?php _e( 'Preview', 'reach' ) ?></strong></p>
-				<iframe src="<?php echo charitable_get_permalink( 'campaign_widget_page' ) ?>" width="275px" height="468px" frameborder="0" scrolling="no" /></iframe>
+				<iframe src="<?php echo $widget_url ?>" width="275px" height="468px" frameborder="0" scrolling="no" /></iframe>
 			</div>
 		</div>
 	</li>	

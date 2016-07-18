@@ -1,57 +1,63 @@
 <?php 
 /**
- * Checkout page template. 
+ * Checkout page template.
+ *
+ * This template is only used if Easy Digital Downloads is active.
  *
  * @package Reach
  */
 
 if ( ! reach_has_edd() ) {
-    return;
+	return;
 }
 
-$cart = new Charitable_EDD_Cart( edd_get_cart_contents(), edd_get_cart_fees( 'item' ) );
-$campaigns = $cart->get_benefits_by_campaign();
+if ( class_exists( 'Charitable_EDD_Cart' ) ) :
+	$cart      = new Charitable_EDD_Cart( edd_get_cart_contents(), edd_get_cart_fees( 'item' ) );
+	$campaigns = $cart->get_benefits_by_campaign();
+else :
+	$campaigns = array();
+endif;
 
 get_header( 'stripped' );
-    
+
 ?>    
 <main id="main" class="site-main site-content cf">  
-    <div class="layout-wrapper">    
-        <div id="primary" class="content-area <?php if ( empty( $campaigns ) ) : ?>no-sidebar<?php endif ?>">      
-        <?php
+	<div class="layout-wrapper">    
+		<div id="primary" class="content-area <?php if ( empty( $campaigns ) ) : ?>no-sidebar<?php endif ?>">      
+		<?php
 
-        if ( have_posts() ) :
-            while ( have_posts() ) :
-                the_post();
-                
-                get_template_part( 'partials/content', 'page' );
+		if ( have_posts() ) :
+			while ( have_posts() ) :
+				the_post();
 
-            endwhile;
-        endif;
+				get_template_part( 'partials/content', 'page' );
 
-        ?>
-        </div><!-- #primary -->
-        <?php if ( ! empty( $campaigns ) ) : ?>
-            <aside id="secondary" class="campaign-benefiting" role="complementary">
+			endwhile;
+		endif;
 
-                <p class="header"><?php echo _n( 'Thank you for supporting this campaign', 'Thank you for supporting these campaigns', count( $campaigns ), 'reach' ) ?></p>
-                
-                <?php foreach ( $campaigns as $campaign_id => $benefits ) :
+		?>
+		</div><!-- #primary -->
+		<?php if ( ! empty( $campaigns ) ) : ?>
+			<aside id="secondary" class="campaign-benefiting" role="complementary">
 
-                    if ( has_post_thumbnail( $campaign_id ) ) : 
+				<p class="header"><?php echo _n( 'Thank you for supporting this campaign', 'Thank you for supporting these campaigns', count( $campaigns ), 'reach' ) ?></p>
+				
+				<?php foreach ( $campaigns as $campaign_id => $benefits ) :
 
-                        echo get_the_post_thumbnail( $campaign_id, 'post-thumbnail-medium' );
+					if ( has_post_thumbnail( $campaign_id ) ) :
 
-                    endif ?>
+						echo get_the_post_thumbnail( $campaign_id, 'post-thumbnail-medium' );
 
-                    <div class="campaign-title"><a href="<?php echo get_permalink( $campaign_id ) ?>" title="<?php the_title_attribute() ?>"><?php echo get_the_title( $campaign_id ) ?></a></div>
+					endif ?>
 
-                <?php endforeach ?>
+					<div class="campaign-title"><a href="<?php echo get_permalink( $campaign_id ) ?>" title="<?php the_title_attribute() ?>"><?php echo get_the_title( $campaign_id ) ?></a></div>
 
-            </aside>
-        <?php endif ?>
-    </div><!-- .layout-wrapper -->
+				<?php endforeach ?>
+
+			</aside>
+		<?php endif ?>
+	</div><!-- .layout-wrapper -->
 </main><!-- #main -->
-<?php 
+<?php
 
 get_footer( 'stripped' );

@@ -3,8 +3,8 @@
  * Display the sticky notice, if the post is sticky.
  */
 
-if ( ! is_sticky() ) : 
-    return;
+if ( ! is_sticky() ) :
+	return;
 endif;
 
 ?> 

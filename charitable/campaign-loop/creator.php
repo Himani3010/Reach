@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * Campaign creator.
  *
@@ -7,16 +7,24 @@
  * @package Reach
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
 
-$campaign = $view_args[ 'campaign' ];
-$campaign_author = new WP_User( $campaign->get_campaign_creator() );
+/**
+ * @var 	Charitable_Campaign
+ */
+$campaign  = $view_args['campaign'];
+
+/**
+ * User ID of the campaign creator.
+ *
+ * @var 	int
+ */
+$author_id = $campaign->get_campaign_creator();
 
 ?>
 <div class="meta meta-below">   
-    <p class="center"><?php printf( '%s <a href="%s">%s</a>', 
-        _x( 'By', 'by author', 'reach' ),
-        get_author_posts_url( get_the_author_meta( 'ID' ) ),
-        $campaign_author->display_name
-    ) ?></p>
+	<p class="center"><?php printf( _x( 'By <a href="%s">%s</a>', 'by author', 'reach' ),
+		get_author_posts_url( $author_id ),
+		get_the_author_meta( 'display_name', $author_id )
+	) ?></p>
 </div>

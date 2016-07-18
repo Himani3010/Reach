@@ -19,17 +19,17 @@
 
 		?>
 		<div class="entry cf">				
-			<?php 
+			<?php
 
-			the_content(); 			
+			the_content();
 
-			wp_link_pages( array( 
-				'before' => '<p class="entry_pages">' . __( 'Pages: ', 'reach' ) 
+			wp_link_pages( array(
+				'before' => '<p class="entry_pages">' . __( 'Pages: ', 'reach' ),
 			) );
 
 			?>
 		</div><!-- .entry -->
-		<?php 
+		<?php
 
 		get_template_part( 'partials/meta', 'byline' );
 

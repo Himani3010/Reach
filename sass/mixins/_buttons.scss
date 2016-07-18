@@ -34,6 +34,7 @@
 		border-radius: 0.4rem;
 		display: block;
 	}
+	&:focus,
 	&:hover {
 		@include border-color( $color__background-button );
 		background-color: transparent;
@@ -50,6 +51,8 @@
 	background-color: transparent;
 	@include color( $color__background-button );
 	@include property-transition(background-color);
+
+	&:focus,
 	&:hover {
 		@include background-color( $color__background-button );
 		@include color( $color__text-overlay );

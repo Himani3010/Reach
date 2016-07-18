@@ -33,7 +33,7 @@
 
     .site-navigation {        
         .menu-button {
-            @include right( $size__margin-double );
+            // @include right( $size__margin-double );
         }
 
         @include bp( 800 ) {
@@ -50,38 +50,49 @@
         &::after {
             @include border-left-color( $color__background-button );
         }
+    }
 
-        @include bp( 800 ) {        
-            &::before,
-            &::after {
-                content: "";
-                position: absolute;
-                bottom: -0.9rem;
-                width: 0;
-                height: 0;
-                border-style: solid;            
-                border-width: 0 0.9rem 0.9rem 0.9rem;
+    .content-area {
+        @include bp( 1190 ) {
+            .shadow-wrapper {
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    bottom: -0.9rem;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;            
+                    border-width: 0 0.9rem 0.9rem 0.9rem;
+                }
+
+                &::before {
+                    left: -0.9rem;
+                    border-bottom-color: transparent;
+                    border-left-color: transparent;
+                }
+
+                &::after {
+                    right: -0.9rem;
+                    border-right-color: transparent;
+                    border-bottom-color: transparent;           
+                }
             }
 
-            &::before {
-                left: -0.9rem;
-                border-bottom-color: transparent;
-                border-left-color: transparent;
+            .banner {
+                position: relative;
+                width: -webkit-calc((100% + #{$size__margin-triple}px)/ 0.68 + #{($size__margin-triple + 9) * 2}px);
+                width: -moz-calc((100% + #{$size__margin-triple}px)/ 0.68 + #{($size__margin-triple + 9) * 2}px);
+                width: calc((100% + #{$size__margin-triple}px)/ 0.68 + #{($size__margin-triple + 9) * 2}px);
+                margin-left: -0.9rem;
             }
 
-            &::after {
-                right: -0.9rem;
-                border-right-color: transparent;
-                border-bottom-color: transparent;           
+            &.no-sidebar .banner {
+                width: -webkit-calc(100% + #{($size__margin-triple + 9) * 2}px);
+                width: -moz-calc(100% + #{($size__margin-triple + 9) * 2}px);
+                width: calc(100% + #{($size__margin-triple + 9) * 2}px);
             }
         }
     }
-
-    @include bp( 800 ) {
-        .content-area .banner {
-            position: static;
-            max-width: 119rem;
-            margin-left: -5.1rem;
-        }
-    }    
 }

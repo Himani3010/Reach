@@ -1,20 +1,25 @@
-<?php 
+<?php
 /**
  * Campaign stats.
+ *
+ * This template will not be used if Charitable is not active.
  *
  * @package Reach
  */
 
-$campaign 			= charitable_get_current_campaign();
-$currency_helper 	= charitable()->get_currency_helper();
+if ( ! reach_has_charitable() ) :
+	return;
+endif;
+
+$campaign = charitable_get_current_campaign();
 ?>
 <ul class="campaign-stats">
 	<li class="campaign-raised">
-		<span><?php echo $currency_helper->get_monetary_amount( $campaign->get_donated_amount() ) ?></span>
+		<span><?php echo charitable_format_money( $campaign->get_donated_amount() ) ?></span>
 		<?php _e( 'Pledged', 'reach' ) ?>		
 	</li>
 	<li class="campaign-goal">
-		<span><?php echo $currency_helper->get_monetary_amount( $campaign->get_goal() ) ?></span>
+		<span><?php echo charitable_format_money( $campaign->get_goal() ) ?></span>
 		<?php _e( 'Goal', 'reach' ) ?>				
 	</li>
 	<li class="campaign-backers">

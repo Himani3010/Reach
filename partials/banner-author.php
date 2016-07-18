@@ -12,7 +12,7 @@ if ( ! empty( $banner_title ) ) : ?>
 	<header class="banner">
 		<div class="shadow-wrapper">
 			<h1 class="banner-title"><?php echo $banner_title ?></h1>
-            <?php get_template_part( 'partials/author', 'activity-summary' ) ?>
+			<?php get_template_part( 'partials/author', 'activity-summary' ) ?>
 		</div>
 	</header><!-- .banner -->
 

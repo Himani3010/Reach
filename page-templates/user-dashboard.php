@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * Template name: User Dashboard
  *
@@ -9,23 +9,23 @@ get_header();
 
 ?>
 <main id="main" class="site-main site-content cf">  
-    <div class="layout-wrapper">
-        <div id="primary" class="content-area">     
-        <?php 
+	<div class="layout-wrapper">
+		<div id="primary" class="content-area">     
+		<?php
 
-        if ( have_posts() ) :
-            while ( have_posts() ) :
-                the_post();
-            
-                get_template_part( 'partials/content', 'user-dashboard' );
+		if ( have_posts() ) :
+			while ( have_posts() ) :
+				the_post();
 
-            endwhile;
-        endif;
-                
-        ?>
-        </div><!-- #primary -->
-    </div><!-- .layout-wrapper -->
+				get_template_part( 'partials/content', 'user-dashboard' );
+
+			endwhile;
+		endif;
+
+		?>
+		</div><!-- #primary -->
+	</div><!-- .layout-wrapper -->
 </main><!-- #main -->
-<?php 
+<?php
 
 get_footer();

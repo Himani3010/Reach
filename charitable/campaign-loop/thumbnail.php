@@ -10,17 +10,25 @@
  * @version 1.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
 
 /**
- * @var Charitable_Campaign
+ * @var     Charitable_Campaign
  */
-$campaign = $view_args[ 'campaign' ];
+$campaign = $view_args['campaign'];
 
 ?>
 <div class="campaign-image">    
-    <?php echo charitable_template_campaign_status_tag( $campaign ); ?>
-    <a href="<?php the_permalink() ?>" title="<?php printf( __( 'Go to %s', 'reach' ), get_the_title() ) ?>" target="_parent">
-        <?php echo get_the_post_thumbnail( get_the_ID(), 'post-thumbnail-medium' ) ?>
-    </a>
+	<?php
+	/**
+	 * Displays the status tag for the campaign.
+	 *
+	 * This renders the Charitable template at charitable/campaign/status-tag.php
+	 */
+	echo charitable_template_campaign_status_tag( $campaign );
+
+	?>
+	<a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>" target="_parent">
+		<?php echo get_the_post_thumbnail( $campaign->ID, 'post-thumbnail-medium' ) ?>
+	</a>
 </div>

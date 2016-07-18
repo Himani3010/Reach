@@ -4,6 +4,7 @@
  *
  * @package Reach
  */
+
 if ( ! is_active_sidebar( 'default' ) ) {
 	return;
 }

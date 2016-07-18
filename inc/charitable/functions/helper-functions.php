@@ -6,69 +6,25 @@
  * @category 	Functions
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
 
 /**
- * Returns the text used for making a pledge / supporting a campaign. 
+ * Gets the timezone offset.
  *
- * @global 	array 		$edd_options
- * @return 	string
- * @since 	1.0.0
- */
-function reach_crowdfunding_get_pledge_text() {
-	global $edd_options;
-	return ! empty( $edd_options['add_to_cart_text'] ) ? $edd_options['add_to_cart_text'] : __( 'Pledge', 'reach' );
-}
-
-/**
- * Returns the text used when displaying a statement like "Pledge $10.00". i.e. Pledge amount
- *
- * @param   amount
  * @return  string
  * @since   1.0.0
  */
-function reach_crowdfunding_get_pledge_amount_text( $amount ) {
-    return sprintf( '%s %s', 
-        reach_crowdfunding_get_pledge_text(),
-        '<strong>'.edd_currency_filter( edd_format_amount( $amount ) ).'</strong>' 
-    );
-} 
+function reach_get_timezone_offset() {
+	$timezone  = new DateTimeZone( charitable_get_timezone_id() );
+	$date_time = new DateTime( 'now', $timezone );
+	$offset    = str_replace( ':', '.', $date_time->format( 'P' ) );
 
-/**
- * Gets the timezone offset. 
- * 
- * @return  string
- * @since   1.0.0
- */
-function reach_get_timezone_offset() {        
-    $timezone = charitable_get_timezone_id();
-    $date_timezone = new DateTimeZone($timezone);
-    $date_time = new DateTime('now', $date_timezone);
-    $offset_secs = $date_time->format('Z');
-    $offset = $date_time->format('P');
-    $offset = str_replace( ':', '.', $offset );
+	/* Offset is equal to or greater than 0 seconds */
+	if ( $date_time->format( 'Z' ) >= 0 ) {
+		return $offset;
+	}
 
-    if ( $offset_secs >= 0 ) {
-        return $offset;
-    }
-    return str_replace( '+', '-', $offset );
-} 
-
-/**
- * Return the image size to use for campaign featured images.
- * 
- * @return  string
- * @since   1.0.0
- */
-function reach_get_campaign_featured_image_size() {
-    if ( 'video_in_summary' == reach_get_theme()->get_theme_setting( 'campaign_media_placement', 'featured_image_in_summary' ) ) {
-        $size = 'post-thumbnail';
-    }
-    else {
-        $size = 'post-thumbnail-large';        
-    }
-
-    return apply_filters( 'reach_campaign_featured_image_size', $size );
+	return str_replace( '+', '-', $offset );
 }
 
 /**
@@ -79,15 +35,12 @@ function reach_get_campaign_featured_image_size() {
  * @since   1.0.0
  */
 function reach_campaign_has_media( $campaign_id ) {
-    if ( 'video_in_summary' == reach_get_theme()->get_theme_setting( 'campaign_media_placement', 'featured_image_in_summary' ) ) {
+	if ( 'video_in_summary' == reach_get_theme()->get_theme_setting( 'campaign_media_placement', 'featured_image_in_summary' ) ) {
 
-        $video = trim( get_post_meta( $campaign_id, '_campaign_video', true ) );
+		$video = trim( get_post_meta( $campaign_id, '_campaign_video', true ) );
 
-        return strlen( $video ) > 0;        
-    }
+		return strlen( $video ) > 0;
+	}
 
-    return has_post_thumbnail( $campaign_id );
+	return has_post_thumbnail( $campaign_id );
 }
-
-
-

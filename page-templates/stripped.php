@@ -1,8 +1,8 @@
 <?php
 /**
  * Template name: Stripped
- * 
- * A custom template for pages where you do want to minimise any 
+ *
+ * A custom template for pages where you do want to minimise any
  * distractions. Great for use with action-oriented pages, like
  * the checkout, login, campaign-creation, etc.
  *
@@ -13,27 +13,27 @@ get_header( 'stripped' );
 
 ?>
 <main id="main" class="site-main site-content cf">  
-    <div class="layout-wrapper">    
-        <div id="primary" class="content-area">
-        <?php
+	<div class="layout-wrapper">    
+		<div id="primary" class="content-area">
+		<?php
 
-        if ( have_posts() ) :
-            while ( have_posts() ) :
-                the_post();
-                            
-                get_template_part( 'partials/content', 'page' );
+		if ( have_posts() ) :
+			while ( have_posts() ) :
+				the_post();
 
-                /* If comments are open or we have at least one comment, load up the comment template */
-                if ( comments_open() || get_comments_number() ) :
-                    comments_template();
-                endif;   
-            endwhile;
-        endif;
+				get_template_part( 'partials/content', 'page' );
 
-        ?>
-        </div><!-- #primary -->
-    </div><!-- .layout-wrapper -->
+				/* If comments are open or we have at least one comment, load up the comment template */
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
+			endwhile;
+		endif;
+
+		?>
+		</div><!-- #primary -->
+	</div><!-- .layout-wrapper -->
 </main><!-- #main -->
-<?php 
+<?php
 
 get_footer( 'stripped' );

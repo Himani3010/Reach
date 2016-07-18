@@ -6,8 +6,8 @@
  *
  * @package Reach
  */
-?>
 
+?>
 <section class="no-results not-found">
 	<header class="page-header">
 		<h1 class="page-title"><?php _e( 'Nothing Found', 'reach' ); ?></h1>
@@ -31,3 +31,4 @@
 		<?php endif; ?>
 	</div><!-- .page-content -->
 </section><!-- .no-results -->
+

@@ -8,7 +8,7 @@
 require_once( 'inc/class-reach-theme.php' );
 
 /**
- * Start the theme. 
+ * Start the theme.
  */
 reach_get_theme();
 
@@ -20,11 +20,11 @@ if ( ! isset( $content_width ) ) {
 }
 
 /**
- * Define whether we're in debug mode. 
+ * Define whether we're in debug mode.
  *
- * This is set to false by default. If set to true, 
- * scripts and stylesheets are NOT cached or minified 
- * to make debugging easier. 
+ * This is set to false by default. If set to true,
+ * scripts and stylesheets are NOT cached or minified
+ * to make debugging easier.
  */
 if ( ! defined( 'REACH_DEBUG' ) ) {
 	define( 'REACH_DEBUG', false );
@@ -32,7 +32,7 @@ if ( ! defined( 'REACH_DEBUG' ) ) {
 
 /**
  * Return the one true instance of the Reach_Theme.
- * 
+ *
  * @return 	Reach_Theme
  * @since 	1.0.0
  */

@@ -10,20 +10,37 @@
  * @version 1.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
 
-$campaign = $view_args[ 'campaign' ];
+/**
+ * @var 	Charitable_Campaign
+ */
+$campaign = $view_args['campaign'];
+
+/**
+ * Get the progress as a number. i.e. 66 = 66%.
+ *
+ * If the campaign does not have a goal, this will equal false.
+ *
+ * @see 	Charitable_Campaign::get_percent_donated_raw()
+ */
+$progress = $campaign->get_percent_donated_raw();
+
+if ( false === $progress ) {
+	return;
+}
 
 ?>
 <div class="barometer" 
-    data-progress="<?php echo $campaign->get_percent_donated_raw() ?>" 
-    data-width="148" 
-    data-height="148" 
-    data-strokewidth="11" 
-    data-stroke="#fff" 
-    data-progress-stroke="<?php echo get_theme_mod( 'text_colour', '#7D6E63' ) ?>"
-    >
-    <span>
-        <?php printf( _x( '%s Funded', 'x percent funded', 'reach' ), '<span>' . number_format( $campaign->get_percent_donated_raw(), 0 ) . '<sup>%</sup></span>' ) ?>
-    </span>
+	data-progress="<?php echo $progress ?>" 
+	data-width="148" 
+	data-height="148" 
+	data-strokewidth="11" 
+	data-stroke="#fff" 
+	data-progress-stroke="<?php echo esc_attr( get_theme_mod( 'text_colour', '#7D6E63' ) ) ?>"
+	>
+	<span><?php printf(
+		_x( '<span>%s<sup>%</sup></span> Funded', 'x percent funded', 'reach' ),
+		number_format( $progress, 0 )
+	) ?></span>
 </div>

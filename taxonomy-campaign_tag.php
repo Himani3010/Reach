@@ -1,6 +1,8 @@
-<?php 
+<?php
 /**
  * Campaign tag archive.
+ *
+ * This template is only used if Charitable is active.
  *
  * @package     Reach
  */

@@ -10,7 +10,7 @@
 }
 
 #main {	
-	overflow-x: hidden;
+	// overflow-x: hidden;
 	@include padding( 0, 0, $size__margin-triple );	
 	@include background-color( $color__background-wrapper );
 
@@ -30,7 +30,7 @@
 	@include padding( $size__margin-triple, $size__margin-double, 0 );
 }
 
-@include bp( 800 ) {	
+@include bp( 800 ) {	    
 	.content-area {
 		width: 68%;
 		@include padding-right( $size__margin-triple );
@@ -43,10 +43,23 @@
 		padding-left: 0;
 	}	
 
+	.banner {
+        position: relative;
+        width: -webkit-calc((100% + #{$size__margin-triple}px)/ 0.68 + #{$size__margin-triple * 2}px);
+        width: -moz-calc((100% + #{$size__margin-triple}px)/ 0.68 + #{$size__margin-triple * 2}px);
+        width: calc((100% + #{$size__margin-triple}px)/ 0.68 + #{$size__margin-triple * 2}px);                
+    }
+
 	.content-area.no-sidebar {
 		width: 100%;
 		float: none;		
 		padding-right: 0;
+
+		.banner {
+	        width: -webkit-calc(100% + #{$size__margin-triple * 2}px);
+	        width: -moz-calc(100% + #{$size__margin-triple * 2}px);
+	        width: calc(100% + #{$size__margin-triple * 2}px);
+	    }
 
 		.entry-block, 
 		.comments-section {

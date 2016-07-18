@@ -4,12 +4,12 @@
  */
 ?>
 <article id="post-<?php the_ID() ?>" <?php post_class() ?>>
-	<?php 
+	<?php
 
 	/* Add the header banner if this is a single post. */
-	if ( is_single() ) : 
+	if ( is_single() ) :
 		get_template_part( 'partials/banner' );
-	endif; 
+	endif;
 
 	?>
 	<div class="block entry-block">
@@ -20,23 +20,23 @@
 		get_template_part( 'partials/featured-image' );
 
 		/* If this is an archive, display the post title. */
-		if ( ! is_single() ) : 
+		if ( ! is_single() ) :
 			reach_post_header();
 		endif;
 
 		?>
 		<div class="entry cf">				
-			<?php 
+			<?php
 
-			the_content(); 			
+			the_content();
 
-			wp_link_pages( array( 
-				'before' => '<p class="entry_pages">' . __( 'Pages: ', 'reach' ) 
+			wp_link_pages( array(
+				'before' => '<p class="entry_pages">' . __( 'Pages: ', 'reach' ),
 			) );
 
 			?>
 		</div><!-- .entry -->
-		<?php 
+		<?php
 
 		get_template_part( 'partials/meta', 'byline' );
 
