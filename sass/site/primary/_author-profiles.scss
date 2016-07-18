@@ -1,7 +1,15 @@
 body.author {
 
-    .banner {
-        margin-bottom: 0;
+    .content-area {
+        .banner {
+            margin-bottom: 0;
+            @include bp( 800 ) { 
+                @include left( -$size__margin-triple );
+                width: -webkit-calc( 100% + #{($size__margin-triple + 9) * 2}px );
+                width: -moz-calc( 100% + #{($size__margin-triple + 9) * 2}px );
+                width: calc( 100% + #{($size__margin-triple + 9) * 2}px );
+            }
+        }
     }
 
     .entry {
