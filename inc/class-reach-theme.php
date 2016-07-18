@@ -495,12 +495,70 @@ if ( ! class_exists( 'Reach_Theme' ) ) :
 			add_theme_support( 'customize-selective-refresh-widgets' );
 
 			/**
+			 * Add Custom Logo support.
+			 */
+			add_theme_support( 'custom-logo' );
+
+			/**
 			 * Add editor styles.
 			 */
 			$editor_fonts = apply_filters( 'reach_font_path', '//fonts.googleapis.com/css?family=Merriweather:400,400italic,700italic,700,300italic,300|Oswald:400,300' );
 			$editor_fonts = str_replace( ',', '%2C', $editor_fonts );
 			add_editor_style( $editor_fonts );
 			add_editor_style( 'css/editor-style.css' );
+
+			/**
+			 * Convert to Custom Logo.
+			 */
+			$this->maybe_convert_to_custom_logo();
+		}
+
+		/**
+		 * For users upgrading Reach who are on WordPress 4.5, migrate core's Custom Logo.
+		 *
+		 * @return  void
+		 * @access  public
+		 * @since   1.0.3
+		 */
+		public function maybe_convert_to_custom_logo() {
+
+			/* Return if update has already been run */
+			if ( -1 != get_theme_mod( 'custom_logo', -1 ) ) {
+				return;
+			}
+
+			/* Make sure we're on WP 4.5 */
+			if ( ! function_exists( 'the_custom_logo' ) ) {
+				return;
+			}
+
+			$custom_logo  = false;
+			$current_logo = reach_get_customizer_image_data( 'logo' );
+
+			if ( $current_logo ) {
+
+				/* Bail early if we don't have a valid logo anyway. */
+				if ( ! isset( $current_logo['image'] ) ) {
+					set_theme_mod( 'custom_logo', $custom_logo );
+					return;
+				}
+
+				/* Swap the retina image for the standard. */
+				if ( isset( $current_logo['id'] ) ) {
+					$logo = intval( $current_logo['id'] );
+				} else {
+					$logo = attachment_url_to_postid( $current_logo['image'] );
+				}
+
+				if ( is_int( $logo ) ) {
+					$custom_logo = $logo;
+				}				
+
+				remove_theme_mod( 'logo' );				
+			}
+
+			set_theme_mod( 'custom_logo', $custom_logo );
+
 		}
 
 		/**

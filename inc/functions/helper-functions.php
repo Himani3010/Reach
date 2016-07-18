@@ -7,242 +7,204 @@
  */
 
 /**
- * Returns whether a given is enabled.  
+ * Returns whether a given is enabled.
  *
  * @return  boolean
  * @since   1.0.0
  */
 function reach_has_module( $module ) {
-    return in_array( $module, reach_get_theme()->active_modules );
+	return in_array( $module, reach_get_theme()->active_modules );
 }
 
 /**
- * Returns whether Charitable is enabled.  
+ * Returns whether Charitable is enabled.
  *
  * @return  boolean
  * @since   1.0.0
  */
 function reach_has_charitable() {
-    return reach_has_module( 'charitable' );
+	return reach_has_module( 'charitable' );
 }
 
 /**
- * Returns whether EDD is enabled.  
+ * Returns whether EDD is enabled.
  *
  * @return  boolean
  * @since   1.0.0
  */
 function reach_has_edd() {
-    return reach_has_module( 'edd' );
+	return reach_has_module( 'edd' );
 }
 
 /**
- * Return the home URL. Checks if WPML is installed and defers to the WPML function if it is. 
- * 
- * @return  string
- * @since   1.0.0
- */
-function reach_site_url() {
-    return function_exists('wpml_get_home_url') ? wpml_get_home_url() : site_url();
-}
-
-/**
- * Returns the given URL minus the 
+ * Returns the given URL minus the
  *
- * @param   string      $url
+ * @param   string $url
  * @return  string
  * @since   1.0.0
  */
 function reach_condensed_url( $url ) {
-    $parts = parse_url($url);
+	$parts = parse_url( $url );
 
-    if ( isset( $parts[ 'host' ] ) ) {
+	if ( isset( $parts['host'] ) ) {
 
-        $output = $parts[ 'host' ];
+		$output = $parts['host'];
 
-        if ( isset( $parts[ 'path' ] ) ) {
-            $output .= $parts[ 'path' ];
-        }
+		if ( isset( $parts['path'] ) ) {
+			$output .= $parts['path'];
+		}
+	} else {
+		$output = $url;
+	}
 
-    }
-    else {
-        $output = $url;
-    }
-    
-    return $output;
+	return $output;
 }
 
 /**
  * A helper function to determine whether the current post should have the meta displayed.
  *
- * @param   WP_Post     $post       Optional. If a post is not passed, the current $post object will be used.
+ * @param   WP_Post $post Optional. If a post is not passed, the current $post object will be used.
  * @return  boolean
  * @since   1.0.0
  */
 function reach_hide_post_meta( $post = '' ) {
-    if ( ! strlen( $post ) ) {
-        global $post;
-    }
+	if ( ! strlen( $post ) ) {
+		global $post;
+	}
 
-    if ( function_exists( 'hide_meta_start' ) ) {
-        return get_post_meta( $post->ID, '_hide_meta', true );
-    }
-    else {
-        return get_post_meta( $post->ID, '_reach_hide_post_meta', true );
-    } 
+	if ( function_exists( 'hide_meta_start' ) ) {
+		return get_post_meta( $post->ID, '_hide_meta', true );
+	} else {
+		return get_post_meta( $post->ID, '_reach_hide_post_meta', true );
+	}
 }
 
 /**
- * Returns the array of supported social media sites for profiles. 
+ * Returns the array of supported social media sites for profiles.
  *
  * @return  array
  * @since   1.0.0
  */
 function reach_get_social_sites() {
-    /* This is used for backwards compatibility. */
-    $sites = apply_filters( 'sofa_social_sites', array() );
 
-    $sites = array_merge( $sites, array(              
-        'facebook'      => __( 'Facebook', 'reach' ),                
-        'flickr'        => __( 'Flickr', 'reach' ), 
-        'foursquare'    => __( 'Foursquare', 'reach' ), 
-        'google-plus'   => __( 'Google+', 'reach' ),                                     
-        'instagram'     => __( 'Instagram', 'reach' ),
-        'linkedin'      => __( 'Linkedin', 'reach'),
-        'pinterest'     => __( 'Pinterest', 'reach' ), 
-        'renren'        => __( 'Renren', 'reach' ), 
-        'skype'         => __( 'Skype', 'reach' ), 
-        'tumblr'        => __( 'Tumblr', 'reach' ), 
-        'twitter'       => __( 'Twitter', 'reach' ), 
-        'vk'            => __( 'VK', 'reach' ), 
-        'weibo'         => __( 'Weibo', 'reach' ), 
-        'windows'       => __( 'Windows', 'reach' ), 
-        'xing'          => __( 'Xing', 'reach' ), 
-        'youtube'       => __( 'YouTube', 'reach' )
-    ) );
+	/* This is used for backwards compatibility. */
+	$sites = apply_filters( 'sofa_social_sites', array() );
 
-    return apply_filters( 'reach_social_sites', $sites );
+	$sites = array_merge( $sites, array(
+		'facebook'      => __( 'Facebook', 'reach' ),
+		'flickr'        => __( 'Flickr', 'reach' ),
+		'foursquare'    => __( 'Foursquare', 'reach' ),
+		'google-plus'   => __( 'Google+', 'reach' ),
+		'instagram'     => __( 'Instagram', 'reach' ),
+		'linkedin'      => __( 'Linkedin', 'reach' ),
+		'pinterest'     => __( 'Pinterest', 'reach' ),
+		'renren'        => __( 'Renren', 'reach' ),
+		'skype'         => __( 'Skype', 'reach' ),
+		'tumblr'        => __( 'Tumblr', 'reach' ),
+		'twitter'       => __( 'Twitter', 'reach' ),
+		'vk'            => __( 'VK', 'reach' ),
+		'weibo'         => __( 'Weibo', 'reach' ),
+		'windows'       => __( 'Windows', 'reach' ),
+		'xing'          => __( 'Xing', 'reach' ),
+		'youtube'       => __( 'YouTube', 'reach' ),
+	) );
+
+	return apply_filters( 'reach_social_sites', $sites );
 }
 
 /**
- * The currently viewed author on an author archive. 
- * 
+ * The currently viewed author on an author archive.
+ *
  * @return  WP_User
  * @since   1.0.0
  */
 function reach_get_current_author() {
-    $author = wp_cache_get( 'current_author', 'reach' );
+	$author = wp_cache_get( 'current_author', 'reach' );
 
-    if ( false === $author ) {
-        $author = get_query_var('author_name')
-            ? get_user_by( 'slug', get_query_var( 'author_name' ) ) 
-            : get_userdata( get_query_var( 'author' ) );
+	if ( false === $author ) {
 
-        wp_cache_set( 'current_author', $author, 'reach' );
-    }
+		if ( get_query_var( 'author_name' ) ) {
+			$author = get_user_by( 'slug', get_query_var( 'author_name' ) );
+		} else {
+			$author = get_userdata( get_query_var( 'author' ) );
+		}
 
-    return $author;
+		wp_cache_set( 'current_author', $author, 'reach' );
+
+	}
+
+	return $author;
 }
 
 /**
- * Get the Charitable_User object of the currently viewed author on an author archive. 
- * 
+ * Get the Charitable_User object of the currently viewed author on an author archive.
+ *
  * @return  Charitable_User
  * @since   1.0.0
  */
 function reach_get_current_charitable_user() {
-    $charitable_user = wp_cache_get( 'current_charitable_user', 'reach' );
-
-    if ( false === $charitable_user ) {
-        $charitable_user = new Charitable_User( reach_get_current_author()->ID );
-
-        wp_cache_set( 'current_charitable_user', $charitable_user, 'reach' );
-    }
-
-    return $charitable_user;
+	return charitable_get_user( reach_get_current_author()->ID );
 }
 
-// /**
-//  * The WP_User object of the current user on an author archive.
-//  * 
-//  * @return  string
-//  * @since   1.0.0
-//  */
-// function reach_get_current_author() {
-//     return get_query_var('author_name')
-//         ? get_user_by( 'slug', get_query_var( 'author_name' ) ) 
-//         : get_userdata( get_query_var( 'author' ) );
-// }
-
 /**
- * Return the banner title for the current page. 
+ * Return the banner title for the current page.
  *
  * @return  string
  * @since   1.0.0
  */
 function reach_get_banner_title() {
-    $title = "";
+	$title = '';
 
-    /* Homepage */
-    if ( is_home() ) {
-        if ( 'page' == get_option('show_on_front') ) {
-            $title = get_the_title( get_option( 'page_for_posts' ) );
-        }
-        else {
-            $title = apply_filters( 'reach_banner_title_posts', '' );
-        }            
-    }
-    /* 404 Page */
-    elseif ( is_404() ) {
-        $title = apply_filters( 'reach_banner_title_404', '404' );
-    }
-    /* Author */
-    elseif ( is_author() ) {
-        $author = reach_get_current_author();
-        $title = apply_filters( 'reach_banner_title_author', $author->display_name, $author );
-    }
-    /* Search Results */
-    elseif ( is_search() ) {
-        $title = apply_filters( 'reach_banner_title_search', sprintf( __( 'Search Results for: %s', 'reach' ), get_search_query() ) );
-    }   
-    /* Post Type Archive */
-    elseif ( is_post_type_archive() ) {
-        $title = apply_filters( 'reach_banner_title_post_type_archive', post_type_archive_title( '', false ) );
-    }
-    /* Year Archive */
-    elseif ( is_year() ) {
-        $title = apply_filters( 'reach_banner_title_year_archive', sprintf( __( 'Year: %s', 'reach' ), get_the_date( _x( 'Y', 'yearly archives date format', 'reach' ) ) ) );
-    }
-    /* Month Archive */    
-    elseif ( is_month() ) {
-        $title = apply_filters( 'reach_banner_title_month_archive', sprintf( __( 'Month: %s', 'reach' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'reach' ) ) ) );
-    } 
-    /* Day Archive */
-    elseif ( is_day() ) {
-        $title = apply_filters( 'reach_banner_title_day_archive', sprintf( __( 'Day: %s', 'reach' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'reach' ) ) ) );
-    }
-    /* General Archive */
-    elseif ( is_archive() ) {
-        $title = apply_filters( 'reach_banner_title_archive', single_term_title( '', false ) );
-    }    
-    /* Fallback */
-    else {
-        $title = apply_filters( 'reach_banner_title_page', get_the_title() );
-    } 
-    
-    return apply_filters( 'reach_banner_title', $title );
+	/* Homepage */
+	if ( is_home() ) {
+		if ( 'page' == get_option( 'show_on_front' ) ) {
+			$title = get_the_title( get_option( 'page_for_posts' ) );
+		} else {
+			$title = apply_filters( 'reach_banner_title_posts', '' );
+		}
+	} /* 404 Page */
+	elseif ( is_404() ) {
+		$title = apply_filters( 'reach_banner_title_404', '404' );
+	} /* Author */
+	elseif ( is_author() ) {
+		$author = reach_get_current_author();
+		$title = apply_filters( 'reach_banner_title_author', $author->display_name, $author );
+	} /* Search Results */
+	elseif ( is_search() ) {
+		$title = apply_filters( 'reach_banner_title_search', sprintf( __( 'Search Results for: %s', 'reach' ), get_search_query() ) );
+	} /* Post Type Archive */
+	elseif ( is_post_type_archive() ) {
+		$title = apply_filters( 'reach_banner_title_post_type_archive', post_type_archive_title( '', false ) );
+	} /* Year Archive */
+	elseif ( is_year() ) {
+		$title = apply_filters( 'reach_banner_title_year_archive', sprintf( __( 'Year: %s', 'reach' ), get_the_date( _x( 'Y', 'yearly archives date format', 'reach' ) ) ) );
+	} /* Month Archive */
+	elseif ( is_month() ) {
+		$title = apply_filters( 'reach_banner_title_month_archive', sprintf( __( 'Month: %s', 'reach' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'reach' ) ) ) );
+	} /* Day Archive */
+	elseif ( is_day() ) {
+		$title = apply_filters( 'reach_banner_title_day_archive', sprintf( __( 'Day: %s', 'reach' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'reach' ) ) ) );
+	} /* General Archive */
+	elseif ( is_archive() ) {
+		$title = apply_filters( 'reach_banner_title_archive', single_term_title( '', false ) );
+	} /* Fallback */
+	else {
+		$title = apply_filters( 'reach_banner_title_page', get_the_title() );
+	}
+
+	return apply_filters( 'reach_banner_title', $title );
 }
 
 /**
- * Return the banner sub title for the current page. 
+ * Return the banner sub title for the current page.
  *
  * @return  string
  * @since   1.0.0
  */
 function reach_get_banner_subtitle() {
-    $title = "";
-    
-    return apply_filters( 'reach_banner_subtitle', $title );   
+	$title = '';
+
+	return apply_filters( 'reach_banner_subtitle', $title );
 }
 
 /**
@@ -253,9 +215,9 @@ function reach_get_banner_subtitle() {
  * @since   1.0.0
  */
 function reach_get_media( $args = array() ) {
-    $media = new Reach_Media_Grabber( $args );
+	$media = new Reach_Media_Grabber( $args );
 
-    return $media->get_media();    
+	return $media->get_media();
 }
 
 /**
@@ -265,48 +227,48 @@ function reach_get_media( $args = array() ) {
  * @return  array
  * @since   1.0.0
  */
-function reach_get_first_anchor ($content ) {
-    preg_match( '/<a(.*)>(.*)<\/a>/', $content, $matches );
-    return $matches;
+function reach_get_first_anchor( $content ) {
+	preg_match( '/<a(.*)>(.*)<\/a>/', $content, $matches );
+	return $matches;
 }
 
 /**
  * Strips anchors from the content, up to the set limit (defaults to 1).
- * 
+ *
  * @param   string  $content
  * @param   int     $limit
- * @return  string     
+ * @return  string
  * @since   1.0.0
  */
 function reach_strip_anchors( $content, $limit = 1 ) {
-    return preg_replace( '/<a(.*)>(.*)<\/a>/', '', $content, $limit );
+	return preg_replace( '/<a(.*)>(.*)<\/a>/', '', $content, $limit );
 }
 
 /**
- * Simple CSS compression. 
+ * Simple CSS compression.
  *
- * Removes all comments, removes spaces after colons and strips out all the whitespace. 
+ * Removes all comments, removes spaces after colons and strips out all the whitespace.
  *
  * Based on http://manas.tungare.name/software/css-compression-in-php/
  *
- * @param   string $css The block of CSS to be compressed. 
+ * @param   string $css The block of CSS to be compressed.
  * @return  string The compressed CSS
  * @since   1.0.0
- */ 
-if ( ! function_exists('reach_compress_css') ) : 
+ */
+if ( ! function_exists( 'reach_compress_css' ) ) :
 
-function reach_compress_css( $css ) {
-    // Remove comments
-    $css = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $css);
+	function reach_compress_css( $css ) {
+		// Remove comments
+		$css = preg_replace( '!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $css );
 
-    // Remove space after colons
-    $css = str_replace(': ', ':', $css);
-     
-    // Remove whitespace
-    $css = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '    '), '', $css);
+		// Remove space after colons
+		$css = str_replace( ': ', ':', $css );
 
-    return $css;
-}
+		// Remove whitespace
+		$css = str_replace( array( "\r\n", "\r", "\n", "\t", '  ', '    ', '    ' ), '', $css );
+
+		return $css;
+	}
 
 endif; // End reach_compress_css
 
@@ -317,42 +279,46 @@ endif; // End reach_compress_css
  * @param string $image_url
  * @since 1.0.0
  */
-function reach_get_image_id_from_url($image_url) {
-    global $wpdb;
-    $attachment = $wpdb->get_col( $wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid = %s;", $image_url ) ); 
-    return $attachment[0]; 
-}    
+function reach_get_image_id_from_url( $image_url ) {
+	global $wpdb;
+
+	$attachment = $wpdb->get_col( $wpdb->prepare( "SELECT ID FROM $wpdb->posts WHERE guid = %s;", $image_url ) );
+
+	return $attachment[0];
+}
 
 
 /**
  * Based on a single key, retrieve the data for a particular image, including whether it is retina and its dimensions.
  *
- * @param   string  $key
+ * @param   string $key
  * @return  false|array     False if not set, or array if set.
  * @since   1.0.0
  */
 function reach_get_customizer_image_data( $key ) {
-        $data = array();
+	$data = array();
 
-        $key_value = reach_get_theme()->get_theme_setting( $key );
+	$key_value = reach_get_theme()->get_theme_setting( $key );
 
-        if ( ! strlen( $key_value ) ) {
-            return false;
-        }
+	if ( ! strlen( $key_value ) ) {
+		return false;
+	}
 
-        $data['width'] = reach_get_theme()->get_theme_setting($key . '_width');
-        $data['height'] = reach_get_theme()->get_theme_setting($key . '_height');
+	$data['width']  = reach_get_theme()->get_theme_setting( $key . '_width' );
+	$data['height'] = reach_get_theme()->get_theme_setting( $key . '_height' );
 
-        if ( reach_get_theme()->get_theme_setting($key . '_is_retina') ) {
+	if ( reach_get_theme()->get_theme_setting( $key . '_is_retina' ) ) {
 
-            /* Retrieve the post ID of the logo, then get the non-retina version */
-            $data['id'] = get_theme_mod( $key . '_id' );
-            $data['image'] = get_post_meta( $data['id'], '_non_retina', true );
-            $data['retina_image'] = $key_value;
-        }
-        else {
-            $data['image'] = $key_value;
-        }
+		/* Retrieve the post ID of the logo, then get the non-retina version */
+		$data['id'] 		  = get_theme_mod( $key . '_id' );
+		$data['image'] 		  = get_post_meta( $data['id'], '_non_retina', true );
+		$data['retina_image'] = $key_value;
 
-        return $data;
-    } 
+	} else {
+
+		$data['image']  	  = $key_value;
+
+	}
+
+	return $data;
+}

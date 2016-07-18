@@ -108,24 +108,9 @@ if ( ! function_exists( 'reach_site_identity' ) ) :
 		$site_title   = get_bloginfo( 'name' );
 		$hide_title   = get_theme_mod( 'hide_site_title' );
 		$hide_tagline = get_theme_mod( 'hide_site_tagline' );
-		$logo 		  = reach_get_customizer_image_data( 'logo' );
 
-		if ( $logo ) {
-			$srcset = "{$logo[ 'image' ]} 1x";
-
-			if ( isset( $logo['retina_image'] ) ) {
-				$srcset .= ", {$logo[ 'retina_image' ]} 2x";
-			}
-
-			$output .= apply_filters( 'reach_site_logo', sprintf( '<a href="%s" title="%s"><img src="%s" alt="%s" width="%s" height="%s" srcset="%s" /></a>',
-				$home_url,
-				__( 'Go to homepage', 'reach' ),
-				$logo['image'],
-				$site_title,
-				$logo['width'],
-				$logo['height'],
-				$srcset
-			) );
+		if ( function_exists( 'has_custom_logo' ) && has_custom_logo() ) {
+			$output .= get_custom_logo();
 		}
 
 		$tag = is_front_page() ? 'h1' : 'div';

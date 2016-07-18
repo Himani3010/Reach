@@ -259,16 +259,16 @@ class Reach_Customizer {
      */
     private function get_site_identity_settings() {
         $site_identity_settings = array(
-            'logo' => array(
-                'setting'   => array(
-                    'transport' => 'postMessage',
-                    'sanitize_callback' => 'esc_url_raw'
-                ), 
-                'control'   => array(
-                    'control_type'  => 'Reach_Customizer_Retina_Image_Control', 
-                    'priority'      => 1
-                )
-            ),
+            // 'logo' => array(
+            //     'setting'   => array(
+            //         'transport' => 'postMessage',
+            //         'sanitize_callback' => 'esc_url_raw'
+            //     ), 
+            //     'control'   => array(
+            //         'control_type'  => 'Reach_Customizer_Retina_Image_Control', 
+            //         'priority'      => 1
+            //     )
+            // ),
             'hide_site_title'   => array(
                 'setting'       => array(
                     'transport' => 'postMessage',
