@@ -72,6 +72,10 @@ function reach_hide_post_meta( $post = '' ) {
 		global $post;
 	}
 
+	if ( reach_has_edd() && edd_is_checkout() ) {
+		return true;
+	}
+
 	if ( function_exists( 'hide_meta_start' ) ) {
 		return get_post_meta( $post->ID, '_hide_meta', true );
 	} else {

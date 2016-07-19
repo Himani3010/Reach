@@ -35,10 +35,8 @@ if ( ! class_exists( 'Reach_Theme' ) ) :
 		 *
 		 * This is different to the theme version since it is used only to
 		 * manage theme updates that require some sort of upgrade process.
-		 *
-		 * It is in the following format: YYYYMMDD
 		 */
-		const DATABASE_VERSION = '0.9.35';
+		const DATABASE_VERSION = '1.0.3';
 
 		/**
 		 * Whether crowdfunding is enabled.
@@ -243,9 +241,9 @@ if ( ! class_exists( 'Reach_Theme' ) ) :
 				return;
 			}
 
-			require_once( get_template_directory() . '/inc/admin/class-reach-admin-page.php' );
+			require_once( get_template_directory() . '/inc/admin/class-reach-admin.php' );
 
-			new Reach_Admin_Page();
+			new Reach_Admin();
 		}
 
 		/**
@@ -328,7 +326,7 @@ if ( ! class_exists( 'Reach_Theme' ) ) :
 		 * @since   1.0.0
 		 */
 		private function maybe_start_edd() {
-			if ( class_exists( 'Easy_Digital_Downloads' )  && class_exists( 'Charitable_EDD' ) ) {
+			if ( class_exists( 'Easy_Digital_Downloads' ) ) {
 
 				require_once( get_template_directory() . '/inc/easy-digital-downloads/class-reach-edd.php' );
 
@@ -391,7 +389,7 @@ if ( ! class_exists( 'Reach_Theme' ) ) :
 		 * @since   1.0.0
 		 */
 		public function add_welcome_message() {
-			add_action( 'admin_notices', array( $this, 'print_welcome_message' ) );
+			add_action( 'admin_notices', array( $this, 'add_welcome_notice' ) );
 		}
 
 		/**
@@ -401,12 +399,12 @@ if ( ! class_exists( 'Reach_Theme' ) ) :
 		 * @access  public
 		 * @since   1.0.0
 		 */
-		public function print_welcome_message() {
-			if ( ! current_user_can( 'switch_themes' ) ) {
-				return;
+		public function add_welcome_notice() {
+			if ( get_transient( 'reach_show_custom_logo_notice' ) ) {
+				$this->logo_upgrade_notice();				
 			}
 
-	?>
+?>
 			<div class="updated notice is-dismissible">
 				<p><?php printf( esc_html__( 'Thanks for choosing Reach! You can read hints and tips on how get the most out of your new theme on the <a href="%s">welcome screen</a>.', 'reach' ),
 					esc_url( admin_url( 'themes.php?page=about-reach' ) )
@@ -414,7 +412,7 @@ if ( ! class_exists( 'Reach_Theme' ) ) :
 				</p>
 				<p><a href="<?php echo esc_url( admin_url( 'themes.php?page=about-reach' ) ) ?>" class="button" style="text-decoration: none;"><?php _e( 'Get started with Reach', 'reach' ) ?></a></p>
 			</div>        
-	<?php
+<?php		
 		}
 
 		/**

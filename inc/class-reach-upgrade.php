@@ -47,6 +47,7 @@ if ( ! class_exists( 'Reach_Upgrade' ) ) :
 		private $upgrade_actions = array(
 			'0.9.34' => 'update_page_templates',
 			'0.9.35' => 'set_thumbnail_size',
+			'1.0.3'  => 'add_admin_notice',
 		);
 
 		/**
@@ -226,6 +227,21 @@ if ( ! class_exists( 'Reach_Upgrade' ) ) :
 
 			update_option( 'thumbnail_size_w', 100 );
 			update_option( 'thumbnail_size_h', 100 );
+		}
+
+		/**
+		 * Add an admin notice for users upgrading to 1.0.3.
+		 *
+		 * @return  void
+		 * @access  public
+		 * @since   1.0.3
+		 */
+		public function add_admin_notice() {
+			if ( false == $this->db_version ) {
+				return;
+			}
+			
+			set_transient( 'reach_show_custom_logo_notice', true );
 		}
 	}
 

@@ -724,6 +724,7 @@ input[type="password"],
 input[type="search"],
 input[type="number"],
 input[type="date"],
+input[type="tel"],
 textarea {
   max-width: 300px;
   max-width: 30rem;
@@ -4947,6 +4948,12 @@ div.printfriendly {
 /*--------------------------------------------------------------
 18.2.2 Checkout
 --------------------------------------------------------------*/
+#edd_checkout_wrap fieldset {
+  margin: 0px 0px 14px;
+  margin: 0rem 0rem 1.4rem;
+  padding: 0px 28px 28px;
+  padding: 0rem 2.8rem 2.8rem;
+  border: none; }
 #edd_checkout_wrap legend,
 #edd_checkout_wrap th {
   font-weight: 400; }
@@ -4987,6 +4994,7 @@ div.printfriendly {
 #edd_checkout_wrap input[type="text"],
 #edd_checkout_wrap input[type="email"],
 #edd_checkout_wrap input[type="password"],
+#edd_checkout_wrap input[type="tel"],
 #edd_checkout_wrap textarea {
   width: 100%;
   max-width: 100%;
@@ -5009,9 +5017,19 @@ div.printfriendly {
   #edd_checkout_wrap #edd_final_total_wrap strong {
     font-weight: 400; }
 #edd_checkout_wrap fieldset#edd_cc_fields {
-  border: none; }
-#edd_checkout_wrap fieldset#edd_cc_address {
-  border-top: 0; }
+  position: relative; }
+  #edd_checkout_wrap fieldset#edd_cc_fields legend {
+    position: relative;
+    z-index: 1; }
+  #edd_checkout_wrap fieldset#edd_cc_fields::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 28px;
+    height: 2.8rem; }
 #edd_checkout_wrap #edd-purchase-button {
   padding: 14px 28px;
   padding: 1.4rem 2.8rem;
@@ -5026,38 +5044,9 @@ div.printfriendly {
 #charitable-anonymous-checkbox-wrap label {
   margin-bottom: 0; }
 
-.stripped #edd_checkout_wrap {
-  position: relative;
-  z-index: 1; }
-  @media (min-width: 50em) {
-    .stripped #edd_checkout_wrap {
-      left: -28px;
-      width: -webkit-calc( 100% + 56px );
-      width: -moz-calc( 100% + 56px );
-      width: calc( 100% + 56px ); } }
-  .stripped #edd_checkout_wrap tr td:first-child,
-  .stripped #edd_checkout_wrap tr th:first-child {
-    border-left: 0; }
-  .stripped #edd_checkout_wrap tr td:last-child,
-  .stripped #edd_checkout_wrap tr th:last-child {
-    border-right: 0; }
-  .stripped #edd_checkout_wrap fieldset,
-  .stripped #edd_checkout_wrap #edd_payment_mode_select {
-    padding: 28px;
-    padding: 2.8rem;
-    margin: 0;
-    border-width: 1px 0px 0px 0px;
-    border-width: 0.1rem 0rem 0rem 0rem; }
-
-.edd-checkout-template.stripped .site-main {
-  padding: 0;
-  border: none;
-  background: transparent; }
-  .edd-checkout-template.stripped .site-main .entry-block {
-    padding: 0; }
+.edd-checkout-template.stripped #main {
+  box-shadow: none; }
 .edd-checkout-template.stripped .entry-block {
-  padding: 42px;
-  padding: 4.2rem;
   border-width: 1px;
   border-width: 0.1rem;
   border-style: solid;
@@ -5065,12 +5054,31 @@ div.printfriendly {
   border-radius: 0 0 0.4rem 0.4rem;
   box-shadow: 0 0 1px #ffffff; }
   .edd-checkout-template.stripped .entry-block .entry {
+    width: 100%;
     padding: 0px 28px;
-    padding: 0rem 2.8rem; }
-.edd-checkout-template.stripped .no-sidebar .entry-block {
-  float: none;
-  margin-left: auto;
-  margin-right: auto; }
+    padding: 0rem 2.8rem;
+    margin: 0; }
+.edd-checkout-template.stripped #edd_checkout_wrap {
+  position: relative;
+  z-index: 1; }
+  @media (min-width: 50em) {
+    .edd-checkout-template.stripped #edd_checkout_wrap {
+      left: -28px;
+      width: -webkit-calc( 100% + 56px );
+      width: -moz-calc( 100% + 56px );
+      width: calc( 100% + 56px ); } }
+  .edd-checkout-template.stripped #edd_checkout_wrap tr td:first-child,
+  .edd-checkout-template.stripped #edd_checkout_wrap tr th:first-child {
+    border-left: 0; }
+  .edd-checkout-template.stripped #edd_checkout_wrap tr td:last-child,
+  .edd-checkout-template.stripped #edd_checkout_wrap tr th:last-child {
+    border-right: 0; }
+  .edd-checkout-template.stripped #edd_checkout_wrap #edd_payment_mode_select {
+    padding: 28px;
+    padding: 2.8rem;
+    margin: 0;
+    border-width: 1px 0px 0px 0px;
+    border-width: 0.1rem 0rem 0rem 0rem; }
 
 /*--------------------------------------------------------------
 18.2.2 Downlaod Page
