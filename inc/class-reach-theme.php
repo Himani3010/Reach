@@ -28,7 +28,7 @@ if ( ! class_exists( 'Reach_Theme' ) ) :
 		/**
 		 * The theme version.
 		 */
-		const VERSION = '1.0.3';
+		const VERSION = '1.0.4';
 
 		/**
 		 * Database version number.
@@ -400,10 +400,6 @@ if ( ! class_exists( 'Reach_Theme' ) ) :
 		 * @since   1.0.0
 		 */
 		public function add_welcome_notice() {
-			if ( get_transient( 'reach_show_custom_logo_notice' ) ) {
-				$this->logo_upgrade_notice();				
-			}
-
 ?>
 			<div class="updated notice is-dismissible">
 				<p><?php printf( esc_html__( 'Thanks for choosing Reach! You can read hints and tips on how get the most out of your new theme on the <a href="%s">welcome screen</a>.', 'reach' ),
@@ -412,7 +408,7 @@ if ( ! class_exists( 'Reach_Theme' ) ) :
 				</p>
 				<p><a href="<?php echo esc_url( admin_url( 'themes.php?page=about-reach' ) ) ?>" class="button" style="text-decoration: none;"><?php _e( 'Get started with Reach', 'reach' ) ?></a></p>
 			</div>        
-<?php		
+<?php
 		}
 
 		/**

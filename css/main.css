@@ -1083,6 +1083,8 @@ a {
       .site-navigation .account-links .logout::before {
         top: 20px;
         top: 2rem; }
+  .site-navigation .menu-site li:focus > a {
+    color: #7bb4e0; }
   @media (min-width: 37.5em) {
     .site-navigation {
       top: auto;
@@ -1123,8 +1125,6 @@ a {
           text-indent: 0; }
           .site-navigation .menu-site li:last-child {
             border-bottom: 0; }
-        .site-navigation .menu-site li:focus > a {
-          color: #7bb4e0; }
         .site-navigation .menu-site > li {
           padding: 0px 0px 14px 14px;
           padding: 0rem 0rem 1.4rem 1.4rem;

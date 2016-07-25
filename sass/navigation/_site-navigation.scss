@@ -88,6 +88,10 @@
         }
     }
 
+    .menu-site li:focus > a {
+        @include color( $color__accent );
+    }
+
     @include bp( 600 ) {
         top: auto;
         bottom: 0;
@@ -138,13 +142,7 @@
                 &:last-child {
                     border-bottom: 0;
                 }
-            }
-
-            li:focus {
-                > a {
-                    @include color( $color__accent );
-                }
-            }
+            }            
 
             > li {
                 @include padding( 0, 0, $size__margin, $size__margin );
