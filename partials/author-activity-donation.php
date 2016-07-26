@@ -15,7 +15,7 @@ $campaign_id = current( $donation->get_campaign_donations() )->campaign_id;
 ?>
 <li class="activity-type-donation cf">
 	<p class="activity-summary">
-		<?php printf( __( '%1$s backed %2$s', 'user backed campaign(s)', 'reach' ),
+		<?php printf( _x( '%1$s backed %2$s', 'user backed campaign(s)', 'reach' ),
 			'<span class="display-name">' . reach_get_current_author()->display_name . '</span>',
 			$donation->get_campaigns_donated_to( true )
 		) ?><br />

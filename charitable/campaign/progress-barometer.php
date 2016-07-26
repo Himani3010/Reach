@@ -40,7 +40,7 @@ if ( false === $progress ) {
 	data-progress-stroke="<?php echo esc_attr( get_theme_mod( 'text_colour', '#7D6E63' ) ) ?>"
 	>
 	<span><?php printf(
-		_x( '<span>%s<sup>%</sup></span> Funded', 'x percent funded', 'reach' ),
+		_x( '<span>%s<sup>&#37;</sup></span> Funded', 'x percent funded', 'reach' ),
 		number_format( $progress, 0 )
 	) ?></span>
 </div>

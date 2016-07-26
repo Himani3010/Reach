@@ -8,7 +8,7 @@
 ?>
 <li class="activity-type-post cf">
 	<p class="activity-summary">
-		<?php printf( __( '%1$s published %2$s', 'user published post', 'reach' ),
+		<?php printf( _x( '%1$s published %2$s', 'user published post', 'reach' ),
 			'<span class="display-name">' . reach_get_current_author()->display_name . '</span>',
 			'<a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'echo' => false ) ) . '">' . get_the_title() . '</a>'
 		) ?><br />
