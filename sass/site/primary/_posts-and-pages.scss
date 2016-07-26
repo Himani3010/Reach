@@ -22,7 +22,7 @@
 	@include padding( 35, $size__margin-double );
 	@include background-color( $color__accent );
 	@include color( $color__text-overlay );
-	text-align: center;	
+	text-align: center;
 }
 
 @include bp( 800 ) {

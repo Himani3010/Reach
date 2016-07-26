@@ -9,7 +9,7 @@ if ( ! reach_has_charitable() ) :
 	return;
 endif;
 
-$user 	   = charitable_get_user( reach_get_current_author() );
+$user 	   = charitable_get_user( reach_get_current_author()->ID );
 $campaigns = Charitable_Campaigns::query( array( 'author' => $user->ID ) );
 
 ?>

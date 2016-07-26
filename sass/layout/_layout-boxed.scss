@@ -5,20 +5,20 @@
         @include bp( 600 ) {
             max-width: 100%;
         }
-        @include bp( 1190 ) {
+        @include bp( 1226 ) {
             width: 119rem;
         }
     }
 
     .social {
-        @include bp( 1190 ) {
+        @include bp( 1226 ) {
             @include padding-left( $size__margin-triple + 9 );
         }
     }
 
     .body-wrapper {
         border-radius: 0.4rem 0.4rem 0 0;
-        @include bp( 1190 ) {
+        @include bp( 1226 ) {
             @include padding( 0, 10 );
         }
     }
@@ -49,7 +49,15 @@
         }
     }
 
-    @include bp( 1190 ) {
+    @include bp( 800 ) {
+        &.user-dashboard .banner {
+            width: -webkit-calc(100% + #{$size__margin-triple * 2}px);
+            width: -moz-calc(100% + #{$size__margin-triple * 2}px);
+            width: calc(100% + #{$size__margin-triple * 2}px);
+        }
+    }
+
+    @include bp( 1226 ) {
          #header {
             border-radius: 0.4rem 0.4rem 0 0;
         }
@@ -84,20 +92,19 @@
             }
         }
         
-        .content-area {            
-            .banner {
-                position: relative;
-                width: -webkit-calc((100% + #{$size__margin-triple}px)/ 0.68 + #{($size__margin-triple + 9) * 2}px);
-                width: -moz-calc((100% + #{$size__margin-triple}px)/ 0.68 + #{($size__margin-triple + 9) * 2}px);
-                width: calc((100% + #{$size__margin-triple}px)/ 0.68 + #{($size__margin-triple + 9) * 2}px);
-                margin-left: -0.9rem;
-            }
+        .content-area .banner {
+            position: relative;
+            width: -webkit-calc((100% + #{$size__margin-triple}px)/ 0.68 + #{($size__margin-triple + 9) * 2}px);
+            width: -moz-calc((100% + #{$size__margin-triple}px)/ 0.68 + #{($size__margin-triple + 9) * 2}px);
+            width: calc((100% + #{$size__margin-triple}px)/ 0.68 + #{($size__margin-triple + 9) * 2}px);
+            margin-left: -0.9rem;
+        }
 
-            &.no-sidebar .banner {
-                width: -webkit-calc(100% + #{($size__margin-triple + 9) * 2}px);
-                width: -moz-calc(100% + #{($size__margin-triple + 9) * 2}px);
-                width: calc(100% + #{($size__margin-triple + 9) * 2}px);
-            }
+        .content-area.no-sidebar .banner,
+        &.user-dashboard .banner {
+            width: -webkit-calc(100% + #{($size__margin-triple + 9) * 2}px);
+            width: -moz-calc(100% + #{($size__margin-triple + 9) * 2}px);
+            width: calc(100% + #{($size__margin-triple + 9) * 2}px);
         }
     }    
 }

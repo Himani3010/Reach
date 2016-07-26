@@ -1805,16 +1805,16 @@ a {
     @media (min-width: 37.5em) {
       .layout-boxed #page {
         max-width: 100%; } }
-    @media (min-width: 74.375em) {
+    @media (min-width: 76.625em) {
       .layout-boxed #page {
         width: 119rem; } }
-  @media (min-width: 74.375em) {
+  @media (min-width: 76.625em) {
     .layout-boxed .social {
       padding-left: 51px;
       padding-left: 5.1rem; } }
   .layout-boxed .body-wrapper {
     border-radius: 0.4rem 0.4rem 0 0; }
-    @media (min-width: 74.375em) {
+    @media (min-width: 76.625em) {
       .layout-boxed .body-wrapper {
         padding: 0px 10px;
         padding: 0rem 1rem; } }
@@ -1835,7 +1835,12 @@ a {
       .layout-boxed .site-navigation .menu-button {
         top: -1px;
         top: -0.1rem; } }
-  @media (min-width: 74.375em) {
+  @media (min-width: 50em) {
+    .layout-boxed.user-dashboard .banner {
+      width: -webkit-calc(100% + 84px);
+      width: -moz-calc(100% + 84px);
+      width: calc(100% + 84px); } }
+  @media (min-width: 76.625em) {
     .layout-boxed #header {
       border-radius: 0.4rem 0.4rem 0 0; }
     .layout-boxed #main {
@@ -1863,7 +1868,7 @@ a {
       width: -moz-calc((100% + 42px)/ 0.68 + 102px);
       width: calc((100% + 42px)/ 0.68 + 102px);
       margin-left: -0.9rem; }
-    .layout-boxed .content-area.no-sidebar .banner {
+    .layout-boxed .content-area.no-sidebar .banner, .layout-boxed.user-dashboard .banner {
       width: -webkit-calc(100% + 102px);
       width: -moz-calc(100% + 102px);
       width: calc(100% + 102px); } }
@@ -1890,6 +1895,11 @@ a {
       left: -50vw;
       margin-left: 700px;
       margin-left: 70rem; } }
+@media (min-width: 50em) {
+  .layout-wide.user-dashboard .banner {
+    width: -webkit-calc(100% + 84px);
+    width: -moz-calc(100% + 84px);
+    width: calc(100% + 84px); } }
 
 #page {
   position: relative; }
