@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Reach 1.0.5\n"
+"Project-Id-Version: Reach 1.0.6\n"
 "Report-Msgid-Bugs-To: https://www.wpcharitable.com/\n"
-"POT-Creation-Date: 2016-07-26 11:24:42+00:00\n"
+"POT-Creation-Date: 2016-08-09 11:17:59+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -72,11 +72,11 @@ msgstr ""
 msgid "Share Campaign"
 msgstr ""
 
-#: charitable/campaign/share.php:45 partials/campaign-sharing.php:43
+#: charitable/campaign/share.php:44 partials/campaign-sharing.php:42
 msgid "Embed Code"
 msgstr ""
 
-#: charitable/campaign/share.php:49 partials/campaign-sharing.php:47
+#: charitable/campaign/share.php:48 partials/campaign-sharing.php:46
 msgid "Preview"
 msgstr ""
 
@@ -309,125 +309,121 @@ msgid ""
 "Reach into your language? <a href=\"%s\">Get involved on WordPress.org</a>."
 msgstr ""
 
-#: inc/admin/class-reach-admin.php:243
+#: inc/admin/class-reach-admin.php:246
 msgid "Logos have changed in Reach 1.0.3. <a href=\"%s\">Find out more</a>"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:278
+#: inc/admin/class-reach-customizer.php:267
 msgid "Hide the title"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:289
+#: inc/admin/class-reach-customizer.php:278
 msgid "Hide the tagline"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:309
-msgid "Logo"
-msgstr ""
-
-#: inc/admin/class-reach-customizer.php:338
+#: inc/admin/class-reach-customizer.php:298
 msgid "Layout"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:351
+#: inc/admin/class-reach-customizer.php:311
 msgid "Wide Layout"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:352
+#: inc/admin/class-reach-customizer.php:312
 msgid "Boxed Layout"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:372
+#: inc/admin/class-reach-customizer.php:332
 msgid "Colour"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:384
+#: inc/admin/class-reach-customizer.php:344
 msgid "Accent Colour"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:385
+#: inc/admin/class-reach-customizer.php:345
 msgid "Used for: site title, links, banner background, feature section background"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:397
+#: inc/admin/class-reach-customizer.php:357
 msgid "Body Background Colour"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:398
+#: inc/admin/class-reach-customizer.php:358
 msgid "Used for: site background"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:410
+#: inc/admin/class-reach-customizer.php:370
 msgid "Text Colour"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:411
+#: inc/admin/class-reach-customizer.php:371
 msgid "Used for: text, buttons, site navigation"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:423
+#: inc/admin/class-reach-customizer.php:383
 msgid "Header Text"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:424
+#: inc/admin/class-reach-customizer.php:384
 msgid "Used for social profile icons & button text"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:436
+#: inc/admin/class-reach-customizer.php:396
 msgid "Footer Text"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:456 inc/class-reach-theme.php:599
+#: inc/admin/class-reach-customizer.php:416 inc/class-reach-theme.php:598
 msgid "Footer"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:462 partials/footer-notice.php:13
+#: inc/admin/class-reach-customizer.php:422 partials/footer-notice.php:13
 msgid "Reach: A WordPress theme by WP Charitable"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:467
+#: inc/admin/class-reach-customizer.php:427
 msgid "Tagline"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:493
+#: inc/admin/class-reach-customizer.php:453
 msgid "Campaigns"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:504
+#: inc/admin/class-reach-customizer.php:464
 msgid "Background image for campaign summary block"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:540
+#: inc/admin/class-reach-customizer.php:500
 msgid "Where would you like the campaign video and featured image to be displayed?"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:543
+#: inc/admin/class-reach-customizer.php:503
 msgid "Featured image in summary, video before content."
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:544
+#: inc/admin/class-reach-customizer.php:504
 msgid "Video in summary, featured image before content."
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:564
+#: inc/admin/class-reach-customizer.php:524
 msgid "Social Profiles"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:565
+#: inc/admin/class-reach-customizer.php:525
 msgid ""
 "Enter the complete URL to your profile for each service below that you "
 "would like to share."
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:597
+#: inc/admin/class-reach-customizer.php:557
 msgid "Background Images"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:603
+#: inc/admin/class-reach-customizer.php:563
 msgid "Body"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:621
+#: inc/admin/class-reach-customizer.php:581
 msgid "Blog & Page Banners"
 msgstr ""
 
@@ -531,35 +527,35 @@ msgstr ""
 msgid "Primary Menu"
 msgstr ""
 
-#: inc/class-reach-theme.php:569
+#: inc/class-reach-theme.php:568
 msgid "Default sidebar"
 msgstr ""
 
-#: inc/class-reach-theme.php:570
+#: inc/class-reach-theme.php:569
 msgid "The default sidebar."
 msgstr ""
 
-#: inc/class-reach-theme.php:579
+#: inc/class-reach-theme.php:578
 msgid "Campaign sidebar"
 msgstr ""
 
-#: inc/class-reach-theme.php:580
+#: inc/class-reach-theme.php:579
 msgid "The campaign sidebar."
 msgstr ""
 
-#: inc/class-reach-theme.php:589
+#: inc/class-reach-theme.php:588
 msgid "Campaign below content"
 msgstr ""
 
-#: inc/class-reach-theme.php:590
+#: inc/class-reach-theme.php:589
 msgid "Displayed below the campaign's content, but above the comment section."
 msgstr ""
 
-#: inc/class-reach-theme.php:774
+#: inc/class-reach-theme.php:773
 msgid "Page %s"
 msgstr ""
 
-#: inc/class-reach-theme.php:860
+#: inc/class-reach-theme.php:859
 msgid "Continue Reading"
 msgstr ""
 
@@ -869,7 +865,7 @@ msgctxt "status for campaign"
 msgid "Status: %s"
 msgstr ""
 
-#: inc/class-reach-theme.php:855
+#: inc/class-reach-theme.php:854
 msgctxt "keep reading post"
 msgid "Keep reading %s"
 msgstr ""
