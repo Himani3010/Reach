@@ -106,8 +106,8 @@ if ( ! function_exists( 'reach_site_identity' ) ) :
 		$output 	  = '';
 		$home_url 	  = home_url();
 		$site_title   = get_bloginfo( 'name' );
-		$hide_title   = get_theme_mod( 'hide_site_title' );
-		$hide_tagline = get_theme_mod( 'hide_site_tagline' );
+		$hide_title   = (bool) get_theme_mod( 'hide_site_title' );
+		$hide_tagline = (bool) get_theme_mod( 'hide_site_tagline' );
 
 		if ( function_exists( 'has_custom_logo' ) && has_custom_logo() ) {
 			$output .= get_custom_logo();

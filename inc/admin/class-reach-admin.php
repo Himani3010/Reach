@@ -59,7 +59,7 @@ if ( ! class_exists( 'Reach_Admin' ) ) :
 		 * @since   1.0.0
 		 */
 		public function register_admin_page_styles() {
-			wp_enqueue_script(
+			wp_register_script(
 				'charitable-admin-script',
 				get_template_directory_uri() . '/js/admin/admin.js',
 				array(),
@@ -226,6 +226,9 @@ if ( ! class_exists( 'Reach_Admin' ) ) :
 			}
 
 			if ( get_transient( 'reach_show_custom_logo_notice' ) ) {
+
+				wp_enqueue_script( 'charitable-admin-script' );
+
 				$this->logo_upgrade_notice();
 			}
 		}

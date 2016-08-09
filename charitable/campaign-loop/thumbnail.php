@@ -29,6 +29,6 @@ $campaign = $view_args['campaign'];
 
 	?>
 	<a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>" target="_parent">
-		<?php echo get_the_post_thumbnail( $campaign->ID, 'post-thumbnail-medium' ) ?>
+		<?php echo get_the_post_thumbnail( $campaign->ID, 'reach-post-thumbnail-medium' ) ?>
 	</a>
 </div>

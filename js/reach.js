@@ -6,9 +6,9 @@
 ---------------------------------------------------------*/
 ( function( $ ){	
 	
-    if ( 'undefined' === typeof REACH_CROWDFUNDING ) {
-        REACH_CROWDFUNDING = false;
-    }
+	if ( 'undefined' === typeof REACH_CROWDFUNDING ) {
+			REACH_CROWDFUNDING = false;
+	}
 
 	// Perform other actions on ready event
 	$(document).ready( function() {
@@ -28,7 +28,7 @@
 
 		REACH.LeanModal.init();
 
-        REACH.SidebarPositioning.init();        
+		REACH.SidebarPositioning.init();        
 
 		if ( REACH_CROWDFUNDING ) {
 
@@ -39,32 +39,29 @@
 				$(this).parent().toggleClass('is-active');
 			});
 		}
-        else {
-
-        }
 	});
 
-  	$(window).resize( function() {
-        var REACH_CROWDFUNDING = REACH_CROWDFUNDING || false;
+	$(window).resize( function() {
+		var REACH_CROWDFUNDING = REACH_CROWDFUNDING || false;
 
-  		if ( REACH_CROWDFUNDING && $.fn.masonry ) {
-  			REACH.Grid.resizeGrid();
-  		}
+		if ( REACH_CROWDFUNDING && $.fn.masonry ) {
+			REACH.Grid.resizeGrid();
+		}
 
-        REACH.SidebarPositioning.init();
-  	});
+		REACH.SidebarPositioning.init();
+	});
 
-  	$(window).load( function() {
-        if ( REACH_CROWDFUNDING ) {
+	$(window).load( function() {
+		if ( REACH_CROWDFUNDING ) {
 
-            if ( $.fn.masonry ) {
-                REACH.Grid.init();    
-            }
+			if ( $.fn.masonry ) {
+					REACH.Grid.init();    
+			}
 
 			REACH.Barometer.init();
-  		}
+		}
 
-        REACH.HeaderLayout.init();
-  	});
+		REACH.HeaderLayout.init();
+	});
 
 })( jQuery );

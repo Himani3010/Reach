@@ -28,7 +28,7 @@ if ( ! class_exists( 'Reach_Theme' ) ) :
 		/**
 		 * The theme version.
 		 */
-		const VERSION = '1.0.5';
+		const VERSION = '1.0.6';
 
 		/**
 		 * Database version number.
@@ -438,9 +438,9 @@ if ( ! class_exists( 'Reach_Theme' ) ) :
 			 */
 			add_theme_support( 'post-thumbnails' );
 			set_post_thumbnail_size( 910, 607, true );
-			add_image_size( 'post-thumbnail-large', 784, 523, true );
-			add_image_size( 'post-thumbnail-medium', 527, 352, true );
-			add_image_size( 'post-thumbnail-small', 258, 172, true );
+			add_image_size( 'reach-post-thumbnail-medium', 527, 352, true );
+			// add_image_size( 'reach-post-thumbnail-large', 784, 523, true );
+			// add_image_size( 'reach-post-thumbnail-small', 258, 172, true );
 
 			/**
 			 * This theme uses wp_nav_menu() in one location.
@@ -552,7 +552,6 @@ if ( ! class_exists( 'Reach_Theme' ) ) :
 			}
 
 			set_theme_mod( 'custom_logo', $custom_logo );
-
 		}
 
 		/**
@@ -819,7 +818,7 @@ if ( ! class_exists( 'Reach_Theme' ) ) :
 		 * @since   1.0.0
 		 */
 		public function body_classes( $classes ) {
-			$layout = $this->get_theme_setting( 'layout', true );
+			$layout    = $this->get_theme_setting( 'layout', true );
 			$classes[] = $layout ? $layout : 'layout-wide';
 
 			if ( is_page_template( 'page-templates/user-dashboard.php' ) ) {

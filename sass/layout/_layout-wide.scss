@@ -32,6 +32,20 @@
         }
     }
 
+    .site-navigation {
+        @include top( 5 - ($size__margin-double * 2) );
+
+        @include bp( 600 ) {
+            top: auto;
+        }
+    }
+
+    .toggled .menu-site {
+        width: -webkit-calc( 100% + #{$size__margin-double * 2}px );
+        width: -moz-calc( 100% + #{$size__margin-double * 2}px );
+        width: calc( 100% + #{$size__margin-double * 2}px );
+    }
+
     @include bp( 800 ) {
         &.user-dashboard .banner {
             width: -webkit-calc(100% + #{$size__margin-triple * 2}px);

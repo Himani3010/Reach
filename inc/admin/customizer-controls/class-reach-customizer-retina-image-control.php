@@ -146,16 +146,16 @@ class Reach_Customizer_Retina_Image_Control extends WP_Customize_Image_Control {
      *
      * If the image is optimised for retina, create a non-retina copy. 
      * 
-     * @param string $image_url
+     * @param  string $image_url
      * @return void
      * @access private
-     * @since   1.0.0
+     * @since  1.0.0
      */
-    private function update_image($image_url) {
+    private function update_image( $image_url ) {
         /**
          * Save the image's post ID, width and height to the theme settings. 
          */
-        $image_id = reach_get_image_id_from_url( $image_url );
+        $image_id   = attachment_url_to_postid( $image_url );
         $image_meta = wp_get_attachment_metadata( $image_id );
 
         set_theme_mod( $this->id . '_id', $image_id );        

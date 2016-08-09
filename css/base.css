@@ -1895,6 +1895,16 @@ a {
       left: -50vw;
       margin-left: 700px;
       margin-left: 70rem; } }
+.layout-wide .site-navigation {
+  top: -51px;
+  top: -5.1rem; }
+  @media (min-width: 37.5em) {
+    .layout-wide .site-navigation {
+      top: auto; } }
+.layout-wide .toggled .menu-site {
+  width: -webkit-calc( 100% + 56px );
+  width: -moz-calc( 100% + 56px );
+  width: calc( 100% + 56px ); }
 @media (min-width: 50em) {
   .layout-wide.user-dashboard .banner {
     width: -webkit-calc(100% + 84px);

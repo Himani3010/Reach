@@ -46,7 +46,7 @@ get_header( 'stripped' );
 
 					if ( has_post_thumbnail( $campaign_id ) ) :
 
-						echo get_the_post_thumbnail( $campaign_id, 'post-thumbnail-medium' );
+						echo get_the_post_thumbnail( $campaign_id, 'reach-post-thumbnail-medium' );
 
 					endif ?>
 

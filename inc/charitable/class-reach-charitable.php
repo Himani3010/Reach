@@ -323,7 +323,7 @@ if ( ! class_exists( 'Reach_Charitable' ) ) :
 		 * @since   1.0.0
 		 */
 		public function set_campaign_widget_thumbnail_size() {
-			return 'post-thumbnail-medium';
+			return 'reach-post-thumbnail-medium';
 		}
 	}
 

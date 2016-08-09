@@ -277,22 +277,6 @@ if ( ! function_exists( 'reach_compress_css' ) ) :
 endif; // End reach_compress_css
 
 /**
- * This retrieves an image's post ID based on its URL.
- * Credit: http://pippinsplugins.com/retrieve-attachment-id-from-image-url/
- *
- * @param string $image_url
- * @since 1.0.0
- */
-function reach_get_image_id_from_url( $image_url ) {
-	global $wpdb;
-
-	$attachment = $wpdb->get_col( $wpdb->prepare( "SELECT ID FROM $wpdb->posts WHERE guid = %s;", $image_url ) );
-
-	return $attachment[0];
-}
-
-
-/**
  * Based on a single key, retrieve the data for a particular image, including whether it is retina and its dimensions.
  *
  * @param   string $key
@@ -302,19 +286,19 @@ function reach_get_image_id_from_url( $image_url ) {
 function reach_get_customizer_image_data( $key ) {
 	$data = array();
 
-	$key_value = reach_get_theme()->get_theme_setting( $key );
+	$key_value = esc_url( reach_get_theme()->get_theme_setting( $key ) );
 
 	if ( ! strlen( $key_value ) ) {
 		return false;
 	}
 
-	$data['width']  = reach_get_theme()->get_theme_setting( $key . '_width' );
-	$data['height'] = reach_get_theme()->get_theme_setting( $key . '_height' );
+	$data['width']  = absint( reach_get_theme()->get_theme_setting( $key . '_width' ) );
+	$data['height'] = absint( reach_get_theme()->get_theme_setting( $key . '_height' ) );
 
 	if ( reach_get_theme()->get_theme_setting( $key . '_is_retina' ) ) {
 
 		/* Retrieve the post ID of the logo, then get the non-retina version */
-		$data['id'] 		  = get_theme_mod( $key . '_id' );
+		$data['id'] 		  = absint( get_theme_mod( $key . '_id' ) );
 		$data['image'] 		  = get_post_meta( $data['id'], '_non_retina', true );
 		$data['retina_image'] = $key_value;
 

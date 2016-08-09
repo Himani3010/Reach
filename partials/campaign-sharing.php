@@ -39,7 +39,6 @@ $widget_url = esc_url( charitable_get_permalink( 'campaign_widget_page' ) );
 			<a class="modal-close"></a>			
 			<h4 class="block-title"><?php _e( 'Share Campaign', 'reach' ) ?></h4>
 			<div class="block">	
-				<?php echo apply_filters( 'the_excerpt', get_theme_mod( 'campaign_sharing_text', '' ) ) ?>
 				<p><strong><?php _e( 'Embed Code', 'reach' ) ?></strong></p>
 				<pre><?php echo htmlspecialchars( '<iframe src="' . $widget_url . '" width="275px" height="468px" frameborder="0" scrolling="no" /></iframe>' ) ?></pre>
 			</div>
