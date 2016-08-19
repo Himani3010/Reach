@@ -455,14 +455,14 @@ class Reach_Customizer {
 			'settings'  => array(
 				'campaign_feature_background' => array(
 					'setting'   => array(
-						'default'       => '',
-						'transport'     => 'postMessage',
+						'default'       	=> '',
+						'transport'     	=> 'postMessage',
 						'sanitize_callback' => 'esc_url_raw',
 					),
 					'control'   => array(
-						'control_type'  => 'Reach_Customizer_Retina_Image_Control',
-						'label'         => __( 'Background image for campaign summary block', 'reach' ),
-						'priority'      => $priority + 1,
+						'control_type'  	=> 'Reach_Customizer_Retina_Image_Control',
+						'label'         	=> __( 'Background image for campaign summary block', 'reach' ),
+						'priority'      	=> $priority + 1,
 					),
 				),
 				'campaign_section_break_1' => array(
@@ -470,39 +470,33 @@ class Reach_Customizer {
 						'sanitize_callback' => '__return_true',
 					),
 					'control' => array(
-						'control_type'  => 'Reach_Customizer_Misc_Control',
-						'type'          => 'line',
-						'priority'      => $priority + 2,
+						'control_type'  	=> 'Reach_Customizer_Misc_Control',
+						'type'          	=> 'line',
+						'priority'      	=> $priority + 2,
 					),
 				),
 				'campaign_media_placement' => array(
 					'setting' => array(
-						'default'   => 'featured_image_in_summary',
+						'default'   		=> 'featured_image_in_summary',
+						'transport' 		=> 'refresh',
 						'sanitize_callback' => array( $this, 'sanitize_campaign_media_placement' ),
 					),
 					'control' => array(
-						'type'      => 'hidden',
-						'priority'  => $priority + 3,
+						'type'      	=> 'hidden',
+						'priority'  	=> $priority + 3,
 					),
 				),
 			),
 		);
 
 		if ( class_exists( 'Charitable_Videos' ) ) {
-			$campaign_setings['campaign_media_placement'] = array(
-				'setting' => array(
-					'default'       => 'featured_image_in_summary',
-					'transport'     => 'refresh',
-					'sanitize_callback' => array( $this, 'sanitize_campaign_media_placement' ),
-				),
-				'control' => array(
-					'type'          => 'radio',
-					'label'         => __( 'Where would you like the campaign video and featured image to be displayed?', 'reach' ),
-					'priority'      => $priority + 3,
-					'choices'       => array(
-						'featured_image_in_summary' => __( 'Featured image in summary, video before content.', 'reach' ),
-						'video_in_summary' => __( 'Video in summary, featured image before content.', 'reach' ),
-					),
+			$campaign_setings['settings']['campaign_media_placement']['control'] = array(
+				'type'          => 'radio',
+				'label'         => __( 'Where would you like the campaign video and featured image to be displayed?', 'reach' ),
+				'priority'      => $priority + 3,
+				'choices'       => array(
+					'featured_image_in_summary' => __( 'Featured image in summary, video before content.', 'reach' ),
+					'video_in_summary' => __( 'Video in summary, featured image before content.', 'reach' ),
 				),
 			);
 		}
