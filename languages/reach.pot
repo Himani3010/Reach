@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Reach 1.0.6\n"
+"Project-Id-Version: Reach 1.0.7\n"
 "Report-Msgid-Bugs-To: https://www.wpcharitable.com/\n"
-"POT-Creation-Date: 2016-08-09 11:17:59+00:00\n"
+"POT-Creation-Date: 2016-08-26 12:02:50+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -393,37 +393,37 @@ msgstr ""
 msgid "Background image for campaign summary block"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:500
+#: inc/admin/class-reach-customizer.php:495
 msgid "Where would you like the campaign video and featured image to be displayed?"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:503
+#: inc/admin/class-reach-customizer.php:498
 msgid "Featured image in summary, video before content."
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:504
+#: inc/admin/class-reach-customizer.php:499
 msgid "Video in summary, featured image before content."
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:524
+#: inc/admin/class-reach-customizer.php:518
 msgid "Social Profiles"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:525
+#: inc/admin/class-reach-customizer.php:519
 msgid ""
 "Enter the complete URL to your profile for each service below that you "
 "would like to share."
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:557
+#: inc/admin/class-reach-customizer.php:551
 msgid "Background Images"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:563
+#: inc/admin/class-reach-customizer.php:557
 msgid "Body"
 msgstr ""
 
-#: inc/admin/class-reach-customizer.php:581
+#: inc/admin/class-reach-customizer.php:575
 msgid "Blog & Page Banners"
 msgstr ""
 

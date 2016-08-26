@@ -1,4 +1,5 @@
-#charitable-donation-form {  
+#charitable-donation-form,
+#charitable-donation-amount-form {  
     @include padding( $size__margin-double );
     @include background-color( $color__background-content );    
 

@@ -3,8 +3,8 @@ Contributors: WPCharitable, Studio164a
 Donate link: https://www.wpcharitable.com
 Tags: blue, light, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-colors, custom-menu, featured-images, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 4.2
-Tested up to: 4.5.2
-Stable tag: 1.0.2
+Tested up to: 4.6
+Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -91,6 +91,13 @@ Copyright © 2008-2012 Dmitry Baranovskiy (http://raphaeljs.com)
 Copyright © 2008-2012 Sencha Labs (http://sencha.com)   
 
 == Change Log ==
+
+= 1.0.7 - 26/08/2016 = 
+* Improved styling of the campaign donation widget, which was broken with version 1.4 of Charitable.
+* Display extra campaign media placement setting when Charitable Videos is enabled.
+
+= 1.0.6 - 25/08/2016 = 
+* First official release on WordPress.org
 
 = 1.0.2 - 16/05/2016 = 
 * Fixed HTML error in comments area. 
