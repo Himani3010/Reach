@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Reach 1.0.7\n"
+"Project-Id-Version: Reach 1.0.8\n"
 "Report-Msgid-Bugs-To: https://www.wpcharitable.com/\n"
-"POT-Creation-Date: 2016-08-26 12:02:50+00:00\n"
+"POT-Creation-Date: 2016-08-31 07:07:01+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -427,13 +427,13 @@ msgstr ""
 msgid "Blog & Page Banners"
 msgstr ""
 
-#: inc/admin/customizer-controls/class-reach-customizer-retina-image-control.php:63
+#: inc/admin/customizer-controls/class-reach-customizer-retina-image-control.php:61
 msgid ""
 "Reach_Customizer_Retina_Image_Control must be instantiated before or during "
 "the customize_register action."
 msgstr ""
 
-#: inc/admin/customizer-controls/class-reach-customizer-retina-image-control.php:89
+#: inc/admin/customizer-controls/class-reach-customizer-retina-image-control.php:87
 msgid "Is this image retina-ready?"
 msgstr ""
 

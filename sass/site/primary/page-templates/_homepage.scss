@@ -20,6 +20,8 @@
  */
 body.page-template-homepage {
     #primary {
+        position: relative;
+        z-index: 1;
         width: 100%;
         padding: 0;
         @include margin-bottom( $size__margin-triple );
@@ -31,6 +33,10 @@ body.page-template-homepage {
             &:empty {
                 padding-bottom: 0;
             }
+        }
+
+        a {
+            @include color( $color__text );
         }
     }
 

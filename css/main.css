@@ -2426,6 +2426,8 @@ a {
  * The "Homepage" static page layout template.
  */
 body.page-template-homepage #primary {
+  position: relative;
+  z-index: 1;
   width: 100%;
   padding: 0;
   margin-bottom: 42px;
@@ -2436,6 +2438,8 @@ body.page-template-homepage #primary {
     padding-bottom: 1.4rem; }
     body.page-template-homepage #primary .media-container:empty {
       padding-bottom: 0; }
+  body.page-template-homepage #primary a {
+    color: #70777c; }
 body.page-template-homepage .feature-block {
   padding-top: 42px;
   padding-top: 4.2rem;

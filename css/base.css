@@ -2247,6 +2247,8 @@ a {
  * The "Homepage" static page layout template.
  */
 body.page-template-homepage #primary {
+  position: relative;
+  z-index: 1;
   width: 100%;
   padding: 0;
   margin-bottom: 42px;

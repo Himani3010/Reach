@@ -204,7 +204,7 @@ input[type="submit"]:focus,
 input[type="submit"]:hover, .menu-site a, .site-navigation .account-links .logout, .button:focus, .button:hover, .button-alt,
 .button-secondary,
 .button.button-alt,
-.button.button-secondary, .modal .block-title, .modal-close:before, .meta a, #submit, .charitable-form-field.charitable-form-field-editor .mce-btn button, .charitable-repeatable-form-field-table .remove:before, .charitable-repeatable-form-field-table .add-row.button, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .donation-amounts .donation-amount,
+.button.button-secondary, .modal .block-title, .modal-close:before, .meta a, body.page-template-homepage #primary a, #submit, .charitable-form-field.charitable-form-field-editor .mce-btn button, .charitable-repeatable-form-field-table .remove:before, .charitable-repeatable-form-field-table .add-row.button, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .donation-amounts .donation-amount,
 #charitable-donation-amount-form .donation-amounts .donation-amount, #charitable-donation-form .charitable-form-field .button,
 #charitable-donation-amount-form .charitable-form-field .button, #custom-donation-amount-field.charitable-custom-donation-field-alone input, .campaign-widget .campaign-description, .campaign-widget .campaign-stats, .share-widget .modal,
 .share-widget .modal .block-title, body.user-dashboard .charitable-submit-field .button, .user-post-actions a, .campaign .campaign-location, .charitable-campaign-map-marker .campaign-description, div.printfriendly a,
@@ -430,7 +430,7 @@ input[type="submit"]:focus,
 input[type="submit"]:hover, .menu-site a, .site-navigation .account-links .logout, .button:focus, .button:hover, .button-alt,
 .button-secondary,
 .button.button-alt,
-.button.button-secondary, .modal .block-title, .modal-close:before, .meta a, #submit, .charitable-form-field.charitable-form-field-editor .mce-btn button, .charitable-repeatable-form-field-table .remove:before, .charitable-repeatable-form-field-table .add-row.button, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .donation-amounts .donation-amount,
+.button.button-secondary, .modal .block-title, .modal-close:before, .meta a, body.page-template-homepage #primary a, #submit, .charitable-form-field.charitable-form-field-editor .mce-btn button, .charitable-repeatable-form-field-table .remove:before, .charitable-repeatable-form-field-table .add-row.button, body > .select2-container--open .select2-dropdown .select2-results__option.select2-results__option--highlighted, #charitable-donation-form .donation-amounts .donation-amount,
 #charitable-donation-amount-form .donation-amounts .donation-amount, #charitable-donation-form .charitable-form-field .button,
 #charitable-donation-amount-form .charitable-form-field .button, #custom-donation-amount-field.charitable-custom-donation-field-alone input, .campaign-widget .campaign-description, .campaign-widget .campaign-stats, .share-widget .modal,
 .share-widget .modal .block-title, body.user-dashboard .charitable-submit-field .button, .user-post-actions a, .campaign .campaign-location, .charitable-campaign-map-marker .campaign-description, div.printfriendly a,
@@ -2843,6 +2843,8 @@ a {
  * The "Homepage" static page layout template.
  */
 body.page-template-homepage #primary {
+  position: relative;
+  z-index: 1;
   width: 100%;
   padding: 0;
   margin-bottom: 42px;

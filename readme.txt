@@ -4,7 +4,7 @@ Donate link: https://www.wpcharitable.com
 Tags: blue, light, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-colors, custom-menu, featured-images, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 4.2
 Tested up to: 4.6
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -91,6 +91,10 @@ Copyright © 2008-2012 Dmitry Baranovskiy (http://raphaeljs.com)
 Copyright © 2008-2012 Sencha Labs (http://sencha.com)   
 
 == Change Log ==
+
+= 1.0.8 - 31/08/2016 = 
+* Improved the styling of links within the top content area in the homepage template, to ensure that links are visible (cannot have blue links on a blue background!) and links within sliders like Slider Revolution are visible. [#32](https://github.com/Charitable/Reach/issues/32) and [#33](https://github.com/Charitable/Reach/issues/33)
+* Fixed a fatal error that occured when removing either the body background image or the blog and page banners.
 
 = 1.0.7 - 26/08/2016 = 
 * Improved styling of the campaign donation widget, which was broken with version 1.4 of Charitable.
