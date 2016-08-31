@@ -2440,6 +2440,12 @@ body.page-template-homepage #primary {
       padding-bottom: 0; }
   body.page-template-homepage #primary a {
     color: #70777c; }
+  body.page-template-homepage #primary .button,
+  body.page-template-homepage #primary .button-alt:hover,
+  body.page-template-homepage #primary .button-alt:focus,
+  body.page-template-homepage #primary .button-secondary:hover,
+  body.page-template-homepage #primary .button-secondary:focus {
+    color: #ffffff; }
 body.page-template-homepage .feature-block {
   padding-top: 42px;
   padding-top: 4.2rem;

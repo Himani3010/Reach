@@ -38,6 +38,14 @@ body.page-template-homepage {
         a {
             @include color( $color__text );
         }
+
+        .button,
+        .button-alt:hover,
+        .button-alt:focus,
+        .button-secondary:hover,
+        .button-secondary:focus, {
+            @include color( $color__text-overlay );
+        }
     }
 
     .feature-block {
