@@ -1,4 +1,4 @@
-/*! reach - v1.0.1 - 2016-05-16 */
+/*! reach - v1.0.8 - 2016-09-13 */
 
 /*--------------------------------------------------------
  * REACH is the core object containing all components.
@@ -425,7 +425,9 @@ REACH.ResponsiveMenu = ( function( $ ) {
 			}
 
 			// Append account-links div
-			$container.find( '.menu-site' ).append( '<div class="account-links">' + $account_links.html() + '</div>' );
+			if ( $account_links.length ) {
+				$container.find( '.menu-site' ).append( '<div class="account-links">' + $account_links.html() + '</div>' );
+			}			
 
 			$menu = $container.find( 'ul' );
 

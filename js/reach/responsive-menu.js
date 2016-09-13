@@ -20,7 +20,9 @@ REACH.ResponsiveMenu = ( function( $ ) {
 			}
 
 			// Append account-links div
-			$container.find( '.menu-site' ).append( '<div class="account-links">' + $account_links.html() + '</div>' );
+			if ( $account_links.length ) {
+				$container.find( '.menu-site' ).append( '<div class="account-links">' + $account_links.html() + '</div>' );
+			}			
 
 			$menu = $container.find( 'ul' );
 
