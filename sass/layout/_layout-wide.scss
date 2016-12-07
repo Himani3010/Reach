@@ -1,10 +1,10 @@
-.layout-wide {    
+.layout-wide {
     #main {
         overflow-x: hidden;
     }
-    
+
     .page-template-homepage #main {
-        padding: 0;   
+        padding: 0;
     }
 
     .layout-wrapper {
@@ -19,9 +19,9 @@
         &:after {
             @include clearfix;
             @include clearfix-after;
-        }    
+        }
 
-        @include bp( 1484 ) {   
+        @include bp( 1484 ) {
             .content-area {
                 .banner {
                     width: 100vw;
@@ -52,5 +52,9 @@
             width: -moz-calc(100% + #{$size__margin-triple * 2}px);
             width: calc(100% + #{$size__margin-triple * 2}px);
         }
+    }
+
+    #main.error-404{
+        background-color: transparent;
     }
 }
