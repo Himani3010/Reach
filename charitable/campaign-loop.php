@@ -33,20 +33,24 @@ do_action( 'charitable_campaign_loop_before', $campaigns, $args );
 ?>
 <div class="<?php echo $loop_class ?>">                           
 	
-	<?php while ( $campaigns->have_posts() ) : ?>
+<?php
 
-		<?php $campaigns->the_post() ?>
+while ( $campaigns->have_posts() ) :
 
-		<?php
-		/**
-		 * Loads `reach/charitable/campaign-loop/campaign.php`
-		 *
-		 * @uses 	charitable_template()
-		 */
-		charitable_template( 'campaign-loop/campaign.php', $args ) ?>                   
+	$campaigns->the_post();
 
-	<?php endwhile ?>                                                   
+	/**
+	 * Loads `reach/charitable/campaign-loop/campaign.php`
+	 *
+	 * @uses 	charitable_template()
+	 */
+	charitable_template( 'campaign-loop/campaign.php', $args );
 
+endwhile;
+
+wp_reset_postdata();
+
+?>
 </div>
 <?php
 /**

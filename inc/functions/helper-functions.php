@@ -68,6 +68,7 @@ function reach_condensed_url( $url ) {
  * @since   1.0.0
  */
 function reach_hide_post_meta( $post = '' ) {
+
 	if ( ! strlen( $post ) ) {
 		global $post;
 	}
