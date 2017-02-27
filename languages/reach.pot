@@ -1,14 +1,14 @@
-# Copyright (C) 2016 WP Charitable
+# Copyright (C) 2017 WP Charitable
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Reach 1.0.9\n"
+"Project-Id-Version: Reach 1.0.10\n"
 "Report-Msgid-Bugs-To: https://www.wpcharitable.com/\n"
-"POT-Creation-Date: 2016-09-14 01:22:10+00:00\n"
+"POT-Creation-Date: 2017-02-27 06:05:52+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: WP-Translations (http://wp-translations.org/)\n"
 "Language-Team: WP-Translations <wpt@wp-translations.org>\n"
 "X-Generator: grunt-wp-i18n 0.4.9\n"
@@ -24,11 +24,11 @@ msgstr ""
 "X-Poedit-Bookmarks: \n"
 "X-Textdomain-Support: yes\n"
 
-#: 404.php:13
+#: 404.php:17
 msgid "Sorry, but you've hit a dead end."
 msgstr ""
 
-#: 404.php:15
+#: 404.php:19
 msgid "Go home"
 msgstr ""
 
@@ -615,83 +615,83 @@ msgstr ""
 msgid "Author"
 msgstr ""
 
-#: inc/functions/helper-functions.php:98
+#: inc/functions/helper-functions.php:99
 msgid "Facebook"
 msgstr ""
 
-#: inc/functions/helper-functions.php:99
+#: inc/functions/helper-functions.php:100
 msgid "Flickr"
 msgstr ""
 
-#: inc/functions/helper-functions.php:100
+#: inc/functions/helper-functions.php:101
 msgid "Foursquare"
 msgstr ""
 
-#: inc/functions/helper-functions.php:101
+#: inc/functions/helper-functions.php:102
 msgid "Google+"
 msgstr ""
 
-#: inc/functions/helper-functions.php:102
+#: inc/functions/helper-functions.php:103
 msgid "Instagram"
 msgstr ""
 
-#: inc/functions/helper-functions.php:103
+#: inc/functions/helper-functions.php:104
 msgid "Linkedin"
 msgstr ""
 
-#: inc/functions/helper-functions.php:104
+#: inc/functions/helper-functions.php:105
 msgid "Pinterest"
 msgstr ""
 
-#: inc/functions/helper-functions.php:105
+#: inc/functions/helper-functions.php:106
 msgid "Renren"
 msgstr ""
 
-#: inc/functions/helper-functions.php:106
+#: inc/functions/helper-functions.php:107
 msgid "Skype"
 msgstr ""
 
-#: inc/functions/helper-functions.php:107
+#: inc/functions/helper-functions.php:108
 msgid "Tumblr"
 msgstr ""
 
-#: inc/functions/helper-functions.php:108
+#: inc/functions/helper-functions.php:109
 msgid "Twitter"
 msgstr ""
 
-#: inc/functions/helper-functions.php:109
+#: inc/functions/helper-functions.php:110
 msgid "VK"
 msgstr ""
 
-#: inc/functions/helper-functions.php:110
+#: inc/functions/helper-functions.php:111
 msgid "Weibo"
 msgstr ""
 
-#: inc/functions/helper-functions.php:111
+#: inc/functions/helper-functions.php:112
 msgid "Windows"
 msgstr ""
 
-#: inc/functions/helper-functions.php:112
+#: inc/functions/helper-functions.php:113
 msgid "Xing"
 msgstr ""
 
-#: inc/functions/helper-functions.php:113
+#: inc/functions/helper-functions.php:114
 msgid "YouTube"
 msgstr ""
 
-#: inc/functions/helper-functions.php:178
+#: inc/functions/helper-functions.php:179
 msgid "Search Results for: %s"
 msgstr ""
 
-#: inc/functions/helper-functions.php:184
+#: inc/functions/helper-functions.php:185
 msgid "Year: %s"
 msgstr ""
 
-#: inc/functions/helper-functions.php:187
+#: inc/functions/helper-functions.php:188
 msgid "Month: %s"
 msgstr ""
 
-#: inc/functions/helper-functions.php:190
+#: inc/functions/helper-functions.php:191
 msgid "Day: %s"
 msgstr ""
 
@@ -888,17 +888,17 @@ msgctxt "date at time"
 msgid "%s at %s"
 msgstr ""
 
-#: inc/functions/helper-functions.php:184
+#: inc/functions/helper-functions.php:185
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: inc/functions/helper-functions.php:187
+#: inc/functions/helper-functions.php:188
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: inc/functions/helper-functions.php:190
+#: inc/functions/helper-functions.php:191
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr ""

@@ -1969,7 +1969,8 @@ a {
       width: -moz-calc(100% + 84px);
       width: calc(100% + 84px); }
     .content-area.no-sidebar .entry-block,
-    .content-area.no-sidebar .comments-section {
+    .content-area.no-sidebar .comments-section,
+    .content-area.no-sidebar .charitable-donation-form {
       width: 68%;
       margin-left: auto;
       margin-right: auto; }
@@ -1983,7 +1984,10 @@ a {
   float: none;
   margin: 0;
   width: 100%; }
-  .fullwidth .content-area.no-sidebar .entry-block, .page-template-fullwidth .content-area.no-sidebar .entry-block, body.events-single .content-area.no-sidebar .entry-block {
+  .fullwidth .content-area.no-sidebar .entry-block, .page-template-fullwidth .content-area.no-sidebar .entry-block, body.events-single .content-area.no-sidebar .entry-block,
+  .fullwidth .content-area.no-sidebar .charitable-donation-form,
+  .page-template-fullwidth .content-area.no-sidebar .charitable-donation-form,
+  body.events-single .content-area.no-sidebar .charitable-donation-form {
     width: 100%; }
 
 /*--------------------------------------------------------------

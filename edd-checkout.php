@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * Checkout page template.
  *
