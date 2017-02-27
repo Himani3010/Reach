@@ -94,6 +94,7 @@ Copyright © 2008-2012 Sencha Labs (http://sencha.com)
 
 = 1.0.10 - 27/02/2016 = 
 * Fixed the width of the donation form on campaign pages when no widgets are activated. [#37](https://github.com/Charitable/Reach/issues/37)
+* Fixed the width of the banner on 404 pages. [#35](https://github.com/Charitable/Reach/issues/35)
 
 = 1.0.9 - 13/09/2016 = 
 * Fixed an issue that resulted in 'undefined' being displayed at the bottom of the mobile menu when Charitable is not activated. [#34](https://github.com/Charitable/Reach/issues/34)
