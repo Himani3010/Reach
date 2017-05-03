@@ -4592,6 +4592,9 @@ body.campaign-widget {
   border-top: none;
   border-radius: 0 0 0.4rem 0.4rem;
   box-shadow: 0 0 1px #ffffff; }
+  .campaign-donation-page.stripped #charitable-donation-form .donation-amounts {
+    float: left;
+    width: 100%; }
   @media (min-width: 50em) {
     .campaign-donation-page.stripped #charitable-donation-form {
       float: left;
