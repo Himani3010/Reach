@@ -20,6 +20,6 @@ endif;
 
 ?>
 <div class="campaign-countdown">
-	<span class="countdown" data-enddate='<?php echo esc_attr( $campaign->get_end_date( 'j F Y H:i:s' ) ) ?>'></span>
+	<span class="countdown" data-enddate='<?php echo esc_attr( date( 'j F Y H:i:s', $campaign->get_end_time() ) ) ?>'></span>
 	<span><?php _e( 'Time left to donate', 'reach' ) ?></span>
 </div>

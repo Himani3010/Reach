@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Reach 1.0.11\n"
+"Project-Id-Version: Reach 1.0.12\n"
 "Report-Msgid-Bugs-To: https://www.wpcharitable.com/\n"
-"POT-Creation-Date: 2017-05-03 04:08:08+00:00\n"
+"POT-Creation-Date: 2017-05-04 03:35:18+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -64,19 +64,19 @@ msgstr ""
 msgid "Thank you for supporting this campaign"
 msgstr ""
 
-#: charitable/campaign/share.php:22 partials/campaign-sharing.php:20
+#: charitable/campaign/share.php:22
 msgid "Share"
 msgstr ""
 
-#: charitable/campaign/share.php:42 partials/campaign-sharing.php:40
+#: charitable/campaign/share.php:42
 msgid "Share Campaign"
 msgstr ""
 
-#: charitable/campaign/share.php:44 partials/campaign-sharing.php:42
+#: charitable/campaign/share.php:44
 msgid "Embed Code"
 msgstr ""
 
-#: charitable/campaign/share.php:48 partials/campaign-sharing.php:46
+#: charitable/campaign/share.php:48
 msgid "Preview"
 msgstr ""
 
@@ -84,11 +84,11 @@ msgstr ""
 msgid "Donated"
 msgstr ""
 
-#: charitable/campaign/stats.php:29 partials/campaign-stats.php:23
+#: charitable/campaign/stats.php:29
 msgid "Goal"
 msgstr ""
 
-#: charitable/campaign/stats.php:34 partials/campaign-stats.php:27
+#: charitable/campaign/stats.php:34
 msgid "Donors"
 msgstr ""
 
@@ -100,7 +100,7 @@ msgstr ""
 msgid "Funded"
 msgstr ""
 
-#: charitable/campaign-loop/stats.php:46 partials/campaign-stats.php:19
+#: charitable/campaign-loop/stats.php:46
 msgid "Pledged"
 msgstr ""
 
@@ -807,15 +807,15 @@ msgstr[1] ""
 msgid "Sticky"
 msgstr ""
 
-#: sidebar-download.php:31
+#: sidebar-download.php:29
 msgid "Published:"
 msgstr ""
 
-#: sidebar-download.php:39
+#: sidebar-download.php:37
 msgid "Categories:"
 msgstr ""
 
-#: sidebar-download.php:49
+#: sidebar-download.php:47
 msgid "Tags:"
 msgstr ""
 
@@ -938,21 +938,6 @@ msgstr ""
 #: partials/author-activity.php:37
 msgctxt "user has no activity"
 msgid "%s has no activity to show yet."
-msgstr ""
-
-#: partials/campaign-ended.php:19
-msgctxt "campaign successfully reached its funding goal and ended x time ago"
-msgid "This campaign successfully reached its funding goal and ended %s ago"
-msgstr ""
-
-#: partials/campaign-ended.php:23
-msgctxt "campaign failed to reach its funding goal x time ago"
-msgid "This campaign failed to reach its funding goal %s ago"
-msgstr ""
-
-#: partials/campaign-ended.php:27
-msgctxt "campaign end x time ago"
-msgid "This campaign ended %s ago"
 msgstr ""
 
 #: partials/meta-byline.php:18

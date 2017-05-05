@@ -72,6 +72,4 @@ endif;
 
 <?php
 
-get_template_part( 'partials/campaign', 'share-modal' );
-
 get_footer();

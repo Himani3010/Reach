@@ -92,7 +92,14 @@ Copyright © 2008-2012 Sencha Labs (http://sencha.com)
 
 == Change Log ==
 
-= 1.0.10 - 27/02/2016 = 
+= 1.0.12 - 4/05/2017 = 
+* Switched to using `date_i18n` instead of `date` to ensure months are translated where available.
+* Removed unused templates.
+
+= 1.0.11 - 3/05/2017 = 
+* Fixed styling issue on header above donation amounts on small screens.
+
+= 1.0.10 - 27/02/2017 = 
 * Fixed the width of the donation form on campaign pages when no widgets are activated. [#37](https://github.com/Charitable/Reach/issues/37)
 * Fixed the width of the banner on 404 pages. [#35](https://github.com/Charitable/Reach/issues/35)
 

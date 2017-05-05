@@ -20,12 +20,10 @@ endif;
 		<ul class="download-details-list">
 			<li class="download-details-list-item">
 				<?php
-					$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
-					$time_string = sprintf( $time_string,
-						esc_attr( get_the_date( 'c' ) ),
-						esc_html( get_the_date() ),
-						esc_attr( get_the_modified_date( 'c' ) ),
-						esc_html( get_the_modified_date() )
+					$published   = get_the_date( 'U' );
+					$time_string = sprintf( '<time class="entry-date published" datetime="%1$s">%2$s</time>',
+						esc_attr( date_i18n( 'c', $published ) ),
+						esc_html( date_i18n( get_option( 'date_format' ), $published ) )
 					);
 				?>
 				<span class="download-detail-name"><?php _e( 'Published:', 'reach' ); ?></span>

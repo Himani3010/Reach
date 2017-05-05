@@ -24,7 +24,7 @@ get_header();
 						<?php get_template_part( 'partials/author', 'avatar' ) ?>                        
 						<div class="author-facts">
 							<h2><?php printf( _x( 'About %s', 'about person', 'reach' ), $first_name ) ?></h2>
-							<p><?php printf( __( 'Joined %s', 'reach' ), date( 'F Y', strtotime( $author->user_registered ) ) ) ?></p>
+							<p><?php printf( __( 'Joined %s', 'reach' ), date_i18n( 'F Y', strtotime( $author->user_registered ) ) ) ?></p>
 							<?php echo reach_author_edit_profile_link( $author->ID ) ?>                            
 						</div><!-- .author-facts -->            
 						<div class="author-bio">                
