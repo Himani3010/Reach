@@ -3,8 +3,8 @@ Contributors: WPCharitable, Studio164a
 Donate link: https://www.wpcharitable.com
 Tags: blue, light, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-colors, custom-menu, featured-images, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 4.2
-Tested up to: 4.6.1
-Stable tag: 1.0.9
+Tested up to: 4.8
+Stable tag: 1.0.12
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -92,7 +92,7 @@ Copyright © 2008-2012 Sencha Labs (http://sencha.com)
 
 == Change Log ==
 
-= 1.0.12 - 4/05/2017 = 
+= 1.0.12 - 21/06/2017 = 
 * Switched to using `date_i18n` instead of `date` to ensure months are translated where available.
 * Removed unused templates.
 

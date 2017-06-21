@@ -298,5 +298,5 @@ module.exports = function(grunt) {
 
     grunt.registerTask('buildPalettes', ['sass:palettes', 'copy:classic', 'copy:light', 'copy:dark', 'copy:franklin', 'copy:custom']);
     
-    grunt.registerTask('build', ['sass:dist', 'jshint', 'makepot', 'clean', 'copy:main', 'compress' ]);
+    grunt.registerTask('build', ['sass:dist', 'makepot', 'clean', 'copy:main', 'compress' ]);
 };
