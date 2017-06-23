@@ -11,7 +11,7 @@
 	}
 
 	// Perform other actions on ready event
-	$(document).ready( function() {
+	$( document ).ready( function() {
 		$('html').removeClass('no-js');
 
 		REACH.DropdownMenus.init();
@@ -41,7 +41,7 @@
 		}
 	});
 
-	$(window).resize( function() {
+	$( window ).resize( function() {
 		var REACH_CROWDFUNDING = REACH_CROWDFUNDING || false;
 
 		if ( REACH_CROWDFUNDING && $.fn.masonry ) {
@@ -51,7 +51,7 @@
 		REACH.SidebarPositioning.init();
 	});
 
-	$(window).load( function() {
+	$( window ).on( 'load', function() {
 		if ( REACH_CROWDFUNDING ) {
 
 			if ( $.fn.masonry ) {

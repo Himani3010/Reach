@@ -23,8 +23,6 @@ REACH.HeaderLayout = ( function( $ ) {
                     return style.sheet;
                 })();
 
-
-
             stylesheet.insertRule('@media screen and (min-width: 50em) { .site-navigation { margin-top:' + offset_t + 'px; max-width: -webkit-calc(100% - ' + offset_l + + 'px); max-width: -moz-calc(100% - ' + offset_l + 'px); max-width: calc(100% - ' + offset_l + 'px);) } }', 0);
 
             $.ajax({
@@ -40,10 +38,14 @@ REACH.HeaderLayout = ( function( $ ) {
                     withCredentials: true
                 },
                 success: function ( response ) {
-                    console.log( response );
+                    if ( window.console && window.console.log ) {
+                        console.log( response );
+                    }
                 },
                 error: function( error ) {
-                    console.log( error );
+                    if ( window.console && window.console.log ) {
+                        console.log( error );
+                    }
                 }
             }).fail(function ( response ) {
                 if ( window.console && window.console.log ) {
