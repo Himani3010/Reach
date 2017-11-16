@@ -7,6 +7,10 @@
         padding: 0;
     }
 
+    .shadow-wrapper {
+        width: 100%;
+    }
+
     .layout-wrapper {
         position: relative;
         @include max-width( 1400 );

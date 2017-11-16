@@ -9,16 +9,8 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
 
-/**
- * @var 	Charitable_Campaign
- */
+/* @var Charitable_Campaign */
 $campaign  = $view_args['campaign'];
-
-/**
- * User ID of the campaign creator.
- *
- * @var 	int
- */
 $author_id = $campaign->get_campaign_creator();
 
 ?>
