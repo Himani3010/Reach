@@ -1,4 +1,4 @@
-/*! reach - v1.0.12 - 2017-06-23 */
+/*! reach - v1.0.12 - 2017-11-17 */
 
 /*--------------------------------------------------------
  * REACH is the core object containing all components.

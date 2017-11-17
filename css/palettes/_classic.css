@@ -2496,6 +2496,8 @@ a {
   overflow-x: hidden; }
 .layout-wide .page-template-homepage #main {
   padding: 0; }
+.layout-wide .shadow-wrapper {
+  width: 100%; }
 .layout-wide .layout-wrapper {
   position: relative;
   max-width: 1400px;
