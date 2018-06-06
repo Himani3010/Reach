@@ -53,7 +53,7 @@ if ( have_posts() ) :
 				?>
 			</div><!-- #primary -->
 
-			<?php get_sidebar( 'campaign' ) ?>                  
+			<?php get_sidebar( 'campaign' ) ?>
 
 		</div><!-- .layout-wrapper -->
 		<?php

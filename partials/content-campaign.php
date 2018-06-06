@@ -12,11 +12,11 @@ if ( ! reach_has_charitable() ) :
 endif;
 
 ?>
-<article id="campaign-<?php echo get_the_ID() ?>" <?php post_class( 'campaign-content' ) ?>>
+<article id="campaign-<?php echo get_the_ID(); ?>" <?php post_class( 'campaign-content' ); ?>>
 	<div class="block entry-block">
 		<div class="entry">
-			<h2><?php _e( 'About the Campaign', 'reach' ) ?></h2>
-			<?php the_content() ?>
+			<h2><?php _e( 'About the Campaign', 'reach' ); ?></h2>
+			<?php the_content(); ?>
 		</div>
 	</div>
 </article>
