@@ -239,8 +239,10 @@
             width: 40rem;
         }        
     }
+}
 
-    @include bp( 1422 ) {
+@include bp( 1422 ) {
+    .layout-wide {    
         .campaign-video, 
         .campaign-image {
             @include width( 952 ); // Ensures that the image maxes out at 910

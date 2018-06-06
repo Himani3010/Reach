@@ -4399,18 +4399,18 @@ body.campaign-widget {
     .campaign-summary .campaign-details,
     .campaign-summary .campaign-sharing {
       width: 40rem; } }
-  @media (min-width: 88.875em) {
-    .campaign-summary .campaign-video,
-    .campaign-summary .campaign-image {
-      width: 952px;
-      width: 95.2rem; }
-    .campaign-summary .campaign-details,
-    .campaign-summary .campaign-sharing {
-      float: right;
-      width: -moz-calc(100% - 95.2rem);
-      width: -webkit-calc(100% - 95.2rem);
-      width: calc(100% - 95.2rem); } }
 
+@media (min-width: 88.875em) {
+  .layout-wide .campaign-video,
+  .layout-wide .campaign-image {
+    width: 952px;
+    width: 95.2rem; }
+  .layout-wide .campaign-details,
+  .layout-wide .campaign-sharing {
+    float: right;
+    width: -moz-calc(100% - 95.2rem);
+    width: -webkit-calc(100% - 95.2rem);
+    width: calc(100% - 95.2rem); } }
 .campaign-summary.campaign-has-goal .campaign-stats {
   float: right;
   width: -webkit-calc(100% - 174px);
