@@ -1,4 +1,4 @@
-@media all and (max-width: 38em) {
+@media screen and (max-width: 38em) {
   .entry-block {
     @include padding(10);
   }
