@@ -5340,6 +5340,20 @@ body.user-dashboard .charitable-submit-field {
   font-weight: normal;
   color: #70777c; }
 
+/*--------------------------------------------------------------
+18.1.11 Shortcodes
+--------------------------------------------------------------*/
+@media all and (max-width: 38em) {
+  .entry-block {
+    padding: 10px;
+    padding: 1rem; }
+
+  .charitable-my-donations th, .charitable-my-donations td {
+    padding: 5px;
+    padding: 0.5rem;
+    font-size: 10px;
+    font-size: 1rem;
+    line-height: 1.6; } }
 /*-------------------------------------------------------------- 
 18.2 Easy Digital Downloads
 --------------------------------------------------------------*/
