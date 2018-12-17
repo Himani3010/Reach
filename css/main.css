@@ -768,8 +768,6 @@ input[type="number"],
 input[type="date"],
 input[type="tel"],
 textarea {
-  max-width: 300px;
-  max-width: 30rem;
   width: 100%;
   padding: 14px 10px;
   padding: 1.4rem 1rem;
@@ -805,8 +803,6 @@ textarea {
 select {
   position: relative;
   width: 100%;
-  max-width: 300px;
-  max-width: 30rem;
   padding: 14px 10px;
   padding: 1.4rem 1rem;
   border-width: 1px;
