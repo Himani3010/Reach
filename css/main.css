@@ -3713,6 +3713,7 @@ body > .select2-container--open .select2-dropdown--above {
       display: none; }
   #charitable-donation-form .charitable-form-header,
   #charitable-donation-amount-form .charitable-form-header {
+    float: none;
     left: 0;
     width: 100%;
     margin-top: 0;
