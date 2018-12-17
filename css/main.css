@@ -2004,6 +2004,9 @@ a {
       width: -moz-calc(100% + 84px);
       width: calc(100% + 84px); } }
   @media (min-width: 76.625em) {
+    .layout-boxed.stripped #main {
+      padding: 0px 42px 42px;
+      padding: 0rem 4.2rem 4.2rem; }
     .layout-boxed #header {
       border-radius: 0.4rem 0.4rem 0 0; }
     .layout-boxed #main {
@@ -2506,8 +2509,8 @@ body.page-template-homepage .charitable-campaign-map-marker {
 .stripped .banner {
   margin-bottom: 0; }
 .stripped #main {
-  padding: 0px 42px 42px;
-  padding: 0rem 4.2rem 4.2rem;
+  padding: 0px 0px 42px;
+  padding: 0rem 0rem 4.2rem;
   background-color: #ffffff; }
 .stripped .entry-block {
   background-color: #ffffff;
