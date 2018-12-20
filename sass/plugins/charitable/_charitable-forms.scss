@@ -264,13 +264,13 @@
     .button-primary {
         width: auto;
     }
-
     
-    @media screen and (max-width:38em) { 
-    	.login-username, .login-password {
+    @media screen and (max-width:38.5em) { 
+        .login-username, 
+        .login-password {
         float: none;
         width: 100%;
-        @include padding( 0 );
+        padding: 0;
     }
 }
 }
