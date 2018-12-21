@@ -4950,16 +4950,14 @@ body.user-dashboard .charitable-submit-field {
 /*--------------------------------------------------------------
 18.1.11 Shortcodes
 --------------------------------------------------------------*/
-@media screen and (max-width: 38em) {
+@media screen and (max-width: 37.5em) {
   .entry-block {
-    padding: 10px;
-    padding: 1rem; }
+    padding: 10px; }
 
-  .charitable-my-donations th, .charitable-my-donations td {
+  .charitable-my-donations th,
+  .charitable-my-donations td {
     padding: 5px;
-    padding: 0.5rem;
     font-size: 10px;
-    font-size: 1rem;
     line-height: 1.6; } }
 /*-------------------------------------------------------------- 
 18.2 Easy Digital Downloads
