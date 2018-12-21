@@ -3953,6 +3953,10 @@ body > .select2-container--open .select2-dropdown--above {
     #charitable-donation-amount-form .charitable-form-field .button:active {
       background-color: #7bb4e0;
       color: #ffffff; }
+  #charitable-donation-form .charitable-form-field input[type="checkbox"],
+  #charitable-donation-amount-form .charitable-form-field input[type="checkbox"] {
+    position: relative;
+    z-index: 1; }
 
 #charitable-user-fields {
   border-top: none; }

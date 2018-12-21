@@ -225,20 +225,27 @@
         }
     }   
 
-    .charitable-form-field .button {
-        @include button-inverted();
-        margin: 0;
-        width: auto;
-        @include color( $color__accent );
-        @include border-color( $color__accent );        
+    .charitable-form-field {
+        .button {
+            @include button-inverted();
+            margin: 0;
+            width: auto;
+            @include color( $color__accent );
+            @include border-color( $color__accent );        
+    
+            &:hover, 
+            &:focus, 
+            &:active {
+                @include background-color( $color__accent );
+                @include color( $color__text-overlay );
+            }
+        } 
 
-        &:hover, 
-        &:focus, 
-        &:active {
-            @include background-color( $color__accent );
-            @include color( $color__text-overlay );
+        input[type="checkbox"] {
+            position: relative;
+            z-index: 1;
         }
-    }    
+    }   
 }
 
 #charitable-user-fields {

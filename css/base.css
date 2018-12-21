@@ -3655,6 +3655,10 @@ body > .select2-container--open .select2-dropdown--above {
     #charitable-donation-form .charitable-form-field .button:hover,
     #charitable-donation-amount-form .charitable-form-field .button:hover {
       text-decoration: none; }
+  #charitable-donation-form .charitable-form-field input[type="checkbox"],
+  #charitable-donation-amount-form .charitable-form-field input[type="checkbox"] {
+    position: relative;
+    z-index: 1; }
 
 #charitable-user-fields {
   border-top: none; }
