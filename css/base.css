@@ -3713,6 +3713,9 @@ body > .select2-container--open .select2-dropdown--above {
 #charitable-donation-form-modal #custom-donation-amount-field {
   width: 100%; }
 
+#charitable-donation-form-modal-loop #charitable-donation-form {
+  padding: 0; }
+
 /*--------------------------------------------------------------
 18.1.3 Widgets
 --------------------------------------------------------------*/
