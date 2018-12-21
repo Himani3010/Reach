@@ -59,6 +59,13 @@
 	letter-spacing: 0;
 }
 
+@media screen and (max-width:37.5em) {
+	#page > .layout-wrapper {
+		height: 28px;
+		max-height: 28px;
+	}
+}
+
 /*-------------------------------------------------------------- 
 13.1 Social Networks
 --------------------------------------------------------------*/
