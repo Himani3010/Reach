@@ -255,9 +255,10 @@
 #charitable-user-fields, 
 #charitable-gateway-fields .charitable-gateway-fields {
     position: relative;
+    float: left;
     @include fullwidth-calc( $size__margin-triple );
     @include padding( $size__margin-double, $size__margin-triple );
-    @include background-color( $color__background-content-pop );    
+    @include background-color( $color__background-content );    
 
     select,
     input {
@@ -325,5 +326,12 @@
     
     #custom-donation-amount-field {
         width: 100%;
+    }
+}
+
+@media screen and (max-width:37.5em) {
+    #charitable-donation-form, 
+    #charitable-donation-amount-form {
+        padding: 0;
     }
 }
