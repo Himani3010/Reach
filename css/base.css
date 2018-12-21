@@ -3708,13 +3708,12 @@ body > .select2-container--open .select2-dropdown--above {
     font-size: 1.8rem;
     font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif; }
 
-#charitable-donation-form-modal #charitable-donation-form {
-  padding: 0; }
-#charitable-donation-form-modal #custom-donation-amount-field {
-  width: 100%; }
-
+#charitable-donation-form-modal #charitable-donation-form,
 #charitable-donation-form-modal-loop #charitable-donation-form {
   padding: 0; }
+#charitable-donation-form-modal #custom-donation-amount-field,
+#charitable-donation-form-modal-loop #custom-donation-amount-field {
+  width: 100%; }
 
 /*--------------------------------------------------------------
 18.1.3 Widgets
