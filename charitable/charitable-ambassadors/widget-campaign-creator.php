@@ -1,11 +1,12 @@
 <?php
 /**
  * Display the campaign creator profile.
+ * Add link to creator profile in Campaign Creator widget, since it's removed by default in Charitable Ambassadors
  *
- * Override this template by copying it to yourtheme/charitable/charitable-ambassadors/widget-campaign-creator.php
+ * Override this template by copying it to childtheme/charitable/charitable-ambassadors/widget-campaign-creator.php
  *
  * @author  Studio 164a
- * @since   1.0.0
+ * @since   1.0.12
  */
 
 if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
@@ -30,9 +31,13 @@ if ( ! empty( $widget_title ) ) :
 endif;
 ?>
 <div class="charitable-campaign-creator">
-	<?php echo $creator->get_avatar() ?>
+	<a href="<?php echo get_author_posts_url( $creator->ID ) ?>"><?php echo $creator->get_avatar() ?></a>
 	<div class="creator-summary">
-		<h6 class="creator-name"><?php echo $creator->display_name ?></h6>
+		<h6 class="creator-name">
+            	<a href="<?php echo get_author_posts_url( $creator->ID ) ?>" title="<?php echo esc_attr( sprintf( "%s's %s", $creator->get_name(), __( 'profile', 'charitable-ambassadors' ) ) ) ?>">
+                    <?php echo $creator->display_name ?>
+                </a>
+            </h6>
 		<p><?php printf( _n( '%d campaign', '%d campaigns', $campaigns->post_count, 'charitable-ambassadors' ), $campaigns->post_count ) ?></p>
 	</div>
 	<?php if ( strlen( $creator->description ) ) : ?>
