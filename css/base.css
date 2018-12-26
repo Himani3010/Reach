@@ -3725,7 +3725,10 @@ body > .select2-container--open .select2-dropdown--above {
 @media screen and (max-width: 37.5em) {
   #charitable-donation-form,
   #charitable-donation-amount-form {
-    padding: 0; } }
+    padding: 0; }
+
+  #charitable-gateway-fields .charitable-gateway-fields {
+    width: 100%; } }
 /*--------------------------------------------------------------
 18.1.3 Widgets
 --------------------------------------------------------------*/
