@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
 $campaign = charitable_get_current_campaign();
 
 ?>
-<div id="campaign-<?php echo get_the_ID() ?>" class="campaign-widget campaign block cf">    
+<li id="campaign-<?php echo get_the_ID() ?>" <?php post_class( array( 'campaign-widget', 'campaign', 'block', 'cf' ) ) ?>>    
 	<?php
 
 	/**
@@ -47,4 +47,4 @@ $campaign = charitable_get_current_campaign();
 	do_action( 'charitable_campaign_content_loop_after', $campaign );
 
 	?>
-</div>
+</li>

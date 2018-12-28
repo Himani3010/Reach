@@ -21,9 +21,9 @@ if ( ! $campaigns->have_posts() ) :
 endif;
 
 if ( $columns > 1 ) :
-	$loop_class = sprintf( 'campaign-loop campaigns-grid masonry-grid campaign-grid-%d', $columns );
+	$loop_class = sprintf( 'campaign-loop campaign-grid campaign-grid-%d', $columns );
 else :
-	$loop_class = 'campaign-loop campaigns-grid masonry-grid';
+	$loop_class = 'campaign-loop campaign-grid';
 endif;
 
 /**
@@ -31,7 +31,7 @@ endif;
  */
 do_action( 'charitable_campaign_loop_before', $campaigns, $args );
 ?>
-<div class="<?php echo $loop_class ?>">                           
+<ol class="<?php echo $loop_class ?>">                           
 	
 <?php
 
@@ -51,7 +51,7 @@ endwhile;
 wp_reset_postdata();
 
 ?>
-</div>
+</ol>
 <?php
 /**
  * @hook charitable_campaign_loop_after
