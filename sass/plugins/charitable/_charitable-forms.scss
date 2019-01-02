@@ -1,11 +1,11 @@
 .charitable-form {
-    input[type=text], 
-    input[type=password], 
+    input[type=text],
+    input[type=password],
     input[type=email],
     input[type=url],
     input[type=number],
     input[type=date],
-    textarea, 
+    textarea,
     select {
         max-width: 100%;
         width: 100%;
@@ -14,12 +14,12 @@
     @include font-size();
 }
 
-.charitable-form-fields {   
-    .charitable-form-field { 
+.charitable-form-fields {
+    .charitable-form-field {
         clear: left;
-        @include bp( 600 ) {    
+        @include bp( 600 ) {
             float: left;
-            width: 50%;        
+            width: 50%;
 
             ~ .charitable-form-field {
                 clear: none;
@@ -46,7 +46,7 @@
         width: 100%;
         @include padding( 0, 0, $size__margin-double );
         @include margin-bottom( $size__margin-double );
-        border: none;    
+        border: none;
 
         &:before {
             content: "";
@@ -64,7 +64,7 @@
             clear: both;
             @include left( 24 );
             margin: 0;
-            @include padding( 0, $size__margin, 24 );      
+            @include padding( 0, $size__margin, 24 );
             @include font-size( 18 );
             font-weight: normal;
             @include color( $color__accent );
@@ -72,7 +72,7 @@
         }
 
         .charitable-fieldset {
-            margin-bottom: 0;       
+            margin-bottom: 0;
             padding: 0;
             @include border-top( 1 );
 
@@ -123,13 +123,13 @@
     }
 }
 
-.charitable-repeatable-form-field-table {   
+.charitable-repeatable-form-field-table {
     .repeatable-field:nth-child(odd) {
         @include background-color( $color__background-wrapper );
 
         input, select, textarea {
             @include background-color( $color__background-content );
-            @include border( 1 );            
+            @include border( 1 );
         }
         input[type=file] {
             background-color: transparent;
@@ -152,9 +152,9 @@
         background-color: transparent;
     }
 
-    td {        
+    td {
         @include border-top( 1 );
-    }   
+    }
 
     tbody td {
         background-color: transparent;
@@ -174,11 +174,11 @@
         box-shadow: none;
         color: transparent;
 
-        &:before {  
-            @include icon;      
+        &:before {
+            @include icon;
             content: "\f057";
             float: right;
-            @include color( $color__text );         
+            @include color( $color__text );
         }
 
         &:hover {
@@ -188,7 +188,7 @@
                 @include color( $color__accent );
             }
         }
-    }   
+    }
 
     .add-row {
         font-style: italic;
@@ -211,7 +211,7 @@
 }
 
 @include bp( 600 ) {
-    #charitable-campaign-suggested-donations {  
+    #charitable-campaign-suggested-donations {
         .charitable-form-field.odd {
             width: 25%;
         }
@@ -219,18 +219,18 @@
         .charitable-form-field.even {
             width: 75%;
         }
-    }   
+    }
 }
 
-.charitable-form-field.charitable-form-field-multi-checkbox { 
+.charitable-form-field.charitable-form-field-multi-checkbox {
     ul {
         width: 100%;
         @include padding( 10 );
-        margin: 0;      
-        list-style-type: none;      
+        margin: 0;
+        list-style-type: none;
         @include background-color( $color__background-form-fields );
         @include clearfix;
-    }   
+    }
 
     li {
         float: left;
@@ -264,6 +264,15 @@
     .button-primary {
         width: auto;
     }
+
+    @media screen and (max-width:37.5em) {
+        .login-username,
+        .login-password {
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+}
 }
 
 .charitable-submit-field {
@@ -275,22 +284,22 @@
 .charitable-notice {
     @include padding( 12 );
     @include margin-bottom( 24 );
-    @include border( 1 );    
+    @include border( 1 );
     @include background-color( $color__background-form-fields );
     @include color( $color__text-dark );
-    
+
     .errors {
         list-style: none;
         padding: 0;
         margin: 0;
 
         ul {
-            padding-left: 0;            
+            padding-left: 0;
 
             li {
                 list-style: disc;
                 @include margin-bottom( 6 );
-            }   
+            }
 
             a {
                 @include color( $color__accent );
@@ -305,7 +314,7 @@
 
 /* Recipient selection */
 
-#charitable_field_recipient {    
+#charitable_field_recipient {
     float: left;
     width: 100%;
     @include padding( 24 );
@@ -357,7 +366,7 @@
 
 .charitable-campaign-recipient-search {
     float: left;
-    width: 100%; 
+    width: 100%;
 
     .select2-container {
         display: block;
@@ -378,13 +387,13 @@
             @include top( 12 );
             @include right( 12 );
             @include width( 8 );
-        }              
+        }
 
         .select2-selection--single {
             .select2-selection__rendered {
                 padding-left: 0;
-            } 
-        } 
+            }
+        }
 
         &.select2-container--open.select2-container--above {
             // padding-top: 0;
@@ -395,7 +404,7 @@
         &.select2-container--open.select2-container--below {
             // padding-bottom: 0;
             border-bottom: 0;
-            border-radius: 0.4rem 0.4rem 0 0;    
+            border-radius: 0.4rem 0.4rem 0 0;
         }
     }
 }
@@ -409,20 +418,20 @@
         margin: 0 auto;
         @include padding( 24 );
         @include border();
-        background-color: #fff;        
+        background-color: #fff;
         // border: 1px solid #e2dedb;
-        border-radius: 0.4rem;        
+        border-radius: 0.4rem;
     }
 }
 
 body > .select2-container--open {
     .select2-dropdown {
         @include border-color( $color__border-primary );
-        border-style: solid; 
+        border-style: solid;
 
         .select2-search--dropdown {
             padding: 0;
-        }   
+        }
 
         .select2-search__field {
             @include padding( 12 );
@@ -451,7 +460,7 @@ body > .select2-container--open {
     .select2-dropdown--above {
         @include padding( 12, 12, 6 );
         @include border-width( 2, 2, 0 );
-    }    
+    }
 }
 
 @import "donation-form";
