@@ -3529,6 +3529,12 @@ embed {
     padding-bottom: 0.3rem; }
   .charitable-login-form .button-primary {
     width: auto; }
+  @media screen and (max-width: 37.5em) {
+    .charitable-login-form .login-username,
+    .charitable-login-form .login-password {
+      float: none;
+      width: 100%;
+      padding: 0; } }
 
 .charitable-submit-field .button {
   width: auto; }
