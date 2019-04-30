@@ -1,4 +1,4 @@
-/*! reach - v1.0.12 - 2017-11-17 */
+/*! reach - v1.0.12 - 2019-04-30 */
 
 /*--------------------------------------------------------
  * REACH is the core object containing all components.
@@ -176,10 +176,15 @@ REACH.Countdown = ( function( $ ) {
 ---------------------------------------------------------*/
 REACH.Grid = ( function( $ ) {
 
-	var $grids = $('.masonry-grid');
+	var $grids = $('.campaign-grid');
 
 	var initGrid = function($grid) {
-		$grid.masonry();
+		$grid.masonry({
+			itemSelector: '.campaign',
+			horizontalOrder: true,
+			// fitWidth: true,
+			// gutter: 28
+		});
 	};
 
 	return {
@@ -191,18 +196,18 @@ REACH.Grid = ( function( $ ) {
 					initGrid( $(this) );
 				});
 			}
-						
-		}, 
+
+		},
 
 		getGrids : function() {
 			return $grids;
-		}, 
+		},
 
 		resizeGrid : function() {
 			$grids.each( function(){
 				initGrid( $(this) );
 			})
-		}			
+		}
 	}
 })( jQuery );
 

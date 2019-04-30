@@ -37,7 +37,7 @@
     }
 
     .site-navigation {
-        @include top( 5 - ($size__margin-double * 2) );
+        @include top( $size__margin-double * -2 + 5 );
 
         @include bp( 600 ) {
             top: auto;

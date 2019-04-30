@@ -58,6 +58,12 @@
     }
 
     @include bp( 1226 ) {
+        &.stripped {
+            #main {
+                @include padding( 0, $size__margin-triple, $size__margin-triple );
+            }
+        }
+
          #header {
             border-radius: 0.4rem 0.4rem 0 0;
         }
