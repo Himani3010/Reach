@@ -1,12 +1,12 @@
-.social {   
+.social {
     float: left;
     padding-left: 0;
-    @include margin( $size__margin, 0 );    
+    margin: 0;
     text-align: left;
 
     li {
         display: inline-block;
-        @include margin( 0, $size__margin, 0, 0 );          
+        @include margin( 0, $size__margin, 0, 0 );
     }
 
     a {
@@ -14,16 +14,16 @@
         &:hover {
             text-decoration: none;
         }
-    }   
+    }
 
     i {
         @include font-size( 18 );
         @include line-height( 32 );
     }
 
-    // @include bp( 600 ) {
-    //      // float: left;
-    // }
+    @include bp( 600 ) {
+        @include margin( $size__margin, 0 );
+    }
 
     @include bp( 1400 ) {
         padding-left: 0;

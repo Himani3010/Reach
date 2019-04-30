@@ -10,44 +10,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! function_exists( 'reach_crowdfunding_campaign_nav' ) ) :
-
-	/**
-	 * The callback function for the campaigns navigation
-	 *
-	 * @param   bool $echo
-	 * @return  string
-	 * @since   1.0.2
-	 */
-	function reach_crowdfunding_campaign_nav( $echo = true ) {
-		$categories = get_categories( array(
-			'taxonomy' => 'campaign_category',
-			'orderby'  => 'name',
-			'order'    => 'ASC',
-		) );
-
-		if ( empty( $categories ) ) {
-			return;
-		}
-
-		$html = sprintf( '<ul class="menu menu-site"><li class="campaign_category with-icon" data-icon="&#xf02c;">%s', __( 'Categories', 'reach' ) );
-		$html .= sprintf( '<ul><li><a href="%s">%s</a></li>', get_post_type_archive_link( 'campaign' ), __( 'All', 'reach' ) );
-
-		foreach ( $categories as $category ) {
-			$html .= sprintf( '<li><a href="%s">%s</a></li>', esc_url( get_term_link( $category ) ), $category->name );
-		}
-
-		$html .= '</li></ul>';
-
-		if ( false === $echo ) {
-			return $html;
-		}
-
-		echo $html;
-	}
-
-endif;
-
 if ( ! function_exists( 'reach_campaign_ended_text' ) ) :
 
 	/**
