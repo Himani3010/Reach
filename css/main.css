@@ -1007,8 +1007,8 @@ a {
 /* .site-navigation is the main navigation */
 .site-navigation {
   position: absolute;
-  top: -25px;
-  top: -2.5rem;
+  top: -24px;
+  top: -2.4rem;
   right: 0;
   z-index: 1000;
   height: 0;
@@ -1738,11 +1738,12 @@ a {
   line-height: 1em;
   letter-spacing: 0; }
 
-@media screen and (max-width: 37.5em) {
+@media (max-width: 37.5em) {
   #page > .layout-wrapper {
     height: 28px;
-    max-height: 28px; } }
-/*-------------------------------------------------------------- 
+    height: 2.8rem;
+    overflow: hidden; } }
+/*--------------------------------------------------------------
 13.1 Social Networks
 --------------------------------------------------------------*/
 .social {
@@ -1771,10 +1772,7 @@ a {
     .social {
       padding-left: 0; } }
 
-@media screen and (max-width: 37.5) {
-  .social {
-    margin: 0; } }
-/*-------------------------------------------------------------- 
+/*--------------------------------------------------------------
 13.2 Account Links
 --------------------------------------------------------------*/
 .account-links {
@@ -2072,8 +2070,8 @@ a {
       margin-left: 700px;
       margin-left: 70rem; } }
 .layout-wide .site-navigation {
-  top: -54px;
-  top: -5.4rem; }
+  top: -51px;
+  top: -5.1rem; }
   @media (min-width: 37.5em) {
     .layout-wide .site-navigation {
       top: auto; } }
