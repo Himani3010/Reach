@@ -26,7 +26,6 @@ input[type="number"],
 input[type="date"],
 input[type="tel"],
 textarea {
-	@include max-width( 300 );
 	width: 100%;
 	@include padding( $size__margin, 10 );
 	margin-top: 0;
@@ -54,7 +53,6 @@ textarea {
 select {	
 	position: relative;
 	width: 100%;
-	@include max-width( 300 );
 	@include padding( $size__margin, 10 );	
 	@include border( 1, $color__border-input );
 	border-radius: 0.2rem;

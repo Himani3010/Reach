@@ -1,4 +1,4 @@
-// Add a breakpoint. 
+// Add a breakpoint.
 @mixin bp($point, $min : true) {
 	$bp : em($point);
 

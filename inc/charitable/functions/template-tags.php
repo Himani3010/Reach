@@ -6,7 +6,9 @@
  * @category    Functions
  */
 
-if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 if ( ! function_exists( 'reach_crowdfunding_campaign_nav' ) ) :
 
@@ -267,4 +269,18 @@ if ( ! function_exists( 'reach_template_campaign_media_before_content' ) ) :
 		}
 	}
 
+endif;
+
+if ( ! function_exists( 'charitable_template_responsive_styles' ) ) :
+	/**
+	 * Remove responsive
+	 *
+	 * @since  1.4.0
+	 *
+	 * @param  WP_Query $campaigns The campaigns that will be displayed.
+	 * @param  array    $args      The view arguments.
+	 * @return void
+	 */
+	function charitable_template_responsive_styles( $campaigns, $args ) {
+	}
 endif;
