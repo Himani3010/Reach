@@ -1,11 +1,10 @@
 @mixin colour( $property, $colour ) {
-    $include_colours: 1 !default; 
-    
+    $include_colours: 1 !default;
+
     @if $include_colours == 1 {
         #{$property} : #{$colour};
     }
 
-    @extend %#{$property}#{unquote("-") + $colour} !optional;    
 }
 
 @mixin color( $colour ) {
@@ -38,7 +37,7 @@
     }
 }
 
-/*-------------------------------------------------------------- 
+/*--------------------------------------------------------------
 0.1 Palette
 --------------------------------------------------------------*/
 $placeholders : ();
@@ -48,7 +47,7 @@ $placeholders : ();
     @if index($placeholders, $name) == null {
         @return false;
     }
- 
+
     @return true;
 }
 
@@ -58,16 +57,16 @@ $placeholders : ();
 @function register-placeholder($name) {
     @if placeholder-exists($name) == false {
         $placeholders: append($placeholders, $name) !global;
-    }  
- 
+    }
+
     @return $name;
 }
- 
+
 // Defines a placeholder.
 @mixin define-placeholder($name) {
     %#{$name} {
         $name: register-placeholder($name);
- 
+
         @content;
     }
 }
@@ -75,7 +74,7 @@ $placeholders : ();
 // Finally, register all our placeholders
 $is_palette_stylesheet : 0 !default;
 @if $is_palette_stylesheet == 1 {
-    @each $colour in 
+    @each $colour in
         $color__background-body,
         $color__background-wrapper,
         $color__background-screen,
@@ -97,9 +96,9 @@ $is_palette_stylesheet : 0 !default;
         $color__border-secondary,
         $color__success,
         $color__failure {
-        @each $prop in 
-            color, 
-            background-color, 
+        @each $prop in
+            color,
+            background-color,
             border-color,
             border-top-color,
             border-right-color,
@@ -107,7 +106,7 @@ $is_palette_stylesheet : 0 !default;
             border-left-color {
                 @include define-placeholder( #{$prop}#{unquote("-") + $colour} ) {
                     #{$prop} : #{$colour};
-            }            
+            }
         }
     }
-}    
+}

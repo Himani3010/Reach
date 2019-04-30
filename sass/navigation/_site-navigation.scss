@@ -1,12 +1,12 @@
 /* .site-navigation is the main navigation */
 .site-navigation {
     position: absolute;
-    @include top( 5 - $size__margin-double  );
+    @include top( $size__margin-double * -1 + 4 );
     right: 0;
     z-index: 1000;
-    height: 0;  
+    height: 0;
     width: 100%;
-    
+
     li:last-child {
         @include border-bottom( 2, $color__background-button );
     }
@@ -15,9 +15,12 @@
         position: absolute;
         z-index: 600;
         right: 0;
-        @include padding( 0, $size__margin-double, 0, 0 );        
         text-align: center;
         @include color( $color__text-overlay );
+
+        @include bp(600) {
+            @include padding( 0, $size__margin-double, 0, 0 );
+        }
 
         &:before {
             content: "\f00b";
@@ -28,10 +31,10 @@
             text-transform: none;
             line-height: 1;
             -webkit-font-smoothing: antialiased;
-        }        
-    }       
+        }
+    }
 
-    &.toggled {        
+    &.toggled {
         .menu-button:before {
             content: "\f00d";
         }
@@ -52,13 +55,13 @@
 
             a {
                 @include color( $color__text-overlay );
-                
+
                 &:hover {
                     color: rgba( 255, 255, 255, 0.8 );
                 }
             }
         }
-    } 
+    }
 
     .account-links {
         display: block;
@@ -70,14 +73,14 @@
             display: inline-block;
             @include margin( $size__margin, $size__margin - 4, 0, 0 );
             @include background-color( $color__background-button );
-        }   
+        }
 
         .logout {
             float: none;
-            @include padding( $size__margin, 0, $size__margin, $size__margin+4 );            
+            @include padding( $size__margin, 0, $size__margin, $size__margin+4 );
             margin: 0;
-            text-align: left;            
-            text-indent: 0;            
+            text-align: left;
+            text-indent: 0;
             @include color( $color__text );
             @include font-size( $font__font-size-small );
             line-height: 2em;
@@ -98,7 +101,7 @@
 
         &.toggled .menu-site {
             border-top-width: 0.3rem;
-        }        
+        }
 
         .menu-button {
             @include right( 0 );
@@ -107,7 +110,7 @@
             height: auto;
             line-height: 1em;
             color: $color__text;
-        }        
+        }
 
         .account-links {
             display: none;
@@ -117,32 +120,32 @@
     @include bp( 800 ) {
         position: static;
         float: right;
-        text-align: right;          
+        text-align: right;
         box-shadow: none;
         height: auto;
         clear: none;
         width: auto;
-        max-width: 75%;        
-        
+        max-width: 75%;
+
         /* Just adding this for added specifity */
         &.wrapper {
             background: transparent;
-        }       
+        }
 
-        .menu-site {        
+        .menu-site {
             height: auto;
             width: auto;
             margin: 0;
             border-top: 0;
             overflow: visible;
 
-            li {                
+            li {
                 text-indent: 0;
 
                 &:last-child {
                     border-bottom: 0;
                 }
-            }            
+            }
 
             > li {
                 @include padding( 0, 0, $size__margin, $size__margin );
@@ -152,7 +155,7 @@
                     padding-right: 0;
                 }
             }
-            
+
             > li.hovering:last-child ul {
                 @include right( -18 );
                 left: auto;
@@ -162,19 +165,19 @@
                 @include margin-top( 9 );
                 padding-top: 0;
                 border-top: 0;
-                border-radius: 0 0 0.4rem 0.4rem;   
-            }   
+                border-radius: 0 0 0.4rem 0.4rem;
+            }
 
             ul ul {
                 @include margin( -9, 0, 0, 194 );
             }
 
             > li:nth-last-of-type(2) ul ul,
-            > li:nth-last-of-type(1) ul ul, 
+            > li:nth-last-of-type(1) ul ul,
             ul ul ul {
                 @include margin-left( -197 ); // We go backwards
             }
-        }           
+        }
 
         .current_page_item > a,
         .current-menu-item > a,
