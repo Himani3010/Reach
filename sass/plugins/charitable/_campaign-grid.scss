@@ -1,3 +1,43 @@
+@mixin grid-2() {
+	.campaign.hentry {
+		width: 48%;
+		margin-right: 1.9%;
+		@include margin-bottom( $size__margin-double );
+
+		&:nth-child(2n+2) {
+			margin-right: 0;
+		}
+	}
+}
+
+@mixin grid-3() {
+	.campaign.hentry {
+		width: 31.33%;
+
+		&:nth-child(2n+2) {
+			margin-right: 1.9%;
+		}
+
+		&:nth-child(3n+3) {
+			margin-right: 0;
+		}
+	}
+}
+
+@mixin grid-4() {
+	.campaign.hentry {
+		width: 23.1%;
+
+		&:nth-child(3n+3) {
+			margin-right: 1.9%;
+		}
+
+		&:nth-child(4n+4) {
+			margin-right: 0;
+		}
+	}
+}
+
 .campaigns-grid-wrapper {
 	position: relative;
 	float: left;
@@ -6,8 +46,8 @@
 
 	@include bp( 800 ) {
 		padding-right: 0;
-		padding-left: 0;		
-	}	
+		padding-left: 0;
+	}
 
 	.section-title {
 		margin-top: 0;
@@ -16,58 +56,51 @@
 	.campaign.block {
 		max-width: 100%;
 		@include margin-bottom( $size__margin-double );
-		border: none;	
+		border: none;
 		overflow: hidden;
+	}
+
+	.campaign-loop.campaign-grid {
+		@include bp( 600 ) {
+			width: 102%;
+			@include grid-2();
+		}
+		@include bp( 920 ) {
+			width: 104%;
+			@include grid-3();
+		}
+		@include bp( 1500 ) {
+			@include grid-4();
+		}
 	}
 }
 
-.campaigns-grid {	
-	.campaign {		
+.campaign-loop.campaign-grid {
+	.campaign.hentry {
+		display: block;
+		width: 100%;
 		max-width: 100%;
-		@include margin-bottom( $size__margin-double );
 		border: none;
 		@include color( $color__border-primary ); // box-shadow will fall back to using this as the colour
 		box-shadow: 0 0 0 1px;
-	}	
-	
+	}
+
 	@include bp( 600 ) {
-		width: 102%;
-
 		.campaign {
-			width: 48%;
-			margin-right: 1.9%;
 			border: none !important;
-			@include padding( 0, $size__margin );
-
-			&:nth-child(2n+2) {
-				margin-right: 0;
-			}
 
 			&:nth-child(2n+3) {
 				clear: left;
 			}
-		}		
+		}
 	}
 
 	@include bp( 920 ) {
-		width: 104%;
-		
 		.campaign {
-			width: 30.7692308%;
-			margin-right: 1.9230769%;
-
-			&:nth-child(2n+2) {
-				margin-right: 1.9230769%;
-			}
-
-			&:nth-child(3n+3) {
-				margin-right: 0;
-			}
-			
 			&:nth-child(2n+3) {
 				clear: none;
 			}
-		
+
 			&:nth-child(3n+4) {
 				clear: left;
 			}
@@ -75,14 +108,42 @@
 	}
 }
 
-.campaigns-navigation {	
-	float: left;
-	clear: both;
-	height: 0;	
-	width: 100%;
-	text-align: right;
+.campaign-grid.campaign-loop,
+.campaign-grid.masonry {
+	-moz-column-gap: unset;
+	-webkit-column-gap: unset;
+	column-gap: unset;
+	column-count: unset;
 
-	&.is-active .menu {
-		@include margin-top( $size__margin );
+	.campaign.hentry {
+		@include padding( $size__margin, $size__margin, 0, $size__margin );
+
+		&.has-post-thumbnail {
+			padding-top: 0;
+		}
 	}
+
+	@include bp( 600 ) {
+		@include grid-2();
+	}
+
+	@include bp( 920 ) {
+		@include grid-3();
+	}
+
+	@include bp( 1500 ) {
+		@include grid-4();
+	}
+}
+
+.campaign-grid.campaign-grid-2 {
+	@include grid-2();
+}
+
+.campaign-grid.campaign-grid-3 {
+	@include grid-3();
+}
+
+.campaign-grid.campaign-grid-4 {
+	@include grid-4();
 }

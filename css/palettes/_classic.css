@@ -4336,51 +4336,26 @@ body > .select2-container--open .select2-dropdown--above {
   padding-bottom: 14px;
   padding-bottom: 1.4rem; }
   .widget.widget_charitable_donors_widget .donors-list {
-    margin: 0; }
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; }
     .widget.widget_charitable_donors_widget .donors-list .donor-name {
       font-size: 14px;
       font-size: 1.4rem;
       line-height: 22px;
       line-height: 2.2rem; }
     .widget.widget_charitable_donors_widget .donors-list .donor {
-      float: left;
       width: 100px;
       width: 10rem;
       padding: 0px 14px 0px 0px;
       padding: 0rem 1.4rem 0rem 0rem;
       border: none; }
-      .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(6n+7) {
-        clear: left; }
     .widget.widget_charitable_donors_widget .donors-list .donor-name,
     .widget.widget_charitable_donors_widget .donors-list .donor-location,
     .widget.widget_charitable_donors_widget .donors-list .donor-donation-amount {
       margin: 0px 0px 7px;
       margin: 0rem 0rem 0.7rem;
       padding: 0; }
-    @media (max-width: 25.625em) {
-      .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(2n+3) {
-        clear: left; } }
-    @media (min-width: 25.6875em) and (max-width: 31.875em) {
-      .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(3n+4) {
-        clear: left; } }
-    @media (min-width: 31.9375em) and (max-width: 38.125em) {
-      .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(4n+5) {
-        clear: left; } }
-    @media (min-width: 38.1875em) and (max-width: 44.9375em) {
-      .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(5n+6) {
-        clear: left; } }
-    @media (min-width: 45em) and (max-width: 48.375em) {
-      .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(3n+4) {
-        clear: left; } }
-    @media (min-width: 48.4375em) and (max-width: 59.0625em) {
-      .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(4n+5) {
-        clear: left; } }
-    @media (min-width: 59.125em) and (max-width: 68.3125em) {
-      .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(5n+6) {
-        clear: left; } }
-    @media (max-width: 68.3125em) {
-      .widget.widget_charitable_donors_widget .donors-list .donor:nth-child(6n+7) {
-        clear: none; } }
 
 .widget.widget_charitable_edd_campaign_downloads {
   background: transparent;
