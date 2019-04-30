@@ -9,37 +9,31 @@
 
 get_header();
 
-?>  
-<main id="main" class="site-main site-content cf">  
+?>
+<main id="main" class="site-main site-content cf">
 	<div class="layout-wrapper">
 		<div id="primary" class="content-area no-sidebar">
 			<?php
-
 			get_template_part( 'partials/banner' );
-
 			?>
-			<div class="campaigns-grid-wrapper">                                
-				<nav class="campaigns-navigation" role="navigation">
-					<a class="menu-toggle menu-button toggle-button" aria-controls="menu" aria-expanded="false"></a>
-					<?php reach_crowdfunding_campaign_nav() ?>              
-				</nav>
+			<div class="campaigns-grid-wrapper">
 				<?php
 
 				/**
 				 * This renders a loop of campaigns that are displayed with the
 				 * `reach/charitable/campaign-loop.php` template file.
 				 *
-				 * @see 	charitable_template_campaign_loop()
+				 * @see charitable_template_campaign_loop
 				 */
-				charitable_template_campaign_loop( false, 3 );
+				charitable_template_campaign_loop( false );
 
 				reach_paging_nav( __( 'Older Campaigns', 'reach' ), __( 'Newer Campaigns', 'reach' ) );
 
 				?>
 			</div><!-- .campaigns-grid-wrapper -->
-		</div><!-- #primary -->            
+		</div><!-- #primary -->
 	</div><!-- .layout-wrapper -->
-</main><!-- #main -->   
+</main><!-- #main -->
 <?php
 
 get_footer();

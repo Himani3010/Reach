@@ -29,9 +29,9 @@
 			<header id="header" class="cf site-header">
 				<div class="layout-wrapper">
 					<div class="site-branding site-identity">
-						<?php reach_site_identity() ?>					
+						<?php reach_site_identity() ?>
 					</div><!-- .site-branding -->
-					<nav class="site-navigation">		
+					<nav class="site-navigation">
 						<a class="menu-toggle menu-button toggle-button" aria-controls="primary-navigation" aria-expanded="false"></a>
 						<?php wp_nav_menu( array(
 							'theme_location' 	=> 'primary_navigation',

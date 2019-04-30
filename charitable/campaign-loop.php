@@ -10,11 +10,13 @@
  * @version 1.0.3
  */
 
-if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 $campaigns = $view_args['campaigns'];
 $columns   = $view_args['columns'];
-$args 	   = array();
+$args      = array();
 
 if ( ! $campaigns->have_posts() ) :
 	return;
@@ -31,8 +33,7 @@ endif;
  */
 do_action( 'charitable_campaign_loop_before', $campaigns, $args );
 ?>
-<ol class="<?php echo $loop_class ?>">                           
-	
+<ol class="<?php echo $loop_class; ?>">
 <?php
 
 while ( $campaigns->have_posts() ) :
@@ -41,8 +42,6 @@ while ( $campaigns->have_posts() ) :
 
 	/**
 	 * Loads `reach/charitable/campaign-loop/campaign.php`
-	 *
-	 * @uses 	charitable_template()
 	 */
 	charitable_template( 'campaign-loop/campaign.php', $args );
 

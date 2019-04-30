@@ -54,7 +54,7 @@ caption, th, td {
 	font-weight: normal;
 	text-align: left;
 }
-blockquote:before, 
+blockquote:before,
 blockquote:after {
 	content: "";
 	content: none;
@@ -63,11 +63,11 @@ blockquote, q {
 	content: "";
 	quotes: none;
 }
-q:before { 
-	content: "\201C"; 
+q:before {
+	content: "\201C";
 }
-q:after { 
-	content: "\201D"; 
+q:after {
+	content: "\201D";
 }
 a:focus {
 	outline: thin dotted;

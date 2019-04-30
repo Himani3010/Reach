@@ -32,7 +32,7 @@ and Blueprint http://www.blueprintcss.org/
 /* Text colour */
 /* Borders */
 /* Miscellaneous */
-/*-------------------------------------------------------------- 
+/*--------------------------------------------------------------
 0.1 Palette
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -2472,12 +2472,12 @@ body.page-template-homepage .entry {
   body.page-template-homepage .entry .button {
     margin: 14px 3px 0px;
     margin: 1.4rem 0.3rem 0rem; }
-body.page-template-homepage .campaigns-grid {
+body.page-template-homepage .campaign-grid {
   font-size: 14px;
   font-size: 1.4rem;
   line-height: 24px;
   line-height: 2.4rem; }
-  body.page-template-homepage .campaigns-grid .block-title {
+  body.page-template-homepage .campaign-grid .block-title {
     text-transform: uppercase; }
 body.page-template-homepage .charitable-campaign-map-marker {
   font-size: 14px;
@@ -4441,41 +4441,116 @@ body.campaign-widget {
     margin-bottom: 2.8rem;
     border: none;
     overflow: hidden; }
+  @media (min-width: 37.5em) {
+    .campaigns-grid-wrapper .campaign-loop.campaign-grid {
+      width: 102%; }
+      .campaigns-grid-wrapper .campaign-loop.campaign-grid .campaign.hentry {
+        width: 48%;
+        margin-right: 1.9%;
+        margin-bottom: 28px;
+        margin-bottom: 2.8rem; }
+        .campaigns-grid-wrapper .campaign-loop.campaign-grid .campaign.hentry:nth-child(2n+2) {
+          margin-right: 0; } }
+  @media (min-width: 57.5em) {
+    .campaigns-grid-wrapper .campaign-loop.campaign-grid {
+      width: 104%; }
+      .campaigns-grid-wrapper .campaign-loop.campaign-grid .campaign.hentry {
+        width: 31.33%; }
+        .campaigns-grid-wrapper .campaign-loop.campaign-grid .campaign.hentry:nth-child(2n+2) {
+          margin-right: 1.9%; }
+        .campaigns-grid-wrapper .campaign-loop.campaign-grid .campaign.hentry:nth-child(3n+3) {
+          margin-right: 0; } }
+  @media (min-width: 93.75em) {
+    .campaigns-grid-wrapper .campaign-loop.campaign-grid .campaign.hentry {
+      width: 23.1%; }
+      .campaigns-grid-wrapper .campaign-loop.campaign-grid .campaign.hentry:nth-child(3n+3) {
+        margin-right: 1.9%; }
+      .campaigns-grid-wrapper .campaign-loop.campaign-grid .campaign.hentry:nth-child(4n+4) {
+        margin-right: 0; } }
 
-.campaigns-grid .campaign {
+.campaign-loop.campaign-grid .campaign.hentry {
+  display: block;
+  width: 100%;
   max-width: 100%;
-  margin-bottom: 28px;
-  margin-bottom: 2.8rem;
   border: none;
   color: #e3e5e6;
   box-shadow: 0 0 0 1px; }
 @media (min-width: 37.5em) {
-  .campaigns-grid {
-    width: 102%; }
-    .campaigns-grid .campaign {
+  .campaign-loop.campaign-grid .campaign {
+    border: none !important; }
+    .campaign-loop.campaign-grid .campaign:nth-child(2n+3) {
+      clear: left; } }
+@media (min-width: 57.5em) {
+  .campaign-loop.campaign-grid .campaign:nth-child(2n+3) {
+    clear: none; }
+  .campaign-loop.campaign-grid .campaign:nth-child(3n+4) {
+    clear: left; } }
+
+.campaign-grid.campaign-loop,
+.campaign-grid.masonry {
+  -moz-column-gap: unset;
+  -webkit-column-gap: unset;
+  column-gap: unset;
+  column-count: unset; }
+  .campaign-grid.campaign-loop .campaign.hentry,
+  .campaign-grid.masonry .campaign.hentry {
+    padding: 14px 14px 0px 14px;
+    padding: 1.4rem 1.4rem 0rem 1.4rem; }
+    .campaign-grid.campaign-loop .campaign.hentry.has-post-thumbnail,
+    .campaign-grid.masonry .campaign.hentry.has-post-thumbnail {
+      padding-top: 0; }
+  @media (min-width: 37.5em) {
+    .campaign-grid.campaign-loop .campaign.hentry,
+    .campaign-grid.masonry .campaign.hentry {
       width: 48%;
       margin-right: 1.9%;
-      border: none !important;
-      padding: 0px 14px;
-      padding: 0rem 1.4rem; }
-      .campaigns-grid .campaign:nth-child(2n+2) {
-        margin-right: 0; }
-      .campaigns-grid .campaign:nth-child(2n+3) {
-        clear: left; } }
-@media (min-width: 57.5em) {
-  .campaigns-grid {
-    width: 104%; }
-    .campaigns-grid .campaign {
-      width: 30.7692308%;
-      margin-right: 1.9230769%; }
-      .campaigns-grid .campaign:nth-child(2n+2) {
-        margin-right: 1.9230769%; }
-      .campaigns-grid .campaign:nth-child(3n+3) {
-        margin-right: 0; }
-      .campaigns-grid .campaign:nth-child(2n+3) {
-        clear: none; }
-      .campaigns-grid .campaign:nth-child(3n+4) {
-        clear: left; } }
+      margin-bottom: 28px;
+      margin-bottom: 2.8rem; }
+      .campaign-grid.campaign-loop .campaign.hentry:nth-child(2n+2),
+      .campaign-grid.masonry .campaign.hentry:nth-child(2n+2) {
+        margin-right: 0; } }
+  @media (min-width: 57.5em) {
+    .campaign-grid.campaign-loop .campaign.hentry,
+    .campaign-grid.masonry .campaign.hentry {
+      width: 31.33%; }
+      .campaign-grid.campaign-loop .campaign.hentry:nth-child(2n+2),
+      .campaign-grid.masonry .campaign.hentry:nth-child(2n+2) {
+        margin-right: 1.9%; }
+      .campaign-grid.campaign-loop .campaign.hentry:nth-child(3n+3),
+      .campaign-grid.masonry .campaign.hentry:nth-child(3n+3) {
+        margin-right: 0; } }
+  @media (min-width: 93.75em) {
+    .campaign-grid.campaign-loop .campaign.hentry,
+    .campaign-grid.masonry .campaign.hentry {
+      width: 23.1%; }
+      .campaign-grid.campaign-loop .campaign.hentry:nth-child(3n+3),
+      .campaign-grid.masonry .campaign.hentry:nth-child(3n+3) {
+        margin-right: 1.9%; }
+      .campaign-grid.campaign-loop .campaign.hentry:nth-child(4n+4),
+      .campaign-grid.masonry .campaign.hentry:nth-child(4n+4) {
+        margin-right: 0; } }
+
+.campaign-grid.campaign-grid-2 .campaign.hentry {
+  width: 48%;
+  margin-right: 1.9%;
+  margin-bottom: 28px;
+  margin-bottom: 2.8rem; }
+  .campaign-grid.campaign-grid-2 .campaign.hentry:nth-child(2n+2) {
+    margin-right: 0; }
+
+.campaign-grid.campaign-grid-3 .campaign.hentry {
+  width: 31.33%; }
+  .campaign-grid.campaign-grid-3 .campaign.hentry:nth-child(2n+2) {
+    margin-right: 1.9%; }
+  .campaign-grid.campaign-grid-3 .campaign.hentry:nth-child(3n+3) {
+    margin-right: 0; }
+
+.campaign-grid.campaign-grid-4 .campaign.hentry {
+  width: 23.1%; }
+  .campaign-grid.campaign-grid-4 .campaign.hentry:nth-child(3n+3) {
+    margin-right: 1.9%; }
+  .campaign-grid.campaign-grid-4 .campaign.hentry:nth-child(4n+4) {
+    margin-right: 0; }
 
 .campaigns-navigation {
   float: left;

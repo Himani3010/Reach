@@ -14,24 +14,22 @@ endif;
 
 ?>
 <div class="campaigns-grid-wrapper">
-	<h3 class="section-title"><?php _e( 'Latest Projects', 'reach' ) ?></h3>
+	<h3 class="section-title"><?php _e( 'Latest Projects', 'reach' ); ?></h3>
 	<?php
-
 	$campaigns = Charitable_Campaigns::query();
 
-	charitable_template_campaign_loop( $campaigns, 3 );
+	charitable_template_campaign_loop( $campaigns );
 
 	wp_reset_postdata();
 
 	if ( $campaigns->max_num_pages > 1 ) :
-	?>
-
+		?>
 		<p class="center">
-			<a class="button button-alt" href="<?php echo esc_url( home_url( apply_filters( 'reach_previous_campaigns_link', '/campaigns/page/2/' ) ) ) ?>">
-				<?php echo apply_filters( 'reach_previous_campaigns_text', __( 'Previous Campaigns', 'reach' ) ) ?>
+			<a class="button button-alt" href="<?php echo esc_url( home_url( apply_filters( 'reach_previous_campaigns_link', '/campaigns/page/2/' ) ) ); ?>">
+				<?php echo apply_filters( 'reach_previous_campaigns_text', __( 'Previous Campaigns', 'reach' ) ); ?>
 			</a>
 		</p>
-
-	<?php endif ?>
-
+		<?php
+	endif;
+	?>
 </div><!-- .campaigns-grid-wrapper -->
