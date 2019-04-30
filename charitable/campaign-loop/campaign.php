@@ -10,12 +10,14 @@
  * @version 1.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 $campaign = charitable_get_current_campaign();
 
 ?>
-<div id="campaign-<?php echo get_the_ID() ?>" class="campaign-widget campaign block cf">    
+<li id="campaign-<?php echo get_the_ID(); ?>" <?php post_class( array( 'campaign-widget', 'campaign', 'block', 'cf' ) ); ?>>
 	<?php
 
 	/**
@@ -31,7 +33,7 @@ $campaign = charitable_get_current_campaign();
 	?>
 	<div class="title-wrapper">
 		<h3 class="block-title">
-			<a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>" target="_parent"><?php the_title() ?></a>
+			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" target="_parent"><?php the_title(); ?></a>
 		</h3>
 	</div>
 	<?php
@@ -47,4 +49,4 @@ $campaign = charitable_get_current_campaign();
 	do_action( 'charitable_campaign_content_loop_after', $campaign );
 
 	?>
-</div>
+</li>

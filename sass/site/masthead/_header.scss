@@ -1,4 +1,4 @@
-#page > .layout-wrapper, 
+#page > .layout-wrapper,
 #header {
 	@include padding( 0, $size__margin-double );
 
@@ -13,7 +13,7 @@
 }
 
 #header {
-	position: relative;		
+	position: relative;
 	z-index: 50;
 	@include padding-top( $size__margin-double );
 	@include background-color( $color__background-wrapper );
@@ -22,7 +22,7 @@
 .site-identity {
 	position: relative;
 	z-index: 500;
-	float: left;	
+	float: left;
 	@include padding( $size__margin, $size__margin-double, $size__margin, 0 );
 	text-transform: uppercase;
 }
@@ -31,8 +31,8 @@
 	position: absolute;
 	left: 0;
 	display: block;
-	width: 100%; 
-	height: 100%;	
+	width: 100%;
+	height: 100%;
 }
 
 .site-title {
@@ -51,20 +51,27 @@
 	}
 }
 
-.site-tagline {	
+.site-tagline {
 	@include padding( $size__margin-half, 0 );
 	margin: 0;
 	@include font-size();
-	line-height: 1em;	
+	line-height: 1em;
 	letter-spacing: 0;
 }
 
-/*-------------------------------------------------------------- 
+@include bp(600, false) {
+	#page > .layout-wrapper {
+		@include height( 28 );
+		overflow: hidden;
+	}
+}
+
+/*--------------------------------------------------------------
 13.1 Social Networks
 --------------------------------------------------------------*/
-@import "social-networks"; 
+@import "social-networks";
 
-/*-------------------------------------------------------------- 
+/*--------------------------------------------------------------
 13.2 Account Links
 --------------------------------------------------------------*/
-@import "account-links"; 
+@import "account-links";
