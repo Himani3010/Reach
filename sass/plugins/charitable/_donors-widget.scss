@@ -5,7 +5,7 @@
         margin: 0;
         display:flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
         @include margin( 0, ($size__margin-half * -1) );
 
         .donor-name {
@@ -19,8 +19,8 @@
             border: none;
         }
 
-        .donor-name, 
-        .donor-location, 
+        .donor-name,
+        .donor-location,
         .donor-donation-amount {
             @include margin( 0, 0, $size__margin-half );
             padding: 0;

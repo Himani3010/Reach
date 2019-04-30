@@ -3741,7 +3741,7 @@ body > .select2-container--open .select2-dropdown--above {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0px -7px;
     margin: 0rem -0.7rem; }
     .widget.widget_charitable_donors_widget .donors-list .donor-name {
