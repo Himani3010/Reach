@@ -68,7 +68,7 @@
             @include font-size( 18 );
             font-weight: normal;
             @include color( $color__accent );
-            @include background-color( $color__background-content-pop );
+            background-color: transparent;
         }
 
         .charitable-fieldset {

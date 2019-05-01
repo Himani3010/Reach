@@ -255,11 +255,10 @@
 
 #charitable-user-fields,
 #charitable-gateway-fields .charitable-gateway-fields {
-    position: relative;
     float: left;
     @include fullwidth-calc( $size__margin-triple );
     @include padding( $size__margin-double, $size__margin-triple );
-    @include background-color( $color__background-content );    
+    @include background-color( $color__background-content-pop );    
 
     select,
     input {
@@ -338,6 +337,10 @@
     }
 
     #charitable-gateway-fields .charitable-gateway-fields {
+        width: 100%;
+    }
+
+    #charitable-user-fields {
         width: 100%;
     }
 }

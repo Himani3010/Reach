@@ -2526,9 +2526,8 @@ body.page-template-homepage .charitable-campaign-map-marker {
   border-radius: 0 0 0.4rem 0.4rem;
   box-shadow: none; }
 .stripped .entry {
-  width: 68%;
-  margin-left: auto;
-  margin-right: auto; }
+  margin-left: 28px;
+  margin-right: 28px; }
 .stripped #site-footer {
   padding: 0; }
 .stripped #colophon {
@@ -3369,7 +3368,7 @@ embed {
     font-size: 1.8rem;
     font-weight: normal;
     color: #7bb4e0;
-    background-color: #f9f9fa; }
+    background-color: transparent; }
   .charitable-form-fields .charitable-fieldset .charitable-fieldset {
     margin-bottom: 0;
     padding: 0;
@@ -3983,7 +3982,6 @@ body > .select2-container--open .select2-dropdown--above {
 
 #charitable-user-fields,
 #charitable-gateway-fields .charitable-gateway-fields {
-  position: relative;
   float: left;
   left: -42px;
   width: -webkit-calc( 100% + 84px );
@@ -3991,7 +3989,7 @@ body > .select2-container--open .select2-dropdown--above {
   width: calc( 100% + 84px );
   padding: 28px 42px;
   padding: 2.8rem 4.2rem;
-  background-color: #ffffff; }
+  background-color: #f9f9fa; }
   #charitable-user-fields select,
   #charitable-user-fields input,
   #charitable-gateway-fields .charitable-gateway-fields select,
@@ -4056,6 +4054,9 @@ body > .select2-container--open .select2-dropdown--above {
     padding: 0; }
 
   #charitable-gateway-fields .charitable-gateway-fields {
+    width: 100%; }
+
+  #charitable-user-fields {
     width: 100%; } }
 /*--------------------------------------------------------------
 18.1.3 Widgets
